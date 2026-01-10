@@ -3,6 +3,31 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --card-bg: #fafafa;
+  --card-border: #d1d5db;
+  --text-primary: #000000;
+  --text-secondary: #6b7280;
+  --accent: #1f2937;
+  --highlight: #000000;
+  --border-color: #d1d5db;
+  --globe-bg: #f9fafb;
+  --topbar-bg: #ffffff;
+  --topbar-border: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card-bg: #151515;
+  --card-border: #3a3a3a;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --accent: #e5e7eb;
+  --highlight: #ffffff;
+  --border-color: #3a3a3a;
+  --globe-bg: #111111;
+  --topbar-bg: #1a1a1a;
+  --topbar-border: #2a2a2a;
 }
 
 @theme inline {
@@ -12,15 +37,83 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Dark theme overrides for CSS Modules */
+[data-theme="dark"] .btnPrimary {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--background);
+}
+
+[data-theme="dark"] .btnPrimary:hover {
+  background: var(--text-secondary);
+  border-color: var(--text-secondary);
+}
+
+[data-theme="dark"] .input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .cityCardSelected {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--background);
+}
+
+[data-theme="dark"] .cityCardSelected .dayNight {
+  color: var(--background);
+  opacity: 0.9;
+}
+
+/* Card shadows for dark theme */
+[data-theme="dark"] {
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --card-shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Override for card component - removed duplicate, handled in ui.module.css */
+
+/* TabBar dark theme overrides */
+[data-theme="dark"] .tabBtnActive {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--background);
+}
+
+/* Globe centering styles */
+.globe-container canvas {
+  display: block !important;
+  margin: 0 auto !important;
+  position: relative !important;
+}
+
+/* Ensure globe container centers content */
+.globe-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center the globe wrapper */
+.globe-container > div {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

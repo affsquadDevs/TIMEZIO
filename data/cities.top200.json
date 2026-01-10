@@ -1,0 +1,66 @@
+[
+  { "id": "kyiv", "label": "Kyiv, UA", "lat": 50.4501, "lng": 30.5234, "tz": "Europe/Kyiv" },
+  { "id": "lviv", "label": "Lviv, UA", "lat": 49.8397, "lng": 24.0297, "tz": "Europe/Kyiv" },
+  { "id": "odesa", "label": "Odesa, UA", "lat": 46.4825, "lng": 30.7233, "tz": "Europe/Kyiv" },
+  { "id": "kharkiv", "label": "Kharkiv, UA", "lat": 49.9935, "lng": 36.2304, "tz": "Europe/Kyiv" },
+
+  { "id": "london", "label": "London, UK", "lat": 51.5074, "lng": -0.1278, "tz": "Europe/London" },
+  { "id": "paris", "label": "Paris, FR", "lat": 48.8566, "lng": 2.3522, "tz": "Europe/Paris" },
+  { "id": "berlin", "label": "Berlin, DE", "lat": 52.52, "lng": 13.405, "tz": "Europe/Berlin" },
+  { "id": "rome", "label": "Rome, IT", "lat": 41.9028, "lng": 12.4964, "tz": "Europe/Rome" },
+  { "id": "madrid", "label": "Madrid, ES", "lat": 40.4168, "lng": -3.7038, "tz": "Europe/Madrid" },
+  { "id": "lisbon", "label": "Lisbon, PT", "lat": 38.7223, "lng": -9.1393, "tz": "Europe/Lisbon" },
+  { "id": "warsaw", "label": "Warsaw, PL", "lat": 52.2297, "lng": 21.0122, "tz": "Europe/Warsaw" },
+  { "id": "prague", "label": "Prague, CZ", "lat": 50.0755, "lng": 14.4378, "tz": "Europe/Prague" },
+  { "id": "vienna", "label": "Vienna, AT", "lat": 48.2082, "lng": 16.3738, "tz": "Europe/Vienna" },
+  { "id": "zurich", "label": "Zurich, CH", "lat": 47.3769, "lng": 8.5417, "tz": "Europe/Zurich" },
+  { "id": "stockholm", "label": "Stockholm, SE", "lat": 59.3293, "lng": 18.0686, "tz": "Europe/Stockholm" },
+  { "id": "oslo", "label": "Oslo, NO", "lat": 59.9139, "lng": 10.7522, "tz": "Europe/Oslo" },
+  { "id": "helsinki", "label": "Helsinki, FI", "lat": 60.1699, "lng": 24.9384, "tz": "Europe/Helsinki" },
+  { "id": "athens", "label": "Athens, GR", "lat": 37.9838, "lng": 23.7275, "tz": "Europe/Athens" },
+  { "id": "istanbul", "label": "Istanbul, TR", "lat": 41.0082, "lng": 28.9784, "tz": "Europe/Istanbul" },
+  { "id": "moscow", "label": "Moscow, RU", "lat": 55.7558, "lng": 37.6173, "tz": "Europe/Moscow" },
+
+  { "id": "new_york", "label": "New York, US", "lat": 40.7128, "lng": -74.006, "tz": "America/New_York" },
+  { "id": "los_angeles", "label": "Los Angeles, US", "lat": 34.0522, "lng": -118.2437, "tz": "America/Los_Angeles" },
+  { "id": "chicago", "label": "Chicago, US", "lat": 41.8781, "lng": -87.6298, "tz": "America/Chicago" },
+  { "id": "toronto", "label": "Toronto, CA", "lat": 43.6532, "lng": -79.3832, "tz": "America/Toronto" },
+  { "id": "vancouver", "label": "Vancouver, CA", "lat": 49.2827, "lng": -123.1207, "tz": "America/Vancouver" },
+  { "id": "mexico_city", "label": "Mexico City, MX", "lat": 19.4326, "lng": -99.1332, "tz": "America/Mexico_City" },
+  { "id": "sao_paulo", "label": "São Paulo, BR", "lat": -23.5505, "lng": -46.6333, "tz": "America/Sao_Paulo" },
+  { "id": "buenos_aires", "label": "Buenos Aires, AR", "lat": -34.6037, "lng": -58.3816, "tz": "America/Argentina/Buenos_Aires" },
+  { "id": "santiago", "label": "Santiago, CL", "lat": -33.4489, "lng": -70.6693, "tz": "America/Santiago" },
+  { "id": "lima", "label": "Lima, PE", "lat": -12.0464, "lng": -77.0428, "tz": "America/Lima" },
+  { "id": "bogota", "label": "Bogotá, CO", "lat": 4.711, "lng": -74.0721, "tz": "America/Bogota" },
+
+  { "id": "tokyo", "label": "Tokyo, JP", "lat": 35.6762, "lng": 139.6503, "tz": "Asia/Tokyo" },
+  { "id": "seoul", "label": "Seoul, KR", "lat": 37.5665, "lng": 126.978, "tz": "Asia/Seoul" },
+  { "id": "beijing", "label": "Beijing, CN", "lat": 39.9042, "lng": 116.4074, "tz": "Asia/Shanghai" },
+  { "id": "shanghai", "label": "Shanghai, CN", "lat": 31.2304, "lng": 121.4737, "tz": "Asia/Shanghai" },
+  { "id": "hong_kong", "label": "Hong Kong, HK", "lat": 22.3193, "lng": 114.1694, "tz": "Asia/Hong_Kong" },
+  { "id": "singapore", "label": "Singapore, SG", "lat": 1.3521, "lng": 103.8198, "tz": "Asia/Singapore" },
+  { "id": "bangkok", "label": "Bangkok, TH", "lat": 13.7563, "lng": 100.5018, "tz": "Asia/Bangkok" },
+  { "id": "hanoi", "label": "Hanoi, VN", "lat": 21.0278, "lng": 105.8342, "tz": "Asia/Bangkok" },
+  { "id": "jakarta", "label": "Jakarta, ID", "lat": -6.2088, "lng": 106.8456, "tz": "Asia/Jakarta" },
+  { "id": "manila", "label": "Manila, PH", "lat": 14.5995, "lng": 120.9842, "tz": "Asia/Manila" },
+  { "id": "sydney", "label": "Sydney, AU", "lat": -33.8688, "lng": 151.2093, "tz": "Australia/Sydney" },
+  { "id": "melbourne", "label": "Melbourne, AU", "lat": -37.8136, "lng": 144.9631, "tz": "Australia/Melbourne" },
+  { "id": "auckland", "label": "Auckland, NZ", "lat": -36.8485, "lng": 174.7633, "tz": "Pacific/Auckland" },
+
+  { "id": "dubai", "label": "Dubai, AE", "lat": 25.2048, "lng": 55.2708, "tz": "Asia/Dubai" },
+  { "id": "riyadh", "label": "Riyadh, SA", "lat": 24.7136, "lng": 46.6753, "tz": "Asia/Riyadh" },
+  { "id": "tel_aviv", "label": "Tel Aviv, IL", "lat": 32.0853, "lng": 34.7818, "tz": "Asia/Jerusalem" },
+  { "id": "cairo", "label": "Cairo, EG", "lat": 30.0444, "lng": 31.2357, "tz": "Africa/Cairo" },
+  { "id": "johannesburg", "label": "Johannesburg, ZA", "lat": -26.2041, "lng": 28.0473, "tz": "Africa/Johannesburg" },
+  { "id": "nairobi", "label": "Nairobi, KE", "lat": -1.2921, "lng": 36.8219, "tz": "Africa/Nairobi" },
+
+  { "id": "delhi", "label": "Delhi, IN", "lat": 28.6139, "lng": 77.209, "tz": "Asia/Kolkata" },
+  { "id": "mumbai", "label": "Mumbai, IN", "lat": 19.076, "lng": 72.8777, "tz": "Asia/Kolkata" },
+  { "id": "karachi", "label": "Karachi, PK", "lat": 24.8607, "lng": 67.0011, "tz": "Asia/Karachi" },
+
+  { "id": "honolulu", "label": "Honolulu, US", "lat": 21.3069, "lng": -157.8583, "tz": "Pacific/Honolulu" }
+]
+
+
+
+

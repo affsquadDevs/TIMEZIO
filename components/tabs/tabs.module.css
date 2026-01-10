@@ -1,0 +1,64 @@
+.tabBar {
+  display: flex;
+  gap: 8px;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  overflow-x: auto;
+  scrollbar-width: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.tabBar::-webkit-scrollbar {
+  display: none;
+}
+
+.tabBar[data-compact='1'] {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1.5px solid var(--card-border);
+  background: var(--card-bg);
+}
+
+.tabBtn {
+  flex: 0 0 auto;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 120ms ease;
+  white-space: nowrap;
+  opacity: 0.7;
+}
+
+.tabBar[data-compact='1'] .tabBtn {
+  padding: 9px 14px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.tabBtn:hover {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  opacity: 1;
+}
+
+.tabBtnActive {
+  background: var(--highlight);
+  border-color: var(--highlight);
+  color: var(--background);
+  font-weight: 700;
+  opacity: 1;
+}
+
+

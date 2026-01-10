@@ -1,0 +1,341 @@
+.card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--card-border);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-theme="dark"] .card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 0 1.5px var(--card-border);
+  border-width: 1.5px;
+}
+
+.cityCard {
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--card-border);
+}
+
+.cityCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 0 0 1.5px var(--text-secondary);
+  border-color: var(--text-secondary);
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] .cityCard:not(.cityCardSelected) {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 0 0 1.5px var(--card-border);
+  background: #1f1f1f;
+}
+
+[data-theme="dark"] .cityCard:not(.cityCardSelected):hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7), 0 0 0 1.5px var(--text-secondary);
+  background: #252525;
+}
+
+.cardHeader {
+  padding: 20px 20px 0 20px;
+}
+
+.cardBody {
+  padding: 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.subtitle {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.value {
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.btn:hover {
+  background: var(--background);
+  border-color: var(--text-secondary);
+}
+
+.btnPrimary {
+  background: var(--highlight);
+  border-color: var(--highlight);
+  color: var(--background);
+}
+
+.btnPrimary:hover {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+  .cardBody {
+    padding: 16px;
+  }
+
+  .cardHeader {
+    padding: 16px 16px 0 16px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .cityTime {
+    font-size: 28px;
+  }
+}
+
+.btnDanger {
+  border-color: rgba(239, 68, 68, 0.35);
+}
+.btnDanger:hover {
+  border-color: rgba(239, 68, 68, 0.7);
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  outline: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.input:focus {
+  border-color: var(--highlight);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--background);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.badgeGreen {
+  border-color: #d1fae5;
+  background: #d1fae5;
+  color: #065f46;
+}
+
+[data-theme="dark"] .badgeGreen {
+  border-color: #065f46;
+  background: #065f46;
+  color: #d1fae5;
+}
+
+.badgeYellow {
+  border-color: #fef3c7;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+[data-theme="dark"] .badgeYellow {
+  border-color: #92400e;
+  background: #92400e;
+  color: #fef3c7;
+}
+
+.badgeBlue {
+  border-color: #dbeafe;
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+[data-theme="dark"] .badgeBlue {
+  border-color: #1e40af;
+  background: #1e40af;
+  color: #dbeafe;
+}
+
+.pillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--border-color);
+  margin: 16px 0;
+  transition: background-color 0.2s ease;
+}
+
+/* Time Display Styles */
+.timeDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeDisplayLarge {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -2px;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  transition: color 0.2s ease;
+}
+
+.timeDisplayMedium {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  transition: color 0.2s ease;
+}
+
+.timeDisplaySmall {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.2px;
+  transition: color 0.2s ease;
+}
+
+
+.cityCardSelected {
+  background: var(--highlight);
+  border-color: var(--highlight);
+  color: var(--background);
+}
+
+.cityCardSelected .cityName {
+  color: var(--background);
+}
+
+.cityCardSelected .cityTime {
+  color: var(--background);
+}
+
+.cityCardSelected .cityOffset {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+.cityName {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.cityOffset {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.cityTime {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -1px;
+  transition: color 0.2s ease;
+}
+
+.dayNight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  opacity: 0.85;
+  white-space: nowrap;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.cityCardSelected .dayNight {
+  color: var(--background);
+  opacity: 0.9;
+}
+
+

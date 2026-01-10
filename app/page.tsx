@@ -1,65 +1,98 @@
-import Image from "next/image";
+'use client';
+
+import { useEffect, useMemo, useRef } from 'react';
+import styles from '@/components/layout/layout.module.css';
+
+import GlobeCanvas, { GlobeCanvasHandle } from '@/components/globe/GlobeCanvas';
+import { TopBar } from '@/components/layout/TopBar';
+import { SidePanel } from '@/components/layout/SidePanel';
+import { MobileSheet } from '@/components/layout/MobileSheet';
+import { Footer } from '@/components/layout/Footer';
+import { TabBar } from '@/components/tabs/TabBar';
+
+import { useAppStore, useSelectedLocation } from '@/store/useAppStore';
 
 export default function Home() {
+  const globeRef = useRef<GlobeCanvasHandle>(null);
+
+  const hydrateFromUrl = useAppStore((s) => s.hydrateFromUrl);
+  const pickFromLatLng = useAppStore((s) => s.pickLocationFromLatLng);
+  const compare = useAppStore((s) => s.compare);
+  const locationsById = useAppStore((s) => s.locationsById);
+  const focusTarget = useAppStore((s) => s.focusTarget);
+  const requestFocus = useAppStore((s) => s.requestFocus);
+  const selected = useSelectedLocation();
+  const timezoneMode = useAppStore((s) => s.timezoneMode);
+
+  useEffect(() => {
+    hydrateFromUrl();
+    // Default selection (only when nothing is selected/loaded)
+    const s = useAppStore.getState();
+    if (!s.selectedId && Object.keys(s.locationsById).length === 0) {
+      const ny = s.pickLocationFromLatLng(40.7128, -74.006, 'search', 'New York, US');
+      s.requestFocus({ lat: ny.lat, lng: ny.lng, altitude: 1.6 });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Clear focusTarget after it's been passed down once.
+  useEffect(() => {
+    if (!focusTarget) return;
+    const t = window.setTimeout(() => requestFocus(null), 0);
+    return () => window.clearTimeout(t);
+  }, [focusTarget, requestFocus]);
+
+  const markers = useMemo(() => {
+    const ms: { id: string; lat: number; lng: number; color?: string; size?: number }[] = [];
+
+    // selected marker
+    if (selected) ms.push({ id: `sel_${selected.id}`, lat: selected.lat, lng: selected.lng, color: '#ef4444', size: 0.55 });
+
+    // compare markers
+    for (const id of compare.items) {
+      const loc = locationsById[id];
+      if (!loc) continue;
+      ms.push({
+        id: `cmp_${id}`,
+        lat: loc.lat,
+        lng: loc.lng,
+        color: compare.baseId === id ? '#22c55e' : '#60a5fa',
+        size: compare.baseId === id ? 0.6 : 0.42,
+      });
+    }
+    return ms;
+  }, [selected, compare.items, compare.baseId, locationsById]);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className={styles.layout}>
+      <TopBar />
+      <div className={styles.tabBarContainer}>
+        <TabBar />
+      </div>
+      <div className={styles.main}>
+        <div className={styles.globeWrap}>
+          <GlobeCanvas
+            ref={globeRef}
+            focusTarget={focusTarget}
+            markers={markers}
+            selectedLocation={selected ? { tz: selected.tz } : null}
+            timezoneMode={timezoneMode}
+            onPickLocation={(lat, lng) => {
+              pickFromLatLng(lat, lng, 'click');
+            }}
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className={styles.desktopOnly}>
+          <SidePanel />
         </div>
-      </main>
+      </div>
+
+      <div className={styles.mobileOnly}>
+        <MobileSheet />
+      </div>
+
+      <Footer />
     </div>
   );
 }
