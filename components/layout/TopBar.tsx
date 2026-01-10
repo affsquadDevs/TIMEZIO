@@ -45,7 +45,6 @@ export function TopBar() {
       <div style={{ display: 'flex', alignItems: 'center', gap: '32px', flex: 1 }}>
         <Link href="/" className={styles.brand} style={{ textDecoration: 'none' }}>
           <div className={styles.brandTitle}>Timezio</div>
-          <div className={styles.brandSub}>World Timezone Globe</div>
         </Link>
 
         <nav className={styles.nav}>

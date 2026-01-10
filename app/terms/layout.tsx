@@ -1,8 +1,26 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - Timezio",
-  description: "Terms of Service for Timezio - Learn about the terms and conditions governing your use of our timezone tools and services.",
+  title: {
+    default: "Terms of Service | Timezio",
+    template: "%s | Timezio",
+  },
+  description: "Terms and conditions for using Timezio’s timezone tools, converters, and meeting planner.",
+  alternates: {
+    canonical: "/terms",
+  },
+  openGraph: {
+    title: "Terms of Service | Timezio",
+    description: "The terms governing your use of Timezio’s tools and services.",
+    url: "https://timezio.com/terms",
+    siteName: "Timezio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | Timezio",
+    description: "Terms and conditions for using Timezio’s timezone tools.",
+  },
 };
 
 export default function TermsLayout({

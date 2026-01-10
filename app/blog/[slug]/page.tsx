@@ -51,16 +51,28 @@ export default function BlogPostPage() {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
       headline: post.title,
+      description: post.excerpt,
       datePublished: post.date,
       dateModified: post.date,
       author: {
         '@type': 'Organization',
         name: 'Timezio',
+        url: 'https://timezio.com',
       },
       publisher: {
         '@type': 'Organization',
         name: 'Timezio',
+        url: 'https://timezio.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://timezio.com/globe.svg',
+        },
       },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': window.location.href,
+      },
+      url: window.location.href,
     };
 
     const breadcrumbScriptId = 'breadcrumb-schema';

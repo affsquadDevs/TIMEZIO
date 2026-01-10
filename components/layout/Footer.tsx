@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { popularConverters, popularCities, popularMeetings } from '@/data/seoLinks';
 import styles from './layout.module.css';
 
 export function Footer() {
@@ -60,6 +61,27 @@ export function Footer() {
                   Blog
                 </Link>
               </li>
+              {popularConverters.slice(0, 3).map((item) => (
+                <li key={item.slug}>
+                  <Link href={`/convert/${item.slug}`} className={styles.footerLink}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              {popularCities.slice(0, 3).map((item) => (
+                <li key={item.slug}>
+                  <Link href={`/time/${item.slug}`} className={styles.footerLink}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              {popularMeetings.slice(0, 2).map((item) => (
+                <li key={item.slug}>
+                  <Link href={`/meeting/${item.slug}`} className={styles.footerLink}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
