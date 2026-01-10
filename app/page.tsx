@@ -91,26 +91,26 @@ export default function Home() {
 
         <div className={styles.desktopOnly}>
           <SidePanel />
-          <div style={{ marginTop: '20px', padding: '0 16px' }}>
+          <div style={{ marginTop: '20px', padding: '0 16px', width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
             <div className={ui.card}>
               <div className={ui.cardBody}>
                 <h1 className={styles.marketingTitle}>
                   Time Zone Converter & Meeting Planner
                 </h1>
-                <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '16px' }}>
+                <p style={{ fontSize: 'clamp(13px, 2vw, 15px)', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '16px', wordBreak: 'break-word' }}>
                   Instantly convert time zones, plan meetings across cities, and explore daylight saving time on an interactive 3D globe. All calculations are DST-aware and based on official IANA timezone data.
                 </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '20px' }}>
-                  <Link href="/convert" className={ui.link} style={{ fontSize: '14px', fontWeight: 600 }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '20px', width: '100%' }}>
+                  <Link href="/convert" className={ui.link} style={{ fontSize: 'clamp(12px, 2vw, 14px)', fontWeight: 600, wordBreak: 'break-word' }}>
                     → Popular Time Zone Converters
                   </Link>
-                  <Link href="/time" className={ui.link} style={{ fontSize: '14px', fontWeight: 600 }}>
+                  <Link href="/time" className={ui.link} style={{ fontSize: 'clamp(12px, 2vw, 14px)', fontWeight: 600, wordBreak: 'break-word' }}>
                     → Current Time in Major Cities
                   </Link>
-                  <Link href="/meeting" className={ui.link} style={{ fontSize: '14px', fontWeight: 600 }}>
+                  <Link href="/meeting" className={ui.link} style={{ fontSize: 'clamp(12px, 2vw, 14px)', fontWeight: 600, wordBreak: 'break-word' }}>
                     → Best Meeting Times by City Pair
                   </Link>
-                  <Link href="/dst" className={ui.link} style={{ fontSize: '14px', fontWeight: 600 }}>
+                  <Link href="/dst" className={ui.link} style={{ fontSize: 'clamp(12px, 2vw, 14px)', fontWeight: 600, wordBreak: 'break-word' }}>
                     → Daylight Saving Time Checker
                   </Link>
                 </div>

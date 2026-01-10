@@ -59,7 +59,7 @@ export function CitySearch(props: { onPick: (city: City) => void; placeholder?: 
   }, [open]);
 
   return (
-    <div ref={containerRef} style={{ position: 'relative' }}>
+    <div ref={containerRef} style={{ position: 'relative', width: '100%', maxWidth: '100%' }}>
       <input
         className={ui.input}
         value={q}
@@ -68,6 +68,7 @@ export function CitySearch(props: { onPick: (city: City) => void; placeholder?: 
         onFocus={() => {
           if (results.length > 0) setOpen(true);
         }}
+        style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}
       />
       {open && results.length > 0 && (
         <div
@@ -82,6 +83,8 @@ export function CitySearch(props: { onPick: (city: City) => void; placeholder?: 
             padding: '6px',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2), 0 0 0 1.5px var(--card-border)',
             border: '1.5px solid var(--card-border)',
+            maxWidth: '100%',
+            boxSizing: 'border-box',
           }}
         >
           {results.map((c, idx) => (

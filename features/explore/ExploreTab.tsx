@@ -81,7 +81,7 @@ export function ExploreTab() {
           </div>
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 160px), 1fr))',
             gap: '12px' 
           }}>
           {cityCards.map((city) => {

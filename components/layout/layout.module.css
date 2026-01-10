@@ -11,6 +11,10 @@
   background: var(--topbar-bg);
   backdrop-filter: blur(10px);
   transition: background-color 0.2s ease, border-color 0.2s ease;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .tabBarContainer {
@@ -22,6 +26,21 @@
   padding: 12px 24px 16px 24px;
   transition: background-color 0.2s ease, border-color 0.2s ease;
   backdrop-filter: blur(10px);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+@media (max-width: 640px) {
+  .tabBarContainer {
+    padding: 10px 12px 12px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabBarContainer {
+    padding: 8px 8px 10px 8px;
+  }
 }
 
 .brand {
@@ -84,6 +103,20 @@
   color: var(--text-primary);
   margin-bottom: 12px;
   line-height: 1.2;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+  .marketingTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marketingTitle {
+    font-size: 18px;
+  }
 }
 
 .topActions {
@@ -95,7 +128,8 @@
 @media (max-width: 640px) {
   .topBar {
     padding: 12px 12px;
-    gap: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
   .brandTitle {
@@ -104,33 +138,56 @@
 
   .nav {
     gap: 4px;
+    display: none; /* Hide nav on very small screens */
   }
 
   .navLink {
-    padding: 6px 12px;
-    font-size: 13px;
+    padding: 6px 10px;
+    font-size: 12px;
   }
 
   .topActions {
-    gap: 8px;
+    gap: 6px;
     flex-wrap: wrap;
     justify-content: flex-end;
+    flex-shrink: 0;
   }
 
   .topActions :global(.btn) {
-    padding: 8px 12px;
-    font-size: 13px;
+    padding: 6px 10px;
+    font-size: 12px;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .topBar {
+    padding: 10px 8px;
+    gap: 6px;
+  }
+
+  .brandTitle {
+    font-size: 16px;
+  }
+
+  .topActions :global(.btn) {
+    padding: 6px 8px;
+    font-size: 11px;
   }
 }
 
 @media (max-width: 768px) {
+  .topBar {
+    gap: 12px;
+  }
+
   .nav {
     gap: 4px;
   }
 
   .navLink {
-    padding: 6px 12px;
-    font-size: 13px;
+    padding: 6px 10px;
+    font-size: 12px;
   }
 }
 
@@ -143,6 +200,9 @@
   background: var(--background);
   color: var(--foreground);
   transition: background-color 0.2s ease, color 0.2s ease;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .contentArea {
@@ -166,6 +226,8 @@
   overflow-x: hidden;
   flex: 1 1 auto; /* take remaining space but allow shrink */
   min-height: 0; /* allow content to determine height */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .infoSection {
@@ -203,14 +265,20 @@
 
   .main {
     grid-template-columns: 1fr;
-    overflow: visible; /* mobile: normal page scroll */
+    overflow-x: hidden; /* prevent horizontal scroll */
+    overflow-y: visible; /* mobile: normal page scroll */
     height: auto;
     min-height: auto;
     flex: 0 0 auto; /* don't grow on mobile, use natural height */
+    width: 100%;
+    max-width: 100vw;
   }
 
   .infoSection {
     padding: 0 16px 28px;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }
 
@@ -234,10 +302,14 @@
   height: 100%;
   min-height: 0;
   overflow: visible; /* main scroll handles overflow now */
+  overflow-x: hidden;
   border-radius: 16px;
   border: 1px solid var(--border-color);
   background: var(--globe-bg);
   padding: 16px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .desktopOnly {
@@ -277,16 +349,43 @@
 @media (max-width: 768px) {
   .main {
     padding: 12px;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
   .globeWrap {
     height: clamp(220px, 30vh, 320px);
     min-height: 220px;
+    width: 100%;
+    max-width: 100%;
   }
   .mobileOnly {
     padding: 0 12px 12px 12px;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
   .infoSection {
     padding: 0 12px 24px;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 8px;
+  }
+  .globeWrap {
+    height: clamp(200px, 28vh, 280px);
+    min-height: 200px;
+  }
+  .mobileOnly {
+    padding: 0 8px 8px 8px;
+  }
+  .infoSection {
+    padding: 0 8px 20px;
   }
 }
 
@@ -345,6 +444,9 @@
   .sheetInner {
     padding: 16px;
     gap: 16px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 
@@ -352,6 +454,16 @@
   .sheetInner {
     padding: 12px;
     gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .sheetInner {
+    padding: 10px;
+    gap: 10px;
   }
 }
 

@@ -4,6 +4,9 @@
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--card-border);
   transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 [data-theme="dark"] .card {
@@ -19,6 +22,9 @@
   color: var(--text-primary);
   transition: all 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--card-border);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .cityCard:hover {
@@ -39,10 +45,18 @@
 
 .cardHeader {
   padding: 20px 20px 0 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .cardBody {
   padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .title {
@@ -52,6 +66,8 @@
   letter-spacing: -0.3px;
   color: var(--text-primary);
   transition: color 0.2s ease;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .subtitle {
@@ -59,6 +75,8 @@
   font-size: 14px;
   color: var(--text-secondary);
   transition: color 0.2s ease;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .row {
@@ -66,6 +84,15 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  min-width: 0;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .row {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
 }
 
 .label {
@@ -136,15 +163,75 @@
   .btn {
     padding: 8px 12px;
     font-size: 13px;
+    white-space: nowrap;
   }
 
   .input {
     padding: 10px 12px;
     font-size: 13px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .cityTime {
     font-size: 28px;
+  }
+
+  .timeDisplayLarge {
+    font-size: 48px !important;
+  }
+
+  .timeDisplayMedium {
+    font-size: 48px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardBody {
+    padding: 12px;
+  }
+
+  .cardHeader {
+    padding: 12px 12px 0 12px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .input {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .cityTime {
+    font-size: 24px;
+  }
+
+  .cityName {
+    font-size: 16px;
+  }
+
+  .cityOffset {
+    font-size: 11px;
+  }
+
+  .timeDisplayLarge {
+    font-size: 40px !important;
+  }
+
+  .timeDisplayMedium {
+    font-size: 40px !important;
   }
 }
 

@@ -12,10 +12,10 @@ export function WorkingHoursEditor(props: {
   const endMinutes = timeToMinutes(props.hours.end);
 
   return (
-    <div className={styles.card} style={{ padding: 14 }}>
-      <div className={styles.title} style={{ marginBottom: 12 }}>{props.participantName}</div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-        <div>
+    <div className={styles.card} style={{ padding: 14, width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
+      <div className={styles.title} style={{ marginBottom: 12, wordBreak: 'break-word' }}>{props.participantName}</div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%' }}>
+        <div style={{ width: '100%' }}>
           <div className={styles.label} style={{ marginBottom: 6 }}>Start</div>
           <input
             type="time"
@@ -27,10 +27,10 @@ export function WorkingHoursEditor(props: {
               }
             }}
             className={styles.input}
-            style={{ width: '100%' }}
+            style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}
           />
         </div>
-        <div>
+        <div style={{ width: '100%' }}>
           <div className={styles.label} style={{ marginBottom: 6 }}>End</div>
           <input
             type="time"
@@ -42,7 +42,7 @@ export function WorkingHoursEditor(props: {
               }
             }}
             className={styles.input}
-            style={{ width: '100%' }}
+            style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}
           />
         </div>
       </div>

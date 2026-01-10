@@ -42,8 +42,8 @@ export function TopBar() {
 
   return (
     <header className={styles.topBar}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '32px', flex: 1 }}>
-        <Link href="/" className={styles.brand} style={{ textDecoration: 'none' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(12px, 3vw, 32px)', flex: 1, minWidth: 0 }}>
+        <Link href="/" className={styles.brand} style={{ textDecoration: 'none', flexShrink: 0 }}>
           <div className={styles.brandTitle}>Timezio</div>
         </Link>
 

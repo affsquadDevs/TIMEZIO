@@ -50,9 +50,9 @@ export function CityTimeCard({ location, isSelected, onClick }: CityTimeCardProp
         </div>
       </div>
       
-      <div className={styles.cityTime} style={{ fontSize: '36px', lineHeight: 1.2 }}>
+      <div className={styles.cityTime} style={{ fontSize: 'clamp(24px, 6vw, 36px)', lineHeight: 1.2, wordBreak: 'break-word' }}>
         {timeStr}
-        <span suppressHydrationWarning style={{ fontSize: '18px', opacity: 0.6, marginLeft: '4px' }}>{seconds}</span>
+        <span suppressHydrationWarning style={{ fontSize: 'clamp(14px, 3.5vw, 18px)', opacity: 0.6, marginLeft: '4px' }}>{seconds}</span>
       </div>
     </div>
   );

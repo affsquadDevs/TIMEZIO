@@ -14,16 +14,19 @@ export function LocationCard(props: {
       style={{
         borderColor: isSelected ? 'var(--highlight)' : undefined,
         cursor: onClick ? 'pointer' : 'default',
+        width: '100%',
+        maxWidth: '100%',
+        boxSizing: 'border-box',
       }}
       onClick={onClick}
       role={onClick ? 'button' : undefined}
       tabIndex={onClick ? 0 : undefined}
     >
       <div className={styles.cardBody}>
-        <div className={styles.row}>
-          <div>
-            <div className={styles.title}>{location.label}</div>
-            <div className={styles.subtitle}>
+        <div className={styles.row} style={{ minWidth: 0 }}>
+          <div style={{ minWidth: 0, flex: 1 }}>
+            <div className={styles.title} style={{ wordBreak: 'break-word' }}>{location.label}</div>
+            <div className={styles.subtitle} style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
               <span className={styles.mono}>{location.tz}</span>
               {' • '}
               <span className={styles.mono}>
@@ -31,7 +34,7 @@ export function LocationCard(props: {
               </span>
             </div>
           </div>
-          {actions}
+          {actions && <div style={{ flexShrink: 0 }}>{actions}</div>}
         </div>
       </div>
     </div>

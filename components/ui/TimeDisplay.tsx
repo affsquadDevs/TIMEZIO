@@ -44,65 +44,65 @@ export function TimeDisplay({ location }: TimeDisplayProps) {
 
   return (
     <div className={styles.timeDisplay} style={{ padding: 0 }}>
-      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '24px', flexWrap: 'wrap' }}>
-        <div style={{ flex: 1, minWidth: '300px' }}>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '16px' }}>
-            <span className={styles.timeDisplayLarge} style={{ fontSize: '80px' }}>
+      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '16px', flexWrap: 'wrap' }}>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', marginBottom: '16px', flexWrap: 'wrap' }}>
+            <span className={styles.timeDisplayLarge} style={{ fontSize: 'clamp(48px, 10vw, 80px)' }}>
               {hour}
             </span>
-            <span className={styles.timeDisplayMedium} style={{ fontSize: '80px', opacity: 0.5 }}>
+            <span className={styles.timeDisplayMedium} style={{ fontSize: 'clamp(48px, 10vw, 80px)', opacity: 0.5 }}>
               :{minute}
             </span>
             {!use24h ? (
               <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '4px', lineHeight: 1 }}>
-                <span suppressHydrationWarning className={styles.timeDisplayMedium} style={{ fontSize: '24px', opacity: 0.8, lineHeight: 1, marginBottom: '2px' }}>
+                <span suppressHydrationWarning className={styles.timeDisplayMedium} style={{ fontSize: 'clamp(18px, 4vw, 24px)', opacity: 0.8, lineHeight: 1, marginBottom: '2px' }}>
                   {second}
                 </span>
-                <span className={styles.timeDisplayMedium} style={{ fontSize: '32px', opacity: 0.7, lineHeight: 1 }}>
+                <span className={styles.timeDisplayMedium} style={{ fontSize: 'clamp(20px, 5vw, 32px)', opacity: 0.7, lineHeight: 1 }}>
                   {amPm}
                 </span>
               </div>
             ) : (
-              <span suppressHydrationWarning className={styles.timeDisplayMedium} style={{ fontSize: '32px', marginLeft: '4px' }}>
+              <span suppressHydrationWarning className={styles.timeDisplayMedium} style={{ fontSize: 'clamp(20px, 5vw, 32px)', marginLeft: '4px' }}>
                 {second}
               </span>
             )}
-            <span style={{ fontSize: '18px', fontWeight: 600, color: 'var(--text-secondary)', marginLeft: '8px', lineHeight: 1 }}>
+            <span style={{ fontSize: 'clamp(14px, 3vw, 18px)', fontWeight: 600, color: 'var(--text-secondary)', marginLeft: '8px', lineHeight: 1, whiteSpace: 'nowrap' }}>
               {dayOfWeek}, {date}
             </span>
           </div>
           
           {use24h && (
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '20px' }}>
-              <span suppressHydrationWarning style={{ fontSize: '20px', fontWeight: 600, color: 'var(--text-secondary)' }}>{milliseconds}</span>
+              <span suppressHydrationWarning style={{ fontSize: 'clamp(16px, 3vw, 20px)', fontWeight: 600, color: 'var(--text-secondary)' }}>{milliseconds}</span>
             </div>
           )}
 
-          <div style={{ fontSize: '24px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '16px' }}>
+          <div style={{ fontSize: 'clamp(18px, 4vw, 24px)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '16px', wordBreak: 'break-word' }}>
             {location.label}
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
-            <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-secondary)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+            <div style={{ fontSize: 'clamp(12px, 2.5vw, 14px)', fontWeight: 600, color: 'var(--text-secondary)' }}>
               <span>Sun {isDay ? '☀️' : '🌙'}: </span>
               <span>{sunrise} - {sunset}</span>
-              <span style={{ marginLeft: '8px' }}>(10h 06m)</span>
+              <span style={{ marginLeft: '4px' }}>(10h 06m)</span>
             </div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexShrink: 0 }}>
           <button
             className={`${styles.btn} ${!use24h ? styles.btnPrimary : ''}`}
             onClick={() => useAppStore.getState().toggle24h()}
-            style={{ minWidth: '60px' }}
+            style={{ minWidth: '50px', padding: '8px 12px' }}
           >
             12h
           </button>
           <button
             className={`${styles.btn} ${use24h ? styles.btnPrimary : ''}`}
             onClick={() => useAppStore.getState().toggle24h()}
-            style={{ minWidth: '60px' }}
+            style={{ minWidth: '50px', padding: '8px 12px' }}
           >
             24h
           </button>
