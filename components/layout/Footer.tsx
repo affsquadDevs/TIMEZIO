@@ -21,11 +21,6 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/about" className={styles.footerLink}>
-                  How It Works
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className={styles.footerLink}>
                   About
                 </Link>
               </li>

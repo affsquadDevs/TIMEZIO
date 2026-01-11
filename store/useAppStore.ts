@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 import { DateTime } from 'luxon';
 import tzLookup from 'tz-lookup';
 
-import type { AppTab, CompareState, IsoDate, Location, LocationSource, PlannerParticipant, PlannerState, WorkingHours } from '@/types/domain';
+import type { AppTab, CompareState, IsoDate, Location, LocationSource, PlannerMode, PlannerParticipant, PlannerState, WorkingHours } from '@/types/domain';
 import type { TimezoneMode } from '@/utils/timezoneBand';
 import { makeId } from '@/utils/id';
 import { parseShareParams } from '@/utils/share';
@@ -49,9 +49,14 @@ type AppState = {
   removePlannerParticipant: (participantId: string) => void;
   updatePlannerParticipantName: (participantId: string, name: string) => void;
   setPlannerWorkingHours: (participantId: string, hours: WorkingHours) => void;
-  setPlannerDuration: (minutes: 30 | 60) => void;
+  setPlannerDuration: (minutes: 15 | 30 | 45 | 60 | 90 | 120) => void;
   setPlannerDate: (date: IsoDate) => void;
   setPlannerSelectedSlot: (slotUtc: string | null) => void;
+  setPlannerAvoidEarlyHours: (value: boolean) => void;
+  setPlannerAvoidLateHours: (value: boolean) => void;
+  setPlannerAvoidLunch: (value: boolean) => void;
+  setPlannerMode: (mode: PlannerMode) => void;
+  setPlannerManualTime: (time: string | null, baseParticipantId: string | null) => void;
 
   hydrateFromUrl: () => void;
 };
@@ -59,9 +64,15 @@ type AppState = {
 const defaultPlanner: PlannerState = {
   participants: [],
   workingHours: {},
-  durationMinutes: 30,
+  durationMinutes: 60,
   date: DateTime.now().toFormat('yyyy-LL-dd'),
   selectedSlotUtc: null,
+  avoidEarlyHours: true,
+  avoidLateHours: true,
+  avoidLunch: false,
+  mode: 'auto',
+  manualTime: null,
+  manualTimeBaseParticipantId: null,
 };
 
 export const useAppStore = create<AppState>()(
@@ -157,13 +168,22 @@ export const useAppStore = create<AppState>()(
           name: name ?? locationsById[locationId].label,
         };
         const defaultHours: WorkingHours = { start: '09:00', end: '17:00' };
-        set((s) => ({
-          planner: {
-            ...s.planner,
-            participants: [...s.planner.participants, participant],
-            workingHours: { ...s.planner.workingHours, [participant.id]: defaultHours },
-          },
-        }));
+        set((s) => {
+          const newParticipants = [...s.planner.participants, participant];
+          const isFirstParticipant = s.planner.participants.length === 0;
+          return {
+            planner: {
+              ...s.planner,
+              participants: newParticipants,
+              workingHours: { ...s.planner.workingHours, [participant.id]: defaultHours },
+              // If first participant and in manual mode, set as base
+              manualTimeBaseParticipantId: 
+                s.planner.mode === 'manual' && isFirstParticipant && !s.planner.manualTimeBaseParticipantId
+                  ? participant.id
+                  : s.planner.manualTimeBaseParticipantId,
+            },
+          };
+        });
         return { ok: true, participantId: participant.id };
       },
 
@@ -200,6 +220,55 @@ export const useAppStore = create<AppState>()(
           planner: {
             ...s.planner,
             durationMinutes: minutes,
+          },
+        })),
+
+      setPlannerAvoidEarlyHours: (value) =>
+        set((s) => ({
+          planner: {
+            ...s.planner,
+            avoidEarlyHours: value,
+          },
+        })),
+
+      setPlannerAvoidLateHours: (value) =>
+        set((s) => ({
+          planner: {
+            ...s.planner,
+            avoidLateHours: value,
+          },
+        })),
+
+      setPlannerAvoidLunch: (value) =>
+        set((s) => ({
+          planner: {
+            ...s.planner,
+            avoidLunch: value,
+          },
+        })),
+
+      setPlannerMode: (mode) =>
+        set((s) => {
+          const isFirstTimeManual = mode === 'manual' && !s.planner.manualTime;
+          return {
+            planner: {
+              ...s.planner,
+              mode,
+              selectedSlotUtc: mode === 'auto' ? s.planner.selectedSlotUtc : null,
+              manualTime: mode === 'manual' && isFirstTimeManual ? '14:00' : (mode === 'auto' ? null : s.planner.manualTime),
+              manualTimeBaseParticipantId: mode === 'manual' && !s.planner.manualTimeBaseParticipantId && s.planner.participants.length > 0
+                ? s.planner.participants[0].id
+                : (mode === 'auto' ? null : s.planner.manualTimeBaseParticipantId),
+            },
+          };
+        }),
+
+      setPlannerManualTime: (time, baseParticipantId) =>
+        set((s) => ({
+          planner: {
+            ...s.planner,
+            manualTime: time,
+            manualTimeBaseParticipantId: baseParticipantId ?? (s.planner.participants.length > 0 ? s.planner.participants[0].id : null),
           },
         })),
 

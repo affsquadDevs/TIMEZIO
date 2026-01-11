@@ -31,6 +31,31 @@ This repo now contains a **product-ready skeleton** for a “World Timezone Glob
 npm install
 ```
 
+## Environment
+
+Create a `.env` file with:
+
+```
+DATABASE_URL="file:./prisma/dev.db"
+GOOGLE_CLIENT_ID="your-google-client-id"
+GOOGLE_CLIENT_SECRET="your-google-client-secret"
+GOOGLE_REDIRECT_URI="http://localhost:3000/api/auth/google/callback"
+```
+
+## Database (Prisma + SQLite)
+
+1. Generate Prisma client and create the SQLite db:
+
+```bash
+npx prisma migrate dev --name init
+```
+
+2. (Optional) Inspect the database:
+
+```bash
+npx prisma studio
+```
+
 ## Running the Application
 
 Start the development server:
@@ -40,6 +65,182 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## OAuth + Meet API routes
+
+- `GET /api/auth/google` – redirects to Google OAuth (Calendar scope + offline access)
+- `GET /api/auth/google/callback` – exchanges code, stores user + refresh token, sets `uid` cookie
+- `POST /api/google/create-meet` – creates a Calendar event with a Meet link using the stored refresh token
+
+### Testing the Create Meet API
+
+#### Step 1: Authenticate with Google
+
+1. Open your browser and navigate to:
+   ```
+   http://localhost:3000/api/auth/google
+   ```
+2. Complete the Google OAuth flow (grant Calendar permissions)
+3. After redirect, you'll have an `uid` cookie set (httpOnly, secure=false in dev)
+
+#### Step 2: Test with curl
+
+```bash
+curl -X POST http://localhost:3000/api/google/create-meet \
+  -H "Content-Type: application/json" \
+  -H "Cookie: uid=YOUR_UID_FROM_STEP_1" \
+  -d '{
+    "title": "Team Sync",
+    "description": "Global meeting",
+    "startUtcISO": "2026-01-15T14:00:00Z",
+    "endUtcISO": "2026-01-15T14:30:00Z",
+    "attendees": ["a@test.com", "b@test.com"]
+  }'
+```
+
+**Response:**
+```json
+{
+  "eventId": "abc123...",
+  "meetLink": "https://meet.google.com/xxx-yyyy-zzz"
+}
+```
+
+#### Step 3: Test from Browser Console
+
+On any page (e.g., `/meeting-planner`), open DevTools Console and run:
+
+```javascript
+fetch('/api/google/create-meet', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    title: 'Team Sync',
+    description: 'Global meeting',
+    startUtcISO: '2026-01-15T14:00:00Z',
+    endUtcISO: '2026-01-15T14:30:00Z',
+    attendees: ['a@test.com', 'b@test.com']
+  })
+})
+  .then(r => r.json())
+  .then(console.log);
+```
+
+**Note:** The `uid` cookie is automatically sent with the request (same-origin).
+
+#### Validation Examples
+
+**Missing fields:**
+```bash
+curl -X POST http://localhost:3000/api/google/create-meet \
+  -H "Content-Type: application/json" \
+  -d '{"title": "Test"}' 
+# → 400: Missing required fields
+```
+
+**Invalid date range:**
+```bash
+curl -X POST http://localhost:3000/api/google/create-meet \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Test",
+    "startUtcISO": "2026-01-15T14:30:00Z",
+    "endUtcISO": "2026-01-15T14:00:00Z"
+  }'
+# → 400: startUtcISO must be before endUtcISO
+```
+
+**No Google connection:**
+```bash
+# If user has no refreshToken
+# → 400: Google not connected
+```
+
+## Meeting Planner (Booking & Poll Modes)
+
+### Creating a Meeting Session
+
+1. Navigate to `/meeting-planner`
+2. Fill in the form:
+   - Title
+   - Description (optional)
+   - Duration (minutes)
+   - Date range (from/to in local time)
+3. Click "Create Session"
+4. Add participants (name, email, timezone, location lat/lng, city)
+5. Click "Generate best slots" to find optimal meeting times
+
+### Booking Mode (Like Calendly)
+
+1. After generating slots, click **"Booking"** mode button
+2. A public booking link will be generated: `/book/{slug}`
+3. Share the link with guests
+4. Guests can:
+   - View available slots in their local timezone
+   - Select a slot
+   - Enter name/email and reserve
+5. First reservation creates the Google Meet event automatically
+6. Only one reservation is allowed per booking link
+
+**API:**
+- `POST /api/meetings/:id/enable-booking` - Enable booking mode, generate slug
+- `GET /api/book/:slug` - Public: Get booking info (no auth required)
+- `POST /api/book/:slug/reserve` - Public: Reserve a slot (no auth required)
+
+### Poll Mode (Like Doodle)
+
+1. After generating slots, click **"Poll"** mode button
+2. A public poll link will be generated: `/poll/{sessionId}`
+3. Share the link with participants
+4. Participants can:
+   - Vote Yes/Maybe/No for each slot
+   - See vote summaries (how many yes/maybe/no per slot)
+5. Organizer can click **"Confirm Best Slot"** which:
+   - Selects slot with most "yes" votes (tie-break by score)
+   - Creates Google Meet event automatically
+
+**API:**
+- `POST /api/meetings/:id/enable-poll` - Enable poll mode, initialize votes
+- `GET /api/poll/:id` - Public: Get poll info (no auth required)
+- `POST /api/poll/:id/vote` - Public: Submit votes (no auth required)
+- `POST /api/meetings/:id/poll/confirm-best` - Organizer only: Confirm best slot
+
+### Instant Mode (Default)
+
+1. After generating slots, select a slot manually
+2. Click "Confirm & Create Meet"
+3. Meet link is created immediately
+
+### Scoring Improvements
+
+Slots are scored based on:
+- **Work hours**: If participant has custom work hours, uses those; otherwise defaults to Mon-Fri 09:00-18:00
+- **Weekend penalty**: Sat/Sun with no work hours = -3 score
+- **Night penalties**:
+  - 00:00-06:59 = -4 score
+  - 22:00-23:59 = -3 score
+- **Fairness**: If 2+ participants have "red" bucket for a slot, subtract 2 from score
+- **Hard night filter** (optional): Skip slots outside 07:00-23:00 entirely
+
+**Generate slots parameters:**
+- `stepMinutes`: Step size for candidate generation (default: 30)
+- `maxCandidates`: Max candidates before filtering (default: 500)
+- `topN`: Number of top slots to return (default: 10)
+- `hardFilterNight`: Filter out slots outside 07:00-23:00 (default: false)
+- `fairness`: Apply fairness penalty for slots with 2+ red participants (default: false)
+
+## Meeting Planner Flow
+
+1. Open `http://localhost:3000/meeting-planner` after running `npm run dev`.
+2. Click **Connect Google** to hit `/api/auth/google` and set the `uid` cookie.
+3. Create a session (title, duration, UTC range); the backend returns a `MeetingSession`.
+4. Add participants (name, email, timezone, lat/lng); participants are stored as JSON.
+5. Generate slots with step/max/top – scoring happens server-side (09–18 green, 07–22 yellow, 22–07 red).
+6. Select a slot, then **Confirm & Create Meet** – the server calls Google Calendar and saves the Meet link.
+
+> New API endpoints: `/api/meetings`, `/api/meetings/:id`, `/api/meetings/:id/participants`, `/api/meetings/:id/generate-slots`, `/api/meetings/:id/select-slot`, `/api/meetings/:id/confirm`.
+
+Use the page messages/alerts for validation feedback and check DevTools network/logs if something fails.
 
 ## Build for Production
 

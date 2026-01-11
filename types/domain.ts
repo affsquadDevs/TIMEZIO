@@ -33,12 +33,20 @@ export type WorkingHours = {
   end: string; // "17:00"
 };
 
+export type PlannerMode = 'auto' | 'manual'; // auto = find slots, manual = pick time manually
+
 export type PlannerState = {
   participants: PlannerParticipant[];
   workingHours: Record<string, WorkingHours>; // by participant id
-  durationMinutes: 30 | 60;
+  durationMinutes: 15 | 30 | 45 | 60 | 90 | 120;
   date: IsoDate; // selected date (base date)
   selectedSlotUtc: string | null; // ISO string in UTC
+  avoidEarlyHours: boolean; // avoid meetings before 8 AM local time
+  avoidLateHours: boolean; // avoid meetings after 8 PM local time
+  avoidLunch: boolean; // avoid 12:00-13:00 local time
+  mode: PlannerMode; // auto or manual time selection
+  manualTime: string | null; // "HH:mm" in base timezone for manual mode
+  manualTimeBaseParticipantId: string | null; // participant whose timezone is used for manual input
 };
 
 

@@ -4,8 +4,8 @@ import styles from './tabs.module.css';
 
 const TABS: { id: AppTab; label: string }[] = [
   { id: 'explore', label: 'Explore' },
-  { id: 'compare', label: 'Compare' },
   { id: 'planner', label: 'Planner' },
+  { id: 'compare', label: 'Compare' },
   { id: 'dst', label: 'DST' },
   { id: 'saved', label: 'Saved' },
 ];

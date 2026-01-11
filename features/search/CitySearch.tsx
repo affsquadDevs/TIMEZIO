@@ -1,129 +1,185 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+'use client';
+
+import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react';
+
 import ui from '@/components/ui/ui.module.css';
+import styles from './CitySearch.module.css';
 
-type City = { id: string; label: string; lat: number; lng: number; tz: string };
+const MIN_QUERY_LENGTH = 2;
 
-export function CitySearch(props: { onPick: (city: City) => void; placeholder?: string }) {
-  const [q, setQ] = useState('');
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [results, setResults] = useState<City[]>([]);
-  const [open, setOpen] = useState(false);
+export type CitySearchResult = {
+  id: string;
+  label: string;
+  lat: number;
+  lng: number;
+  tz: string;
+};
 
-  const query = useMemo(() => q.trim(), [q]);
+type CitySearchProps = {
+  placeholder?: string;
+  onPick: (city: CitySearchResult) => void;
+};
+
+type ApiResponse = {
+  results?: CitySearchResult[];
+};
+
+export function CitySearch({ placeholder = 'Search city…', onPick }: CitySearchProps) {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<CitySearchResult[]>([]);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const requestIdRef = useRef(0);
 
   useEffect(() => {
-    const qq = query;
-    if (qq.length < 2) {
+    if (query.length < MIN_QUERY_LENGTH) {
       setResults([]);
-      setOpen(false);
+      setStatus('idle');
+      setErrorMessage(null);
+      setHighlightedIndex(-1);
       return;
     }
 
-    const ctrl = new AbortController();
-    const t = window.setTimeout(async () => {
-      try {
-        const res = await fetch(`/api/cities?q=${encodeURIComponent(qq)}&limit=8`, {
-          signal: ctrl.signal,
-          headers: { Accept: 'application/json' },
-        });
-        const data = (await res.json()) as { results: City[] };
-        if (ctrl.signal.aborted) return;
-        setResults(Array.isArray(data.results) ? data.results : []);
-        setOpen(true);
-      } catch (e) {
-        if (ctrl.signal.aborted) return;
-        setResults([]);
-        setOpen(false);
-      }
-    }, 180);
+    const controller = new AbortController();
+    const currentRequestId = ++requestIdRef.current;
 
-    return () => {
-      ctrl.abort();
-      window.clearTimeout(t);
-    };
+    setStatus('loading');
+    setErrorMessage(null);
+    setResults([]);
+    setHighlightedIndex(-1);
+
+    const encodedQuery = encodeURIComponent(query.trim());
+    const url = `/api/cities?q=${encodedQuery}&limit=8`;
+
+    fetch(url, {
+      signal: controller.signal,
+      cache: 'no-store',
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Unable to search (${res.status})`);
+        }
+        return res.json() as Promise<ApiResponse>;
+      })
+      .then((data) => {
+        if (requestIdRef.current !== currentRequestId) return;
+        setResults(data.results ?? []);
+        setStatus('idle');
+      })
+      .catch((error) => {
+        if (controller.signal.aborted || requestIdRef.current !== currentRequestId) return;
+        setStatus('error');
+        setErrorMessage(error?.message ?? 'Unable to search cities');
+      });
+
+    return () => controller.abort();
   }, [query]);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setOpen(false);
-      }
-    };
-
-    if (open) {
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-      };
+    if (results.length === 0) {
+      setHighlightedIndex(-1);
+    } else {
+      setHighlightedIndex(0);
     }
-  }, [open]);
+  }, [results.length]);
+
+  const helperMessage = useMemo(() => {
+    if (query.length === 0) return undefined;
+    if (query.length < MIN_QUERY_LENGTH) return `Type at least ${MIN_QUERY_LENGTH} characters`;
+    if (status === 'loading') return 'Searching cities…';
+    if (status === 'error') return errorMessage ?? 'Unable to fetch cities';
+    if (results.length === 0) return 'No matches found';
+    return undefined;
+  }, [query.length, status, errorMessage, results.length]);
+
+  const showDropdown = useMemo(() => {
+    if (query.length === 0) return false;
+    if (query.length < MIN_QUERY_LENGTH) return true;
+    return results.length > 0 || status !== 'idle';
+  }, [query.length, results.length, status]);
+
+  const handlePick = useCallback(
+    (city: CitySearchResult) => {
+      onPick(city);
+      setQuery('');
+      setResults([]);
+      setStatus('idle');
+      setErrorMessage(null);
+      setHighlightedIndex(-1);
+      inputRef.current?.focus();
+    },
+    [onPick]
+  );
+
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent<HTMLInputElement>) => {
+      if (!results.length) return;
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        setHighlightedIndex((prev) => (prev + 1) % results.length);
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        setHighlightedIndex((prev) => (prev <= 0 ? results.length - 1 : prev - 1));
+      } else if (event.key === 'Enter') {
+        if (highlightedIndex >= 0 && highlightedIndex < results.length) {
+          event.preventDefault();
+          handlePick(results[highlightedIndex]);
+        }
+      } else if (event.key === 'Escape') {
+        setResults([]);
+        setHighlightedIndex(-1);
+        setStatus('idle');
+        setErrorMessage(null);
+      }
+    },
+    [results, highlightedIndex, handlePick]
+  );
 
   return (
-    <div ref={containerRef} style={{ position: 'relative', width: '100%', maxWidth: '100%' }}>
+    <div className={styles.root}>
       <input
+        ref={inputRef}
         className={ui.input}
-        value={q}
-        placeholder={props.placeholder ?? 'Search city…'}
-        onChange={(e) => setQ(e.target.value)}
-        onFocus={() => {
-          if (results.length > 0) setOpen(true);
-        }}
-        style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}
+        placeholder={placeholder}
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        onKeyDown={handleKeyDown}
+        aria-haspopup="listbox"
+        aria-expanded={showDropdown}
       />
-      {open && results.length > 0 && (
-        <div
-          className={ui.card}
-          style={{
-            position: 'absolute',
-            left: 0,
-            right: 0,
-            top: 'calc(100% + 8px)',
-            zIndex: 50,
-            overflow: 'hidden',
-            padding: '6px',
-            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2), 0 0 0 1.5px var(--card-border)',
-            border: '1.5px solid var(--card-border)',
-            maxWidth: '100%',
-            boxSizing: 'border-box',
-          }}
-        >
-          {results.map((c, idx) => (
-            <button
-              key={c.id}
-              className={ui.btn}
-              style={{
-                width: '100%',
-                borderRadius: '8px',
-                border: 'none',
-                borderBottom: idx < results.length - 1 ? '1px solid var(--border-color)' : 'none',
-                textAlign: 'left',
-                background: 'var(--card-bg)',
-                color: 'var(--text-primary)',
-                marginBottom: idx < results.length - 1 ? '4px' : '0',
-                padding: '12px 16px',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'var(--background)';
-                e.currentTarget.style.borderColor = 'var(--text-secondary)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'var(--card-bg)';
-                e.currentTarget.style.borderColor = 'transparent';
-              }}
-              onClick={() => {
-                props.onPick(c);
-                setQ('');
-                setOpen(false);
-              }}
-            >
-              <div style={{ fontWeight: 750, color: 'var(--text-primary)' }}>{c.label}</div>
-              <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>{c.tz}</div>
-            </button>
-          ))}
+      {showDropdown && (
+        <div className={styles.dropdown} role="status" aria-live="polite">
+          {results.length > 0 ? (
+            <div className={styles.list} role="listbox">
+              {results.map((city, index) => (
+                <button
+                  key={city.id}
+                  type="button"
+                  className={`${styles.item} ${index === highlightedIndex ? styles.itemActive : ''}`}
+                  onMouseDown={(event) => event.preventDefault()}
+                  onMouseEnter={() => setHighlightedIndex(index)}
+                  onClick={() => handlePick(city)}
+                  role="option"
+                  aria-selected={index === highlightedIndex}
+                >
+                  <span className={styles.label}>{city.label}</span>
+                  <span className={styles.meta}>
+                    {city.tz} • {city.lat.toFixed(4)}, {city.lng.toFixed(4)}
+                  </span>
+                </button>
+              ))}
+            </div>
+          ) : (
+            helperMessage && <div className={styles.message}>{helperMessage}</div>
+          )}
+          {results.length > 0 && helperMessage && <div className={styles.message}>{helperMessage}</div>}
         </div>
       )}
     </div>
   );
 }
+
 
 

@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String?
+  googleId     String?  @unique
+  refreshToken String?
+  createdAt    DateTime @default(now())
+}
+
+model MeetingSession {
+  id              String   @id @default(cuid())
+  creatorId       String
+  title           String
+  description     String?
+  durationMinutes Int
+  rangeFromISO    String
+  rangeToISO      String
+  participants    String
+  proposedSlots   String?
+  selectedSlot    String?
+  confirmedEvent  String?
+  mode            String   @default("instant")
+  bookingSlug     String?  @unique
+  pollVotes       String?
+  workHoursPolicy String?
+  createdAt       DateTime @default(now())
+}
+
