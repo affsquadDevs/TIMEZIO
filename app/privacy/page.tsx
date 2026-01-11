@@ -100,7 +100,7 @@ export default function PrivacyPage() {
                   When you visit the Website, limited information may be collected automatically, including:
                 </p>
                 <ul className={privacyStyles.list}>
-                  <li>IP address (in anonymized or truncated form where possible)</li>
+                  <li>IP address (anonymized/truncated where supported by the tool)</li>
                   <li>Browser type and version</li>
                   <li>Device type and operating system</li>
                   <li>Pages visited and interaction data</li>
@@ -113,6 +113,13 @@ export default function PrivacyPage() {
               </section>
 
               <section style={{ marginBottom: '32px' }}>
+                <h3 className={privacyStyles.subsectionTitle}>1.3 Service Data You May Provide</h3>
+                <p className={privacyStyles.paragraph}>
+                  Core tools (time conversion, planner) work without registration. If you choose to save/share meeting data, connect a calendar, or sign in with Google, we may store the meeting/session details you submit (e.g., participant names or labels, time slots, titles) and your Google account email to enable the feature. You can request deletion of this stored data at any time (see Contact).
+                </p>
+              </section>
+
+              <section style={{ marginBottom: '32px' }}>
                 <h2 className={privacyStyles.sectionTitle}>2. Cookies and Similar Technologies</h2>
                 <p className={privacyStyles.paragraph}>
                   The Website may use cookies or similar technologies to:
@@ -121,6 +128,7 @@ export default function PrivacyPage() {
                   <li>Measure traffic and usage patterns</li>
                   <li>Understand how users interact with the Website</li>
                   <li>Improve performance and user experience</li>
+                  <li>Show advertising where enabled</li>
                 </ul>
                 <p className={privacyStyles.paragraph}>
                   Cookies used on this Website do not directly identify you as an individual.
@@ -138,15 +146,15 @@ export default function PrivacyPage() {
                 
                 <h3 className={privacyStyles.subsectionTitle}>3.1 Analytics</h3>
                 <p className={privacyStyles.paragraph}>
-                  We may use analytics tools (such as privacy-focused or standard web analytics services) to better understand how visitors use the Website. These tools may collect anonymized or aggregated usage data.
+                  We may use analytics tools (e.g., Google Analytics via Google Tag Manager or privacy-focused alternatives) to understand how visitors use the Website. These tools collect usage data (pages viewed, device/browser info, approximate location) and can be configured to anonymize IP where supported. Non-essential analytics only load after consent where required.
                 </p>
 
                 <h3 className={privacyStyles.subsectionTitle}>3.2 Advertising</h3>
                 <p className={privacyStyles.paragraph}>
-                  The Website may display advertisements provided by third-party advertising partners, such as Google AdSense. These partners may use cookies or similar technologies to display relevant ads.
+                  The Website may display advertisements from third-party partners such as Google AdSense (served via Google Tag Manager). These partners may use cookies or similar technologies to display relevant ads and may process data (e.g., cookie IDs, coarse location, device info). Advertising cookies are loaded only after consent where required.
                 </p>
                 <p className={privacyStyles.paragraph}>
-                  Advertising partners may collect information as governed by their own privacy policies. We encourage you to review the privacy policies of third-party advertising providers for more information.
+                  Advertising partners process information under their own privacy policies and may transfer data outside your region under appropriate safeguards (e.g., Standard Contractual Clauses). You can withdraw or change cookie/ads consent at any time via your browser or the cookie controls provided.
                 </p>
               </section>
 
@@ -173,7 +181,7 @@ export default function PrivacyPage() {
                   Under the GDPR, personal data is processed on the following legal bases:
                 </p>
                 <ul className={privacyStyles.list}>
-                  <li><strong>Consent</strong> — for cookies and analytics where required</li>
+                  <li><strong>Consent</strong> — for non-essential cookies/analytics/advertising where required</li>
                   <li><strong>Legitimate interests</strong> — to operate, secure, and improve the Website</li>
                   <li><strong>Legal obligation</strong> — where processing is required by law</li>
                 </ul>
@@ -195,7 +203,7 @@ export default function PrivacyPage() {
                   All such providers are required to process data in compliance with applicable data protection laws.
                 </p>
                 <p className={privacyStyles.paragraph}>
-                  We do not transfer personal data outside the European Economic Area (EEA) unless appropriate safeguards are in place.
+                  Some providers (e.g., Google) may process data outside the European Economic Area (EEA). When that occurs, we rely on appropriate safeguards such as Standard Contractual Clauses or equivalent mechanisms.
                 </p>
               </section>
 
@@ -244,7 +252,7 @@ export default function PrivacyPage() {
                   We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.
                 </p>
                 <p className={privacyStyles.paragraph}>
-                  We encourage users to review this page periodically.
+                  We encourage users to review this page periodically. If changes materially affect how we process your data, we will provide a clear notice (e.g., on this page or via the Website interface).
                 </p>
               </section>
 

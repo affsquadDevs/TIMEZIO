@@ -1396,7 +1396,7 @@ export function PlannerTab() {
                         onClick={handleGenerateSlotsBackend}
                         style={{ fontSize: 12, padding: '6px 12px' }}
                       >
-                        Generate Slots on Backend
+                        Generate slots
                       </button>
                     )}
                   </div>
@@ -1404,7 +1404,7 @@ export function PlannerTab() {
                   {backendSlots.length === 0 && slots.length === 0 ? (
                     <div className={ui.subtitle}>
                       {session ? (
-                        'Click "Generate Slots on Backend" to find available meeting times. Or adjust working hours/date and try again.'
+                        'Click "Generate slots" to find available meeting times. Or adjust working hours/date and try again.'
                       ) : (
                         'Create a session first, then add at least 2 participants and set their working hours to find available meeting times.'
                       )}
