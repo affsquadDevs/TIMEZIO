@@ -94,6 +94,7 @@ export async function POST(
       const breakdown: SlotBreakdown[] = [];
       let totalScore = 0;
       let redCount = 0;
+      let hasHardFilterViolation = false; // Track if any participant is outside 07:00-23:00 when hardFilterNight is enabled
 
       for (const participant of participants) {
         const localStart = slotStart.setZone(participant.timezone);
@@ -113,6 +114,7 @@ export async function POST(
           if (hardFilterNight && (hour < 7 || hourEnd > 23)) {
             bucket = 'red';
             score = -4;
+            hasHardFilterViolation = true;
           } else {
             const participantWorkHours = getWorkHoursForParticipant(participant, workHoursPolicy);
             const dayWorkHours = participantWorkHours[dayName];
@@ -191,7 +193,7 @@ export async function POST(
 
       // Skip slot if hard filter excluded all participants (breakdown is empty)
       // Also skip if hardFilterNight is enabled and any participant is outside 07:00-23:00
-      if (breakdown.length === 0 || (hardFilterNight && breakdown.some((b) => b.bucket === 'red' && totalScore < -3))) {
+      if (breakdown.length === 0 || hasHardFilterViolation) {
         pointer = pointer.plus(stepDuration);
         continue;
       }

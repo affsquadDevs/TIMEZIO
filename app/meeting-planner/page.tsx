@@ -12,6 +12,8 @@ import { CitySearch } from '@/features/search/CitySearch';
 import { WorkingHoursEditor } from '@/components/ui/WorkingHoursEditor';
 import { TimeRow } from '@/components/ui/TimeRow';
 import { TimezoneSelector } from '@/components/ui/TimezoneSelector';
+import { DatePicker } from '@/components/ui/DatePicker';
+import { TimePicker } from '@/components/ui/TimePicker';
 import { getUserTimezone, getCurrentUserTimezone } from '@/utils/userTimezone';
 import tzLookup from 'tz-lookup';
 
@@ -19,6 +21,7 @@ import { useAppStore } from '@/store/useAppStore';
 import { formatTime, findMeetingSlots, createManualTimeSlot } from '@/utils/time';
 import { useTicker } from '@/hooks/useTicker';
 import type { TimeSlot } from '@/utils/time';
+import { useToast } from '@/components/ui/Toast';
 
 import type {
   ConfirmedEvent,
@@ -46,6 +49,7 @@ type SessionResponse = {
 };
 
 export default function MeetingPlannerPage() {
+  const { showToast } = useToast();
   const globeRef = useRef<GlobeCanvasHandle>(null);
   const now = useTicker(1000);
 
@@ -80,10 +84,12 @@ export default function MeetingPlannerPage() {
   const [sessionForm, setSessionForm] = useState({ title: '', description: '' });
   const [manualTimeInput, setManualTimeInput] = useState<string>('14:00');
   const [participantForm, setParticipantForm] = useState({ name: '', email: '' });
+  const [participantAddMode, setParticipantAddMode] = useState<'simple' | 'detailed'>('detailed');
   const [participantEmails, setParticipantEmails] = useState<Record<string, string>>({}); // participantId -> email
   const [backendSlots, setBackendSlots] = useState<ProposedSlot[]>([]); // Slots з backend
   const [userTimezone, setUserTimezone] = useState<string>(getCurrentUserTimezone()); // User's saved timezone
   const [userTimezoneName, setUserTimezoneName] = useState<string>('Me'); // User's name for their timezone
+  const [googleUser, setGoogleUser] = useState<{ connected: boolean; name?: string; email?: string } | null>(null);
 
   // Load user timezone from localStorage on mount
   useEffect(() => {
@@ -91,6 +97,21 @@ export default function MeetingPlannerPage() {
     if (saved) {
       setUserTimezone(saved);
     }
+  }, []);
+
+  // Load Google user info
+  useEffect(() => {
+    const loadUser = async () => {
+      try {
+        const res = await fetch('/api/user', { credentials: 'include' });
+        const data = await res.json();
+        setGoogleUser(data);
+      } catch (err) {
+        console.error('Failed to load user:', err);
+        setGoogleUser({ connected: false });
+      }
+    };
+    loadUser();
   }, []);
 
   // Clear focusTarget after it's been passed down once
@@ -432,7 +453,7 @@ export default function MeetingPlannerPage() {
     resetMessages();
 
     if (!session) {
-      alert('Create a session first');
+      showToast('Create a session first', 'error');
       return;
     }
 
@@ -572,28 +593,70 @@ export default function MeetingPlannerPage() {
                   </div>
                 </div>
 
-                <div className={ui.divider} />
-
                 {/* Google OAuth */}
                 <div>
-                  <a href="/api/auth/google" className={ui.link} style={{ fontSize: '14px', fontWeight: 600 }}>
-                    🔗 Connect Google Calendar (required for Meet links)
-                  </a>
+                  {googleUser?.connected ? (
+                    <div 
+                      className={ui.btn}
+                      style={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center',
+                        gap: 8,
+                        width: '100%',
+                        fontSize: '14px', 
+                        fontWeight: 500,
+                        padding: '12px 16px',
+                        backgroundColor: 'var(--card-bg)',
+                        borderColor: 'var(--card-border)',
+                        cursor: 'default'
+                      }}
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                      </svg>
+                      {googleUser.name || googleUser.email || 'Connected'}
+                    </div>
+                  ) : (
+                    <a 
+                      href="/api/auth/google" 
+                      className={`${ui.btn} ${ui.btnPrimary}`}
+                      style={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center',
+                        gap: 10,
+                        width: '100%',
+                        fontSize: '14px', 
+                        fontWeight: 600,
+                        padding: '12px 16px',
+                        textDecoration: 'none'
+                      }}
+                    >
+                      <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                      </svg>
+                      Connect Google Calendar
+                      <span style={{ fontSize: '12px', opacity: 0.9, fontWeight: 400 }}>
+                        (required for Meet links)
+                      </span>
+                    </a>
+                  )}
                 </div>
 
                 <div className={ui.divider} />
 
-                {/* User Timezone Selector */}
+                {/* User Timezone */}
                 <div>
-                  <div className={ui.label} style={{ marginBottom: 8 }}>Your Timezone</div>
-                  <div className={ui.subtitle} style={{ fontSize: '12px', marginBottom: 8 }}>
-                    Set your timezone to automatically add yourself as a participant when creating a meeting session
-                  </div>
+                  <div className={ui.label} style={{ marginBottom: 12 }}>Your Timezone</div>
                   <TimezoneSelector
                     value={userTimezone}
                     onChange={(tz) => {
                       setUserTimezone(tz);
-                      // Зберегти в localStorage автоматично при зміні
                       if (typeof window !== 'undefined') {
                         localStorage.setItem('timezio_user_timezone', tz);
                       }
@@ -601,46 +664,14 @@ export default function MeetingPlannerPage() {
                     showSaveOption={true}
                     showClearOption={true}
                   />
-                  <div style={{ marginTop: 8 }}>
+                  <div style={{ marginTop: 12 }}>
                     <input
                       type="text"
-                      placeholder="Your name (optional, default: 'Me')"
+                      placeholder="Your name (optional)"
                       value={userTimezoneName}
                       onChange={(e) => setUserTimezoneName(e.target.value)}
                       className={ui.input}
-                      style={{ fontSize: '12px', padding: '6px 10px', width: '100%' }}
-                    />
-                  </div>
-                </div>
-
-                <div className={ui.divider} />
-
-                {/* User Timezone Selector */}
-                <div>
-                  <div className={ui.label} style={{ marginBottom: 8 }}>Your Timezone</div>
-                  <div className={ui.subtitle} style={{ fontSize: '12px', marginBottom: 8 }}>
-                    Set your timezone to automatically add yourself as a participant when creating a meeting session
-                  </div>
-                  <TimezoneSelector
-                    value={userTimezone}
-                    onChange={(tz) => {
-                      setUserTimezone(tz);
-                      // Зберегти в localStorage автоматично при зміні
-                      if (typeof window !== 'undefined') {
-                        localStorage.setItem('timezio_user_timezone', tz);
-                      }
-                    }}
-                    showSaveOption={true}
-                    showClearOption={true}
-                  />
-                  <div style={{ marginTop: 8 }}>
-                    <input
-                      type="text"
-                      placeholder="Your name (optional, default: 'Me')"
-                      value={userTimezoneName}
-                      onChange={(e) => setUserTimezoneName(e.target.value)}
-                      className={ui.input}
-                      style={{ fontSize: '12px', padding: '6px 10px' }}
+                      style={{ fontSize: '13px', padding: '8px 12px', width: '100%' }}
                     />
                   </div>
                 </div>
@@ -683,27 +714,120 @@ export default function MeetingPlannerPage() {
 
                     {/* Mode Selection */}
                     <div>
-                      <div className={ui.label} style={{ marginBottom: 8 }}>Mode</div>
-                      <div className={ui.pillRow}>
+                      <div className={ui.label} style={{ marginBottom: 12, fontSize: '11px', fontWeight: 600, letterSpacing: '0.5px' }}>MODE</div>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
                         <button
-                          className={`${ui.btn} ${planner.mode === 'auto' ? ui.btnPrimary : ''}`}
                           onClick={() => setPlannerMode('auto')}
-                          style={{ fontSize: '13px', padding: '8px 16px' }}
+                          style={{
+                            padding: '16px',
+                            borderRadius: '12px',
+                            border: `2px solid ${planner.mode === 'auto' ? 'var(--highlight)' : 'var(--card-border)'}`,
+                            backgroundColor: planner.mode === 'auto' ? 'var(--highlight)' : 'var(--card-bg)',
+                            color: planner.mode === 'auto' ? 'var(--background)' : 'var(--text-primary)',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s ease',
+                            textAlign: 'left',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 8,
+                            position: 'relative',
+                            overflow: 'hidden',
+                          }}
+                          onMouseEnter={(e) => {
+                            if (planner.mode !== 'auto') {
+                              e.currentTarget.style.borderColor = 'var(--text-secondary)';
+                              e.currentTarget.style.transform = 'translateY(-2px)';
+                            }
+                          }}
+                          onMouseLeave={(e) => {
+                            if (planner.mode !== 'auto') {
+                              e.currentTarget.style.borderColor = 'var(--card-border)';
+                              e.currentTarget.style.transform = '';
+                            }
+                          }}
                         >
-                          🔍 Auto Find Slots
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <circle cx="11" cy="11" r="8"></circle>
+                              <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                            <span style={{ fontWeight: 600, fontSize: '14px' }}>Auto Find Slots</span>
+                          </div>
+                          <div style={{ fontSize: '12px', opacity: 0.9, lineHeight: 1.4 }}>
+                            System finds optimal meeting times by analyzing working hours overlap across all participants
+                          </div>
                         </button>
                         <button
-                          className={`${ui.btn} ${planner.mode === 'manual' ? ui.btnPrimary : ''}`}
                           onClick={() => setPlannerMode('manual')}
-                          style={{ fontSize: '13px', padding: '8px 16px' }}
+                          style={{
+                            padding: '16px',
+                            borderRadius: '12px',
+                            border: `2px solid ${planner.mode === 'manual' ? 'var(--highlight)' : 'var(--card-border)'}`,
+                            backgroundColor: planner.mode === 'manual' ? 'var(--highlight)' : 'var(--card-bg)',
+                            color: planner.mode === 'manual' ? 'var(--background)' : 'var(--text-primary)',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s ease',
+                            textAlign: 'left',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 8,
+                            position: 'relative',
+                            overflow: 'hidden',
+                          }}
+                          onMouseEnter={(e) => {
+                            if (planner.mode !== 'manual') {
+                              e.currentTarget.style.borderColor = 'var(--text-secondary)';
+                              e.currentTarget.style.transform = 'translateY(-2px)';
+                            }
+                          }}
+                          onMouseLeave={(e) => {
+                            if (planner.mode !== 'manual') {
+                              e.currentTarget.style.borderColor = 'var(--card-border)';
+                              e.currentTarget.style.transform = '';
+                            }
+                          }}
                         >
-                          ⏰ Manual Time Pick
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <circle cx="12" cy="12" r="10"></circle>
+                              <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span style={{ fontWeight: 600, fontSize: '14px' }}>Manual Time Pick</span>
+                          </div>
+                          <div style={{ fontSize: '12px', opacity: 0.9, lineHeight: 1.4 }}>
+                            You choose a specific time, and the system converts it to all participants' time zones
+                          </div>
                         </button>
                       </div>
-                      <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: 6 }}>
-                        {planner.mode === 'auto'
-                          ? 'Automatically find the best available meeting times based on working hours'
-                          : 'Manually select a specific time and see it converted to all participants\' time zones'}
+                      <div style={{ 
+                        padding: '12px', 
+                        backgroundColor: 'var(--card-bg)', 
+                        borderRadius: '8px', 
+                        border: '1px solid var(--card-border)',
+                        fontSize: '12px', 
+                        color: 'var(--text-secondary)',
+                        lineHeight: 1.5
+                      }}>
+                        <div style={{ fontWeight: 600, marginBottom: 4, color: 'var(--text-primary)' }}>
+                          {planner.mode === 'auto' ? 'How Auto Find Works:' : 'How Manual Pick Works:'}
+                        </div>
+                        {planner.mode === 'auto' ? (
+                          <ul style={{ margin: 0, paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                            <li>Analyzes working hours of all participants</li>
+                            <li>Finds time windows where everyone is available</li>
+                            <li>Generates slots every 15 minutes within overlap</li>
+                            <li>Ranks slots by quality (time of day, work hours position)</li>
+                            <li>Shows best options first (sorted by quality score)</li>
+                          </ul>
+                        ) : (
+                          <ul style={{ margin: 0, paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                            <li>Select a time in one participant's timezone</li>
+                            <li>System converts to UTC internally</li>
+                            <li>Displays the same moment in all other timezones</li>
+                            <li>Perfect for fixed meeting times or specific schedules</li>
+                            <li>All calculations respect DST transitions</li>
+                          </ul>
+                        )}
                       </div>
                     </div>
 
@@ -729,45 +853,208 @@ export default function MeetingPlannerPage() {
                     {/* Date */}
                     <div>
                       <div className={ui.label} style={{ marginBottom: 8 }}>Date</div>
-                      <input
-                        type="date"
+                      <DatePicker
                         value={planner.date}
-                        onChange={(e) => setPlannerDate(e.target.value)}
-                        className={ui.input}
+                        onChange={setPlannerDate}
                       />
                     </div>
 
                     {/* Preferences */}
                     <div>
-                      <div className={ui.label} style={{ marginBottom: 8 }}>Preferences</div>
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                        <label style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: '13px', cursor: 'pointer', padding: '6px 0' }}>
-                          <input
-                            type="checkbox"
-                            checked={planner.avoidEarlyHours}
-                            onChange={(e) => setPlannerAvoidEarlyHours(e.target.checked)}
-                            style={{ cursor: 'pointer', width: '16px', height: '16px' }}
-                          />
-                          <span style={{ userSelect: 'none' }}>Avoid meetings before 8 AM local time</span>
-                        </label>
-                        <label style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: '13px', cursor: 'pointer', padding: '6px 0' }}>
-                          <input
-                            type="checkbox"
-                            checked={planner.avoidLateHours}
-                            onChange={(e) => setPlannerAvoidLateHours(e.target.checked)}
-                            style={{ cursor: 'pointer', width: '16px', height: '16px' }}
-                          />
-                          <span style={{ userSelect: 'none' }}>Avoid meetings after 8 PM local time</span>
-                        </label>
-                        <label style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: '13px', cursor: 'pointer', padding: '6px 0' }}>
-                          <input
-                            type="checkbox"
-                            checked={planner.avoidLunch}
-                            onChange={(e) => setPlannerAvoidLunch(e.target.checked)}
-                            style={{ cursor: 'pointer', width: '16px', height: '16px' }}
-                          />
-                          <span style={{ userSelect: 'none' }}>Avoid lunch time (12:00-13:00)</span>
-                        </label>
+                      <div className={ui.label} style={{ marginBottom: 12 }}>Preferences</div>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                        <button
+                          type="button"
+                          onClick={() => setPlannerAvoidEarlyHours(!planner.avoidEarlyHours)}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            padding: '14px 16px',
+                            borderRadius: '10px',
+                            border: '1px solid var(--card-border)',
+                            backgroundColor: planner.avoidEarlyHours ? 'var(--card-bg)' : 'var(--card-bg)',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s ease',
+                            textAlign: 'left',
+                            gap: 12,
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.borderColor = 'var(--highlight)';
+                            e.currentTarget.style.transform = 'translateX(2px)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.borderColor = 'var(--card-border)';
+                            e.currentTarget.style.transform = '';
+                          }}
+                        >
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1 }}>
+                            <div
+                              style={{
+                                width: 44,
+                                height: 24,
+                                borderRadius: 12,
+                                backgroundColor: planner.avoidEarlyHours ? 'var(--highlight)' : 'var(--card-border)',
+                                position: 'relative',
+                                transition: 'background-color 0.2s ease',
+                                flexShrink: 0,
+                              }}
+                            >
+                              <div
+                                style={{
+                                  width: 20,
+                                  height: 20,
+                                  borderRadius: '50%',
+                                  backgroundColor: '#fff',
+                                  position: 'absolute',
+                                  top: 2,
+                                  left: planner.avoidEarlyHours ? 22 : 2,
+                                  transition: 'left 0.2s ease',
+                                  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                                }}
+                              />
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                              <span style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text-primary)' }}>
+                                Avoid meetings before 8 AM
+                              </span>
+                              <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>Local time</span>
+                            </div>
+                          </div>
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--text-secondary)', flexShrink: 0 }}>
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                          </svg>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => setPlannerAvoidLateHours(!planner.avoidLateHours)}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            padding: '14px 16px',
+                            borderRadius: '10px',
+                            border: '1px solid var(--card-border)',
+                            backgroundColor: planner.avoidLateHours ? 'var(--card-bg)' : 'var(--card-bg)',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s ease',
+                            textAlign: 'left',
+                            gap: 12,
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.borderColor = 'var(--highlight)';
+                            e.currentTarget.style.transform = 'translateX(2px)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.borderColor = 'var(--card-border)';
+                            e.currentTarget.style.transform = '';
+                          }}
+                        >
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1 }}>
+                            <div
+                              style={{
+                                width: 44,
+                                height: 24,
+                                borderRadius: 12,
+                                backgroundColor: planner.avoidLateHours ? 'var(--highlight)' : 'var(--card-border)',
+                                position: 'relative',
+                                transition: 'background-color 0.2s ease',
+                                flexShrink: 0,
+                              }}
+                            >
+                              <div
+                                style={{
+                                  width: 20,
+                                  height: 20,
+                                  borderRadius: '50%',
+                                  backgroundColor: '#fff',
+                                  position: 'absolute',
+                                  top: 2,
+                                  left: planner.avoidLateHours ? 22 : 2,
+                                  transition: 'left 0.2s ease',
+                                  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                                }}
+                              />
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                              <span style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text-primary)' }}>
+                                Avoid meetings after 8 PM
+                              </span>
+                              <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>Local time</span>
+                            </div>
+                          </div>
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--text-secondary)', flexShrink: 0 }}>
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                          </svg>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => setPlannerAvoidLunch(!planner.avoidLunch)}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            padding: '14px 16px',
+                            borderRadius: '10px',
+                            border: '1px solid var(--card-border)',
+                            backgroundColor: planner.avoidLunch ? 'var(--card-bg)' : 'var(--card-bg)',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s ease',
+                            textAlign: 'left',
+                            gap: 12,
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.borderColor = 'var(--highlight)';
+                            e.currentTarget.style.transform = 'translateX(2px)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.borderColor = 'var(--card-border)';
+                            e.currentTarget.style.transform = '';
+                          }}
+                        >
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1 }}>
+                            <div
+                              style={{
+                                width: 44,
+                                height: 24,
+                                borderRadius: 12,
+                                backgroundColor: planner.avoidLunch ? 'var(--highlight)' : 'var(--card-border)',
+                                position: 'relative',
+                                transition: 'background-color 0.2s ease',
+                                flexShrink: 0,
+                              }}
+                            >
+                              <div
+                                style={{
+                                  width: 20,
+                                  height: 20,
+                                  borderRadius: '50%',
+                                  backgroundColor: '#fff',
+                                  position: 'absolute',
+                                  top: 2,
+                                  left: planner.avoidLunch ? 22 : 2,
+                                  transition: 'left 0.2s ease',
+                                  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                                }}
+                              />
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                              <span style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text-primary)' }}>
+                                Avoid lunch time
+                              </span>
+                              <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>12:00-13:00</span>
+                            </div>
+                          </div>
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--text-secondary)', flexShrink: 0 }}>
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="6" x2="12" y2="12"></line>
+                            <line x1="12" y1="18" x2="12" y2="18"></line>
+                          </svg>
+                        </button>
                       </div>
                     </div>
 
@@ -775,38 +1062,79 @@ export default function MeetingPlannerPage() {
 
                     {/* Add Participant */}
                     <div>
-                      <div className={ui.label} style={{ marginBottom: 8 }}>Add Participant</div>
-                      
-                      {/* Форма для додавання participant з email */}
-                      <form onSubmit={handleAddParticipantFromForm} style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 8 }}>
-                        <input
-                          type="text"
-                          placeholder="Name *"
-                          value={participantForm.name}
-                          onChange={(e) => setParticipantForm((prev) => ({ ...prev, name: e.target.value }))}
-                          className={ui.input}
-                          required
-                        />
-                        <input
-                          type="email"
-                          placeholder="Email (optional, for calendar invites)"
-                          value={participantForm.email}
-                          onChange={(e) => setParticipantForm((prev) => ({ ...prev, email: e.target.value }))}
-                          className={ui.input}
-                        />
-                        <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
-                          💡 First click on the globe to select location, or search city below
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
+                        <div className={ui.label}>Add Participant</div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                          <span style={{ fontSize: '12px', color: participantAddMode === 'simple' ? 'var(--text-primary)' : 'var(--text-secondary)', fontWeight: participantAddMode === 'simple' ? 500 : 400 }}>
+                            Quick
+                          </span>
+                          <button
+                            type="button"
+                            onClick={() => setParticipantAddMode(participantAddMode === 'simple' ? 'detailed' : 'simple')}
+                            style={{
+                              width: 44,
+                              height: 24,
+                              borderRadius: 12,
+                              backgroundColor: participantAddMode === 'detailed' ? 'var(--highlight)' : 'var(--card-border)',
+                              position: 'relative',
+                              transition: 'background-color 0.2s ease',
+                              border: 'none',
+                              cursor: 'pointer',
+                              padding: 0,
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: 20,
+                                height: 20,
+                                borderRadius: '50%',
+                                backgroundColor: '#fff',
+                                position: 'absolute',
+                                top: 2,
+                                left: participantAddMode === 'detailed' ? 22 : 2,
+                                transition: 'left 0.2s ease',
+                                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                              }}
+                            />
+                          </button>
+                          <span style={{ fontSize: '12px', color: participantAddMode === 'detailed' ? 'var(--text-primary)' : 'var(--text-secondary)', fontWeight: participantAddMode === 'detailed' ? 500 : 400 }}>
+                            With Email
+                          </span>
                         </div>
-                        <button className={ui.btn} type="submit" style={{ width: '100%' }}>
-                          Add Participant
-                        </button>
-                      </form>
-
-                      {/* CitySearch для швидкого додавання */}
-                      <CitySearch
-                        placeholder="Or search city to add quickly…"
-                        onPick={handleAddParticipantFromGlobe}
-                      />
+                      </div>
+                      
+                      {participantAddMode === 'simple' ? (
+                        /* CitySearch для швидкого додавання - найпростіший спосіб */
+                        <CitySearch
+                          placeholder="Search city to add quickly…"
+                          onPick={handleAddParticipantFromGlobe}
+                        />
+                      ) : (
+                        /* Форма для додавання participant з email - детальний спосіб */
+                        <form onSubmit={handleAddParticipantFromForm} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                          <input
+                            type="text"
+                            placeholder="Name *"
+                            value={participantForm.name}
+                            onChange={(e) => setParticipantForm((prev) => ({ ...prev, name: e.target.value }))}
+                            className={ui.input}
+                            required
+                          />
+                          <input
+                            type="email"
+                            placeholder="Email (optional, for calendar invites)"
+                            value={participantForm.email}
+                            onChange={(e) => setParticipantForm((prev) => ({ ...prev, email: e.target.value }))}
+                            className={ui.input}
+                          />
+                          <button className={`${ui.btn} ${ui.btnPrimary}`} type="submit" style={{ width: '100%' }}>
+                            Add Participant
+                          </button>
+                          <div style={{ fontSize: '11px', color: 'var(--text-secondary)', lineHeight: 1.4, marginTop: -4 }}>
+                            💡 Click on the globe or search for a city first to select location
+                          </div>
+                        </form>
+                      )}
                       
                       {compare.items.length > 0 && (
                         <button
@@ -984,17 +1312,15 @@ export default function MeetingPlannerPage() {
                             </div>
                           )}
                           <div>
-                            <div className={ui.label} style={{ marginBottom: 6, fontSize: '12px' }}>
+                            <div className={ui.label} style={{ marginBottom: 8, fontSize: '12px' }}>
                               Meeting Time{' '}
                               {participants.length > 0
                                 ? `(${participants.find((p) => p.id === planner.manualTimeBaseParticipantId)?.name || participants[0]?.name || 'UTC'}'s timezone)`
                                 : '(UTC)'}
                             </div>
-                            <input
-                              type="time"
+                            <TimePicker
                               value={planner.manualTime || manualTimeInput || '14:00'}
-                              onChange={(e) => {
-                                const time = e.target.value || '14:00';
+                              onChange={(time) => {
                                 setManualTimeInput(time);
                                 if (participants.length > 0) {
                                   const baseId = planner.manualTimeBaseParticipantId || participants[0]?.id || null;
@@ -1005,8 +1331,7 @@ export default function MeetingPlannerPage() {
                                   setPlannerManualTime(time, null);
                                 }
                               }}
-                              className={ui.input}
-                              style={{ marginBottom: 8, fontSize: '14px', padding: '10px 12px', width: '100%', boxSizing: 'border-box' }}
+                              durationMinutes={planner.durationMinutes}
                             />
                           </div>
                         </div>

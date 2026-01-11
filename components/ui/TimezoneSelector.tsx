@@ -5,6 +5,7 @@ import { DateTime } from 'luxon';
 import ui from '@/components/ui/ui.module.css';
 import { getAllTimezones, formatTimezoneName, searchTimezones } from '@/utils/timezones';
 import { getUserTimezone, saveUserTimezone, clearUserTimezone, getCurrentUserTimezone } from '@/utils/userTimezone';
+import { useToast } from '@/components/ui/Toast';
 
 interface TimezoneSelectorProps {
   value?: string;
@@ -14,18 +15,26 @@ interface TimezoneSelectorProps {
 }
 
 export function TimezoneSelector({ value, onChange, showSaveOption = false, showClearOption = false }: TimezoneSelectorProps) {
+  const { showToast } = useToast();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
   const [savedTimezone, setSavedTimezone] = useState<string | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [currentValue, setCurrentValue] = useState<string>(value || 'UTC');
+  const [isMounted, setIsMounted] = useState(false);
 
   const timezonesByRegion = useMemo(() => getAllTimezones(), []);
   const regions = useMemo(() => Object.keys(timezonesByRegion).sort(), [timezonesByRegion]);
 
-  // Load saved timezone on mount
+  // Load saved timezone on mount (client-side only)
   useEffect(() => {
+    setIsMounted(true);
     const saved = getUserTimezone();
     setSavedTimezone(saved);
+    
+    // Determine current value: value prop > saved > browser timezone
+    const computedValue = value || saved || getCurrentUserTimezone();
+    setCurrentValue(computedValue);
     
     // If no value provided and we have saved timezone, use it
     if (!value && saved && onChange) {
@@ -33,14 +42,18 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
     }
   }, [value, onChange]);
 
+  // Update currentValue when value prop changes
+  useEffect(() => {
+    if (value) {
+      setCurrentValue(value);
+    }
+  }, [value]);
+
   // Search results
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
     return searchTimezones(searchQuery).slice(0, 20); // Limit to 20 results
   }, [searchQuery]);
-
-  // Current value or saved timezone or browser timezone
-  const currentValue = value || savedTimezone || getCurrentUserTimezone();
 
   // Determine which timezones to show
   const timezonesToShow = useMemo(() => {
@@ -66,7 +79,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
     if (currentValue) {
       saveUserTimezone(currentValue);
       setSavedTimezone(currentValue);
-      alert(`Timezone "${formatTimezoneName(currentValue)}" saved!`);
+      showToast(`Timezone "${formatTimezoneName(currentValue)}" saved!`, 'success');
     }
   };
 
@@ -78,7 +91,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
       const browserTz = getCurrentUserTimezone();
       onChange(browserTz);
     }
-    alert('Saved timezone cleared!');
+    showToast('Saved timezone cleared!', 'success');
   };
 
   return (
@@ -86,12 +99,12 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
       {/* Current selection */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
         <div style={{ flex: 1, minWidth: 200 }}>
-          <div className={ui.label} style={{ marginBottom: 4, fontSize: '12px' }}>
-            {currentValue ? formatTimezoneName(currentValue) : 'Select timezone'}
+          <div className={ui.label} style={{ marginBottom: 4, fontSize: '12px' }} suppressHydrationWarning>
+            {isMounted && currentValue ? formatTimezoneName(currentValue) : (value || 'Select timezone')}
           </div>
-          {savedTimezone && (
-            <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
-              💾 Saved: {formatTimezoneName(savedTimezone)}
+          {isMounted && savedTimezone && (
+            <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 4 }} suppressHydrationWarning>
+              Saved: {formatTimezoneName(savedTimezone)}
             </div>
           )}
         </div>
@@ -100,7 +113,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
           onClick={() => setIsExpanded(!isExpanded)}
           style={{ fontSize: '12px', padding: '6px 12px' }}
         >
-          {isExpanded ? '▼ Hide' : '▶ Show'} Timezone Selector
+          {isExpanded ? 'Hide' : 'Select'} Timezone
         </button>
         {showSaveOption && currentValue && (
           <button
@@ -109,7 +122,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
             style={{ fontSize: '12px', padding: '6px 12px' }}
             title="Save timezone to localStorage"
           >
-            💾 Save
+            Save
           </button>
         )}
         {showClearOption && savedTimezone && (
@@ -119,7 +132,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
             style={{ fontSize: '12px', padding: '6px 12px' }}
             title="Clear saved timezone"
           >
-            🗑️ Clear
+            Clear
           </button>
         )}
       </div>

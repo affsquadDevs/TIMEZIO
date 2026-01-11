@@ -89,7 +89,7 @@ export const useAppStore = create<AppState>()(
       savedIds: [],
       use24h: true,
       timezoneMode: 'simple',
-      theme: 'light',
+      theme: 'dark',
 
       focusTarget: null,
 

@@ -7,6 +7,7 @@ import { useAppStore, useSelectedLocation } from '@/store/useAppStore';
 import { formatTime, getOffsetInfo } from '@/utils/time';
 import { CitySearch } from '@/features/search/CitySearch';
 import { LocationCard } from '@/components/ui/LocationCard';
+import { useToast } from '@/components/ui/Toast';
 
 function hoursDiff(baseTz: string, otherTz: string, at: DateTime) {
   const a = getOffsetInfo(baseTz, at).offsetMinutes;
@@ -15,6 +16,7 @@ function hoursDiff(baseTz: string, otherTz: string, at: DateTime) {
 }
 
 export function CompareTab() {
+  const { showToast } = useToast();
   const now = useTicker(1000);
   const use24h = useAppStore((s) => s.use24h);
   const pickFromLatLng = useAppStore((s) => s.pickLocationFromLatLng);
@@ -58,7 +60,7 @@ export function CompareTab() {
             const loc = pickFromLatLng(c.lat, c.lng, 'search', c.label);
             requestFocus({ lat: loc.lat, lng: loc.lng, altitude: 1.6 });
             const res = addToCompare(loc.id);
-            if (!res.ok && res.reason) alert(res.reason);
+            if (!res.ok && res.reason) showToast(res.reason, 'error');
           }}
         />
 
@@ -68,7 +70,7 @@ export function CompareTab() {
             onClick={() => {
               if (!selected) return;
               const res = addToCompare(selected.id);
-              if (!res.ok && res.reason) alert(res.reason);
+              if (!res.ok && res.reason) showToast(res.reason, 'error');
             }}
           >
             Add selected

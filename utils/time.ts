@@ -147,7 +147,8 @@ export function findMeetingSlots(
   if (participants.length === 0) return [];
 
   const slots: TimeSlot[] = [];
-  const dateObj = DateTime.fromISO(date);
+  // Normalize date in UTC to avoid shifts from the viewer's timezone
+  const dateObj = DateTime.fromISO(date, { zone: 'utc' });
   if (!dateObj.isValid) return [];
 
   // Get working hours windows in UTC for each participant
@@ -291,7 +292,8 @@ export function createManualTimeSlot(
 ): TimeSlot | null {
   if (!manualTime || manualTime.trim() === '') return null;
 
-  const dateObj = DateTime.fromISO(date);
+  // Normalize date in UTC to keep the same calendar day for all timezones
+  const dateObj = DateTime.fromISO(date, { zone: 'utc' });
   if (!dateObj.isValid) return null;
 
   const [hour, minute] = manualTime.split(':').map(Number);

@@ -1,8 +1,10 @@
 import ui from '@/components/ui/ui.module.css';
 import { useAppStore } from '@/store/useAppStore';
+import { useToast } from '@/components/ui/Toast';
 import { LocationCard } from '@/components/ui/LocationCard';
 
 export function SavedTab() {
+  const { showToast } = useToast();
   const savedIds = useAppStore((s) => s.savedIds);
   const locationsById = useAppStore((s) => s.locationsById);
   const removeSaved = useAppStore((s) => s.removeSaved);
@@ -43,7 +45,7 @@ export function SavedTab() {
                       className={ui.btn}
                       onClick={() => {
                         const res = addToCompare(loc.id);
-                        if (!res.ok && res.reason) alert(res.reason);
+                        if (!res.ok && res.reason) showToast(res.reason, 'error');
                       }}
                     >
                       Compare

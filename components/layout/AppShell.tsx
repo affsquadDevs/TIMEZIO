@@ -95,33 +95,36 @@ export function AppShell({ defaultTab, heading, description, ctas = [] }: AppShe
 
         <div className={styles.desktopOnly}>
           <SidePanel />
-          <div style={{ marginTop: '20px', padding: '0 16px' }}>
-            <div className={ui.card}>
-              <div className={ui.cardBody}>
-                <h1 style={{ fontSize: '26px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '12px', lineHeight: '1.2' }}>
-                  {heading}
-                </h1>
-                <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '16px' }}>
-                  {description}
-                </p>
-                {ctas.length > 0 && (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '20px' }}>
-                    {ctas.map((cta) => (
-                      <Link key={cta.href} href={cta.href} className={ui.link} style={{ fontSize: '14px', fontWeight: 600 }}>
-                        → {cta.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
       <div className={styles.mobileOnly}>
         <MobileSheet />
       </div>
+
+      <section className={styles.infoSection}>
+        <div className={styles.infoCardWrapper}>
+          <div className={ui.card}>
+            <div className={ui.cardBody}>
+              <h1 style={{ fontSize: '26px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '12px', lineHeight: '1.2' }}>
+                {heading}
+              </h1>
+              <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '16px' }}>
+                {description}
+              </p>
+              {ctas.length > 0 && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '20px' }}>
+                  {ctas.map((cta) => (
+                    <Link key={cta.href} href={cta.href} className={ui.link} style={{ fontSize: '14px', fontWeight: 600 }}>
+                      → {cta.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

@@ -15,6 +15,7 @@ export function WorkingHoursEditor(props: {
     <div className={styles.card} style={{ padding: 14, width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
       <div className={styles.title} style={{ marginBottom: 12, wordBreak: 'break-word' }}>{props.participantName}</div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%' }}>
+        <div className={styles.label} style={{ marginBottom: 4 }}>Working hours</div>
         <div style={{ width: '100%' }}>
           <div className={styles.label} style={{ marginBottom: 6 }}>Start</div>
           <input

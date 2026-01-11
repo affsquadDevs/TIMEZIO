@@ -11,6 +11,11 @@ type CreateMeetingBody = {
   durationMinutes: number;
   rangeFromISO: string;
   rangeToISO: string;
+  workHoursPolicy?: {
+    defaultStart: string;
+    defaultEnd: string;
+    weekendOff: boolean;
+  };
 };
 
 export async function POST(request: NextRequest) {
@@ -27,7 +32,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
   }
 
-  const { title, description, durationMinutes, rangeFromISO, rangeToISO } = body;
+  const { title, description, durationMinutes, rangeFromISO, rangeToISO, workHoursPolicy } = body;
 
   if (!title || !rangeFromISO || !rangeToISO || !durationMinutes) {
     return NextResponse.json(
@@ -51,6 +56,7 @@ export async function POST(request: NextRequest) {
         rangeFromISO,
         rangeToISO,
         participants: '[]',
+        workHoursPolicy: workHoursPolicy ? JSON.stringify(workHoursPolicy) : null,
       },
     });
 
