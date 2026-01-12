@@ -18,10 +18,25 @@ export default function BlogPostPage() {
   useEffect(() => {
     if (!post) return;
 
-    // Add breadcrumb structured data
+    // Set document title and meta description
+    if (typeof window !== 'undefined') {
+      document.title = post.title;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', post.excerpt);
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = 'description';
+        meta.content = post.excerpt;
+        document.head.appendChild(meta);
+      }
+    }
+
+    // Add structured data
     if (typeof window === 'undefined') return;
     
-    const breadcrumbSchema = {
+    // Use custom schemas if provided, otherwise generate them
+    const breadcrumbSchema = post.breadcrumbSchema || {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -46,8 +61,7 @@ export default function BlogPostPage() {
       ],
     };
 
-    // Add article structured data
-    const articleSchema = {
+    const articleSchema = post.blogPostingSchema || {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
       headline: post.title,
@@ -75,31 +89,44 @@ export default function BlogPostPage() {
       url: window.location.href,
     };
 
-    const breadcrumbScriptId = 'breadcrumb-schema';
-    const articleScriptId = 'article-schema';
+    const scriptIds = ['breadcrumb-schema', 'article-schema'];
+    
+    // Add FAQ schema if provided
+    if (post.faqSchema) {
+      scriptIds.push('faq-schema');
+    }
     
     // Remove existing scripts
-    [breadcrumbScriptId, articleScriptId].forEach(id => {
+    scriptIds.forEach(id => {
       const existing = document.getElementById(id);
       if (existing) existing.remove();
     });
 
     // Add breadcrumb schema
     const breadcrumbScript = document.createElement('script');
-    breadcrumbScript.id = breadcrumbScriptId;
+    breadcrumbScript.id = 'breadcrumb-schema';
     breadcrumbScript.type = 'application/ld+json';
     breadcrumbScript.text = JSON.stringify(breadcrumbSchema);
     document.head.appendChild(breadcrumbScript);
 
     // Add article schema
     const articleScript = document.createElement('script');
-    articleScript.id = articleScriptId;
+    articleScript.id = 'article-schema';
     articleScript.type = 'application/ld+json';
     articleScript.text = JSON.stringify(articleSchema);
     document.head.appendChild(articleScript);
 
+    // Add FAQ schema if provided
+    if (post.faqSchema) {
+      const faqScript = document.createElement('script');
+      faqScript.id = 'faq-schema';
+      faqScript.type = 'application/ld+json';
+      faqScript.text = JSON.stringify(post.faqSchema);
+      document.head.appendChild(faqScript);
+    }
+
     return () => {
-      [breadcrumbScriptId, articleScriptId].forEach(id => {
+      scriptIds.forEach(id => {
         const script = document.getElementById(id);
         if (script) document.head.removeChild(script);
       });

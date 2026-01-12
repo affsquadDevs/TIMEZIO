@@ -5,6 +5,9 @@ export interface BlogPost {
   date: string;
   readTime: string;
   content?: string;
+  faqSchema?: any;
+  breadcrumbSchema?: any;
+  blogPostingSchema?: any;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -116,6 +119,391 @@ Yes. Tool pages generate clean, shareable URLs that you can bookmark or send to 
 **How accurate are the results?**
 The results are accurate to the minute and rely on official time zone rules. However, they should not be
 used for legal or critical time-sensitive decisions without independent verification.`,
+  },
+  {
+    slug: 'what-is-a-time-zone',
+    title: 'What Is a Time Zone? How Time Zones Work Worldwide',
+    excerpt: 'Learn what a time zone is, how time zones work worldwide, why they exist, and why time differences change during the year.',
+    date: '2026-01-12',
+    readTime: '6 min read',
+    content: `Time zones exist to solve a simple but global problem: the Sun rises and sets at different times depending on where you are on Earth. Without time zones, coordinating daily life, travel, and international communication would be chaotic.
+In this guide, we'll explain what time zones are, how they work, why they exist in their current form, and why time differences change throughout the year.
+
+## What Is a Time Zone?
+A time zone is a region of the Earth that observes the same standard time. Within a time zone, clocks are set to the same hour to keep daily activities aligned with daylight.
+Time zones are typically defined as offsets from Coordinated Universal Time (UTC). For example:
+- UTC+1 means the local time is one hour ahead of UTC
+- UTC−5 means the local time is five hours behind UTC
+
+## Why Do Time Zones Exist?
+Before time zones, each city set its own local time based on the position of the Sun. This worked when travel was slow and local, but it became impractical with the invention of railways and long-distance communication.
+Time zones were introduced to:
+- Standardize schedules
+- Prevent confusion in transportation and commerce
+- Enable global coordination
+
+The modern system of time zones was widely adopted in the late 19th century.
+
+## How Many Time Zones Are There?
+In theory, the Earth could be divided into 24 time zones, each spanning 15 degrees of longitude (360° ÷ 24 hours).
+In practice, there are more than 24 time zones because:
+- Country borders influence time zone boundaries
+- Some regions use half-hour or 45-minute offsets
+- Political and economic considerations override strict geography
+
+Examples include:
+- India (UTC+5:30)
+- Nepal (UTC+5:45)
+- Parts of Australia with half-hour offsets
+
+## How Time Zones Are Determined
+Time zones are not decided purely by longitude. Governments define official time zones based on:
+- National borders
+- Economic ties
+- Social and political needs
+
+This is why time zone borders often zigzag rather than follow straight lines.
+
+## What Is UTC and Why Is It Important?
+Coordinated Universal Time (UTC) is the global reference time standard. It does not change with seasons and does not observe daylight saving time.
+UTC is used as:
+- The basis for all time zone offsets
+- A reference for aviation, navigation, and technology
+- The standard time for servers and global systems
+
+When you convert time between cities, the calculation always goes through UTC.
+
+## Why Do Time Differences Change During the Year?
+Time differences change mainly because of daylight saving time (DST).
+Some countries move their clocks forward or backward seasonally to make better use of daylight. Others do not use DST at all, or switch on different dates.
+As a result:
+- Two cities may be 6 hours apart in winter
+- The same cities may be 5 hours apart in summer
+
+This is why time zone conversions must always consider the specific date, not just the location.
+
+## Are Time Zones the Same Everywhere?
+No. Time zones vary widely across the world due to:
+- Different UTC offsets
+- Seasonal clock changes
+- Local regulations
+
+This complexity is why manual calculations often lead to errors — and why DST-aware tools are essential for accuracy.
+
+## How to Avoid Time Zone Confusion
+To avoid mistakes when working across time zones:
+- Always include the city name, not just the offset
+- Specify the date and time, not just the hour
+- Use tools that automatically handle daylight saving time
+
+Time zone converters and meeting planners remove guesswork and prevent scheduling errors.
+
+## Summary
+Time zones exist to keep daily life aligned with daylight across the globe. While the basic concept is simple, real-world implementation is shaped by geography, politics, and seasonal changes.
+Understanding how time zones work helps you:
+- Schedule international meetings correctly
+- Avoid travel and communication mistakes
+- Interpret global times with confidence`,
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a time zone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A time zone is a region of the Earth that observes the same standard time to keep daily activities aligned with daylight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do time zones exist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Time zones exist to standardize time across regions, making travel, communication, and commerce possible on a global scale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are time zones determined?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Time zones are defined by governments and often follow national borders, economic ties, and social considerations rather than strict longitude lines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many time zones are there in the world?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Although there are 24 main hours in a day, there are more than 24 time zones due to half-hour and 45-minute offsets used in some regions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is UTC and how does it relate to time zones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "UTC (Coordinated Universal Time) is the global reference time standard used as the basis for all time zone offsets worldwide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do time differences change during the year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Time differences change because some countries observe daylight saving time while others do not, or they change clocks on different dates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are time zones the same everywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Time zones vary globally due to different UTC offsets, daylight saving time rules, and government-defined boundaries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can time zone confusion be avoided?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Time zone confusion can be avoided by specifying city names and dates and by using tools that automatically handle UTC offsets and daylight saving time."
+          }
+        }
+      ]
+    },
+    breadcrumbSchema: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.timezio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.timezio.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What Is a Time Zone?",
+          "item": "https://www.timezio.com/blog/what-is-a-time-zone"
+        }
+      ]
+    },
+    blogPostingSchema: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "What Is a Time Zone? How Time Zones Work Worldwide",
+      "description": "Learn what a time zone is, how time zones work worldwide, why they exist, and why time differences change throughout the year.",
+      "author": {
+        "@type": "Organization",
+        "name": "Timezio"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Timezio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.timezio.com/logo.png"
+        }
+      },
+      "datePublished": "2026-01-12",
+      "dateModified": "2026-01-12",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.timezio.com/blog/what-is-a-time-zone"
+      }
+    },
+  },
+  {
+    slug: 'what-is-utc',
+    title: 'What Is UTC? Why the World Uses Coordinated Universal Time',
+    excerpt: 'Learn what UTC is, how it works, and why Coordinated Universal Time is the global reference for all time zones worldwide.',
+    date: '2026-01-12',
+    readTime: '5 min read',
+    content: `When people talk about time zones, global schedules, or international coordination, one reference always comes up: UTC.
+But what exactly is UTC, why does the world use it, and how is it different from local time or older standards like GMT?
+This article explains what UTC is and why it serves as the backbone of global timekeeping.
+
+## What Is UTC?
+UTC (Coordinated Universal Time) is the world's primary time standard. It acts as a single global reference point from which all time zones are calculated.
+Unlike local time:
+- UTC does not change with seasons
+- UTC does not observe daylight saving time
+- UTC is consistent everywhere, all year round
+
+Time zones are defined as offsets from UTC, such as:
+- UTC−5
+- UTC+0
+- UTC+4
+
+## Why the World Needs a Universal Time Standard
+Before UTC, different regions used local solar time or regional standards. This created confusion as global communication, transportation, and technology expanded.
+A universal standard was needed to:
+- Coordinate international travel
+- Synchronize telecommunications
+- Support navigation, aviation, and shipping
+- Keep computer systems aligned globally
+
+UTC solves this by providing one neutral reference time that everyone can agree on.
+
+## How UTC Is Calculated
+UTC is based on atomic clocks, which measure time using the vibrations of atoms. These clocks are extremely precise and do not drift like mechanical clocks.
+To stay aligned with the Earth's rotation:
+- UTC is occasionally adjusted using leap seconds
+- Leap seconds keep atomic time in sync with astronomical time
+- These adjustments are rare and carefully controlled.
+
+## UTC vs GMT: What's the Difference?
+UTC is often confused with GMT (Greenwich Mean Time).
+Key differences:
+- GMT is a historical time standard based on Earth's rotation
+- UTC is a modern atomic time standard
+- UTC is more precise and internationally regulated
+
+In everyday use, UTC and GMT often appear the same, but UTC is the official global standard.
+
+## Why UTC Does Not Change with Daylight Saving Time
+UTC remains constant throughout the year. This is intentional.
+Daylight saving time:
+- Is applied only to local time zones
+- Varies by country
+- Changes on different dates worldwide
+
+By keeping UTC fixed, systems can:
+- Avoid ambiguity
+- Prevent scheduling errors
+- Convert local times reliably
+
+Local times may shift, but UTC never does.
+
+## How Time Zones Relate to UTC
+Every time zone is defined by its offset from UTC:
+- New York: UTC−5 (or UTC−4 during DST)
+- London: UTC+0 (or UTC+1 during DST)
+- Dubai: UTC+4 (no DST)
+
+When converting time between cities, calculations always pass through UTC first.
+
+## Where UTC Is Used Today
+UTC is used as the primary time reference in:
+- Aviation and air traffic control
+- Navigation and GPS systems
+- Internet servers and databases
+- Financial markets
+- Scientific research
+- Global communication systems
+
+Even when users see local time, systems behind the scenes often rely on UTC.
+
+## Summary
+UTC exists to keep the world synchronized. By providing a stable, precise, and universal reference time, it allows local time zones to function without conflict or confusion.
+Understanding UTC helps explain:
+- Why time differences exist
+- Why offsets change seasonally
+- Why accurate time conversion requires more than simple math`,
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is UTC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "UTC, or Coordinated Universal Time, is the global time standard used as the reference point for all time zones worldwide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the world use UTC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The world uses UTC to maintain a single, consistent reference time for global communication, travel, technology, and coordination."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does UTC change with daylight saving time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. UTC does not observe daylight saving time and remains constant throughout the year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between UTC and GMT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "UTC is a modern atomic time standard, while GMT is a historical time standard based on Earth's rotation. UTC is more precise and officially used today."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do time zones relate to UTC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Time zones are defined by their offset from UTC, such as UTC−5 or UTC+4, and conversions between cities are calculated using UTC as the reference."
+          }
+        }
+      ]
+    },
+    breadcrumbSchema: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.timezio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.timezio.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What Is UTC?",
+          "item": "https://www.timezio.com/blog/what-is-utc"
+        }
+      ]
+    },
+    blogPostingSchema: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "What Is UTC? Why the World Uses Coordinated Universal Time",
+      "description": "Learn what UTC is, how it works, and why Coordinated Universal Time is used as the global reference for all time zones.",
+      "author": {
+        "@type": "Organization",
+        "name": "Timezio"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Timezio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.timezio.com/logo.png"
+        }
+      },
+      "datePublished": "2026-01-12",
+      "dateModified": "2026-01-12",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.timezio.com/blog/what-is-utc"
+      }
+    },
   },
 ];
 
