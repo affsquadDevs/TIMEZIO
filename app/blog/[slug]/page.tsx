@@ -7,7 +7,7 @@ import ui from '@/components/ui/ui.module.css';
 import blogStyles from '../blog.module.css';
 import { TopBar } from '@/components/layout/TopBar';
 import { Footer } from '@/components/layout/Footer';
-import { blogPostsMap } from '@/data/blogPosts';
+import { blogPosts, blogPostsMap } from '@/data/blogPosts';
 import Link from 'next/link';
 
 export default function BlogPostPage() {
@@ -155,6 +155,69 @@ export default function BlogPostPage() {
     );
   }
 
+  // Get related posts (exclude current post)
+  const getRelatedPosts = () => {
+    return blogPosts.filter(p => p.slug !== slug).slice(0, 3);
+  };
+
+  // Add internal links to text (simple version - avoids nested links)
+  const addInternalLinks = (text: string): (string | React.ReactElement)[] => {
+    // Link mappings - order matters (longer patterns first to avoid partial matches)
+    const linkPatterns: Array<{ pattern: RegExp; href: string }> = [
+      { pattern: /\bCoordinated Universal Time\b/gi, href: '/blog/what-is-utc' },
+      { pattern: /\bdaylight saving time\b/gi, href: '/blog/why-time-differences-change' },
+      { pattern: /\btime zones\b/gi, href: '/blog/what-is-a-time-zone' },
+      { pattern: /\btime zone\b/gi, href: '/blog/what-is-a-time-zone' },
+      { pattern: /\bUTC\b(?!\)|")/g, href: '/blog/what-is-utc' },
+      { pattern: /\bDST\b(?!\)|")/g, href: '/blog/why-time-differences-change' },
+    ];
+
+    let parts: (string | React.ReactElement)[] = [text];
+    let linkKeyCounter = 0;
+
+    // Process patterns one at a time, but skip already linked text
+    linkPatterns.forEach(({ pattern, href }) => {
+      const newParts: (string | React.ReactElement)[] = [];
+      
+      parts.forEach((part) => {
+        if (typeof part === 'string') {
+          const matches = Array.from(part.matchAll(pattern));
+          if (matches.length === 0) {
+            newParts.push(part);
+          } else {
+            let lastIndex = 0;
+            matches.forEach((match) => {
+              if (match.index !== undefined) {
+                // Add text before match
+                if (match.index > lastIndex) {
+                  newParts.push(part.substring(lastIndex, match.index));
+                }
+                // Add link
+                newParts.push(
+                  <Link key={`link-${linkKeyCounter++}`} href={href} className={blogStyles.contentLink}>
+                    {match[0]}
+                  </Link>
+                );
+                lastIndex = match.index + match[0].length;
+              }
+            });
+            // Add remaining text
+            if (lastIndex < part.length) {
+              newParts.push(part.substring(lastIndex));
+            }
+          }
+        } else {
+          // Skip React elements (already linked)
+          newParts.push(part);
+        }
+      });
+      
+      parts = newParts;
+    });
+
+    return parts;
+  };
+
   // Simple markdown-like parser for content
   const parseContent = (text: string) => {
     const lines = text.split('\n');
@@ -168,11 +231,17 @@ export default function BlogPostPage() {
       if (currentParagraph.length > 0) {
         const paragraph = currentParagraph.join(' ').trim();
         if (paragraph) {
+          const linkedContent = addInternalLinks(paragraph);
           elements.push(
             <p key={`p-${elements.length}`} style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.7', marginBottom: '16px' }}>
-              {paragraph.split(/\*\*(.*?)\*\*/g).map((part, i) => 
-                i % 2 === 1 ? <strong key={i} style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{part}</strong> : part
-              )}
+              {linkedContent.map((part, i) => {
+                if (typeof part === 'string') {
+                  return part.split(/\*\*(.*?)\*\*/g).map((subPart, j) => 
+                    j % 2 === 1 ? <strong key={`${i}-${j}`} style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{subPart}</strong> : subPart
+                  );
+                }
+                return part;
+              })}
             </p>
           );
         }
@@ -289,6 +358,60 @@ export default function BlogPostPage() {
             <article className={blogStyles.articleContent}>
               {post.content ? parseContent(post.content) : null}
             </article>
+
+            {/* Tools Section */}
+            <div className={blogStyles.toolsSection}>
+              <h2 className={blogStyles.toolsTitle}>Timezio Tools</h2>
+              <div className={blogStyles.toolsGrid}>
+                <Link href="/explore" className={blogStyles.toolLink}>
+                  <div className={blogStyles.toolLinkTitle}>Explore Globe</div>
+                  <div className={blogStyles.toolLinkDescription}>Click anywhere on the interactive globe to see local time</div>
+                </Link>
+                <Link href="/compare" className={blogStyles.toolLink}>
+                  <div className={blogStyles.toolLinkTitle}>Compare Time Zones</div>
+                  <div className={blogStyles.toolLinkDescription}>Compare time differences between multiple cities</div>
+                </Link>
+                <Link href="/planner" className={blogStyles.toolLink}>
+                  <div className={blogStyles.toolLinkTitle}>Meeting Planner</div>
+                  <div className={blogStyles.toolLinkDescription}>Find the best meeting time for people in different locations</div>
+                </Link>
+                <Link href="/dst" className={blogStyles.toolLink}>
+                  <div className={blogStyles.toolLinkTitle}>DST Tracker</div>
+                  <div className={blogStyles.toolLinkDescription}>Track daylight saving time changes and transitions</div>
+                </Link>
+                <Link href="/time-zone-converter" className={blogStyles.toolLink}>
+                  <div className={blogStyles.toolLinkTitle}>Time Converter</div>
+                  <div className={blogStyles.toolLinkDescription}>Convert UTC or local times between time zones</div>
+                </Link>
+              </div>
+            </div>
+
+            {/* Related Posts Section */}
+            {getRelatedPosts().length > 0 && (
+              <div className={blogStyles.relatedSection}>
+                <h2 className={blogStyles.relatedTitle}>Related Articles</h2>
+                <div className={blogStyles.relatedGrid}>
+                  {getRelatedPosts().map((relatedPost) => (
+                    <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}`} className={blogStyles.relatedCard}>
+                      <h3 className={blogStyles.relatedCardTitle}>{relatedPost.title}</h3>
+                      <p className={blogStyles.relatedCardExcerpt}>{relatedPost.excerpt}</p>
+                      <div className={blogStyles.relatedCardMeta}>
+                        <time dateTime={relatedPost.date}>
+                          {new Date(relatedPost.date).toLocaleDateString('en-US', { 
+                            year: 'numeric', 
+                            month: 'short', 
+                            day: 'numeric' 
+                          })}
+                        </time>
+                        <span>•</span>
+                        <span>{relatedPost.readTime}</span>
+                      </div>
+                      <span className={blogStyles.relatedCardCta}>Read more →</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div style={{ marginTop: '48px', paddingTop: '24px', borderTop: '1px solid var(--border-color)' }}>
               <Link 
