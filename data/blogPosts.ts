@@ -505,6 +505,393 @@ Understanding UTC helps explain:
       }
     },
   },
+  {
+    slug: 'why-time-differences-change',
+    title: 'Why Time Differences Change During the Year (DST Explained)',
+    excerpt: 'Learn why time differences between cities change during the year and how daylight saving time affects global time zones.',
+    date: '2026-01-13',
+    readTime: '6 min read',
+    content: `If you've ever noticed that the time difference between two cities changes during the year, you're not imagining it.
+This shift happens primarily because of daylight saving time (DST) - a system that some countries use and others do not. The result is a moving target for global time differences, even between the same locations.
+This article explains why time differences change, how daylight saving time works, and why it often causes confusion.
+
+## What Causes Time Differences to Change?
+Time differences change when one region adjusts its clocks seasonally while another does not, or when regions change clocks on different dates.
+The main reasons are:
+- Daylight saving time adoption
+- Different DST schedules between countries
+- Regions that never use DST
+
+Because time zones are defined relative to UTC, any local clock change alters the offset and therefore the time difference.
+
+## What Is Daylight Saving Time (DST)?
+Daylight saving time is a system where clocks are set forward, usually by one hour, during part of the year.
+The idea is to:
+- Shift daylight into the evening
+- Reduce the need for artificial lighting
+- Align waking hours more closely with daylight
+
+DST typically starts in spring and ends in autumn, but the exact dates vary by country.
+
+## Why Some Countries Use DST and Others Do Not
+DST is not a global standard.
+Some countries:
+- Have abolished DST
+- Never adopted it
+- Use different rules or schedules
+
+Reasons include:
+- Geographic location
+- Climate
+- Energy policy
+- Social and economic preferences
+
+As a result, neighboring countries may operate on different schedules for part of the year.
+
+## How DST Affects Time Differences Between Cities
+When one city changes its clocks and another does not, the time difference shifts.
+For example:
+- City A moves clocks forward
+- City B stays the same
+- The time difference becomes one hour smaller or larger
+
+This is why two cities can be:
+- 6 hours apart in winter
+- 5 hours apart in summer
+
+The cities themselves haven't moved - only their local offsets from UTC have changed.
+
+## Why DST Changes Don't Happen on the Same Day Worldwide
+Even among countries that use DST:
+- Start dates differ
+- End dates differ
+- Some change clocks weeks earlier than others
+
+This creates transition periods where time differences are temporarily unusual or unexpected.
+These short windows are a common source of missed meetings and scheduling errors.
+
+## Why UTC Does Not Change
+UTC never observes daylight saving time.
+This is intentional:
+- UTC provides a stable reference
+- Local time zones adjust instead
+- All conversions are calculated relative to UTC
+
+Because UTC is constant, it acts as a reliable anchor when local clocks move.
+
+## How to Avoid DST-Related Time Confusion
+To avoid mistakes caused by DST:
+- Always specify the city, not just the time
+- Include the date when scheduling across regions
+- Use tools that automatically account for DST rules
+
+Manual calculations based only on offsets often fail during seasonal transitions.
+
+## Summary
+Time differences change during the year because local clocks change, not because time zones move.
+Daylight saving time, combined with different regional rules, causes offsets from UTC to shift - sometimes temporarily and sometimes permanently.
+Understanding this helps prevent scheduling errors and explains why accurate time conversion requires more than simple math.`,
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do time differences change during the year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Time differences change mainly because some regions observe daylight saving time while others do not, or they change clocks on different dates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is daylight saving time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Daylight saving time is a system where clocks are moved forward seasonally, usually by one hour, to shift daylight into the evening."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do all countries use daylight saving time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Some countries have abolished daylight saving time, others never adopted it, and some follow different schedules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do DST changes not happen on the same day worldwide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DST schedules are set by individual governments, which leads to different start and end dates across countries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does UTC change with daylight saving time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. UTC does not observe daylight saving time and remains constant throughout the year."
+          }
+        }
+      ]
+    },
+    breadcrumbSchema: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.timezio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.timezio.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Why Time Differences Change During the Year (DST Explained)",
+          "item": "https://www.timezio.com/blog/why-time-differences-change"
+        }
+      ]
+    },
+    blogPostingSchema: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Why Time Differences Change During the Year (DST Explained)",
+      "description": "Learn why time differences between cities change during the year and how daylight saving time affects global time zones.",
+      "author": {
+        "@type": "Organization",
+        "name": "Timezio"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Timezio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.timezio.com/logo.png"
+        }
+      },
+      "datePublished": "2026-01-13",
+      "dateModified": "2026-01-13",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.timezio.com/blog/why-time-differences-change"
+      }
+    },
+  },
+  {
+    slug: 'countries-that-use-daylight-saving-time',
+    title: "Which Countries Use Daylight Saving Time (And Which Don't)",
+    excerpt: "Learn which countries use daylight saving time, which don't, and why DST rules differ around the world.",
+    date: '2026-01-14',
+    readTime: '7 min read',
+    content: `Daylight saving time (DST) is one of the most common causes of confusion when working across time zones. Some countries adjust their clocks every year, others never have, and some have stopped using DST entirely.
+This article explains which countries use daylight saving time, which do not, and why these differences exist.
+
+## What Does It Mean to "Use" Daylight Saving Time?
+A country that uses daylight saving time:
+- Moves clocks forward (usually by one hour) during part of the year
+- Moves clocks back later in the year
+- Temporarily changes its offset from UTC
+
+DST affects local time only. The underlying time zone remains the same, but the offset changes seasonally.
+
+## Countries That Use Daylight Saving Time
+
+### Europe
+Most European countries observe daylight saving time under a coordinated schedule.
+Examples include:
+- United Kingdom
+- Germany
+- France
+- Spain
+- Italy
+- Poland
+
+Clocks typically move forward in spring and back in autumn, though the exact dates are set by regulation.
+
+### North America
+Daylight saving time is used in much of North America, but not everywhere.
+Countries and regions that use DST:
+- United States (most states)
+- Canada (most provinces)
+
+Exceptions exist within these countries, which is why DST can vary even inside national borders.
+
+### Oceania
+Some countries in Oceania use daylight saving time, usually during the southern hemisphere summer.
+Examples:
+- Australia (selected states)
+- New Zealand
+
+Because seasons are reversed compared to the northern hemisphere, DST schedules differ.
+
+## Countries That Do Not Use Daylight Saving Time
+Many countries never adopted DST or have abolished it.
+
+### Asia
+Most Asian countries do not use daylight saving time.
+Examples:
+- China
+- Japan
+- India
+- Singapore
+- South Korea
+
+### Africa
+Almost all African countries operate on fixed time year-round.
+DST is rare due to:
+- Proximity to the equator
+- Relatively stable daylight hours
+
+### Middle East
+DST usage in the Middle East varies and has changed over time.
+Examples:
+- Some countries have abolished DST
+- Others use it irregularly or under changing rules
+
+Because policies may change, DST status in this region requires careful verification.
+
+## Countries That Have Abolished Daylight Saving Time
+Several countries previously used DST but later stopped.
+Reasons include:
+- Limited energy savings
+- Public opposition
+- Administrative complexity
+
+Once abolished, time differences with other countries may change permanently.
+
+## Why DST Rules Differ So Much Worldwide
+DST is determined by national governments, not by international law.
+Factors influencing DST decisions include:
+- Geography and latitude
+- Climate and daylight variation
+- Economic considerations
+- Social preferences
+
+This leads to a patchwork of rules rather than a global standard.
+
+## How DST Differences Affect Time Differences Between Countries
+When one country uses DST and another does not:
+- Time differences may change seasonally
+- Transitions may happen weeks apart
+- Temporary "odd" offsets can occur
+
+This is why relying on static offsets often causes errors and why it's always good to have a DST-aware time zone converter at your disposal.
+
+## How to Handle DST Differences Accurately
+To avoid confusion:
+- Always specify the city and date
+- Do not assume neighboring countries follow the same rules
+- Use tools that automatically apply official DST schedules
+
+Accurate time conversion requires current, location-specific rules.
+
+## Summary
+There is no universal approach to daylight saving time.
+Some countries use it, some never have, and others have moved away from it entirely. Because DST rules vary by country and can change over time, understanding which regions use DST is essential for accurate global scheduling.`,
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which countries use daylight saving time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many countries in Europe, North America, and Oceania use daylight saving time, while most countries in Asia and Africa do not."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do all European countries use daylight saving time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most European countries use daylight saving time under a coordinated schedule, but policies can change based on regulation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do some countries not use daylight saving time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some countries do not use daylight saving time due to geographic location, stable daylight hours, public opposition, or limited benefits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Have any countries stopped using daylight saving time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Several countries have abolished daylight saving time after determining that the benefits did not outweigh the drawbacks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can daylight saving time rules change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. DST rules are set by national governments and may change due to policy decisions or legislation."
+          }
+        }
+      ]
+    },
+    breadcrumbSchema: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.timezio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.timezio.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Which Countries Use Daylight Saving Time",
+          "item": "https://www.timezio.com/blog/countries-that-use-daylight-saving-time"
+        }
+      ]
+    },
+    blogPostingSchema: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Which Countries Use Daylight Saving Time (And Which Don't)",
+      "description": "Learn which countries use daylight saving time, which don't, and why DST rules differ around the world.",
+      "author": {
+        "@type": "Organization",
+        "name": "Timezio"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Timezio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.timezio.com/logo.png"
+        }
+      },
+      "datePublished": "2026-01-14",
+      "dateModified": "2026-01-14",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.timezio.com/blog/countries-that-use-daylight-saving-time"
+      }
+    },
+  },
 ];
 
 export const blogPostsMap: Record<string, BlogPost> = blogPosts.reduce((acc, post) => {
