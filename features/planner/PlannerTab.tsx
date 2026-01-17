@@ -48,7 +48,6 @@ export function PlannerTab() {
   const { showToast } = useToast();
   const now = useTicker(1000);
 
-  // App Store для locations та planner state
   const planner = useAppStore((s) => s.planner);
   const locationsById = useAppStore((s) => s.locationsById);
   const compare = useAppStore((s) => s.compare);
@@ -58,7 +57,6 @@ export function PlannerTab() {
   const selected = useAppStore((s) => (s.selectedId ? s.locationsById[s.selectedId] : null));
   const upsertLocation = useAppStore((s) => s.upsertLocation);
 
-  // Planner actions
   const addPlannerParticipant = useAppStore((s) => s.addPlannerParticipant);
   const removePlannerParticipant = useAppStore((s) => s.removePlannerParticipant);
   const updatePlannerParticipantName = useAppStore((s) => s.updatePlannerParticipantName);
@@ -72,7 +70,6 @@ export function PlannerTab() {
   const setPlannerMode = useAppStore((s) => s.setPlannerMode);
   const setPlannerManualTime = useAppStore((s) => s.setPlannerManualTime);
 
-  // Backend session state
   const [session, setSession] = useState<SessionResponse | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -80,10 +77,10 @@ export function PlannerTab() {
   const [manualTimeInput, setManualTimeInput] = useState<string>('14:00');
   const [participantForm, setParticipantForm] = useState({ name: '', email: '' });
   const [participantAddMode, setParticipantAddMode] = useState<'simple' | 'detailed'>('detailed');
-  const [participantEmails, setParticipantEmails] = useState<Record<string, string>>({}); // participantId -> email
-  const [backendSlots, setBackendSlots] = useState<ProposedSlot[]>([]); // Slots з backend
-  const [userTimezone, setUserTimezone] = useState<string>(getCurrentUserTimezone()); // User's saved timezone
-  const [userTimezoneName, setUserTimezoneName] = useState<string>('Me'); // User's name for their timezone
+  const [participantEmails, setParticipantEmails] = useState<Record<string, string>>({});
+  const [backendSlots, setBackendSlots] = useState<ProposedSlot[]>([]);
+  const [userTimezone, setUserTimezone] = useState<string>(getCurrentUserTimezone());
+  const [userTimezoneName, setUserTimezoneName] = useState<string>('Me');
   const [googleUser, setGoogleUser] = useState<{ connected: boolean; name?: string; email?: string } | null>(null);
   const [confirmSuccess, setConfirmSuccess] = useState(false);
   const [includeWeekends, setIncludeWeekends] = useState(false);
@@ -99,7 +96,6 @@ export function PlannerTab() {
     return tz || 'UTC';
   };
 
-  // Load user timezone from localStorage on mount
   useEffect(() => {
     const saved = getUserTimezone();
     if (saved) {
@@ -107,7 +103,6 @@ export function PlannerTab() {
     }
   }, []);
 
-  // Load Google user info
   useEffect(() => {
     const loadUser = async () => {
       try {
@@ -122,24 +117,20 @@ export function PlannerTab() {
     loadUser();
   }, []);
 
-  // Clear focusTarget after it's been passed down once
   useEffect(() => {
     if (!focusTarget) return;
     const t = window.setTimeout(() => requestFocus(null), 0);
     return () => window.clearTimeout(t);
   }, [focusTarget, requestFocus]);
 
-  // Participants з locations
   const participants = planner.participants.map((ppt) => ({
     ...ppt,
     location: locationsById[ppt.locationId],
   })).filter((p) => !!p.location);
 
-  // Генерація слотів (frontend)
   const slots = useMemo(() => {
     if (participants.length < 2 || planner.mode !== 'auto') return [];
     
-    // Переконатися що всі participants мають working hours (додати default якщо немає)
     const workingHoursWithDefaults: Record<string, { start: string; end: string }> = {};
     for (const ppt of planner.participants) {
       workingHoursWithDefaults[ppt.id] = planner.workingHours[ppt.id] || { start: '09:00', end: '17:00' };
@@ -168,7 +159,6 @@ export function PlannerTab() {
     locationsById,
   ]);
 
-  // Manual time slot
   const manualSlot = useMemo<TimeSlot | null>(() => {
     if (planner.mode !== 'manual') return null;
     const timeToUse = planner.manualTime || manualTimeInput || '14:00';
@@ -192,7 +182,6 @@ export function PlannerTab() {
     manualTimeInput,
   ]);
 
-  // Використовуємо backend slots якщо є, інакше frontend slots
   const availableSlots = backendSlots.length > 0 
     ? backendSlots.map((slot) => ({
         startUtc: slot.startUtcISO,
@@ -215,7 +204,6 @@ export function PlannerTab() {
         : null)
     : manualSlot;
 
-  // API helpers
   const getErrorMessage = (value: unknown, fallback: string) => {
     if (value instanceof Error) return value.message;
     if (typeof value === 'string') return value;
@@ -244,7 +232,6 @@ export function PlannerTab() {
     return payload as T;
   };
 
-  // Синхронізація з backend: створення сесії
   const handleCreateSession = async () => {
     resetMessages();
     if (!sessionForm.title) {
@@ -275,17 +262,14 @@ export function PlannerTab() {
       setSession(data);
       setMessage('Meeting session created');
 
-      // Автоматично додати власну часову зону як participant якщо вона збережена
       const savedUserTz = getUserTimezone();
       const tzToUse = savedUserTz || userTimezone;
       
       if (tzToUse && tzToUse !== 'UTC') {
         try {
-          // Знайти координати для часової зони (спрощена версія - можна покращити)
           let lat = 0;
           let lng = 0;
           
-          // Популярні timezones з координатами
           const timezoneCoords: Record<string, [number, number]> = {
             'Europe/Kyiv': [50.4501, 30.5234],
             'America/New_York': [40.7128, -74.006],
@@ -309,7 +293,6 @@ export function PlannerTab() {
           const participantName = userTimezoneName || 'Me';
           const cityName = tzToUse.split('/').pop()?.replace(/_/g, ' ') || tzToUse;
 
-          // Додати participant до backend
           const updated = await apiRequest<SessionResponse>(`/api/meetings/${data.id}/participants`, {
             method: 'POST',
             body: JSON.stringify({
@@ -325,10 +308,8 @@ export function PlannerTab() {
             }),
           });
 
-          // Додати participant до frontend store якщо є координати
           if (lat !== 0 && lng !== 0) {
             const loc = pickFromLatLng(lat, lng, 'search', participantName);
-            // Оновити location з правильною часовою зоною
             const updatedLoc = { ...loc, tz: tzToUse };
             upsertLocation(updatedLoc);
             const res = addPlannerParticipant(updatedLoc.id, participantName);
@@ -348,7 +329,6 @@ export function PlannerTab() {
     }
   };
 
-  // Завантаження session з backend при першому монтуванні або зміні session.id
   useEffect(() => {
     if (!session?.id) return;
 
@@ -359,7 +339,6 @@ export function PlannerTab() {
         if (updated.workHoursPolicy) {
           setIncludeWeekends(!updated.workHoursPolicy.weekendOff);
         }
-        // Оновити email mapping з backend participants
         const emailMap: Record<string, string> = {};
         updated.participants.forEach((p) => {
           const frontendPpt = planner.participants.find((fp) => fp.name === p.name);
@@ -374,10 +353,8 @@ export function PlannerTab() {
     };
 
     loadSession();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [session?.id]); // Тільки при зміні session ID
+  }, [session?.id]);
 
-  // Додавання participant через форму (з email)
   const handleAddParticipantFromForm = async (event: React.FormEvent) => {
     event.preventDefault();
     resetMessages();
@@ -392,7 +369,6 @@ export function PlannerTab() {
       return;
     }
 
-    // Використовуємо вибрану location з глобуса або останню додану
     const selectedLoc = selected || (participants.length > 0 ? participants[participants.length - 1].location : null);
     
     if (!selectedLoc) {
@@ -401,7 +377,6 @@ export function PlannerTab() {
     }
 
     try {
-      // Додати participant до backend (спочатку)
       const updated = await apiRequest<SessionResponse>(`/api/meetings/${session.id}/participants`, {
         method: 'POST',
         body: JSON.stringify({
@@ -417,16 +392,13 @@ export function PlannerTab() {
         }),
       });
 
-      // Додати participant до frontend store
       const loc = pickFromLatLng(selectedLoc.lat, selectedLoc.lng, 'search', participantForm.name);
       const res = addPlannerParticipant(loc.id, participantForm.name);
       
       if (res.ok && res.participantId) {
-        // Зберігаємо email якщо він був введений
         if (participantForm.email) {
           setParticipantEmails((prev) => ({ ...prev, [res.participantId!]: participantForm.email }));
         }
-        // Або беремо з backend
         const backendPpt = updated.participants.find((p) => p.name === participantForm.name);
         if (backendPpt?.email && !participantForm.email) {
           setParticipantEmails((prev) => ({ ...prev, [res.participantId!]: backendPpt.email! }));
@@ -441,7 +413,6 @@ export function PlannerTab() {
     }
   };
 
-  // Додавання participant через глобус/CitySearch
   const handleAddParticipantFromGlobe = async (c: { lat: number; lng: number; label: string; tz: string }) => {
     resetMessages();
 
@@ -453,7 +424,6 @@ export function PlannerTab() {
     const loc = pickFromLatLng(c.lat, c.lng, 'search', c.label);
     requestFocus({ lat: loc.lat, lng: loc.lng, altitude: 1.6 });
     
-    // Додати participant до backend (спочатку)
     try {
       const updated = await apiRequest<SessionResponse>(`/api/meetings/${session.id}/participants`, {
         method: 'POST',
@@ -470,7 +440,6 @@ export function PlannerTab() {
         }),
       });
       
-      // Додати participant до frontend store
       const res = addPlannerParticipant(loc.id, c.label);
       if (res.ok && res.participantId) {
         const backendPpt = updated.participants.find((p) => p.name === c.label);
@@ -486,7 +455,6 @@ export function PlannerTab() {
     }
   };
 
-  // Генерація slots на backend
   const handleGenerateSlotsBackend = async () => {
     resetMessages();
 
@@ -523,7 +491,6 @@ export function PlannerTab() {
     }
   };
 
-  // Підтвердження та створення Meet
   const handleConfirmMeet = async () => {
     resetMessages();
     if (!session || !selectedSlot) {
@@ -537,13 +504,11 @@ export function PlannerTab() {
         endUtcISO: selectedSlot.endUtc,
       };
 
-      // Спочатку вибираємо слот (тепер select-slot дозволяє вибір навіть якщо слота немає в proposedSlots)
       await apiRequest<SessionResponse>(`/api/meetings/${session.id}/select-slot`, {
         method: 'POST',
         body: JSON.stringify(slotData),
       });
 
-      // Потім підтверджуємо та створюємо Meet
       const confirmed = await apiRequest<ConfirmedEvent>(`/api/meetings/${session.id}/confirm`, {
         method: 'POST',
         body: JSON.stringify({}),
@@ -561,7 +526,6 @@ export function PlannerTab() {
   return (
     <div className={ui.card} style={{ maxHeight: 'calc(100vh - 140px)', overflowY: 'auto', position: 'relative' }}>
       <div className={ui.cardBody} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-        {/* Title */}
         <div>
           <div className={ui.title}>Meeting Planner</div>
           <div className={ui.subtitle}>
@@ -570,7 +534,6 @@ export function PlannerTab() {
           </div>
         </div>
 
-        {/* Google OAuth */}
         <div>
           {googleUser?.connected ? (
             <div 
@@ -627,7 +590,6 @@ export function PlannerTab() {
 
         <div className={ui.divider} />
 
-        {/* User Timezone */}
         <div>
           <div className={ui.label} style={{ marginBottom: 12 }}>Your Timezone</div>
           <TimezoneSelector
@@ -653,7 +615,6 @@ export function PlannerTab() {
           </div>
         </div>
 
-        {/* Create Session */}
         {!session && (
           <>
             <div>
@@ -689,7 +650,6 @@ export function PlannerTab() {
               {session.description && <div className={ui.subtitle} style={{ fontSize: '12px' }}>{session.description}</div>}
             </div>
 
-            {/* Mode Selection */}
             <div>
               <div className={ui.label} style={{ marginBottom: 12, fontSize: '11px', fontWeight: 600, letterSpacing: '0.5px' }}>MODE</div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
@@ -810,7 +770,6 @@ export function PlannerTab() {
 
             <div className={ui.divider} />
 
-            {/* Duration */}
             <div>
               <div className={ui.label} style={{ marginBottom: 8 }}>Duration</div>
               <div className={ui.pillRow}>
@@ -827,7 +786,6 @@ export function PlannerTab() {
               </div>
             </div>
 
-            {/* Date */}
             <div>
               <div className={ui.label} style={{ marginBottom: 8 }}>Date</div>
               <DatePicker
@@ -836,7 +794,6 @@ export function PlannerTab() {
               />
             </div>
 
-            {/* Preferences */}
             <div>
               <div className={ui.label} style={{ marginBottom: 12 }}>Preferences</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -1103,7 +1060,6 @@ export function PlannerTab() {
 
             <div className={ui.divider} />
 
-            {/* Add Participant */}
             <div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
                 <div className={ui.label}>Add Participant</div>
@@ -1147,13 +1103,11 @@ export function PlannerTab() {
               </div>
               
               {participantAddMode === 'simple' ? (
-                /* CitySearch для швидкого додавання - найпростіший спосіб */
                 <CitySearch
                   placeholder="Search city to add quickly…"
                   onPick={handleAddParticipantFromGlobe}
                 />
               ) : (
-                /* Форма для додавання participant з email - детальний спосіб */
                 <form onSubmit={handleAddParticipantFromForm} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                   <input
                     type="text"
@@ -1174,7 +1128,7 @@ export function PlannerTab() {
                     Add Participant
                   </button>
                   <div style={{ fontSize: '11px', color: 'var(--text-secondary)', lineHeight: 1.4, marginTop: -4 }}>
-                    💡 Click on the globe or search for a city first to select location
+                    Click on the globe or search for a city first to select location
                   </div>
                 </form>
               )}
@@ -1220,11 +1174,10 @@ export function PlannerTab() {
                 </button>
               )}
               <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 8 }}>
-                💡 Click on the globe to select a location, then fill the form above
+                Click on the globe to select a location, then fill the form above
               </div>
             </div>
 
-            {/* Participants */}
             {(participants.length > 0 || session.participants.length > 0) && (
               <>
                 <div className={ui.divider} />
@@ -1232,8 +1185,7 @@ export function PlannerTab() {
                   <div className={ui.title} style={{ fontSize: 14, marginBottom: 8 }}>
                     Participants ({Math.max(participants.length, session.participants.length)})
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                    {/* Відображаємо backend participants (якщо є) */}
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                     {session.participants.map((backendPpt) => {
                       const frontendPpt = participants.find((fp) => fp.name === backendPpt.name);
                       const email = backendPpt.email || participantEmails[frontendPpt?.id || ''] || '';
@@ -1245,30 +1197,27 @@ export function PlannerTab() {
                               <div style={{ fontWeight: 600, fontSize: '13px' }}>{backendPpt.name}</div>
                               {email && (
                                 <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 2 }}>
-                                  📧 {email}
+                                  {email}
                                 </div>
                               )}
                               <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 2 }}>
-                                🕐 {backendPpt.timezone}
+                                {backendPpt.timezone}
                               </div>
                               {backendPpt.location?.city && (
                                 <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 2 }}>
-                                  📍 {backendPpt.location.city}
+                                  {backendPpt.location.city}
                                 </div>
                               )}
                             </div>
                             <button
                               className={`${ui.btn} ${ui.btnDanger}`}
                               style={{ fontSize: 11, padding: '4px 8px' }}
-                              onClick={async () => {
+                                      onClick={async () => {
                                 if (session) {
-                                  // Видалити з backend (оновлення participants списку)
                                   const updated = await apiRequest<SessionResponse>(`/api/meetings/${session.id}`, { method: 'GET' });
                                   const newParticipants = updated.participants.filter((p) => p.name !== backendPpt.name);
-                                  // Оновити session напряму (бо немає DELETE endpoint)
                                   setSession({ ...updated, participants: newParticipants });
                                 }
-                                // Видалити з frontend
                                 if (frontendPpt) {
                                   removePlannerParticipant(frontendPpt.id);
                                 }
@@ -1289,7 +1238,6 @@ export function PlannerTab() {
                       );
                     })}
                     
-                    {/* Якщо немає backend participants, показуємо frontend */}
                     {session.participants.length === 0 && participants.map((ppt) => (
                       <div key={ppt.id}>
                         <WorkingHoursEditor
@@ -1324,7 +1272,6 @@ export function PlannerTab() {
               </>
             )}
 
-            {/* Manual Time Selection */}
             {planner.mode === 'manual' && (
               <>
                 <div className={ui.divider} />
@@ -1381,7 +1328,6 @@ export function PlannerTab() {
               </>
             )}
 
-            {/* Auto Mode - Available Slots */}
             {planner.mode === 'auto' && (participants.length >= 2 || session.participants.length >= 2) && (
               <>
                 <div className={ui.divider} />
@@ -1413,11 +1359,10 @@ export function PlannerTab() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 8, maxHeight: 400, overflowY: 'auto' }}>
                       {availableSlots.slice(0, 15).map((slot, slotIdx) => {
                         const isSelected = slot.startUtc === planner.selectedSlotUtc;
-                        const startDt = DateTime.fromISO(slot.startUtc);
-                        if (!startDt.isValid) return null;
+                                const startDt = DateTime.fromISO(slot.startUtc);
+                                if (!startDt.isValid) return null;
 
-                        // Знаходимо відповідний backend slot
-                        const backendSlot = backendSlots.find((bs) => bs.startUtcISO === slot.startUtc);
+                                const backendSlot = backendSlots.find((bs) => bs.startUtcISO === slot.startUtc);
                         const qualityScore = backendSlot?.score ?? slot.qualityScore ?? 0;
                         const qualityColor = qualityScore >= 80 ? '#22c55e' : qualityScore >= 60 ? '#eab308' : '#ef4444';
                         const qualityLabel = qualityScore >= 80 ? 'Great' : qualityScore >= 60 ? 'Good' : 'Fair';
@@ -1473,14 +1418,11 @@ export function PlannerTab() {
                                 </span>
                               )}
                             </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, fontSize: 12 }}>
-                              {/* Показуємо breakdown з backend slots або frontend slots */}
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6, fontSize: 12 }}>
                               {(() => {
-                                // Знаходимо відповідний backend slot за startUtcISO
                                 const matchingBackendSlot = backendSlots.find((bs) => bs.startUtcISO === slot.startUtc);
                                 
                                 if (matchingBackendSlot && matchingBackendSlot.breakdown && matchingBackendSlot.breakdown.length > 0) {
-                                  // Backend slots мають breakdown
                                   return matchingBackendSlot.breakdown.map((bd) => (
                                     <div
                                       key={bd.name}
@@ -1514,7 +1456,6 @@ export function PlannerTab() {
                                     </div>
                                   ));
                                 } else {
-                                  // Frontend slots - показуємо для participants
                                   const participantsToShow = session.participants.length > 0
                                     ? session.participants.map((bp) => ({
                                         id: bp.name,
@@ -1531,9 +1472,9 @@ export function PlannerTab() {
                                     const loc = ppt.location || (ppt as typeof participants[0]).location;
                                     if (!loc || !localTime) return null;
 
-                                    const hour = localTimeFull?.hour ?? parseInt(localTime.split(':')[0]);
-                                    const timeLabel = hour < 12 ? '🌅 Morning' : hour < 17 ? '☀️ Afternoon' : hour < 21 ? '🌆 Evening' : '🌙 Night';
-                                    const tz = (loc as { tz?: string })?.tz || (ppt as { timezone?: string }).timezone || 'UTC';
+                                            const hour = localTimeFull?.hour ?? parseInt(localTime.split(':')[0]);
+                                            const timeLabel = hour < 12 ? 'Morning' : hour < 17 ? 'Afternoon' : hour < 21 ? 'Evening' : 'Night';
+                                            const tz = (loc as { tz?: string })?.tz || (ppt as { timezone?: string }).timezone || 'UTC';
 
                                     return (
                                       <div
@@ -1578,7 +1519,6 @@ export function PlannerTab() {
               </>
             )}
 
-            {/* Selected Slot & Confirm */}
             {selectedSlot && (planner.mode === 'auto' || planner.mode === 'manual') && (
               <>
                 <div className={ui.divider} />
@@ -1615,7 +1555,7 @@ export function PlannerTab() {
                           <div key={pptId} className={ui.card} style={{ padding: 10 }}>
                             <TimeRow label={`${ppt.name}`} value={`${localTime} (${dateStr})`} mono />
                             <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginTop: 4 }}>
-                              {tz} • {hour >= 6 && hour < 18 ? '🌅 Daytime' : '🌙 Nighttime'}
+                              {tz} • {hour >= 6 && hour < 18 ? 'Daytime' : 'Nighttime'}
                             </div>
                           </div>
                         );
@@ -1662,32 +1602,29 @@ export function PlannerTab() {
               </>
             )}
 
-            {/* Manual mode help */}
             {planner.mode === 'manual' && participants.length === 0 && (
               <div className={ui.card} style={{ padding: 16, textAlign: 'center', backgroundColor: 'var(--card-bg)', borderStyle: 'dashed' }}>
                 <div className={ui.subtitle} style={{ margin: 0 }}>
-                  👥 Add at least one participant to convert time to different time zones
+                  Add at least one participant to convert time to different time zones
                 </div>
               </div>
             )}
 
-            {/* Auto mode help */}
             {planner.mode === 'auto' && participants.length < 2 && (
               <div className={ui.card} style={{ padding: 16, textAlign: 'center', backgroundColor: 'var(--card-bg)', borderStyle: 'dashed' }}>
                 <div className={ui.subtitle} style={{ margin: 0 }}>
                   {participants.length === 0
-                    ? '👥 Add at least 2 participants to start finding meeting slots'
-                    : '➕ Add one more participant to find available meeting times'}
+                    ? 'Add at least 2 participants to start finding meeting slots'
+                    : 'Add one more participant to find available meeting times'}
                 </div>
               </div>
             )}
 
-            {/* Confirmed Event */}
             {session.confirmedEvent && (
               <>
                 <div className={ui.divider} />
                 <div>
-                  <div className={ui.title} style={{ fontSize: 14, marginBottom: 8 }}>✅ Meeting Confirmed</div>
+                  <div className={ui.title} style={{ fontSize: 14, marginBottom: 8 }}>Meeting Confirmed</div>
                   <div className={ui.card} style={{ padding: 12, backgroundColor: '#22c55e20', borderColor: '#22c55e' }}>
                     <div style={{ fontSize: '13px', marginBottom: 8, fontWeight: 600 }}>Google Meet Link:</div>
                     <a href={session.confirmedEvent.meetLink} target="_blank" rel="noopener noreferrer" className={ui.link} style={{ wordBreak: 'break-all' }}>
@@ -1701,9 +1638,8 @@ export function PlannerTab() {
               </>
             )}
 
-            {/* Messages */}
-            {error && <div style={{ color: '#ef4444', fontSize: '13px' }}>❌ {error}</div>}
-            {message && <div style={{ color: '#22c55e', fontSize: '13px' }}>✅ {message}</div>}
+            {error && <div style={{ color: '#ef4444', fontSize: '13px' }}>{error}</div>}
+            {message && <div style={{ color: '#22c55e', fontSize: '13px' }}>{message}</div>}
           </>
         )}
       </div>

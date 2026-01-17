@@ -45,15 +45,11 @@ export async function POST(
       return NextResponse.json({ error: 'Not found' }, { status: 404 });
     }
 
-    // Перевіряємо чи слот існує в proposedSlots (якщо вони є)
-    // Якщо proposedSlots порожні або слот не знайдено, все одно дозволяємо вибір
-    // (для Manual mode або frontend-generated slots)
     const slots = parseSlots(session.proposedSlots);
     const matching = slots.length > 0
       ? slots.find((slot) => slot.startUtcISO === startUtcISO && slot.endUtcISO === endUtcISO)
       : null;
 
-    // Перевіряємо чи слот валідний (start < end, в межах range)
     const startDt = new Date(startUtcISO);
     const endDt = new Date(endUtcISO);
     const rangeFrom = new Date(session.rangeFromISO);
@@ -67,15 +63,11 @@ export async function POST(
       return NextResponse.json({ error: 'Start time must be before end time' }, { status: 400 });
     }
 
-    // Перевіряємо чи слот в межах range (якщо range встановлено)
     if (rangeFrom && rangeTo && (startDt < rangeFrom || endDt > rangeTo)) {
       return NextResponse.json({ error: 'Slot is outside the allowed date range' }, { status: 400 });
     }
 
-    // Якщо слот не знайдено в proposedSlots, все одно дозволяємо вибір
-    // (для Manual mode або frontend-generated slots)
     if (slots.length > 0 && !matching) {
-      // Тільки попереджаємо, але не блокуємо
       console.warn(`Slot ${startUtcISO} not found in proposedSlots, but allowing selection (Manual mode or frontend-generated)`);
     }
 

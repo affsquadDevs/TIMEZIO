@@ -84,7 +84,7 @@ export function TimeDisplay({ location }: TimeDisplayProps) {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
             <div style={{ fontSize: 'clamp(12px, 2.5vw, 14px)', fontWeight: 600, color: 'var(--text-secondary)' }}>
-              <span>Sun {isDay ? '☀️' : '🌙'}: </span>
+              <span>Sun: </span>
               <span>{sunrise} - {sunset}</span>
               <span style={{ marginLeft: '4px' }}>(10h 06m)</span>
             </div>

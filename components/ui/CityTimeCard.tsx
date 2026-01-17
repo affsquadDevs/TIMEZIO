@@ -46,7 +46,7 @@ export function CityTimeCard({ location, isSelected, onClick }: CityTimeCardProp
           </div>
         </div>
         <div className={styles.dayNight}>
-          {isDay ? '☀️' : '🌙'} {isDay ? 'Day' : 'Night'}
+          {isDay ? 'Day' : 'Night'}
         </div>
       </div>
       
