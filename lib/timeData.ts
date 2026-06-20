@@ -1,6 +1,9 @@
 // Server-side timezone facts and tables. No 'use client' — these run during SSR/ISR
 // so that real, per-instance data (offsets, DST dates, conversion/overlap tables)
 // is present in the initial HTML for crawlers and AdSense review.
+//
+// All date/time formatting accepts a `locale` so month/day names and time
+// formats localize (e.g. "dimanche 1 novembre 2026", "14:30").
 import { DateTime } from 'luxon';
 import { findCityBySlug, findCityByRegion } from '@/utils/cityMapper';
 import { findNextOffsetTransition } from '@/utils/time';
@@ -44,15 +47,14 @@ export function formatOffsetLabel(offsetMin: number): string {
 }
 
 export type Transition = {
-  whenDate: string; // "Sunday, November 1, 2026"
+  whenDate: string; // localized, e.g. "Sunday, November 1, 2026"
   type: 'begins' | 'ends';
-  label: string;
   fromOffsetLabel: string;
   toOffsetLabel: string;
 };
 
 /** Up to `count` upcoming DST/offset transitions for a zone. */
-export function nextTransitions(tz: string, count = 2): Transition[] {
+export function nextTransitions(tz: string, count = 2, locale = 'en'): Transition[] {
   const out: Transition[] = [];
   let cursor = DateTime.now().setZone(tz);
   for (let i = 0; i < count; i++) {
@@ -61,9 +63,8 @@ export function nextTransitions(tz: string, count = 2): Transition[] {
     const before = t.minus({ minutes: 1 });
     const begins = t.offset > before.offset; // spring forward => DST begins
     out.push({
-      whenDate: t.toFormat('cccc, LLLL d, yyyy'),
+      whenDate: t.setLocale(locale).toLocaleString(DateTime.DATE_HUGE),
       type: begins ? 'begins' : 'ends',
-      label: begins ? 'Clocks spring forward — DST begins' : 'Clocks fall back — DST ends',
       fromOffsetLabel: formatOffsetLabel(before.offset),
       toOffsetLabel: formatOffsetLabel(t.offset),
     });
@@ -84,13 +85,13 @@ export type ZoneFacts = {
   transitions: Transition[];
 };
 
-export function getZoneFacts(tz: string): ZoneFacts {
-  const now = DateTime.now().setZone(tz);
-  const transitions = nextTransitions(tz, 2);
+export function getZoneFacts(tz: string, locale = 'en'): ZoneFacts {
+  const now = DateTime.now().setZone(tz).setLocale(locale);
+  const transitions = nextTransitions(tz, 2, locale);
   return {
     tz,
-    nowDate: now.toFormat('cccc, LLLL d, yyyy'),
-    nowTime: now.toFormat('h:mm a'),
+    nowDate: now.toLocaleString(DateTime.DATE_HUGE),
+    nowTime: now.toLocaleString(DateTime.TIME_SIMPLE),
     offsetLabel: formatOffsetLabel(now.offset),
     offsetMinutes: now.offset,
     abbr: now.offsetNameShort ?? null,
@@ -148,10 +149,11 @@ export function parseConvertPair(pairSlug: string): { from: Endpoint; to: Endpoi
   return { from, to };
 }
 
-export type ConvRow = { from: string; to: string; dayNote: string };
+export type DayNote = 'same' | 'next' | 'prev';
+export type ConvRow = { from: string; to: string; dayNote: DayNote };
 
 /** A readable conversion table: key hours of the "from" zone mapped to the "to" zone. */
-export function buildConversionTable(fromZone: string, toZone: string): ConvRow[] {
+export function buildConversionTable(fromZone: string, toZone: string, locale = 'en'): ConvRow[] {
   const base = DateTime.now().setZone(fromZone).startOf('day');
   const hours = [0, 3, 6, 9, 12, 15, 18, 21];
   return hours.map((h) => {
@@ -160,8 +162,12 @@ export function buildConversionTable(fromZone: string, toZone: string): ConvRow[
     const dayDiff = Math.round(
       DateTime.fromISO(t.toFormat('yyyy-LL-dd')).diff(DateTime.fromISO(f.toFormat('yyyy-LL-dd')), 'days').days
     );
-    const dayNote = dayDiff === 0 ? 'same day' : dayDiff > 0 ? 'next day' : 'previous day';
-    return { from: f.toFormat('h:mm a'), to: t.toFormat('h:mm a'), dayNote };
+    const dayNote: DayNote = dayDiff === 0 ? 'same' : dayDiff > 0 ? 'next' : 'prev';
+    return {
+      from: f.setLocale(locale).toLocaleString(DateTime.TIME_SIMPLE),
+      to: t.setLocale(locale).toLocaleString(DateTime.TIME_SIMPLE),
+      dayNote,
+    };
   });
 }
 
@@ -173,6 +179,7 @@ export function offsetDiffHours(fromZone: string, toZone: string): number {
   return (b - a) / 60;
 }
 
+/** Human-readable English difference (used by metadata that isn't locale-split yet). */
 export function formatDiffHours(diff: number): string {
   if (diff === 0) return 'the same time (no difference)';
   const sign = diff > 0 ? 'ahead of' : 'behind';
@@ -183,22 +190,36 @@ export function formatDiffHours(diff: number): string {
   return `${human} ${sign}`;
 }
 
+/** Structured difference for locale-safe sentence building. */
+export type DiffParts = { h: number; m: number; dir: 'ahead' | 'behind' | 'same'; totalMinutes: number };
+export function offsetDiffParts(fromZone: string, toZone: string): DiffParts {
+  const now = DateTime.now();
+  const totalMinutes = now.setZone(toZone).offset - now.setZone(fromZone).offset;
+  const abs = Math.abs(totalMinutes);
+  return {
+    h: Math.floor(abs / 60),
+    m: abs % 60,
+    dir: totalMinutes === 0 ? 'same' : totalMinutes > 0 ? 'ahead' : 'behind',
+    totalMinutes,
+  };
+}
+
 // ---- Meeting overlap -------------------------------------------------------
 
 export type OverlapRow = { a: string; b: string; overlap: boolean };
 
-export function buildMeetingOverlap(zoneA: string, zoneB: string) {
+export function buildMeetingOverlap(zoneA: string, zoneB: string, locale = 'en') {
   const base = DateTime.now().setZone(zoneA).startOf('day');
   const rows: OverlapRow[] = [];
   const overlapHours: { a: string; b: string }[] = [];
   for (let h = 0; h < 24; h++) {
-    const a = base.set({ hour: h });
-    const b = a.setZone(zoneB);
+    const a = base.set({ hour: h }).setLocale(locale);
+    const b = a.setZone(zoneB).setLocale(locale);
     const aWork = h >= 9 && h < 17;
     const bWork = b.hour >= 9 && b.hour < 17;
     const overlap = aWork && bWork;
-    rows.push({ a: a.toFormat('h a'), b: b.toFormat('h a'), overlap });
-    if (overlap) overlapHours.push({ a: a.toFormat('h:mm a'), b: b.toFormat('h:mm a') });
+    rows.push({ a: a.toLocaleString(DateTime.TIME_SIMPLE), b: b.toLocaleString(DateTime.TIME_SIMPLE), overlap });
+    if (overlap) overlapHours.push({ a: a.toLocaleString(DateTime.TIME_SIMPLE), b: b.toLocaleString(DateTime.TIME_SIMPLE) });
   }
   const best = overlapHours.length ? overlapHours[Math.floor(overlapHours.length / 2)] : null;
   return { rows, overlapHours, best, hasOverlap: overlapHours.length > 0 };
@@ -206,10 +227,10 @@ export function buildMeetingOverlap(zoneA: string, zoneB: string) {
 
 // ---- DST regions -----------------------------------------------------------
 
-export function getDstRegion(regionSlug: string) {
+export function getDstRegion(regionSlug: string, locale = 'en') {
   const city = findCityByRegion(regionSlug) as City | null;
   if (!city) return null;
-  const facts = getZoneFacts(city.tz);
+  const facts = getZoneFacts(city.tz, locale);
   return {
     regionLabel: displayToken(regionSlug),
     city,

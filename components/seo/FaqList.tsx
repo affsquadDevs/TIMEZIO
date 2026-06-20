@@ -1,13 +1,16 @@
 // Server component: renders the visible FAQ markup in the initial HTML.
 // FAQPage JSON-LD is emitted separately via <JsonLd /> on each page.
+import { getTranslations } from 'next-intl/server';
+
 export type FaqItem = { question: string; answer: string };
 
-export function FaqList({ faqs }: { faqs: FaqItem[] }) {
+export async function FaqList({ faqs }: { faqs: FaqItem[] }) {
   if (!faqs.length) return null;
+  const t = await getTranslations('common');
   return (
-    <section style={{ marginTop: '32px' }} aria-label="Frequently asked questions">
+    <section style={{ marginTop: '32px' }} aria-label={t('faqTitle')}>
       <h2 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '16px' }}>
-        Frequently Asked Questions
+        {t('faqTitle')}
       </h2>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         {faqs.map((faq, i) => (

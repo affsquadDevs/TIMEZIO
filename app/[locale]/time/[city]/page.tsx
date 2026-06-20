@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import styles from '@/components/layout/layout.module.css';
 import ui from '@/components/ui/ui.module.css';
 import { PageStage } from '@/components/programmatic/PageStage';
@@ -13,70 +14,56 @@ import { SITE_URL, SITE_NAME, SITE_LOGO } from '@/lib/site';
 
 export const revalidate = 1800;
 
-type Params = { city: string };
+type Params = { locale: string; city: string };
 
 export function generateStaticParams() {
   return popularCities.map((c) => ({ city: c.slug }));
 }
 
 export default async function TimeCityPage({ params }: { params: Promise<Params> }) {
-  const { city: slug } = await params;
+  const { locale, city: slug } = await params;
+  setRequestLocale(locale);
   const city = resolveCity(slug);
   if (!city) notFound();
 
+  const t = await getTranslations('prog.time');
+  const tc = await getTranslations('common');
+
   const cityName = cityShortName(city);
   const canonicalSlug = citySlug(city);
-  const facts = getZoneFacts(city.tz);
-  const path = `/time/${canonicalSlug}`;
-  const url = `${SITE_URL}${path}`;
+  const facts = getZoneFacts(city.tz, locale);
+  const url = `${SITE_URL}/time/${canonicalSlug}`;
 
-  const dstSentence = facts.observesDst
-    ? `${cityName} observes daylight saving time, so its UTC offset shifts by one hour between standard and summer time.`
-    : `${cityName} does not observe daylight saving time, so its UTC offset (${facts.offsetLabel}) stays the same all year.`;
+  const offsetAbbr = facts.abbr ? `${facts.offsetLabel} (${facts.abbr})` : facts.offsetLabel;
+  const observesSel = facts.observesDst ? 'yes' : 'no';
   const nextT = facts.transitions[0];
+  const daylightValue = facts.observesDst
+    ? facts.isDst ? t('daylightInEffect') : t('daylightObservedInactive')
+    : t('daylightNotObserved');
 
   const faqs: FaqItem[] = [
-    {
-      question: `What time is it in ${cityName} right now?`,
-      answer: `As of ${facts.nowDate}, the local time in ${cityName} is around ${facts.nowTime} (${facts.abbr ?? facts.offsetLabel}). The clock at the top of this page ticks in real time, and the offset shown is ${facts.offsetLabel}.`,
-    },
-    {
-      question: `What time zone is ${cityName} in?`,
-      answer: `${cityName} uses the ${city.tz} IANA time zone${facts.abbr ? `, currently abbreviated ${facts.abbr}` : ''}. Its current offset from Coordinated Universal Time is ${facts.offsetLabel}.`,
-    },
-    {
-      question: `Does ${cityName} observe daylight saving time?`,
-      answer: facts.observesDst
-        ? `Yes. ${dstSentence}${nextT ? ` The next change is on ${nextT.whenDate}, when the clocks ${nextT.type === 'begins' ? 'move forward' : 'move back'} and the offset becomes ${nextT.toOffsetLabel}.` : ''}`
-        : dstSentence,
-    },
-    {
-      question: `What is the UTC offset for ${cityName}?`,
-      answer: `${cityName} is currently at ${facts.offsetLabel}. ${facts.observesDst ? 'This offset changes by one hour during the daylight saving period.' : 'This offset is fixed throughout the year.'}`,
-    },
+    { question: t('faq1q', { city: cityName }), answer: t('faq1a', { date: facts.nowDate, city: cityName, time: facts.nowTime, abbr: facts.abbr ?? facts.offsetLabel, offset: facts.offsetLabel }) },
+    { question: t('faq2q', { city: cityName }), answer: t('faq2a', { city: cityName, tz: city.tz, hasAbbr: facts.abbr ? 'yes' : 'no', abbr: facts.abbr ?? '', offset: facts.offsetLabel }) },
+    { question: t('faq3q', { city: cityName }), answer: t('faq3a', { observesDst: observesSel, city: cityName, hasNext: nextT ? 'yes' : 'no', nextDate: nextT?.whenDate ?? '', nextDir: nextT ? (nextT.type === 'begins' ? 'forward' : 'back') : 'forward', nextOffset: nextT?.toOffsetLabel ?? '', offset: facts.offsetLabel }) },
+    { question: t('faq4q', { city: cityName }), answer: t('faq4a', { city: cityName, offset: facts.offsetLabel, observesDst: observesSel }) },
   ];
 
   const webPage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: `Current Time in ${cityName}`,
-    description: `Live local time in ${cityName} (${city.tz}). Current UTC offset ${facts.offsetLabel}${facts.abbr ? `, ${facts.abbr}` : ''}, with daylight saving status and the next clock change.`,
+    name: t('wpName', { city: cityName }),
+    description: t('wpDesc', { city: cityName, tz: city.tz, offsetAbbr }),
     url,
-    inLanguage: 'en-US',
+    inLanguage: locale,
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'World Clock', item: `${SITE_URL}/time` },
+        { '@type': 'ListItem', position: 1, name: tc('breadcrumbHome'), item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: t('breadcrumb'), item: `${SITE_URL}/time` },
         { '@type': 'ListItem', position: 3, name: cityName, item: url },
       ],
     },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
-      logo: { '@type': 'ImageObject', url: SITE_LOGO },
-    },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL, logo: { '@type': 'ImageObject', url: SITE_LOGO } },
   };
 
   const init = {
@@ -98,50 +85,53 @@ export default async function TimeCityPage({ params }: { params: Promise<Params>
             <div className={ui.card}>
               <div className={ui.cardBody}>
                 <h1 className={ui.title} style={{ marginBottom: '6px', fontSize: '26px' }}>
-                  Current Time in {cityName}
+                  {t('h1', { city: cityName })}
                 </h1>
                 <p style={{ fontSize: '34px', fontWeight: 700, color: 'var(--text-primary)', margin: '4px 0 2px', fontVariantNumeric: 'tabular-nums' }}>
                   <LiveClock tz={city.tz} initial={facts.nowTime} />
                 </p>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '18px' }}>
-                  {facts.nowDate} · {facts.abbr ?? 'Local time'} ({facts.offsetLabel})
+                  {t('dateLine', { date: facts.nowDate, abbr: facts.abbr ?? t('localTime'), offset: facts.offsetLabel })}
                 </p>
 
                 <FactGrid
                   items={[
-                    { label: 'Time zone', value: city.tz },
-                    { label: 'UTC offset', value: facts.offsetLabel },
-                    { label: 'Abbreviation', value: facts.abbr ?? '—' },
-                    { label: 'Daylight saving', value: facts.observesDst ? (facts.isDst ? 'In effect now' : 'Observed (not active)') : 'Not observed' },
+                    { label: t('factTimeZone'), value: city.tz },
+                    { label: t('factUtcOffset'), value: facts.offsetLabel },
+                    { label: t('factAbbreviation'), value: facts.abbr ?? '—' },
+                    { label: t('factDaylight'), value: daylightValue },
                   ]}
                 />
 
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginTop: '18px' }}>
-                  The current local time in {cityName} is <strong>{facts.nowTime}</strong> on {facts.nowDate}.
-                  {cityName} runs on the <strong>{city.tz}</strong> time zone, which is presently {facts.offsetLabel}
-                  {facts.abbr ? ` (${facts.abbr})` : ''}. {dstSentence}
+                  {t.rich('introMain', { city: cityName, time: facts.nowTime, date: facts.nowDate, tz: city.tz, offsetAbbr, b: (c) => <strong>{c}</strong> })}{' '}
+                  {t('dstSentence', { observesDst: observesSel, city: cityName, offset: facts.offsetLabel })}
                 </p>
 
                 {nextT && (
                   <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginTop: '12px' }}>
-                    <strong>Next clock change:</strong> {nextT.whenDate} — {nextT.label}. The UTC offset moves from{' '}
-                    {nextT.fromOffsetLabel} to {nextT.toOffsetLabel}. Plan calls and travel around this date to avoid
-                    being an hour off.
+                    {t.rich('nextChange', {
+                      date: nextT.whenDate,
+                      label: t('transitionLabel', { type: nextT.type }),
+                      fromOffset: nextT.fromOffsetLabel,
+                      toOffset: nextT.toOffsetLabel,
+                      b: (c) => <strong>{c}</strong>,
+                    })}
                   </p>
                 )}
 
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginTop: '12px' }}>
-                  Use the interactive globe above to compare {cityName} with other cities, or open the{' '}
-                  <Link href="/compare" className={ui.link}>Compare</Link> tab to line up several time zones side by side.
-                  Planning a call? The{' '}
-                  <Link href="/planner" className={ui.link}>Meeting Planner</Link> finds overlapping working hours
-                  automatically, and the{' '}
-                  <Link href="/dst" className={ui.link}>DST checker</Link> tracks upcoming clock changes.
+                  {t.rich('crosslinks', {
+                    city: cityName,
+                    compare: (c) => <Link href="/compare" className={ui.link}>{c}</Link>,
+                    planner: (c) => <Link href="/planner" className={ui.link}>{c}</Link>,
+                    dst: (c) => <Link href="/dst" className={ui.link}>{c}</Link>,
+                  })}
                 </p>
 
                 <div className={ui.divider} />
                 <h2 className={ui.title} style={{ fontSize: '18px', marginBottom: '12px' }}>
-                  Current time in other cities
+                  {t('relatedHeading')}
                 </h2>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '8px' }}>
                   {related.map((c) => (

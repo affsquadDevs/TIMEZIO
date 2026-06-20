@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import styles from '@/components/layout/layout.module.css';
 import ui from '@/components/ui/ui.module.css';
 import { PageStage } from '@/components/programmatic/PageStage';
@@ -13,59 +14,58 @@ import { SITE_URL, SITE_NAME, SITE_LOGO } from '@/lib/site';
 
 export const revalidate = 1800;
 
-type Params = { pair: string };
+type Params = { locale: string; pair: string };
 
 export function generateStaticParams() {
   return popularMeetings.map((m) => ({ pair: m.slug }));
 }
 
 export default async function MeetingPairPage({ params }: { params: Promise<Params> }) {
-  const { pair } = await params;
+  const { locale, pair } = await params;
+  setRequestLocale(locale);
   const { cityA, cityB } = parseMeetingPair(pair) as { cityA: City | null; cityB: City | null };
   if (!cityA || !cityB) notFound();
 
+  const t = await getTranslations('prog.meeting');
+  const tc = await getTranslations('common');
+
   const nameA = cityShortName(cityA);
   const nameB = cityShortName(cityB);
-  const factsA = getZoneFacts(cityA.tz);
-  const factsB = getZoneFacts(cityB.tz);
-  const overlap = buildMeetingOverlap(cityA.tz, cityB.tz);
-  const path = `/meeting/${pair}`;
-  const url = `${SITE_URL}${path}`;
-  const heading = `Best Meeting Time: ${nameA} ↔ ${nameB}`;
+  const factsA = getZoneFacts(cityA.tz, locale);
+  const factsB = getZoneFacts(cityB.tz, locale);
+  const overlap = buildMeetingOverlap(cityA.tz, cityB.tz, locale);
+  const url = `${SITE_URL}/meeting/${pair}`;
+  const heading = t('h1', { a: nameA, b: nameB });
 
-  const overlapSentence = overlap.hasOverlap
-    ? `Standard 9-to-5 working hours in ${nameA} and ${nameB} overlap from ${overlap.overlapHours[0].a} to ${overlap.overlapHours[overlap.overlapHours.length - 1].a} ${nameA} time. A good middle slot is around ${overlap.best?.a} in ${nameA} (${overlap.best?.b} in ${nameB}).`
-    : `Standard 9-to-5 working hours in ${nameA} and ${nameB} do not overlap, so one side will need an early or late slot. Aim for the start of one city's day and the end of the other's.`;
+  const overlapArgs = {
+    hasOverlap: overlap.hasOverlap ? 'yes' : 'no',
+    a: nameA,
+    b: nameB,
+    start: overlap.overlapHours[0]?.a ?? '',
+    end: overlap.overlapHours[overlap.overlapHours.length - 1]?.a ?? '',
+    bestA: overlap.best?.a ?? '',
+    bestB: overlap.best?.b ?? '',
+  };
+  const overlapSentence = t('overlapSentence', overlapArgs);
 
   const faqs: FaqItem[] = [
-    {
-      question: `What is the best time to schedule a meeting between ${nameA} and ${nameB}?`,
-      answer: overlap.hasOverlap
-        ? `The cleanest option is around ${overlap.best?.a} in ${nameA}, which is ${overlap.best?.b} in ${nameB} — inside both teams' working day. The overlap table on this page lists every shared hour for today.`
-        : `There is no clean overlap during standard hours, so pick the least disruptive edge: early morning for one city or early evening for the other. The table on this page shows each hour side by side.`,
-    },
-    {
-      question: `What is the time difference between ${nameA} and ${nameB}?`,
-      answer: `${nameA} is currently ${factsA.offsetLabel} and ${nameB} is ${factsB.offsetLabel}. The difference can move by an hour around daylight saving transitions, which this tool accounts for automatically.`,
-    },
-    {
-      question: `How do I plan a recurring call across ${nameA} and ${nameB}?`,
-      answer: `Use the Planner tab above — both cities are pre-loaded. Set each participant's working hours and Timezio highlights overlapping slots and warns about early-morning or late-night times.`,
-    },
+    { question: t('faq1q', { a: nameA, b: nameB }), answer: t('faq1a', { hasOverlap: overlap.hasOverlap ? 'yes' : 'no', bestA: overlap.best?.a ?? '', a: nameA, bestB: overlap.best?.b ?? '', b: nameB }) },
+    { question: t('faq2q', { a: nameA, b: nameB }), answer: t('faq2a', { a: nameA, offsetA: factsA.offsetLabel, b: nameB, offsetB: factsB.offsetLabel }) },
+    { question: t('faq3q', { a: nameA, b: nameB }), answer: t('faq3a', { a: nameA, b: nameB }) },
   ];
 
   const webPage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: heading,
-    description: `Find the best meeting time between ${nameA} and ${nameB}. ${overlapSentence}`,
+    description: t('wpDesc', { a: nameA, b: nameB, overlap: overlapSentence }),
     url,
-    inLanguage: 'en-US',
+    inLanguage: locale,
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Meeting Planner', item: `${SITE_URL}/meeting` },
+        { '@type': 'ListItem', position: 1, name: tc('breadcrumbHome'), item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: t('breadcrumb'), item: `${SITE_URL}/meeting` },
         { '@type': 'ListItem', position: 3, name: `${nameA} to ${nameB}`, item: url },
       ],
     },
@@ -97,19 +97,19 @@ export default async function MeetingPairPage({ params }: { params: Promise<Para
                   {heading}
                 </h1>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: 1.6 }}>
-                  {overlapSentence} All times below are for today and adjust automatically for daylight saving time.
+                  {overlapSentence} {t('introTail')}
                 </p>
 
                 <FactGrid
                   items={[
                     { label: nameA, value: `${factsA.nowTime} (${factsA.offsetLabel})` },
                     { label: nameB, value: `${factsB.nowTime} (${factsB.offsetLabel})` },
-                    { label: 'Shared work hours', value: overlap.hasOverlap ? `${overlap.overlapHours.length} h` : 'None (9–5)' },
+                    { label: t('sharedWorkHours'), value: overlap.hasOverlap ? t('hoursUnit', { count: overlap.overlapHours.length }) : t('noneWorkHours') },
                   ]}
                 />
 
                 <h2 className={ui.title} style={{ fontSize: '18px', margin: '22px 0 10px' }}>
-                  Overlapping working hours
+                  {t('tableHeading')}
                 </h2>
                 {overlap.hasOverlap ? (
                   <div style={{ overflowX: 'auto' }}>
@@ -132,20 +132,21 @@ export default async function MeetingPairPage({ params }: { params: Promise<Para
                   </div>
                 ) : (
                   <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                    No 9-to-5 overlap today. Open the Planner above to widen working hours or pick an edge slot that works
-                    for both teams.
+                    {t('noOverlapBody')}
                   </p>
                 )}
 
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginTop: '16px' }}>
-                  The Planner tab above already has {nameA} and {nameB} loaded. Adjust each participant&apos;s hours, set a
-                  duration, and Timezio ranks the best slots. To double-check the raw offset, use the{' '}
-                  <Link href="/compare" className={ui.link}>Compare</Link> tab.
+                  {t.rich('crosslinks', {
+                    a: nameA,
+                    b: nameB,
+                    compare: (c) => <Link href="/compare" className={ui.link}>{c}</Link>,
+                  })}
                 </p>
 
                 <div className={ui.divider} />
                 <h2 className={ui.title} style={{ fontSize: '18px', marginBottom: '12px' }}>
-                  More meeting pairs
+                  {t('relatedHeading')}
                 </h2>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '8px' }}>
                   {related.map((m) => (

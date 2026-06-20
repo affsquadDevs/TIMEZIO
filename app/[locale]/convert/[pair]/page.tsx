@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import styles from '@/components/layout/layout.module.css';
 import ui from '@/components/ui/ui.module.css';
 import { PageStage } from '@/components/programmatic/PageStage';
@@ -11,7 +12,7 @@ import {
   parseConvertPair,
   buildConversionTable,
   offsetDiffHours,
-  formatDiffHours,
+  offsetDiffParts,
   getZoneFacts,
 } from '@/lib/timeData';
 import { SITE_URL, SITE_NAME, SITE_LOGO } from '@/lib/site';
@@ -19,70 +20,58 @@ import { findCityBySlug } from '@/utils/cityMapper';
 
 export const revalidate = 1800;
 
-type Params = { pair: string };
+type Params = { locale: string; pair: string };
 
 export function generateStaticParams() {
   return popularConverters.map((c) => ({ pair: c.slug }));
 }
 
 export default async function ConvertPairPage({ params }: { params: Promise<Params> }) {
-  const { pair } = await params;
+  const { locale, pair } = await params;
+  setRequestLocale(locale);
   const parsed = parseConvertPair(pair);
   if (!parsed) notFound();
 
-  const { from, to } = parsed;
-  const fromFacts = getZoneFacts(from.zone);
-  const toFacts = getZoneFacts(to.zone);
-  const table = buildConversionTable(from.zone, to.zone);
-  const diff = offsetDiffHours(from.zone, to.zone);
-  const diffText = formatDiffHours(diff);
-  const path = `/convert/${pair}`;
-  const url = `${SITE_URL}${path}`;
+  const t = await getTranslations('prog.convert');
+  const tc = await getTranslations('common');
 
-  const heading = `${from.label} to ${to.label} Time Converter`;
-  const summary =
-    diff === 0
-      ? `${to.label} is currently ${diffText} ${from.label}.`
-      : `${to.label} is currently ${diffText} ${from.label}.`;
+  const { from, to } = parsed;
+  const fromFacts = getZoneFacts(from.zone, locale);
+  const toFacts = getZoneFacts(to.zone, locale);
+  const table = buildConversionTable(from.zone, to.zone, locale);
+  const diff = offsetDiffHours(from.zone, to.zone);
+  const parts = offsetDiffParts(from.zone, to.zone);
+  const url = `${SITE_URL}/convert/${pair}`;
+
+  const heading = t('h1', { from: from.label, to: to.label });
+  const summary = t('diffSummary', { dir: parts.dir, h: parts.h, m: parts.m, from: from.label, to: to.label });
+  const example = table[3]; // the 9:00 row (hours = [0,3,6,9,...])
 
   const faqs: FaqItem[] = [
-    {
-      question: `What is the time difference between ${from.label} and ${to.label}?`,
-      answer: `Right now ${to.label} (${to.full}) is ${diffText} ${from.label} (${from.full}). The difference is ${diff === 0 ? 'zero hours' : `${Math.abs(diff)} hour${Math.abs(diff) === 1 ? '' : 's'}`} and can shift by an hour when either zone enters or leaves daylight saving time.`,
-    },
-    {
-      question: `How do I convert ${from.label} to ${to.label}?`,
-      answer: `Add the ${from.label} time to the offset difference. For example, 9:00 AM ${from.label} is ${table.find((r) => r.from === '9:00 AM')?.to ?? 'shown in the table above'} ${to.label}. The full hour-by-hour table on this page lists each conversion for the current date.`,
-    },
-    {
-      question: `Does ${from.label} or ${to.label} use daylight saving time?`,
-      answer: `${from.label} is currently ${fromFacts.observesDst ? 'in a region that observes DST' : 'on a fixed offset (no DST)'} (${fromFacts.offsetLabel}), and ${to.label} is ${toFacts.observesDst ? 'in a region that observes DST' : 'on a fixed offset (no DST)'} (${toFacts.offsetLabel}). The converter uses official IANA data and adjusts automatically.`,
-    },
-    {
-      question: `Is this ${from.label} to ${to.label} converter accurate?`,
-      answer: `Yes — conversions use the IANA time zone database, the same source operating systems use, and account for current daylight saving rules to the minute.`,
-    },
+    { question: t('faq1q', { from: from.label, to: to.label }), answer: t('faq1a', { to: to.label, toFull: to.full, dir: parts.dir, from: from.label, fromFull: from.full, absH: Math.abs(diff) }) },
+    { question: t('faq2q', { from: from.label, to: to.label }), answer: t('faq2a', { from: from.label, exampleFrom: example.from, exampleTo: example.to, to: to.label }) },
+    { question: t('faq3q', { from: from.label, to: to.label }), answer: t('faq3a', { from: from.label, fromDst: fromFacts.observesDst ? 'yes' : 'no', fromOffset: fromFacts.offsetLabel, to: to.label, toDst: toFacts.observesDst ? 'yes' : 'no', toOffset: toFacts.offsetLabel }) },
+    { question: t('faq4q', { from: from.label, to: to.label }), answer: t('faq4a') },
   ];
 
   const webPage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: heading,
-    description: `Convert ${from.label} to ${to.label}. ${summary}`,
+    description: t('wpDesc', { from: from.label, to: to.label, summary }),
     url,
-    inLanguage: 'en-US',
+    inLanguage: locale,
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Converters', item: `${SITE_URL}/convert` },
+        { '@type': 'ListItem', position: 1, name: tc('breadcrumbHome'), item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: t('breadcrumb'), item: `${SITE_URL}/convert` },
         { '@type': 'ListItem', position: 3, name: `${from.label} to ${to.label}`, item: url },
       ],
     },
     publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL, logo: { '@type': 'ImageObject', url: SITE_LOGO } },
   };
 
-  // Globe focus: use representative cities for the two zones when resolvable.
   const fromCity = findCityBySlug(pair.split('-to-')[0]) ?? cityForZone(from.zone);
   const toCity = findCityBySlug(pair.split('-to-')[1]) ?? cityForZone(to.zone);
   const init = {
@@ -110,20 +99,19 @@ export default async function ConvertPairPage({ params }: { params: Promise<Para
                   {heading}
                 </h1>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: 1.6 }}>
-                  {summary} {from.label} is {from.full}; {to.label} is {to.full}. The table below shows the conversion for
-                  every part of the day, with daylight saving time handled automatically.
+                  {summary} {t('introBody', { from: from.label, fromFull: from.full, to: to.label, toFull: to.full })}
                 </p>
 
                 <FactGrid
                   items={[
                     { label: from.label, value: `${fromFacts.nowTime} (${fromFacts.offsetLabel})` },
                     { label: to.label, value: `${toFacts.nowTime} (${toFacts.offsetLabel})` },
-                    { label: 'Difference', value: diff === 0 ? 'None' : `${Math.abs(diff)}h` },
+                    { label: t('factDifference'), value: diff === 0 ? t('diffNone') : `${Math.abs(diff)}h` },
                   ]}
                 />
 
                 <h2 className={ui.title} style={{ fontSize: '18px', margin: '22px 0 10px' }}>
-                  {from.label} → {to.label} conversion table
+                  {t('tableHeading', { from: from.label, to: to.label })}
                 </h2>
                 <div style={{ overflowX: 'auto' }}>
                   <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
@@ -139,8 +127,8 @@ export default async function ConvertPairPage({ params }: { params: Promise<Para
                           <td style={tdStyle}>{row.from}</td>
                           <td style={tdStyle}>
                             {row.to}
-                            {row.dayNote !== 'same day' && (
-                              <span style={{ color: 'var(--text-secondary)', fontSize: '12px' }}> ({row.dayNote})</span>
+                            {row.dayNote !== 'same' && (
+                              <span style={{ color: 'var(--text-secondary)', fontSize: '12px' }}> ({row.dayNote === 'next' ? t('dayNext') : t('dayPrev')})</span>
                             )}
                           </td>
                         </tr>
@@ -150,15 +138,15 @@ export default async function ConvertPairPage({ params }: { params: Promise<Para
                 </div>
 
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginTop: '16px' }}>
-                  Need a specific date or a different pair? Use the interactive globe and the{' '}
-                  <Link href="/compare" className={ui.link}>Compare</Link> tab to preview any moment, including future
-                  dates that cross a daylight saving boundary. To schedule a call between these zones, try the{' '}
-                  <Link href="/planner" className={ui.link}>Meeting Planner</Link>.
+                  {t.rich('crosslinks', {
+                    compare: (c) => <Link href="/compare" className={ui.link}>{c}</Link>,
+                    planner: (c) => <Link href="/planner" className={ui.link}>{c}</Link>,
+                  })}
                 </p>
 
                 <div className={ui.divider} />
                 <h2 className={ui.title} style={{ fontSize: '18px', marginBottom: '12px' }}>
-                  Related converters
+                  {t('relatedHeading')}
                 </h2>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '8px' }}>
                   {related.map((c) => (

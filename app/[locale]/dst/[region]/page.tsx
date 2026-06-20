@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import styles from '@/components/layout/layout.module.css';
 import ui from '@/components/ui/ui.module.css';
 import { PageStage } from '@/components/programmatic/PageStage';
@@ -12,47 +13,50 @@ import { SITE_URL, SITE_NAME, SITE_LOGO } from '@/lib/site';
 
 export const revalidate = 1800;
 
-type Params = { region: string };
+type Params = { locale: string; region: string };
 
 export function generateStaticParams() {
   return popularDst.map((d) => ({ region: d.slug }));
 }
 
 export default async function DstRegionPage({ params }: { params: Promise<Params> }) {
-  const { region } = await params;
-  const data = getDstRegion(region);
+  const { locale, region } = await params;
+  setRequestLocale(locale);
+  const data = getDstRegion(region, locale);
   if (!data) notFound();
+
+  const t = await getTranslations('prog.dst');
+  const tc = await getTranslations('common');
 
   const { regionLabel, city, facts, observesDst } = data;
   const cityName = cityShortName(city);
-  const path = `/dst/${region}`;
-  const url = `${SITE_URL}${path}`;
-  const heading = `${regionLabel} Daylight Saving Time`;
+  const url = `${SITE_URL}/dst/${region}`;
+  const heading = t('h1', { region: regionLabel });
 
-  const begins = facts.transitions.find((t) => t.type === 'begins');
-  const ends = facts.transitions.find((t) => t.type === 'ends');
+  const begins = facts.transitions.find((tr) => tr.type === 'begins');
+  const ends = facts.transitions.find((tr) => tr.type === 'ends');
+  const observesSel = observesDst ? 'yes' : 'no';
 
-  const intro = observesDst
-    ? `${regionLabel} observes daylight saving time. Clocks are currently ${facts.isDst ? 'on summer time (DST in effect)' : 'on standard time'}, at ${facts.offsetLabel}. The reference zone for ${regionLabel} is ${city.tz} (${cityName}).`
-    : `${regionLabel} does not currently observe daylight saving time. The offset stays at ${facts.offsetLabel} all year. The reference zone is ${city.tz} (${cityName}).`;
+  const intro = t('intro', { observesDst: observesSel, region: regionLabel, isDst: facts.isDst ? 'yes' : 'no', offset: facts.offsetLabel, tz: city.tz, city: cityName });
 
   const faqs: FaqItem[] = [
+    { question: t('faq1q', { region: regionLabel }), answer: t('faq1a', { observesDst: observesSel, region: regionLabel, isDst: facts.isDst ? 'yes' : 'no', offset: facts.offsetLabel }) },
     {
-      question: `Does ${regionLabel} observe daylight saving time?`,
-      answer: observesDst
-        ? `Yes. ${regionLabel} changes its clocks twice a year. It is currently ${facts.isDst ? 'on daylight saving (summer) time' : 'on standard time'} at ${facts.offsetLabel}.`
-        : `No. ${regionLabel} keeps a fixed offset of ${facts.offsetLabel} throughout the year and does not change its clocks.`,
+      question: t('faq2q', { region: regionLabel }),
+      answer: t('faq2a', {
+        observesDst: observesSel,
+        region: regionLabel,
+        hasBegins: begins ? 'yes' : 'no',
+        beginsDate: begins?.whenDate ?? '',
+        beginsFrom: begins?.fromOffsetLabel ?? '',
+        beginsTo: begins?.toOffsetLabel ?? '',
+        hasEnds: ends ? 'yes' : 'no',
+        endsDate: ends?.whenDate ?? '',
+        endsFrom: ends?.fromOffsetLabel ?? '',
+        endsTo: ends?.toOffsetLabel ?? '',
+      }),
     },
-    {
-      question: `When do the clocks change in ${regionLabel}?`,
-      answer: observesDst
-        ? `${begins ? `Clocks next spring forward on ${begins.whenDate} (offset ${begins.fromOffsetLabel} → ${begins.toOffsetLabel}). ` : ''}${ends ? `Clocks next fall back on ${ends.whenDate} (offset ${ends.fromOffsetLabel} → ${ends.toOffsetLabel}).` : ''}`.trim() || `${regionLabel} observes DST; exact dates depend on the year.`
-        : `${regionLabel} does not change its clocks, so there is no spring-forward or fall-back date.`,
-    },
-    {
-      question: `What is the current UTC offset for ${regionLabel}?`,
-      answer: `${regionLabel} is currently at ${facts.offsetLabel}${facts.abbr ? ` (${facts.abbr})` : ''}. ${observesDst ? 'This shifts by one hour when daylight saving begins or ends.' : 'This offset is fixed.'}`,
-    },
+    { question: t('faq3q', { region: regionLabel }), answer: t('faq3a', { region: regionLabel, offset: facts.offsetLabel, hasAbbr: facts.abbr ? 'yes' : 'no', abbr: facts.abbr ?? '', observesDst: observesSel }) },
   ];
 
   const webPage = {
@@ -61,12 +65,12 @@ export default async function DstRegionPage({ params }: { params: Promise<Params
     name: heading,
     description: intro,
     url,
-    inLanguage: 'en-US',
+    inLanguage: locale,
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Daylight Saving Time', item: `${SITE_URL}/dst` },
+        { '@type': 'ListItem', position: 1, name: tc('breadcrumbHome'), item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: t('breadcrumb'), item: `${SITE_URL}/dst` },
         { '@type': 'ListItem', position: 3, name: regionLabel, item: url },
       ],
     },
@@ -98,33 +102,33 @@ export default async function DstRegionPage({ params }: { params: Promise<Params
 
                 <FactGrid
                   items={[
-                    { label: 'Observes DST', value: observesDst ? 'Yes' : 'No' },
-                    { label: 'Current offset', value: facts.offsetLabel },
-                    { label: 'Status', value: facts.isDst ? 'Summer time' : 'Standard time' },
-                    { label: 'Reference zone', value: city.tz },
+                    { label: t('factObservesDst'), value: observesDst ? t('yes') : t('no') },
+                    { label: t('factCurrentOffset'), value: facts.offsetLabel },
+                    { label: t('factStatus'), value: facts.isDst ? t('summerTime') : t('standardTime') },
+                    { label: t('factReferenceZone'), value: city.tz },
                   ]}
                 />
 
                 {observesDst && (begins || ends) && (
                   <>
                     <h2 className={ui.title} style={{ fontSize: '18px', margin: '22px 0 10px' }}>
-                      Next clock changes
+                      {t('changesHeading')}
                     </h2>
                     <div style={{ overflowX: 'auto' }}>
                       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
                         <thead>
                           <tr>
-                            <th style={thStyle}>Change</th>
-                            <th style={thStyle}>Date</th>
-                            <th style={thStyle}>Offset</th>
+                            <th style={thStyle}>{t('colChange')}</th>
+                            <th style={thStyle}>{t('colDate')}</th>
+                            <th style={thStyle}>{t('colOffset')}</th>
                           </tr>
                         </thead>
                         <tbody>
-                          {facts.transitions.map((t, i) => (
+                          {facts.transitions.map((tr, i) => (
                             <tr key={i}>
-                              <td style={tdStyle}>{t.type === 'begins' ? 'Spring forward (DST begins)' : 'Fall back (DST ends)'}</td>
-                              <td style={tdStyle}>{t.whenDate}</td>
-                              <td style={tdStyle}>{t.fromOffsetLabel} → {t.toOffsetLabel}</td>
+                              <td style={tdStyle}>{tr.type === 'begins' ? t('springForward') : t('fallBack')}</td>
+                              <td style={tdStyle}>{tr.whenDate}</td>
+                              <td style={tdStyle}>{tr.fromOffsetLabel} → {tr.toOffsetLabel}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -134,15 +138,16 @@ export default async function DstRegionPage({ params }: { params: Promise<Params
                 )}
 
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginTop: '16px' }}>
-                  Daylight saving changes shift {regionLabel}&apos;s offset by an hour, which can quietly break recurring
-                  meetings. Check the live difference against your own zone with the{' '}
-                  <Link href="/compare" className={ui.link}>Compare</Link> tab, or schedule around the change using the{' '}
-                  <Link href="/planner" className={ui.link}>Meeting Planner</Link>.
+                  {t.rich('crosslinks', {
+                    region: regionLabel,
+                    compare: (c) => <Link href="/compare" className={ui.link}>{c}</Link>,
+                    planner: (c) => <Link href="/planner" className={ui.link}>{c}</Link>,
+                  })}
                 </p>
 
                 <div className={ui.divider} />
                 <h2 className={ui.title} style={{ fontSize: '18px', marginBottom: '12px' }}>
-                  DST in other regions
+                  {t('relatedHeading')}
                 </h2>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '8px' }}>
                   {related.map((d) => (
