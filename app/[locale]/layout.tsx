@@ -1,94 +1,91 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
-import "./globals.css";
+import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { setRequestLocale, getMessages } from "next-intl/server";
+import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ToastProvider } from "@/components/ui/Toast";
 import { ConsentBanner } from "@/components/consent/ConsentBanner";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SITE_URL, SITE_NAME, SITE_LOGO, OG_IMAGE, CONTACT_EMAIL } from "@/lib/site";
+import { routing, type Locale } from "@/i18n/routing";
+import { locales } from "@/i18n/routing";
+import { LOCALE_META } from "@/i18n/locales";
+import { buildAlternates, OG_LOCALE } from "@/lib/i18nMeta";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const brandFont = Space_Grotesk({
   variable: "--font-brand",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: {
-    default: "Timezio – Time Zone Converter & Meeting Planner",
-    template: "%s | Timezio",
-  },
-  description:
-    "Instant time zone converter, world clock, DST-aware meeting planner, and timezone comparison on an interactive globe.",
-  icons: {
-    icon: "/icon.ico",
-    shortcut: "/icon.ico",
-  },
-  keywords: [
-    "time zone converter",
-    "world clock",
-    "meeting planner",
-    "DST",
-    "daylight saving time",
-    "UTC converter",
-    "timezone map",
-    "time difference calculator",
-    "international meeting planner",
-    "remote work scheduling",
-  ],
-  applicationName: "Timezio",
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "Timezio – Time Zone Converter & Meeting Planner",
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const lc = locale as Locale;
+  const alt = buildAlternates(lc, "/");
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: "Timezio – Time Zone Converter & Meeting Planner",
+      template: `%s | ${SITE_NAME}`,
+    },
     description:
-      "Convert time zones, plan meetings across cities, and explore daylight saving time on a 3D globe.",
-    url: SITE_URL,
-    siteName: SITE_NAME,
-    type: "website",
-    locale: "en_US",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Timezio – time zone converter & meeting planner" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Timezio – Time Zone Converter & Meeting Planner",
-    description:
-      "DST-aware time zone converter, world clock, and meeting planner on an interactive globe.",
-    site: "@timezio",
-    creator: "@timezio",
-    images: [OG_IMAGE],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+      "Instant time zone converter, world clock, DST-aware meeting planner, and timezone comparison on an interactive globe.",
+    icons: { icon: "/icon.ico", shortcut: "/icon.ico" },
+    applicationName: SITE_NAME,
+    alternates: alt,
+    openGraph: {
+      title: "Timezio – Time Zone Converter & Meeting Planner",
+      description:
+        "Convert time zones, plan meetings across cities, and explore daylight saving time on a 3D globe.",
+      url: alt.canonical,
+      siteName: SITE_NAME,
+      type: "website",
+      locale: OG_LOCALE[lc],
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Timezio – time zone converter & meeting planner" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Timezio – Time Zone Converter & Meeting Planner",
+      description:
+        "DST-aware time zone converter, world clock, and meeting planner on an interactive globe.",
+      site: "@timezio",
+      creator: "@timezio",
+      images: [OG_IMAGE],
+    },
+    robots: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-  },
-};
+  };
+}
 
 const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: SITE_NAME,
   url: SITE_URL,
+  inLanguage: locales.map((l) => LOCALE_META[l].hreflang),
 };
 
 const softwareLd = {
@@ -116,18 +113,22 @@ const organizationLd = {
       "@type": "ContactPoint",
       contactType: "customer support",
       email: CONTACT_EMAIL,
-      availableLanguage: ["en"],
+      availableLanguage: locales.map((l) => LOCALE_META[l].hreflang),
     },
   ],
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  params,
+}: Readonly<{ children: ReactNode; params: Promise<{ locale: string }> }>) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
+  setRequestLocale(locale);
+  const messages = await getMessages();
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <script
           id="theme-init"
@@ -176,12 +177,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
         {/* End Google Tag Manager */}
 
-        <ThemeProvider>
-          <ToastProvider>
-            {children}
-            <ConsentBanner />
-          </ToastProvider>
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>
+            <ToastProvider>
+              {children}
+              <ConsentBanner />
+            </ToastProvider>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

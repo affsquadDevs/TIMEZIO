@@ -1,12 +1,11 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
-import styles from '@/components/layout/layout.module.css';
-import ui from '@/components/ui/ui.module.css';
-import { TopBar } from '@/components/layout/TopBar';
-import { Footer } from '@/components/layout/Footer';
+import './globals.css';
 
+// Global fallback 404 for non-localized / unmatched paths. It is self-contained
+// (renders its own <html>/<body>) because the locale layout — which normally
+// provides those — only wraps routes under /[locale].
 export const metadata: Metadata = {
-  title: 'Page Not Found',
+  title: 'Page Not Found | Timezio',
   robots: { index: false, follow: true },
 };
 
@@ -14,38 +13,40 @@ const links = [
   { href: '/', label: 'Home' },
   { href: '/time', label: 'World clock' },
   { href: '/convert', label: 'Time zone converters' },
-  { href: '/meeting', label: 'Meeting times by city pair' },
-  { href: '/dst', label: 'Daylight saving time checker' },
   { href: '/blog', label: 'Blog' },
 ];
 
-export default function NotFound() {
+export default function GlobalNotFound() {
   return (
-    <div className={styles.layout}>
-      <TopBar />
-      <div className={styles.main}>
-        <div className={ui.card} style={{ width: '100%', maxWidth: 640, margin: '0 auto' }}>
-          <div className={ui.cardBody}>
-            <p style={{ fontSize: 48, fontWeight: 800, margin: 0, color: 'var(--text-primary)' }}>404</p>
-            <h1 className={ui.title} style={{ fontSize: '22px', margin: '8px 0 10px' }}>
-              This page could not be found
-            </h1>
-            <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '20px' }}>
-              The link may be broken or the page may have moved. Try one of these instead:
-            </p>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '10px' }}>
-              {links.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className={ui.link} style={{ fontWeight: 600 }}>
-                    → {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </div>
+    <html lang="en" data-theme="dark">
+      <body
+        style={{
+          margin: 0,
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: '#0b1120',
+          color: '#e2e8f0',
+          fontFamily:
+            'system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
+        }}
+      >
+        <main style={{ textAlign: 'center', padding: '24px', maxWidth: 520 }}>
+          <p style={{ fontSize: 56, fontWeight: 800, margin: 0 }}>404</p>
+          <h1 style={{ fontSize: 22, margin: '8px 0 12px' }}>This page could not be found</h1>
+          <p style={{ color: '#94a3b8', lineHeight: 1.6, marginBottom: 20 }}>
+            The link may be broken or the page may have moved.
+          </p>
+          <nav style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+            {links.map((l) => (
+              <a key={l.href} href={l.href} style={{ color: '#60a5fa', fontWeight: 600 }}>
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        </main>
+      </body>
+    </html>
   );
 }
