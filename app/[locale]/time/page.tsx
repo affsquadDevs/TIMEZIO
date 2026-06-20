@@ -6,28 +6,14 @@ import ui from "@/components/ui/ui.module.css";
 import { TopBar } from "@/components/layout/TopBar";
 import { Footer } from "@/components/layout/Footer";
 import citiesData from "@/data/cities.top200.json";
-import { SITE_URL, SITE_NAME, OG_IMAGE } from "@/lib/site";
+import { pageMetadata } from "@/lib/i18nMeta";
+import type { Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Current Time in Major Cities Worldwide",
-  description:
-    "Check the current local time in cities around the world. Each page shows live local time, UTC offset, time zone, and daylight saving status — DST-aware and updated in real time.",
-  alternates: { canonical: "/time" },
-  openGraph: {
-    title: "Current Time in Major Cities Worldwide | Timezio",
-    description: "See the current local time, UTC offset, and DST status for cities around the world.",
-    url: `${SITE_URL}/time`,
-    siteName: SITE_NAME,
-    type: "website",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "World clock on Timezio" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Current Time in Major Cities Worldwide | Timezio",
-    description: "Check local time in cities worldwide, DST-aware.",
-    images: [OG_IMAGE],
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return pageMetadata({ locale: locale as Locale, path: "/time", title: t("timeHub.title"), description: t("timeHub.description") });
+}
 
 type CityRow = { id: string; label: string };
 

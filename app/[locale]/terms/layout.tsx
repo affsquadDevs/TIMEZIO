@@ -1,33 +1,14 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { pageMetadata } from "@/lib/i18nMeta";
+import type { Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: {
-    default: "Terms of Service | Timezio",
-    template: "%s | Timezio",
-  },
-  description: "Terms and conditions for using Timezio’s timezone tools, converters, and meeting planner.",
-  alternates: {
-    canonical: "/terms",
-  },
-  openGraph: {
-    title: "Terms of Service | Timezio",
-    description: "The terms governing your use of Timezio’s tools and services.",
-    url: "https://www.timezio.com/terms",
-    siteName: "Timezio",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Terms of Service | Timezio",
-    description: "Terms and conditions for using Timezio’s timezone tools.",
-  },
-};
-
-export default function TermsLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return <>{children}</>;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return pageMetadata({ locale: locale as Locale, path: "/terms", title: t("terms.title"), description: t("terms.description") });
 }
 
+export default function TermsLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
+}

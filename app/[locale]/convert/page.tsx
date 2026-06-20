@@ -6,28 +6,14 @@ import ui from "@/components/ui/ui.module.css";
 import { TopBar } from "@/components/layout/TopBar";
 import { Footer } from "@/components/layout/Footer";
 import { popularConverters } from "@/data/seoLinks";
-import { SITE_URL, SITE_NAME, OG_IMAGE } from "@/lib/site";
+import { pageMetadata } from "@/lib/i18nMeta";
+import type { Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Popular Time Zone Converters",
-  description:
-    "Convert time between zones instantly: PST to EST, UTC to EST, GMT to EST, CET to EST, IST to EST and more. Each converter is DST-aware and shows a full hour-by-hour table.",
-  alternates: { canonical: "/convert" },
-  openGraph: {
-    title: "Popular Time Zone Converters | Timezio",
-    description: "Instant, DST-aware converters for PST↔EST, UTC↔EST, GMT↔EST, CET↔EST, IST↔EST.",
-    url: `${SITE_URL}/convert`,
-    siteName: SITE_NAME,
-    type: "website",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Time zone converters on Timezio" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Popular Time Zone Converters | Timezio",
-    description: "Instant converters for PST↔EST, UTC↔EST, GMT↔EST, CET↔EST, IST↔EST.",
-    images: [OG_IMAGE],
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return pageMetadata({ locale: locale as Locale, path: "/convert", title: t("convertHub.title"), description: t("convertHub.description") });
+}
 
 export default async function ConvertHubPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

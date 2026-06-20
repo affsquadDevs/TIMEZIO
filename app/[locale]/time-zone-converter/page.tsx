@@ -1,30 +1,20 @@
 import type { Metadata } from 'next';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/site';
+import { SITE_URL } from '@/lib/site';
+import { pageMetadata } from '@/lib/i18nMeta';
+import type { Locale } from '@/i18n/routing';
 import TimeZoneConverterClient from './Client';
 
-export const metadata: Metadata = {
-  title: 'Time Zone Converter – Compare Times, Plan Meetings & Explore Cities',
-  description:
-    'Compare time zones between cities, plan meetings across regions, and explore local times worldwide. DST-aware, accurate, and free.',
-  alternates: { canonical: '/time-zone-converter' },
-  openGraph: {
-    title: 'Time Zone Converter | Timezio',
-    description: 'Compare time zones, plan meetings, and explore local times worldwide. DST-aware and free.',
-    url: `${SITE_URL}/time-zone-converter`,
-    siteName: SITE_NAME,
-    type: 'website',
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Timezio time zone converter' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Time Zone Converter | Timezio',
-    description: 'Compare time zones, plan meetings, and explore local times worldwide.',
-    images: [OG_IMAGE],
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  return pageMetadata({ locale: locale as Locale, path: '/time-zone-converter', title: t('timeConverter.title'), description: t('timeConverter.description') });
+}
 
-export default function TimeZoneConverterPage() {
+export default async function TimeZoneConverterPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',

@@ -4,7 +4,7 @@ import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { setRequestLocale, getMessages } from "next-intl/server";
+import { setRequestLocale, getMessages, getTranslations } from "next-intl/server";
 import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ToastProvider } from "@/components/ui/Toast";
@@ -35,33 +35,33 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const lc = locale as Locale;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  const title = t("home.title");
+  const description = t("home.description");
   const alt = buildAlternates(lc, "/");
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: "Timezio – Time Zone Converter & Meeting Planner",
+      default: title,
       template: `%s | ${SITE_NAME}`,
     },
-    description:
-      "Instant time zone converter, world clock, DST-aware meeting planner, and timezone comparison on an interactive globe.",
+    description,
     icons: { icon: "/icon.ico", shortcut: "/icon.ico" },
     applicationName: SITE_NAME,
     alternates: alt,
     openGraph: {
-      title: "Timezio – Time Zone Converter & Meeting Planner",
-      description:
-        "Convert time zones, plan meetings across cities, and explore daylight saving time on a 3D globe.",
+      title,
+      description,
       url: alt.canonical,
       siteName: SITE_NAME,
       type: "website",
       locale: OG_LOCALE[lc],
-      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Timezio – time zone converter & meeting planner" }],
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Timezio – Time Zone Converter & Meeting Planner",
-      description:
-        "DST-aware time zone converter, world clock, and meeting planner on an interactive globe.",
+      title,
+      description,
       site: "@timezio",
       creator: "@timezio",
       images: [OG_IMAGE],

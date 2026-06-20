@@ -1,37 +1,14 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { pageMetadata } from "@/lib/i18nMeta";
+import type { Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Meeting Planner Across Time Zones | Timezio",
-  description:
-    "Plan meetings across time zones with working hours, overlap windows, and DST-aware calculations.",
-  alternates: { canonical: "/planner" },
-  openGraph: {
-    title: "Meeting Planner Across Time Zones | Timezio",
-    description:
-      "Plan meetings across time zones with overlap windows and DST-aware calculations.",
-    url: "https://www.timezio.com/planner",
-    siteName: "Timezio",
-    type: "website",
-    locale: "en_US",
-    images: [
-      {
-        url: "https://www.timezio.com/og-image.png",
-        alt: "Timezio interactive globe",
-        width: 1200,
-        height: 630,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Meeting Planner Across Time Zones | Timezio",
-    description: "DST-aware meeting planner with overlap windows and working hours.",
-    images: ["https://www.timezio.com/og-image.png"],
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return pageMetadata({ locale: locale as Locale, path: "/planner", title: t("planner.title"), description: t("planner.description") });
+}
 
 export default function PlannerLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-
-

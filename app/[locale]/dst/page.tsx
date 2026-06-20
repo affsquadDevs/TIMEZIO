@@ -6,27 +6,14 @@ import ui from "@/components/ui/ui.module.css";
 import { TopBar } from "@/components/layout/TopBar";
 import { Footer } from "@/components/layout/Footer";
 import { popularDst } from "@/data/seoLinks";
-import { SITE_URL, SITE_NAME, OG_IMAGE } from "@/lib/site";
+import { pageMetadata } from "@/lib/i18nMeta";
+import type { Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Daylight Saving Time Checker",
-  description: "Is a region observing daylight saving time right now? Check DST status, the current UTC offset, and the exact next clock-change dates for countries worldwide.",
-  alternates: { canonical: "/dst" },
-  openGraph: {
-    title: "Daylight Saving Time Checker | Timezio",
-    description: "DST status and change dates for regions worldwide.",
-    url: `${SITE_URL}/dst`,
-    siteName: SITE_NAME,
-    type: "website",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Daylight saving time checker on Timezio" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Daylight Saving Time Checker | Timezio",
-    description: "Track DST start and end dates by country.",
-    images: [OG_IMAGE],
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return pageMetadata({ locale: locale as Locale, path: "/dst", title: t("dstHub.title"), description: t("dstHub.description") });
+}
 
 export default async function DstHubPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

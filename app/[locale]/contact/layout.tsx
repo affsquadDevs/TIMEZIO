@@ -1,33 +1,14 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { pageMetadata } from "@/lib/i18nMeta";
+import type { Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: {
-    default: "Contact Timezio Support",
-    template: "%s | Timezio",
-  },
-  description: "Get help, report issues, or request features for Timezio’s time zone tools. We respond to feedback and support questions.",
-  alternates: {
-    canonical: "/contact",
-  },
-  openGraph: {
-    title: "Contact Timezio Support",
-    description: "Get help, report issues, or request features for Timezio’s time zone tools.",
-    url: "https://www.timezio.com/contact",
-    siteName: "Timezio",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact Timezio Support",
-    description: "Reach Timezio with questions, feedback, or bug reports.",
-  },
-};
-
-export default function ContactLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return <>{children}</>;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return pageMetadata({ locale: locale as Locale, path: "/contact", title: t("contact.title"), description: t("contact.description") });
 }
 
+export default function ContactLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
+}

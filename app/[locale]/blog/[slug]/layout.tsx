@@ -1,40 +1,25 @@
 import type { Metadata } from 'next';
-import { blogPostsMap } from '@/data/blogPosts';
+import { getTranslations } from 'next-intl/server';
+import { getPost } from '@/lib/blog';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { SITE_URL, SITE_NAME, SITE_LOGO, OG_IMAGE, OPERATOR_NAME } from '@/lib/site';
+import { pageMetadata, localizedPath } from '@/lib/i18nMeta';
+import type { Locale } from '@/i18n/routing';
+import { SITE_URL, SITE_NAME, SITE_LOGO, OPERATOR_NAME } from '@/lib/site';
 
-type Params = { slug: string };
+type Params = { locale: string; slug: string };
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
-  const { slug } = await params;
-  const post = blogPostsMap[slug];
-
-  if (!post) {
-    return { title: 'Post not found', robots: { index: false, follow: false } };
-  }
-
-  const canonical = `/blog/${slug}`;
-  return {
+  const { locale, slug } = await params;
+  const post = await getPost(locale, slug);
+  if (!post) return { robots: { index: false, follow: false } };
+  return pageMetadata({
+    locale: locale as Locale,
+    path: `/blog/${slug}`,
     title: post.title,
     description: post.excerpt,
-    alternates: { canonical },
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      url: `${SITE_URL}${canonical}`,
-      siteName: SITE_NAME,
-      type: 'article',
-      publishedTime: post.date,
-      modifiedTime: post.date,
-      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: post.title }],
-    },
-    twitter: { card: 'summary_large_image', title: post.title, description: post.excerpt, images: [OG_IMAGE] },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
-    },
-  };
+    type: 'article',
+    publishedTime: post.date,
+  });
 }
 
 export default async function BlogPostLayout({
@@ -44,10 +29,12 @@ export default async function BlogPostLayout({
   children: React.ReactNode;
   params: Promise<Params>;
 }) {
-  const { slug } = await params;
-  const post = blogPostsMap[slug];
+  const { locale, slug } = await params;
+  const post = await getPost(locale, slug);
+  const tc = await getTranslations({ locale, namespace: 'common' });
+  const tb = await getTranslations({ locale, namespace: 'blog' });
+  const canonical = `${SITE_URL}${localizedPath(locale as Locale, `/blog/${slug}`)}`;
 
-  const canonical = `${SITE_URL}/blog/${slug}`;
   const articleLd = post
     ? {
         '@context': 'https://schema.org',
@@ -56,6 +43,7 @@ export default async function BlogPostLayout({
         description: post.excerpt,
         datePublished: post.date,
         dateModified: post.date,
+        inLanguage: locale,
         author: { '@type': 'Organization', name: OPERATOR_NAME, url: SITE_URL },
         publisher: {
           '@type': 'Organization',
@@ -73,8 +61,8 @@ export default async function BlogPostLayout({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-          { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+          { '@type': 'ListItem', position: 1, name: tc('breadcrumbHome'), item: SITE_URL },
+          { '@type': 'ListItem', position: 2, name: tb('indexTitle'), item: `${SITE_URL}${localizedPath(locale as Locale, '/blog')}` },
           { '@type': 'ListItem', position: 3, name: post.title, item: canonical },
         ],
       }

@@ -6,27 +6,14 @@ import ui from "@/components/ui/ui.module.css";
 import { TopBar } from "@/components/layout/TopBar";
 import { Footer } from "@/components/layout/Footer";
 import { popularMeetings } from "@/data/seoLinks";
-import { SITE_URL, SITE_NAME, OG_IMAGE } from "@/lib/site";
+import { pageMetadata } from "@/lib/i18nMeta";
+import type { Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Best Meeting Times Across Time Zones",
-  description: "Find overlapping working hours for popular city pairs. Each page shows a shared-hours table and the best slot, fully daylight-saving aware.",
-  alternates: { canonical: "/meeting" },
-  openGraph: {
-    title: "Best Meeting Times Across Time Zones | Timezio",
-    description: "Overlap windows for popular city pairs to schedule meetings easily.",
-    url: `${SITE_URL}/meeting`,
-    siteName: SITE_NAME,
-    type: "website",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Meeting planner on Timezio" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Best Meeting Times Across Time Zones | Timezio",
-    description: "Find overlap hours for popular city pairs.",
-    images: [OG_IMAGE],
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return pageMetadata({ locale: locale as Locale, path: "/meeting", title: t("meetingHub.title"), description: t("meetingHub.description") });
+}
 
 export default async function MeetingHubPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
