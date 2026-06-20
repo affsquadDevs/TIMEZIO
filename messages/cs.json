@@ -1,1 +1,45 @@
-{}
+{
+  "common": {
+    "appName": "Timezio"
+  },
+  "nav": {
+    "blog": "Blog",
+    "about": "About",
+    "toggleHourFormat": "Toggle 12/24h",
+    "copyLink": "Copy link"
+  },
+  "language": {
+    "label": "Language",
+    "select": "Select language"
+  },
+  "footer": {
+    "productTitle": "PRODUCT",
+    "exploreTitle": "EXPLORE",
+    "popularTitle": "POPULAR",
+    "legalTitle": "LEGAL",
+    "home": "Home",
+    "exploreGlobe": "Explore Globe",
+    "compareZones": "Compare Zones",
+    "meetingPlanner": "Meeting Planner",
+    "timeConverter": "Time Converter",
+    "worldClock": "World Clock",
+    "converters": "Converters",
+    "meetingTimes": "Meeting Times",
+    "daylightSaving": "Daylight Saving",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookieSettings": "Cookie settings",
+    "copyright": "© {year} Timezio by AffSquad. All rights reserved.",
+    "disclaimer": "Information on this website is provided for general reference only. Accuracy is not guaranteed. No liability is accepted to the extent permitted by EU law. Cookies or similar technologies may be used for analytics and advertising in accordance with your consent choices.",
+    "privacyShort": "Privacy",
+    "termsShort": "Terms"
+  },
+  "consent": {
+    "message": "We use cookies for analytics and to show ads (including Google AdSense). You can accept or reject non-essential cookies. See our <link>Privacy Policy</link>.",
+    "reject": "Reject",
+    "acceptAll": "Accept all"
+  }
+}
