@@ -46,6 +46,22 @@
     "reject": "Reject",
     "acceptAll": "Accept all"
   },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexDescription": "Articles and guides about time zones, remote work, and using Timezio effectively.",
+    "readMore": "Read more",
+    "backToBlog": "Back to Blog",
+    "byTeam": "By the Timezio team",
+    "toolsTitle": "Timezio Tools",
+    "relatedTitle": "Related Articles",
+    "tools": [
+      { "title": "Explore Globe", "desc": "Click anywhere on the interactive globe to see local time" },
+      { "title": "Compare Time Zones", "desc": "Compare time differences between multiple cities" },
+      { "title": "Meeting Planner", "desc": "Find the best meeting time for people in different locations" },
+      { "title": "DST Tracker", "desc": "Track daylight saving time changes and transitions" },
+      { "title": "Time Converter", "desc": "Convert UTC or local times between time zones" }
+    ]
+  },
   "home": {
     "badges": [
       "Live & DST-aware",
