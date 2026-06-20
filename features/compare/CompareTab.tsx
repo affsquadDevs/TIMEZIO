@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { DateTime } from 'luxon';
+import { useTranslations } from 'next-intl';
 
 import ui from '@/components/ui/ui.module.css';
 import { useTicker } from '@/hooks/useTicker';
@@ -16,6 +17,7 @@ function hoursDiff(baseTz: string, otherTz: string, at: DateTime) {
 }
 
 export function CompareTab() {
+  const t = useTranslations('ui.compareTab');
   const { showToast } = useToast();
   const now = useTicker(1000);
   const use24h = useAppStore((s) => s.use24h);
@@ -50,12 +52,12 @@ export function CompareTab() {
     <div className={ui.card}>
       <div className={ui.cardBody} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <div>
-          <div className={ui.title}>Compare</div>
-          <div className={ui.subtitle}>Add 2–6 locations and compare offsets/time. (MVP: offsets + diff)</div>
+          <div className={ui.title}>{t('compare')}</div>
+          <div className={ui.subtitle}>{t('subtitle')}</div>
         </div>
 
         <CitySearch
-          placeholder="Add city to compare…"
+          placeholder={t('addCityPlaceholder')}
           onPick={(c) => {
             const loc = pickFromLatLng(c.lat, c.lng, 'search', c.label);
             requestFocus({ lat: loc.lat, lng: loc.lng, altitude: 1.6 });
@@ -73,19 +75,19 @@ export function CompareTab() {
               if (!res.ok && res.reason) showToast(res.reason, 'error');
             }}
           >
-            Add selected
+            {t('addSelected')}
           </button>
           <button className={`${ui.btn} ${ui.btnDanger}`} onClick={clearCompare}>
-            Clear
+            {t('clear')}
           </button>
         </div>
 
         {items.length === 0 ? (
-          <div className={ui.subtitle}>No compare items. Add a city or “Add selected”.</div>
+          <div className={ui.subtitle}>{t('noItems')}</div>
         ) : (
           <>
             <div className={ui.subtitle}>
-              Base: {base ? <span className={ui.mono}>{base.label}</span> : '—'}
+              {t('baseLabel')} {base ? <span className={ui.mono}>{base.label}</span> : '—'}
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -97,13 +99,13 @@ export function CompareTab() {
                   actions={
                     <div className={ui.pillRow}>
                       <button className={ui.btn} onClick={() => setCompareBase(loc.id)}>
-                        Base
+                        {t('base')}
                       </button>
                       <button className={ui.btn} onClick={() => requestFocus({ lat: loc.lat, lng: loc.lng, altitude: 1.6 })}>
-                        Focus
+                        {t('focus')}
                       </button>
                       <button className={`${ui.btn} ${ui.btnDanger}`} onClick={() => removeFromCompare(loc.id)}>
-                        Remove
+                        {t('remove')}
                       </button>
                     </div>
                   }
@@ -115,16 +117,16 @@ export function CompareTab() {
               <>
                 <div className={ui.divider} />
                 <div className={ui.title} style={{ fontSize: 14 }}>
-                  Offset matrix (vs base)
+                  {t('offsetMatrix')}
                 </div>
                 <div style={{ overflowX: 'auto' }}>
                   <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
                     <thead>
                       <tr style={{ textAlign: 'left', color: 'var(--text-secondary)' }}>
-                        <th style={{ padding: '8px 6px' }}>Location</th>
-                        <th style={{ padding: '8px 6px' }}>Local time</th>
-                        <th style={{ padding: '8px 6px' }}>UTC offset</th>
-                        <th style={{ padding: '8px 6px' }}>Δ hours</th>
+                        <th style={{ padding: '8px 6px' }}>{t('location')}</th>
+                        <th style={{ padding: '8px 6px' }}>{t('localTime')}</th>
+                        <th style={{ padding: '8px 6px' }}>{t('utcOffset')}</th>
+                        <th style={{ padding: '8px 6px' }}>{t('deltaHours')}</th>
                       </tr>
                     </thead>
                     <tbody>

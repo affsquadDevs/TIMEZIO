@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { DateTime } from 'luxon';
 import { Marker, Popup } from 'react-leaflet';
 import type { LatLngExpression } from 'leaflet';
@@ -44,6 +45,7 @@ type MarkerPayload = {
 };
 
 export function ParticipantsLayer({ participants, selectedSlot }: ParticipantsLayerProps) {
+  const t = useTranslations('ui.participants');
   const [now, setNow] = useState(DateTime.now());
 
   useEffect(() => {
@@ -92,11 +94,11 @@ export function ParticipantsLayer({ participants, selectedSlot }: ParticipantsLa
               <div className="space-y-1 text-sm">
                 <div className="font-semibold">{participant.name}</div>
                 <div className="text-slate-500">{cityLabel}</div>
-                <div>Timezone: {participant.timezone}</div>
-                <div>Local time now: {formatLocalNow(participant.timezone, now)}</div>
+                <div>{t('timezone')}: {participant.timezone}</div>
+                <div>{t('localTimeNow')}: {formatLocalNow(participant.timezone, now)}</div>
                 {selectedSlot && (
                   <div className="text-xs text-slate-600">
-                    Meeting time for you:
+                    {t('meetingTimeForYou')}
                     <br />
                     {formatSlotForUser(
                       selectedSlot.startUtcISO,

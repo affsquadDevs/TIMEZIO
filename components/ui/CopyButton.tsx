@@ -1,7 +1,9 @@
+import { useTranslations } from 'next-intl';
 import styles from './ui.module.css';
 
 export function CopyButton(props: { text: string; label?: string; className?: string }) {
-  const { text, label = 'Copy', className } = props;
+  const t = useTranslations('ui.copyButton');
+  const { text, label = t('copy'), className } = props;
 
   async function onCopy() {
     try {

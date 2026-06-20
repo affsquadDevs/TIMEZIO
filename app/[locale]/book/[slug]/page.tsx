@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useState } from 'react';
 import { DateTime } from 'luxon';
 import { useParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { ProposedSlot, ConfirmedEvent } from '@/lib/meeting';
 
 type BookingResponse = {
@@ -18,6 +19,7 @@ type BookingResponse = {
 };
 
 export default function BookPage() {
+  const t = useTranslations('ui.book');
   const params = useParams();
   const slug = params?.slug as string;
   const [booking, setBooking] = useState<BookingResponse | null>(null);
@@ -45,7 +47,7 @@ export default function BookPage() {
         setLoading(false);
       })
       .catch((err) => {
-        setError('Failed to load booking');
+        setError(t('failedLoadBooking'));
         setLoading(false);
       });
   }, [slug]);
@@ -66,7 +68,7 @@ export default function BookPage() {
     setMessage(null);
 
     if (!reserveForm.selectedSlot || !reserveForm.name || !reserveForm.email) {
-      setError('Please select a slot and provide name/email');
+      setError(t('selectSlotProvideInfo'));
       return;
     }
 
@@ -86,14 +88,14 @@ export default function BookPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error || 'Failed to reserve');
+        setError(data.error || t('failedReserve'));
         return;
       }
 
       setBooking((prev) => (prev ? { ...prev, confirmedEvent: data.confirmedEvent } : null));
-      setMessage('Slot reserved! Meet link created.');
+      setMessage(t('slotReserved'));
     } catch (err) {
-      setError('Failed to reserve slot');
+      setError(t('failedReserveSlot'));
     } finally {
       setReserving(false);
     }
@@ -102,7 +104,7 @@ export default function BookPage() {
   if (loading) {
     return (
       <div className="p-6">
-        <p>Loading...</p>
+        <p>{t('loading')}</p>
       </div>
     );
   }
@@ -126,7 +128,7 @@ export default function BookPage() {
       <div>
         <h1 className="text-2xl font-semibold mb-2">{booking.title}</h1>
         {booking.description && <p className="text-gray-600">{booking.description}</p>}
-        <p className="text-sm text-gray-500 mt-2">Duration: {booking.durationMinutes} minutes</p>
+        <p className="text-sm text-gray-500 mt-2">{t('duration', { minutes: booking.durationMinutes })}</p>
       </div>
 
       {message && <div className="text-green-600">{message}</div>}
@@ -134,18 +136,18 @@ export default function BookPage() {
 
       {booking.confirmedEvent ? (
         <div className="border rounded-md p-4 bg-green-50">
-          <h2 className="text-lg font-semibold mb-2">Meeting Reserved</h2>
+          <h2 className="text-lg font-semibold mb-2">{t('meetingReserved')}</h2>
           <p>
-            <strong>Time:</strong> {formatUtc(booking.confirmedEvent.startUtcISO)} →{' '}
+            <strong>{t('timeLabel')}</strong> {formatUtc(booking.confirmedEvent.startUtcISO)} →{' '}
             {formatUtc(booking.confirmedEvent.endUtcISO)} (UTC)
           </p>
           <p>
-            <strong>Your local time:</strong>{' '}
+            <strong>{t('yourLocalTimeLabel')}</strong>{' '}
             {formatLocal(booking.confirmedEvent.startUtcISO, userTimezone)} →{' '}
             {formatLocal(booking.confirmedEvent.endUtcISO, userTimezone)}
           </p>
           <p className="mt-2">
-            <strong>Meet Link:</strong>{' '}
+            <strong>{t('meetLinkLabel')}</strong>{' '}
             <a href={booking.confirmedEvent.meetLink} className="text-blue-600 underline" target="_blank" rel="noreferrer">
               {booking.confirmedEvent.meetLink}
             </a>
@@ -154,9 +156,9 @@ export default function BookPage() {
       ) : (
         <>
           <section className="space-y-4">
-            <h2 className="text-xl font-semibold">Available Slots</h2>
+            <h2 className="text-xl font-semibold">{t('availableSlots')}</h2>
             {booking.proposedSlots.length === 0 ? (
-              <p>No slots available</p>
+              <p>{t('noSlots')}</p>
             ) : (
               <div className="space-y-3">
                 {booking.proposedSlots.map((slot) => (
@@ -177,14 +179,14 @@ export default function BookPage() {
                     <div className="flex justify-between items-center">
                       <div>
                         <div>
-                          <strong>UTC:</strong> {formatUtc(slot.startUtcISO)} → {formatUtc(slot.endUtcISO)}
+                          <strong>{t('utcLabel')}</strong> {formatUtc(slot.startUtcISO)} → {formatUtc(slot.endUtcISO)}
                         </div>
                         <div className="text-sm text-gray-600 mt-1">
-                          <strong>Your time ({userTimezone}):</strong>{' '}
+                          <strong>{t('yourTimeLabel', { timezone: userTimezone })}</strong>{' '}
                           {formatLocal(slot.startUtcISO, userTimezone)} →{' '}
                           {formatLocal(slot.endUtcISO, userTimezone)}
                         </div>
-                        <div className="text-xs text-gray-500 mt-1">Score: {slot.score}</div>
+                        <div className="text-xs text-gray-500 mt-1">{t('score', { score: slot.score })}</div>
                       </div>
                       <button
                         className="px-3 py-1 bg-blue-600 text-white text-sm rounded"
@@ -196,7 +198,7 @@ export default function BookPage() {
                           }));
                         }}
                       >
-                        Select
+                        {t('select')}
                       </button>
                     </div>
                   </div>
@@ -207,11 +209,11 @@ export default function BookPage() {
 
           {reserveForm.selectedSlot && (
             <section className="space-y-2 border-t pt-4">
-              <h2 className="text-xl font-semibold">Reserve Slot</h2>
+              <h2 className="text-xl font-semibold">{t('reserveSlot')}</h2>
               <form className="grid gap-3" onSubmit={handleReserve}>
                 <input
                   className="border px-2 py-1"
-                  placeholder="Your Name"
+                  placeholder={t('yourName')}
                   value={reserveForm.name}
                   onChange={(e) => setReserveForm((prev) => ({ ...prev, name: e.target.value }))}
                   required
@@ -219,13 +221,13 @@ export default function BookPage() {
                 <input
                   className="border px-2 py-1"
                   type="email"
-                  placeholder="Your Email"
+                  placeholder={t('yourEmail')}
                   value={reserveForm.email}
                   onChange={(e) => setReserveForm((prev) => ({ ...prev, email: e.target.value }))}
                   required
                 />
                 <button className="px-4 py-2 bg-green-600 text-white" type="submit" disabled={reserving}>
-                  {reserving ? 'Reserving...' : 'Reserve Slot'}
+                  {reserving ? t('reserving') : t('reserveSlotButton')}
                 </button>
               </form>
             </section>

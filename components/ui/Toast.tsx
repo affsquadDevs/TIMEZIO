@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, createContext, useContext } from 'react';
+import { useTranslations } from 'next-intl';
 import ui from '@/components/ui/ui.module.css';
 
 export type ToastType = 'success' | 'error' | 'info';
@@ -81,6 +82,7 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast:
 }
 
 function ToastItem({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {
+  const t = useTranslations('ui.toast');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -152,7 +154,7 @@ function ToastItem({ toast, onRemove }: { toast: Toast; onRemove: (id: string) =
           lineHeight: 1,
           opacity: 0.6,
         }}
-        aria-label="Close"
+        aria-label={t('close')}
       >
         ×
       </button>

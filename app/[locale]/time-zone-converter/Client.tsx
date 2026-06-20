@@ -1,16 +1,18 @@
 'use client';
 
 import { AppShell } from '@/components/layout/AppShell';
+import { useTranslations } from 'next-intl';
 
 export default function TimeZoneConverterClient() {
+  const t = useTranslations('ui.converter');
   return (
     <AppShell
       defaultTab="explore"
-      heading="Time Zone Converter"
-      description="Explore and convert time zones on an interactive globe, check local times, and find overlaps for meetings. Fully DST-aware and powered by official IANA data."
+      heading={t('heading')}
+      description={t('description')}
       ctas={[
-        { href: '/compare', label: 'Compare time zones' },
-        { href: '/planner', label: 'Plan a meeting' },
+        { href: '/compare', label: t('compareCta') },
+        { href: '/planner', label: t('plannerCta') },
       ]}
     />
   );

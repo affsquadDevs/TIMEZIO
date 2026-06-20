@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import ui from '@/components/ui/ui.module.css';
 
 interface TimePickerProps {
@@ -10,6 +11,7 @@ interface TimePickerProps {
 }
 
 export function TimePicker({ value, onChange, durationMinutes }: TimePickerProps) {
+  const t = useTranslations('ui.timePicker');
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -204,7 +206,7 @@ export function TimePicker({ value, onChange, durationMinutes }: TimePickerProps
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
               </button>
-              <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 4 }}>Hour</div>
+              <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 4 }}>{t('hour')}</div>
             </div>
 
             <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--text-secondary)', paddingTop: 8 }}>:</div>
@@ -292,7 +294,7 @@ export function TimePicker({ value, onChange, durationMinutes }: TimePickerProps
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
               </button>
-              <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 4 }}>Min</div>
+              <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 4 }}>{t('min')}</div>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { DateTime } from 'luxon';
+import { useTranslations } from 'next-intl';
 import { useTicker } from '@/hooks/useTicker';
 import { useAppStore } from '@/store/useAppStore';
 import { getOffsetInfo } from '@/utils/time';
@@ -15,6 +16,7 @@ interface CityTimeCardProps {
 }
 
 export function CityTimeCard({ location, isSelected, onClick }: CityTimeCardProps) {
+  const t = useTranslations('ui.cityTimeCard');
   const now = useTicker(1000);
   const use24h = useAppStore((s) => s.use24h);
 
@@ -46,7 +48,7 @@ export function CityTimeCard({ location, isSelected, onClick }: CityTimeCardProp
           </div>
         </div>
         <div className={styles.dayNight}>
-          {isDay ? 'Day' : 'Night'}
+          {isDay ? t('day') : t('night')}
         </div>
       </div>
       

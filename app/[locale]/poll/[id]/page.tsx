@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useState } from 'react';
 import { DateTime } from 'luxon';
 import { useParams } from 'next/navigation';
 import { ProposedSlot, PollVoteValue } from '@/lib/meeting';
+import { useTranslations } from 'next-intl';
 
 type PollSlot = {
   startUtcISO: string;
@@ -23,6 +24,7 @@ type PollResponse = {
 };
 
 export default function PollPage() {
+  const t = useTranslations('ui.poll');
   const params = useParams();
   const sessionId = params?.id as string;
   const [poll, setPoll] = useState<PollResponse | null>(null);
@@ -56,7 +58,7 @@ export default function PollPage() {
         setLoading(false);
       })
       .catch((err) => {
-        setError('Failed to load poll');
+        setError(t('failedToLoad'));
         setLoading(false);
       });
   }, [sessionId]);
@@ -81,13 +83,13 @@ export default function PollPage() {
     setMessage(null);
 
     if (!voteForm.name || !voteForm.email) {
-      setError('Please provide name and email');
+      setError(t('provideNameEmail'));
       return;
     }
 
     const hasVote = Object.values(voteForm.votes).some((v) => v !== 'no');
     if (!hasVote) {
-      setError('Please vote for at least one slot');
+      setError(t('voteAtLeastOne'));
       return;
     }
 
@@ -114,14 +116,14 @@ export default function PollPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error || 'Failed to submit vote');
+        setError(data.error || t('failedToSubmit'));
         return;
       }
 
       setPoll((prev) => (prev ? { ...prev, pollVotes: data.pollVotes } : null));
-      setMessage('Vote submitted successfully!');
+      setMessage(t('voteSubmitted'));
     } catch (err) {
-      setError('Failed to submit vote');
+      setError(t('failedToSubmit'));
     } finally {
       setSubmitting(false);
     }
@@ -130,7 +132,7 @@ export default function PollPage() {
   if (loading) {
     return (
       <div className="p-6">
-        <p>Loading...</p>
+        <p>{t('loading')}</p>
       </div>
     );
   }
@@ -154,16 +156,16 @@ export default function PollPage() {
       <div>
         <h1 className="text-2xl font-semibold mb-2">{poll.title}</h1>
         {poll.description && <p className="text-gray-600">{poll.description}</p>}
-        <p className="text-sm text-gray-500 mt-2">Duration: {poll.durationMinutes} minutes</p>
+        <p className="text-sm text-gray-500 mt-2">{t('duration', { minutes: poll.durationMinutes })}</p>
       </div>
 
       {message && <div className="text-green-600">{message}</div>}
       {error && <div className="text-red-600">{error}</div>}
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Vote for Available Slots</h2>
+        <h2 className="text-xl font-semibold">{t('voteForSlots')}</h2>
         {poll.pollVotes?.slots?.length === 0 ? (
-          <p>No slots available</p>
+          <p>{t('noSlots')}</p>
         ) : (
           <div className="space-y-3">
             {poll.pollVotes?.slots?.map((slot, idx) => {
@@ -179,14 +181,14 @@ export default function PollPage() {
                 <div key={slotKey} className="border rounded-md p-3">
                   <div className="mb-2">
                     <div>
-                      <strong>UTC:</strong> {formatUtc(slot.startUtcISO)} → {formatUtc(slot.endUtcISO)}
+                      <strong>{t('utcLabel')}</strong> {formatUtc(slot.startUtcISO)} → {formatUtc(slot.endUtcISO)}
                     </div>
                     <div className="text-sm text-gray-600 mt-1">
-                      <strong>Your time ({userTimezone}):</strong>{' '}
+                      <strong>{t('yourTimeLabel', { timezone: userTimezone })}</strong>{' '}
                       {formatLocal(slot.startUtcISO, userTimezone)} →{' '}
                       {formatLocal(slot.endUtcISO, userTimezone)}
                     </div>
-                    {proposedSlot && <div className="text-xs text-gray-500 mt-1">Score: {proposedSlot.score}</div>}
+                    {proposedSlot && <div className="text-xs text-gray-500 mt-1">{t('score', { score: proposedSlot.score })}</div>}
                   </div>
 
                   <div className="flex gap-2 mb-2">
@@ -203,7 +205,7 @@ export default function PollPage() {
                         }))
                       }
                     >
-                      ✓ Yes
+                      {t('yes')}
                     </button>
                     <button
                       className={`px-3 py-1 text-sm rounded ${
@@ -218,7 +220,7 @@ export default function PollPage() {
                         }))
                       }
                     >
-                      ? Maybe
+                      {t('maybe')}
                     </button>
                     <button
                       className={`px-3 py-1 text-sm rounded ${
@@ -233,12 +235,12 @@ export default function PollPage() {
                         }))
                       }
                     >
-                      ✗ No
+                      {t('no')}
                     </button>
                   </div>
 
                   <div className="text-xs text-gray-500">
-                    Summary: {yesCount} yes, {maybeCount} maybe, {noCount} no
+                    {t('summary', { yes: yesCount, maybe: maybeCount, no: noCount })}
                   </div>
                 </div>
               );
@@ -248,11 +250,11 @@ export default function PollPage() {
       </section>
 
       <section className="space-y-2 border-t pt-4">
-        <h2 className="text-xl font-semibold">Submit Your Vote</h2>
+        <h2 className="text-xl font-semibold">{t('submitYourVote')}</h2>
         <form className="grid gap-3" onSubmit={handleVote}>
           <input
             className="border px-2 py-1"
-            placeholder="Your Name"
+            placeholder={t('yourName')}
             value={voteForm.name}
             onChange={(e) => setVoteForm((prev) => ({ ...prev, name: e.target.value }))}
             required
@@ -260,13 +262,13 @@ export default function PollPage() {
           <input
             className="border px-2 py-1"
             type="email"
-            placeholder="Your Email"
+            placeholder={t('yourEmail')}
             value={voteForm.email}
             onChange={(e) => setVoteForm((prev) => ({ ...prev, email: e.target.value }))}
             required
           />
           <button className="px-4 py-2 bg-blue-600 text-white" type="submit" disabled={submitting}>
-            {submitting ? 'Submitting...' : 'Submit Vote'}
+            {submitting ? t('submitting') : t('submitVote')}
           </button>
         </form>
       </section>
