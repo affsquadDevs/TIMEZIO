@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Terms of Service | Timezio",
     description: "The terms governing your use of Timezio’s tools and services.",
-    url: "https://timezio.com/terms",
+    url: "https://www.timezio.com/terms",
     siteName: "Timezio",
     type: "website",
   },

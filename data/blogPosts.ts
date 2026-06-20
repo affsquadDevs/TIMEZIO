@@ -1,3 +1,5 @@
+import { extraBlogPosts } from './blogPostsExtra';
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -10,7 +12,7 @@ export interface BlogPost {
   blogPostingSchema?: any;
 }
 
-export const blogPosts: BlogPost[] = [
+const allBlogPosts: BlogPost[] = [
   {
     slug: 'about-timezio',
     title: 'About This Website',
@@ -892,6 +894,13 @@ Some countries use it, some never have, and others have moved away from it entir
       }
     },
   },
+];
+
+// `about-timezio` duplicated the /about page, so it is excluded from the blog and
+// 301-redirected to /about (see next.config.ts). Extra posts are merged in.
+export const blogPosts: BlogPost[] = [
+  ...allBlogPosts.filter((p) => p.slug !== 'about-timezio'),
+  ...extraBlogPosts,
 ];
 
 export const blogPostsMap: Record<string, BlogPost> = blogPosts.reduce((acc, post) => {

@@ -1,284 +1,212 @@
-'use client';
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import styles from '@/components/layout/layout.module.css';
+import ui from '@/components/ui/ui.module.css';
+import { PageStage } from '@/components/programmatic/PageStage';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { FaqList, faqJsonLd, type FaqItem } from '@/components/seo/FaqList';
+import { FactGrid } from '@/components/programmatic/FactGrid';
+import { popularConverters } from '@/data/seoLinks';
+import {
+  parseConvertPair,
+  buildConversionTable,
+  offsetDiffHours,
+  formatDiffHours,
+  getZoneFacts,
+} from '@/lib/timeData';
+import { SITE_URL, SITE_NAME, SITE_LOGO } from '@/lib/site';
+import { findCityBySlug } from '@/utils/cityMapper';
 
-import { useEffect, useState, useMemo, useRef } from 'react';
-import Link from "next/link";
-import styles from "@/components/layout/layout.module.css";
-import ui from "@/components/ui/ui.module.css";
-import { TopBar } from "@/components/layout/TopBar";
-import { Footer } from "@/components/layout/Footer";
-import { TabBar } from "@/components/tabs/TabBar";
-import { SidePanel } from "@/components/layout/SidePanel";
-import { MobileSheet } from "@/components/layout/MobileSheet";
-import GlobeCanvas, { GlobeCanvasHandle } from '@/components/globe/GlobeCanvas';
-import { popularConverters } from "@/data/seoLinks";
-import { useAppStore, useSelectedLocation } from "@/store/useAppStore";
-import { parseCityPair } from "@/utils/cityMapper";
-import { FAQSection } from "@/components/seo/FAQSection";
-import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
-import { SEOHead } from "@/components/seo/SEOHead";
-import { getConvertFAQs } from "@/data/seoFAQs";
+export const revalidate = 1800;
 
 type Params = { pair: string };
 
-const toTitle = (text: string) =>
-  text
-    .split("-")
-    .filter(Boolean)
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
+export function generateStaticParams() {
+  return popularConverters.map((c) => ({ pair: c.slug }));
+}
 
-const parsePair = (pair: string | undefined) => {
-  if (!pair) return { from: "From", to: "To" };
-  const normalized = pair.toLowerCase();
-  const parts = normalized.includes("-to-") ? normalized.split("-to-") : [];
-  const from = parts[0] ?? "";
-  const to = parts[1] ?? "";
-  return {
-    from: from ? toTitle(from) : "From",
-    to: to ? toTitle(to) : "To",
-  };
-};
+export default async function ConvertPairPage({ params }: { params: Promise<Params> }) {
+  const { pair } = await params;
+  const parsed = parseConvertPair(pair);
+  if (!parsed) notFound();
 
-export default function ConvertPairPage({ params }: { params: Promise<Params> }) {
-  const [pair, setPair] = useState<string | null>(null);
-  const globeRef = useRef<GlobeCanvasHandle>(null);
-  
-  useEffect(() => {
-    params.then((resolved) => setPair(resolved.pair));
-  }, [params]);
+  const { from, to } = parsed;
+  const fromFacts = getZoneFacts(from.zone);
+  const toFacts = getZoneFacts(to.zone);
+  const table = buildConversionTable(from.zone, to.zone);
+  const diff = offsetDiffHours(from.zone, to.zone);
+  const diffText = formatDiffHours(diff);
+  const path = `/convert/${pair}`;
+  const url = `${SITE_URL}${path}`;
 
-  const pickLocationFromLatLng = useAppStore((s) => s.pickLocationFromLatLng);
-  const addToCompare = useAppStore((s) => s.addToCompare);
-  const selectLocation = useAppStore((s) => s.selectLocation);
-  const setTab = useAppStore((s) => s.setTab);
-  const requestFocus = useAppStore((s) => s.requestFocus);
-  const clearCompare = useAppStore((s) => s.clearCompare);
-  const compare = useAppStore((s) => s.compare);
-  const locationsById = useAppStore((s) => s.locationsById);
-  const focusTarget = useAppStore((s) => s.focusTarget);
-  const selected = useSelectedLocation();
-  const timezoneMode = useAppStore((s) => s.timezoneMode);
-  const [initialized, setInitialized] = useState(false);
+  const heading = `${from.label} to ${to.label} Time Converter`;
+  const summary =
+    diff === 0
+      ? `${to.label} is currently ${diffText} ${from.label}.`
+      : `${to.label} is currently ${diffText} ${from.label}.`;
 
-  useEffect(() => {
-    if (!pair || initialized) return;
-    
-    // Small delay to ensure store is ready
-    const timer = setTimeout(() => {
-      const { from, to } = parseCityPair(pair);
-      if (from && to) {
-        clearCompare();
-        const locFrom = pickLocationFromLatLng(from.lat, from.lng, 'search', from.label);
-        const locTo = pickLocationFromLatLng(to.lat, to.lng, 'search', to.label);
-        addToCompare(locFrom.id);
-        addToCompare(locTo.id);
-        selectLocation(locFrom.id);
-        setTab('compare');
-        requestFocus({ lat: (from.lat + to.lat) / 2, lng: (from.lng + to.lng) / 2, altitude: 2.5 });
-        setInitialized(true);
-      }
-    }, 100);
-    
-    return () => clearTimeout(timer);
-  }, [pair, initialized, pickLocationFromLatLng, addToCompare, selectLocation, setTab, requestFocus, clearCompare]);
-
-  useEffect(() => {
-    if (!focusTarget) return;
-    const t = window.setTimeout(() => requestFocus(null), 0);
-    return () => window.clearTimeout(t);
-  }, [focusTarget, requestFocus]);
-
-  const markers = useMemo(() => {
-    const ms: { id: string; lat: number; lng: number; color?: string; size?: number }[] = [];
-    if (selected) ms.push({ id: `sel_${selected.id}`, lat: selected.lat, lng: selected.lng, color: '#ef4444', size: 0.55 });
-    for (const id of compare.items) {
-      const loc = locationsById[id];
-      if (!loc) continue;
-      ms.push({
-        id: `cmp_${id}`,
-        lat: loc.lat,
-        lng: loc.lng,
-        color: compare.baseId === id ? '#22c55e' : '#60a5fa',
-        size: compare.baseId === id ? 0.6 : 0.42,
-      });
-    }
-    return ms;
-  }, [selected, compare.items, compare.baseId, locationsById]);
-
-  if (!pair) return null;
-  
-  const { from, to } = parsePair(pair);
-  const heading = `${from} → ${to} Time Converter`;
-  const infoDescription = `Convert time instantly between ${from} and ${to} with automatic daylight saving time awareness. The interactive globe above shows both locations, and you can use the Compare tab to see current offsets, time differences, and DST status in real-time.`;
-  const faqs = getConvertFAQs(from, to);
-  const tips = [
+  const faqs: FaqItem[] = [
     {
-      text: `Use the Compare tab to see side-by-side UTC offsets for ${from} and ${to} at any moment.`,
-      link: { href: "/compare", label: "Open Compare" },
+      question: `What is the time difference between ${from.label} and ${to.label}?`,
+      answer: `Right now ${to.label} (${to.full}) is ${diffText} ${from.label} (${from.full}). The difference is ${diff === 0 ? 'zero hours' : `${Math.abs(diff)} hour${Math.abs(diff) === 1 ? '' : 's'}`} and can shift by an hour when either zone enters or leaves daylight saving time.`,
     },
     {
-      text: "Drag the timeline to preview DST shifts and avoid planning during transitions.",
+      question: `How do I convert ${from.label} to ${to.label}?`,
+      answer: `Add the ${from.label} time to the offset difference. For example, 9:00 AM ${from.label} is ${table.find((r) => r.from === '9:00 AM')?.to ?? 'shown in the table above'} ${to.label}. The full hour-by-hour table on this page lists each conversion for the current date.`,
     },
     {
-      text: `Bookmark this converter if you revisit ${from} ↔ ${to} frequently — the globe keeps your cities highlighted.`,
+      question: `Does ${from.label} or ${to.label} use daylight saving time?`,
+      answer: `${from.label} is currently ${fromFacts.observesDst ? 'in a region that observes DST' : 'on a fixed offset (no DST)'} (${fromFacts.offsetLabel}), and ${to.label} is ${toFacts.observesDst ? 'in a region that observes DST' : 'on a fixed offset (no DST)'} (${toFacts.offsetLabel}). The converter uses official IANA data and adjusts automatically.`,
+    },
+    {
+      question: `Is this ${from.label} to ${to.label} converter accurate?`,
+      answer: `Yes — conversions use the IANA time zone database, the same source operating systems use, and account for current daylight saving rules to the minute.`,
     },
   ];
-  const highlights = [
-    `Live offset display highlights the real-time difference between ${from} and ${to}.`,
-    "Automatic DST detection keeps the converter accurate across transitions.",
-    "Interactive globe shows both cities simultaneously for visual confirmation.",
-  ];
-  const breadcrumbs = [
-    { name: 'Home', url: '/' },
-    { name: 'Convert', url: '/convert' },
-    { name: `${from} to ${to}`, url: `/convert/${pair}` },
-  ];
 
-  const canonicalUrl = `/convert/${pair}`;
-  const pageUrl = `https://timezio.com${canonicalUrl}`;
-  const absoluteBreadcrumbs = breadcrumbs.map((item) => ({
-    ...item,
-    url: item.url.startsWith("http") ? item.url : `https://timezio.com${item.url}`,
-  }));
-  const structuredData = {
+  const webPage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: heading,
-    description: infoDescription,
-    url: pageUrl,
+    description: `Convert ${from.label} to ${to.label}. ${summary}`,
+    url,
     inLanguage: 'en-US',
     breadcrumb: {
       '@type': 'BreadcrumbList',
-      itemListElement: absoluteBreadcrumbs.map((item, idx) => ({
-        '@type': 'ListItem',
-        position: idx + 1,
-        name: item.name,
-        item: item.url,
-      })),
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Converters', item: `${SITE_URL}/convert` },
+        { '@type': 'ListItem', position: 3, name: `${from.label} to ${to.label}`, item: url },
+      ],
     },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Timezio',
-      url: 'https://timezio.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://timezio.com/globe.svg',
-      },
-    },
-    mainEntity: {
-      '@type': 'ItemList',
-      itemListElement: tips.map((tip, idx) => ({
-        '@type': 'ListItem',
-        position: idx + 1,
-        name: tip.text,
-      })),
-    },
-    hasPart: highlights.map((text) => ({
-      '@type': 'CreativeWork',
-      name: text,
-    })),
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL, logo: { '@type': 'ImageObject', url: SITE_LOGO } },
   };
+
+  // Globe focus: use representative cities for the two zones when resolvable.
+  const fromCity = findCityBySlug(pair.split('-to-')[0]) ?? cityForZone(from.zone);
+  const toCity = findCityBySlug(pair.split('-to-')[1]) ?? cityForZone(to.zone);
+  const init = {
+    tab: 'compare' as const,
+    mode: 'compare' as const,
+    locations: [
+      { lat: fromCity.lat, lng: fromCity.lng, label: from.label },
+      { lat: toCity.lat, lng: toCity.lng, label: to.label },
+    ],
+    focus: { lat: (fromCity.lat + toCity.lat) / 2, lng: (fromCity.lng + toCity.lng) / 2, altitude: 2.5 },
+  };
+
+  const related = popularConverters.filter((c) => c.slug !== pair).slice(0, 5);
 
   return (
     <>
-      <SEOHead structuredData={structuredData} />
-      <BreadcrumbSchema items={breadcrumbs} />
-      <div className={styles.layout}>
-        <TopBar />
-        <div className={styles.tabBarContainer}>
-          <TabBar />
-        </div>
-        <div className={styles.contentArea}>
-          <div className={styles.main}>
-            <div className={styles.globeWrap}>
-              <GlobeCanvas
-                ref={globeRef}
-                focusTarget={focusTarget}
-                markers={markers}
-                selectedLocation={selected ? { tz: selected.tz } : null}
-                timezoneMode={timezoneMode}
-                onPickLocation={(lat, lng) => {
-                  pickLocationFromLatLng(lat, lng, 'click');
-                }}
-              />
-            </div>
-            <div className={styles.desktopOnly}>
-              <SidePanel />
-            </div>
-          </div>
-          <div className={styles.mobileOnly}>
-            <MobileSheet />
-          </div>
-          <div className={styles.infoSection}>
-            <div className={styles.infoCardWrapper}>
-              <div className={ui.card}>
-                <div className={ui.cardBody}>
-                  <h1 className={ui.title} style={{ marginBottom: '12px', fontSize: '24px' }}>
-                    {heading}
-                  </h1>
-                  <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
-                    {infoDescription}
-                  </p>
-                  <div style={{ marginBottom: '16px' }}>
-                    <h3 style={{ fontSize: '16px', marginBottom: '8px', fontWeight: 600 }}>
-                      Pro tips
-                    </h3>
-                    <ul
-                      role="list"
-                      aria-label="Tips for better time conversion"
-                      style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '6px' }}
-                    >
-                      {tips.map((tip, idx) => (
-                        <li
-                          key={`tip-${idx}`}
-                          style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}
-                        >
-                          <span style={{ color: 'var(--highlight)' }}>→</span>
-                          <span style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>
-                            {tip.text}
-                            {tip.link && (
-                              <>
-                                {' '}
-                                <Link href={tip.link.href} className={ui.link} style={{ fontSize: '14px' }}>
-                                  {tip.link.label}
-                                </Link>
-                              </>
+      <JsonLd data={webPage} id="ld-webpage" />
+      <JsonLd data={faqJsonLd(faqs)} id="ld-faq" />
+      <PageStage init={init}>
+        <div className={styles.infoSection}>
+          <div className={styles.infoCardWrapper}>
+            <div className={ui.card}>
+              <div className={ui.cardBody}>
+                <h1 className={ui.title} style={{ marginBottom: '8px', fontSize: '24px' }}>
+                  {heading}
+                </h1>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: 1.6 }}>
+                  {summary} {from.label} is {from.full}; {to.label} is {to.full}. The table below shows the conversion for
+                  every part of the day, with daylight saving time handled automatically.
+                </p>
+
+                <FactGrid
+                  items={[
+                    { label: from.label, value: `${fromFacts.nowTime} (${fromFacts.offsetLabel})` },
+                    { label: to.label, value: `${toFacts.nowTime} (${toFacts.offsetLabel})` },
+                    { label: 'Difference', value: diff === 0 ? 'None' : `${Math.abs(diff)}h` },
+                  ]}
+                />
+
+                <h2 className={ui.title} style={{ fontSize: '18px', margin: '22px 0 10px' }}>
+                  {from.label} → {to.label} conversion table
+                </h2>
+                <div style={{ overflowX: 'auto' }}>
+                  <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+                    <thead>
+                      <tr>
+                        <th style={thStyle}>{from.label}</th>
+                        <th style={thStyle}>{to.label}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {table.map((row, i) => (
+                        <tr key={i}>
+                          <td style={tdStyle}>{row.from}</td>
+                          <td style={tdStyle}>
+                            {row.to}
+                            {row.dayNote !== 'same day' && (
+                              <span style={{ color: 'var(--text-secondary)', fontSize: '12px' }}> ({row.dayNote})</span>
                             )}
-                          </span>
-                        </li>
+                          </td>
+                        </tr>
                       ))}
-                    </ul>
-                    <div style={{ marginTop: '12px' }}>
-                      <h4 style={{ fontSize: '15px', marginBottom: '6px', fontWeight: 600 }}>Highlights</h4>
-                      <ul style={{ listStyle: 'disc', paddingLeft: '16px', margin: 0, color: 'var(--text-secondary)', fontSize: '14px', display: 'grid', gap: '4px' }}>
-                        {highlights.map((item, idx) => (
-                          <li key={`highlight-${idx}`}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <div className={ui.divider} />
-                  <h2 className={ui.title} style={{ fontSize: '18px', marginBottom: '12px' }}>
-                    Related Converters
-                  </h2>
-                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '8px' }}>
-                    {popularConverters.slice(0, 5).map((item) => (
-                      <li key={item.slug}>
-                        <Link href={`/convert/${item.slug}`} className={ui.link} style={{ fontSize: '14px' }}>
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                  <FAQSection faqs={faqs} />
+                    </tbody>
+                  </table>
                 </div>
+
+                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginTop: '16px' }}>
+                  Need a specific date or a different pair? Use the interactive globe and the{' '}
+                  <Link href="/compare" className={ui.link}>Compare</Link> tab to preview any moment, including future
+                  dates that cross a daylight saving boundary. To schedule a call between these zones, try the{' '}
+                  <Link href="/planner" className={ui.link}>Meeting Planner</Link>.
+                </p>
+
+                <div className={ui.divider} />
+                <h2 className={ui.title} style={{ fontSize: '18px', marginBottom: '12px' }}>
+                  Related converters
+                </h2>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '8px' }}>
+                  {related.map((c) => (
+                    <li key={c.slug}>
+                      <Link href={`/convert/${c.slug}`} className={ui.link} style={{ fontSize: '14px' }}>
+                        {c.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+                <FaqList faqs={faqs} />
               </div>
             </div>
           </div>
         </div>
-        <Footer />
-      </div>
+      </PageStage>
     </>
   );
 }
 
+const thStyle: React.CSSProperties = {
+  textAlign: 'left',
+  padding: '8px 10px',
+  borderBottom: '2px solid var(--border-color)',
+  color: 'var(--text-secondary)',
+  fontWeight: 600,
+};
+const tdStyle: React.CSSProperties = {
+  padding: '8px 10px',
+  borderBottom: '1px solid var(--border-color)',
+  color: 'var(--text-primary)',
+};
+
+// Fallback representative coordinates for a zone, for the globe focus only.
+function cityForZone(zone: string): { lat: number; lng: number } {
+  const map: Record<string, { lat: number; lng: number }> = {
+    UTC: { lat: 51.4779, lng: -0.0015 },
+    'America/New_York': { lat: 40.7128, lng: -74.006 },
+    'America/Los_Angeles': { lat: 34.0522, lng: -118.2437 },
+    'America/Chicago': { lat: 41.8781, lng: -87.6298 },
+    'America/Denver': { lat: 39.7392, lng: -104.9903 },
+    'Europe/Paris': { lat: 48.8566, lng: 2.3522 },
+    'Asia/Kolkata': { lat: 28.6139, lng: 77.209 },
+    'Asia/Tokyo': { lat: 35.6762, lng: 139.6503 },
+    'Asia/Seoul': { lat: 37.5665, lng: 126.978 },
+    'Asia/Singapore': { lat: 1.3521, lng: 103.8198 },
+    'Australia/Sydney': { lat: -33.8688, lng: 151.2093 },
+  };
+  return map[zone] ?? { lat: 0, lng: 0 };
+}

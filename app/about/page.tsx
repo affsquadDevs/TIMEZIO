@@ -7,12 +7,13 @@ import aboutStyles from './about.module.css';
 import { TopBar } from '@/components/layout/TopBar';
 import { Footer } from '@/components/layout/Footer';
 import Link from 'next/link';
+import { SITE_URL, CONTACT_EMAIL } from '@/lib/site';
 
 export default function AboutPage() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    
-    const baseUrl = 'https://timezio.com';
+
+    const baseUrl = SITE_URL;
     
     // Add breadcrumb structured data
     const breadcrumbSchema = {
@@ -133,6 +134,20 @@ export default function AboutPage() {
               converting UTC, or traveling across countries, our tools help you instantly understand time differences
               without confusion.
             </p>
+
+            <div style={{ marginBottom: '32px' }}>
+              <h2 className={ui.title} style={{ fontSize: '20px', marginBottom: '12px' }}>
+                Who runs Timezio
+              </h2>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.7', margin: 0 }}>
+                Timezio is built and operated by <strong>AffSquad</strong>, an independent studio that makes free,
+                privacy-respecting web utilities. We&rsquo;re a small team that relies on these tools ourselves to
+                coordinate across time zones, and we keep Timezio free by displaying ads. Questions, corrections, or
+                feedback are always welcome at{' '}
+                <a href={`mailto:${CONTACT_EMAIL}`} className={ui.link}>{CONTACT_EMAIL}</a> — see the{' '}
+                <Link href="/contact" className={ui.link}>Contact</Link> page for more ways to reach us.
+              </p>
+            </div>
 
             <div style={{ marginBottom: '32px' }}>
               <h2 className={ui.title} style={{ fontSize: '20px', marginBottom: '16px' }}>
