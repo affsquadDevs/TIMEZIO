@@ -12,7 +12,7 @@ export default function ContactPage() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
-    const baseUrl = 'https://timezio.com';
+    const baseUrl = 'https://www.timezio.com';
     
     // Add breadcrumb structured data
     const breadcrumbSchema = {
@@ -41,7 +41,7 @@ export default function ContactPage() {
       mainEntity: {
         '@type': 'Organization',
         name: 'Timezio',
-        email: 'hello@affsquad.com',
+        email: 'hello@timezio.com',
       },
     };
 
@@ -102,6 +102,9 @@ export default function ContactPage() {
               <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: '1.7', marginTop: '12px', marginBottom: 0 }}>
                 If you have questions about how our tools work, would like to report an issue, or want to share suggestions for improvement, please feel free to get in touch.
               </p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.7', marginTop: '12px', marginBottom: 0 }}>
+                Timezio is operated by <strong>AffSquad</strong>, an independent studio that builds free web utilities.
+              </p>
             </header>
 
             <article className={contactStyles.articleContent}>
@@ -121,8 +124,8 @@ export default function ContactPage() {
                   <p style={{ margin: 0, fontSize: '15px', color: 'var(--text-secondary)', marginBottom: '8px' }}>
                     <strong style={{ color: 'var(--text-primary)' }}>Email:</strong>
                   </p>
-                  <a href="mailto:hello@affsquad.com" className={contactStyles.emailLink} style={{ fontSize: '18px', fontWeight: 600 }}>
-                    hello@affsquad.com
+                  <a href="mailto:hello@timezio.com" className={contactStyles.emailLink} style={{ fontSize: '18px', fontWeight: 600 }}>
+                    hello@timezio.com
                   </a>
                 </div>
                 <p className={contactStyles.paragraph}>

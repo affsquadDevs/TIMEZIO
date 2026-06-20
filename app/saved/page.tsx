@@ -19,7 +19,7 @@ export default function SavedPage() {
     "@type": "WebPage",
     name: heading,
     description,
-    url: "https://timezio.com/saved",
+    url: "https://www.timezio.com/saved",
     inLanguage: "en-US",
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -28,8 +28,8 @@ export default function SavedPage() {
     publisher: {
       "@type": "Organization",
       name: "Timezio",
-      url: "https://timezio.com",
-      logo: { "@type": "ImageObject", url: "https://timezio.com/globe.svg" },
+      url: "https://www.timezio.com",
+      logo: { "@type": "ImageObject", url: "https://www.timezio.com/og-image.png" },
     },
   };
 
@@ -56,7 +56,7 @@ function toBreadcrumbList(items: Array<{ name: string; url: string }>) {
     "@type": "ListItem",
     position: idx + 1,
     name: item.name,
-    item: item.url.startsWith("http") ? item.url : `https://timezio.com${item.url}`,
+    item: item.url.startsWith("http") ? item.url : `https://www.timezio.com${item.url}`,
   }));
 }
 

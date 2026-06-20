@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Timezio Support",
     description: "Get help, report issues, or request features for Timezio’s time zone tools.",
-    url: "https://timezio.com/contact",
+    url: "https://www.timezio.com/contact",
     siteName: "Timezio",
     type: "website",
   },

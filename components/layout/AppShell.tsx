@@ -18,9 +18,10 @@ type AppShellProps = {
   heading: string;
   description: string;
   ctas?: Array<{ href: string; label: string }>;
+  article?: React.ReactNode;
 };
 
-export function AppShell({ defaultTab, heading, description, ctas = [] }: AppShellProps) {
+export function AppShell({ defaultTab, heading, description, ctas = [], article }: AppShellProps) {
   const globeRef = useRef<GlobeCanvasHandle>(null);
 
   const hydrateFromUrl = useAppStore((s) => s.hydrateFromUrl);
@@ -119,6 +120,11 @@ export function AppShell({ defaultTab, heading, description, ctas = [] }: AppShe
                       → {cta.label}
                     </Link>
                   ))}
+                </div>
+              )}
+              {article && (
+                <div style={{ marginTop: '24px', color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '15px' }}>
+                  {article}
                 </div>
               )}
             </div>

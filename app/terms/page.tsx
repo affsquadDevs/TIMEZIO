@@ -12,7 +12,7 @@ export default function TermsPage() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
-    const baseUrl = 'https://timezio.com';
+    const baseUrl = 'https://www.timezio.com';
     
     // Add breadcrumb structured data
     const breadcrumbSchema = {
@@ -203,7 +203,7 @@ export default function TermsPage() {
                   If you have any questions regarding these Terms of Service, you may contact us at:
                 </p>
                 <p className={termsStyles.paragraph} style={{ marginTop: '12px' }}>
-                  <strong>Email:</strong> <a href="mailto:hello@affsquad.com" className={termsStyles.emailLink}>hello@affsquad.com</a>
+                  <strong>Email:</strong> <a href="mailto:hello@timezio.com" className={termsStyles.emailLink}>hello@timezio.com</a>
                 </p>
               </section>
             </article>

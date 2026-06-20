@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Privacy Policy | Timezio",
     description: "Learn how Timezio handles data, cookies, analytics, and ads in line with GDPR.",
-    url: "https://timezio.com/privacy",
+    url: "https://www.timezio.com/privacy",
     siteName: "Timezio",
     type: "website",
   },

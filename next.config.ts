@@ -10,6 +10,19 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+  async redirects() {
+    return [
+      // Canonicalize apex -> www with a permanent (301) redirect.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'timezio.com' }],
+        destination: 'https://www.timezio.com/:path*',
+        permanent: true,
+      },
+      // The about-timezio post duplicated /about — consolidate.
+      { source: '/blog/about-timezio', destination: '/about', permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

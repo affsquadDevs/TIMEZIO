@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { SITE_URL } from '@/lib/site';
 
 type BreadcrumbItem = {
   name: string;
@@ -23,7 +24,7 @@ export function BreadcrumbSchema({ items, id = 'breadcrumb-schema' }: Breadcrumb
         '@type': 'ListItem',
         position: idx + 1,
         name: item.name,
-        item: item.url.startsWith('http') ? item.url : `https://timezio.com${item.url}`,
+        item: item.url.startsWith('http') ? item.url : `${SITE_URL}${item.url}`,
       })),
     };
 

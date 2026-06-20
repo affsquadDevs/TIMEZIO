@@ -12,7 +12,7 @@ export default function PrivacyPage() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
-    const baseUrl = 'https://timezio.com';
+    const baseUrl = 'https://www.timezio.com';
     
     // Add breadcrumb structured data
     const breadcrumbSchema = {
@@ -154,8 +154,17 @@ export default function PrivacyPage() {
                   The Website may display advertisements from third-party partners such as Google AdSense (served via Google Tag Manager). These partners may use cookies or similar technologies to display relevant ads and may process data (e.g., cookie IDs, coarse location, device info). Advertising cookies are loaded only after consent where required.
                 </p>
                 <p className={privacyStyles.paragraph}>
-                  Advertising partners process information under their own privacy policies and may transfer data outside your region under appropriate safeguards (e.g., Standard Contractual Clauses). You can withdraw or change cookie/ads consent at any time via your browser or the cookie controls provided.
+                  Advertising partners process information under their own privacy policies and may transfer data outside your region under appropriate safeguards (e.g., Standard Contractual Clauses). You can withdraw or change your cookie and advertising consent at any time using the <strong>&ldquo;Cookie settings&rdquo;</strong> link in the website footer, or through your browser settings.
                 </p>
+                <p className={privacyStyles.paragraph}>
+                  You can also control or opt out of personalized advertising directly with the providers and industry programs:
+                </p>
+                <ul className={privacyStyles.list}>
+                  <li>Google Ads Settings — <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className={privacyStyles.emailLink}>adssettings.google.com</a></li>
+                  <li>How Google uses data from partner sites — <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className={privacyStyles.emailLink}>policies.google.com/technologies/partner-sites</a></li>
+                  <li>US opt-out (DAA) — <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className={privacyStyles.emailLink}>optout.aboutads.info</a> · <a href="https://www.youradchoices.com" target="_blank" rel="noopener noreferrer" className={privacyStyles.emailLink}>youradchoices.com</a></li>
+                  <li>EU opt-out (EDAA) — <a href="https://www.youronlinechoices.eu" target="_blank" rel="noopener noreferrer" className={privacyStyles.emailLink}>youronlinechoices.eu</a></li>
+                </ul>
               </section>
 
               <section style={{ marginBottom: '32px' }}>
@@ -226,28 +235,41 @@ export default function PrivacyPage() {
               </section>
 
               <section style={{ marginBottom: '32px' }}>
-                <h2 className={privacyStyles.sectionTitle}>9. Children's Privacy</h2>
+                <h2 className={privacyStyles.sectionTitle}>9. US State Privacy Rights (CCPA / CPRA & similar)</h2>
+                <p className={privacyStyles.paragraph}>
+                  If you are a resident of California or another US state with comprehensive privacy laws, you may have the right to know what personal information is collected, to request access or deletion, to correct inaccurate information, and to opt out of the &ldquo;sale&rdquo; or &ldquo;sharing&rdquo; of personal information and of targeted advertising.
+                </p>
+                <p className={privacyStyles.paragraph}>
+                  We do not sell personal information for money. However, the use of advertising cookies may be considered &ldquo;sharing&rdquo; or a &ldquo;sale&rdquo; under some state laws. You can opt out of personalized advertising using the <strong>&ldquo;Cookie settings&rdquo;</strong> link in the footer and the industry opt-out tools listed in Section 3.2. Where supported, we honor the Global Privacy Control (GPC) browser signal as a valid opt-out request.
+                </p>
+                <p className={privacyStyles.paragraph}>
+                  To exercise any of these rights, contact us using the details in Section 14. We will not discriminate against you for exercising your privacy rights.
+                </p>
+              </section>
+
+              <section style={{ marginBottom: '32px' }}>
+                <h2 className={privacyStyles.sectionTitle}>10. Children's Privacy</h2>
                 <p className={privacyStyles.paragraph}>
                   This Website is not intended for children under the age of 16. We do not knowingly collect personal data from children.
                 </p>
               </section>
 
               <section style={{ marginBottom: '32px' }}>
-                <h2 className={privacyStyles.sectionTitle}>10. Security</h2>
+                <h2 className={privacyStyles.sectionTitle}>11. Security</h2>
                 <p className={privacyStyles.paragraph}>
                   We take reasonable technical and organizational measures to protect information against unauthorized access, loss, misuse, or alteration. However, no method of transmission or storage is completely secure.
                 </p>
               </section>
 
               <section style={{ marginBottom: '32px' }}>
-                <h2 className={privacyStyles.sectionTitle}>11. External Links</h2>
+                <h2 className={privacyStyles.sectionTitle}>12. External Links</h2>
                 <p className={privacyStyles.paragraph}>
                   The Website may contain links to third-party websites. We are not responsible for the content or privacy practices of those websites.
                 </p>
               </section>
 
               <section style={{ marginBottom: '32px' }}>
-                <h2 className={privacyStyles.sectionTitle}>12. Changes to This Privacy Policy</h2>
+                <h2 className={privacyStyles.sectionTitle}>13. Changes to This Privacy Policy</h2>
                 <p className={privacyStyles.paragraph}>
                   We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.
                 </p>
@@ -257,12 +279,12 @@ export default function PrivacyPage() {
               </section>
 
               <section style={{ marginBottom: '32px' }}>
-                <h2 className={privacyStyles.sectionTitle}>13. Contact Information</h2>
+                <h2 className={privacyStyles.sectionTitle}>14. Contact Information</h2>
                 <p className={privacyStyles.paragraph}>
                   If you have questions about this Privacy Policy or how data is processed on this Website, you may contact us at:
                 </p>
                 <p className={privacyStyles.paragraph} style={{ marginTop: '12px' }}>
-                  <strong>Email:</strong> <a href="mailto:hello@affsquad.com" className={privacyStyles.emailLink}>hello@affsquad.com</a>
+                  <strong>Email:</strong> <a href="mailto:hello@timezio.com" className={privacyStyles.emailLink}>hello@timezio.com</a>
                 </p>
               </section>
             </article>
