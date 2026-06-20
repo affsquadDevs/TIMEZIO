@@ -1,5 +1,6 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import styles from "@/components/layout/layout.module.css";
 import ui from "@/components/ui/ui.module.css";
 import { TopBar } from "@/components/layout/TopBar";
@@ -27,36 +28,30 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DstHubPage() {
+export default async function DstHubPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("pages.dstHub");
+
   return (
     <div className={styles.layout}>
       <TopBar />
       <div className={styles.main}>
         <div className={ui.card} style={{ width: "100%" }}>
           <div className={ui.cardBody}>
-            <h1 className={ui.title} style={{ marginBottom: "12px" }}>
-              Daylight Saving Time by Country
-            </h1>
-            <p style={{ color: "var(--text-secondary)", marginBottom: "12px", lineHeight: 1.7 }}>
-              Daylight saving time is one of the biggest sources of scheduling mistakes: clocks move an hour, but not
-              everywhere and not on the same day. These pages tell you, for each region, whether DST is currently in effect,
-              what the present UTC offset is, and the exact dates of the next spring-forward and fall-back transitions —
-              all computed from the official IANA time zone database rather than hard-coded rules that go stale.
-            </p>
+            <h1 className={ui.title} style={{ marginBottom: "12px" }}>{t("title")}</h1>
+            <p style={{ color: "var(--text-secondary)", marginBottom: "12px", lineHeight: 1.7 }}>{t("intro1")}</p>
             <p style={{ color: "var(--text-secondary)", marginBottom: "20px", lineHeight: 1.7 }}>
-              Knowing when a region changes its clocks helps you protect recurring meetings, travel plans, and deadlines
-              that span borders. Choose a region below, then use{" "}
-              <Link href="/compare" className={ui.link}>Compare</Link> or the{" "}
-              <Link href="/planner" className={ui.link}>Meeting Planner</Link> to see how an upcoming change shifts the time
-              difference with your own location.
+              {t.rich("intro2", {
+                compare: (c) => <Link href="/compare" className={ui.link}>{c}</Link>,
+                planner: (c) => <Link href="/planner" className={ui.link}>{c}</Link>,
+              })}
             </p>
             <div className={ui.divider} />
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "12px" }}>
               {popularDst.map((item) => (
                 <li key={item.slug}>
-                  <Link href={`/dst/${item.slug}`} className={ui.link}>
-                    {item.label}
-                  </Link>
+                  <Link href={`/dst/${item.slug}`} className={ui.link}>{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -67,4 +62,3 @@ export default function DstHubPage() {
     </div>
   );
 }
-

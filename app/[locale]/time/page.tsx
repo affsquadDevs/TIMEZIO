@@ -1,5 +1,6 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import styles from "@/components/layout/layout.module.css";
 import ui from "@/components/ui/ui.module.css";
 import { TopBar } from "@/components/layout/TopBar";
@@ -30,7 +31,11 @@ export const metadata: Metadata = {
 
 type CityRow = { id: string; label: string };
 
-export default function TimeHubPage() {
+export default async function TimeHubPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("pages.timeHub");
+
   const cities = (citiesData as CityRow[])
     .map((c) => ({ slug: c.id.replace(/_/g, "-"), label: c.label }))
     .sort((a, b) => a.label.localeCompare(b.label));
@@ -41,25 +46,18 @@ export default function TimeHubPage() {
       <div className={styles.main}>
         <div className={ui.card} style={{ width: "100%" }}>
           <div className={ui.cardBody}>
-            <h1 className={ui.title} style={{ marginBottom: "12px" }}>
-              Current Time in Major Cities Worldwide
-            </h1>
-            <p style={{ color: "var(--text-secondary)", marginBottom: "12px", lineHeight: 1.7 }}>
-              Pick a city to see its current local time, the exact UTC offset, the IANA time zone it uses, and whether
-              daylight saving time is in effect right now. Every page updates in real time and is calculated from the
-              official IANA time zone database, so the awkward cases — half-hour offsets, regions that change clocks on
-              different dates, and places that don&rsquo;t observe DST at all — are handled correctly.
-            </p>
+            <h1 className={ui.title} style={{ marginBottom: "12px" }}>{t("title")}</h1>
+            <p style={{ color: "var(--text-secondary)", marginBottom: "12px", lineHeight: 1.7 }}>{t("intro1")}</p>
             <p style={{ color: "var(--text-secondary)", marginBottom: "20px", lineHeight: 1.7 }}>
-              These world-clock pages are the quickest way to check &ldquo;what time is it there?&rdquo; before you call,
-              travel, or schedule. To convert a specific time between two places use the{" "}
-              <Link href="/convert" className={ui.link}>converters</Link>, to line up several cities use{" "}
-              <Link href="/compare" className={ui.link}>Compare</Link>, and to find a slot that works for a group use the{" "}
-              <Link href="/planner" className={ui.link}>Meeting Planner</Link>.
+              {t.rich("intro2", {
+                convert: (c) => <Link href="/convert" className={ui.link}>{c}</Link>,
+                compare: (c) => <Link href="/compare" className={ui.link}>{c}</Link>,
+                planner: (c) => <Link href="/planner" className={ui.link}>{c}</Link>,
+              })}
             </p>
             <div className={ui.divider} />
             <h2 className={ui.title} style={{ fontSize: "18px", margin: "8px 0 12px" }}>
-              Cities ({cities.length})
+              {t("listHeading", { count: cities.length })}
             </h2>
             <ul
               style={{
@@ -73,9 +71,7 @@ export default function TimeHubPage() {
             >
               {cities.map((city) => (
                 <li key={city.slug}>
-                  <Link href={`/time/${city.slug}`} className={ui.link}>
-                    {city.label}
-                  </Link>
+                  <Link href={`/time/${city.slug}`} className={ui.link}>{city.label}</Link>
                 </li>
               ))}
             </ul>

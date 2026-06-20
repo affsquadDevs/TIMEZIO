@@ -1,5 +1,6 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import styles from "@/components/layout/layout.module.css";
 import ui from "@/components/ui/ui.module.css";
 import { TopBar } from "@/components/layout/TopBar";
@@ -28,40 +29,31 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ConvertHubPage() {
+export default async function ConvertHubPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("pages.convertHub");
+
   return (
     <div className={styles.layout}>
       <TopBar />
       <div className={styles.main}>
         <div className={ui.card} style={{ width: "100%" }}>
           <div className={ui.cardBody}>
-            <h1 className={ui.title} style={{ marginBottom: "12px" }}>
-              Popular Time Zone Converters
-            </h1>
-            <p style={{ color: "var(--text-secondary)", marginBottom: "12px", lineHeight: 1.7 }}>
-              A time zone converter answers a deceptively tricky question: when it&rsquo;s a given time in one place, what
-              time is it somewhere else? The catch is that the gap between two zones isn&rsquo;t fixed. Daylight saving time
-              shifts it by an hour, the two regions often change their clocks on different weekends, and some zones sit a
-              fractional number of hours apart. Each converter below uses official IANA data, so the result is correct on
-              any date — including the weeks around a clock change when manual math usually goes wrong.
-            </p>
+            <h1 className={ui.title} style={{ marginBottom: "12px" }}>{t("title")}</h1>
+            <p style={{ color: "var(--text-secondary)", marginBottom: "12px", lineHeight: 1.7 }}>{t("intro1")}</p>
             <p style={{ color: "var(--text-secondary)", marginBottom: "20px", lineHeight: 1.7 }}>
-              Every converter page includes a full hour-by-hour table for the current day, the live offset between the two
-              zones, and notes on which side observes daylight saving time. Need to check a city rather than an
-              abbreviation? Browse the{" "}
-              <Link href="/time" className={ui.link}>world clock</Link>, or jump to{" "}
-              <Link href="/compare" className={ui.link}>Compare</Link> to line up more than two places at once.
+              {t.rich("intro2", {
+                world: (c) => <Link href="/time" className={ui.link}>{c}</Link>,
+                compare: (c) => <Link href="/compare" className={ui.link}>{c}</Link>,
+              })}
             </p>
             <div className={ui.divider} />
-            <h2 className={ui.title} style={{ fontSize: "18px", margin: "8px 0 12px" }}>
-              Converters
-            </h2>
+            <h2 className={ui.title} style={{ fontSize: "18px", margin: "8px 0 12px" }}>{t("listHeading")}</h2>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "12px" }}>
               {popularConverters.map((item) => (
                 <li key={item.slug}>
-                  <Link href={`/convert/${item.slug}`} className={ui.link}>
-                    {item.label}
-                  </Link>
+                  <Link href={`/convert/${item.slug}`} className={ui.link}>{item.label}</Link>
                 </li>
               ))}
             </ul>

@@ -1,6 +1,7 @@
 {
   "common": {
-    "appName": "Timezio"
+    "appName": "Timezio",
+    "breadcrumbHome": "Home"
   },
   "nav": {
     "blog": "Blog",
@@ -41,5 +42,108 @@
     "message": "We use cookies for analytics and to show ads (including Google AdSense). You can accept or reject non-essential cookies. See our <link>Privacy Policy</link>.",
     "reject": "Reject",
     "acceptAll": "Accept all"
+  },
+  "home": {
+    "badges": ["Live & DST-aware", "No sign-up", "Free forever"],
+    "title": "Plan across time zones without the headaches.",
+    "lede": "Timezio helps you compare time zones, convert UTC, and lock in meeting slots between cities. Every calculation is DST-aware and powered by official IANA data.",
+    "ctaPlanner": "Plan a meeting",
+    "ctaConverter": "Open converter",
+    "highlights": [
+      { "title": "DST aware", "body": "Powered by official IANA time zone data updated automatically." },
+      { "title": "10k+ cities", "body": "Every offset covered, including 30- and 45-minute differences." },
+      { "title": "Share ready", "body": "Copy clean links and send the exact time plan to your team." }
+    ],
+    "panelEyebrow": "Live snapshot",
+    "panelTitle": "What's happening right now",
+    "panelBadge": "DST verified",
+    "panelFooter": "Live examples. Odd offsets and daylight saving rules handled automatically.",
+    "toolkitEyebrow": "Toolkit",
+    "toolkitTitle": "Everything you need for global timing",
+    "toolkitBody": "Switch between the planner, converter, and city comparison without losing context.",
+    "tools": [
+      { "label": "Meeting Planner", "desc": "Find overlap-friendly slots automatically and keep everyone out of late nights.", "badge": "Team favorite" },
+      { "label": "Time Converter", "desc": "Convert UTC or local times, preview future dates, and share results instantly.", "badge": "Most used" },
+      { "label": "City Compare", "desc": "Line up multiple cities side by side to see the exact differences at a glance.", "badge": "" },
+      { "label": "Explore Globe", "desc": "Navigate the interactive globe and jump straight into any city or region.", "badge": "" }
+    ],
+    "toolOpen": "Open →",
+    "whyEyebrow": "Why Timezio",
+    "whyTitle": "Accuracy by default, friendly by design",
+    "whyBody": "Built for remote teams, freelancers, and friends spread across the world.",
+    "values": [
+      { "title": "Accurate Time Zone Calculations", "body": "Compare local times between cities with automatic adjustment for daylight saving time and regional UTC offsets." },
+      { "title": "UTC & Local Time Conversion", "body": "Convert UTC to local time (and back) for any city — past, present, or future dates supported." },
+      { "title": "Meeting Planner Across Time Zones", "body": "Find the best overlapping meeting time for participants in different cities, without early mornings or late nights." },
+      { "title": "Fast, Simple & Free", "body": "No accounts, no setup, no complexity. Just clear answers — instantly." },
+      { "title": "DST-Aware & Reliable", "body": "Timezio uses official IANA time zone data. All results automatically adjust for daylight saving time changes and regional rules." },
+      { "title": "Built for Global Use", "body": "Supports regions with non-standard offsets (including 30- or 45-minute differences) and date changes when crossing time zones." }
+    ]
+  },
+  "pages": {
+    "explore": {
+      "heading": "Explore Time Zones",
+      "description": "Pick any point on the globe to see the local time, UTC offset, and daylight saving status. Use Explore to understand where time changes across borders.",
+      "breadcrumb": "Explore",
+      "ctas": ["Current time in major cities", "Popular time zone converters", "Daylight saving time checker"],
+      "articleH2": "How to explore the globe",
+      "articleParagraphs": [
+        "The interactive 3D globe turns time zones into something you can see rather than calculate. Click any location and Timezio reads its exact latitude and longitude, looks up the matching IANA time zone, and shows the current local time, the UTC offset, and whether daylight saving time is currently in effect. Because the data comes from the official IANA time zone database, it covers the awkward cases too — half-hour offsets like India (UTC+5:30), 45-minute offsets like Nepal, and regions that change their clocks on different dates.",
+        "Explore is the quickest way to answer “what time is it there right now?” without typing a city name. Spin the globe to a continent, click a coastline, and read the time instantly. When you want to line up several places at once, switch to Compare; when you need to find a slot that works for a team, jump to the Planner. Every view stays in sync, so a city you click here is ready to compare or schedule with one tap.",
+        "Time zones are political as much as geographic — borders, exceptions, and seasonal rules all shift the clock. Seeing them on a globe makes those boundaries obvious, which is why Explore is a good starting point before you convert a specific time or book an international call."
+      ]
+    },
+    "compare": {
+      "heading": "Compare Time Zones",
+      "description": "Compare multiple time zones side-by-side with DST-aware offsets. Add cities, choose a base location, and verify the time difference before you schedule.",
+      "breadcrumb": "Compare",
+      "ctas": ["Popular time zone converters", "Best meeting times by city pair", "Daylight saving time checker"],
+      "articleH2": "Compare several cities at once",
+      "articleParagraphs": [
+        "Add up to six cities and Timezio lines up their current local times in a single view. Pick one as the “base” and every other city shows its difference relative to it, so you can answer questions like “when it’s 9:00 AM in Berlin, what time is it in New York and Singapore?” at a glance. The offsets are calculated from official IANA data and update in real time, including the one-hour shifts that happen when a region enters or leaves daylight saving time.",
+        "Comparing is most useful when the difference isn’t obvious. Many country pairs sit a fractional number of hours apart, and several change their clocks on different weekends, so the gap between two cities can be nine hours one month and ten the next. Lining the cities up side by side catches those edge cases before they turn into a missed call. For a date in the future, change the date and the comparison recalculates with the correct DST rules for that day.",
+        "When you’ve confirmed the difference, copy the share link to send the exact comparison to your team, or move the same set of cities into the Planner to find a meeting slot that works for everyone."
+      ]
+    },
+    "planner": {
+      "heading": "Meeting Planner",
+      "description": "Plan meetings across multiple time zones. Add participants, set working hours, and find overlap windows automatically — fully DST-aware.",
+      "breadcrumb": "Planner",
+      "ctas": ["Best meeting times by city pair", "Compare time zones", "Daylight saving time checker"],
+      "articleH2": "Find a time that works for everyone",
+      "articleParagraphs": [
+        "Add each participant by city, set their working hours, and the planner overlays every schedule to surface the windows when everyone is available. Instead of mentally juggling offsets, you get a ranked list of slots that fall inside each person’s working day, with early-morning and late-night times de-prioritized so nobody has to take a 6 a.m. call. Every calculation is daylight-saving aware, so a slot that works this week still works after a region changes its clocks.",
+        "The planner is built for distributed teams, client calls across continents, and catching up with friends or family abroad. Set a meeting duration, choose a date, and adjust each participant’s hours if they work an unusual shift. You can also widen the search when there is no clean overlap — a common situation for pairs that are ten or more hours apart, where someone has to take an edge slot. For Google Calendar invites and Meet links, connect your account in the planner and confirm a slot.",
+        "Already know the two cities? The pre-built best-meeting-time pages show the overlap for popular pairs without any setup."
+      ]
+    },
+    "saved": {
+      "heading": "Saved",
+      "description": "Save your frequently used locations so you can return instantly to their current time, offset, and daylight saving status.",
+      "breadcrumb": "Saved",
+      "ctas": ["Explore time zones", "Compare time zones", "Plan a meeting across time zones"]
+    },
+    "convertHub": {
+      "title": "Popular Time Zone Converters",
+      "intro1": "A time zone converter answers a deceptively tricky question: when it’s a given time in one place, what time is it somewhere else? The catch is that the gap between two zones isn’t fixed. Daylight saving time shifts it by an hour, the two regions often change their clocks on different weekends, and some zones sit a fractional number of hours apart. Each converter below uses official IANA data, so the result is correct on any date — including the weeks around a clock change when manual math usually goes wrong.",
+      "intro2": "Every converter page includes a full hour-by-hour table for the current day, the live offset between the two zones, and notes on which side observes daylight saving time. Need to check a city rather than an abbreviation? Browse the <world>world clock</world>, or jump to <compare>Compare</compare> to line up more than two places at once.",
+      "listHeading": "Converters"
+    },
+    "timeHub": {
+      "title": "Current Time in Major Cities Worldwide",
+      "intro1": "Pick a city to see its current local time, the exact UTC offset, the IANA time zone it uses, and whether daylight saving time is in effect right now. Every page updates in real time and is calculated from the official IANA time zone database, so the awkward cases — half-hour offsets, regions that change clocks on different dates, and places that don’t observe DST at all — are handled correctly.",
+      "intro2": "These world-clock pages are the quickest way to check “what time is it there?” before you call, travel, or schedule. To convert a specific time between two places use the <convert>converters</convert>, to line up several cities use <compare>Compare</compare>, and to find a slot that works for a group use the <planner>Meeting Planner</planner>.",
+      "listHeading": "Cities ({count})"
+    },
+    "meetingHub": {
+      "title": "Best Meeting Times by City Pair",
+      "intro1": "Scheduling across continents usually means someone takes a call at a bad hour. These pages do the hard part for you: for each popular city pair, Timezio overlays both teams’ standard 9-to-5 day and lists the hours when everyone is awake and working, plus a recommended slot in the middle of that window. Because the math uses official IANA data, the overlap stays correct even when one city changes its clocks and the other doesn’t.",
+      "intro2": "Pick a pair below for an instant answer, or open the <planner>Meeting Planner</planner> to add your own cities, adjust each participant’s working hours, and generate calendar invites. To double-check the raw time difference first, use <compare>Compare</compare>."
+    },
+    "dstHub": {
+      "title": "Daylight Saving Time by Country",
+      "intro1": "Daylight saving time is one of the biggest sources of scheduling mistakes: clocks move an hour, but not everywhere and not on the same day. These pages tell you, for each region, whether DST is currently in effect, what the present UTC offset is, and the exact dates of the next spring-forward and fall-back transitions — all computed from the official IANA time zone database rather than hard-coded rules that go stale.",
+      "intro2": "Knowing when a region changes its clocks helps you protect recurring meetings, travel plans, and deadlines that span borders. Choose a region below, then use <compare>Compare</compare> or the <planner>Meeting Planner</planner> to see how an upcoming change shifts the time difference with your own location."
+    }
   }
 }

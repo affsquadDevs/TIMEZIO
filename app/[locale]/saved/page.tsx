@@ -1,17 +1,23 @@
 'use client';
 
+import { useTranslations } from "next-intl";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { AppShell } from "@/components/layout/AppShell";
+import { SITE_URL, SITE_NAME, SITE_LOGO } from "@/lib/site";
+
+const CTA_HREFS = ["/explore", "/compare", "/planner"];
 
 export default function SavedPage() {
-  const heading = "Saved";
-  const description =
-    "Save your frequently used locations so you can return instantly to their current time, offset, and daylight saving status.";
+  const t = useTranslations("pages.saved");
+  const tc = useTranslations("common");
+  const heading = t("heading");
+  const description = t("description");
+  const ctaLabels = t.raw("ctas") as string[];
 
   const breadcrumbs = [
-    { name: "Home", url: "/" },
-    { name: "Saved", url: "/saved" },
+    { name: tc("breadcrumbHome"), url: "/" },
+    { name: t("breadcrumb"), url: "/saved" },
   ];
 
   const structuredData = {
@@ -19,17 +25,13 @@ export default function SavedPage() {
     "@type": "WebPage",
     name: heading,
     description,
-    url: "https://www.timezio.com/saved",
-    inLanguage: "en-US",
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: toBreadcrumbList(breadcrumbs),
-    },
+    url: `${SITE_URL}/saved`,
+    breadcrumb: { "@type": "BreadcrumbList", itemListElement: toBreadcrumbList(breadcrumbs) },
     publisher: {
       "@type": "Organization",
-      name: "Timezio",
-      url: "https://www.timezio.com",
-      logo: { "@type": "ImageObject", url: "https://www.timezio.com/og-image.png" },
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: SITE_LOGO },
     },
   };
 
@@ -41,11 +43,7 @@ export default function SavedPage() {
         defaultTab="saved"
         heading={heading}
         description={description}
-        ctas={[
-          { href: "/explore", label: "Explore time zones" },
-          { href: "/compare", label: "Compare time zones" },
-          { href: "/planner", label: "Plan a meeting across time zones" },
-        ]}
+        ctas={ctaLabels.map((label, i) => ({ href: CTA_HREFS[i], label }))}
       />
     </>
   );
@@ -56,8 +54,6 @@ function toBreadcrumbList(items: Array<{ name: string; url: string }>) {
     "@type": "ListItem",
     position: idx + 1,
     name: item.name,
-    item: item.url.startsWith("http") ? item.url : `https://www.timezio.com${item.url}`,
+    item: item.url.startsWith("http") ? item.url : `${SITE_URL}${item.url}`,
   }));
 }
-
-

@@ -1,18 +1,24 @@
 'use client';
 
+import { useTranslations } from "next-intl";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { AppShell } from "@/components/layout/AppShell";
 import { SITE_URL, SITE_NAME, SITE_LOGO } from "@/lib/site";
 
+const CTA_HREFS = ["/convert", "/meeting", "/dst"];
+
 export default function ComparePage() {
-  const heading = "Compare Time Zones";
-  const description =
-    "Compare multiple time zones side-by-side with DST-aware offsets. Add cities, choose a base location, and verify the time difference before you schedule.";
+  const t = useTranslations("pages.compare");
+  const tc = useTranslations("common");
+  const heading = t("heading");
+  const description = t("description");
+  const ctaLabels = t.raw("ctas") as string[];
+  const paragraphs = t.raw("articleParagraphs") as string[];
 
   const breadcrumbs = [
-    { name: "Home", url: "/" },
-    { name: "Compare", url: "/compare" },
+    { name: tc("breadcrumbHome"), url: "/" },
+    { name: t("breadcrumb"), url: "/compare" },
   ];
 
   const structuredData = {
@@ -21,7 +27,6 @@ export default function ComparePage() {
     name: heading,
     description,
     url: `${SITE_URL}/compare`,
-    inLanguage: "en-US",
     breadcrumb: { "@type": "BreadcrumbList", itemListElement: toBreadcrumbList(breadcrumbs) },
     publisher: {
       "@type": "Organization",
@@ -39,34 +44,15 @@ export default function ComparePage() {
         defaultTab="compare"
         heading={heading}
         description={description}
-        ctas={[
-          { href: "/convert", label: "Popular time zone converters" },
-          { href: "/meeting", label: "Best meeting times by city pair" },
-          { href: "/dst", label: "Daylight saving time checker" },
-        ]}
+        ctas={ctaLabels.map((label, i) => ({ href: CTA_HREFS[i], label }))}
         article={
           <>
             <h2 style={{ fontSize: "18px", fontWeight: 600, color: "var(--text-primary)", margin: "0 0 8px" }}>
-              Compare several cities at once
+              {t("articleH2")}
             </h2>
-            <p style={{ margin: "0 0 12px" }}>
-              Add up to six cities and Timezio lines up their current local times in a single view. Pick one as the
-              &ldquo;base&rdquo; and every other city shows its difference relative to it, so you can answer questions like
-              &ldquo;when it&rsquo;s 9:00 AM in Berlin, what time is it in New York and Singapore?&rdquo; at a glance. The
-              offsets are calculated from official IANA data and update in real time, including the one-hour shifts that
-              happen when a region enters or leaves daylight saving time.
-            </p>
-            <p style={{ margin: "0 0 12px" }}>
-              Comparing is most useful when the difference isn&rsquo;t obvious. Many country pairs sit a fractional number
-              of hours apart, and several change their clocks on different weekends, so the gap between two cities can be
-              nine hours one month and ten the next. Lining the cities up side by side catches those edge cases before they
-              turn into a missed call. For a date in the future, change the date and the comparison recalculates with the
-              correct DST rules for that day.
-            </p>
-            <p style={{ margin: 0 }}>
-              When you&rsquo;ve confirmed the difference, copy the share link to send the exact comparison to your team, or
-              move the same set of cities into the Planner to find a meeting slot that works for everyone.
-            </p>
+            {paragraphs.map((p, i) => (
+              <p key={i} style={{ margin: i < paragraphs.length - 1 ? "0 0 12px" : 0 }}>{p}</p>
+            ))}
           </>
         }
       />
