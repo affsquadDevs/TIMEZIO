@@ -111,9 +111,12 @@ export function ConsentBanner() {
           style={{
             padding: '9px 16px',
             borderRadius: '9px',
-            border: 'none',
-            background: 'var(--highlight, #2563eb)',
-            color: '#fff',
+            border: '1px solid var(--highlight, #e2e8f0)',
+            background: 'var(--highlight, #e2e8f0)',
+            // --highlight is an inverted contrast color (white in dark theme,
+            // black in light theme), so the label must use the page background
+            // color to stay legible — matching the site's .btnPrimary convention.
+            color: 'var(--background, #0f172a)',
             fontSize: '14px',
             fontWeight: 700,
             cursor: 'pointer',
