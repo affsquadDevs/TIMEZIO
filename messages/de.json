@@ -1,714 +1,714 @@
 {
   "common": {
     "appName": "Timezio",
-    "breadcrumbHome": "Home",
-    "faqTitle": "Frequently Asked Questions",
-    "backToHome": "Back to Home",
-    "legalDisclaimer": "This page is a machine-assisted translation provided for convenience. The English version is authoritative."
+    "breadcrumbHome": "Startseite",
+    "faqTitle": "Häufig gestellte Fragen",
+    "backToHome": "Zurück zur Startseite",
+    "legalDisclaimer": "Diese Seite ist eine maschinell unterstützte Übersetzung, die der Einfachheit halber bereitgestellt wird. Maßgeblich ist die englische Fassung."
   },
   "nav": {
     "blog": "Blog",
-    "about": "About",
-    "toggleHourFormat": "Toggle 12/24h",
-    "copyLink": "Copy link"
+    "about": "Über uns",
+    "toggleHourFormat": "12/24 Std. umschalten",
+    "copyLink": "Link kopieren"
   },
   "language": {
-    "label": "Language",
-    "select": "Select language"
+    "label": "Sprache",
+    "select": "Sprache auswählen"
   },
   "meta": {
     "home": {
-      "title": "Timezio – Time Zone Converter & Meeting Planner",
-      "description": "Instant time zone converter, world clock, DST-aware meeting planner, and timezone comparison on an interactive globe."
+      "title": "Timezio – Zeitzonen-Umrechner & Besprechungsplaner",
+      "description": "Sofortiger Zeitzonen-Umrechner, Weltuhr, sommerzeitbewusster Besprechungsplaner und Zeitzonenvergleich auf einem interaktiven Globus."
     },
     "explore": {
-      "title": "Explore Time Zones on a Globe",
-      "description": "Explore time zones on an interactive 3D globe. Check current time, UTC offset, and DST status for any location."
+      "title": "Zeitzonen auf einem Globus erkunden",
+      "description": "Erkunden Sie Zeitzonen auf einem interaktiven 3D-Globus. Prüfen Sie aktuelle Uhrzeit, UTC-Abweichung und Sommerzeitstatus für jeden Ort."
     },
     "compare": {
-      "title": "Compare Time Zones",
-      "description": "Compare time zones side-by-side with DST-aware offsets. Visualize locations on an interactive globe and avoid scheduling mistakes."
+      "title": "Zeitzonen vergleichen",
+      "description": "Vergleichen Sie Zeitzonen nebeneinander mit sommerzeitbewussten Abweichungen. Visualisieren Sie Orte auf einem interaktiven Globus und vermeiden Sie Planungsfehler."
     },
     "planner": {
-      "title": "Meeting Planner Across Time Zones",
-      "description": "Plan meetings across time zones with working hours, overlap windows, and DST-aware calculations."
+      "title": "Besprechungsplaner über Zeitzonen hinweg",
+      "description": "Planen Sie Besprechungen über Zeitzonen hinweg mit Arbeitszeiten, Überschneidungsfenstern und sommerzeitbewussten Berechnungen."
     },
     "saved": {
-      "title": "Saved Locations & Time Zones",
-      "description": "Save frequently used locations and quickly return to their current time, offset, and DST status."
+      "title": "Gespeicherte Orte & Zeitzonen",
+      "description": "Speichern Sie häufig genutzte Orte und kehren Sie schnell zu ihrer aktuellen Uhrzeit, Abweichung und ihrem Sommerzeitstatus zurück."
     },
     "timeConverter": {
-      "title": "Time Zone Converter – Compare Times, Plan Meetings & Explore Cities",
-      "description": "Compare time zones between cities, plan meetings across regions, and explore local times worldwide. DST-aware, accurate, and free."
+      "title": "Zeitzonen-Umrechner – Zeiten vergleichen, Besprechungen planen & Städte erkunden",
+      "description": "Vergleichen Sie Zeitzonen zwischen Städten, planen Sie Besprechungen über Regionen hinweg und erkunden Sie Ortszeiten weltweit. Sommerzeitbewusst, präzise und kostenlos."
     },
     "meetingPlanner": {
-      "title": "Meeting Planner"
+      "title": "Besprechungsplaner"
     },
     "convertHub": {
-      "title": "Popular Time Zone Converters",
-      "description": "Convert time between zones instantly: PST to EST, UTC to EST, GMT to EST, CET to EST, IST to EST and more. Each converter is DST-aware and shows a full hour-by-hour table."
+      "title": "Beliebte Zeitzonen-Umrechner",
+      "description": "Rechnen Sie Zeit sofort zwischen Zonen um: PST zu EST, UTC zu EST, GMT zu EST, CET zu EST, IST zu EST und mehr. Jeder Umrechner ist sommerzeitbewusst und zeigt eine vollständige Stunde-für-Stunde-Tabelle."
     },
     "timeHub": {
-      "title": "Current Time in Major Cities Worldwide",
-      "description": "Check the current local time in cities around the world. Each page shows live local time, UTC offset, time zone, and daylight saving status — DST-aware and updated in real time."
+      "title": "Aktuelle Uhrzeit in großen Städten weltweit",
+      "description": "Prüfen Sie die aktuelle Ortszeit in Städten rund um die Welt. Jede Seite zeigt die Echtzeit-Ortszeit, UTC-Abweichung, Zeitzone und den Sommerzeitstatus – sommerzeitbewusst und in Echtzeit aktualisiert."
     },
     "meetingHub": {
-      "title": "Best Meeting Times Across Time Zones",
-      "description": "Find overlapping working hours for popular city pairs. Each page shows a shared-hours table and the best slot, fully daylight-saving aware."
+      "title": "Beste Besprechungszeiten über Zeitzonen hinweg",
+      "description": "Finden Sie überlappende Arbeitszeiten für beliebte Städtepaare. Jede Seite zeigt eine Tabelle gemeinsamer Stunden und den besten Zeitfenster, vollständig sommerzeitbewusst."
     },
     "dstHub": {
-      "title": "Daylight Saving Time Checker",
-      "description": "Is a region observing daylight saving time right now? Check DST status, the current UTC offset, and the exact next clock-change dates for countries worldwide."
+      "title": "Sommerzeit-Prüfer",
+      "description": "Gilt in einer Region gerade die Sommerzeit? Prüfen Sie den Sommerzeitstatus, die aktuelle UTC-Abweichung und die genauen Termine der nächsten Zeitumstellung für Länder weltweit."
     },
     "time": {
-      "title": "Current Time in {city}",
-      "description": "See the current local time in {city}, with UTC offset and daylight saving status."
+      "title": "Aktuelle Uhrzeit in {city}",
+      "description": "Sehen Sie die aktuelle Ortszeit in {city} mit UTC-Abweichung und Sommerzeitstatus."
     },
     "convert": {
-      "title": "{from} to {to} Time Converter",
-      "description": "Convert {from} to {to} with a full hour-by-hour table — DST-aware, using official IANA data."
+      "title": "{from} zu {to} Zeitumrechner",
+      "description": "Rechnen Sie {from} zu {to} um – mit einer vollständigen Stunde-für-Stunde-Tabelle, sommerzeitbewusst und auf Basis offizieller IANA-Daten."
     },
     "meeting": {
-      "title": "Best Meeting Time: {a} ↔ {b}",
-      "description": "Find overlapping working hours and the best meeting time between {a} and {b} — fully DST-aware."
+      "title": "Beste Besprechungszeit: {a} ↔ {b}",
+      "description": "Finden Sie überlappende Arbeitszeiten und die beste Besprechungszeit zwischen {a} und {b} – vollständig sommerzeitbewusst."
     },
     "dst": {
-      "title": "{region} Daylight Saving Time",
-      "description": "DST status, the current UTC offset, and the next clock-change dates for {region}."
+      "title": "{region} Sommerzeit",
+      "description": "Sommerzeitstatus, aktuelle UTC-Abweichung und die nächsten Zeitumstellungstermine für {region}."
     },
     "privacy": {
-      "title": "Privacy Policy",
-      "description": "How Timezio collects, uses, and protects information in compliance with GDPR and applicable data protection laws."
+      "title": "Datenschutzerklärung",
+      "description": "Wie Timezio Informationen erhebt, nutzt und schützt – in Übereinstimmung mit der DSGVO und geltenden Datenschutzgesetzen."
     },
     "terms": {
-      "title": "Terms of Service",
-      "description": "Terms and conditions for using Timezio’s timezone tools, converters, and meeting planner."
+      "title": "Nutzungsbedingungen",
+      "description": "Bedingungen für die Nutzung der Zeitzonen-Tools, Umrechner und des Besprechungsplaners von Timezio."
     },
     "about": {
-      "title": "About Timezio",
-      "description": "Timezio is a free, DST-aware time zone converter, world clock, and meeting planner built by AffSquad. Learn who runs it, how it works, and the data behind it."
+      "title": "Über Timezio",
+      "description": "Timezio ist ein kostenloser, sommerzeitbewusster Zeitzonen-Umrechner, eine Weltuhr und ein Besprechungsplaner von AffSquad. Erfahren Sie, wer dahintersteht, wie es funktioniert und welche Daten verwendet werden."
     },
     "contact": {
-      "title": "Contact Timezio Support",
-      "description": "Get help, report issues, or request features for Timezio’s time zone tools. We respond to feedback and support questions."
+      "title": "Timezio-Support kontaktieren",
+      "description": "Erhalten Sie Hilfe, melden Sie Probleme oder schlagen Sie Funktionen für die Zeitzonen-Tools von Timezio vor. Wir reagieren auf Feedback und Supportanfragen."
     },
     "blogIndex": {
-      "title": "Time Zone Guides & Remote Work Tips",
-      "description": "In-depth guides on time zones, daylight saving time, remote collaboration, and using Timezio effectively."
+      "title": "Zeitzonen-Ratgeber & Tipps für Remote-Arbeit",
+      "description": "Ausführliche Anleitungen zu Zeitzonen, Sommerzeit, Remote-Zusammenarbeit und der effektiven Nutzung von Timezio."
     }
   },
   "footer": {
-    "productTitle": "PRODUCT",
-    "exploreTitle": "EXPLORE",
-    "popularTitle": "POPULAR",
-    "legalTitle": "LEGAL",
-    "home": "Home",
-    "exploreGlobe": "Explore Globe",
-    "compareZones": "Compare Zones",
-    "meetingPlanner": "Meeting Planner",
-    "timeConverter": "Time Converter",
-    "worldClock": "World Clock",
-    "converters": "Converters",
-    "meetingTimes": "Meeting Times",
-    "daylightSaving": "Daylight Saving",
+    "productTitle": "PRODUKT",
+    "exploreTitle": "ENTDECKEN",
+    "popularTitle": "BELIEBT",
+    "legalTitle": "RECHTLICHES",
+    "home": "Startseite",
+    "exploreGlobe": "Globus erkunden",
+    "compareZones": "Zonen vergleichen",
+    "meetingPlanner": "Besprechungsplaner",
+    "timeConverter": "Zeitumrechner",
+    "worldClock": "Weltuhr",
+    "converters": "Umrechner",
+    "meetingTimes": "Besprechungszeiten",
+    "daylightSaving": "Sommerzeit",
     "blog": "Blog",
-    "about": "About",
-    "contact": "Contact",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "cookieSettings": "Cookie settings",
-    "copyright": "© {year} Timezio by AffSquad. All rights reserved.",
-    "disclaimer": "Information on this website is provided for general reference only. Accuracy is not guaranteed. No liability is accepted to the extent permitted by EU law. Cookies or similar technologies may be used for analytics and advertising in accordance with your consent choices.",
-    "privacyShort": "Privacy",
-    "termsShort": "Terms"
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "cookieSettings": "Cookie-Einstellungen",
+    "copyright": "© {year} Timezio by AffSquad. Alle Rechte vorbehalten.",
+    "disclaimer": "Die Informationen auf dieser Website dienen ausschließlich allgemeinen Referenzzwecken. Eine Gewähr für die Richtigkeit wird nicht übernommen. Eine Haftung wird im gesetzlich zulässigen Rahmen nach EU-Recht ausgeschlossen. Cookies oder ähnliche Technologien können je nach Ihren Einwilligungsentscheidungen für Analyse- und Werbezwecke eingesetzt werden.",
+    "privacyShort": "Datenschutz",
+    "termsShort": "Bedingungen"
   },
   "consent": {
-    "message": "We use cookies for analytics and to show ads (including Google AdSense). You can accept or reject non-essential cookies. See our <link>Privacy Policy</link>.",
-    "reject": "Reject",
-    "acceptAll": "Accept all"
+    "message": "Wir verwenden Cookies für Analysezwecke und zur Anzeige von Werbung (einschließlich Google AdSense). Sie können nicht notwendige Cookies akzeptieren oder ablehnen. Siehe unsere <link>Datenschutzerklärung</link>.",
+    "reject": "Ablehnen",
+    "acceptAll": "Alle akzeptieren"
   },
   "blog": {
     "indexTitle": "Blog",
-    "indexDescription": "Articles and guides about time zones, remote work, and using Timezio effectively.",
-    "readMore": "Read more",
-    "backToBlog": "Back to Blog",
-    "byTeam": "By the Timezio team",
-    "toolsTitle": "Timezio Tools",
-    "relatedTitle": "Related Articles",
+    "indexDescription": "Artikel und Anleitungen zu Zeitzonen, Remote-Arbeit und der effektiven Nutzung von Timezio.",
+    "readMore": "Weiterlesen",
+    "backToBlog": "Zurück zum Blog",
+    "byTeam": "Vom Timezio-Team",
+    "toolsTitle": "Timezio-Tools",
+    "relatedTitle": "Ähnliche Artikel",
     "tools": [
       {
-        "title": "Explore Globe",
-        "desc": "Click anywhere on the interactive globe to see local time"
+        "title": "Globus erkunden",
+        "desc": "Klicken Sie auf eine beliebige Stelle des interaktiven Globus, um die Ortszeit zu sehen"
       },
       {
-        "title": "Compare Time Zones",
-        "desc": "Compare time differences between multiple cities"
+        "title": "Zeitzonen vergleichen",
+        "desc": "Vergleichen Sie Zeitunterschiede zwischen mehreren Städten"
       },
       {
-        "title": "Meeting Planner",
-        "desc": "Find the best meeting time for people in different locations"
+        "title": "Besprechungsplaner",
+        "desc": "Finden Sie die beste Besprechungszeit für Personen an verschiedenen Orten"
       },
       {
-        "title": "DST Tracker",
-        "desc": "Track daylight saving time changes and transitions"
+        "title": "Sommerzeit-Tracker",
+        "desc": "Verfolgen Sie Sommerzeitumstellungen und Übergänge"
       },
       {
-        "title": "Time Converter",
-        "desc": "Convert UTC or local times between time zones"
+        "title": "Zeitumrechner",
+        "desc": "Rechnen Sie UTC- oder Ortszeiten zwischen Zeitzonen um"
       }
     ]
   },
   "home": {
     "badges": [
-      "Live & DST-aware",
-      "No sign-up",
-      "Free forever"
+      "Live & DST-bewusst",
+      "Ohne Anmeldung",
+      "Für immer kostenlos"
     ],
-    "title": "Plan across time zones without the headaches.",
-    "lede": "Timezio helps you compare time zones, convert UTC, and lock in meeting slots between cities. Every calculation is DST-aware and powered by official IANA data.",
-    "ctaPlanner": "Plan a meeting",
-    "ctaConverter": "Open converter",
+    "title": "Über Zeitzonen hinweg planen – ganz ohne Kopfschmerzen.",
+    "lede": "Mit Timezio vergleichst du Zeitzonen, konvertierst UTC und legst Meeting-Termine zwischen Städten fest. Jede Berechnung berücksichtigt die Sommerzeit und basiert auf den offiziellen IANA-Daten.",
+    "ctaPlanner": "Meeting planen",
+    "ctaConverter": "Konverter öffnen",
     "highlights": [
       {
-        "title": "DST aware",
-        "body": "Powered by official IANA time zone data updated automatically."
+        "title": "DST-bewusst",
+        "body": "Basiert auf den offiziellen IANA-Zeitzonendaten, die automatisch aktualisiert werden."
       },
       {
-        "title": "10k+ cities",
-        "body": "Every offset covered, including 30- and 45-minute differences."
+        "title": "10.000+ Städte",
+        "body": "Jeder Versatz abgedeckt, einschließlich 30- und 45-Minuten-Differenzen."
       },
       {
-        "title": "Share ready",
-        "body": "Copy clean links and send the exact time plan to your team."
+        "title": "Teilbereit",
+        "body": "Kopiere saubere Links und sende deinem Team den exakten Zeitplan."
       }
     ],
-    "panelEyebrow": "Live snapshot",
-    "panelTitle": "What's happening right now",
-    "panelBadge": "DST verified",
-    "panelFooter": "Live examples. Odd offsets and daylight saving rules handled automatically.",
+    "panelEyebrow": "Live-Momentaufnahme",
+    "panelTitle": "Was gerade passiert",
+    "panelBadge": "DST geprüft",
+    "panelFooter": "Live-Beispiele. Ungewöhnliche Versätze und Sommerzeitregeln werden automatisch berücksichtigt.",
     "toolkitEyebrow": "Toolkit",
-    "toolkitTitle": "Everything you need for global timing",
-    "toolkitBody": "Switch between the planner, converter, and city comparison without losing context.",
+    "toolkitTitle": "Alles, was du für globale Terminplanung brauchst",
+    "toolkitBody": "Wechsle zwischen Planer, Konverter und Städtevergleich, ohne den Kontext zu verlieren.",
     "tools": [
       {
-        "label": "Meeting Planner",
-        "desc": "Find overlap-friendly slots automatically and keep everyone out of late nights.",
-        "badge": "Team favorite"
+        "label": "Meeting-Planer",
+        "desc": "Finde automatisch überschneidungsfreundliche Zeitfenster und erspare allen späte Nächte.",
+        "badge": "Team-Favorit"
       },
       {
-        "label": "Time Converter",
-        "desc": "Convert UTC or local times, preview future dates, and share results instantly.",
-        "badge": "Most used"
+        "label": "Zeitkonverter",
+        "desc": "Konvertiere UTC- oder Ortszeiten, sieh dir zukünftige Daten an und teile Ergebnisse sofort.",
+        "badge": "Am meisten genutzt"
       },
       {
-        "label": "City Compare",
-        "desc": "Line up multiple cities side by side to see the exact differences at a glance.",
+        "label": "Städtevergleich",
+        "desc": "Stelle mehrere Städte nebeneinander, um die genauen Unterschiede auf einen Blick zu sehen.",
         "badge": ""
       },
       {
-        "label": "Explore Globe",
-        "desc": "Navigate the interactive globe and jump straight into any city or region.",
+        "label": "Globus erkunden",
+        "desc": "Navigiere über den interaktiven Globus und springe direkt in jede Stadt oder Region.",
         "badge": ""
       }
     ],
-    "toolOpen": "Open →",
-    "whyEyebrow": "Why Timezio",
-    "whyTitle": "Accuracy by default, friendly by design",
-    "whyBody": "Built for remote teams, freelancers, and friends spread across the world.",
+    "toolOpen": "Öffnen →",
+    "whyEyebrow": "Warum Timezio",
+    "whyTitle": "Genauigkeit von Haus aus, benutzerfreundlich im Design",
+    "whyBody": "Entwickelt für Remote-Teams, Freelancer und Freunde, die über die ganze Welt verteilt sind.",
     "values": [
       {
-        "title": "Accurate Time Zone Calculations",
-        "body": "Compare local times between cities with automatic adjustment for daylight saving time and regional UTC offsets."
+        "title": "Präzise Zeitzonenberechnungen",
+        "body": "Vergleiche Ortszeiten zwischen Städten mit automatischer Anpassung an die Sommerzeit und regionale UTC-Versätze."
       },
       {
-        "title": "UTC & Local Time Conversion",
-        "body": "Convert UTC to local time (and back) for any city — past, present, or future dates supported."
+        "title": "UTC- & Ortszeit-Umrechnung",
+        "body": "Konvertiere UTC in Ortszeit (und zurück) für jede Stadt – vergangene, aktuelle oder zukünftige Daten werden unterstützt."
       },
       {
-        "title": "Meeting Planner Across Time Zones",
-        "body": "Find the best overlapping meeting time for participants in different cities, without early mornings or late nights."
+        "title": "Meeting-Planer über Zeitzonen hinweg",
+        "body": "Finde die beste überschneidende Meeting-Zeit für Teilnehmer in verschiedenen Städten – ohne frühe Morgenstunden oder späte Nächte."
       },
       {
-        "title": "Fast, Simple & Free",
-        "body": "No accounts, no setup, no complexity. Just clear answers — instantly."
+        "title": "Schnell, einfach & kostenlos",
+        "body": "Keine Konten, keine Einrichtung, keine Komplexität. Nur klare Antworten – sofort."
       },
       {
-        "title": "DST-Aware & Reliable",
-        "body": "Timezio uses official IANA time zone data. All results automatically adjust for daylight saving time changes and regional rules."
+        "title": "DST-bewusst & zuverlässig",
+        "body": "Timezio verwendet die offiziellen IANA-Zeitzonendaten. Alle Ergebnisse passen sich automatisch an Sommerzeitwechsel und regionale Regeln an."
       },
       {
-        "title": "Built for Global Use",
-        "body": "Supports regions with non-standard offsets (including 30- or 45-minute differences) and date changes when crossing time zones."
+        "title": "Für den weltweiten Einsatz gebaut",
+        "body": "Unterstützt Regionen mit nicht standardmäßigen Versätzen (einschließlich 30- oder 45-Minuten-Differenzen) und Datumswechsel beim Überqueren von Zeitzonen."
       }
     ]
   },
   "pages": {
     "explore": {
-      "heading": "Explore Time Zones",
-      "description": "Pick any point on the globe to see the local time, UTC offset, and daylight saving status. Use Explore to understand where time changes across borders.",
-      "breadcrumb": "Explore",
+      "heading": "Zeitzonen erkunden",
+      "description": "Wähle einen beliebigen Punkt auf dem Globus, um die Ortszeit, den UTC-Versatz und den Sommerzeitstatus zu sehen. Nutze die Erkundung, um zu verstehen, wo sich die Zeit über Grenzen hinweg ändert.",
+      "breadcrumb": "Erkunden",
       "ctas": [
-        "Current time in major cities",
-        "Popular time zone converters",
-        "Daylight saving time checker"
+        "Aktuelle Zeit in großen Städten",
+        "Beliebte Zeitzonenkonverter",
+        "Sommerzeit-Checker"
       ],
-      "articleH2": "How to explore the globe",
+      "articleH2": "So erkundest du den Globus",
       "articleParagraphs": [
-        "The interactive 3D globe turns time zones into something you can see rather than calculate. Click any location and Timezio reads its exact latitude and longitude, looks up the matching IANA time zone, and shows the current local time, the UTC offset, and whether daylight saving time is currently in effect. Because the data comes from the official IANA time zone database, it covers the awkward cases too — half-hour offsets like India (UTC+5:30), 45-minute offsets like Nepal, and regions that change their clocks on different dates.",
-        "Explore is the quickest way to answer “what time is it there right now?” without typing a city name. Spin the globe to a continent, click a coastline, and read the time instantly. When you want to line up several places at once, switch to Compare; when you need to find a slot that works for a team, jump to the Planner. Every view stays in sync, so a city you click here is ready to compare or schedule with one tap.",
-        "Time zones are political as much as geographic — borders, exceptions, and seasonal rules all shift the clock. Seeing them on a globe makes those boundaries obvious, which is why Explore is a good starting point before you convert a specific time or book an international call."
+        "Der interaktive 3D-Globus macht Zeitzonen zu etwas, das man sehen kann, statt es berechnen zu müssen. Klicke auf einen beliebigen Ort, und Timezio liest dessen genaue geografische Breite und Länge aus, ermittelt die passende IANA-Zeitzone und zeigt die aktuelle Ortszeit, den UTC-Versatz und ob gerade Sommerzeit gilt. Da die Daten aus der offiziellen IANA-Zeitzonendatenbank stammen, werden auch die kniffligen Fälle abgedeckt – Halbstunden-Versätze wie in Indien (UTC+5:30), 45-Minuten-Versätze wie in Nepal und Regionen, die ihre Uhren an unterschiedlichen Tagen umstellen.",
+        "Die Erkundung ist der schnellste Weg, um die Frage „Wie spät ist es dort gerade?“ zu beantworten, ohne einen Städtenamen einzutippen. Drehe den Globus zu einem Kontinent, klicke auf eine Küstenlinie und lies die Zeit sofort ab. Wenn du mehrere Orte gleichzeitig abgleichen möchtest, wechsle zu Vergleichen; wenn du ein Zeitfenster finden musst, das für ein Team passt, springe zum Planer. Jede Ansicht bleibt synchron, sodass eine hier angeklickte Stadt mit einem Tippen verglichen oder eingeplant werden kann.",
+        "Zeitzonen sind ebenso politisch wie geografisch – Grenzen, Ausnahmen und saisonale Regeln verschieben alle die Uhr. Sie auf einem Globus zu sehen, macht diese Grenzen offensichtlich, weshalb die Erkundung ein guter Ausgangspunkt ist, bevor du eine bestimmte Zeit umrechnest oder ein internationales Gespräch buchst."
       ]
     },
     "compare": {
-      "heading": "Compare Time Zones",
-      "description": "Compare multiple time zones side-by-side with DST-aware offsets. Add cities, choose a base location, and verify the time difference before you schedule.",
-      "breadcrumb": "Compare",
+      "heading": "Zeitzonen vergleichen",
+      "description": "Vergleiche mehrere Zeitzonen nebeneinander mit DST-bewussten Versätzen. Füge Städte hinzu, wähle einen Basisstandort und überprüfe die Zeitdifferenz, bevor du planst.",
+      "breadcrumb": "Vergleichen",
       "ctas": [
-        "Popular time zone converters",
-        "Best meeting times by city pair",
-        "Daylight saving time checker"
+        "Beliebte Zeitzonenkonverter",
+        "Beste Meeting-Zeiten nach Städtepaar",
+        "Sommerzeit-Checker"
       ],
-      "articleH2": "Compare several cities at once",
+      "articleH2": "Mehrere Städte auf einmal vergleichen",
       "articleParagraphs": [
-        "Add up to six cities and Timezio lines up their current local times in a single view. Pick one as the “base” and every other city shows its difference relative to it, so you can answer questions like “when it’s 9:00 AM in Berlin, what time is it in New York and Singapore?” at a glance. The offsets are calculated from official IANA data and update in real time, including the one-hour shifts that happen when a region enters or leaves daylight saving time.",
-        "Comparing is most useful when the difference isn’t obvious. Many country pairs sit a fractional number of hours apart, and several change their clocks on different weekends, so the gap between two cities can be nine hours one month and ten the next. Lining the cities up side by side catches those edge cases before they turn into a missed call. For a date in the future, change the date and the comparison recalculates with the correct DST rules for that day.",
-        "When you’ve confirmed the difference, copy the share link to send the exact comparison to your team, or move the same set of cities into the Planner to find a meeting slot that works for everyone."
+        "Füge bis zu sechs Städte hinzu, und Timezio stellt ihre aktuellen Ortszeiten in einer einzigen Ansicht nebeneinander. Wähle eine als „Basis“, und jede andere Stadt zeigt ihre Differenz relativ dazu, sodass du Fragen wie „Wenn es in Berlin 9:00 Uhr ist, wie spät ist es dann in New York und Singapur?“ auf einen Blick beantworten kannst. Die Versätze werden aus den offiziellen IANA-Daten berechnet und in Echtzeit aktualisiert, einschließlich der Ein-Stunden-Verschiebungen, die auftreten, wenn eine Region in die Sommerzeit eintritt oder sie verlässt.",
+        "Vergleichen ist am nützlichsten, wenn die Differenz nicht offensichtlich ist. Viele Länderpaare liegen einen Bruchteil einer Stunde auseinander, und mehrere stellen ihre Uhren an unterschiedlichen Wochenenden um, sodass der Abstand zwischen zwei Städten in einem Monat neun und im nächsten zehn Stunden betragen kann. Die Städte nebeneinander aufzureihen, fängt diese Sonderfälle ab, bevor sie zu einem verpassten Anruf werden. Für ein Datum in der Zukunft ändere das Datum, und der Vergleich wird mit den korrekten DST-Regeln für diesen Tag neu berechnet.",
+        "Wenn du die Differenz bestätigt hast, kopiere den Teilen-Link, um deinem Team den genauen Vergleich zu senden, oder übertrage dieselbe Gruppe von Städten in den Planer, um ein Meeting-Zeitfenster zu finden, das für alle passt."
       ]
     },
     "planner": {
-      "heading": "Meeting Planner",
-      "description": "Plan meetings across multiple time zones. Add participants, set working hours, and find overlap windows automatically — fully DST-aware.",
-      "breadcrumb": "Planner",
+      "heading": "Meeting-Planer",
+      "description": "Plane Meetings über mehrere Zeitzonen hinweg. Füge Teilnehmer hinzu, lege Arbeitszeiten fest und finde Überschneidungsfenster automatisch – vollständig DST-bewusst.",
+      "breadcrumb": "Planer",
       "ctas": [
-        "Best meeting times by city pair",
-        "Compare time zones",
-        "Daylight saving time checker"
+        "Beste Meeting-Zeiten nach Städtepaar",
+        "Zeitzonen vergleichen",
+        "Sommerzeit-Checker"
       ],
-      "articleH2": "Find a time that works for everyone",
+      "articleH2": "Finde eine Zeit, die für alle passt",
       "articleParagraphs": [
-        "Add each participant by city, set their working hours, and the planner overlays every schedule to surface the windows when everyone is available. Instead of mentally juggling offsets, you get a ranked list of slots that fall inside each person’s working day, with early-morning and late-night times de-prioritized so nobody has to take a 6 a.m. call. Every calculation is daylight-saving aware, so a slot that works this week still works after a region changes its clocks.",
-        "The planner is built for distributed teams, client calls across continents, and catching up with friends or family abroad. Set a meeting duration, choose a date, and adjust each participant’s hours if they work an unusual shift. You can also widen the search when there is no clean overlap — a common situation for pairs that are ten or more hours apart, where someone has to take an edge slot. For Google Calendar invites and Meet links, connect your account in the planner and confirm a slot.",
-        "Already know the two cities? The pre-built best-meeting-time pages show the overlap for popular pairs without any setup."
+        "Füge jeden Teilnehmer nach Stadt hinzu, lege seine Arbeitszeiten fest, und der Planer überlagert jeden Zeitplan, um die Fenster aufzudecken, in denen alle verfügbar sind. Statt Versätze im Kopf zu jonglieren, erhältst du eine geordnete Liste von Zeitfenstern, die in den Arbeitstag jeder Person fallen, wobei frühe Morgen- und späte Nachtzeiten herabgestuft werden, damit niemand ein Gespräch um 6 Uhr morgens annehmen muss. Jede Berechnung ist sommerzeitbewusst, sodass ein Zeitfenster, das diese Woche passt, auch nach einer Uhrumstellung in einer Region noch passt.",
+        "Der Planer ist für verteilte Teams, Kundengespräche über Kontinente hinweg und das Wiedersehen mit Freunden oder Familie im Ausland gemacht. Lege eine Meeting-Dauer fest, wähle ein Datum und passe die Stunden jedes Teilnehmers an, falls er in einer ungewöhnlichen Schicht arbeitet. Du kannst die Suche auch erweitern, wenn es keine saubere Überschneidung gibt – eine häufige Situation für Paare, die zehn oder mehr Stunden auseinanderliegen, bei denen jemand ein Randzeitfenster nehmen muss. Für Google-Calendar-Einladungen und Meet-Links verbinde dein Konto im Planer und bestätige ein Zeitfenster.",
+        "Du kennst die beiden Städte bereits? Die vorgefertigten Seiten für die beste Meeting-Zeit zeigen die Überschneidung für beliebte Paare ganz ohne Einrichtung."
       ]
     },
     "saved": {
-      "heading": "Saved",
-      "description": "Save your frequently used locations so you can return instantly to their current time, offset, and daylight saving status.",
-      "breadcrumb": "Saved",
+      "heading": "Gespeichert",
+      "description": "Speichere deine häufig verwendeten Standorte, damit du sofort zu ihrer aktuellen Zeit, ihrem Versatz und ihrem Sommerzeitstatus zurückkehren kannst.",
+      "breadcrumb": "Gespeichert",
       "ctas": [
-        "Explore time zones",
-        "Compare time zones",
-        "Plan a meeting across time zones"
+        "Zeitzonen erkunden",
+        "Zeitzonen vergleichen",
+        "Meeting über Zeitzonen hinweg planen"
       ]
     },
     "convertHub": {
-      "title": "Popular Time Zone Converters",
-      "intro1": "A time zone converter answers a deceptively tricky question: when it’s a given time in one place, what time is it somewhere else? The catch is that the gap between two zones isn’t fixed. Daylight saving time shifts it by an hour, the two regions often change their clocks on different weekends, and some zones sit a fractional number of hours apart. Each converter below uses official IANA data, so the result is correct on any date — including the weeks around a clock change when manual math usually goes wrong.",
-      "intro2": "Every converter page includes a full hour-by-hour table for the current day, the live offset between the two zones, and notes on which side observes daylight saving time. Need to check a city rather than an abbreviation? Browse the <world>world clock</world>, or jump to <compare>Compare</compare> to line up more than two places at once.",
-      "listHeading": "Converters"
+      "title": "Beliebte Zeitzonenkonverter",
+      "intro1": "Ein Zeitzonenkonverter beantwortet eine täuschend knifflige Frage: Wenn es an einem Ort eine bestimmte Zeit ist, wie spät ist es dann woanders? Der Haken ist, dass der Abstand zwischen zwei Zonen nicht festgelegt ist. Die Sommerzeit verschiebt ihn um eine Stunde, die beiden Regionen stellen ihre Uhren oft an unterschiedlichen Wochenenden um, und manche Zonen liegen einen Bruchteil einer Stunde auseinander. Jeder Konverter unten verwendet die offiziellen IANA-Daten, sodass das Ergebnis an jedem Datum korrekt ist – auch in den Wochen rund um eine Uhrumstellung, in denen manuelles Rechnen meist schiefgeht.",
+      "intro2": "Jede Konverter-Seite enthält eine vollständige Stunde-für-Stunde-Tabelle für den aktuellen Tag, den Live-Versatz zwischen den beiden Zonen und Hinweise darauf, welche Seite die Sommerzeit beachtet. Möchtest du eine Stadt statt einer Abkürzung prüfen? Durchstöbere die <world>Weltzeituhr</world> oder springe zu <compare>Vergleichen</compare>, um mehr als zwei Orte gleichzeitig nebeneinanderzustellen.",
+      "listHeading": "Konverter"
     },
     "timeHub": {
-      "title": "Current Time in Major Cities Worldwide",
-      "intro1": "Pick a city to see its current local time, the exact UTC offset, the IANA time zone it uses, and whether daylight saving time is in effect right now. Every page updates in real time and is calculated from the official IANA time zone database, so the awkward cases — half-hour offsets, regions that change clocks on different dates, and places that don’t observe DST at all — are handled correctly.",
-      "intro2": "These world-clock pages are the quickest way to check “what time is it there?” before you call, travel, or schedule. To convert a specific time between two places use the <convert>converters</convert>, to line up several cities use <compare>Compare</compare>, and to find a slot that works for a group use the <planner>Meeting Planner</planner>.",
-      "listHeading": "Cities ({count})"
+      "title": "Aktuelle Zeit in großen Städten weltweit",
+      "intro1": "Wähle eine Stadt, um ihre aktuelle Ortszeit, den genauen UTC-Versatz, die verwendete IANA-Zeitzone und ob gerade Sommerzeit gilt, zu sehen. Jede Seite wird in Echtzeit aktualisiert und aus der offiziellen IANA-Zeitzonendatenbank berechnet, sodass die kniffligen Fälle – Halbstunden-Versätze, Regionen, die Uhren an unterschiedlichen Tagen umstellen, und Orte, die überhaupt keine Sommerzeit beachten – korrekt behandelt werden.",
+      "intro2": "Diese Weltzeituhr-Seiten sind der schnellste Weg, um „Wie spät ist es dort?“ zu prüfen, bevor du anrufst, reist oder planst. Um eine bestimmte Zeit zwischen zwei Orten umzurechnen, nutze die <convert>Konverter</convert>, um mehrere Städte nebeneinanderzustellen, nutze <compare>Vergleichen</compare>, und um ein Zeitfenster zu finden, das für eine Gruppe passt, nutze den <planner>Meeting-Planer</planner>.",
+      "listHeading": "Städte ({count})"
     },
     "meetingHub": {
-      "title": "Best Meeting Times by City Pair",
-      "intro1": "Scheduling across continents usually means someone takes a call at a bad hour. These pages do the hard part for you: for each popular city pair, Timezio overlays both teams’ standard 9-to-5 day and lists the hours when everyone is awake and working, plus a recommended slot in the middle of that window. Because the math uses official IANA data, the overlap stays correct even when one city changes its clocks and the other doesn’t.",
-      "intro2": "Pick a pair below for an instant answer, or open the <planner>Meeting Planner</planner> to add your own cities, adjust each participant’s working hours, and generate calendar invites. To double-check the raw time difference first, use <compare>Compare</compare>."
+      "title": "Beste Meeting-Zeiten nach Städtepaar",
+      "intro1": "Über Kontinente hinweg zu planen bedeutet meist, dass jemand ein Gespräch zu einer ungünstigen Zeit annimmt. Diese Seiten erledigen den schwierigen Teil für dich: Für jedes beliebte Städtepaar überlagert Timezio den Standard-Arbeitstag beider Teams von 9 bis 17 Uhr und listet die Stunden auf, in denen alle wach sind und arbeiten, plus ein empfohlenes Zeitfenster in der Mitte dieses Bereichs. Da die Berechnung die offiziellen IANA-Daten verwendet, bleibt die Überschneidung korrekt, selbst wenn eine Stadt ihre Uhren umstellt und die andere nicht.",
+      "intro2": "Wähle unten ein Paar für eine sofortige Antwort oder öffne den <planner>Meeting-Planer</planner>, um deine eigenen Städte hinzuzufügen, die Arbeitszeiten jedes Teilnehmers anzupassen und Kalendereinladungen zu erstellen. Um zuerst die reine Zeitdifferenz zu überprüfen, nutze <compare>Vergleichen</compare>."
     },
     "dstHub": {
-      "title": "Daylight Saving Time by Country",
-      "intro1": "Daylight saving time is one of the biggest sources of scheduling mistakes: clocks move an hour, but not everywhere and not on the same day. These pages tell you, for each region, whether DST is currently in effect, what the present UTC offset is, and the exact dates of the next spring-forward and fall-back transitions — all computed from the official IANA time zone database rather than hard-coded rules that go stale.",
-      "intro2": "Knowing when a region changes its clocks helps you protect recurring meetings, travel plans, and deadlines that span borders. Choose a region below, then use <compare>Compare</compare> or the <planner>Meeting Planner</planner> to see how an upcoming change shifts the time difference with your own location."
+      "title": "Sommerzeit nach Land",
+      "intro1": "Die Sommerzeit ist eine der größten Quellen für Planungsfehler: Die Uhren werden um eine Stunde verstellt, aber nicht überall und nicht am selben Tag. Diese Seiten sagen dir für jede Region, ob gerade Sommerzeit gilt, wie der aktuelle UTC-Versatz lautet und die genauen Daten der nächsten Umstellungen im Frühjahr und Herbst – alles berechnet aus der offiziellen IANA-Zeitzonendatenbank statt aus fest codierten Regeln, die veralten.",
+      "intro2": "Zu wissen, wann eine Region ihre Uhren umstellt, hilft dir, wiederkehrende Meetings, Reisepläne und grenzüberschreitende Fristen zu schützen. Wähle unten eine Region und nutze dann <compare>Vergleichen</compare> oder den <planner>Meeting-Planer</planner>, um zu sehen, wie eine bevorstehende Umstellung die Zeitdifferenz zu deinem eigenen Standort verschiebt."
     }
   },
   "prog": {
     "time": {
-      "breadcrumb": "World Clock",
-      "h1": "Current Time in {city}",
-      "localTime": "Local time",
+      "breadcrumb": "Weltuhr",
+      "h1": "Aktuelle Uhrzeit in {city}",
+      "localTime": "Ortszeit",
       "dateLine": "{date} · {abbr} ({offset})",
-      "factTimeZone": "Time zone",
-      "factUtcOffset": "UTC offset",
-      "factAbbreviation": "Abbreviation",
-      "factDaylight": "Daylight saving",
-      "daylightInEffect": "In effect now",
-      "daylightObservedInactive": "Observed (not active)",
-      "daylightNotObserved": "Not observed",
-      "introMain": "The current local time in {city} is <b>{time}</b> on {date}. {city} runs on the <b>{tz}</b> time zone, which is presently {offsetAbbr}.",
+      "factTimeZone": "Zeitzone",
+      "factUtcOffset": "UTC-Abweichung",
+      "factAbbreviation": "Abkürzung",
+      "factDaylight": "Sommerzeit",
+      "daylightInEffect": "Derzeit aktiv",
+      "daylightObservedInactive": "Üblich (aktuell inaktiv)",
+      "daylightNotObserved": "Nicht üblich",
+      "introMain": "Die aktuelle Ortszeit in {city} ist <b>{time}</b> am {date}. {city} liegt in der Zeitzone <b>{tz}</b>, die derzeit {offsetAbbr} beträgt.",
       "dstSentence": "{observesDst, select, yes {{city} observes daylight saving time, so its UTC offset shifts by one hour between standard and summer time.} other {{city} does not observe daylight saving time, so its UTC offset ({offset}) stays the same all year.}}",
       "transitionLabel": "{type, select, begins {Clocks spring forward — DST begins} other {Clocks fall back — DST ends}}",
-      "nextChange": "<b>Next clock change:</b> {date} — {label}. The UTC offset moves from {fromOffset} to {toOffset}. Plan calls and travel around this date to avoid being an hour off.",
-      "crosslinks": "Use the interactive globe above to compare {city} with other cities, or open the <compare>Compare</compare> tab to line up several time zones side by side. Planning a call? The <planner>Meeting Planner</planner> finds overlapping working hours automatically, and the <dst>DST checker</dst> tracks upcoming clock changes.",
-      "relatedHeading": "Current time in other cities",
-      "wpName": "Current Time in {city}",
-      "wpDesc": "Live local time in {city} ({tz}). Current UTC offset {offsetAbbr}, with daylight saving status and the next clock change.",
-      "faq1q": "What time is it in {city} right now?",
-      "faq1a": "As of {date}, the local time in {city} is around {time} ({abbr}). The clock at the top of this page ticks in real time, and the offset shown is {offset}.",
-      "faq2q": "What time zone is {city} in?",
-      "faq2a": "{city} uses the {tz} IANA time zone{hasAbbr, select, yes {, currently abbreviated {abbr}} other {}}. Its current offset from Coordinated Universal Time is {offset}.",
-      "faq3q": "Does {city} observe daylight saving time?",
+      "nextChange": "<b>Nächste Zeitumstellung:</b> {date} – {label}. Die UTC-Abweichung ändert sich von {fromOffset} auf {toOffset}. Planen Sie Anrufe und Reisen rund um dieses Datum, um keine Stunde danebenzuliegen.",
+      "crosslinks": "Nutzen Sie den interaktiven Globus oben, um {city} mit anderen Städten zu vergleichen, oder öffnen Sie den Tab <compare>Vergleichen</compare>, um mehrere Zeitzonen nebeneinander zu stellen. Planen Sie einen Anruf? Der <planner>Meeting-Planer</planner> findet automatisch überlappende Arbeitszeiten, und der <dst>Sommerzeit-Checker</dst> behält bevorstehende Zeitumstellungen im Blick.",
+      "relatedHeading": "Aktuelle Uhrzeit in anderen Städten",
+      "wpName": "Aktuelle Uhrzeit in {city}",
+      "wpDesc": "Aktuelle Ortszeit in {city} ({tz}). Aktuelle UTC-Abweichung {offsetAbbr}, mit Sommerzeit-Status und der nächsten Zeitumstellung.",
+      "faq1q": "Wie spät ist es gerade in {city}?",
+      "faq1a": "Am {date} beträgt die Ortszeit in {city} etwa {time} ({abbr}). Die Uhr oben auf dieser Seite läuft in Echtzeit, und die angezeigte Abweichung ist {offset}.",
+      "faq2q": "In welcher Zeitzone liegt {city}?",
+      "faq2a": "{city} verwendet die IANA-Zeitzone {tz}{hasAbbr, select, yes {, derzeit abgekürzt {abbr}} other {}}. Die aktuelle Abweichung von der koordinierten Weltzeit beträgt {offset}.",
+      "faq3q": "Gilt in {city} die Sommerzeit?",
       "faq3a": "{observesDst, select, yes {Yes. {city} observes daylight saving time, so its UTC offset shifts by one hour between standard and summer time.{hasNext, select, yes { The next change is on {nextDate}, when the clocks {nextDir, select, forward {move forward} other {move back}} and the offset becomes {nextOffset}.} other {}}} other {{city} does not observe daylight saving time, so its UTC offset ({offset}) stays the same all year.}}",
-      "faq4q": "What is the UTC offset for {city}?",
+      "faq4q": "Wie hoch ist die UTC-Abweichung für {city}?",
       "faq4a": "{city} is currently at {offset}. {observesDst, select, yes {This offset changes by one hour during the daylight saving period.} other {This offset is fixed throughout the year.}}"
     },
     "convert": {
-      "breadcrumb": "Converters",
-      "h1": "{from} to {to} Time Converter",
-      "diffSummary": "{dir, select, same {{to} is currently the same time as {from}.} ahead {{to} is currently {h}h{m, plural, =0 {} other { #m}} ahead of {from}.} other {{to} is currently {h}h{m, plural, =0 {} other { #m}} behind {from}.}}",
-      "introBody": "{from} is {fromFull}; {to} is {toFull}. The table below shows the conversion for every part of the day, with daylight saving time handled automatically.",
-      "factDifference": "Difference",
-      "diffNone": "None",
-      "tableHeading": "{from} → {to} conversion table",
-      "dayNext": "next day",
-      "dayPrev": "previous day",
-      "crosslinks": "Need a specific date or a different pair? Use the interactive globe and the <compare>Compare</compare> tab to preview any moment, including future dates that cross a daylight saving boundary. To schedule a call between these zones, try the <planner>Meeting Planner</planner>.",
-      "relatedHeading": "Related converters",
-      "wpDesc": "Convert {from} to {to}. {summary}",
-      "faq1q": "What is the time difference between {from} and {to}?",
+      "breadcrumb": "Umrechner",
+      "h1": "Zeitumrechner {from} in {to}",
+      "diffSummary": "{dir, select, same {{to} hat derzeit dieselbe Uhrzeit wie {from}.} ahead {{to} ist {from} derzeit {h} Std.{m, plural, =0 {} other { #m}} voraus.} other {{to} liegt derzeit {h} Std.{m, plural, =0 {} other { #m}} hinter {from}.}}",
+      "introBody": "{from} ist {fromFull}; {to} ist {toFull}. Die folgende Tabelle zeigt die Umrechnung für jede Tageszeit, wobei die Sommerzeit automatisch berücksichtigt wird.",
+      "factDifference": "Unterschied",
+      "diffNone": "Keiner",
+      "tableHeading": "Umrechnungstabelle {from} → {to}",
+      "dayNext": "nächster Tag",
+      "dayPrev": "vorheriger Tag",
+      "crosslinks": "Brauchen Sie ein bestimmtes Datum oder ein anderes Paar? Nutzen Sie den interaktiven Globus und den Tab <compare>Vergleichen</compare>, um jeden beliebigen Zeitpunkt anzuzeigen, auch zukünftige Daten, die eine Sommerzeitgrenze überschreiten. Um einen Anruf zwischen diesen Zonen zu planen, probieren Sie den <planner>Meeting-Planer</planner> aus.",
+      "relatedHeading": "Verwandte Umrechner",
+      "wpDesc": "{from} in {to} umrechnen. {summary}",
+      "faq1q": "Wie groß ist der Zeitunterschied zwischen {from} und {to}?",
       "faq1a": "Right now {to} ({toFull}) is {dir, select, same {the same time as} ahead {ahead of} other {behind}} {from} ({fromFull}). The difference is {absH, plural, =0 {zero hours} one {# hour} other {# hours}} and can shift by an hour when either zone enters or leaves daylight saving time.",
-      "faq2q": "How do I convert {from} to {to}?",
-      "faq2a": "Add the {from} time to the offset difference. For example, {exampleFrom} {from} is {exampleTo} {to}. The full hour-by-hour table on this page lists each conversion for the current date.",
-      "faq3q": "Does {from} or {to} use daylight saving time?",
+      "faq2q": "Wie rechne ich {from} in {to} um?",
+      "faq2a": "Addieren Sie die {from}-Zeit zur Differenz der Abweichungen. Zum Beispiel: {exampleFrom} {from} entspricht {exampleTo} {to}. Die vollständige Tabelle Stunde für Stunde auf dieser Seite listet jede Umrechnung für das aktuelle Datum auf.",
+      "faq3q": "Gilt in {from} oder {to} die Sommerzeit?",
       "faq3a": "{from} is currently {fromDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({fromOffset}), and {to} is {toDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({toOffset}). The converter uses official IANA data and adjusts automatically.",
-      "faq4q": "Is this {from} to {to} converter accurate?",
-      "faq4a": "Yes — conversions use the IANA time zone database, the same source operating systems use, and account for current daylight saving rules to the minute."
+      "faq4q": "Ist dieser Umrechner von {from} in {to} genau?",
+      "faq4a": "Ja – die Umrechnungen verwenden die IANA-Zeitzonendatenbank, dieselbe Quelle, die auch Betriebssysteme nutzen, und berücksichtigen die aktuellen Sommerzeitregeln auf die Minute genau."
     },
     "meeting": {
-      "breadcrumb": "Meeting Planner",
-      "h1": "Best Meeting Time: {a} ↔ {b}",
+      "breadcrumb": "Meeting-Planer",
+      "h1": "Beste Meeting-Zeit: {a} ↔ {b}",
       "overlapSentence": "{hasOverlap, select, yes {Standard 9-to-5 working hours in {a} and {b} overlap from {start} to {end} {a} time. A good middle slot is around {bestA} in {a} ({bestB} in {b}).} other {Standard 9-to-5 working hours in {a} and {b} do not overlap, so one side will need an early or late slot. Aim for the start of one city's day and the end of the other's.}}",
-      "introTail": "All times below are for today and adjust automatically for daylight saving time.",
-      "sharedWorkHours": "Shared work hours",
-      "hoursUnit": "{count} h",
-      "noneWorkHours": "None (9–5)",
-      "tableHeading": "Overlapping working hours",
-      "noOverlapBody": "No 9-to-5 overlap today. Open the Planner above to widen working hours or pick an edge slot that works for both teams.",
-      "crosslinks": "The Planner tab above already has {a} and {b} loaded. Adjust each participant's hours, set a duration, and Timezio ranks the best slots. To double-check the raw offset, use the <compare>Compare</compare> tab.",
-      "relatedHeading": "More meeting pairs",
-      "wpDesc": "Find the best meeting time between {a} and {b}. {overlap}",
-      "faq1q": "What is the best time to schedule a meeting between {a} and {b}?",
+      "introTail": "Alle Zeiten unten gelten für heute und passen sich automatisch an die Sommerzeit an.",
+      "sharedWorkHours": "Gemeinsame Arbeitszeiten",
+      "hoursUnit": "{count} Std.",
+      "noneWorkHours": "Keine (9–17 Uhr)",
+      "tableHeading": "Überlappende Arbeitszeiten",
+      "noOverlapBody": "Heute keine Überschneidung von 9 bis 17 Uhr. Öffnen Sie den Planer oben, um die Arbeitszeiten zu erweitern, oder wählen Sie einen Randtermin, der für beide Teams passt.",
+      "crosslinks": "Im Planer-Tab oben sind {a} und {b} bereits geladen. Passen Sie die Arbeitszeiten jedes Teilnehmers an, legen Sie eine Dauer fest, und Timezio bewertet die besten Zeitfenster. Um die reine Abweichung gegenzuprüfen, nutzen Sie den Tab <compare>Vergleichen</compare>.",
+      "relatedHeading": "Weitere Meeting-Paare",
+      "wpDesc": "Finden Sie die beste Meeting-Zeit zwischen {a} und {b}. {overlap}",
+      "faq1q": "Wann ist die beste Zeit für ein Meeting zwischen {a} und {b}?",
       "faq1a": "{hasOverlap, select, yes {The cleanest option is around {bestA} in {a}, which is {bestB} in {b} — inside both teams' working day. The overlap table on this page lists every shared hour for today.} other {There is no clean overlap during standard hours, so pick the least disruptive edge: early morning for one city or early evening for the other. The table on this page shows each hour side by side.}}",
-      "faq2q": "What is the time difference between {a} and {b}?",
-      "faq2a": "{a} is currently {offsetA} and {b} is {offsetB}. The difference can move by an hour around daylight saving transitions, which this tool accounts for automatically.",
-      "faq3q": "How do I plan a recurring call across {a} and {b}?",
-      "faq3a": "Use the Planner tab above — both cities are pre-loaded. Set each participant's working hours and Timezio highlights overlapping slots and warns about early-morning or late-night times."
+      "faq2q": "Wie groß ist der Zeitunterschied zwischen {a} und {b}?",
+      "faq2a": "{a} liegt derzeit bei {offsetA} und {b} bei {offsetB}. Der Unterschied kann sich rund um die Sommerzeitumstellungen um eine Stunde verschieben, was dieses Tool automatisch berücksichtigt.",
+      "faq3q": "Wie plane ich einen wiederkehrenden Anruf zwischen {a} und {b}?",
+      "faq3a": "Nutzen Sie den Planer-Tab oben – beide Städte sind bereits geladen. Legen Sie die Arbeitszeiten jedes Teilnehmers fest, und Timezio hebt überlappende Zeitfenster hervor und warnt vor Zeiten am frühen Morgen oder späten Abend."
     },
     "dst": {
-      "breadcrumb": "Daylight Saving Time",
-      "h1": "{region} Daylight Saving Time",
+      "breadcrumb": "Sommerzeit",
+      "h1": "Sommerzeit in {region}",
       "intro": "{observesDst, select, yes {{region} observes daylight saving time. Clocks are currently {isDst, select, yes {on summer time (DST in effect)} other {on standard time}}, at {offset}. The reference zone for {region} is {tz} ({city}).} other {{region} does not currently observe daylight saving time. The offset stays at {offset} all year. The reference zone is {tz} ({city}).}}",
-      "factObservesDst": "Observes DST",
-      "yes": "Yes",
-      "no": "No",
-      "factCurrentOffset": "Current offset",
+      "factObservesDst": "Sommerzeit üblich",
+      "yes": "Ja",
+      "no": "Nein",
+      "factCurrentOffset": "Aktuelle Abweichung",
       "factStatus": "Status",
-      "summerTime": "Summer time",
-      "standardTime": "Standard time",
-      "factReferenceZone": "Reference zone",
-      "changesHeading": "Next clock changes",
-      "colChange": "Change",
-      "colDate": "Date",
-      "colOffset": "Offset",
-      "springForward": "Spring forward (DST begins)",
-      "fallBack": "Fall back (DST ends)",
-      "crosslinks": "Daylight saving changes shift {region}'s offset by an hour, which can quietly break recurring meetings. Check the live difference against your own zone with the <compare>Compare</compare> tab, or schedule around the change using the <planner>Meeting Planner</planner>.",
-      "relatedHeading": "DST in other regions",
-      "faq1q": "Does {region} observe daylight saving time?",
+      "summerTime": "Sommerzeit",
+      "standardTime": "Standardzeit",
+      "factReferenceZone": "Referenzzone",
+      "changesHeading": "Nächste Zeitumstellungen",
+      "colChange": "Umstellung",
+      "colDate": "Datum",
+      "colOffset": "Abweichung",
+      "springForward": "Uhren vorstellen (Sommerzeit beginnt)",
+      "fallBack": "Uhren zurückstellen (Sommerzeit endet)",
+      "crosslinks": "Die Sommerzeitumstellung verschiebt die Abweichung von {region} um eine Stunde, was wiederkehrende Meetings unbemerkt durcheinanderbringen kann. Prüfen Sie den aktuellen Unterschied zu Ihrer eigenen Zone mit dem Tab <compare>Vergleichen</compare>, oder planen Sie rund um die Umstellung mit dem <planner>Meeting-Planer</planner>.",
+      "relatedHeading": "Sommerzeit in anderen Regionen",
+      "faq1q": "Gilt in {region} die Sommerzeit?",
       "faq1a": "{observesDst, select, yes {Yes. {region} changes its clocks twice a year. It is currently {isDst, select, yes {on daylight saving (summer) time} other {on standard time}} at {offset}.} other {No. {region} keeps a fixed offset of {offset} throughout the year and does not change its clocks.}}",
-      "faq2q": "When do the clocks change in {region}?",
+      "faq2q": "Wann werden in {region} die Uhren umgestellt?",
       "faq2a": "{observesDst, select, yes {{hasBegins, select, yes {Clocks next spring forward on {beginsDate} (offset {beginsFrom} → {beginsTo}). } other {}}{hasEnds, select, yes {Clocks next fall back on {endsDate} (offset {endsFrom} → {endsTo}).} other {}}} other {{region} does not change its clocks, so there is no spring-forward or fall-back date.}}",
-      "faq3q": "What is the current UTC offset for {region}?",
+      "faq3q": "Wie hoch ist die aktuelle UTC-Abweichung für {region}?",
       "faq3a": "{region} is currently at {offset}{hasAbbr, select, yes { ({abbr})} other {}}. {observesDst, select, yes {This shifts by one hour when daylight saving begins or ends.} other {This offset is fixed.}}"
     }
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 09.01.2026",
+      "title": "Datenschutzerklärung",
+      "updated": "Zuletzt aktualisiert: 09.01.2026",
       "intro": [
         {
           "type": "p",
-          "text": "This Privacy Policy explains how we collect, use, and protect information when you visit and use this website (the \"Website\")."
+          "text": "Diese Datenschutzerklärung erläutert, wie wir Informationen erfassen, verwenden und schützen, wenn Sie diese Website (die „Website“) besuchen und nutzen."
         },
         {
           "type": "p",
-          "text": "We are committed to protecting your privacy and processing personal data in accordance with applicable data protection laws, including the General Data Protection Regulation (EU) 2016/679 (GDPR)."
+          "text": "Wir verpflichten uns, Ihre Privatsphäre zu schützen und personenbezogene Daten in Übereinstimmung mit den geltenden Datenschutzgesetzen zu verarbeiten, einschließlich der Datenschutz-Grundverordnung (EU) 2016/679 (GDPR)."
         }
       ],
       "sections": [
         {
-          "heading": "1. Information We Collect",
+          "heading": "1. Welche Informationen wir erfassen",
           "blocks": [
             {
               "type": "subheading",
-              "text": "1.1 Information You Do Not Provide Directly"
+              "text": "1.1 Informationen, die Sie nicht direkt bereitstellen"
             },
             {
               "type": "p",
-              "text": "This Website does not require user registration and does not ask users to provide personal information to use its core features."
-            },
-            {
-              "type": "subheading",
-              "text": "1.2 Automatically Collected Information"
-            },
-            {
-              "type": "p",
-              "text": "When you visit the Website, limited information may be collected automatically, including:"
-            },
-            {
-              "type": "list",
-              "items": [
-                "IP address (anonymized/truncated where supported by the tool)",
-                "Browser type and version",
-                "Device type and operating system",
-                "Pages visited and interaction data",
-                "Referring website",
-                "Approximate geographic location (city or country level)"
-              ]
-            },
-            {
-              "type": "p",
-              "text": "This information is used only for analytics, security, and service improvement purposes."
-            }
-          ]
-        },
-        {
-          "heading": "1.3 Service Data You May Provide",
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Core tools (time conversion, planner) work without registration. If you choose to save/share meeting data, connect a calendar, or sign in with Google, we may store the meeting/session details you submit (e.g., participant names or labels, time slots, titles) and your Google account email to enable the feature. You can request deletion of this stored data at any time (see Contact)."
-            }
-          ]
-        },
-        {
-          "heading": "2. Cookies and Similar Technologies",
-          "blocks": [
-            {
-              "type": "p",
-              "text": "The Website may use cookies or similar technologies to:"
-            },
-            {
-              "type": "list",
-              "items": [
-                "Measure traffic and usage patterns",
-                "Understand how users interact with the Website",
-                "Improve performance and user experience",
-                "Show advertising where enabled"
-              ]
-            },
-            {
-              "type": "p",
-              "text": "Cookies used on this Website do not directly identify you as an individual."
-            },
-            {
-              "type": "p",
-              "text": "Where required by applicable law, cookies that are not strictly necessary are used only after obtaining user consent through a cookie banner or consent mechanism."
-            },
-            {
-              "type": "p",
-              "text": "You can manage or withdraw your consent at any time through your browser settings or the cookie settings provided on the Website."
-            }
-          ]
-        },
-        {
-          "heading": "3. Analytics and Advertising",
-          "blocks": [
-            {
-              "type": "subheading",
-              "text": "3.1 Analytics"
-            },
-            {
-              "type": "p",
-              "text": "We may use analytics tools (e.g., Google Analytics via Google Tag Manager or privacy-focused alternatives) to understand how visitors use the Website. These tools collect usage data (pages viewed, device/browser info, approximate location) and can be configured to anonymize IP where supported. Non-essential analytics only load after consent where required."
+              "text": "Diese Website erfordert keine Registrierung und verlangt von den Nutzern keine Angabe personenbezogener Daten, um ihre Kernfunktionen zu nutzen."
             },
             {
               "type": "subheading",
-              "text": "3.2 Advertising"
+              "text": "1.2 Automatisch erfasste Informationen"
             },
             {
               "type": "p",
-              "text": "The Website may display advertisements from third-party partners such as Google AdSense (served via Google Tag Manager). These partners may use cookies or similar technologies to display relevant ads and may process data (e.g., cookie IDs, coarse location, device info). Advertising cookies are loaded only after consent where required."
-            },
-            {
-              "type": "p",
-              "text": "Advertising partners process information under their own privacy policies and may transfer data outside your region under appropriate safeguards (e.g., Standard Contractual Clauses). You can withdraw or change your cookie and advertising consent at any time using the **“Cookie settings”** link in the website footer, or through your browser settings."
-            },
-            {
-              "type": "p",
-              "text": "You can also control or opt out of personalized advertising directly with the providers and industry programs:"
+              "text": "Wenn Sie die Website besuchen, können bestimmte Informationen automatisch erfasst werden, darunter:"
             },
             {
               "type": "list",
               "items": [
-                "Google Ads Settings — [adssettings.google.com](https://adssettings.google.com)",
-                "How Google uses data from partner sites — [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites)",
-                "US opt-out (DAA) — [optout.aboutads.info](https://optout.aboutads.info) · [youradchoices.com](https://www.youradchoices.com)",
-                "EU opt-out (EDAA) — [youronlinechoices.eu](https://www.youronlinechoices.eu)"
+                "IP-Adresse (anonymisiert/gekürzt, sofern vom Tool unterstützt)",
+                "Browsertyp und -version",
+                "Gerätetyp und Betriebssystem",
+                "Besuchte Seiten und Interaktionsdaten",
+                "Verweisende Website",
+                "Ungefährer geografischer Standort (auf Stadt- oder Länderebene)"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Diese Informationen werden ausschließlich für Analyse-, Sicherheits- und Verbesserungszwecke verwendet."
+            }
+          ]
+        },
+        {
+          "heading": "1.3 Dienstdaten, die Sie bereitstellen können",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Die Kernfunktionen (Zeitumrechnung, Planer) funktionieren ohne Registrierung. Wenn Sie sich dafür entscheiden, Termindaten zu speichern/zu teilen, einen Kalender zu verbinden oder sich mit Google anzumelden, speichern wir möglicherweise die von Ihnen übermittelten Termin-/Sitzungsdetails (z. B. Teilnehmernamen oder -bezeichnungen, Zeitfenster, Titel) sowie die E-Mail-Adresse Ihres Google-Kontos, um die Funktion zu ermöglichen. Sie können die Löschung dieser gespeicherten Daten jederzeit verlangen (siehe Kontakt)."
+            }
+          ]
+        },
+        {
+          "heading": "2. Cookies und ähnliche Technologien",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Die Website kann Cookies oder ähnliche Technologien verwenden, um:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Datenverkehr und Nutzungsmuster zu messen",
+                "Zu verstehen, wie Nutzer mit der Website interagieren",
+                "Leistung und Nutzererlebnis zu verbessern",
+                "Werbung anzuzeigen, sofern aktiviert"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Die auf dieser Website verwendeten Cookies identifizieren Sie nicht unmittelbar als Person."
+            },
+            {
+              "type": "p",
+              "text": "Soweit nach geltendem Recht erforderlich, werden nicht zwingend notwendige Cookies erst nach Einholung der Einwilligung des Nutzers über ein Cookie-Banner oder einen Einwilligungsmechanismus eingesetzt."
+            },
+            {
+              "type": "p",
+              "text": "Sie können Ihre Einwilligung jederzeit über Ihre Browsereinstellungen oder die auf der Website bereitgestellten Cookie-Einstellungen verwalten oder widerrufen."
+            }
+          ]
+        },
+        {
+          "heading": "3. Analyse und Werbung",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "3.1 Analyse"
+            },
+            {
+              "type": "p",
+              "text": "Wir können Analyse-Tools verwenden (z. B. Google Analytics über Google Tag Manager oder datenschutzfreundliche Alternativen), um zu verstehen, wie Besucher die Website nutzen. Diese Tools erfassen Nutzungsdaten (aufgerufene Seiten, Geräte-/Browserinformationen, ungefährer Standort) und können so konfiguriert werden, dass IP-Adressen anonymisiert werden, sofern unterstützt. Nicht zwingend erforderliche Analysen werden – wo erforderlich – erst nach Einwilligung geladen."
+            },
+            {
+              "type": "subheading",
+              "text": "3.2 Werbung"
+            },
+            {
+              "type": "p",
+              "text": "Die Website kann Werbung von Drittpartnern wie Google AdSense anzeigen (ausgeliefert über Google Tag Manager). Diese Partner können Cookies oder ähnliche Technologien verwenden, um relevante Anzeigen einzublenden, und können Daten verarbeiten (z. B. Cookie-IDs, grober Standort, Geräteinformationen). Werbe-Cookies werden – wo erforderlich – erst nach Einwilligung geladen."
+            },
+            {
+              "type": "p",
+              "text": "Werbepartner verarbeiten Informationen gemäß ihren eigenen Datenschutzrichtlinien und können Daten unter geeigneten Garantien außerhalb Ihrer Region übermitteln (z. B. Standard Contractual Clauses). Sie können Ihre Einwilligung für Cookies und Werbung jederzeit über den Link **„Cookie-Einstellungen“** in der Fußzeile der Website oder über Ihre Browsereinstellungen widerrufen oder ändern."
+            },
+            {
+              "type": "p",
+              "text": "Sie können personalisierte Werbung auch direkt bei den Anbietern und über Branchenprogramme steuern oder deaktivieren:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Google Ads-Einstellungen — [adssettings.google.com](https://adssettings.google.com)",
+                "Wie Google Daten von Partnerseiten verwendet — [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites)",
+                "US-Opt-out (DAA) — [optout.aboutads.info](https://optout.aboutads.info) · [youradchoices.com](https://www.youradchoices.com)",
+                "EU-Opt-out (EDAA) — [youronlinechoices.eu](https://www.youronlinechoices.eu)"
               ]
             }
           ]
         },
         {
-          "heading": "4. How We Use Information",
+          "heading": "4. Wie wir Informationen verwenden",
           "blocks": [
             {
               "type": "p",
-              "text": "Collected information may be used to:"
+              "text": "Die erfassten Informationen können verwendet werden, um:"
             },
             {
               "type": "list",
               "items": [
-                "Operate and maintain the Website",
-                "Improve tools, features, and usability",
-                "Analyze usage trends and performance",
-                "Ensure security and prevent abuse",
-                "Comply with legal obligations"
+                "Die Website zu betreiben und zu pflegen",
+                "Tools, Funktionen und Benutzerfreundlichkeit zu verbessern",
+                "Nutzungstrends und Leistung zu analysieren",
+                "Sicherheit zu gewährleisten und Missbrauch zu verhindern",
+                "Gesetzlichen Verpflichtungen nachzukommen"
               ]
             },
             {
               "type": "p",
-              "text": "**We do not sell personal data.**"
+              "text": "**Wir verkaufen keine personenbezogenen Daten.**"
             }
           ]
         },
         {
-          "heading": "5. Legal Basis for Processing (GDPR)",
+          "heading": "5. Rechtsgrundlage für die Verarbeitung (GDPR)",
           "blocks": [
             {
               "type": "p",
-              "text": "Under the GDPR, personal data is processed on the following legal bases:"
+              "text": "Gemäß der GDPR werden personenbezogene Daten auf folgenden Rechtsgrundlagen verarbeitet:"
             },
             {
               "type": "list",
               "items": [
-                "**Consent** — for non-essential cookies/analytics/advertising where required",
-                "**Legitimate interests** — to operate, secure, and improve the Website",
-                "**Legal obligation** — where processing is required by law"
+                "**Einwilligung** — für nicht zwingend notwendige Cookies/Analyse/Werbung, sofern erforderlich",
+                "**Berechtigte Interessen** — zum Betrieb, zur Absicherung und Verbesserung der Website",
+                "**Gesetzliche Verpflichtung** — sofern die Verarbeitung gesetzlich vorgeschrieben ist"
               ]
             }
           ]
         },
         {
-          "heading": "6. Data Retention",
+          "heading": "6. Speicherdauer",
           "blocks": [
             {
               "type": "p",
-              "text": "We retain collected data only for as long as necessary to fulfill the purposes described in this Privacy Policy, unless a longer retention period is required or permitted by law."
+              "text": "Wir bewahren erfasste Daten nur so lange auf, wie es zur Erfüllung der in dieser Datenschutzerklärung beschriebenen Zwecke erforderlich ist, sofern nicht eine längere Aufbewahrungsfrist gesetzlich vorgeschrieben oder zulässig ist."
             }
           ]
         },
         {
-          "heading": "7. Data Sharing and Third Parties",
+          "heading": "7. Datenweitergabe und Dritte",
           "blocks": [
             {
               "type": "p",
-              "text": "We may share limited data with trusted third-party service providers (such as analytics or advertising providers) strictly for the purposes described in this Privacy Policy."
+              "text": "Wir können begrenzte Daten ausschließlich für die in dieser Datenschutzerklärung beschriebenen Zwecke an vertrauenswürdige Drittanbieter (wie Analyse- oder Werbeanbieter) weitergeben."
             },
             {
               "type": "p",
-              "text": "All such providers are required to process data in compliance with applicable data protection laws."
+              "text": "Alle diese Anbieter sind verpflichtet, Daten in Übereinstimmung mit den geltenden Datenschutzgesetzen zu verarbeiten."
             },
             {
               "type": "p",
-              "text": "Some providers (e.g., Google) may process data outside the European Economic Area (EEA). When that occurs, we rely on appropriate safeguards such as Standard Contractual Clauses or equivalent mechanisms."
+              "text": "Einige Anbieter (z. B. Google) verarbeiten Daten möglicherweise außerhalb des Europäischen Wirtschaftsraums (EWR). In diesem Fall stützen wir uns auf geeignete Garantien wie Standard Contractual Clauses oder gleichwertige Mechanismen."
             }
           ]
         },
         {
-          "heading": "8. Your Rights Under GDPR",
+          "heading": "8. Ihre Rechte gemäß GDPR",
           "blocks": [
             {
               "type": "p",
-              "text": "If you are located in the European Union, you have the right to:"
+              "text": "Wenn Sie sich in der Europäischen Union befinden, haben Sie das Recht:"
             },
             {
               "type": "list",
               "items": [
-                "Access your personal data",
-                "Request correction of inaccurate data",
-                "Request deletion of your data",
-                "Restrict or object to processing",
-                "Withdraw consent at any time",
-                "Lodge a complaint with a supervisory authority"
+                "Auf Ihre personenbezogenen Daten zuzugreifen",
+                "Die Berichtigung unrichtiger Daten zu verlangen",
+                "Die Löschung Ihrer Daten zu verlangen",
+                "Die Verarbeitung einzuschränken oder ihr zu widersprechen",
+                "Ihre Einwilligung jederzeit zu widerrufen",
+                "Eine Beschwerde bei einer Aufsichtsbehörde einzureichen"
               ]
             },
             {
               "type": "p",
-              "text": "You may exercise these rights by contacting us using the details provided below."
+              "text": "Sie können diese Rechte ausüben, indem Sie uns über die unten angegebenen Kontaktdaten kontaktieren."
             }
           ]
         },
         {
-          "heading": "9. US State Privacy Rights (CCPA / CPRA & similar)",
+          "heading": "9. Datenschutzrechte von US-Bundesstaaten (CCPA / CPRA und ähnliche)",
           "blocks": [
             {
               "type": "p",
-              "text": "If you are a resident of California or another US state with comprehensive privacy laws, you may have the right to know what personal information is collected, to request access or deletion, to correct inaccurate information, and to opt out of the “sale” or “sharing” of personal information and of targeted advertising."
+              "text": "Wenn Sie in Kalifornien oder einem anderen US-Bundesstaat mit umfassenden Datenschutzgesetzen ansässig sind, haben Sie möglicherweise das Recht, zu erfahren, welche personenbezogenen Informationen erfasst werden, Zugang oder Löschung zu verlangen, unrichtige Informationen zu korrigieren und dem „Verkauf“ oder „Teilen“ personenbezogener Informationen sowie zielgerichteter Werbung zu widersprechen."
             },
             {
               "type": "p",
-              "text": "We do not sell personal information for money. However, the use of advertising cookies may be considered “sharing” or a “sale” under some state laws. You can opt out of personalized advertising using the **“Cookie settings”** link in the footer and the industry opt-out tools listed in Section 3.2. Where supported, we honor the Global Privacy Control (GPC) browser signal as a valid opt-out request."
+              "text": "Wir verkaufen keine personenbezogenen Informationen gegen Bezahlung. Die Verwendung von Werbe-Cookies kann nach einigen bundesstaatlichen Gesetzen jedoch als „Teilen“ oder „Verkauf“ gelten. Sie können personalisierte Werbung über den Link **„Cookie-Einstellungen“** in der Fußzeile sowie über die in Abschnitt 3.2 aufgeführten Branchen-Opt-out-Tools deaktivieren. Soweit unterstützt, berücksichtigen wir das Browsersignal Global Privacy Control (GPC) als gültige Widerspruchsanfrage."
             },
             {
               "type": "p",
-              "text": "To exercise any of these rights, contact us using the details in Section 14. We will not discriminate against you for exercising your privacy rights."
+              "text": "Um eines dieser Rechte auszuüben, kontaktieren Sie uns über die in Abschnitt 14 angegebenen Daten. Wir werden Sie nicht für die Ausübung Ihrer Datenschutzrechte benachteiligen."
             }
           ]
         },
         {
-          "heading": "10. Children's Privacy",
+          "heading": "10. Datenschutz für Kinder",
           "blocks": [
             {
               "type": "p",
-              "text": "This Website is not intended for children under the age of 16. We do not knowingly collect personal data from children."
+              "text": "Diese Website richtet sich nicht an Kinder unter 16 Jahren. Wir erfassen nicht wissentlich personenbezogene Daten von Kindern."
             }
           ]
         },
         {
-          "heading": "11. Security",
+          "heading": "11. Sicherheit",
           "blocks": [
             {
               "type": "p",
-              "text": "We take reasonable technical and organizational measures to protect information against unauthorized access, loss, misuse, or alteration. However, no method of transmission or storage is completely secure."
+              "text": "Wir treffen angemessene technische und organisatorische Maßnahmen, um Informationen vor unbefugtem Zugriff, Verlust, Missbrauch oder Veränderung zu schützen. Keine Übertragungs- oder Speichermethode ist jedoch vollständig sicher."
             }
           ]
         },
         {
-          "heading": "12. External Links",
+          "heading": "12. Externe Links",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website may contain links to third-party websites. We are not responsible for the content or privacy practices of those websites."
+              "text": "Die Website kann Links zu Websites Dritter enthalten. Wir sind nicht für die Inhalte oder die Datenschutzpraktiken dieser Websites verantwortlich."
             }
           ]
         },
         {
-          "heading": "13. Changes to This Privacy Policy",
+          "heading": "13. Änderungen dieser Datenschutzerklärung",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated \"Last updated\" date."
+              "text": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Etwaige Änderungen werden auf dieser Seite mit einem aktualisierten Datum „Zuletzt aktualisiert“ veröffentlicht."
             },
             {
               "type": "p",
-              "text": "We encourage users to review this page periodically. If changes materially affect how we process your data, we will provide a clear notice (e.g., on this page or via the Website interface)."
+              "text": "Wir empfehlen den Nutzern, diese Seite regelmäßig zu überprüfen. Sofern Änderungen die Art und Weise, wie wir Ihre Daten verarbeiten, wesentlich beeinflussen, werden wir einen deutlichen Hinweis bereitstellen (z. B. auf dieser Seite oder über die Benutzeroberfläche der Website)."
             }
           ]
         },
         {
-          "heading": "14. Contact Information",
+          "heading": "14. Kontaktinformationen",
           "blocks": [
             {
               "type": "p",
-              "text": "If you have questions about this Privacy Policy or how data is processed on this Website, you may contact us at:"
+              "text": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder zur Verarbeitung von Daten auf dieser Website haben, können Sie uns unter folgender Adresse kontaktieren:"
             },
             {
               "type": "emailBox",
-              "label": "Email:",
+              "label": "E-Mail:",
               "email": "hello@timezio.com"
             }
           ]
@@ -716,173 +716,173 @@
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 09.01.2026",
+      "title": "Nutzungsbedingungen",
+      "updated": "Zuletzt aktualisiert: 09.01.2026",
       "intro": [
         {
           "type": "p",
-          "text": "These Terms of Service (\"Terms\") govern your access to and use of this website (the \"Website\"). By accessing or using the Website, you agree to be bound by these Terms. If you do not agree, please discontinue use of the Website."
+          "text": "Diese Nutzungsbedingungen („Bedingungen“) regeln Ihren Zugang zu und Ihre Nutzung dieser Website (der „Website“). Durch den Zugriff auf die Website oder ihre Nutzung erklären Sie sich mit diesen Bedingungen einverstanden. Wenn Sie nicht einverstanden sind, stellen Sie bitte die Nutzung der Website ein."
         }
       ],
       "sections": [
         {
-          "heading": "1. Purpose of the Website",
+          "heading": "1. Zweck der Website",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website provides tools and information related to time zones, time differences, UTC conversions, and meeting planning for general informational purposes only."
+              "text": "Die Website stellt Tools und Informationen zu Zeitzonen, Zeitunterschieden, UTC-Umrechnungen und Terminplanung bereit, die ausschließlich allgemeinen Informationszwecken dienen."
             },
             {
               "type": "p",
-              "text": "The Website does not provide legal, financial, professional, or time-critical advisory services."
+              "text": "Die Website bietet keine rechtlichen, finanziellen, professionellen oder zeitkritischen Beratungsdienste an."
             }
           ]
         },
         {
-          "heading": "2. Use of the Website",
+          "heading": "2. Nutzung der Website",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree to use the Website only for lawful purposes and in a manner that does not:"
+              "text": "Sie verpflichten sich, die Website nur für rechtmäßige Zwecke und in einer Weise zu nutzen, die nicht:"
             },
             {
               "type": "list",
               "items": [
-                "Violate applicable laws or regulations",
-                "Infringe the rights of others",
-                "Interfere with or disrupt the operation of the Website",
-                "Attempt to gain unauthorized access to any part of the Website"
+                "Gegen geltende Gesetze oder Vorschriften verstößt",
+                "Die Rechte anderer verletzt",
+                "Den Betrieb der Website beeinträchtigt oder stört",
+                "Versucht, sich unbefugten Zugang zu irgendeinem Teil der Website zu verschaffen"
               ]
             },
             {
               "type": "p",
-              "text": "We reserve the right to restrict or terminate access to the Website at any time if misuse is detected."
+              "text": "Wir behalten uns das Recht vor, den Zugang zur Website jederzeit einzuschränken oder zu beenden, wenn Missbrauch festgestellt wird."
             }
           ]
         },
         {
-          "heading": "3. Accuracy of Information",
+          "heading": "3. Richtigkeit der Informationen",
           "blocks": [
             {
               "type": "p",
-              "text": "While we make reasonable efforts to ensure that the information and calculations provided on the Website are accurate and based on recognized public time zone data, we do not guarantee that the content is complete, current, or error-free."
+              "text": "Obwohl wir angemessene Anstrengungen unternehmen, um sicherzustellen, dass die auf der Website bereitgestellten Informationen und Berechnungen korrekt sind und auf anerkannten öffentlichen Zeitzonendaten beruhen, übernehmen wir keine Gewähr dafür, dass die Inhalte vollständig, aktuell oder fehlerfrei sind."
             },
             {
               "type": "p",
-              "text": "Time zone rules and daylight saving time practices may change due to governmental or regulatory decisions. You acknowledge that any reliance on the information provided is at your own risk."
+              "text": "Zeitzonenregeln und Sommerzeitpraktiken können sich aufgrund staatlicher oder behördlicher Entscheidungen ändern. Sie erkennen an, dass jegliches Vertrauen auf die bereitgestellten Informationen auf eigenes Risiko erfolgt."
             }
           ]
         },
         {
-          "heading": "4. No Warranty",
+          "heading": "4. Keine Gewährleistung",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website and all content and tools are provided on an \"as is\" and \"as available\" basis."
+              "text": "Die Website sowie alle Inhalte und Tools werden „wie besehen“ und „wie verfügbar“ bereitgestellt."
             },
             {
               "type": "p",
-              "text": "To the fullest extent permitted by applicable law, we disclaim all warranties, whether express or implied, including but not limited to implied warranties of accuracy, reliability, fitness for a particular purpose, and non-infringement."
+              "text": "Soweit nach geltendem Recht zulässig, schließen wir alle ausdrücklichen oder stillschweigenden Gewährleistungen aus, einschließlich, aber nicht beschränkt auf stillschweigende Gewährleistungen hinsichtlich Richtigkeit, Zuverlässigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten."
             }
           ]
         },
         {
-          "heading": "5. Limitation of Liability",
+          "heading": "5. Haftungsbeschränkung",
           "blocks": [
             {
               "type": "p",
-              "text": "To the extent permitted by applicable European Union law, we shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with your use of, or inability to use, the Website or reliance on its content."
+              "text": "Soweit nach geltendem Recht der Europäischen Union zulässig, haften wir nicht für direkte, indirekte, zufällige, Folge- oder besondere Schäden, die sich aus oder im Zusammenhang mit Ihrer Nutzung der Website, der Unmöglichkeit ihrer Nutzung oder dem Vertrauen auf deren Inhalte ergeben."
             },
             {
               "type": "p",
-              "text": "This includes, without limitation, loss of data, loss of business, missed meetings, or scheduling errors."
+              "text": "Dies umfasst, ohne Einschränkung, Datenverlust, Geschäftsverlust, verpasste Termine oder Planungsfehler."
             }
           ]
         },
         {
-          "heading": "6. Intellectual Property",
+          "heading": "6. Geistiges Eigentum",
           "blocks": [
             {
               "type": "p",
-              "text": "All content on the Website, including text, design, layout, logos, and software, is the property of the Website owner or its licensors and is protected by applicable intellectual property laws."
+              "text": "Alle Inhalte der Website, einschließlich Text, Design, Layout, Logos und Software, sind Eigentum des Website-Betreibers oder seiner Lizenzgeber und durch die geltenden Gesetze zum Schutz geistigen Eigentums geschützt."
             },
             {
               "type": "p",
-              "text": "You may use the Website for personal and non-commercial purposes. You may not copy, reproduce, distribute, modify, or exploit any part of the Website without prior written permission, except where permitted by law."
+              "text": "Sie dürfen die Website für persönliche und nicht kommerzielle Zwecke nutzen. Sie dürfen keinen Teil der Website ohne vorherige schriftliche Genehmigung kopieren, vervielfältigen, verbreiten, verändern oder verwerten, außer soweit gesetzlich zulässig."
             }
           ]
         },
         {
-          "heading": "7. Third-Party Services and Advertising",
+          "heading": "7. Dienste Dritter und Werbung",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website may display advertisements or include links to third-party websites or services."
+              "text": "Die Website kann Werbung anzeigen oder Links zu Websites oder Diensten Dritter enthalten."
             },
             {
               "type": "p",
-              "text": "We do not control and are not responsible for the content, availability, or practices of third-party websites. Your interaction with third-party services is governed by their respective terms and privacy policies."
+              "text": "Wir kontrollieren die Inhalte, Verfügbarkeit oder Praktiken von Websites Dritter nicht und sind dafür nicht verantwortlich. Ihre Interaktion mit Diensten Dritter unterliegt deren jeweiligen Bedingungen und Datenschutzrichtlinien."
             }
           ]
         },
         {
-          "heading": "8. Privacy and Data Protection",
+          "heading": "8. Datenschutz und Datensicherheit",
           "blocks": [
             {
               "type": "p",
-              "text": "Your use of the Website is also governed by our [Privacy Policy](/privacy), which explains how personal data is processed in accordance with applicable data protection laws, including the GDPR."
+              "text": "Ihre Nutzung der Website unterliegt zudem unserer [Datenschutzerklärung](/privacy), die erläutert, wie personenbezogene Daten in Übereinstimmung mit den geltenden Datenschutzgesetzen, einschließlich der GDPR, verarbeitet werden."
             }
           ]
         },
         {
-          "heading": "9. Changes to the Website or Terms",
+          "heading": "9. Änderungen der Website oder der Bedingungen",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update, modify, suspend, or discontinue any part of the Website at any time without prior notice."
+              "text": "Wir können jeden Teil der Website jederzeit ohne vorherige Ankündigung aktualisieren, ändern, aussetzen oder einstellen."
             },
             {
               "type": "p",
-              "text": "We may also update these Terms from time to time. Any changes will be effective once posted on this page, with the \"Last updated\" date revised accordingly."
+              "text": "Wir können diese Bedingungen auch von Zeit zu Zeit aktualisieren. Etwaige Änderungen werden mit ihrer Veröffentlichung auf dieser Seite wirksam, wobei das Datum „Zuletzt aktualisiert“ entsprechend angepasst wird."
             },
             {
               "type": "p",
-              "text": "Continued use of the Website after changes constitutes acceptance of the updated Terms."
+              "text": "Die fortgesetzte Nutzung der Website nach Änderungen gilt als Annahme der aktualisierten Bedingungen."
             }
           ]
         },
         {
-          "heading": "10. Governing Law and Jurisdiction",
+          "heading": "10. Anwendbares Recht und Gerichtsstand",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms shall be governed by and construed in accordance with the laws of the European Union and, where applicable, the laws of the country in which the Website operator is established."
+              "text": "Diese Bedingungen unterliegen dem Recht der Europäischen Union und werden in Übereinstimmung damit ausgelegt sowie, soweit anwendbar, dem Recht des Landes, in dem der Website-Betreiber niedergelassen ist."
             },
             {
               "type": "p",
-              "text": "Nothing in these Terms limits your statutory rights as a consumer under applicable EU law."
+              "text": "Nichts in diesen Bedingungen schränkt Ihre gesetzlichen Rechte als Verbraucher nach geltendem EU-Recht ein."
             }
           ]
         },
         {
-          "heading": "11. Severability",
+          "heading": "11. Salvatorische Klausel",
           "blocks": [
             {
               "type": "p",
-              "text": "If any provision of these Terms is found to be unlawful, invalid, or unenforceable, the remaining provisions shall remain in full force and effect."
+              "text": "Sollte eine Bestimmung dieser Bedingungen als rechtswidrig, ungültig oder nicht durchsetzbar erachtet werden, bleiben die übrigen Bestimmungen in vollem Umfang gültig und wirksam."
             }
           ]
         },
         {
-          "heading": "12. Contact Information",
+          "heading": "12. Kontaktinformationen",
           "blocks": [
             {
               "type": "p",
-              "text": "If you have any questions regarding these Terms of Service, you may contact us at:"
+              "text": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, können Sie uns unter folgender Adresse kontaktieren:"
             },
             {
               "type": "emailBox",
-              "label": "Email:",
+              "label": "E-Mail:",
               "email": "hello@timezio.com"
             }
           ]
@@ -890,309 +890,309 @@
       ]
     },
     "about": {
-      "title": "About This Website",
+      "title": "Über diese Website",
       "intro": [
         {
           "type": "p",
-          "text": "This website was created to make working across time zones simple, accurate, and stress-free. Whether you're planning a meeting with colleagues abroad, checking the current time in another city, converting UTC, or traveling across countries, our tools help you instantly understand time differences without confusion."
+          "text": "Diese Website wurde geschaffen, um die Arbeit über Zeitzonen hinweg einfach, präzise und stressfrei zu machen. Ob Sie ein Meeting mit Kollegen im Ausland planen, die aktuelle Uhrzeit in einer anderen Stadt prüfen, UTC umrechnen oder durch verschiedene Länder reisen – unsere Tools helfen Ihnen, Zeitunterschiede sofort und ohne Verwirrung zu verstehen."
         }
       ],
       "sections": [
         {
-          "heading": "Who runs Timezio",
+          "heading": "Wer Timezio betreibt",
           "blocks": [
             {
               "type": "p",
-              "text": "Timezio is built and operated by **AffSquad**, an independent studio that makes free, privacy-respecting web utilities. We're a small team that relies on these tools ourselves to coordinate across time zones, and we keep Timezio free by displaying ads. Questions, corrections, or feedback are always welcome at [hello@timezio.com](mailto:hello@timezio.com) — see the [Contact](/contact) page for more ways to reach us."
+              "text": "Timezio wird von **AffSquad** entwickelt und betrieben, einem unabhängigen Studio, das kostenlose, datenschutzfreundliche Web-Tools erstellt. Wir sind ein kleines Team, das diese Tools selbst nutzt, um sich über Zeitzonen hinweg abzustimmen, und wir halten Timezio durch die Anzeige von Werbung kostenlos. Fragen, Korrekturen oder Feedback sind jederzeit willkommen unter [hello@timezio.com](mailto:hello@timezio.com) – weitere Möglichkeiten, uns zu erreichen, finden Sie auf der Seite [Kontakt](/contact)."
             }
           ]
         },
         {
-          "heading": "Core Principles",
+          "heading": "Grundprinzipien",
           "blocks": [
             {
               "type": "subheading",
-              "text": "Accuracy"
+              "text": "Genauigkeit"
             },
             {
               "type": "p",
-              "text": "All calculations are based on official IANA time zone data and are fully daylight-saving-time (DST) aware."
+              "text": "Alle Berechnungen basieren auf den offiziellen IANA-Zeitzonendaten und berücksichtigen die Sommerzeit (DST) vollständig."
             },
             {
               "type": "subheading",
-              "text": "Simplicity"
+              "text": "Einfachheit"
             },
             {
               "type": "p",
-              "text": "Clean, fast tools that work instantly without unnecessary steps."
+              "text": "Übersichtliche, schnelle Tools, die ohne unnötige Schritte sofort funktionieren."
             },
             {
               "type": "subheading",
-              "text": "Reliability"
+              "text": "Zuverlässigkeit"
             },
             {
               "type": "p",
-              "text": "Built for daily use by professionals, travelers, remote teams, and digital nomads."
+              "text": "Entwickelt für den täglichen Einsatz durch Berufstätige, Reisende, Remote-Teams und digitale Nomaden."
             }
           ]
         },
         {
-          "heading": "Automatic Calculations",
+          "heading": "Automatische Berechnungen",
           "blocks": [
             {
               "type": "p",
-              "text": "Our calculators automatically account for:"
+              "text": "Unsere Rechner berücksichtigen automatisch:"
             },
             {
               "type": "list",
               "items": [
-                "Daylight saving time changes",
-                "Different UTC offsets",
-                "Date changes when crossing time zones",
-                "Regions with non-standard offsets (such as 30- or 45-minute differences)"
+                "Sommerzeitumstellungen",
+                "Unterschiedliche UTC-Abweichungen",
+                "Datumswechsel beim Überqueren von Zeitzonen",
+                "Regionen mit nicht standardmäßigen Abweichungen (etwa Unterschiede von 30 oder 45 Minuten)"
               ]
             },
             {
               "type": "p",
-              "text": "This website is designed to be useful worldwide and is updated regularly to reflect official time zone rules."
+              "text": "Diese Website ist darauf ausgelegt, weltweit nützlich zu sein, und wird regelmäßig aktualisiert, um die offiziellen Zeitzonenregeln widerzuspiegeln."
             }
           ]
         },
         {
-          "heading": "Who This Website Is For",
+          "heading": "Für wen diese Website gedacht ist",
           "blocks": [
             {
               "type": "list",
               "items": [
-                "Remote workers and distributed teams",
-                "Business professionals scheduling international meetings",
-                "Travelers and frequent flyers",
-                "Students and educators",
-                "Anyone who needs to convert or compare time zones accurately"
+                "Remote-Mitarbeiter und verteilte Teams",
+                "Geschäftsleute, die internationale Meetings planen",
+                "Reisende und Vielflieger",
+                "Studierende und Lehrende",
+                "Alle, die Zeitzonen genau umrechnen oder vergleichen müssen"
               ]
             },
             {
               "type": "p",
-              "text": "**No accounts. No complexity. Just clear answers.**"
+              "text": "**Keine Konten. Keine Komplexität. Nur klare Antworten.**"
             }
           ]
         },
         {
-          "heading": "How to Use This Website",
+          "heading": "So nutzen Sie diese Website",
           "blocks": [
             {
               "type": "subheading",
-              "text": "1. Explore — Interactive Globe"
+              "text": "1. Erkunden – Interaktiver Globus"
             },
             {
               "type": "p",
-              "text": "Click anywhere on the 3D globe to instantly see the local time for that location."
+              "text": "Klicken Sie an eine beliebige Stelle auf dem 3D-Globus, um sofort die Ortszeit für diesen Standort zu sehen."
             },
             {
               "type": "p",
-              "text": "**How it works:** Click a location on the globe or search for a city. View the current time, UTC offset, and DST status. Perfect for quick checks and exploring time zones visually."
+              "text": "**So funktioniert es:** Klicken Sie auf einen Ort auf dem Globus oder suchen Sie nach einer Stadt. Sehen Sie die aktuelle Uhrzeit, die UTC-Abweichung und den DST-Status. Perfekt für schnelle Überprüfungen und das visuelle Erkunden von Zeitzonen."
             },
             {
               "type": "subheading",
-              "text": "2. Compare — Time Zone Comparison"
+              "text": "2. Vergleichen – Zeitzonenvergleich"
             },
             {
               "type": "p",
-              "text": "Compare time differences between multiple cities simultaneously."
+              "text": "Vergleichen Sie Zeitunterschiede zwischen mehreren Städten gleichzeitig."
             },
             {
               "type": "p",
-              "text": "**How it works:** Add up to 6 cities to compare. Select a base city to see time differences relative to it. Instantly see current local times, offsets, and visual comparisons. This is ideal for answering questions like \"When it's 9:00 AM in Berlin, what time is it in New York?\""
+              "text": "**So funktioniert es:** Fügen Sie bis zu 6 Städte zum Vergleich hinzu. Wählen Sie eine Basisstadt, um die Zeitunterschiede relativ zu ihr zu sehen. Sehen Sie sofort die aktuellen Ortszeiten, Abweichungen und visuellen Vergleiche. Ideal, um Fragen zu beantworten wie „Wenn es in Berlin 9:00 Uhr ist, wie spät ist es dann in New York?“"
             },
             {
               "type": "subheading",
-              "text": "3. Planner — Meeting Planner"
+              "text": "3. Planer – Meeting-Planer"
             },
             {
               "type": "p",
-              "text": "Find the best meeting time for people in different locations."
+              "text": "Finden Sie die beste Meeting-Zeit für Personen an verschiedenen Standorten."
             },
             {
               "type": "p",
-              "text": "**How it works:** Add participants by city, select a meeting date, and optionally adjust working hours for each participant. View overlapping time windows and share the meeting details. This tool automatically avoids early-morning or late-night hours when possible."
+              "text": "**So funktioniert es:** Fügen Sie Teilnehmer nach Stadt hinzu, wählen Sie ein Meeting-Datum und passen Sie optional die Arbeitszeiten jedes Teilnehmers an. Sehen Sie überlappende Zeitfenster und teilen Sie die Meeting-Details. Dieses Tool vermeidet nach Möglichkeit automatisch frühe Morgen- oder späte Nachtstunden."
             },
             {
               "type": "subheading",
-              "text": "4. DST — Daylight Saving Time"
+              "text": "4. DST – Sommerzeit"
             },
             {
               "type": "p",
-              "text": "Track daylight saving time changes and transitions throughout the year."
+              "text": "Verfolgen Sie Sommerzeitumstellungen und Übergänge im Laufe des Jahres."
             },
             {
               "type": "p",
-              "text": "**How it works:** View DST status for any location, see upcoming transitions, and understand when clocks change. Check how DST affects time differences between regions."
+              "text": "**So funktioniert es:** Sehen Sie den DST-Status für einen beliebigen Standort, kommende Übergänge und wann die Uhren umgestellt werden. Prüfen Sie, wie sich die Sommerzeit auf die Zeitunterschiede zwischen Regionen auswirkt."
             },
             {
               "type": "subheading",
-              "text": "5. Saved — Favorite Locations"
+              "text": "5. Gespeichert – Lieblingsorte"
             },
             {
               "type": "p",
-              "text": "Save your frequently used locations for quick access."
+              "text": "Speichern Sie Ihre häufig genutzten Standorte für schnellen Zugriff."
             },
             {
               "type": "p",
-              "text": "**How it works:** Save locations you check often. Access them instantly without searching. Your saved locations are stored locally in your browser."
+              "text": "**So funktioniert es:** Speichern Sie Standorte, die Sie häufig prüfen. Greifen Sie sofort darauf zu, ohne zu suchen. Ihre gespeicherten Standorte werden lokal in Ihrem Browser gespeichert."
             }
           ]
         },
         {
-          "heading": "Frequently Asked Questions",
+          "heading": "Häufig gestellte Fragen",
           "blocks": [
             {
               "type": "subheading",
-              "text": "What time zone data does this website use?"
+              "text": "Welche Zeitzonendaten verwendet diese Website?"
             },
             {
               "type": "p",
-              "text": "We use official IANA time zone definitions, which are the global standard for accurate time calculations."
+              "text": "Wir verwenden die offiziellen IANA-Zeitzonendefinitionen, die der globale Standard für präzise Zeitberechnungen sind."
             },
             {
               "type": "subheading",
-              "text": "Does the website account for daylight saving time?"
+              "text": "Berücksichtigt die Website die Sommerzeit?"
             },
             {
               "type": "p",
-              "text": "Yes. All calculations automatically adjust for daylight saving time based on the selected date and location."
+              "text": "Ja. Alle Berechnungen passen sich basierend auf dem ausgewählten Datum und Standort automatisch an die Sommerzeit an."
             },
             {
               "type": "subheading",
-              "text": "Can I check future or past dates?"
+              "text": "Kann ich zukünftige oder vergangene Daten prüfen?"
             },
             {
               "type": "p",
-              "text": "Yes. You can select any date and time to see how time differences change throughout the year."
+              "text": "Ja. Sie können ein beliebiges Datum und eine beliebige Uhrzeit auswählen, um zu sehen, wie sich die Zeitunterschiede im Laufe des Jahres ändern."
             },
             {
               "type": "subheading",
-              "text": "Why does the time difference change during the year?"
+              "text": "Warum ändert sich der Zeitunterschied im Laufe des Jahres?"
             },
             {
               "type": "p",
-              "text": "Time differences change because some regions observe daylight saving time while others do not, or they change clocks on different dates."
+              "text": "Zeitunterschiede ändern sich, weil einige Regionen die Sommerzeit beachten und andere nicht oder weil sie ihre Uhren an unterschiedlichen Daten umstellen."
             },
             {
               "type": "subheading",
-              "text": "Are cities with the same name supported?"
+              "text": "Werden Städte mit demselben Namen unterstützt?"
             },
             {
               "type": "p",
-              "text": "Yes. Cities are identified by both name and country to avoid confusion (for example, multiple cities named \"Springfield\")."
+              "text": "Ja. Städte werden zur Vermeidung von Verwechslungen sowohl anhand ihres Namens als auch ihres Landes identifiziert (zum Beispiel mehrere Städte namens „Springfield“)."
             },
             {
               "type": "subheading",
-              "text": "Is this website free to use?"
+              "text": "Ist die Nutzung dieser Website kostenlos?"
             },
             {
               "type": "p",
-              "text": "Yes. All tools on this website are completely free to use and require no registration."
+              "text": "Ja. Alle Tools auf dieser Website sind vollständig kostenlos nutzbar und erfordern keine Registrierung."
             },
             {
               "type": "subheading",
-              "text": "Can I share or bookmark results?"
+              "text": "Kann ich Ergebnisse teilen oder als Lesezeichen speichern?"
             },
             {
               "type": "p",
-              "text": "Yes. Tool pages generate clean, shareable URLs that you can bookmark or send to others using the \"Copy link\" button."
+              "text": "Ja. Die Tool-Seiten erzeugen übersichtliche, teilbare URLs, die Sie als Lesezeichen speichern oder über die Schaltfläche „Link kopieren“ an andere senden können."
             },
             {
               "type": "subheading",
-              "text": "How accurate are the results?"
+              "text": "Wie genau sind die Ergebnisse?"
             },
             {
               "type": "p",
-              "text": "Results are accurate to the minute and based on official time zone rules, but should not be used for legal or critical decisions without verification."
+              "text": "Die Ergebnisse sind auf die Minute genau und basieren auf den offiziellen Zeitzonenregeln, sollten aber für rechtliche oder kritische Entscheidungen nicht ohne Überprüfung verwendet werden."
             }
           ]
         }
       ]
     },
     "contact": {
-      "title": "Contact Us",
+      "title": "Kontakt",
       "intro": [
         {
           "type": "p",
-          "text": "We value your feedback and are happy to hear from you."
+          "text": "Wir schätzen Ihr Feedback und freuen uns, von Ihnen zu hören."
         },
         {
           "type": "p",
-          "text": "If you have questions about how our tools work, would like to report an issue, or want to share suggestions for improvement, please feel free to get in touch."
+          "text": "Wenn Sie Fragen zur Funktionsweise unserer Tools haben, ein Problem melden möchten oder Verbesserungsvorschläge teilen wollen, zögern Sie nicht, uns zu kontaktieren."
         },
         {
           "type": "p",
-          "text": "Timezio is operated by **AffSquad**, an independent studio that builds free web utilities."
+          "text": "Timezio wird von **AffSquad** betrieben, einem unabhängigen Studio, das kostenlose Web-Tools entwickelt."
         }
       ],
       "sections": [
         {
-          "heading": "How to Contact Us",
+          "heading": "So erreichen Sie uns",
           "blocks": [
             {
               "type": "p",
-              "text": "You can contact us by email:"
+              "text": "Sie können uns per E-Mail kontaktieren:"
             },
             {
               "type": "emailBox",
-              "label": "Email:",
+              "label": "E-Mail:",
               "email": "hello@timezio.com"
             },
             {
               "type": "p",
-              "text": "We aim to respond to messages within a reasonable time. Please note that response times may vary depending on the volume of inquiries."
+              "text": "Wir bemühen uns, Nachrichten innerhalb einer angemessenen Zeit zu beantworten. Bitte beachten Sie, dass die Antwortzeiten je nach Anfragevolumen variieren können."
             }
           ]
         },
         {
-          "heading": "What You Can Contact Us About",
+          "heading": "Worüber Sie uns kontaktieren können",
           "blocks": [
             {
               "type": "p",
-              "text": "You may contact us regarding:"
+              "text": "Sie können uns kontaktieren bezüglich:"
             },
             {
               "type": "list",
               "items": [
-                "Questions about time zone calculations or tool functionality",
-                "Reporting incorrect or outdated information",
-                "Technical issues or bugs on the website",
-                "General feedback and improvement suggestions"
+                "Fragen zu Zeitzonenberechnungen oder zur Funktionsweise der Tools",
+                "Meldung falscher oder veralteter Informationen",
+                "Technischer Probleme oder Fehler auf der Website",
+                "Allgemeinem Feedback und Verbesserungsvorschlägen"
               ]
             },
             {
               "type": "note",
-              "text": "**Please note:** We are unable to provide personalized scheduling advice, legal guidance, or time-critical confirmations."
+              "text": "**Bitte beachten Sie:** Wir können keine personalisierte Terminberatung, Rechtsberatung oder zeitkritische Bestätigungen anbieten."
             }
           ]
         },
         {
-          "heading": "Personal Data and Privacy",
+          "heading": "Personenbezogene Daten und Datenschutz",
           "blocks": [
             {
               "type": "p",
-              "text": "If you contact us by email, we will process any personal data you provide (such as your email address and message content) solely for the purpose of responding to your inquiry."
+              "text": "Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von Ihnen bereitgestellten personenbezogenen Daten (wie Ihre E-Mail-Adresse und den Inhalt Ihrer Nachricht) ausschließlich zum Zweck der Beantwortung Ihrer Anfrage."
             },
             {
               "type": "p",
-              "text": "Your information will be handled in accordance with applicable data protection laws, including the General Data Protection Regulation (EU) 2016/679 (GDPR)."
+              "text": "Ihre Daten werden in Übereinstimmung mit den geltenden Datenschutzgesetzen behandelt, einschließlich der Datenschutz-Grundverordnung (EU) 2016/679 (GDPR)."
             },
             {
               "type": "p",
-              "text": "For more details, please refer to our [Privacy Policy](/privacy)."
+              "text": "Weitere Einzelheiten finden Sie in unserer [Datenschutzerklärung](/privacy)."
             }
           ]
         },
         {
-          "heading": "Important Notice",
+          "heading": "Wichtiger Hinweis",
           "blocks": [
             {
               "type": "note",
-              "text": "The information provided through this website and via email responses is for general informational purposes only and should not be relied upon for legal, financial, aviation, or other time-critical decisions."
+              "text": "Die über diese Website und in E-Mail-Antworten bereitgestellten Informationen dienen ausschließlich allgemeinen Informationszwecken und sollten nicht als Grundlage für rechtliche, finanzielle, luftfahrtbezogene oder andere zeitkritische Entscheidungen herangezogen werden."
             }
           ]
         }
@@ -1201,392 +1201,392 @@
   },
   "ui": {
     "converter": {
-      "heading": "Time Zone Converter",
-      "description": "Explore and convert time zones on an interactive globe, check local times, and find overlaps for meetings. Fully DST-aware and powered by official IANA data.",
-      "compareCta": "Compare time zones",
-      "plannerCta": "Plan a meeting"
+      "heading": "Zeitzonen-Umrechner",
+      "description": "Erkunden und konvertieren Sie Zeitzonen auf einem interaktiven Globus, prüfen Sie Ortszeiten und finden Sie Überschneidungen für Meetings. Vollständig DST-fähig und gestützt auf offizielle IANA-Daten.",
+      "compareCta": "Zeitzonen vergleichen",
+      "plannerCta": "Meeting planen"
     },
     "tabBar": {
-      "explore": "Explore",
-      "planner": "Planner",
-      "compare": "Compare",
+      "explore": "Erkunden",
+      "planner": "Planer",
+      "compare": "Vergleichen",
       "dst": "DST",
-      "saved": "Saved"
+      "saved": "Gespeichert"
     },
     "exploreTab": {
-      "searchCity": "Search City",
-      "searchCitySubtitle": "Find any city around the world",
-      "popularCities": "Popular Cities",
-      "popularCitiesSubtitle": "Click on a city to view its time"
+      "searchCity": "Stadt suchen",
+      "searchCitySubtitle": "Finden Sie jede Stadt weltweit",
+      "popularCities": "Beliebte Städte",
+      "popularCitiesSubtitle": "Klicken Sie auf eine Stadt, um ihre Zeit anzuzeigen"
     },
     "compareTab": {
-      "compare": "Compare",
-      "subtitle": "Add 2–6 locations and compare offsets/time. (MVP: offsets + diff)",
-      "addCityPlaceholder": "Add city to compare…",
-      "addSelected": "Add selected",
-      "clear": "Clear",
-      "noItems": "No compare items. Add a city or “Add selected”.",
-      "baseLabel": "Base:",
-      "base": "Base",
-      "focus": "Focus",
-      "remove": "Remove",
-      "offsetMatrix": "Offset matrix (vs base)",
-      "location": "Location",
-      "localTime": "Local time",
-      "utcOffset": "UTC offset",
-      "deltaHours": "Δ hours"
+      "compare": "Vergleichen",
+      "subtitle": "Fügen Sie 2–6 Standorte hinzu und vergleichen Sie Offsets/Zeit. (MVP: Offsets + Differenz)",
+      "addCityPlaceholder": "Stadt zum Vergleich hinzufügen…",
+      "addSelected": "Auswahl hinzufügen",
+      "clear": "Leeren",
+      "noItems": "Keine Vergleichselemente. Fügen Sie eine Stadt hinzu oder „Auswahl hinzufügen“.",
+      "baseLabel": "Basis:",
+      "base": "Basis",
+      "focus": "Fokus",
+      "remove": "Entfernen",
+      "offsetMatrix": "Offset-Matrix (vs. Basis)",
+      "location": "Standort",
+      "localTime": "Ortszeit",
+      "utcOffset": "UTC-Offset",
+      "deltaHours": "Δ Stunden"
     },
     "dstTab": {
-      "noChangeFound": "No change found (≈370 days scan)",
+      "noChangeFound": "Keine Änderung gefunden (≈370-Tage-Scan)",
       "title": "DST",
-      "bestEffort": "Best-effort: Luxon doesn’t expose IANA transition tables, so we scan forward until offset changes.",
-      "selectLocation": "Select a location in Explore.",
-      "timezone": "Timezone",
-      "currentLocalTime": "Current local time",
-      "abbrev": "Abbrev",
-      "nextOffsetChange": "Next offset change",
-      "transitionNote": "Note: Transition timestamp is approximate (minute-level). For exact changes you’d need a tzdb transition table.",
-      "infrequentChange": "Some timezones don’t change offset often (or at all)."
+      "bestEffort": "Best Effort: Luxon stellt keine IANA-Übergangstabellen bereit, daher scannen wir vorwärts, bis sich der Offset ändert.",
+      "selectLocation": "Wählen Sie einen Standort unter „Erkunden“ aus.",
+      "timezone": "Zeitzone",
+      "currentLocalTime": "Aktuelle Ortszeit",
+      "abbrev": "Kürzel",
+      "nextOffsetChange": "Nächste Offset-Änderung",
+      "transitionNote": "Hinweis: Der Übergangszeitpunkt ist ungefähr (minutengenau). Für exakte Änderungen wäre eine tzdb-Übergangstabelle nötig.",
+      "infrequentChange": "Manche Zeitzonen ändern ihren Offset selten (oder gar nicht)."
     },
     "savedTab": {
-      "title": "Saved",
-      "subtitle": "Stored in localStorage (ids only). Use share link to carry full payload.",
-      "emptyState": "No saved locations yet. Save from Explore.",
-      "select": "Select",
-      "compare": "Compare",
-      "remove": "Remove"
+      "title": "Gespeichert",
+      "subtitle": "Im localStorage gespeichert (nur IDs). Nutzen Sie den Freigabelink, um die vollständigen Daten zu übertragen.",
+      "emptyState": "Noch keine gespeicherten Standorte. Speichern Sie sie unter „Erkunden“.",
+      "select": "Auswählen",
+      "compare": "Vergleichen",
+      "remove": "Entfernen"
     },
     "plannerTab": {
-      "errProvideTitle": "Please provide title",
-      "msgSessionCreated": "Meeting session created",
-      "msgSessionCreatedWithTz": "Meeting session created with your timezone added automatically",
-      "errCreateSession": "Failed to create session",
-      "errCreateSessionFirst": "Create a session first",
-      "errNameRequired": "Name is required",
-      "errSelectLocation": "Please select a location on the globe or search for a city first",
-      "msgParticipantAdded": "Participant added",
-      "errAddParticipant": "Failed to add participant",
-      "errAddParticipantBackend": "Failed to add participant to backend",
-      "errAddTwoParticipants": "Add at least 2 participants first",
-      "msgGeneratedSlots": "Generated {count} slots on backend",
-      "errGenerateSlots": "Failed to generate slots",
-      "errCreateSessionSelectSlot": "Please create session and select slot first",
-      "msgMeetCreated": "Meet created! Link: {link}",
-      "errCreateMeet": "Failed to create Meet",
-      "heading": "Meeting Planner",
-      "intro": "Add participants from different time zones, set their working hours, and find the best meeting times. Choose between automatic slot finding or manual time selection. All calculations account for daylight saving time.",
-      "connected": "Connected",
-      "connectGoogleCalendar": "Connect Google Calendar",
-      "requiredForMeet": "(required for Meet links)",
-      "yourTimezone": "Your Timezone",
-      "yourNamePlaceholder": "Your name (optional)",
-      "createMeetingSession": "Create Meeting Session",
-      "meetingTitlePlaceholder": "Meeting Title",
-      "descriptionPlaceholder": "Description (optional)",
-      "createSession": "Create Session",
-      "sessionLabel": "Session: {title}",
-      "mode": "MODE",
-      "autoFindSlots": "Auto Find Slots",
-      "autoFindSlotsDesc": "System finds optimal meeting times by analyzing working hours overlap across all participants",
-      "manualTimePick": "Manual Time Pick",
-      "manualTimePickDesc": "You choose a specific time, and the system converts it to all participants' time zones",
-      "howAutoFindWorks": "How Auto Find Works:",
-      "howManualPickWorks": "How Manual Pick Works:",
-      "autoBullet1": "Analyzes working hours of all participants",
-      "autoBullet2": "Finds time windows where everyone is available",
-      "autoBullet3": "Generates slots every 15 minutes within overlap",
-      "autoBullet4": "Ranks slots by quality (time of day, work hours position)",
-      "autoBullet5": "Shows best options first (sorted by quality score)",
-      "manualBullet1": "Select a time in one participant's timezone",
-      "manualBullet2": "System converts to UTC internally",
-      "manualBullet3": "Displays the same moment in all other timezones",
-      "manualBullet4": "Perfect for fixed meeting times or specific schedules",
-      "manualBullet5": "All calculations respect DST transitions",
-      "duration": "Duration",
-      "twoHours": "2 hours",
-      "minutes": "{mins} min",
-      "date": "Date",
-      "preferences": "Preferences",
-      "includeWeekends": "Include weekends",
-      "includeWeekendsDesc": "Allow slots on Sat/Sun using default working hours",
-      "avoidEarly": "Avoid meetings before 8 AM",
-      "avoidLate": "Avoid meetings after 8 PM",
-      "localTime": "Local time",
-      "avoidLunch": "Avoid lunch time",
+      "errProvideTitle": "Bitte geben Sie einen Titel an",
+      "msgSessionCreated": "Meeting-Sitzung erstellt",
+      "msgSessionCreatedWithTz": "Meeting-Sitzung erstellt, Ihre Zeitzone wurde automatisch hinzugefügt",
+      "errCreateSession": "Sitzung konnte nicht erstellt werden",
+      "errCreateSessionFirst": "Erstellen Sie zuerst eine Sitzung",
+      "errNameRequired": "Name ist erforderlich",
+      "errSelectLocation": "Bitte wählen Sie zuerst einen Standort auf dem Globus aus oder suchen Sie eine Stadt",
+      "msgParticipantAdded": "Teilnehmer hinzugefügt",
+      "errAddParticipant": "Teilnehmer konnte nicht hinzugefügt werden",
+      "errAddParticipantBackend": "Teilnehmer konnte nicht zum Backend hinzugefügt werden",
+      "errAddTwoParticipants": "Fügen Sie zuerst mindestens 2 Teilnehmer hinzu",
+      "msgGeneratedSlots": "{count} Slots im Backend generiert",
+      "errGenerateSlots": "Slots konnten nicht generiert werden",
+      "errCreateSessionSelectSlot": "Bitte erstellen Sie zuerst eine Sitzung und wählen Sie einen Slot aus",
+      "msgMeetCreated": "Meet erstellt! Link: {link}",
+      "errCreateMeet": "Meet konnte nicht erstellt werden",
+      "heading": "Meeting-Planer",
+      "intro": "Fügen Sie Teilnehmer aus verschiedenen Zeitzonen hinzu, legen Sie ihre Arbeitszeiten fest und finden Sie die besten Meeting-Zeiten. Wählen Sie zwischen automatischer Slot-Suche oder manueller Zeitauswahl. Alle Berechnungen berücksichtigen die Sommerzeit.",
+      "connected": "Verbunden",
+      "connectGoogleCalendar": "Google Calendar verbinden",
+      "requiredForMeet": "(für Meet-Links erforderlich)",
+      "yourTimezone": "Ihre Zeitzone",
+      "yourNamePlaceholder": "Ihr Name (optional)",
+      "createMeetingSession": "Meeting-Sitzung erstellen",
+      "meetingTitlePlaceholder": "Meeting-Titel",
+      "descriptionPlaceholder": "Beschreibung (optional)",
+      "createSession": "Sitzung erstellen",
+      "sessionLabel": "Sitzung: {title}",
+      "mode": "MODUS",
+      "autoFindSlots": "Slots automatisch finden",
+      "autoFindSlotsDesc": "Das System findet optimale Meeting-Zeiten, indem es die Überschneidung der Arbeitszeiten aller Teilnehmer analysiert",
+      "manualTimePick": "Manuelle Zeitauswahl",
+      "manualTimePickDesc": "Sie wählen eine bestimmte Zeit, und das System rechnet sie in die Zeitzonen aller Teilnehmer um",
+      "howAutoFindWorks": "So funktioniert die automatische Suche:",
+      "howManualPickWorks": "So funktioniert die manuelle Auswahl:",
+      "autoBullet1": "Analysiert die Arbeitszeiten aller Teilnehmer",
+      "autoBullet2": "Findet Zeitfenster, in denen alle verfügbar sind",
+      "autoBullet3": "Generiert alle 15 Minuten Slots innerhalb der Überschneidung",
+      "autoBullet4": "Bewertet Slots nach Qualität (Tageszeit, Lage innerhalb der Arbeitszeit)",
+      "autoBullet5": "Zeigt die besten Optionen zuerst (sortiert nach Qualitätswert)",
+      "manualBullet1": "Wählen Sie eine Zeit in der Zeitzone eines Teilnehmers",
+      "manualBullet2": "Das System rechnet intern in UTC um",
+      "manualBullet3": "Zeigt denselben Zeitpunkt in allen anderen Zeitzonen an",
+      "manualBullet4": "Perfekt für feste Meeting-Zeiten oder bestimmte Zeitpläne",
+      "manualBullet5": "Alle Berechnungen berücksichtigen DST-Übergänge",
+      "duration": "Dauer",
+      "twoHours": "2 Stunden",
+      "minutes": "{mins} Min.",
+      "date": "Datum",
+      "preferences": "Einstellungen",
+      "includeWeekends": "Wochenenden einbeziehen",
+      "includeWeekendsDesc": "Slots an Sa./So. mit den Standardarbeitszeiten zulassen",
+      "avoidEarly": "Meetings vor 8 Uhr vermeiden",
+      "avoidLate": "Meetings nach 20 Uhr vermeiden",
+      "localTime": "Ortszeit",
+      "avoidLunch": "Mittagspause vermeiden",
       "lunchTime": "12:00-13:00",
-      "addParticipant": "Add Participant",
-      "quick": "Quick",
-      "withEmail": "With Email",
-      "searchCityPlaceholder": "Search city to add quickly…",
+      "addParticipant": "Teilnehmer hinzufügen",
+      "quick": "Schnell",
+      "withEmail": "Mit E-Mail",
+      "searchCityPlaceholder": "Stadt suchen, um sie schnell hinzuzufügen…",
       "namePlaceholder": "Name *",
-      "emailPlaceholder": "Email (optional, for calendar invites)",
-      "clickGlobeHint": "Click on the globe or search for a city first to select location",
-      "addAllFromCompare": "Add all from Compare ({count})",
-      "clickGlobeFormHint": "Click on the globe to select a location, then fill the form above",
-      "participantsCount": "Participants ({count})",
-      "remove": "Remove",
+      "emailPlaceholder": "E-Mail (optional, für Kalendereinladungen)",
+      "clickGlobeHint": "Klicken Sie zuerst auf den Globus oder suchen Sie eine Stadt, um einen Standort auszuwählen",
+      "addAllFromCompare": "Alle aus Vergleich hinzufügen ({count})",
+      "clickGlobeFormHint": "Klicken Sie auf den Globus, um einen Standort auszuwählen, und füllen Sie dann das obige Formular aus",
+      "participantsCount": "Teilnehmer ({count})",
+      "remove": "Entfernen",
       "namePrompt": "Name:",
-      "rename": "Rename",
-      "selectTime": "Select Time",
-      "baseTimezone": "Base Timezone",
-      "unknown": "Unknown",
-      "meetingTime": "Meeting Time",
-      "meetingTimeTzSuffix": "({name}'s timezone)",
+      "rename": "Umbenennen",
+      "selectTime": "Zeit auswählen",
+      "baseTimezone": "Basis-Zeitzone",
+      "unknown": "Unbekannt",
+      "meetingTime": "Meeting-Zeit",
+      "meetingTimeTzSuffix": "(Zeitzone von {name})",
       "meetingTimeUtcSuffix": "(UTC)",
-      "availableSlots": "Available Slots",
-      "generateSlots": "Generate slots",
-      "emptySlotsWithSession": "Click \"Generate slots\" to find available meeting times. Or adjust working hours/date and try again.",
-      "emptySlotsNoSession": "Create a session first, then add at least 2 participants and set their working hours to find available meeting times.",
-      "qualityGreat": "Great",
-      "qualityGood": "Good",
-      "qualityFair": "Fair",
-      "qualityScoreTitle": "Quality score: {score}/100",
-      "selected": "Selected",
-      "morning": "Morning",
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "night": "Night",
-      "showingTopSlots": "Showing top 15 of {total} available slots (sorted by quality)",
-      "selectedTime": "Selected Time",
-      "selectedSlot": "Selected Slot",
-      "utcTime": "UTC Time",
-      "daytime": "Daytime",
-      "nighttime": "Nighttime",
-      "confirmed": "Confirmed",
-      "confirmCreateMeet": "Confirm & Create Google Meet",
-      "manualNeedParticipant": "Add at least one participant to convert time to different time zones",
-      "autoNeedTwoParticipants": "Add at least 2 participants to start finding meeting slots",
-      "autoNeedOneMoreParticipant": "Add one more participant to find available meeting times",
-      "meetingConfirmed": "Meeting Confirmed",
-      "googleMeetLink": "Google Meet Link:",
-      "eventId": "Event ID: {id}"
+      "availableSlots": "Verfügbare Slots",
+      "generateSlots": "Slots generieren",
+      "emptySlotsWithSession": "Klicken Sie auf „Slots generieren“, um verfügbare Meeting-Zeiten zu finden. Oder passen Sie Arbeitszeiten/Datum an und versuchen Sie es erneut.",
+      "emptySlotsNoSession": "Erstellen Sie zuerst eine Sitzung, fügen Sie dann mindestens 2 Teilnehmer hinzu und legen Sie deren Arbeitszeiten fest, um verfügbare Meeting-Zeiten zu finden.",
+      "qualityGreat": "Hervorragend",
+      "qualityGood": "Gut",
+      "qualityFair": "Akzeptabel",
+      "qualityScoreTitle": "Qualitätswert: {score}/100",
+      "selected": "Ausgewählt",
+      "morning": "Vormittag",
+      "afternoon": "Nachmittag",
+      "evening": "Abend",
+      "night": "Nacht",
+      "showingTopSlots": "Zeige die Top 15 von {total} verfügbaren Slots (sortiert nach Qualität)",
+      "selectedTime": "Ausgewählte Zeit",
+      "selectedSlot": "Ausgewählter Slot",
+      "utcTime": "UTC-Zeit",
+      "daytime": "Tagsüber",
+      "nighttime": "Nachts",
+      "confirmed": "Bestätigt",
+      "confirmCreateMeet": "Bestätigen & Google Meet erstellen",
+      "manualNeedParticipant": "Fügen Sie mindestens einen Teilnehmer hinzu, um die Zeit in verschiedene Zeitzonen umzurechnen",
+      "autoNeedTwoParticipants": "Fügen Sie mindestens 2 Teilnehmer hinzu, um mit der Suche nach Meeting-Slots zu beginnen",
+      "autoNeedOneMoreParticipant": "Fügen Sie einen weiteren Teilnehmer hinzu, um verfügbare Meeting-Zeiten zu finden",
+      "meetingConfirmed": "Meeting bestätigt",
+      "googleMeetLink": "Google Meet-Link:",
+      "eventId": "Ereignis-ID: {id}"
     },
     "citySearch": {
-      "placeholder": "Search city…",
-      "unableToSearchStatus": "Unable to search ({status})",
-      "unableToSearchCities": "Unable to search cities",
-      "typeAtLeast": "Type at least {count} characters",
-      "searchingCities": "Searching cities…",
-      "unableToFetchCities": "Unable to fetch cities",
-      "noMatchesFound": "No matches found"
+      "placeholder": "Stadt suchen…",
+      "unableToSearchStatus": "Suche nicht möglich ({status})",
+      "unableToSearchCities": "Städte können nicht durchsucht werden",
+      "typeAtLeast": "Geben Sie mindestens {count} Zeichen ein",
+      "searchingCities": "Städte werden gesucht…",
+      "unableToFetchCities": "Städte können nicht abgerufen werden",
+      "noMatchesFound": "Keine Treffer gefunden"
     },
     "meetingPlanner": {
-      "errProvideTitle": "Please provide title",
-      "msgSessionCreated": "Meeting session created",
-      "msgSessionCreatedWithTz": "Meeting session created with your timezone added automatically",
-      "errCreateSession": "Failed to create session",
-      "errCreateSessionFirst": "Create a session first",
-      "errNameRequired": "Name is required",
-      "errSelectLocation": "Please select a location on the globe or search for a city first",
-      "msgParticipantAdded": "Participant added",
-      "errAddParticipant": "Failed to add participant",
-      "errAddParticipantBackend": "Failed to add participant to backend",
-      "errAddTwoParticipants": "Add at least 2 participants first",
-      "msgGeneratedSlots": "Generated {count} slots on backend",
-      "errGenerateSlots": "Failed to generate slots",
-      "errSelectSlotFirst": "Please create session and select slot first",
-      "msgMeetCreated": "Meet created! Link: {link}",
-      "errCreateMeet": "Failed to create Meet",
-      "pageTitle": "Meeting Planner",
-      "pageSubtitle": "Add participants from different time zones, set their working hours, and find the best meeting times. Choose between automatic slot finding or manual time selection. All calculations account for daylight saving time.",
-      "connected": "Connected",
-      "connectGoogleCalendar": "Connect Google Calendar",
-      "requiredForMeetLinks": "(required for Meet links)",
-      "yourTimezone": "Your Timezone",
-      "yourNamePlaceholder": "Your name (optional)",
-      "createMeetingSession": "Create Meeting Session",
-      "meetingTitlePlaceholder": "Meeting Title",
-      "descriptionPlaceholder": "Description (optional)",
-      "createSession": "Create Session",
-      "sessionLabel": "Session: {title}",
-      "mode": "MODE",
-      "autoFindSlots": "Auto Find Slots",
-      "autoFindSlotsDesc": "System finds optimal meeting times by analyzing working hours overlap across all participants",
-      "manualTimePick": "Manual Time Pick",
-      "manualTimePickDesc": "You choose a specific time, and the system converts it to all participants' time zones",
-      "howAutoFindWorks": "How Auto Find Works:",
-      "howManualPickWorks": "How Manual Pick Works:",
-      "autoStep1": "Analyzes working hours of all participants",
-      "autoStep2": "Finds time windows where everyone is available",
-      "autoStep3": "Generates slots every 15 minutes within overlap",
-      "autoStep4": "Ranks slots by quality (time of day, work hours position)",
-      "autoStep5": "Shows best options first (sorted by quality score)",
-      "manualStep1": "Select a time in one participant's timezone",
-      "manualStep2": "System converts to UTC internally",
-      "manualStep3": "Displays the same moment in all other timezones",
-      "manualStep4": "Perfect for fixed meeting times or specific schedules",
-      "manualStep5": "All calculations respect DST transitions",
-      "duration": "Duration",
-      "twoHours": "2 hours",
-      "minutes": "{mins} min",
-      "date": "Date",
-      "preferences": "Preferences",
-      "avoidBefore8am": "Avoid meetings before 8 AM",
-      "localTime": "Local time",
-      "avoidAfter8pm": "Avoid meetings after 8 PM",
-      "avoidLunchTime": "Avoid lunch time",
-      "addParticipant": "Add Participant",
-      "quick": "Quick",
-      "withEmail": "With Email",
-      "searchCityPlaceholder": "Search city to add quickly…",
+      "errProvideTitle": "Bitte geben Sie einen Titel an",
+      "msgSessionCreated": "Meeting-Sitzung erstellt",
+      "msgSessionCreatedWithTz": "Meeting-Sitzung erstellt, Ihre Zeitzone wurde automatisch hinzugefügt",
+      "errCreateSession": "Sitzung konnte nicht erstellt werden",
+      "errCreateSessionFirst": "Erstellen Sie zuerst eine Sitzung",
+      "errNameRequired": "Name ist erforderlich",
+      "errSelectLocation": "Bitte wählen Sie zuerst einen Standort auf dem Globus aus oder suchen Sie eine Stadt",
+      "msgParticipantAdded": "Teilnehmer hinzugefügt",
+      "errAddParticipant": "Teilnehmer konnte nicht hinzugefügt werden",
+      "errAddParticipantBackend": "Teilnehmer konnte nicht zum Backend hinzugefügt werden",
+      "errAddTwoParticipants": "Fügen Sie zuerst mindestens 2 Teilnehmer hinzu",
+      "msgGeneratedSlots": "{count} Slots im Backend generiert",
+      "errGenerateSlots": "Slots konnten nicht generiert werden",
+      "errSelectSlotFirst": "Bitte erstellen Sie zuerst eine Sitzung und wählen Sie einen Slot aus",
+      "msgMeetCreated": "Meet erstellt! Link: {link}",
+      "errCreateMeet": "Meet konnte nicht erstellt werden",
+      "pageTitle": "Meeting-Planer",
+      "pageSubtitle": "Fügen Sie Teilnehmer aus verschiedenen Zeitzonen hinzu, legen Sie ihre Arbeitszeiten fest und finden Sie die besten Meeting-Zeiten. Wählen Sie zwischen automatischer Slot-Suche oder manueller Zeitauswahl. Alle Berechnungen berücksichtigen die Sommerzeit.",
+      "connected": "Verbunden",
+      "connectGoogleCalendar": "Google Calendar verbinden",
+      "requiredForMeetLinks": "(für Meet-Links erforderlich)",
+      "yourTimezone": "Ihre Zeitzone",
+      "yourNamePlaceholder": "Ihr Name (optional)",
+      "createMeetingSession": "Meeting-Sitzung erstellen",
+      "meetingTitlePlaceholder": "Meeting-Titel",
+      "descriptionPlaceholder": "Beschreibung (optional)",
+      "createSession": "Sitzung erstellen",
+      "sessionLabel": "Sitzung: {title}",
+      "mode": "MODUS",
+      "autoFindSlots": "Slots automatisch finden",
+      "autoFindSlotsDesc": "Das System findet optimale Meeting-Zeiten, indem es die Überschneidung der Arbeitszeiten aller Teilnehmer analysiert",
+      "manualTimePick": "Manuelle Zeitauswahl",
+      "manualTimePickDesc": "Sie wählen eine bestimmte Zeit, und das System rechnet sie in die Zeitzonen aller Teilnehmer um",
+      "howAutoFindWorks": "So funktioniert die automatische Suche:",
+      "howManualPickWorks": "So funktioniert die manuelle Auswahl:",
+      "autoStep1": "Analysiert die Arbeitszeiten aller Teilnehmer",
+      "autoStep2": "Findet Zeitfenster, in denen alle verfügbar sind",
+      "autoStep3": "Generiert alle 15 Minuten Slots innerhalb der Überschneidung",
+      "autoStep4": "Bewertet Slots nach Qualität (Tageszeit, Lage innerhalb der Arbeitszeit)",
+      "autoStep5": "Zeigt die besten Optionen zuerst (sortiert nach Qualitätswert)",
+      "manualStep1": "Wählen Sie eine Zeit in der Zeitzone eines Teilnehmers",
+      "manualStep2": "Das System rechnet intern in UTC um",
+      "manualStep3": "Zeigt denselben Zeitpunkt in allen anderen Zeitzonen an",
+      "manualStep4": "Perfekt für feste Meeting-Zeiten oder bestimmte Zeitpläne",
+      "manualStep5": "Alle Berechnungen berücksichtigen DST-Übergänge",
+      "duration": "Dauer",
+      "twoHours": "2 Stunden",
+      "minutes": "{mins} Min.",
+      "date": "Datum",
+      "preferences": "Einstellungen",
+      "avoidBefore8am": "Meetings vor 8 Uhr vermeiden",
+      "localTime": "Ortszeit",
+      "avoidAfter8pm": "Meetings nach 20 Uhr vermeiden",
+      "avoidLunchTime": "Mittagspause vermeiden",
+      "addParticipant": "Teilnehmer hinzufügen",
+      "quick": "Schnell",
+      "withEmail": "Mit E-Mail",
+      "searchCityPlaceholder": "Stadt suchen, um sie schnell hinzuzufügen…",
       "namePlaceholder": "Name *",
-      "emailPlaceholder": "Email (optional, for calendar invites)",
-      "addParticipantBtn": "Add Participant",
-      "clickGlobeHint": "Click on the globe or search for a city first to select location",
-      "addAllFromCompare": "Add all from Compare ({count})",
-      "clickGlobeFillForm": "Click on the globe to select a location, then fill the form above",
-      "participantsCount": "Participants ({count})",
-      "remove": "Remove",
+      "emailPlaceholder": "E-Mail (optional, für Kalendereinladungen)",
+      "addParticipantBtn": "Teilnehmer hinzufügen",
+      "clickGlobeHint": "Klicken Sie zuerst auf den Globus oder suchen Sie eine Stadt, um einen Standort auszuwählen",
+      "addAllFromCompare": "Alle aus Vergleich hinzufügen ({count})",
+      "clickGlobeFillForm": "Klicken Sie auf den Globus, um einen Standort auszuwählen, und füllen Sie dann das obige Formular aus",
+      "participantsCount": "Teilnehmer ({count})",
+      "remove": "Entfernen",
       "namePrompt": "Name:",
-      "rename": "Rename",
-      "selectTime": "Select Time",
-      "baseTimezone": "Base Timezone",
-      "unknown": "Unknown",
-      "meetingTime": "Meeting Time",
-      "meetingTimeTzSuffix": "({name}'s timezone)",
+      "rename": "Umbenennen",
+      "selectTime": "Zeit auswählen",
+      "baseTimezone": "Basis-Zeitzone",
+      "unknown": "Unbekannt",
+      "meetingTime": "Meeting-Zeit",
+      "meetingTimeTzSuffix": "(Zeitzone von {name})",
       "meetingTimeUtcSuffix": "(UTC)",
-      "availableSlots": "Available Slots",
-      "generateSlotsBackend": "Generate Slots on Backend",
-      "slotsEmptyState": "Click \"Generate Slots on Backend\" to find available meeting times. Or adjust working hours/date and try again.",
-      "qualityGreat": "Great",
-      "qualityGood": "Good",
-      "qualityFair": "Fair",
-      "qualityScoreTitle": "Quality score: {score}/100",
-      "selected": "Selected",
-      "morning": "Morning",
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "night": "Night",
-      "showingTop15": "Showing top 15 of {total} available slots (sorted by quality)",
-      "selectedTime": "Selected Time",
-      "selectedSlot": "Selected Slot",
-      "utcTime": "UTC Time",
-      "daytime": "Daytime",
-      "nighttime": "Nighttime",
-      "confirmCreateMeet": "Confirm & Create Google Meet",
-      "addOneParticipantHint": "Add at least one participant to convert time to different time zones",
-      "addTwoParticipantsHint": "Add at least 2 participants to start finding meeting slots",
-      "addOneMoreParticipantHint": "Add one more participant to find available meeting times",
-      "meetingConfirmed": "Meeting Confirmed",
-      "googleMeetLink": "Google Meet Link:",
-      "eventId": "Event ID: {id}"
+      "availableSlots": "Verfügbare Slots",
+      "generateSlotsBackend": "Slots im Backend generieren",
+      "slotsEmptyState": "Klicken Sie auf „Slots im Backend generieren“, um verfügbare Meeting-Zeiten zu finden. Oder passen Sie Arbeitszeiten/Datum an und versuchen Sie es erneut.",
+      "qualityGreat": "Hervorragend",
+      "qualityGood": "Gut",
+      "qualityFair": "Akzeptabel",
+      "qualityScoreTitle": "Qualitätswert: {score}/100",
+      "selected": "Ausgewählt",
+      "morning": "Vormittag",
+      "afternoon": "Nachmittag",
+      "evening": "Abend",
+      "night": "Nacht",
+      "showingTop15": "Zeige die Top 15 von {total} verfügbaren Slots (sortiert nach Qualität)",
+      "selectedTime": "Ausgewählte Zeit",
+      "selectedSlot": "Ausgewählter Slot",
+      "utcTime": "UTC-Zeit",
+      "daytime": "Tagsüber",
+      "nighttime": "Nachts",
+      "confirmCreateMeet": "Bestätigen & Google Meet erstellen",
+      "addOneParticipantHint": "Fügen Sie mindestens einen Teilnehmer hinzu, um die Zeit in verschiedene Zeitzonen umzurechnen",
+      "addTwoParticipantsHint": "Fügen Sie mindestens 2 Teilnehmer hinzu, um mit der Suche nach Meeting-Slots zu beginnen",
+      "addOneMoreParticipantHint": "Fügen Sie einen weiteren Teilnehmer hinzu, um verfügbare Meeting-Zeiten zu finden",
+      "meetingConfirmed": "Meeting bestätigt",
+      "googleMeetLink": "Google Meet-Link:",
+      "eventId": "Ereignis-ID: {id}"
     },
     "participants": {
-      "timezone": "Timezone",
-      "localTimeNow": "Local time now",
-      "meetingTimeForYou": "Meeting time for you:"
+      "timezone": "Zeitzone",
+      "localTimeNow": "Ortszeit jetzt",
+      "meetingTimeForYou": "Meeting-Zeit für Sie:"
     },
     "poll": {
-      "failedToLoad": "Failed to load poll",
-      "provideNameEmail": "Please provide name and email",
-      "voteAtLeastOne": "Please vote for at least one slot",
-      "failedToSubmit": "Failed to submit vote",
-      "voteSubmitted": "Vote submitted successfully!",
-      "loading": "Loading...",
-      "duration": "Duration: {minutes} minutes",
-      "voteForSlots": "Vote for Available Slots",
-      "noSlots": "No slots available",
+      "failedToLoad": "Umfrage konnte nicht geladen werden",
+      "provideNameEmail": "Bitte geben Sie Name und E-Mail an",
+      "voteAtLeastOne": "Bitte stimmen Sie für mindestens einen Slot ab",
+      "failedToSubmit": "Stimme konnte nicht übermittelt werden",
+      "voteSubmitted": "Stimme erfolgreich übermittelt!",
+      "loading": "Wird geladen...",
+      "duration": "Dauer: {minutes} Minuten",
+      "voteForSlots": "Für verfügbare Slots abstimmen",
+      "noSlots": "Keine Slots verfügbar",
       "utcLabel": "UTC:",
-      "yourTimeLabel": "Your time ({timezone}):",
-      "score": "Score: {score}",
-      "yes": "✓ Yes",
-      "maybe": "? Maybe",
-      "no": "✗ No",
-      "summary": "Summary: {yes} yes, {maybe} maybe, {no} no",
-      "submitYourVote": "Submit Your Vote",
-      "yourName": "Your Name",
-      "yourEmail": "Your Email",
-      "submitting": "Submitting...",
-      "submitVote": "Submit Vote"
+      "yourTimeLabel": "Ihre Zeit ({timezone}):",
+      "score": "Wert: {score}",
+      "yes": "✓ Ja",
+      "maybe": "? Vielleicht",
+      "no": "✗ Nein",
+      "summary": "Zusammenfassung: {yes} Ja, {maybe} Vielleicht, {no} Nein",
+      "submitYourVote": "Stimme abgeben",
+      "yourName": "Ihr Name",
+      "yourEmail": "Ihre E-Mail",
+      "submitting": "Wird übermittelt...",
+      "submitVote": "Stimme abgeben"
     },
     "book": {
-      "failedLoadBooking": "Failed to load booking",
-      "selectSlotProvideInfo": "Please select a slot and provide name/email",
-      "failedReserve": "Failed to reserve",
-      "slotReserved": "Slot reserved! Meet link created.",
-      "failedReserveSlot": "Failed to reserve slot",
-      "loading": "Loading...",
-      "duration": "Duration: {minutes} minutes",
-      "meetingReserved": "Meeting Reserved",
-      "timeLabel": "Time:",
-      "yourLocalTimeLabel": "Your local time:",
-      "meetLinkLabel": "Meet Link:",
-      "availableSlots": "Available Slots",
-      "noSlots": "No slots available",
+      "failedLoadBooking": "Buchung konnte nicht geladen werden",
+      "selectSlotProvideInfo": "Bitte wählen Sie einen Slot aus und geben Sie Name/E-Mail an",
+      "failedReserve": "Reservierung fehlgeschlagen",
+      "slotReserved": "Slot reserviert! Meet-Link erstellt.",
+      "failedReserveSlot": "Slot konnte nicht reserviert werden",
+      "loading": "Wird geladen...",
+      "duration": "Dauer: {minutes} Minuten",
+      "meetingReserved": "Meeting reserviert",
+      "timeLabel": "Zeit:",
+      "yourLocalTimeLabel": "Ihre Ortszeit:",
+      "meetLinkLabel": "Meet-Link:",
+      "availableSlots": "Verfügbare Slots",
+      "noSlots": "Keine Slots verfügbar",
       "utcLabel": "UTC:",
-      "yourTimeLabel": "Your time ({timezone}):",
-      "score": "Score: {score}",
-      "select": "Select",
-      "reserveSlot": "Reserve Slot",
-      "yourName": "Your Name",
-      "yourEmail": "Your Email",
-      "reserving": "Reserving...",
-      "reserveSlotButton": "Reserve Slot"
+      "yourTimeLabel": "Ihre Zeit ({timezone}):",
+      "score": "Wert: {score}",
+      "select": "Auswählen",
+      "reserveSlot": "Slot reservieren",
+      "yourName": "Ihr Name",
+      "yourEmail": "Ihre E-Mail",
+      "reserving": "Wird reserviert...",
+      "reserveSlotButton": "Slot reservieren"
     },
     "toast": {
-      "close": "Close"
+      "close": "Schließen"
     },
     "timeDisplay": {
-      "selectLocation": "Select a location to view time",
-      "sun": "Sun:",
-      "format12h": "12h",
-      "format24h": "24h"
+      "selectLocation": "Wählen Sie einen Standort aus, um die Zeit anzuzeigen",
+      "sun": "Sonne:",
+      "format12h": "12 Std.",
+      "format24h": "24 Std."
     },
     "dstBadge": {
-      "active": "DST active",
-      "inactive": "DST inactive"
+      "active": "DST aktiv",
+      "inactive": "DST inaktiv"
     },
     "workingHours": {
-      "workingHours": "Working hours",
-      "start": "Start",
-      "end": "End"
+      "workingHours": "Arbeitszeiten",
+      "start": "Beginn",
+      "end": "Ende"
     },
     "cityTimeCard": {
-      "day": "Day",
-      "night": "Night"
+      "day": "Tag",
+      "night": "Nacht"
     },
     "timezoneSelector": {
-      "savedToast": "Timezone \"{name}\" saved!",
-      "clearedToast": "Saved timezone cleared!",
-      "selectTimezone": "Select timezone",
-      "savedLabel": "Saved: {name}",
-      "hideTimezone": "Hide Timezone",
-      "selectTimezoneButton": "Select Timezone",
-      "saveTitle": "Save timezone to localStorage",
-      "save": "Save",
-      "clearTitle": "Clear saved timezone",
-      "clear": "Clear",
-      "searchPlaceholder": "Search timezone (e.g., Kyiv, New York, Tokyo)...",
-      "noResults": "No timezones found for \"{query}\"",
-      "selectRegion": "Select Region:",
-      "regionTimezones": "{region} timezones:"
+      "savedToast": "Zeitzone „{name}“ gespeichert!",
+      "clearedToast": "Gespeicherte Zeitzone gelöscht!",
+      "selectTimezone": "Zeitzone auswählen",
+      "savedLabel": "Gespeichert: {name}",
+      "hideTimezone": "Zeitzone ausblenden",
+      "selectTimezoneButton": "Zeitzone auswählen",
+      "saveTitle": "Zeitzone im localStorage speichern",
+      "save": "Speichern",
+      "clearTitle": "Gespeicherte Zeitzone löschen",
+      "clear": "Löschen",
+      "searchPlaceholder": "Zeitzone suchen (z. B. Kiew, New York, Tokio)...",
+      "noResults": "Keine Zeitzonen gefunden für „{query}“",
+      "selectRegion": "Region auswählen:",
+      "regionTimezones": "Zeitzonen in {region}:"
     },
     "datePicker": {
-      "today": "Today",
+      "today": "Heute",
       "weekday": {
-        "Sun": "Sun",
-        "Mon": "Mon",
-        "Tue": "Tue",
-        "Wed": "Wed",
-        "Thu": "Thu",
-        "Fri": "Fri",
-        "Sat": "Sat"
+        "Sun": "So",
+        "Mon": "Mo",
+        "Tue": "Di",
+        "Wed": "Mi",
+        "Thu": "Do",
+        "Fri": "Fr",
+        "Sat": "Sa"
       }
     },
     "timePicker": {
-      "hour": "Hour",
-      "min": "Min"
+      "hour": "Stunde",
+      "min": "Min."
     },
     "copyButton": {
-      "copy": "Copy"
+      "copy": "Kopieren"
     },
     "themeToggle": {
-      "dark": "Dark",
-      "light": "Light",
-      "switchTitle": "Switch to {theme} theme"
+      "dark": "Dunkel",
+      "light": "Hell",
+      "switchTitle": "Zu {theme} Design wechseln"
     },
     "timeSlider": {
-      "time": "Time"
+      "time": "Zeit"
     }
   }
 }

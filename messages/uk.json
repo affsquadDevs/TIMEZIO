@@ -1,714 +1,714 @@
 {
   "common": {
     "appName": "Timezio",
-    "breadcrumbHome": "Home",
-    "faqTitle": "Frequently Asked Questions",
-    "backToHome": "Back to Home",
-    "legalDisclaimer": "This page is a machine-assisted translation provided for convenience. The English version is authoritative."
+    "breadcrumbHome": "Головна",
+    "faqTitle": "Поширені запитання",
+    "backToHome": "Назад на головну",
+    "legalDisclaimer": "Ця сторінка є машинним перекладом, наданим для зручності. Англійська версія є офіційною."
   },
   "nav": {
-    "blog": "Blog",
-    "about": "About",
-    "toggleHourFormat": "Toggle 12/24h",
-    "copyLink": "Copy link"
+    "blog": "Блог",
+    "about": "Про нас",
+    "toggleHourFormat": "Перемкнути 12/24 год",
+    "copyLink": "Копіювати посилання"
   },
   "language": {
-    "label": "Language",
-    "select": "Select language"
+    "label": "Мова",
+    "select": "Вибрати мову"
   },
   "meta": {
     "home": {
-      "title": "Timezio – Time Zone Converter & Meeting Planner",
-      "description": "Instant time zone converter, world clock, DST-aware meeting planner, and timezone comparison on an interactive globe."
+      "title": "Timezio – конвертер часових поясів і планувальник зустрічей",
+      "description": "Миттєвий конвертер часових поясів, світовий годинник, планувальник зустрічей з урахуванням переходу на літній час і порівняння часових поясів на інтерактивному глобусі."
     },
     "explore": {
-      "title": "Explore Time Zones on a Globe",
-      "description": "Explore time zones on an interactive 3D globe. Check current time, UTC offset, and DST status for any location."
+      "title": "Досліджуйте часові пояси на глобусі",
+      "description": "Досліджуйте часові пояси на інтерактивному 3D-глобусі. Перевіряйте поточний час, зсув UTC і статус DST для будь-якого місця."
     },
     "compare": {
-      "title": "Compare Time Zones",
-      "description": "Compare time zones side-by-side with DST-aware offsets. Visualize locations on an interactive globe and avoid scheduling mistakes."
+      "title": "Порівняння часових поясів",
+      "description": "Порівнюйте часові пояси поруч із урахуванням переходу на літній час. Візуалізуйте місця на інтерактивному глобусі та уникайте помилок у плануванні."
     },
     "planner": {
-      "title": "Meeting Planner Across Time Zones",
-      "description": "Plan meetings across time zones with working hours, overlap windows, and DST-aware calculations."
+      "title": "Планувальник зустрічей у різних часових поясах",
+      "description": "Плануйте зустрічі в різних часових поясах з урахуванням робочих годин, вікон перетину та розрахунків з урахуванням переходу на літній час."
     },
     "saved": {
-      "title": "Saved Locations & Time Zones",
-      "description": "Save frequently used locations and quickly return to their current time, offset, and DST status."
+      "title": "Збережені місця та часові пояси",
+      "description": "Зберігайте часто використовувані місця та швидко повертайтеся до їхнього поточного часу, зсуву та статусу DST."
     },
     "timeConverter": {
-      "title": "Time Zone Converter – Compare Times, Plan Meetings & Explore Cities",
-      "description": "Compare time zones between cities, plan meetings across regions, and explore local times worldwide. DST-aware, accurate, and free."
+      "title": "Конвертер часових поясів – порівнюйте час, плануйте зустрічі та досліджуйте міста",
+      "description": "Порівнюйте часові пояси між містами, плануйте зустрічі між регіонами та досліджуйте місцевий час по всьому світу. З урахуванням переходу на літній час, точно та безкоштовно."
     },
     "meetingPlanner": {
-      "title": "Meeting Planner"
+      "title": "Планувальник зустрічей"
     },
     "convertHub": {
-      "title": "Popular Time Zone Converters",
-      "description": "Convert time between zones instantly: PST to EST, UTC to EST, GMT to EST, CET to EST, IST to EST and more. Each converter is DST-aware and shows a full hour-by-hour table."
+      "title": "Популярні конвертери часових поясів",
+      "description": "Миттєво конвертуйте час між поясами: PST у EST, UTC у EST, GMT у EST, CET у EST, IST у EST та інші. Кожен конвертер враховує перехід на літній час і показує повну погодинну таблицю."
     },
     "timeHub": {
-      "title": "Current Time in Major Cities Worldwide",
-      "description": "Check the current local time in cities around the world. Each page shows live local time, UTC offset, time zone, and daylight saving status — DST-aware and updated in real time."
+      "title": "Поточний час у великих містах світу",
+      "description": "Перевіряйте поточний місцевий час у містах по всьому світу. На кожній сторінці показано місцевий час у реальному часі, зсув UTC, часовий пояс і статус переходу на літній час — з урахуванням DST і оновленням у реальному часі."
     },
     "meetingHub": {
-      "title": "Best Meeting Times Across Time Zones",
-      "description": "Find overlapping working hours for popular city pairs. Each page shows a shared-hours table and the best slot, fully daylight-saving aware."
+      "title": "Найкращий час для зустрічей у різних часових поясах",
+      "description": "Знаходьте спільні робочі години для популярних пар міст. На кожній сторінці показано таблицю спільних годин і найкращий проміжок, повністю з урахуванням переходу на літній час."
     },
     "dstHub": {
-      "title": "Daylight Saving Time Checker",
-      "description": "Is a region observing daylight saving time right now? Check DST status, the current UTC offset, and the exact next clock-change dates for countries worldwide."
+      "title": "Перевірка переходу на літній час",
+      "description": "Чи діє зараз у регіоні літній час? Перевіряйте статус DST, поточний зсув UTC і точні дати наступної зміни годинника для країн по всьому світу."
     },
     "time": {
-      "title": "Current Time in {city}",
-      "description": "See the current local time in {city}, with UTC offset and daylight saving status."
+      "title": "Поточний час у {city}",
+      "description": "Дивіться поточний місцевий час у {city} зі зсувом UTC і статусом переходу на літній час."
     },
     "convert": {
-      "title": "{from} to {to} Time Converter",
-      "description": "Convert {from} to {to} with a full hour-by-hour table — DST-aware, using official IANA data."
+      "title": "Конвертер часу {from} у {to}",
+      "description": "Конвертуйте {from} у {to} з повною погодинною таблицею — з урахуванням переходу на літній час, на основі офіційних даних IANA."
     },
     "meeting": {
-      "title": "Best Meeting Time: {a} ↔ {b}",
-      "description": "Find overlapping working hours and the best meeting time between {a} and {b} — fully DST-aware."
+      "title": "Найкращий час для зустрічі: {a} ↔ {b}",
+      "description": "Знайдіть спільні робочі години та найкращий час для зустрічі між {a} і {b} — повністю з урахуванням переходу на літній час."
     },
     "dst": {
-      "title": "{region} Daylight Saving Time",
-      "description": "DST status, the current UTC offset, and the next clock-change dates for {region}."
+      "title": "Літній час у регіоні {region}",
+      "description": "Статус DST, поточний зсув UTC і дати наступної зміни годинника для регіону {region}."
     },
     "privacy": {
-      "title": "Privacy Policy",
-      "description": "How Timezio collects, uses, and protects information in compliance with GDPR and applicable data protection laws."
+      "title": "Політика конфіденційності",
+      "description": "Як Timezio збирає, використовує та захищає інформацію відповідно до GDPR і чинного законодавства про захист даних."
     },
     "terms": {
-      "title": "Terms of Service",
-      "description": "Terms and conditions for using Timezio’s timezone tools, converters, and meeting planner."
+      "title": "Умови використання",
+      "description": "Умови та положення щодо використання інструментів часових поясів, конвертерів і планувальника зустрічей Timezio."
     },
     "about": {
-      "title": "About Timezio",
-      "description": "Timezio is a free, DST-aware time zone converter, world clock, and meeting planner built by AffSquad. Learn who runs it, how it works, and the data behind it."
+      "title": "Про Timezio",
+      "description": "Timezio — це безкоштовний конвертер часових поясів з урахуванням переходу на літній час, світовий годинник і планувальник зустрічей, створений AffSquad. Дізнайтеся, хто ним керує, як він працює та на яких даних ґрунтується."
     },
     "contact": {
-      "title": "Contact Timezio Support",
-      "description": "Get help, report issues, or request features for Timezio’s time zone tools. We respond to feedback and support questions."
+      "title": "Звʼязок зі службою підтримки Timezio",
+      "description": "Отримайте допомогу, повідомте про проблеми або запропонуйте функції для інструментів часових поясів Timezio. Ми відповідаємо на відгуки та запити підтримки."
     },
     "blogIndex": {
-      "title": "Time Zone Guides & Remote Work Tips",
-      "description": "In-depth guides on time zones, daylight saving time, remote collaboration, and using Timezio effectively."
+      "title": "Посібники з часових поясів і поради щодо віддаленої роботи",
+      "description": "Докладні посібники про часові пояси, перехід на літній час, віддалену співпрацю та ефективне використання Timezio."
     }
   },
   "footer": {
-    "productTitle": "PRODUCT",
-    "exploreTitle": "EXPLORE",
-    "popularTitle": "POPULAR",
-    "legalTitle": "LEGAL",
-    "home": "Home",
-    "exploreGlobe": "Explore Globe",
-    "compareZones": "Compare Zones",
-    "meetingPlanner": "Meeting Planner",
-    "timeConverter": "Time Converter",
-    "worldClock": "World Clock",
-    "converters": "Converters",
-    "meetingTimes": "Meeting Times",
-    "daylightSaving": "Daylight Saving",
-    "blog": "Blog",
-    "about": "About",
-    "contact": "Contact",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "cookieSettings": "Cookie settings",
-    "copyright": "© {year} Timezio by AffSquad. All rights reserved.",
-    "disclaimer": "Information on this website is provided for general reference only. Accuracy is not guaranteed. No liability is accepted to the extent permitted by EU law. Cookies or similar technologies may be used for analytics and advertising in accordance with your consent choices.",
-    "privacyShort": "Privacy",
-    "termsShort": "Terms"
+    "productTitle": "ПРОДУКТ",
+    "exploreTitle": "ДОСЛІДЖЕННЯ",
+    "popularTitle": "ПОПУЛЯРНЕ",
+    "legalTitle": "ПРАВОВА ІНФОРМАЦІЯ",
+    "home": "Головна",
+    "exploreGlobe": "Дослідити глобус",
+    "compareZones": "Порівняти пояси",
+    "meetingPlanner": "Планувальник зустрічей",
+    "timeConverter": "Конвертер часу",
+    "worldClock": "Світовий годинник",
+    "converters": "Конвертери",
+    "meetingTimes": "Час для зустрічей",
+    "daylightSaving": "Літній час",
+    "blog": "Блог",
+    "about": "Про нас",
+    "contact": "Контакти",
+    "privacy": "Політика конфіденційності",
+    "terms": "Умови використання",
+    "cookieSettings": "Налаштування cookie",
+    "copyright": "© {year} Timezio від AffSquad. Усі права захищено.",
+    "disclaimer": "Інформація на цьому вебсайті надається лише для загального ознайомлення. Точність не гарантується. Жодна відповідальність не приймається в межах, дозволених законодавством ЄС. Файли cookie або подібні технології можуть використовуватися для аналітики та реклами відповідно до ваших налаштувань згоди.",
+    "privacyShort": "Конфіденційність",
+    "termsShort": "Умови"
   },
   "consent": {
-    "message": "We use cookies for analytics and to show ads (including Google AdSense). You can accept or reject non-essential cookies. See our <link>Privacy Policy</link>.",
-    "reject": "Reject",
-    "acceptAll": "Accept all"
+    "message": "Ми використовуємо файли cookie для аналітики та показу реклами (зокрема Google AdSense). Ви можете прийняти або відхилити необовʼязкові файли cookie. Перегляньте нашу <link>Політику конфіденційності</link>.",
+    "reject": "Відхилити",
+    "acceptAll": "Прийняти всі"
   },
   "blog": {
-    "indexTitle": "Blog",
-    "indexDescription": "Articles and guides about time zones, remote work, and using Timezio effectively.",
-    "readMore": "Read more",
-    "backToBlog": "Back to Blog",
-    "byTeam": "By the Timezio team",
-    "toolsTitle": "Timezio Tools",
-    "relatedTitle": "Related Articles",
+    "indexTitle": "Блог",
+    "indexDescription": "Статті та посібники про часові пояси, віддалену роботу та ефективне використання Timezio.",
+    "readMore": "Читати далі",
+    "backToBlog": "Назад до блогу",
+    "byTeam": "Від команди Timezio",
+    "toolsTitle": "Інструменти Timezio",
+    "relatedTitle": "Схожі статті",
     "tools": [
       {
-        "title": "Explore Globe",
-        "desc": "Click anywhere on the interactive globe to see local time"
+        "title": "Дослідити глобус",
+        "desc": "Натисніть будь-де на інтерактивному глобусі, щоб побачити місцевий час"
       },
       {
-        "title": "Compare Time Zones",
-        "desc": "Compare time differences between multiple cities"
+        "title": "Порівняти часові пояси",
+        "desc": "Порівнюйте різницю в часі між кількома містами"
       },
       {
-        "title": "Meeting Planner",
-        "desc": "Find the best meeting time for people in different locations"
+        "title": "Планувальник зустрічей",
+        "desc": "Знайдіть найкращий час для зустрічі людей з різних місць"
       },
       {
-        "title": "DST Tracker",
-        "desc": "Track daylight saving time changes and transitions"
+        "title": "Трекер DST",
+        "desc": "Відстежуйте зміни та переходи на літній/зимовий час"
       },
       {
-        "title": "Time Converter",
-        "desc": "Convert UTC or local times between time zones"
+        "title": "Конвертер часу",
+        "desc": "Конвертуйте час UTC або місцевий час між часовими поясами"
       }
     ]
   },
   "home": {
     "badges": [
-      "Live & DST-aware",
-      "No sign-up",
-      "Free forever"
+      "Наживо та з урахуванням DST",
+      "Без реєстрації",
+      "Безкоштовно назавжди"
     ],
-    "title": "Plan across time zones without the headaches.",
-    "lede": "Timezio helps you compare time zones, convert UTC, and lock in meeting slots between cities. Every calculation is DST-aware and powered by official IANA data.",
-    "ctaPlanner": "Plan a meeting",
-    "ctaConverter": "Open converter",
+    "title": "Плануйте між часовими поясами без головного болю.",
+    "lede": "Timezio допомагає порівнювати часові пояси, конвертувати UTC і фіксувати час зустрічей між містами. Кожен розрахунок враховує DST і ґрунтується на офіційних даних IANA.",
+    "ctaPlanner": "Запланувати зустріч",
+    "ctaConverter": "Відкрити конвертер",
     "highlights": [
       {
-        "title": "DST aware",
-        "body": "Powered by official IANA time zone data updated automatically."
+        "title": "Враховує DST",
+        "body": "Працює на офіційних даних часових поясів IANA, що оновлюються автоматично."
       },
       {
-        "title": "10k+ cities",
-        "body": "Every offset covered, including 30- and 45-minute differences."
+        "title": "10 тис.+ міст",
+        "body": "Охоплено кожне зміщення, зокрема різницю в 30 та 45 хвилин."
       },
       {
-        "title": "Share ready",
-        "body": "Copy clean links and send the exact time plan to your team."
+        "title": "Готово до поширення",
+        "body": "Копіюйте акуратні посилання й надсилайте команді точний план часу."
       }
     ],
-    "panelEyebrow": "Live snapshot",
-    "panelTitle": "What's happening right now",
-    "panelBadge": "DST verified",
-    "panelFooter": "Live examples. Odd offsets and daylight saving rules handled automatically.",
-    "toolkitEyebrow": "Toolkit",
-    "toolkitTitle": "Everything you need for global timing",
-    "toolkitBody": "Switch between the planner, converter, and city comparison without losing context.",
+    "panelEyebrow": "Знімок наживо",
+    "panelTitle": "Що відбувається прямо зараз",
+    "panelBadge": "DST перевірено",
+    "panelFooter": "Приклади наживо. Нестандартні зміщення та правила переходу на літній час обробляються автоматично.",
+    "toolkitEyebrow": "Набір інструментів",
+    "toolkitTitle": "Усе необхідне для глобального планування часу",
+    "toolkitBody": "Перемикайтеся між планувальником, конвертером і порівнянням міст, не втрачаючи контексту.",
     "tools": [
       {
-        "label": "Meeting Planner",
-        "desc": "Find overlap-friendly slots automatically and keep everyone out of late nights.",
-        "badge": "Team favorite"
+        "label": "Планувальник зустрічей",
+        "desc": "Автоматично знаходьте зручні для перекриття слоти й уникайте пізніх вечорів для всіх.",
+        "badge": "Улюбленець команд"
       },
       {
-        "label": "Time Converter",
-        "desc": "Convert UTC or local times, preview future dates, and share results instantly.",
-        "badge": "Most used"
+        "label": "Конвертер часу",
+        "desc": "Конвертуйте UTC чи місцевий час, переглядайте майбутні дати й миттєво діліться результатами.",
+        "badge": "Найпопулярніший"
       },
       {
-        "label": "City Compare",
-        "desc": "Line up multiple cities side by side to see the exact differences at a glance.",
+        "label": "Порівняння міст",
+        "desc": "Розташуйте кілька міст поруч, щоб одразу побачити точну різницю.",
         "badge": ""
       },
       {
-        "label": "Explore Globe",
-        "desc": "Navigate the interactive globe and jump straight into any city or region.",
+        "label": "Дослідити глобус",
+        "desc": "Переміщайтеся інтерактивним глобусом і одразу переходьте до будь-якого міста чи регіону.",
         "badge": ""
       }
     ],
-    "toolOpen": "Open →",
-    "whyEyebrow": "Why Timezio",
-    "whyTitle": "Accuracy by default, friendly by design",
-    "whyBody": "Built for remote teams, freelancers, and friends spread across the world.",
+    "toolOpen": "Відкрити →",
+    "whyEyebrow": "Чому Timezio",
+    "whyTitle": "Точність за замовчуванням, зручність за задумом",
+    "whyBody": "Створено для віддалених команд, фрилансерів і друзів, розкиданих по всьому світу.",
     "values": [
       {
-        "title": "Accurate Time Zone Calculations",
-        "body": "Compare local times between cities with automatic adjustment for daylight saving time and regional UTC offsets."
+        "title": "Точні розрахунки часових поясів",
+        "body": "Порівнюйте місцевий час між містами з автоматичним урахуванням переходу на літній час і регіональних зміщень UTC."
       },
       {
-        "title": "UTC & Local Time Conversion",
-        "body": "Convert UTC to local time (and back) for any city — past, present, or future dates supported."
+        "title": "Конвертація UTC та місцевого часу",
+        "body": "Конвертуйте UTC у місцевий час (і навпаки) для будь-якого міста — підтримуються минулі, поточні й майбутні дати."
       },
       {
-        "title": "Meeting Planner Across Time Zones",
-        "body": "Find the best overlapping meeting time for participants in different cities, without early mornings or late nights."
+        "title": "Планувальник зустрічей між часовими поясами",
+        "body": "Знаходьте найкращий спільний час зустрічі для учасників у різних містах — без ранніх ранків чи пізніх вечорів."
       },
       {
-        "title": "Fast, Simple & Free",
-        "body": "No accounts, no setup, no complexity. Just clear answers — instantly."
+        "title": "Швидко, просто й безкоштовно",
+        "body": "Без облікових записів, без налаштувань, без складнощів. Лише чіткі відповіді — миттєво."
       },
       {
-        "title": "DST-Aware & Reliable",
-        "body": "Timezio uses official IANA time zone data. All results automatically adjust for daylight saving time changes and regional rules."
+        "title": "Враховує DST і надійний",
+        "body": "Timezio використовує офіційні дані часових поясів IANA. Усі результати автоматично враховують зміни переходу на літній час і регіональні правила."
       },
       {
-        "title": "Built for Global Use",
-        "body": "Supports regions with non-standard offsets (including 30- or 45-minute differences) and date changes when crossing time zones."
+        "title": "Створено для глобального використання",
+        "body": "Підтримує регіони з нестандартними зміщеннями (зокрема різницю в 30 чи 45 хвилин) і зміни дати під час перетину часових поясів."
       }
     ]
   },
   "pages": {
     "explore": {
-      "heading": "Explore Time Zones",
-      "description": "Pick any point on the globe to see the local time, UTC offset, and daylight saving status. Use Explore to understand where time changes across borders.",
-      "breadcrumb": "Explore",
+      "heading": "Дослідження часових поясів",
+      "description": "Оберіть будь-яку точку на глобусі, щоб побачити місцевий час, зміщення UTC і статус переходу на літній час. Використовуйте «Дослідити», щоб зрозуміти, де час змінюється на кордонах.",
+      "breadcrumb": "Дослідити",
       "ctas": [
-        "Current time in major cities",
-        "Popular time zone converters",
-        "Daylight saving time checker"
+        "Поточний час у великих містах",
+        "Популярні конвертери часових поясів",
+        "Перевірка переходу на літній час"
       ],
-      "articleH2": "How to explore the globe",
+      "articleH2": "Як досліджувати глобус",
       "articleParagraphs": [
-        "The interactive 3D globe turns time zones into something you can see rather than calculate. Click any location and Timezio reads its exact latitude and longitude, looks up the matching IANA time zone, and shows the current local time, the UTC offset, and whether daylight saving time is currently in effect. Because the data comes from the official IANA time zone database, it covers the awkward cases too — half-hour offsets like India (UTC+5:30), 45-minute offsets like Nepal, and regions that change their clocks on different dates.",
-        "Explore is the quickest way to answer “what time is it there right now?” without typing a city name. Spin the globe to a continent, click a coastline, and read the time instantly. When you want to line up several places at once, switch to Compare; when you need to find a slot that works for a team, jump to the Planner. Every view stays in sync, so a city you click here is ready to compare or schedule with one tap.",
-        "Time zones are political as much as geographic — borders, exceptions, and seasonal rules all shift the clock. Seeing them on a globe makes those boundaries obvious, which is why Explore is a good starting point before you convert a specific time or book an international call."
+        "Інтерактивний 3D-глобус перетворює часові пояси на щось, що можна побачити, а не обчислювати. Клацніть будь-яке місце, і Timezio зчитає його точні широту й довготу, знайде відповідний часовий пояс IANA та покаже поточний місцевий час, зміщення UTC і чи діє наразі перехід на літній час. Оскільки дані надходять з офіційної бази часових поясів IANA, вони охоплюють і незручні випадки — півгодинні зміщення, як-от Індія (UTC+5:30), 45-хвилинні зміщення, як у Непалі, та регіони, що переводять годинники в різні дати.",
+        "«Дослідити» — найшвидший спосіб відповісти на запитання «котра там зараз година?», не вводячи назву міста. Прокрутіть глобус до континенту, клацніть узбережжя й одразу прочитайте час. Коли потрібно зіставити кілька місць водночас, перейдіть до «Порівняти»; коли треба знайти слот, що підходить команді, перейдіть до «Планувальника». Усі вкладки залишаються синхронізованими, тож місто, яке ви тут клацнули, готове до порівняння чи планування одним дотиком.",
+        "Часові пояси настільки ж політичні, як і географічні — кордони, винятки та сезонні правила зсувають годинник. Перегляд їх на глобусі робить ці межі очевидними, тому «Дослідити» — гарна відправна точка перед тим, як конвертувати конкретний час або забронювати міжнародний дзвінок."
       ]
     },
     "compare": {
-      "heading": "Compare Time Zones",
-      "description": "Compare multiple time zones side-by-side with DST-aware offsets. Add cities, choose a base location, and verify the time difference before you schedule.",
-      "breadcrumb": "Compare",
+      "heading": "Порівняння часових поясів",
+      "description": "Порівнюйте кілька часових поясів поруч із урахуванням DST. Додавайте міста, обирайте базове розташування й перевіряйте різницю в часі перед плануванням.",
+      "breadcrumb": "Порівняти",
       "ctas": [
-        "Popular time zone converters",
-        "Best meeting times by city pair",
-        "Daylight saving time checker"
+        "Популярні конвертери часових поясів",
+        "Найкращий час зустрічей за парами міст",
+        "Перевірка переходу на літній час"
       ],
-      "articleH2": "Compare several cities at once",
+      "articleH2": "Порівнюйте кілька міст водночас",
       "articleParagraphs": [
-        "Add up to six cities and Timezio lines up their current local times in a single view. Pick one as the “base” and every other city shows its difference relative to it, so you can answer questions like “when it’s 9:00 AM in Berlin, what time is it in New York and Singapore?” at a glance. The offsets are calculated from official IANA data and update in real time, including the one-hour shifts that happen when a region enters or leaves daylight saving time.",
-        "Comparing is most useful when the difference isn’t obvious. Many country pairs sit a fractional number of hours apart, and several change their clocks on different weekends, so the gap between two cities can be nine hours one month and ten the next. Lining the cities up side by side catches those edge cases before they turn into a missed call. For a date in the future, change the date and the comparison recalculates with the correct DST rules for that day.",
-        "When you’ve confirmed the difference, copy the share link to send the exact comparison to your team, or move the same set of cities into the Planner to find a meeting slot that works for everyone."
+        "Додайте до шести міст, і Timezio зіставить їхній поточний місцевий час в одному вікні. Оберіть одне як «базове», і кожне інше місто покаже свою різницю відносно нього, тож ви одразу відповісте на запитання на кшталт «коли в Берліні 9:00, котра година в Нью-Йорку та Сінгапурі?». Зміщення обчислюються з офіційних даних IANA й оновлюються в реальному часі, зокрема одногодинні зсуви, що трапляються, коли регіон переходить на літній час або повертається зі нього.",
+        "Порівняння найкорисніше, коли різниця неочевидна. Багато пар країн розділені дробовою кількістю годин, а деякі переводять годинники в різні вихідні, тож проміжок між двома містами може бути дев'ять годин одного місяця й десять наступного. Зіставлення міст поруч виявляє ці граничні випадки, перш ніж вони обернуться пропущеним дзвінком. Для майбутньої дати змініть дату, і порівняння перерахується з правильними правилами DST для того дня.",
+        "Коли ви підтвердили різницю, скопіюйте посилання для поширення, щоб надіслати команді точне порівняння, або перенесіть той самий набір міст у «Планувальник», щоб знайти час зустрічі, який підходить усім."
       ]
     },
     "planner": {
-      "heading": "Meeting Planner",
-      "description": "Plan meetings across multiple time zones. Add participants, set working hours, and find overlap windows automatically — fully DST-aware.",
-      "breadcrumb": "Planner",
+      "heading": "Планувальник зустрічей",
+      "description": "Плануйте зустрічі між кількома часовими поясами. Додавайте учасників, задавайте робочі години й автоматично знаходьте вікна перекриття — з повним урахуванням DST.",
+      "breadcrumb": "Планувальник",
       "ctas": [
-        "Best meeting times by city pair",
-        "Compare time zones",
-        "Daylight saving time checker"
+        "Найкращий час зустрічей за парами міст",
+        "Порівняти часові пояси",
+        "Перевірка переходу на літній час"
       ],
-      "articleH2": "Find a time that works for everyone",
+      "articleH2": "Знайдіть час, що підходить усім",
       "articleParagraphs": [
-        "Add each participant by city, set their working hours, and the planner overlays every schedule to surface the windows when everyone is available. Instead of mentally juggling offsets, you get a ranked list of slots that fall inside each person’s working day, with early-morning and late-night times de-prioritized so nobody has to take a 6 a.m. call. Every calculation is daylight-saving aware, so a slot that works this week still works after a region changes its clocks.",
-        "The planner is built for distributed teams, client calls across continents, and catching up with friends or family abroad. Set a meeting duration, choose a date, and adjust each participant’s hours if they work an unusual shift. You can also widen the search when there is no clean overlap — a common situation for pairs that are ten or more hours apart, where someone has to take an edge slot. For Google Calendar invites and Meet links, connect your account in the planner and confirm a slot.",
-        "Already know the two cities? The pre-built best-meeting-time pages show the overlap for popular pairs without any setup."
+        "Додайте кожного учасника за містом, задайте його робочі години, і планувальник накладе всі графіки, щоб виявити вікна, коли всі доступні. Замість того щоб подумки жонглювати зміщеннями, ви отримуєте ранжований список слотів, що припадають на робочий день кожної людини, причому ранкові та нічні години знижено в пріоритеті, аби нікому не довелося брати дзвінок о 6-й ранку. Кожен розрахунок враховує перехід на літній час, тож слот, що працює цього тижня, працюватиме й після того, як регіон переведе годинники.",
+        "Планувальник створено для розподілених команд, клієнтських дзвінків між континентами й спілкування з друзями чи родиною за кордоном. Задайте тривалість зустрічі, оберіть дату й за потреби скоригуйте години кожного учасника, якщо в нього незвична зміна. Ви також можете розширити пошук, коли немає чистого перекриття — поширена ситуація для пар, розділених десятьма й більше годинами, де комусь доведеться взяти граничний слот. Для запрошень у Google Calendar і посилань Meet підключіть свій обліковий запис у планувальнику й підтвердьте слот.",
+        "Уже знаєте два міста? Готові сторінки найкращого часу зустрічей показують перекриття для популярних пар без жодних налаштувань."
       ]
     },
     "saved": {
-      "heading": "Saved",
-      "description": "Save your frequently used locations so you can return instantly to their current time, offset, and daylight saving status.",
-      "breadcrumb": "Saved",
+      "heading": "Збережене",
+      "description": "Зберігайте часто використовувані розташування, щоб миттєво повертатися до їхнього поточного часу, зміщення та статусу переходу на літній час.",
+      "breadcrumb": "Збережене",
       "ctas": [
-        "Explore time zones",
-        "Compare time zones",
-        "Plan a meeting across time zones"
+        "Дослідити часові пояси",
+        "Порівняти часові пояси",
+        "Запланувати зустріч між часовими поясами"
       ]
     },
     "convertHub": {
-      "title": "Popular Time Zone Converters",
-      "intro1": "A time zone converter answers a deceptively tricky question: when it’s a given time in one place, what time is it somewhere else? The catch is that the gap between two zones isn’t fixed. Daylight saving time shifts it by an hour, the two regions often change their clocks on different weekends, and some zones sit a fractional number of hours apart. Each converter below uses official IANA data, so the result is correct on any date — including the weeks around a clock change when manual math usually goes wrong.",
-      "intro2": "Every converter page includes a full hour-by-hour table for the current day, the live offset between the two zones, and notes on which side observes daylight saving time. Need to check a city rather than an abbreviation? Browse the <world>world clock</world>, or jump to <compare>Compare</compare> to line up more than two places at once.",
-      "listHeading": "Converters"
+      "title": "Популярні конвертери часових поясів",
+      "intro1": "Конвертер часових поясів відповідає на оманливо хитре запитання: коли в одному місці певний час, котра година в іншому? Заковика в тому, що проміжок між двома поясами не фіксований. Перехід на літній час зсуває його на годину, два регіони часто переводять годинники в різні вихідні, а деякі пояси розділені дробовою кількістю годин. Кожен конвертер нижче використовує офіційні дані IANA, тож результат правильний у будь-яку дату — зокрема в тижні навколо переведення годинників, коли ручні обчислення зазвичай дають збій.",
+      "intro2": "Кожна сторінка конвертера містить повну погодинну таблицю на поточний день, актуальне зміщення між двома поясами й примітки про те, на якому боці діє перехід на літній час. Потрібно перевірити місто, а не абревіатуру? Перегляньте <world>світовий годинник</world> або перейдіть до <compare>Порівняти</compare>, щоб зіставити більше ніж два місця водночас.",
+      "listHeading": "Конвертери"
     },
     "timeHub": {
-      "title": "Current Time in Major Cities Worldwide",
-      "intro1": "Pick a city to see its current local time, the exact UTC offset, the IANA time zone it uses, and whether daylight saving time is in effect right now. Every page updates in real time and is calculated from the official IANA time zone database, so the awkward cases — half-hour offsets, regions that change clocks on different dates, and places that don’t observe DST at all — are handled correctly.",
-      "intro2": "These world-clock pages are the quickest way to check “what time is it there?” before you call, travel, or schedule. To convert a specific time between two places use the <convert>converters</convert>, to line up several cities use <compare>Compare</compare>, and to find a slot that works for a group use the <planner>Meeting Planner</planner>.",
-      "listHeading": "Cities ({count})"
+      "title": "Поточний час у великих містах світу",
+      "intro1": "Оберіть місто, щоб побачити його поточний місцевий час, точне зміщення UTC, часовий пояс IANA, який воно використовує, і чи діє наразі перехід на літній час. Кожна сторінка оновлюється в реальному часі й обчислюється з офіційної бази часових поясів IANA, тож незручні випадки — півгодинні зміщення, регіони, що переводять годинники в різні дати, і місця, що взагалі не дотримуються DST — обробляються правильно.",
+      "intro2": "Ці сторінки світового годинника — найшвидший спосіб перевірити «котра там година?» перед дзвінком, подорожжю чи плануванням. Щоб конвертувати конкретний час між двома місцями, скористайтеся <convert>конвертерами</convert>, щоб зіставити кілька міст — <compare>Порівняти</compare>, а щоб знайти слот, що підходить групі, — <planner>Планувальником зустрічей</planner>.",
+      "listHeading": "Міста ({count})"
     },
     "meetingHub": {
-      "title": "Best Meeting Times by City Pair",
-      "intro1": "Scheduling across continents usually means someone takes a call at a bad hour. These pages do the hard part for you: for each popular city pair, Timezio overlays both teams’ standard 9-to-5 day and lists the hours when everyone is awake and working, plus a recommended slot in the middle of that window. Because the math uses official IANA data, the overlap stays correct even when one city changes its clocks and the other doesn’t.",
-      "intro2": "Pick a pair below for an instant answer, or open the <planner>Meeting Planner</planner> to add your own cities, adjust each participant’s working hours, and generate calendar invites. To double-check the raw time difference first, use <compare>Compare</compare>."
+      "title": "Найкращий час зустрічей за парами міст",
+      "intro1": "Планування між континентами зазвичай означає, що комусь доведеться брати дзвінок у незручну годину. Ці сторінки роблять складну частину за вас: для кожної популярної пари міст Timezio накладає стандартний робочий день обох команд з 9 до 17 і перелічує години, коли всі не сплять і працюють, плюс рекомендований слот посередині цього вікна. Оскільки обчислення використовують офіційні дані IANA, перекриття залишається правильним навіть тоді, коли одне місто переводить годинники, а інше — ні.",
+      "intro2": "Оберіть пару нижче для миттєвої відповіді або відкрийте <planner>Планувальник зустрічей</planner>, щоб додати власні міста, скоригувати робочі години кожного учасника й створити запрошення в календар. Щоб спершу ще раз перевірити чисту різницю в часі, скористайтеся <compare>Порівняти</compare>."
     },
     "dstHub": {
-      "title": "Daylight Saving Time by Country",
-      "intro1": "Daylight saving time is one of the biggest sources of scheduling mistakes: clocks move an hour, but not everywhere and not on the same day. These pages tell you, for each region, whether DST is currently in effect, what the present UTC offset is, and the exact dates of the next spring-forward and fall-back transitions — all computed from the official IANA time zone database rather than hard-coded rules that go stale.",
-      "intro2": "Knowing when a region changes its clocks helps you protect recurring meetings, travel plans, and deadlines that span borders. Choose a region below, then use <compare>Compare</compare> or the <planner>Meeting Planner</planner> to see how an upcoming change shifts the time difference with your own location."
+      "title": "Перехід на літній час за країнами",
+      "intro1": "Перехід на літній час — одне з найбільших джерел помилок планування: годинники переводяться на годину, але не скрізь і не в той самий день. Ці сторінки повідомляють вам для кожного регіону, чи діє наразі DST, яке поточне зміщення UTC і точні дати наступних переведень годинників уперед навесні та назад восени — усе обчислено з офіційної бази часових поясів IANA, а не за жорстко заданими правилами, що застарівають.",
+      "intro2": "Знання того, коли регіон переводить годинники, допомагає захистити регулярні зустрічі, плани подорожей і дедлайни, що перетинають кордони. Оберіть регіон нижче, а потім скористайтеся <compare>Порівняти</compare> чи <planner>Планувальником зустрічей</planner>, щоб побачити, як майбутня зміна зсуне різницю в часі з вашим власним розташуванням."
     }
   },
   "prog": {
     "time": {
-      "breadcrumb": "World Clock",
-      "h1": "Current Time in {city}",
-      "localTime": "Local time",
+      "breadcrumb": "Світовий годинник",
+      "h1": "Поточний час у місті {city}",
+      "localTime": "Місцевий час",
       "dateLine": "{date} · {abbr} ({offset})",
-      "factTimeZone": "Time zone",
-      "factUtcOffset": "UTC offset",
-      "factAbbreviation": "Abbreviation",
-      "factDaylight": "Daylight saving",
-      "daylightInEffect": "In effect now",
-      "daylightObservedInactive": "Observed (not active)",
-      "daylightNotObserved": "Not observed",
-      "introMain": "The current local time in {city} is <b>{time}</b> on {date}. {city} runs on the <b>{tz}</b> time zone, which is presently {offsetAbbr}.",
-      "dstSentence": "{observesDst, select, yes {{city} observes daylight saving time, so its UTC offset shifts by one hour between standard and summer time.} other {{city} does not observe daylight saving time, so its UTC offset ({offset}) stays the same all year.}}",
+      "factTimeZone": "Часовий пояс",
+      "factUtcOffset": "Зміщення UTC",
+      "factAbbreviation": "Абревіатура",
+      "factDaylight": "Літній час",
+      "daylightInEffect": "Діє зараз",
+      "daylightObservedInactive": "Передбачено (неактивно)",
+      "daylightNotObserved": "Не застосовується",
+      "introMain": "Поточний місцевий час у місті {city} — <b>{time}</b>, {date}. {city} живе за часовим поясом <b>{tz}</b>, зміщення якого наразі становить {offsetAbbr}.",
+      "dstSentence": "{observesDst, select, yes {{city} переходить на літній час, тож зміщення UTC змінюється на одну годину між зимовим і літнім часом.} other {{city} не переходить на літній час, тож зміщення UTC ({offset}) залишається незмінним цілий рік.}}",
       "transitionLabel": "{type, select, begins {Clocks spring forward — DST begins} other {Clocks fall back — DST ends}}",
-      "nextChange": "<b>Next clock change:</b> {date} — {label}. The UTC offset moves from {fromOffset} to {toOffset}. Plan calls and travel around this date to avoid being an hour off.",
-      "crosslinks": "Use the interactive globe above to compare {city} with other cities, or open the <compare>Compare</compare> tab to line up several time zones side by side. Planning a call? The <planner>Meeting Planner</planner> finds overlapping working hours automatically, and the <dst>DST checker</dst> tracks upcoming clock changes.",
-      "relatedHeading": "Current time in other cities",
-      "wpName": "Current Time in {city}",
-      "wpDesc": "Live local time in {city} ({tz}). Current UTC offset {offsetAbbr}, with daylight saving status and the next clock change.",
-      "faq1q": "What time is it in {city} right now?",
-      "faq1a": "As of {date}, the local time in {city} is around {time} ({abbr}). The clock at the top of this page ticks in real time, and the offset shown is {offset}.",
-      "faq2q": "What time zone is {city} in?",
-      "faq2a": "{city} uses the {tz} IANA time zone{hasAbbr, select, yes {, currently abbreviated {abbr}} other {}}. Its current offset from Coordinated Universal Time is {offset}.",
-      "faq3q": "Does {city} observe daylight saving time?",
+      "nextChange": "<b>Наступний перевід годинників:</b> {date} — {label}. Зміщення UTC зміниться з {fromOffset} на {toOffset}. Плануйте дзвінки та поїздки з урахуванням цієї дати, щоб не помилитися на годину.",
+      "crosslinks": "Скористайтеся інтерактивним глобусом вище, щоб порівняти {city} з іншими містами, або відкрийте вкладку <compare>Порівняння</compare>, щоб зіставити кілька часових поясів поруч. Плануєте дзвінок? <planner>Планувальник зустрічей</planner> автоматично знаходить спільні робочі години, а <dst>Перевірка літнього часу</dst> відстежує найближчі переводи годинників.",
+      "relatedHeading": "Поточний час в інших містах",
+      "wpName": "Поточний час у місті {city}",
+      "wpDesc": "Місцевий час у місті {city} ({tz}) у реальному часі. Поточне зміщення UTC {offsetAbbr}, статус літнього часу та наступний перевід годинників.",
+      "faq1q": "Котра зараз година в місті {city}?",
+      "faq1a": "Станом на {date} місцевий час у місті {city} становить близько {time} ({abbr}). Годинник у верхній частині цієї сторінки йде в реальному часі, а показане зміщення — {offset}.",
+      "faq2q": "У якому часовому поясі розташоване місто {city}?",
+      "faq2a": "{city} використовує часовий пояс IANA {tz}{hasAbbr, select, yes {, поточна абревіатура — {abbr}} other {}}. Поточне зміщення від всесвітнього координованого часу — {offset}.",
+      "faq3q": "Чи переходить {city} на літній час?",
       "faq3a": "{observesDst, select, yes {Yes. {city} observes daylight saving time, so its UTC offset shifts by one hour between standard and summer time.{hasNext, select, yes { The next change is on {nextDate}, when the clocks {nextDir, select, forward {move forward} other {move back}} and the offset becomes {nextOffset}.} other {}}} other {{city} does not observe daylight saving time, so its UTC offset ({offset}) stays the same all year.}}",
-      "faq4q": "What is the UTC offset for {city}?",
+      "faq4q": "Яке зміщення UTC у місті {city}?",
       "faq4a": "{city} is currently at {offset}. {observesDst, select, yes {This offset changes by one hour during the daylight saving period.} other {This offset is fixed throughout the year.}}"
     },
     "convert": {
-      "breadcrumb": "Converters",
-      "h1": "{from} to {to} Time Converter",
-      "diffSummary": "{dir, select, same {{to} is currently the same time as {from}.} ahead {{to} is currently {h}h{m, plural, =0 {} other { #m}} ahead of {from}.} other {{to} is currently {h}h{m, plural, =0 {} other { #m}} behind {from}.}}",
-      "introBody": "{from} is {fromFull}; {to} is {toFull}. The table below shows the conversion for every part of the day, with daylight saving time handled automatically.",
-      "factDifference": "Difference",
-      "diffNone": "None",
-      "tableHeading": "{from} → {to} conversion table",
-      "dayNext": "next day",
-      "dayPrev": "previous day",
-      "crosslinks": "Need a specific date or a different pair? Use the interactive globe and the <compare>Compare</compare> tab to preview any moment, including future dates that cross a daylight saving boundary. To schedule a call between these zones, try the <planner>Meeting Planner</planner>.",
-      "relatedHeading": "Related converters",
-      "wpDesc": "Convert {from} to {to}. {summary}",
-      "faq1q": "What is the time difference between {from} and {to}?",
+      "breadcrumb": "Конвертери",
+      "h1": "Конвертер часу {from} → {to}",
+      "diffSummary": "{dir, select, same {{to} наразі збігається за часом із {from}.} ahead {{to} наразі випереджає {from} на {h} год{m, plural, =0 {} other { #хв}}.} other {{to} наразі відстає від {from} на {h} год{m, plural, =0 {} other { #хв}}.}}",
+      "introBody": "{from} — це {fromFull}; {to} — це {toFull}. У таблиці нижче показано конвертацію для кожної частини доби з автоматичним урахуванням літнього часу.",
+      "factDifference": "Різниця",
+      "diffNone": "Немає",
+      "tableHeading": "Таблиця конвертації {from} → {to}",
+      "dayNext": "наступного дня",
+      "dayPrev": "попереднього дня",
+      "crosslinks": "Потрібна конкретна дата чи інша пара? Скористайтеся інтерактивним глобусом і вкладкою <compare>Порівняння</compare>, щоб переглянути будь-який момент, зокрема майбутні дати, що перетинають межу переходу на літній час. Щоб запланувати дзвінок між цими поясами, спробуйте <planner>Планувальник зустрічей</planner>.",
+      "relatedHeading": "Схожі конвертери",
+      "wpDesc": "Конвертуйте {from} у {to}. {summary}",
+      "faq1q": "Яка різниця в часі між {from} і {to}?",
       "faq1a": "Right now {to} ({toFull}) is {dir, select, same {the same time as} ahead {ahead of} other {behind}} {from} ({fromFull}). The difference is {absH, plural, =0 {zero hours} one {# hour} other {# hours}} and can shift by an hour when either zone enters or leaves daylight saving time.",
-      "faq2q": "How do I convert {from} to {to}?",
-      "faq2a": "Add the {from} time to the offset difference. For example, {exampleFrom} {from} is {exampleTo} {to}. The full hour-by-hour table on this page lists each conversion for the current date.",
-      "faq3q": "Does {from} or {to} use daylight saving time?",
+      "faq2q": "Як конвертувати {from} у {to}?",
+      "faq2a": "Додайте до часу {from} різницю зміщень. Наприклад, {exampleFrom} {from} — це {exampleTo} {to}. Повна погодинна таблиця на цій сторінці містить кожну конвертацію для поточної дати.",
+      "faq3q": "Чи використовує {from} або {to} літній час?",
       "faq3a": "{from} is currently {fromDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({fromOffset}), and {to} is {toDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({toOffset}). The converter uses official IANA data and adjusts automatically.",
-      "faq4q": "Is this {from} to {to} converter accurate?",
-      "faq4a": "Yes — conversions use the IANA time zone database, the same source operating systems use, and account for current daylight saving rules to the minute."
+      "faq4q": "Чи точний цей конвертер {from} → {to}?",
+      "faq4a": "Так — для конвертації використовується база даних часових поясів IANA, те саме джерело, що й в операційних системах, з урахуванням чинних правил літнього часу з точністю до хвилини."
     },
     "meeting": {
-      "breadcrumb": "Meeting Planner",
-      "h1": "Best Meeting Time: {a} ↔ {b}",
+      "breadcrumb": "Планувальник зустрічей",
+      "h1": "Найкращий час для зустрічі: {a} ↔ {b}",
       "overlapSentence": "{hasOverlap, select, yes {Standard 9-to-5 working hours in {a} and {b} overlap from {start} to {end} {a} time. A good middle slot is around {bestA} in {a} ({bestB} in {b}).} other {Standard 9-to-5 working hours in {a} and {b} do not overlap, so one side will need an early or late slot. Aim for the start of one city's day and the end of the other's.}}",
-      "introTail": "All times below are for today and adjust automatically for daylight saving time.",
-      "sharedWorkHours": "Shared work hours",
-      "hoursUnit": "{count} h",
-      "noneWorkHours": "None (9–5)",
-      "tableHeading": "Overlapping working hours",
-      "noOverlapBody": "No 9-to-5 overlap today. Open the Planner above to widen working hours or pick an edge slot that works for both teams.",
-      "crosslinks": "The Planner tab above already has {a} and {b} loaded. Adjust each participant's hours, set a duration, and Timezio ranks the best slots. To double-check the raw offset, use the <compare>Compare</compare> tab.",
-      "relatedHeading": "More meeting pairs",
-      "wpDesc": "Find the best meeting time between {a} and {b}. {overlap}",
-      "faq1q": "What is the best time to schedule a meeting between {a} and {b}?",
+      "introTail": "Усі наведені нижче значення часу стосуються сьогоднішнього дня й автоматично коригуються з урахуванням літнього часу.",
+      "sharedWorkHours": "Спільні робочі години",
+      "hoursUnit": "{count} год",
+      "noneWorkHours": "Немає (9–17)",
+      "tableHeading": "Спільні робочі години",
+      "noOverlapBody": "Сьогодні немає збігу робочих годин з 9 до 17. Відкрийте Планувальник вище, щоб розширити робочі години або вибрати крайній інтервал, зручний для обох команд.",
+      "crosslinks": "На вкладці Планувальник вище вже завантажено {a} та {b}. Налаштуйте години кожного учасника, задайте тривалість — і Timezio проранжує найкращі інтервали. Щоб ще раз перевірити чисте зміщення, скористайтеся вкладкою <compare>Порівняння</compare>.",
+      "relatedHeading": "Інші пари для зустрічей",
+      "wpDesc": "Знайдіть найкращий час для зустрічі між {a} та {b}. {overlap}",
+      "faq1q": "Коли найкраще запланувати зустріч між {a} та {b}?",
       "faq1a": "{hasOverlap, select, yes {The cleanest option is around {bestA} in {a}, which is {bestB} in {b} — inside both teams' working day. The overlap table on this page lists every shared hour for today.} other {There is no clean overlap during standard hours, so pick the least disruptive edge: early morning for one city or early evening for the other. The table on this page shows each hour side by side.}}",
-      "faq2q": "What is the time difference between {a} and {b}?",
-      "faq2a": "{a} is currently {offsetA} and {b} is {offsetB}. The difference can move by an hour around daylight saving transitions, which this tool accounts for automatically.",
-      "faq3q": "How do I plan a recurring call across {a} and {b}?",
-      "faq3a": "Use the Planner tab above — both cities are pre-loaded. Set each participant's working hours and Timezio highlights overlapping slots and warns about early-morning or late-night times."
+      "faq2q": "Яка різниця в часі між {a} та {b}?",
+      "faq2a": "{a} наразі має зміщення {offsetA}, а {b} — {offsetB}. Різниця може змінитися на годину під час переходів на літній час, що цей інструмент враховує автоматично.",
+      "faq3q": "Як спланувати регулярний дзвінок між {a} та {b}?",
+      "faq3a": "Скористайтеся вкладкою Планувальник вище — обидва міста вже завантажено. Задайте робочі години кожного учасника, і Timezio підсвітить спільні інтервали та попередить про ранні чи пізні нічні години."
     },
     "dst": {
-      "breadcrumb": "Daylight Saving Time",
-      "h1": "{region} Daylight Saving Time",
+      "breadcrumb": "Літній час",
+      "h1": "Літній час: {region}",
       "intro": "{observesDst, select, yes {{region} observes daylight saving time. Clocks are currently {isDst, select, yes {on summer time (DST in effect)} other {on standard time}}, at {offset}. The reference zone for {region} is {tz} ({city}).} other {{region} does not currently observe daylight saving time. The offset stays at {offset} all year. The reference zone is {tz} ({city}).}}",
-      "factObservesDst": "Observes DST",
-      "yes": "Yes",
-      "no": "No",
-      "factCurrentOffset": "Current offset",
-      "factStatus": "Status",
-      "summerTime": "Summer time",
-      "standardTime": "Standard time",
-      "factReferenceZone": "Reference zone",
-      "changesHeading": "Next clock changes",
-      "colChange": "Change",
-      "colDate": "Date",
-      "colOffset": "Offset",
-      "springForward": "Spring forward (DST begins)",
-      "fallBack": "Fall back (DST ends)",
-      "crosslinks": "Daylight saving changes shift {region}'s offset by an hour, which can quietly break recurring meetings. Check the live difference against your own zone with the <compare>Compare</compare> tab, or schedule around the change using the <planner>Meeting Planner</planner>.",
-      "relatedHeading": "DST in other regions",
-      "faq1q": "Does {region} observe daylight saving time?",
+      "factObservesDst": "Перехід на літній час",
+      "yes": "Так",
+      "no": "Ні",
+      "factCurrentOffset": "Поточне зміщення",
+      "factStatus": "Статус",
+      "summerTime": "Літній час",
+      "standardTime": "Зимовий час",
+      "factReferenceZone": "Еталонний пояс",
+      "changesHeading": "Наступні переводи годинників",
+      "colChange": "Зміна",
+      "colDate": "Дата",
+      "colOffset": "Зміщення",
+      "springForward": "Перевід уперед (початок літнього часу)",
+      "fallBack": "Перевід назад (кінець літнього часу)",
+      "crosslinks": "Перехід на літній час змінює зміщення регіону {region} на годину, що може непомітно зруйнувати регулярні зустрічі. Перевірте поточну різницю зі своїм поясом на вкладці <compare>Порівняння</compare> або заплануйте події з урахуванням зміни за допомогою <planner>Планувальника зустрічей</planner>.",
+      "relatedHeading": "Літній час в інших регіонах",
+      "faq1q": "Чи переходить {region} на літній час?",
       "faq1a": "{observesDst, select, yes {Yes. {region} changes its clocks twice a year. It is currently {isDst, select, yes {on daylight saving (summer) time} other {on standard time}} at {offset}.} other {No. {region} keeps a fixed offset of {offset} throughout the year and does not change its clocks.}}",
-      "faq2q": "When do the clocks change in {region}?",
+      "faq2q": "Коли в регіоні {region} переводять годинники?",
       "faq2a": "{observesDst, select, yes {{hasBegins, select, yes {Clocks next spring forward on {beginsDate} (offset {beginsFrom} → {beginsTo}). } other {}}{hasEnds, select, yes {Clocks next fall back on {endsDate} (offset {endsFrom} → {endsTo}).} other {}}} other {{region} does not change its clocks, so there is no spring-forward or fall-back date.}}",
-      "faq3q": "What is the current UTC offset for {region}?",
+      "faq3q": "Яке поточне зміщення UTC для регіону {region}?",
       "faq3a": "{region} is currently at {offset}{hasAbbr, select, yes { ({abbr})} other {}}. {observesDst, select, yes {This shifts by one hour when daylight saving begins or ends.} other {This offset is fixed.}}"
     }
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 09.01.2026",
+      "title": "Політика конфіденційності",
+      "updated": "Останнє оновлення: 09.01.2026",
       "intro": [
         {
           "type": "p",
-          "text": "This Privacy Policy explains how we collect, use, and protect information when you visit and use this website (the \"Website\")."
+          "text": "Ця Політика конфіденційності пояснює, як ми збираємо, використовуємо та захищаємо інформацію, коли ви відвідуєте та використовуєте цей вебсайт (далі — «Вебсайт»)."
         },
         {
           "type": "p",
-          "text": "We are committed to protecting your privacy and processing personal data in accordance with applicable data protection laws, including the General Data Protection Regulation (EU) 2016/679 (GDPR)."
+          "text": "Ми прагнемо захищати вашу конфіденційність та обробляти персональні дані відповідно до чинного законодавства про захист даних, зокрема Загального регламенту про захист даних (ЄС) 2016/679 (GDPR)."
         }
       ],
       "sections": [
         {
-          "heading": "1. Information We Collect",
+          "heading": "1. Інформація, яку ми збираємо",
           "blocks": [
             {
               "type": "subheading",
-              "text": "1.1 Information You Do Not Provide Directly"
+              "text": "1.1 Інформація, яку ви не надаєте безпосередньо"
             },
             {
               "type": "p",
-              "text": "This Website does not require user registration and does not ask users to provide personal information to use its core features."
-            },
-            {
-              "type": "subheading",
-              "text": "1.2 Automatically Collected Information"
-            },
-            {
-              "type": "p",
-              "text": "When you visit the Website, limited information may be collected automatically, including:"
-            },
-            {
-              "type": "list",
-              "items": [
-                "IP address (anonymized/truncated where supported by the tool)",
-                "Browser type and version",
-                "Device type and operating system",
-                "Pages visited and interaction data",
-                "Referring website",
-                "Approximate geographic location (city or country level)"
-              ]
-            },
-            {
-              "type": "p",
-              "text": "This information is used only for analytics, security, and service improvement purposes."
-            }
-          ]
-        },
-        {
-          "heading": "1.3 Service Data You May Provide",
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Core tools (time conversion, planner) work without registration. If you choose to save/share meeting data, connect a calendar, or sign in with Google, we may store the meeting/session details you submit (e.g., participant names or labels, time slots, titles) and your Google account email to enable the feature. You can request deletion of this stored data at any time (see Contact)."
-            }
-          ]
-        },
-        {
-          "heading": "2. Cookies and Similar Technologies",
-          "blocks": [
-            {
-              "type": "p",
-              "text": "The Website may use cookies or similar technologies to:"
-            },
-            {
-              "type": "list",
-              "items": [
-                "Measure traffic and usage patterns",
-                "Understand how users interact with the Website",
-                "Improve performance and user experience",
-                "Show advertising where enabled"
-              ]
-            },
-            {
-              "type": "p",
-              "text": "Cookies used on this Website do not directly identify you as an individual."
-            },
-            {
-              "type": "p",
-              "text": "Where required by applicable law, cookies that are not strictly necessary are used only after obtaining user consent through a cookie banner or consent mechanism."
-            },
-            {
-              "type": "p",
-              "text": "You can manage or withdraw your consent at any time through your browser settings or the cookie settings provided on the Website."
-            }
-          ]
-        },
-        {
-          "heading": "3. Analytics and Advertising",
-          "blocks": [
-            {
-              "type": "subheading",
-              "text": "3.1 Analytics"
-            },
-            {
-              "type": "p",
-              "text": "We may use analytics tools (e.g., Google Analytics via Google Tag Manager or privacy-focused alternatives) to understand how visitors use the Website. These tools collect usage data (pages viewed, device/browser info, approximate location) and can be configured to anonymize IP where supported. Non-essential analytics only load after consent where required."
+              "text": "Цей Вебсайт не вимагає реєстрації користувачів і не просить користувачів надавати персональну інформацію для використання його основних функцій."
             },
             {
               "type": "subheading",
-              "text": "3.2 Advertising"
+              "text": "1.2 Інформація, яка збирається автоматично"
             },
             {
               "type": "p",
-              "text": "The Website may display advertisements from third-party partners such as Google AdSense (served via Google Tag Manager). These partners may use cookies or similar technologies to display relevant ads and may process data (e.g., cookie IDs, coarse location, device info). Advertising cookies are loaded only after consent where required."
-            },
-            {
-              "type": "p",
-              "text": "Advertising partners process information under their own privacy policies and may transfer data outside your region under appropriate safeguards (e.g., Standard Contractual Clauses). You can withdraw or change your cookie and advertising consent at any time using the **“Cookie settings”** link in the website footer, or through your browser settings."
-            },
-            {
-              "type": "p",
-              "text": "You can also control or opt out of personalized advertising directly with the providers and industry programs:"
+              "text": "Коли ви відвідуєте Вебсайт, певна обмежена інформація може збиратися автоматично, зокрема:"
             },
             {
               "type": "list",
               "items": [
-                "Google Ads Settings — [adssettings.google.com](https://adssettings.google.com)",
-                "How Google uses data from partner sites — [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites)",
-                "US opt-out (DAA) — [optout.aboutads.info](https://optout.aboutads.info) · [youradchoices.com](https://www.youradchoices.com)",
-                "EU opt-out (EDAA) — [youronlinechoices.eu](https://www.youronlinechoices.eu)"
+                "IP-адреса (анонімізована/скорочена там, де це підтримується інструментом)",
+                "Тип і версія браузера",
+                "Тип пристрою та операційна система",
+                "Відвідані сторінки та дані про взаємодію",
+                "Вебсайт-джерело переходу",
+                "Приблизне географічне розташування (на рівні міста або країни)"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Ця інформація використовується виключно для цілей аналітики, безпеки та вдосконалення сервісу."
+            }
+          ]
+        },
+        {
+          "heading": "1.3 Сервісні дані, які ви можете надати",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Основні інструменти (конвертація часу, планувальник) працюють без реєстрації. Якщо ви вирішите зберегти/поділитися даними про зустрічі, підключити календар або увійти через Google, ми можемо зберігати надані вами дані про зустріч/сеанс (наприклад, імена чи мітки учасників, часові інтервали, назви) та електронну адресу вашого облікового запису Google, щоб увімкнути цю функцію. Ви можете будь-коли запросити видалення цих збережених даних (див. розділ «Контакти»)."
+            }
+          ]
+        },
+        {
+          "heading": "2. Файли cookie та подібні технології",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Вебсайт може використовувати файли cookie або подібні технології, щоб:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Вимірювати трафік і моделі використання",
+                "Розуміти, як користувачі взаємодіють із Вебсайтом",
+                "Покращувати продуктивність і зручність користування",
+                "Показувати рекламу там, де це ввімкнено"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Файли cookie, що використовуються на цьому Вебсайті, не ідентифікують вас безпосередньо як особу."
+            },
+            {
+              "type": "p",
+              "text": "Там, де цього вимагає чинне законодавство, файли cookie, які не є строго необхідними, використовуються лише після отримання згоди користувача через банер файлів cookie або механізм згоди."
+            },
+            {
+              "type": "p",
+              "text": "Ви можете будь-коли керувати своєю згодою або відкликати її через налаштування браузера чи налаштування файлів cookie, передбачені на Вебсайті."
+            }
+          ]
+        },
+        {
+          "heading": "3. Аналітика та реклама",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "3.1 Аналітика"
+            },
+            {
+              "type": "p",
+              "text": "Ми можемо використовувати аналітичні інструменти (наприклад, Google Analytics через Google Tag Manager або альтернативи, орієнтовані на конфіденційність), щоб розуміти, як відвідувачі користуються Вебсайтом. Ці інструменти збирають дані про використання (переглянуті сторінки, інформацію про пристрій/браузер, приблизне розташування) і можуть бути налаштовані на анонімізацію IP там, де це підтримується. Неосновна аналітика завантажується лише після згоди там, де це потрібно."
+            },
+            {
+              "type": "subheading",
+              "text": "3.2 Реклама"
+            },
+            {
+              "type": "p",
+              "text": "Вебсайт може показувати рекламу від сторонніх партнерів, як-от Google AdSense (що показується через Google Tag Manager). Ці партнери можуть використовувати файли cookie або подібні технології для показу релевантної реклами та можуть обробляти дані (наприклад, ідентифікатори cookie, приблизне розташування, інформацію про пристрій). Рекламні файли cookie завантажуються лише після згоди там, де це потрібно."
+            },
+            {
+              "type": "p",
+              "text": "Рекламні партнери обробляють інформацію згідно зі своїми власними політиками конфіденційності та можуть передавати дані за межі вашого регіону за умови належних гарантій (наприклад, Standard Contractual Clauses). Ви можете будь-коли відкликати або змінити свою згоду щодо файлів cookie та реклами за допомогою посилання **«Налаштування файлів cookie»** у нижньому колонтитулі вебсайту або через налаштування браузера."
+            },
+            {
+              "type": "p",
+              "text": "Ви також можете керувати персоналізованою рекламою або відмовитися від неї безпосередньо через провайдерів та галузеві програми:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Налаштування реклами Google — [adssettings.google.com](https://adssettings.google.com)",
+                "Як Google використовує дані з партнерських сайтів — [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites)",
+                "Відмова в США (DAA) — [optout.aboutads.info](https://optout.aboutads.info) · [youradchoices.com](https://www.youradchoices.com)",
+                "Відмова в ЄС (EDAA) — [youronlinechoices.eu](https://www.youronlinechoices.eu)"
               ]
             }
           ]
         },
         {
-          "heading": "4. How We Use Information",
+          "heading": "4. Як ми використовуємо інформацію",
           "blocks": [
             {
               "type": "p",
-              "text": "Collected information may be used to:"
+              "text": "Зібрана інформація може використовуватися для того, щоб:"
             },
             {
               "type": "list",
               "items": [
-                "Operate and maintain the Website",
-                "Improve tools, features, and usability",
-                "Analyze usage trends and performance",
-                "Ensure security and prevent abuse",
-                "Comply with legal obligations"
+                "Забезпечувати роботу та підтримку Вебсайту",
+                "Покращувати інструменти, функції та зручність користування",
+                "Аналізувати тенденції використання та продуктивність",
+                "Забезпечувати безпеку та запобігати зловживанням",
+                "Дотримуватися юридичних зобов'язань"
               ]
             },
             {
               "type": "p",
-              "text": "**We do not sell personal data.**"
+              "text": "**Ми не продаємо персональні дані.**"
             }
           ]
         },
         {
-          "heading": "5. Legal Basis for Processing (GDPR)",
+          "heading": "5. Правова підстава для обробки (GDPR)",
           "blocks": [
             {
               "type": "p",
-              "text": "Under the GDPR, personal data is processed on the following legal bases:"
+              "text": "Згідно з GDPR персональні дані обробляються на таких правових підставах:"
             },
             {
               "type": "list",
               "items": [
-                "**Consent** — for non-essential cookies/analytics/advertising where required",
-                "**Legitimate interests** — to operate, secure, and improve the Website",
-                "**Legal obligation** — where processing is required by law"
+                "**Згода** — для неосновних файлів cookie/аналітики/реклами там, де це потрібно",
+                "**Законні інтереси** — для забезпечення роботи, безпеки та вдосконалення Вебсайту",
+                "**Юридичне зобов'язання** — коли обробка вимагається законом"
               ]
             }
           ]
         },
         {
-          "heading": "6. Data Retention",
+          "heading": "6. Зберігання даних",
           "blocks": [
             {
               "type": "p",
-              "text": "We retain collected data only for as long as necessary to fulfill the purposes described in this Privacy Policy, unless a longer retention period is required or permitted by law."
+              "text": "Ми зберігаємо зібрані дані лише протягом часу, необхідного для досягнення цілей, описаних у цій Політиці конфіденційності, якщо триваліший термін зберігання не вимагається або не дозволяється законом."
             }
           ]
         },
         {
-          "heading": "7. Data Sharing and Third Parties",
+          "heading": "7. Обмін даними та треті сторони",
           "blocks": [
             {
               "type": "p",
-              "text": "We may share limited data with trusted third-party service providers (such as analytics or advertising providers) strictly for the purposes described in this Privacy Policy."
+              "text": "Ми можемо передавати обмежений обсяг даних надійним стороннім постачальникам послуг (як-от постачальникам аналітики чи реклами) виключно для цілей, описаних у цій Політиці конфіденційності."
             },
             {
               "type": "p",
-              "text": "All such providers are required to process data in compliance with applicable data protection laws."
+              "text": "Усі такі постачальники зобов'язані обробляти дані відповідно до чинного законодавства про захист даних."
             },
             {
               "type": "p",
-              "text": "Some providers (e.g., Google) may process data outside the European Economic Area (EEA). When that occurs, we rely on appropriate safeguards such as Standard Contractual Clauses or equivalent mechanisms."
+              "text": "Деякі постачальники (наприклад, Google) можуть обробляти дані за межами Європейського економічного простору (ЄЕП). Коли це відбувається, ми покладаємося на належні гарантії, як-от Standard Contractual Clauses або еквівалентні механізми."
             }
           ]
         },
         {
-          "heading": "8. Your Rights Under GDPR",
+          "heading": "8. Ваші права згідно з GDPR",
           "blocks": [
             {
               "type": "p",
-              "text": "If you are located in the European Union, you have the right to:"
+              "text": "Якщо ви перебуваєте на території Європейського Союзу, ви маєте право:"
             },
             {
               "type": "list",
               "items": [
-                "Access your personal data",
-                "Request correction of inaccurate data",
-                "Request deletion of your data",
-                "Restrict or object to processing",
-                "Withdraw consent at any time",
-                "Lodge a complaint with a supervisory authority"
+                "Отримати доступ до своїх персональних даних",
+                "Вимагати виправлення неточних даних",
+                "Вимагати видалення своїх даних",
+                "Обмежити обробку або заперечити проти неї",
+                "Відкликати згоду в будь-який час",
+                "Подати скаргу до наглядового органу"
               ]
             },
             {
               "type": "p",
-              "text": "You may exercise these rights by contacting us using the details provided below."
+              "text": "Ви можете скористатися цими правами, звернувшись до нас за реквізитами, наведеними нижче."
             }
           ]
         },
         {
-          "heading": "9. US State Privacy Rights (CCPA / CPRA & similar)",
+          "heading": "9. Права на конфіденційність у штатах США (CCPA / CPRA та подібні)",
           "blocks": [
             {
               "type": "p",
-              "text": "If you are a resident of California or another US state with comprehensive privacy laws, you may have the right to know what personal information is collected, to request access or deletion, to correct inaccurate information, and to opt out of the “sale” or “sharing” of personal information and of targeted advertising."
+              "text": "Якщо ви є резидентом Каліфорнії чи іншого штату США з комплексним законодавством про конфіденційність, ви можете мати право знати, яка персональна інформація збирається, запитувати доступ до неї або її видалення, виправляти неточну інформацію, а також відмовлятися від «продажу» чи «передачі» персональної інформації та від таргетованої реклами."
             },
             {
               "type": "p",
-              "text": "We do not sell personal information for money. However, the use of advertising cookies may be considered “sharing” or a “sale” under some state laws. You can opt out of personalized advertising using the **“Cookie settings”** link in the footer and the industry opt-out tools listed in Section 3.2. Where supported, we honor the Global Privacy Control (GPC) browser signal as a valid opt-out request."
+              "text": "Ми не продаємо персональну інформацію за гроші. Однак використання рекламних файлів cookie може вважатися «передачею» чи «продажем» згідно із законодавством деяких штатів. Ви можете відмовитися від персоналізованої реклами за допомогою посилання **«Налаштування файлів cookie»** у нижньому колонтитулі та галузевих інструментів відмови, наведених у Розділі 3.2. Там, де це підтримується, ми враховуємо сигнал браузера Global Privacy Control (GPC) як дійсний запит на відмову."
             },
             {
               "type": "p",
-              "text": "To exercise any of these rights, contact us using the details in Section 14. We will not discriminate against you for exercising your privacy rights."
+              "text": "Щоб скористатися будь-яким із цих прав, зверніться до нас за реквізитами, наведеними в Розділі 14. Ми не дискримінуватимемо вас за використання ваших прав на конфіденційність."
             }
           ]
         },
         {
-          "heading": "10. Children's Privacy",
+          "heading": "10. Конфіденційність дітей",
           "blocks": [
             {
               "type": "p",
-              "text": "This Website is not intended for children under the age of 16. We do not knowingly collect personal data from children."
+              "text": "Цей Вебсайт не призначений для дітей віком до 16 років. Ми свідомо не збираємо персональні дані від дітей."
             }
           ]
         },
         {
-          "heading": "11. Security",
+          "heading": "11. Безпека",
           "blocks": [
             {
               "type": "p",
-              "text": "We take reasonable technical and organizational measures to protect information against unauthorized access, loss, misuse, or alteration. However, no method of transmission or storage is completely secure."
+              "text": "Ми вживаємо розумних технічних та організаційних заходів для захисту інформації від несанкціонованого доступу, втрати, неправомірного використання чи зміни. Однак жоден метод передавання чи зберігання не є повністю безпечним."
             }
           ]
         },
         {
-          "heading": "12. External Links",
+          "heading": "12. Зовнішні посилання",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website may contain links to third-party websites. We are not responsible for the content or privacy practices of those websites."
+              "text": "Вебсайт може містити посилання на сторонні вебсайти. Ми не несемо відповідальності за вміст або практики конфіденційності цих вебсайтів."
             }
           ]
         },
         {
-          "heading": "13. Changes to This Privacy Policy",
+          "heading": "13. Зміни до цієї Політики конфіденційності",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated \"Last updated\" date."
+              "text": "Ми можемо час від часу оновлювати цю Політику конфіденційності. Будь-які зміни будуть опубліковані на цій сторінці з оновленою датою «Останнє оновлення»."
             },
             {
               "type": "p",
-              "text": "We encourage users to review this page periodically. If changes materially affect how we process your data, we will provide a clear notice (e.g., on this page or via the Website interface)."
+              "text": "Ми радимо користувачам періодично переглядати цю сторінку. Якщо зміни суттєво вплинуть на те, як ми обробляємо ваші дані, ми надамо чітке повідомлення (наприклад, на цій сторінці або через інтерфейс Вебсайту)."
             }
           ]
         },
         {
-          "heading": "14. Contact Information",
+          "heading": "14. Контактна інформація",
           "blocks": [
             {
               "type": "p",
-              "text": "If you have questions about this Privacy Policy or how data is processed on this Website, you may contact us at:"
+              "text": "Якщо у вас є запитання щодо цієї Політики конфіденційності або того, як обробляються дані на цьому Вебсайті, ви можете звернутися до нас за адресою:"
             },
             {
               "type": "emailBox",
-              "label": "Email:",
+              "label": "Електронна пошта:",
               "email": "hello@timezio.com"
             }
           ]
@@ -716,173 +716,173 @@
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 09.01.2026",
+      "title": "Умови надання послуг",
+      "updated": "Останнє оновлення: 09.01.2026",
       "intro": [
         {
           "type": "p",
-          "text": "These Terms of Service (\"Terms\") govern your access to and use of this website (the \"Website\"). By accessing or using the Website, you agree to be bound by these Terms. If you do not agree, please discontinue use of the Website."
+          "text": "Ці Умови надання послуг (далі — «Умови») регулюють ваш доступ до цього вебсайту (далі — «Вебсайт») та його використання. Отримуючи доступ до Вебсайту чи використовуючи його, ви погоджуєтеся дотримуватися цих Умов. Якщо ви не погоджуєтеся, будь ласка, припиніть використання Вебсайту."
         }
       ],
       "sections": [
         {
-          "heading": "1. Purpose of the Website",
+          "heading": "1. Призначення Вебсайту",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website provides tools and information related to time zones, time differences, UTC conversions, and meeting planning for general informational purposes only."
+              "text": "Вебсайт надає інструменти та інформацію, пов'язані з часовими поясами, різницею в часі, конвертацією UTC та плануванням зустрічей, виключно для загальних інформаційних цілей."
             },
             {
               "type": "p",
-              "text": "The Website does not provide legal, financial, professional, or time-critical advisory services."
+              "text": "Вебсайт не надає юридичних, фінансових, професійних чи консультаційних послуг, що залежать від часу."
             }
           ]
         },
         {
-          "heading": "2. Use of the Website",
+          "heading": "2. Використання Вебсайту",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree to use the Website only for lawful purposes and in a manner that does not:"
+              "text": "Ви погоджуєтеся використовувати Вебсайт виключно в законних цілях і в спосіб, який не:"
             },
             {
               "type": "list",
               "items": [
-                "Violate applicable laws or regulations",
-                "Infringe the rights of others",
-                "Interfere with or disrupt the operation of the Website",
-                "Attempt to gain unauthorized access to any part of the Website"
+                "Порушує чинні закони чи нормативні акти",
+                "Порушує права інших осіб",
+                "Заважає роботі Вебсайту або порушує її",
+                "Намагається отримати несанкціонований доступ до будь-якої частини Вебсайту"
               ]
             },
             {
               "type": "p",
-              "text": "We reserve the right to restrict or terminate access to the Website at any time if misuse is detected."
+              "text": "Ми залишаємо за собою право обмежити чи припинити доступ до Вебсайту в будь-який час у разі виявлення зловживань."
             }
           ]
         },
         {
-          "heading": "3. Accuracy of Information",
+          "heading": "3. Точність інформації",
           "blocks": [
             {
               "type": "p",
-              "text": "While we make reasonable efforts to ensure that the information and calculations provided on the Website are accurate and based on recognized public time zone data, we do not guarantee that the content is complete, current, or error-free."
+              "text": "Хоча ми докладаємо розумних зусиль для забезпечення точності інформації та розрахунків, наданих на Вебсайті, та їх базування на визнаних публічних даних про часові пояси, ми не гарантуємо, що вміст є повним, актуальним чи безпомилковим."
             },
             {
               "type": "p",
-              "text": "Time zone rules and daylight saving time practices may change due to governmental or regulatory decisions. You acknowledge that any reliance on the information provided is at your own risk."
+              "text": "Правила часових поясів і практики переходу на літній час можуть змінюватися внаслідок урядових чи регуляторних рішень. Ви визнаєте, що будь-яка довіра до наданої інформації здійснюється на ваш власний ризик."
             }
           ]
         },
         {
-          "heading": "4. No Warranty",
+          "heading": "4. Відсутність гарантій",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website and all content and tools are provided on an \"as is\" and \"as available\" basis."
+              "text": "Вебсайт, а також увесь вміст та інструменти надаються на умовах «як є» та «як доступно»."
             },
             {
               "type": "p",
-              "text": "To the fullest extent permitted by applicable law, we disclaim all warranties, whether express or implied, including but not limited to implied warranties of accuracy, reliability, fitness for a particular purpose, and non-infringement."
+              "text": "У максимальному обсязі, дозволеному чинним законодавством, ми відмовляємося від усіх гарантій, явних чи неявних, зокрема неявних гарантій точності, надійності, придатності для певної мети та невпорушення прав."
             }
           ]
         },
         {
-          "heading": "5. Limitation of Liability",
+          "heading": "5. Обмеження відповідальності",
           "blocks": [
             {
               "type": "p",
-              "text": "To the extent permitted by applicable European Union law, we shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with your use of, or inability to use, the Website or reliance on its content."
+              "text": "У межах, дозволених чинним законодавством Європейського Союзу, ми не несемо відповідальності за будь-які прямі, непрямі, випадкові, побічні чи особливі збитки, що виникають унаслідок або у зв'язку з використанням вами Вебсайту, неможливістю його використання чи довірою до його вмісту."
             },
             {
               "type": "p",
-              "text": "This includes, without limitation, loss of data, loss of business, missed meetings, or scheduling errors."
+              "text": "Це включає, зокрема, втрату даних, втрату бізнесу, пропущені зустрічі чи помилки в плануванні."
             }
           ]
         },
         {
-          "heading": "6. Intellectual Property",
+          "heading": "6. Інтелектуальна власність",
           "blocks": [
             {
               "type": "p",
-              "text": "All content on the Website, including text, design, layout, logos, and software, is the property of the Website owner or its licensors and is protected by applicable intellectual property laws."
+              "text": "Увесь вміст Вебсайту, зокрема текст, дизайн, макет, логотипи та програмне забезпечення, є власністю власника Вебсайту або його ліцензіарів і захищений чинним законодавством про інтелектуальну власність."
             },
             {
               "type": "p",
-              "text": "You may use the Website for personal and non-commercial purposes. You may not copy, reproduce, distribute, modify, or exploit any part of the Website without prior written permission, except where permitted by law."
+              "text": "Ви можете використовувати Вебсайт в особистих і некомерційних цілях. Ви не маєте права копіювати, відтворювати, поширювати, змінювати чи використовувати будь-яку частину Вебсайту без попереднього письмового дозволу, окрім випадків, дозволених законом."
             }
           ]
         },
         {
-          "heading": "7. Third-Party Services and Advertising",
+          "heading": "7. Сторонні послуги та реклама",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website may display advertisements or include links to third-party websites or services."
+              "text": "Вебсайт може показувати рекламу або містити посилання на сторонні вебсайти чи послуги."
             },
             {
               "type": "p",
-              "text": "We do not control and are not responsible for the content, availability, or practices of third-party websites. Your interaction with third-party services is governed by their respective terms and privacy policies."
+              "text": "Ми не контролюємо вміст, доступність чи практики сторонніх вебсайтів і не несемо за них відповідальності. Ваша взаємодія зі сторонніми послугами регулюється їхніми відповідними умовами та політиками конфіденційності."
             }
           ]
         },
         {
-          "heading": "8. Privacy and Data Protection",
+          "heading": "8. Конфіденційність і захист даних",
           "blocks": [
             {
               "type": "p",
-              "text": "Your use of the Website is also governed by our [Privacy Policy](/privacy), which explains how personal data is processed in accordance with applicable data protection laws, including the GDPR."
+              "text": "Ваше використання Вебсайту також регулюється нашою [Політикою конфіденційності](/privacy), яка пояснює, як персональні дані обробляються відповідно до чинного законодавства про захист даних, зокрема GDPR."
             }
           ]
         },
         {
-          "heading": "9. Changes to the Website or Terms",
+          "heading": "9. Зміни до Вебсайту чи Умов",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update, modify, suspend, or discontinue any part of the Website at any time without prior notice."
+              "text": "Ми можемо оновлювати, змінювати, призупиняти чи припиняти роботу будь-якої частини Вебсайту в будь-який час без попереднього повідомлення."
             },
             {
               "type": "p",
-              "text": "We may also update these Terms from time to time. Any changes will be effective once posted on this page, with the \"Last updated\" date revised accordingly."
+              "text": "Ми також можемо час від часу оновлювати ці Умови. Будь-які зміни набирають чинності одразу після публікації на цій сторінці з відповідно зміненою датою «Останнє оновлення»."
             },
             {
               "type": "p",
-              "text": "Continued use of the Website after changes constitutes acceptance of the updated Terms."
+              "text": "Подальше використання Вебсайту після внесення змін означає прийняття оновлених Умов."
             }
           ]
         },
         {
-          "heading": "10. Governing Law and Jurisdiction",
+          "heading": "10. Застосовне право та юрисдикція",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms shall be governed by and construed in accordance with the laws of the European Union and, where applicable, the laws of the country in which the Website operator is established."
+              "text": "Ці Умови регулюються та тлумачаться відповідно до законодавства Європейського Союзу та, де це застосовно, законодавства країни, у якій зареєстрований оператор Вебсайту."
             },
             {
               "type": "p",
-              "text": "Nothing in these Terms limits your statutory rights as a consumer under applicable EU law."
+              "text": "Ніщо в цих Умовах не обмежує ваших законних прав як споживача згідно з чинним законодавством ЄС."
             }
           ]
         },
         {
-          "heading": "11. Severability",
+          "heading": "11. Подільність положень",
           "blocks": [
             {
               "type": "p",
-              "text": "If any provision of these Terms is found to be unlawful, invalid, or unenforceable, the remaining provisions shall remain in full force and effect."
+              "text": "Якщо будь-яке положення цих Умов буде визнано незаконним, недійсним чи таким, що не може бути виконане, решта положень залишаються чинними та такими, що мають повну силу."
             }
           ]
         },
         {
-          "heading": "12. Contact Information",
+          "heading": "12. Контактна інформація",
           "blocks": [
             {
               "type": "p",
-              "text": "If you have any questions regarding these Terms of Service, you may contact us at:"
+              "text": "Якщо у вас є будь-які запитання щодо цих Умов надання послуг, ви можете звернутися до нас за адресою:"
             },
             {
               "type": "emailBox",
-              "label": "Email:",
+              "label": "Електронна пошта:",
               "email": "hello@timezio.com"
             }
           ]
@@ -890,309 +890,309 @@
       ]
     },
     "about": {
-      "title": "About This Website",
+      "title": "Про цей вебсайт",
       "intro": [
         {
           "type": "p",
-          "text": "This website was created to make working across time zones simple, accurate, and stress-free. Whether you're planning a meeting with colleagues abroad, checking the current time in another city, converting UTC, or traveling across countries, our tools help you instantly understand time differences without confusion."
+          "text": "Цей вебсайт був створений, щоб зробити роботу в різних часових поясах простою, точною та без зайвого стресу. Чи плануєте ви зустріч із колегами за кордоном, перевіряєте поточний час в іншому місті, конвертуєте UTC чи подорожуєте різними країнами — наші інструменти допоможуть вам миттєво зрозуміти різницю в часі без плутанини."
         }
       ],
       "sections": [
         {
-          "heading": "Who runs Timezio",
+          "heading": "Хто керує Timezio",
           "blocks": [
             {
               "type": "p",
-              "text": "Timezio is built and operated by **AffSquad**, an independent studio that makes free, privacy-respecting web utilities. We're a small team that relies on these tools ourselves to coordinate across time zones, and we keep Timezio free by displaying ads. Questions, corrections, or feedback are always welcome at [hello@timezio.com](mailto:hello@timezio.com) — see the [Contact](/contact) page for more ways to reach us."
+              "text": "Timezio створено та керується **AffSquad** — незалежною студією, яка розробляє безкоштовні вебінструменти, що поважають конфіденційність. Ми невелика команда, яка сама користується цими інструментами для координації роботи в різних часових поясах, і ми зберігаємо Timezio безкоштовним завдяки показу реклами. Запитання, виправлення чи відгуки завжди вітаються за адресою [hello@timezio.com](mailto:hello@timezio.com) — перегляньте сторінку [Контакти](/contact), щоб дізнатися більше способів зв'язку з нами."
             }
           ]
         },
         {
-          "heading": "Core Principles",
+          "heading": "Основні принципи",
           "blocks": [
             {
               "type": "subheading",
-              "text": "Accuracy"
+              "text": "Точність"
             },
             {
               "type": "p",
-              "text": "All calculations are based on official IANA time zone data and are fully daylight-saving-time (DST) aware."
+              "text": "Усі розрахунки базуються на офіційних даних про часові пояси IANA та повністю враховують перехід на літній час (DST)."
             },
             {
               "type": "subheading",
-              "text": "Simplicity"
+              "text": "Простота"
             },
             {
               "type": "p",
-              "text": "Clean, fast tools that work instantly without unnecessary steps."
+              "text": "Зручні та швидкі інструменти, які працюють миттєво, без зайвих кроків."
             },
             {
               "type": "subheading",
-              "text": "Reliability"
+              "text": "Надійність"
             },
             {
               "type": "p",
-              "text": "Built for daily use by professionals, travelers, remote teams, and digital nomads."
+              "text": "Створено для щоденного використання професіоналами, мандрівниками, віддаленими командами та цифровими кочівниками."
             }
           ]
         },
         {
-          "heading": "Automatic Calculations",
+          "heading": "Автоматичні розрахунки",
           "blocks": [
             {
               "type": "p",
-              "text": "Our calculators automatically account for:"
+              "text": "Наші калькулятори автоматично враховують:"
             },
             {
               "type": "list",
               "items": [
-                "Daylight saving time changes",
-                "Different UTC offsets",
-                "Date changes when crossing time zones",
-                "Regions with non-standard offsets (such as 30- or 45-minute differences)"
+                "Зміни переходу на літній час",
+                "Різні зміщення UTC",
+                "Зміни дати під час перетину часових поясів",
+                "Регіони з нестандартними зміщеннями (як-от різниця в 30 чи 45 хвилин)"
               ]
             },
             {
               "type": "p",
-              "text": "This website is designed to be useful worldwide and is updated regularly to reflect official time zone rules."
+              "text": "Цей вебсайт розроблено так, щоб він був корисним у всьому світі, і він регулярно оновлюється відповідно до офіційних правил часових поясів."
             }
           ]
         },
         {
-          "heading": "Who This Website Is For",
+          "heading": "Для кого цей вебсайт",
           "blocks": [
             {
               "type": "list",
               "items": [
-                "Remote workers and distributed teams",
-                "Business professionals scheduling international meetings",
-                "Travelers and frequent flyers",
-                "Students and educators",
-                "Anyone who needs to convert or compare time zones accurately"
+                "Віддалених працівників і розподілених команд",
+                "Бізнес-фахівців, які планують міжнародні зустрічі",
+                "Мандрівників і тих, хто часто літає",
+                "Студентів і викладачів",
+                "Усіх, кому потрібно точно конвертувати чи порівнювати часові пояси"
               ]
             },
             {
               "type": "p",
-              "text": "**No accounts. No complexity. Just clear answers.**"
+              "text": "**Жодних облікових записів. Жодної складності. Лише чіткі відповіді.**"
             }
           ]
         },
         {
-          "heading": "How to Use This Website",
+          "heading": "Як користуватися цим вебсайтом",
           "blocks": [
             {
               "type": "subheading",
-              "text": "1. Explore — Interactive Globe"
+              "text": "1. Дослідження — Інтерактивний глобус"
             },
             {
               "type": "p",
-              "text": "Click anywhere on the 3D globe to instantly see the local time for that location."
+              "text": "Натисніть будь-де на 3D-глобусі, щоб миттєво побачити місцевий час для цього розташування."
             },
             {
               "type": "p",
-              "text": "**How it works:** Click a location on the globe or search for a city. View the current time, UTC offset, and DST status. Perfect for quick checks and exploring time zones visually."
+              "text": "**Як це працює:** Натисніть на місце на глобусі або знайдіть місто. Перегляньте поточний час, зміщення UTC та статус DST. Ідеально підходить для швидких перевірок і візуального дослідження часових поясів."
             },
             {
               "type": "subheading",
-              "text": "2. Compare — Time Zone Comparison"
+              "text": "2. Порівняння — Порівняння часових поясів"
             },
             {
               "type": "p",
-              "text": "Compare time differences between multiple cities simultaneously."
+              "text": "Порівнюйте різницю в часі між кількома містами одночасно."
             },
             {
               "type": "p",
-              "text": "**How it works:** Add up to 6 cities to compare. Select a base city to see time differences relative to it. Instantly see current local times, offsets, and visual comparisons. This is ideal for answering questions like \"When it's 9:00 AM in Berlin, what time is it in New York?\""
+              "text": "**Як це працює:** Додайте до 6 міст для порівняння. Виберіть базове місто, щоб побачити різницю в часі відносно нього. Миттєво переглядайте поточний місцевий час, зміщення та візуальні порівняння. Це ідеально підходить для відповіді на запитання на кшталт «Коли в Берліні 9:00, котра година в Нью-Йорку?»"
             },
             {
               "type": "subheading",
-              "text": "3. Planner — Meeting Planner"
+              "text": "3. Планувальник — Планувальник зустрічей"
             },
             {
               "type": "p",
-              "text": "Find the best meeting time for people in different locations."
+              "text": "Знаходьте найкращий час для зустрічі людей у різних розташуваннях."
             },
             {
               "type": "p",
-              "text": "**How it works:** Add participants by city, select a meeting date, and optionally adjust working hours for each participant. View overlapping time windows and share the meeting details. This tool automatically avoids early-morning or late-night hours when possible."
+              "text": "**Як це працює:** Додайте учасників за містом, виберіть дату зустрічі та за бажанням налаштуйте робочі години для кожного учасника. Перегляньте часові інтервали, що збігаються, і поділіться деталями зустрічі. Цей інструмент за можливості автоматично уникає ранкових і нічних годин."
             },
             {
               "type": "subheading",
-              "text": "4. DST — Daylight Saving Time"
+              "text": "4. DST — Перехід на літній час"
             },
             {
               "type": "p",
-              "text": "Track daylight saving time changes and transitions throughout the year."
+              "text": "Відстежуйте зміни та переходи переходу на літній час протягом року."
             },
             {
               "type": "p",
-              "text": "**How it works:** View DST status for any location, see upcoming transitions, and understand when clocks change. Check how DST affects time differences between regions."
+              "text": "**Як це працює:** Переглядайте статус DST для будь-якого розташування, бачте майбутні переходи та розумійте, коли змінюється час на годиннику. Перевіряйте, як DST впливає на різницю в часі між регіонами."
             },
             {
               "type": "subheading",
-              "text": "5. Saved — Favorite Locations"
+              "text": "5. Збережене — Улюблені розташування"
             },
             {
               "type": "p",
-              "text": "Save your frequently used locations for quick access."
+              "text": "Зберігайте розташування, якими часто користуєтеся, для швидкого доступу."
             },
             {
               "type": "p",
-              "text": "**How it works:** Save locations you check often. Access them instantly without searching. Your saved locations are stored locally in your browser."
+              "text": "**Як це працює:** Зберігайте розташування, які ви часто перевіряєте. Отримуйте до них миттєвий доступ без пошуку. Ваші збережені розташування зберігаються локально у вашому браузері."
             }
           ]
         },
         {
-          "heading": "Frequently Asked Questions",
+          "heading": "Поширені запитання",
           "blocks": [
             {
               "type": "subheading",
-              "text": "What time zone data does this website use?"
+              "text": "Які дані про часові пояси використовує цей вебсайт?"
             },
             {
               "type": "p",
-              "text": "We use official IANA time zone definitions, which are the global standard for accurate time calculations."
+              "text": "Ми використовуємо офіційні визначення часових поясів IANA, які є світовим стандартом для точних розрахунків часу."
             },
             {
               "type": "subheading",
-              "text": "Does the website account for daylight saving time?"
+              "text": "Чи враховує вебсайт перехід на літній час?"
             },
             {
               "type": "p",
-              "text": "Yes. All calculations automatically adjust for daylight saving time based on the selected date and location."
+              "text": "Так. Усі розрахунки автоматично коригуються з урахуванням переходу на літній час на основі вибраної дати та розташування."
             },
             {
               "type": "subheading",
-              "text": "Can I check future or past dates?"
+              "text": "Чи можу я перевіряти майбутні чи минулі дати?"
             },
             {
               "type": "p",
-              "text": "Yes. You can select any date and time to see how time differences change throughout the year."
+              "text": "Так. Ви можете вибрати будь-яку дату й час, щоб побачити, як різниця в часі змінюється протягом року."
             },
             {
               "type": "subheading",
-              "text": "Why does the time difference change during the year?"
+              "text": "Чому різниця в часі змінюється протягом року?"
             },
             {
               "type": "p",
-              "text": "Time differences change because some regions observe daylight saving time while others do not, or they change clocks on different dates."
+              "text": "Різниця в часі змінюється, тому що одні регіони переходять на літній час, а інші — ні, або вони змінюють час на годинниках у різні дати."
             },
             {
               "type": "subheading",
-              "text": "Are cities with the same name supported?"
+              "text": "Чи підтримуються міста з однаковою назвою?"
             },
             {
               "type": "p",
-              "text": "Yes. Cities are identified by both name and country to avoid confusion (for example, multiple cities named \"Springfield\")."
+              "text": "Так. Міста ідентифікуються за назвою та країною, щоб уникнути плутанини (наприклад, кілька міст із назвою «Спрінгфілд»)."
             },
             {
               "type": "subheading",
-              "text": "Is this website free to use?"
+              "text": "Чи безкоштовне користування цим вебсайтом?"
             },
             {
               "type": "p",
-              "text": "Yes. All tools on this website are completely free to use and require no registration."
+              "text": "Так. Усі інструменти на цьому вебсайті повністю безкоштовні та не потребують реєстрації."
             },
             {
               "type": "subheading",
-              "text": "Can I share or bookmark results?"
+              "text": "Чи можу я поділитися результатами або додати їх до закладок?"
             },
             {
               "type": "p",
-              "text": "Yes. Tool pages generate clean, shareable URLs that you can bookmark or send to others using the \"Copy link\" button."
+              "text": "Так. Сторінки інструментів генерують зрозумілі URL-адреси, якими можна поділитися, додати до закладок або надіслати іншим за допомогою кнопки «Скопіювати посилання»."
             },
             {
               "type": "subheading",
-              "text": "How accurate are the results?"
+              "text": "Наскільки точні результати?"
             },
             {
               "type": "p",
-              "text": "Results are accurate to the minute and based on official time zone rules, but should not be used for legal or critical decisions without verification."
+              "text": "Результати точні до хвилини й базуються на офіційних правилах часових поясів, але їх не слід використовувати для юридичних чи критично важливих рішень без перевірки."
             }
           ]
         }
       ]
     },
     "contact": {
-      "title": "Contact Us",
+      "title": "Зв'яжіться з нами",
       "intro": [
         {
           "type": "p",
-          "text": "We value your feedback and are happy to hear from you."
+          "text": "Ми цінуємо ваші відгуки та раді отримати від вас звістку."
         },
         {
           "type": "p",
-          "text": "If you have questions about how our tools work, would like to report an issue, or want to share suggestions for improvement, please feel free to get in touch."
+          "text": "Якщо у вас є запитання щодо роботи наших інструментів, ви хочете повідомити про проблему чи поділитися пропозиціями щодо вдосконалення, будь ласка, не соромтеся зв'язатися з нами."
         },
         {
           "type": "p",
-          "text": "Timezio is operated by **AffSquad**, an independent studio that builds free web utilities."
+          "text": "Timezio керується **AffSquad** — незалежною студією, яка створює безкоштовні вебінструменти."
         }
       ],
       "sections": [
         {
-          "heading": "How to Contact Us",
+          "heading": "Як з нами зв'язатися",
           "blocks": [
             {
               "type": "p",
-              "text": "You can contact us by email:"
+              "text": "Ви можете зв'язатися з нами електронною поштою:"
             },
             {
               "type": "emailBox",
-              "label": "Email:",
+              "label": "Електронна пошта:",
               "email": "hello@timezio.com"
             },
             {
               "type": "p",
-              "text": "We aim to respond to messages within a reasonable time. Please note that response times may vary depending on the volume of inquiries."
+              "text": "Ми намагаємося відповідати на повідомлення в розумний термін. Зверніть увагу, що час відповіді може відрізнятися залежно від кількості запитів."
             }
           ]
         },
         {
-          "heading": "What You Can Contact Us About",
+          "heading": "З яких питань можна звертатися",
           "blocks": [
             {
               "type": "p",
-              "text": "You may contact us regarding:"
+              "text": "Ви можете звертатися до нас щодо:"
             },
             {
               "type": "list",
               "items": [
-                "Questions about time zone calculations or tool functionality",
-                "Reporting incorrect or outdated information",
-                "Technical issues or bugs on the website",
-                "General feedback and improvement suggestions"
+                "Запитань про розрахунки часових поясів чи функціональність інструментів",
+                "Повідомлень про неправильну чи застарілу інформацію",
+                "Технічних проблем чи помилок на вебсайті",
+                "Загальних відгуків і пропозицій щодо вдосконалення"
               ]
             },
             {
               "type": "note",
-              "text": "**Please note:** We are unable to provide personalized scheduling advice, legal guidance, or time-critical confirmations."
+              "text": "**Зверніть увагу:** Ми не можемо надавати персоналізовані поради щодо планування, юридичні консультації чи підтвердження, що залежать від часу."
             }
           ]
         },
         {
-          "heading": "Personal Data and Privacy",
+          "heading": "Персональні дані та конфіденційність",
           "blocks": [
             {
               "type": "p",
-              "text": "If you contact us by email, we will process any personal data you provide (such as your email address and message content) solely for the purpose of responding to your inquiry."
+              "text": "Якщо ви звертаєтеся до нас електронною поштою, ми обробляємо будь-які надані вами персональні дані (як-от вашу електронну адресу та вміст повідомлення) виключно з метою надання відповіді на ваш запит."
             },
             {
               "type": "p",
-              "text": "Your information will be handled in accordance with applicable data protection laws, including the General Data Protection Regulation (EU) 2016/679 (GDPR)."
+              "text": "Ваша інформація оброблятиметься відповідно до чинного законодавства про захист даних, зокрема Загального регламенту про захист даних (ЄС) 2016/679 (GDPR)."
             },
             {
               "type": "p",
-              "text": "For more details, please refer to our [Privacy Policy](/privacy)."
+              "text": "Щоб дізнатися більше, перегляньте нашу [Політику конфіденційності](/privacy)."
             }
           ]
         },
         {
-          "heading": "Important Notice",
+          "heading": "Важливе зауваження",
           "blocks": [
             {
               "type": "note",
-              "text": "The information provided through this website and via email responses is for general informational purposes only and should not be relied upon for legal, financial, aviation, or other time-critical decisions."
+              "text": "Інформація, надана через цей вебсайт і у відповідях електронною поштою, призначена виключно для загальних інформаційних цілей і не повинна використовуватися для юридичних, фінансових, авіаційних чи інших критично важливих рішень, що залежать від часу."
             }
           ]
         }
@@ -1201,392 +1201,392 @@
   },
   "ui": {
     "converter": {
-      "heading": "Time Zone Converter",
-      "description": "Explore and convert time zones on an interactive globe, check local times, and find overlaps for meetings. Fully DST-aware and powered by official IANA data.",
-      "compareCta": "Compare time zones",
-      "plannerCta": "Plan a meeting"
+      "heading": "Конвертер часових поясів",
+      "description": "Досліджуйте та конвертуйте часові пояси на інтерактивному глобусі, перевіряйте місцевий час і знаходьте збіги для зустрічей. Повністю враховує літній час і працює на офіційних даних IANA.",
+      "compareCta": "Порівняти часові пояси",
+      "plannerCta": "Запланувати зустріч"
     },
     "tabBar": {
-      "explore": "Explore",
-      "planner": "Planner",
-      "compare": "Compare",
-      "dst": "DST",
-      "saved": "Saved"
+      "explore": "Огляд",
+      "planner": "Планувальник",
+      "compare": "Порівняння",
+      "dst": "Літній час",
+      "saved": "Збережені"
     },
     "exploreTab": {
-      "searchCity": "Search City",
-      "searchCitySubtitle": "Find any city around the world",
-      "popularCities": "Popular Cities",
-      "popularCitiesSubtitle": "Click on a city to view its time"
+      "searchCity": "Пошук міста",
+      "searchCitySubtitle": "Знайдіть будь-яке місто у світі",
+      "popularCities": "Популярні міста",
+      "popularCitiesSubtitle": "Натисніть на місто, щоб побачити його час"
     },
     "compareTab": {
-      "compare": "Compare",
-      "subtitle": "Add 2–6 locations and compare offsets/time. (MVP: offsets + diff)",
-      "addCityPlaceholder": "Add city to compare…",
-      "addSelected": "Add selected",
-      "clear": "Clear",
-      "noItems": "No compare items. Add a city or “Add selected”.",
-      "baseLabel": "Base:",
-      "base": "Base",
-      "focus": "Focus",
-      "remove": "Remove",
-      "offsetMatrix": "Offset matrix (vs base)",
-      "location": "Location",
-      "localTime": "Local time",
-      "utcOffset": "UTC offset",
-      "deltaHours": "Δ hours"
+      "compare": "Порівняти",
+      "subtitle": "Додайте 2–6 локацій і порівняйте зсуви/час. (MVP: зсуви + різниця)",
+      "addCityPlaceholder": "Додати місто для порівняння…",
+      "addSelected": "Додати вибране",
+      "clear": "Очистити",
+      "noItems": "Немає елементів для порівняння. Додайте місто або натисніть «Додати вибране».",
+      "baseLabel": "База:",
+      "base": "База",
+      "focus": "Фокус",
+      "remove": "Видалити",
+      "offsetMatrix": "Матриця зсувів (відносно бази)",
+      "location": "Локація",
+      "localTime": "Місцевий час",
+      "utcOffset": "Зсув від UTC",
+      "deltaHours": "Δ годин"
     },
     "dstTab": {
-      "noChangeFound": "No change found (≈370 days scan)",
-      "title": "DST",
-      "bestEffort": "Best-effort: Luxon doesn’t expose IANA transition tables, so we scan forward until offset changes.",
-      "selectLocation": "Select a location in Explore.",
-      "timezone": "Timezone",
-      "currentLocalTime": "Current local time",
-      "abbrev": "Abbrev",
-      "nextOffsetChange": "Next offset change",
-      "transitionNote": "Note: Transition timestamp is approximate (minute-level). For exact changes you’d need a tzdb transition table.",
-      "infrequentChange": "Some timezones don’t change offset often (or at all)."
+      "noChangeFound": "Змін не знайдено (сканування ≈370 днів)",
+      "title": "Літній час",
+      "bestEffort": "Орієнтовно: Luxon не надає таблиць переходів IANA, тож ми скануємо вперед, доки зсув не зміниться.",
+      "selectLocation": "Виберіть локацію в розділі «Огляд».",
+      "timezone": "Часовий пояс",
+      "currentLocalTime": "Поточний місцевий час",
+      "abbrev": "Скорочення",
+      "nextOffsetChange": "Наступна зміна зсуву",
+      "transitionNote": "Примітка: позначка часу переходу є приблизною (з точністю до хвилини). Для точних змін потрібна таблиця переходів tzdb.",
+      "infrequentChange": "Деякі часові пояси змінюють зсув рідко (або взагалі ніколи)."
     },
     "savedTab": {
-      "title": "Saved",
-      "subtitle": "Stored in localStorage (ids only). Use share link to carry full payload.",
-      "emptyState": "No saved locations yet. Save from Explore.",
-      "select": "Select",
-      "compare": "Compare",
-      "remove": "Remove"
+      "title": "Збережені",
+      "subtitle": "Зберігається в localStorage (лише ідентифікатори). Використовуйте посилання для передавання повних даних.",
+      "emptyState": "Збережених локацій поки немає. Збережіть їх у розділі «Огляд».",
+      "select": "Вибрати",
+      "compare": "Порівняти",
+      "remove": "Видалити"
     },
     "plannerTab": {
-      "errProvideTitle": "Please provide title",
-      "msgSessionCreated": "Meeting session created",
-      "msgSessionCreatedWithTz": "Meeting session created with your timezone added automatically",
-      "errCreateSession": "Failed to create session",
-      "errCreateSessionFirst": "Create a session first",
-      "errNameRequired": "Name is required",
-      "errSelectLocation": "Please select a location on the globe or search for a city first",
-      "msgParticipantAdded": "Participant added",
-      "errAddParticipant": "Failed to add participant",
-      "errAddParticipantBackend": "Failed to add participant to backend",
-      "errAddTwoParticipants": "Add at least 2 participants first",
-      "msgGeneratedSlots": "Generated {count} slots on backend",
-      "errGenerateSlots": "Failed to generate slots",
-      "errCreateSessionSelectSlot": "Please create session and select slot first",
-      "msgMeetCreated": "Meet created! Link: {link}",
-      "errCreateMeet": "Failed to create Meet",
-      "heading": "Meeting Planner",
-      "intro": "Add participants from different time zones, set their working hours, and find the best meeting times. Choose between automatic slot finding or manual time selection. All calculations account for daylight saving time.",
-      "connected": "Connected",
-      "connectGoogleCalendar": "Connect Google Calendar",
-      "requiredForMeet": "(required for Meet links)",
-      "yourTimezone": "Your Timezone",
-      "yourNamePlaceholder": "Your name (optional)",
-      "createMeetingSession": "Create Meeting Session",
-      "meetingTitlePlaceholder": "Meeting Title",
-      "descriptionPlaceholder": "Description (optional)",
-      "createSession": "Create Session",
-      "sessionLabel": "Session: {title}",
-      "mode": "MODE",
-      "autoFindSlots": "Auto Find Slots",
-      "autoFindSlotsDesc": "System finds optimal meeting times by analyzing working hours overlap across all participants",
-      "manualTimePick": "Manual Time Pick",
-      "manualTimePickDesc": "You choose a specific time, and the system converts it to all participants' time zones",
-      "howAutoFindWorks": "How Auto Find Works:",
-      "howManualPickWorks": "How Manual Pick Works:",
-      "autoBullet1": "Analyzes working hours of all participants",
-      "autoBullet2": "Finds time windows where everyone is available",
-      "autoBullet3": "Generates slots every 15 minutes within overlap",
-      "autoBullet4": "Ranks slots by quality (time of day, work hours position)",
-      "autoBullet5": "Shows best options first (sorted by quality score)",
-      "manualBullet1": "Select a time in one participant's timezone",
-      "manualBullet2": "System converts to UTC internally",
-      "manualBullet3": "Displays the same moment in all other timezones",
-      "manualBullet4": "Perfect for fixed meeting times or specific schedules",
-      "manualBullet5": "All calculations respect DST transitions",
-      "duration": "Duration",
-      "twoHours": "2 hours",
-      "minutes": "{mins} min",
-      "date": "Date",
-      "preferences": "Preferences",
-      "includeWeekends": "Include weekends",
-      "includeWeekendsDesc": "Allow slots on Sat/Sun using default working hours",
-      "avoidEarly": "Avoid meetings before 8 AM",
-      "avoidLate": "Avoid meetings after 8 PM",
-      "localTime": "Local time",
-      "avoidLunch": "Avoid lunch time",
+      "errProvideTitle": "Будь ласка, вкажіть назву",
+      "msgSessionCreated": "Сесію зустрічі створено",
+      "msgSessionCreatedWithTz": "Сесію зустрічі створено; ваш часовий пояс додано автоматично",
+      "errCreateSession": "Не вдалося створити сесію",
+      "errCreateSessionFirst": "Спершу створіть сесію",
+      "errNameRequired": "Ім’я обов’язкове",
+      "errSelectLocation": "Спершу виберіть локацію на глобусі або знайдіть місто",
+      "msgParticipantAdded": "Учасника додано",
+      "errAddParticipant": "Не вдалося додати учасника",
+      "errAddParticipantBackend": "Не вдалося додати учасника на сервер",
+      "errAddTwoParticipants": "Спершу додайте щонайменше 2 учасників",
+      "msgGeneratedSlots": "Згенеровано {count} слотів на сервері",
+      "errGenerateSlots": "Не вдалося згенерувати слоти",
+      "errCreateSessionSelectSlot": "Спершу створіть сесію та виберіть слот",
+      "msgMeetCreated": "Зустріч у Meet створено! Посилання: {link}",
+      "errCreateMeet": "Не вдалося створити Meet",
+      "heading": "Планувальник зустрічей",
+      "intro": "Додайте учасників з різних часових поясів, налаштуйте їхні робочі години та знайдіть найкращий час для зустрічі. Виберіть автоматичний пошук слотів або ручний вибір часу. Усі розрахунки враховують літній час.",
+      "connected": "Підключено",
+      "connectGoogleCalendar": "Підключити Google Calendar",
+      "requiredForMeet": "(потрібно для посилань Meet)",
+      "yourTimezone": "Ваш часовий пояс",
+      "yourNamePlaceholder": "Ваше ім’я (необов’язково)",
+      "createMeetingSession": "Створити сесію зустрічі",
+      "meetingTitlePlaceholder": "Назва зустрічі",
+      "descriptionPlaceholder": "Опис (необов’язково)",
+      "createSession": "Створити сесію",
+      "sessionLabel": "Сесія: {title}",
+      "mode": "РЕЖИМ",
+      "autoFindSlots": "Автопошук слотів",
+      "autoFindSlotsDesc": "Система знаходить оптимальний час зустрічі, аналізуючи збіг робочих годин усіх учасників",
+      "manualTimePick": "Ручний вибір часу",
+      "manualTimePickDesc": "Ви обираєте конкретний час, а система конвертує його в часові пояси всіх учасників",
+      "howAutoFindWorks": "Як працює автопошук:",
+      "howManualPickWorks": "Як працює ручний вибір:",
+      "autoBullet1": "Аналізує робочі години всіх учасників",
+      "autoBullet2": "Знаходить проміжки часу, коли всі доступні",
+      "autoBullet3": "Генерує слоти кожні 15 хвилин у межах збігу",
+      "autoBullet4": "Ранжує слоти за якістю (час доби, розташування в робочих годинах)",
+      "autoBullet5": "Спершу показує найкращі варіанти (відсортовані за оцінкою якості)",
+      "manualBullet1": "Виберіть час у часовому поясі одного з учасників",
+      "manualBullet2": "Система внутрішньо конвертує його в UTC",
+      "manualBullet3": "Відображає той самий момент у всіх інших часових поясах",
+      "manualBullet4": "Ідеально для фіксованого часу зустрічей або конкретних розкладів",
+      "manualBullet5": "Усі розрахунки враховують переходи на літній час",
+      "duration": "Тривалість",
+      "twoHours": "2 години",
+      "minutes": "{mins} хв",
+      "date": "Дата",
+      "preferences": "Налаштування",
+      "includeWeekends": "Враховувати вихідні",
+      "includeWeekendsDesc": "Дозволити слоти в суботу/неділю за стандартними робочими годинами",
+      "avoidEarly": "Уникати зустрічей до 8:00",
+      "avoidLate": "Уникати зустрічей після 20:00",
+      "localTime": "Місцевий час",
+      "avoidLunch": "Уникати обідньої перерви",
       "lunchTime": "12:00-13:00",
-      "addParticipant": "Add Participant",
-      "quick": "Quick",
-      "withEmail": "With Email",
-      "searchCityPlaceholder": "Search city to add quickly…",
-      "namePlaceholder": "Name *",
-      "emailPlaceholder": "Email (optional, for calendar invites)",
-      "clickGlobeHint": "Click on the globe or search for a city first to select location",
-      "addAllFromCompare": "Add all from Compare ({count})",
-      "clickGlobeFormHint": "Click on the globe to select a location, then fill the form above",
-      "participantsCount": "Participants ({count})",
-      "remove": "Remove",
-      "namePrompt": "Name:",
-      "rename": "Rename",
-      "selectTime": "Select Time",
-      "baseTimezone": "Base Timezone",
-      "unknown": "Unknown",
-      "meetingTime": "Meeting Time",
-      "meetingTimeTzSuffix": "({name}'s timezone)",
+      "addParticipant": "Додати учасника",
+      "quick": "Швидко",
+      "withEmail": "З електронною поштою",
+      "searchCityPlaceholder": "Знайдіть місто, щоб швидко додати…",
+      "namePlaceholder": "Ім’я *",
+      "emailPlaceholder": "Електронна пошта (необов’язково, для запрошень у календар)",
+      "clickGlobeHint": "Спершу натисніть на глобус або знайдіть місто, щоб вибрати локацію",
+      "addAllFromCompare": "Додати всі з «Порівняння» ({count})",
+      "clickGlobeFormHint": "Натисніть на глобус, щоб вибрати локацію, потім заповніть форму вище",
+      "participantsCount": "Учасники ({count})",
+      "remove": "Видалити",
+      "namePrompt": "Ім’я:",
+      "rename": "Перейменувати",
+      "selectTime": "Вибрати час",
+      "baseTimezone": "Базовий часовий пояс",
+      "unknown": "Невідомо",
+      "meetingTime": "Час зустрічі",
+      "meetingTimeTzSuffix": "(часовий пояс учасника {name})",
       "meetingTimeUtcSuffix": "(UTC)",
-      "availableSlots": "Available Slots",
-      "generateSlots": "Generate slots",
-      "emptySlotsWithSession": "Click \"Generate slots\" to find available meeting times. Or adjust working hours/date and try again.",
-      "emptySlotsNoSession": "Create a session first, then add at least 2 participants and set their working hours to find available meeting times.",
-      "qualityGreat": "Great",
-      "qualityGood": "Good",
-      "qualityFair": "Fair",
-      "qualityScoreTitle": "Quality score: {score}/100",
-      "selected": "Selected",
-      "morning": "Morning",
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "night": "Night",
-      "showingTopSlots": "Showing top 15 of {total} available slots (sorted by quality)",
-      "selectedTime": "Selected Time",
-      "selectedSlot": "Selected Slot",
-      "utcTime": "UTC Time",
-      "daytime": "Daytime",
-      "nighttime": "Nighttime",
-      "confirmed": "Confirmed",
-      "confirmCreateMeet": "Confirm & Create Google Meet",
-      "manualNeedParticipant": "Add at least one participant to convert time to different time zones",
-      "autoNeedTwoParticipants": "Add at least 2 participants to start finding meeting slots",
-      "autoNeedOneMoreParticipant": "Add one more participant to find available meeting times",
-      "meetingConfirmed": "Meeting Confirmed",
-      "googleMeetLink": "Google Meet Link:",
-      "eventId": "Event ID: {id}"
+      "availableSlots": "Доступні слоти",
+      "generateSlots": "Згенерувати слоти",
+      "emptySlotsWithSession": "Натисніть «Згенерувати слоти», щоб знайти доступний час зустрічі. Або відкоригуйте робочі години/дату та спробуйте ще раз.",
+      "emptySlotsNoSession": "Спершу створіть сесію, потім додайте щонайменше 2 учасників і налаштуйте їхні робочі години, щоб знайти доступний час зустрічі.",
+      "qualityGreat": "Чудово",
+      "qualityGood": "Добре",
+      "qualityFair": "Прийнятно",
+      "qualityScoreTitle": "Оцінка якості: {score}/100",
+      "selected": "Вибрано",
+      "morning": "Ранок",
+      "afternoon": "День",
+      "evening": "Вечір",
+      "night": "Ніч",
+      "showingTopSlots": "Показано 15 найкращих з {total} доступних слотів (відсортовано за якістю)",
+      "selectedTime": "Вибраний час",
+      "selectedSlot": "Вибраний слот",
+      "utcTime": "Час UTC",
+      "daytime": "Денний час",
+      "nighttime": "Нічний час",
+      "confirmed": "Підтверджено",
+      "confirmCreateMeet": "Підтвердити та створити Google Meet",
+      "manualNeedParticipant": "Додайте щонайменше одного учасника, щоб конвертувати час у різні часові пояси",
+      "autoNeedTwoParticipants": "Додайте щонайменше 2 учасників, щоб почати пошук слотів для зустрічі",
+      "autoNeedOneMoreParticipant": "Додайте ще одного учасника, щоб знайти доступний час зустрічі",
+      "meetingConfirmed": "Зустріч підтверджено",
+      "googleMeetLink": "Посилання на Google Meet:",
+      "eventId": "Ідентифікатор події: {id}"
     },
     "citySearch": {
-      "placeholder": "Search city…",
-      "unableToSearchStatus": "Unable to search ({status})",
-      "unableToSearchCities": "Unable to search cities",
-      "typeAtLeast": "Type at least {count} characters",
-      "searchingCities": "Searching cities…",
-      "unableToFetchCities": "Unable to fetch cities",
-      "noMatchesFound": "No matches found"
+      "placeholder": "Пошук міста…",
+      "unableToSearchStatus": "Не вдалося виконати пошук ({status})",
+      "unableToSearchCities": "Не вдалося знайти міста",
+      "typeAtLeast": "Введіть щонайменше {count} символів",
+      "searchingCities": "Пошук міст…",
+      "unableToFetchCities": "Не вдалося завантажити міста",
+      "noMatchesFound": "Збігів не знайдено"
     },
     "meetingPlanner": {
-      "errProvideTitle": "Please provide title",
-      "msgSessionCreated": "Meeting session created",
-      "msgSessionCreatedWithTz": "Meeting session created with your timezone added automatically",
-      "errCreateSession": "Failed to create session",
-      "errCreateSessionFirst": "Create a session first",
-      "errNameRequired": "Name is required",
-      "errSelectLocation": "Please select a location on the globe or search for a city first",
-      "msgParticipantAdded": "Participant added",
-      "errAddParticipant": "Failed to add participant",
-      "errAddParticipantBackend": "Failed to add participant to backend",
-      "errAddTwoParticipants": "Add at least 2 participants first",
-      "msgGeneratedSlots": "Generated {count} slots on backend",
-      "errGenerateSlots": "Failed to generate slots",
-      "errSelectSlotFirst": "Please create session and select slot first",
-      "msgMeetCreated": "Meet created! Link: {link}",
-      "errCreateMeet": "Failed to create Meet",
-      "pageTitle": "Meeting Planner",
-      "pageSubtitle": "Add participants from different time zones, set their working hours, and find the best meeting times. Choose between automatic slot finding or manual time selection. All calculations account for daylight saving time.",
-      "connected": "Connected",
-      "connectGoogleCalendar": "Connect Google Calendar",
-      "requiredForMeetLinks": "(required for Meet links)",
-      "yourTimezone": "Your Timezone",
-      "yourNamePlaceholder": "Your name (optional)",
-      "createMeetingSession": "Create Meeting Session",
-      "meetingTitlePlaceholder": "Meeting Title",
-      "descriptionPlaceholder": "Description (optional)",
-      "createSession": "Create Session",
-      "sessionLabel": "Session: {title}",
-      "mode": "MODE",
-      "autoFindSlots": "Auto Find Slots",
-      "autoFindSlotsDesc": "System finds optimal meeting times by analyzing working hours overlap across all participants",
-      "manualTimePick": "Manual Time Pick",
-      "manualTimePickDesc": "You choose a specific time, and the system converts it to all participants' time zones",
-      "howAutoFindWorks": "How Auto Find Works:",
-      "howManualPickWorks": "How Manual Pick Works:",
-      "autoStep1": "Analyzes working hours of all participants",
-      "autoStep2": "Finds time windows where everyone is available",
-      "autoStep3": "Generates slots every 15 minutes within overlap",
-      "autoStep4": "Ranks slots by quality (time of day, work hours position)",
-      "autoStep5": "Shows best options first (sorted by quality score)",
-      "manualStep1": "Select a time in one participant's timezone",
-      "manualStep2": "System converts to UTC internally",
-      "manualStep3": "Displays the same moment in all other timezones",
-      "manualStep4": "Perfect for fixed meeting times or specific schedules",
-      "manualStep5": "All calculations respect DST transitions",
-      "duration": "Duration",
-      "twoHours": "2 hours",
-      "minutes": "{mins} min",
-      "date": "Date",
-      "preferences": "Preferences",
-      "avoidBefore8am": "Avoid meetings before 8 AM",
-      "localTime": "Local time",
-      "avoidAfter8pm": "Avoid meetings after 8 PM",
-      "avoidLunchTime": "Avoid lunch time",
-      "addParticipant": "Add Participant",
-      "quick": "Quick",
-      "withEmail": "With Email",
-      "searchCityPlaceholder": "Search city to add quickly…",
-      "namePlaceholder": "Name *",
-      "emailPlaceholder": "Email (optional, for calendar invites)",
-      "addParticipantBtn": "Add Participant",
-      "clickGlobeHint": "Click on the globe or search for a city first to select location",
-      "addAllFromCompare": "Add all from Compare ({count})",
-      "clickGlobeFillForm": "Click on the globe to select a location, then fill the form above",
-      "participantsCount": "Participants ({count})",
-      "remove": "Remove",
-      "namePrompt": "Name:",
-      "rename": "Rename",
-      "selectTime": "Select Time",
-      "baseTimezone": "Base Timezone",
-      "unknown": "Unknown",
-      "meetingTime": "Meeting Time",
-      "meetingTimeTzSuffix": "({name}'s timezone)",
+      "errProvideTitle": "Будь ласка, вкажіть назву",
+      "msgSessionCreated": "Сесію зустрічі створено",
+      "msgSessionCreatedWithTz": "Сесію зустрічі створено; ваш часовий пояс додано автоматично",
+      "errCreateSession": "Не вдалося створити сесію",
+      "errCreateSessionFirst": "Спершу створіть сесію",
+      "errNameRequired": "Ім’я обов’язкове",
+      "errSelectLocation": "Спершу виберіть локацію на глобусі або знайдіть місто",
+      "msgParticipantAdded": "Учасника додано",
+      "errAddParticipant": "Не вдалося додати учасника",
+      "errAddParticipantBackend": "Не вдалося додати учасника на сервер",
+      "errAddTwoParticipants": "Спершу додайте щонайменше 2 учасників",
+      "msgGeneratedSlots": "Згенеровано {count} слотів на сервері",
+      "errGenerateSlots": "Не вдалося згенерувати слоти",
+      "errSelectSlotFirst": "Спершу створіть сесію та виберіть слот",
+      "msgMeetCreated": "Зустріч у Meet створено! Посилання: {link}",
+      "errCreateMeet": "Не вдалося створити Meet",
+      "pageTitle": "Планувальник зустрічей",
+      "pageSubtitle": "Додайте учасників з різних часових поясів, налаштуйте їхні робочі години та знайдіть найкращий час для зустрічі. Виберіть автоматичний пошук слотів або ручний вибір часу. Усі розрахунки враховують літній час.",
+      "connected": "Підключено",
+      "connectGoogleCalendar": "Підключити Google Calendar",
+      "requiredForMeetLinks": "(потрібно для посилань Meet)",
+      "yourTimezone": "Ваш часовий пояс",
+      "yourNamePlaceholder": "Ваше ім’я (необов’язково)",
+      "createMeetingSession": "Створити сесію зустрічі",
+      "meetingTitlePlaceholder": "Назва зустрічі",
+      "descriptionPlaceholder": "Опис (необов’язково)",
+      "createSession": "Створити сесію",
+      "sessionLabel": "Сесія: {title}",
+      "mode": "РЕЖИМ",
+      "autoFindSlots": "Автопошук слотів",
+      "autoFindSlotsDesc": "Система знаходить оптимальний час зустрічі, аналізуючи збіг робочих годин усіх учасників",
+      "manualTimePick": "Ручний вибір часу",
+      "manualTimePickDesc": "Ви обираєте конкретний час, а система конвертує його в часові пояси всіх учасників",
+      "howAutoFindWorks": "Як працює автопошук:",
+      "howManualPickWorks": "Як працює ручний вибір:",
+      "autoStep1": "Аналізує робочі години всіх учасників",
+      "autoStep2": "Знаходить проміжки часу, коли всі доступні",
+      "autoStep3": "Генерує слоти кожні 15 хвилин у межах збігу",
+      "autoStep4": "Ранжує слоти за якістю (час доби, розташування в робочих годинах)",
+      "autoStep5": "Спершу показує найкращі варіанти (відсортовані за оцінкою якості)",
+      "manualStep1": "Виберіть час у часовому поясі одного з учасників",
+      "manualStep2": "Система внутрішньо конвертує його в UTC",
+      "manualStep3": "Відображає той самий момент у всіх інших часових поясах",
+      "manualStep4": "Ідеально для фіксованого часу зустрічей або конкретних розкладів",
+      "manualStep5": "Усі розрахунки враховують переходи на літній час",
+      "duration": "Тривалість",
+      "twoHours": "2 години",
+      "minutes": "{mins} хв",
+      "date": "Дата",
+      "preferences": "Налаштування",
+      "avoidBefore8am": "Уникати зустрічей до 8:00",
+      "localTime": "Місцевий час",
+      "avoidAfter8pm": "Уникати зустрічей після 20:00",
+      "avoidLunchTime": "Уникати обідньої перерви",
+      "addParticipant": "Додати учасника",
+      "quick": "Швидко",
+      "withEmail": "З електронною поштою",
+      "searchCityPlaceholder": "Знайдіть місто, щоб швидко додати…",
+      "namePlaceholder": "Ім’я *",
+      "emailPlaceholder": "Електронна пошта (необов’язково, для запрошень у календар)",
+      "addParticipantBtn": "Додати учасника",
+      "clickGlobeHint": "Спершу натисніть на глобус або знайдіть місто, щоб вибрати локацію",
+      "addAllFromCompare": "Додати всі з «Порівняння» ({count})",
+      "clickGlobeFillForm": "Натисніть на глобус, щоб вибрати локацію, потім заповніть форму вище",
+      "participantsCount": "Учасники ({count})",
+      "remove": "Видалити",
+      "namePrompt": "Ім’я:",
+      "rename": "Перейменувати",
+      "selectTime": "Вибрати час",
+      "baseTimezone": "Базовий часовий пояс",
+      "unknown": "Невідомо",
+      "meetingTime": "Час зустрічі",
+      "meetingTimeTzSuffix": "(часовий пояс учасника {name})",
       "meetingTimeUtcSuffix": "(UTC)",
-      "availableSlots": "Available Slots",
-      "generateSlotsBackend": "Generate Slots on Backend",
-      "slotsEmptyState": "Click \"Generate Slots on Backend\" to find available meeting times. Or adjust working hours/date and try again.",
-      "qualityGreat": "Great",
-      "qualityGood": "Good",
-      "qualityFair": "Fair",
-      "qualityScoreTitle": "Quality score: {score}/100",
-      "selected": "Selected",
-      "morning": "Morning",
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "night": "Night",
-      "showingTop15": "Showing top 15 of {total} available slots (sorted by quality)",
-      "selectedTime": "Selected Time",
-      "selectedSlot": "Selected Slot",
-      "utcTime": "UTC Time",
-      "daytime": "Daytime",
-      "nighttime": "Nighttime",
-      "confirmCreateMeet": "Confirm & Create Google Meet",
-      "addOneParticipantHint": "Add at least one participant to convert time to different time zones",
-      "addTwoParticipantsHint": "Add at least 2 participants to start finding meeting slots",
-      "addOneMoreParticipantHint": "Add one more participant to find available meeting times",
-      "meetingConfirmed": "Meeting Confirmed",
-      "googleMeetLink": "Google Meet Link:",
-      "eventId": "Event ID: {id}"
+      "availableSlots": "Доступні слоти",
+      "generateSlotsBackend": "Згенерувати слоти на сервері",
+      "slotsEmptyState": "Натисніть «Згенерувати слоти на сервері», щоб знайти доступний час зустрічі. Або відкоригуйте робочі години/дату та спробуйте ще раз.",
+      "qualityGreat": "Чудово",
+      "qualityGood": "Добре",
+      "qualityFair": "Прийнятно",
+      "qualityScoreTitle": "Оцінка якості: {score}/100",
+      "selected": "Вибрано",
+      "morning": "Ранок",
+      "afternoon": "День",
+      "evening": "Вечір",
+      "night": "Ніч",
+      "showingTop15": "Показано 15 найкращих з {total} доступних слотів (відсортовано за якістю)",
+      "selectedTime": "Вибраний час",
+      "selectedSlot": "Вибраний слот",
+      "utcTime": "Час UTC",
+      "daytime": "Денний час",
+      "nighttime": "Нічний час",
+      "confirmCreateMeet": "Підтвердити та створити Google Meet",
+      "addOneParticipantHint": "Додайте щонайменше одного учасника, щоб конвертувати час у різні часові пояси",
+      "addTwoParticipantsHint": "Додайте щонайменше 2 учасників, щоб почати пошук слотів для зустрічі",
+      "addOneMoreParticipantHint": "Додайте ще одного учасника, щоб знайти доступний час зустрічі",
+      "meetingConfirmed": "Зустріч підтверджено",
+      "googleMeetLink": "Посилання на Google Meet:",
+      "eventId": "Ідентифікатор події: {id}"
     },
     "participants": {
-      "timezone": "Timezone",
-      "localTimeNow": "Local time now",
-      "meetingTimeForYou": "Meeting time for you:"
+      "timezone": "Часовий пояс",
+      "localTimeNow": "Місцевий час зараз",
+      "meetingTimeForYou": "Час зустрічі для вас:"
     },
     "poll": {
-      "failedToLoad": "Failed to load poll",
-      "provideNameEmail": "Please provide name and email",
-      "voteAtLeastOne": "Please vote for at least one slot",
-      "failedToSubmit": "Failed to submit vote",
-      "voteSubmitted": "Vote submitted successfully!",
-      "loading": "Loading...",
-      "duration": "Duration: {minutes} minutes",
-      "voteForSlots": "Vote for Available Slots",
-      "noSlots": "No slots available",
+      "failedToLoad": "Не вдалося завантажити опитування",
+      "provideNameEmail": "Будь ласка, вкажіть ім’я та електронну пошту",
+      "voteAtLeastOne": "Будь ласка, проголосуйте щонайменше за один слот",
+      "failedToSubmit": "Не вдалося надіслати голос",
+      "voteSubmitted": "Голос успішно надіслано!",
+      "loading": "Завантаження...",
+      "duration": "Тривалість: {minutes} хв",
+      "voteForSlots": "Голосуйте за доступні слоти",
+      "noSlots": "Немає доступних слотів",
       "utcLabel": "UTC:",
-      "yourTimeLabel": "Your time ({timezone}):",
-      "score": "Score: {score}",
-      "yes": "✓ Yes",
-      "maybe": "? Maybe",
-      "no": "✗ No",
-      "summary": "Summary: {yes} yes, {maybe} maybe, {no} no",
-      "submitYourVote": "Submit Your Vote",
-      "yourName": "Your Name",
-      "yourEmail": "Your Email",
-      "submitting": "Submitting...",
-      "submitVote": "Submit Vote"
+      "yourTimeLabel": "Ваш час ({timezone}):",
+      "score": "Оцінка: {score}",
+      "yes": "✓ Так",
+      "maybe": "? Можливо",
+      "no": "✗ Ні",
+      "summary": "Підсумок: {yes} так, {maybe} можливо, {no} ні",
+      "submitYourVote": "Надішліть свій голос",
+      "yourName": "Ваше ім’я",
+      "yourEmail": "Ваша електронна пошта",
+      "submitting": "Надсилання...",
+      "submitVote": "Надіслати голос"
     },
     "book": {
-      "failedLoadBooking": "Failed to load booking",
-      "selectSlotProvideInfo": "Please select a slot and provide name/email",
-      "failedReserve": "Failed to reserve",
-      "slotReserved": "Slot reserved! Meet link created.",
-      "failedReserveSlot": "Failed to reserve slot",
-      "loading": "Loading...",
-      "duration": "Duration: {minutes} minutes",
-      "meetingReserved": "Meeting Reserved",
-      "timeLabel": "Time:",
-      "yourLocalTimeLabel": "Your local time:",
-      "meetLinkLabel": "Meet Link:",
-      "availableSlots": "Available Slots",
-      "noSlots": "No slots available",
+      "failedLoadBooking": "Не вдалося завантажити бронювання",
+      "selectSlotProvideInfo": "Будь ласка, виберіть слот і вкажіть ім’я/електронну пошту",
+      "failedReserve": "Не вдалося забронювати",
+      "slotReserved": "Слот заброньовано! Посилання на Meet створено.",
+      "failedReserveSlot": "Не вдалося забронювати слот",
+      "loading": "Завантаження...",
+      "duration": "Тривалість: {minutes} хв",
+      "meetingReserved": "Зустріч заброньовано",
+      "timeLabel": "Час:",
+      "yourLocalTimeLabel": "Ваш місцевий час:",
+      "meetLinkLabel": "Посилання на Meet:",
+      "availableSlots": "Доступні слоти",
+      "noSlots": "Немає доступних слотів",
       "utcLabel": "UTC:",
-      "yourTimeLabel": "Your time ({timezone}):",
-      "score": "Score: {score}",
-      "select": "Select",
-      "reserveSlot": "Reserve Slot",
-      "yourName": "Your Name",
-      "yourEmail": "Your Email",
-      "reserving": "Reserving...",
-      "reserveSlotButton": "Reserve Slot"
+      "yourTimeLabel": "Ваш час ({timezone}):",
+      "score": "Оцінка: {score}",
+      "select": "Вибрати",
+      "reserveSlot": "Забронювати слот",
+      "yourName": "Ваше ім’я",
+      "yourEmail": "Ваша електронна пошта",
+      "reserving": "Бронювання...",
+      "reserveSlotButton": "Забронювати слот"
     },
     "toast": {
-      "close": "Close"
+      "close": "Закрити"
     },
     "timeDisplay": {
-      "selectLocation": "Select a location to view time",
-      "sun": "Sun:",
-      "format12h": "12h",
-      "format24h": "24h"
+      "selectLocation": "Виберіть локацію, щоб переглянути час",
+      "sun": "Сонце:",
+      "format12h": "12 год",
+      "format24h": "24 год"
     },
     "dstBadge": {
-      "active": "DST active",
-      "inactive": "DST inactive"
+      "active": "Літній час активний",
+      "inactive": "Літній час неактивний"
     },
     "workingHours": {
-      "workingHours": "Working hours",
-      "start": "Start",
-      "end": "End"
+      "workingHours": "Робочі години",
+      "start": "Початок",
+      "end": "Кінець"
     },
     "cityTimeCard": {
-      "day": "Day",
-      "night": "Night"
+      "day": "День",
+      "night": "Ніч"
     },
     "timezoneSelector": {
-      "savedToast": "Timezone \"{name}\" saved!",
-      "clearedToast": "Saved timezone cleared!",
-      "selectTimezone": "Select timezone",
-      "savedLabel": "Saved: {name}",
-      "hideTimezone": "Hide Timezone",
-      "selectTimezoneButton": "Select Timezone",
-      "saveTitle": "Save timezone to localStorage",
-      "save": "Save",
-      "clearTitle": "Clear saved timezone",
-      "clear": "Clear",
-      "searchPlaceholder": "Search timezone (e.g., Kyiv, New York, Tokyo)...",
-      "noResults": "No timezones found for \"{query}\"",
-      "selectRegion": "Select Region:",
-      "regionTimezones": "{region} timezones:"
+      "savedToast": "Часовий пояс «{name}» збережено!",
+      "clearedToast": "Збережений часовий пояс очищено!",
+      "selectTimezone": "Виберіть часовий пояс",
+      "savedLabel": "Збережено: {name}",
+      "hideTimezone": "Сховати часовий пояс",
+      "selectTimezoneButton": "Вибрати часовий пояс",
+      "saveTitle": "Зберегти часовий пояс у localStorage",
+      "save": "Зберегти",
+      "clearTitle": "Очистити збережений часовий пояс",
+      "clear": "Очистити",
+      "searchPlaceholder": "Пошук часового поясу (напр., Київ, Нью-Йорк, Токіо)...",
+      "noResults": "Часових поясів за запитом «{query}» не знайдено",
+      "selectRegion": "Виберіть регіон:",
+      "regionTimezones": "Часові пояси регіону {region}:"
     },
     "datePicker": {
-      "today": "Today",
+      "today": "Сьогодні",
       "weekday": {
-        "Sun": "Sun",
-        "Mon": "Mon",
-        "Tue": "Tue",
-        "Wed": "Wed",
-        "Thu": "Thu",
-        "Fri": "Fri",
-        "Sat": "Sat"
+        "Sun": "Нд",
+        "Mon": "Пн",
+        "Tue": "Вт",
+        "Wed": "Ср",
+        "Thu": "Чт",
+        "Fri": "Пт",
+        "Sat": "Сб"
       }
     },
     "timePicker": {
-      "hour": "Hour",
-      "min": "Min"
+      "hour": "Година",
+      "min": "Хв"
     },
     "copyButton": {
-      "copy": "Copy"
+      "copy": "Копіювати"
     },
     "themeToggle": {
-      "dark": "Dark",
-      "light": "Light",
-      "switchTitle": "Switch to {theme} theme"
+      "dark": "Темна",
+      "light": "Світла",
+      "switchTitle": "Перемкнути на {theme} тему"
     },
     "timeSlider": {
-      "time": "Time"
+      "time": "Час"
     }
   }
 }

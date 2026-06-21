@@ -1,714 +1,714 @@
 {
   "common": {
     "appName": "Timezio",
-    "breadcrumbHome": "Home",
-    "faqTitle": "Frequently Asked Questions",
-    "backToHome": "Back to Home",
-    "legalDisclaimer": "This page is a machine-assisted translation provided for convenience. The English version is authoritative."
+    "breadcrumbHome": "Hem",
+    "faqTitle": "Vanliga frågor",
+    "backToHome": "Tillbaka till startsidan",
+    "legalDisclaimer": "Den här sidan är en maskinöversättning som tillhandahålls för enkelhetens skull. Den engelska versionen är den gällande."
   },
   "nav": {
-    "blog": "Blog",
-    "about": "About",
-    "toggleHourFormat": "Toggle 12/24h",
-    "copyLink": "Copy link"
+    "blog": "Blogg",
+    "about": "Om oss",
+    "toggleHourFormat": "Växla 12/24-tim",
+    "copyLink": "Kopiera länk"
   },
   "language": {
-    "label": "Language",
-    "select": "Select language"
+    "label": "Språk",
+    "select": "Välj språk"
   },
   "meta": {
     "home": {
-      "title": "Timezio – Time Zone Converter & Meeting Planner",
-      "description": "Instant time zone converter, world clock, DST-aware meeting planner, and timezone comparison on an interactive globe."
+      "title": "Timezio – Tidszonsomvandlare och mötesplanerare",
+      "description": "Omedelbar tidszonsomvandlare, världsklocka, sommartidsanpassad mötesplanerare och tidszonsjämförelse på en interaktiv jordglob."
     },
     "explore": {
-      "title": "Explore Time Zones on a Globe",
-      "description": "Explore time zones on an interactive 3D globe. Check current time, UTC offset, and DST status for any location."
+      "title": "Utforska tidszoner på en jordglob",
+      "description": "Utforska tidszoner på en interaktiv 3D-jordglob. Kontrollera aktuell tid, UTC-offset och DST-status för valfri plats."
     },
     "compare": {
-      "title": "Compare Time Zones",
-      "description": "Compare time zones side-by-side with DST-aware offsets. Visualize locations on an interactive globe and avoid scheduling mistakes."
+      "title": "Jämför tidszoner",
+      "description": "Jämför tidszoner sida vid sida med sommartidsanpassade offset. Visualisera platser på en interaktiv jordglob och undvik schemaläggningsmisstag."
     },
     "planner": {
-      "title": "Meeting Planner Across Time Zones",
-      "description": "Plan meetings across time zones with working hours, overlap windows, and DST-aware calculations."
+      "title": "Mötesplanerare över tidszoner",
+      "description": "Planera möten över tidszoner med arbetstider, överlappande tidsfönster och sommartidsanpassade beräkningar."
     },
     "saved": {
-      "title": "Saved Locations & Time Zones",
-      "description": "Save frequently used locations and quickly return to their current time, offset, and DST status."
+      "title": "Sparade platser och tidszoner",
+      "description": "Spara ofta använda platser och återvänd snabbt till deras aktuella tid, offset och DST-status."
     },
     "timeConverter": {
-      "title": "Time Zone Converter – Compare Times, Plan Meetings & Explore Cities",
-      "description": "Compare time zones between cities, plan meetings across regions, and explore local times worldwide. DST-aware, accurate, and free."
+      "title": "Tidszonsomvandlare – Jämför tider, planera möten och utforska städer",
+      "description": "Jämför tidszoner mellan städer, planera möten över regioner och utforska lokala tider världen över. Sommartidsanpassad, exakt och gratis."
     },
     "meetingPlanner": {
-      "title": "Meeting Planner"
+      "title": "Mötesplanerare"
     },
     "convertHub": {
-      "title": "Popular Time Zone Converters",
-      "description": "Convert time between zones instantly: PST to EST, UTC to EST, GMT to EST, CET to EST, IST to EST and more. Each converter is DST-aware and shows a full hour-by-hour table."
+      "title": "Populära tidszonsomvandlare",
+      "description": "Omvandla tid mellan zoner direkt: PST till EST, UTC till EST, GMT till EST, CET till EST, IST till EST och mer. Varje omvandlare är sommartidsanpassad och visar en fullständig tabell timme för timme."
     },
     "timeHub": {
-      "title": "Current Time in Major Cities Worldwide",
-      "description": "Check the current local time in cities around the world. Each page shows live local time, UTC offset, time zone, and daylight saving status — DST-aware and updated in real time."
+      "title": "Aktuell tid i större städer världen över",
+      "description": "Kontrollera den aktuella lokala tiden i städer runt om i världen. Varje sida visar live lokal tid, UTC-offset, tidszon och sommartidsstatus – sommartidsanpassad och uppdaterad i realtid."
     },
     "meetingHub": {
-      "title": "Best Meeting Times Across Time Zones",
-      "description": "Find overlapping working hours for popular city pairs. Each page shows a shared-hours table and the best slot, fully daylight-saving aware."
+      "title": "Bästa mötestiderna över tidszoner",
+      "description": "Hitta överlappande arbetstider för populära stadspar. Varje sida visar en tabell över gemensamma timmar och den bästa tidsluckan, helt sommartidsanpassad."
     },
     "dstHub": {
-      "title": "Daylight Saving Time Checker",
-      "description": "Is a region observing daylight saving time right now? Check DST status, the current UTC offset, and the exact next clock-change dates for countries worldwide."
+      "title": "Sommartidskontroll",
+      "description": "Tillämpar en region sommartid just nu? Kontrollera DST-status, aktuell UTC-offset och de exakta datumen för nästa tidsomställning för länder världen över."
     },
     "time": {
-      "title": "Current Time in {city}",
-      "description": "See the current local time in {city}, with UTC offset and daylight saving status."
+      "title": "Aktuell tid i {city}",
+      "description": "Se den aktuella lokala tiden i {city}, med UTC-offset och sommartidsstatus."
     },
     "convert": {
-      "title": "{from} to {to} Time Converter",
-      "description": "Convert {from} to {to} with a full hour-by-hour table — DST-aware, using official IANA data."
+      "title": "Tidsomvandlare {from} till {to}",
+      "description": "Omvandla {from} till {to} med en fullständig tabell timme för timme – sommartidsanpassad och baserad på officiella IANA-data."
     },
     "meeting": {
-      "title": "Best Meeting Time: {a} ↔ {b}",
-      "description": "Find overlapping working hours and the best meeting time between {a} and {b} — fully DST-aware."
+      "title": "Bästa mötestiden: {a} ↔ {b}",
+      "description": "Hitta överlappande arbetstider och den bästa mötestiden mellan {a} och {b} – helt sommartidsanpassad."
     },
     "dst": {
-      "title": "{region} Daylight Saving Time",
-      "description": "DST status, the current UTC offset, and the next clock-change dates for {region}."
+      "title": "Sommartid i {region}",
+      "description": "DST-status, aktuell UTC-offset och datumen för nästa tidsomställning för {region}."
     },
     "privacy": {
-      "title": "Privacy Policy",
-      "description": "How Timezio collects, uses, and protects information in compliance with GDPR and applicable data protection laws."
+      "title": "Integritetspolicy",
+      "description": "Hur Timezio samlar in, använder och skyddar information i enlighet med GDPR och tillämpliga dataskyddslagar."
     },
     "terms": {
-      "title": "Terms of Service",
-      "description": "Terms and conditions for using Timezio’s timezone tools, converters, and meeting planner."
+      "title": "Användarvillkor",
+      "description": "Villkor för att använda Timezios tidszonsverktyg, omvandlare och mötesplanerare."
     },
     "about": {
-      "title": "About Timezio",
-      "description": "Timezio is a free, DST-aware time zone converter, world clock, and meeting planner built by AffSquad. Learn who runs it, how it works, and the data behind it."
+      "title": "Om Timezio",
+      "description": "Timezio är en gratis, sommartidsanpassad tidszonsomvandlare, världsklocka och mötesplanerare byggd av AffSquad. Lär dig vem som driver tjänsten, hur den fungerar och vilka data den bygger på."
     },
     "contact": {
-      "title": "Contact Timezio Support",
-      "description": "Get help, report issues, or request features for Timezio’s time zone tools. We respond to feedback and support questions."
+      "title": "Kontakta Timezios support",
+      "description": "Få hjälp, rapportera problem eller önska funktioner för Timezios tidszonsverktyg. Vi svarar på feedback och supportfrågor."
     },
     "blogIndex": {
-      "title": "Time Zone Guides & Remote Work Tips",
-      "description": "In-depth guides on time zones, daylight saving time, remote collaboration, and using Timezio effectively."
+      "title": "Tidszonsguider och tips för distansarbete",
+      "description": "Fördjupande guider om tidszoner, sommartid, samarbete på distans och hur du använder Timezio effektivt."
     }
   },
   "footer": {
-    "productTitle": "PRODUCT",
-    "exploreTitle": "EXPLORE",
-    "popularTitle": "POPULAR",
-    "legalTitle": "LEGAL",
-    "home": "Home",
-    "exploreGlobe": "Explore Globe",
-    "compareZones": "Compare Zones",
-    "meetingPlanner": "Meeting Planner",
-    "timeConverter": "Time Converter",
-    "worldClock": "World Clock",
-    "converters": "Converters",
-    "meetingTimes": "Meeting Times",
-    "daylightSaving": "Daylight Saving",
-    "blog": "Blog",
-    "about": "About",
-    "contact": "Contact",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "cookieSettings": "Cookie settings",
-    "copyright": "© {year} Timezio by AffSquad. All rights reserved.",
-    "disclaimer": "Information on this website is provided for general reference only. Accuracy is not guaranteed. No liability is accepted to the extent permitted by EU law. Cookies or similar technologies may be used for analytics and advertising in accordance with your consent choices.",
-    "privacyShort": "Privacy",
-    "termsShort": "Terms"
+    "productTitle": "PRODUKT",
+    "exploreTitle": "UTFORSKA",
+    "popularTitle": "POPULÄRT",
+    "legalTitle": "JURIDIK",
+    "home": "Hem",
+    "exploreGlobe": "Utforska jordgloben",
+    "compareZones": "Jämför zoner",
+    "meetingPlanner": "Mötesplanerare",
+    "timeConverter": "Tidsomvandlare",
+    "worldClock": "Världsklocka",
+    "converters": "Omvandlare",
+    "meetingTimes": "Mötestider",
+    "daylightSaving": "Sommartid",
+    "blog": "Blogg",
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "privacy": "Integritetspolicy",
+    "terms": "Användarvillkor",
+    "cookieSettings": "Cookie-inställningar",
+    "copyright": "© {year} Timezio av AffSquad. Alla rättigheter förbehållna.",
+    "disclaimer": "Informationen på denna webbplats tillhandahålls endast som allmän referens. Korrektheten kan inte garanteras. Inget ansvar tas i den utsträckning som EU-rätten tillåter. Cookies eller liknande tekniker kan användas för analys och annonsering i enlighet med dina samtyckesval.",
+    "privacyShort": "Integritet",
+    "termsShort": "Villkor"
   },
   "consent": {
-    "message": "We use cookies for analytics and to show ads (including Google AdSense). You can accept or reject non-essential cookies. See our <link>Privacy Policy</link>.",
-    "reject": "Reject",
-    "acceptAll": "Accept all"
+    "message": "Vi använder cookies för analys och för att visa annonser (inklusive Google AdSense). Du kan acceptera eller avvisa cookies som inte är nödvändiga. Läs vår <link>integritetspolicy</link>.",
+    "reject": "Avvisa",
+    "acceptAll": "Acceptera alla"
   },
   "blog": {
-    "indexTitle": "Blog",
-    "indexDescription": "Articles and guides about time zones, remote work, and using Timezio effectively.",
-    "readMore": "Read more",
-    "backToBlog": "Back to Blog",
-    "byTeam": "By the Timezio team",
-    "toolsTitle": "Timezio Tools",
-    "relatedTitle": "Related Articles",
+    "indexTitle": "Blogg",
+    "indexDescription": "Artiklar och guider om tidszoner, distansarbete och hur du använder Timezio på bästa sätt.",
+    "readMore": "Läs mer",
+    "backToBlog": "Tillbaka till bloggen",
+    "byTeam": "Av Timezio-teamet",
+    "toolsTitle": "Timezio-verktyg",
+    "relatedTitle": "Relaterade artiklar",
     "tools": [
       {
-        "title": "Explore Globe",
-        "desc": "Click anywhere on the interactive globe to see local time"
+        "title": "Utforska jordgloben",
+        "desc": "Klicka var som helst på den interaktiva jordgloben för att se lokal tid"
       },
       {
-        "title": "Compare Time Zones",
-        "desc": "Compare time differences between multiple cities"
+        "title": "Jämför tidszoner",
+        "desc": "Jämför tidsskillnader mellan flera städer"
       },
       {
-        "title": "Meeting Planner",
-        "desc": "Find the best meeting time for people in different locations"
+        "title": "Mötesplanerare",
+        "desc": "Hitta den bästa mötestiden för personer på olika platser"
       },
       {
-        "title": "DST Tracker",
-        "desc": "Track daylight saving time changes and transitions"
+        "title": "DST-spårare",
+        "desc": "Håll koll på sommartidsändringar och övergångar"
       },
       {
-        "title": "Time Converter",
-        "desc": "Convert UTC or local times between time zones"
+        "title": "Tidsomvandlare",
+        "desc": "Omvandla UTC eller lokala tider mellan tidszoner"
       }
     ]
   },
   "home": {
     "badges": [
-      "Live & DST-aware",
-      "No sign-up",
-      "Free forever"
+      "Live och DST-anpassad",
+      "Ingen registrering",
+      "Gratis för alltid"
     ],
-    "title": "Plan across time zones without the headaches.",
-    "lede": "Timezio helps you compare time zones, convert UTC, and lock in meeting slots between cities. Every calculation is DST-aware and powered by official IANA data.",
-    "ctaPlanner": "Plan a meeting",
-    "ctaConverter": "Open converter",
+    "title": "Planera över tidszoner utan huvudvärken.",
+    "lede": "Timezio hjälper dig att jämföra tidszoner, konvertera UTC och låsa mötestider mellan städer. Varje beräkning är DST-anpassad och drivs av officiella IANA-data.",
+    "ctaPlanner": "Planera ett möte",
+    "ctaConverter": "Öppna konverteraren",
     "highlights": [
       {
-        "title": "DST aware",
-        "body": "Powered by official IANA time zone data updated automatically."
+        "title": "DST-anpassad",
+        "body": "Drivs av officiella IANA-tidszonsdata som uppdateras automatiskt."
       },
       {
-        "title": "10k+ cities",
-        "body": "Every offset covered, including 30- and 45-minute differences."
+        "title": "10 000+ städer",
+        "body": "Varje offset täcks, inklusive skillnader på 30 och 45 minuter."
       },
       {
-        "title": "Share ready",
-        "body": "Copy clean links and send the exact time plan to your team."
+        "title": "Redo att dela",
+        "body": "Kopiera rena länkar och skicka exakt tidsplan till ditt team."
       }
     ],
-    "panelEyebrow": "Live snapshot",
-    "panelTitle": "What's happening right now",
-    "panelBadge": "DST verified",
-    "panelFooter": "Live examples. Odd offsets and daylight saving rules handled automatically.",
-    "toolkitEyebrow": "Toolkit",
-    "toolkitTitle": "Everything you need for global timing",
-    "toolkitBody": "Switch between the planner, converter, and city comparison without losing context.",
+    "panelEyebrow": "Liveögonblicksbild",
+    "panelTitle": "Vad som händer just nu",
+    "panelBadge": "DST-verifierad",
+    "panelFooter": "Liveexempel. Udda offset och sommartidsregler hanteras automatiskt.",
+    "toolkitEyebrow": "Verktygslåda",
+    "toolkitTitle": "Allt du behöver för global tidsplanering",
+    "toolkitBody": "Växla mellan planeraren, konverteraren och stadsjämförelsen utan att tappa sammanhanget.",
     "tools": [
       {
-        "label": "Meeting Planner",
-        "desc": "Find overlap-friendly slots automatically and keep everyone out of late nights.",
-        "badge": "Team favorite"
+        "label": "Mötesplanerare",
+        "desc": "Hitta överlappningsvänliga tider automatiskt och håll alla borta från sena kvällar.",
+        "badge": "Teamfavorit"
       },
       {
-        "label": "Time Converter",
-        "desc": "Convert UTC or local times, preview future dates, and share results instantly.",
-        "badge": "Most used"
+        "label": "Tidskonverterare",
+        "desc": "Konvertera UTC eller lokala tider, förhandsgranska framtida datum och dela resultat direkt.",
+        "badge": "Mest använd"
       },
       {
-        "label": "City Compare",
-        "desc": "Line up multiple cities side by side to see the exact differences at a glance.",
+        "label": "Stadsjämförelse",
+        "desc": "Ställ upp flera städer sida vid sida för att se de exakta skillnaderna med en blick.",
         "badge": ""
       },
       {
-        "label": "Explore Globe",
-        "desc": "Navigate the interactive globe and jump straight into any city or region.",
+        "label": "Utforska jordgloben",
+        "desc": "Navigera på den interaktiva jordgloben och hoppa direkt till valfri stad eller region.",
         "badge": ""
       }
     ],
-    "toolOpen": "Open →",
-    "whyEyebrow": "Why Timezio",
-    "whyTitle": "Accuracy by default, friendly by design",
-    "whyBody": "Built for remote teams, freelancers, and friends spread across the world.",
+    "toolOpen": "Öppna →",
+    "whyEyebrow": "Varför Timezio",
+    "whyTitle": "Noggrannhet som standard, vänligt i designen",
+    "whyBody": "Byggd för distansteam, frilansare och vänner spridda över hela världen.",
     "values": [
       {
-        "title": "Accurate Time Zone Calculations",
-        "body": "Compare local times between cities with automatic adjustment for daylight saving time and regional UTC offsets."
+        "title": "Noggranna tidszonsberäkningar",
+        "body": "Jämför lokala tider mellan städer med automatisk justering för sommartid och regionala UTC-offset."
       },
       {
-        "title": "UTC & Local Time Conversion",
-        "body": "Convert UTC to local time (and back) for any city — past, present, or future dates supported."
+        "title": "UTC- och lokaltidskonvertering",
+        "body": "Konvertera UTC till lokal tid (och tillbaka) för valfri stad — datum i dåtid, nutid eller framtid stöds."
       },
       {
-        "title": "Meeting Planner Across Time Zones",
-        "body": "Find the best overlapping meeting time for participants in different cities, without early mornings or late nights."
+        "title": "Mötesplanerare över tidszoner",
+        "body": "Hitta den bästa överlappande mötestiden för deltagare i olika städer, utan tidiga morgnar eller sena kvällar."
       },
       {
-        "title": "Fast, Simple & Free",
-        "body": "No accounts, no setup, no complexity. Just clear answers — instantly."
+        "title": "Snabbt, enkelt och gratis",
+        "body": "Inga konton, ingen installation, ingen komplexitet. Bara tydliga svar — direkt."
       },
       {
-        "title": "DST-Aware & Reliable",
-        "body": "Timezio uses official IANA time zone data. All results automatically adjust for daylight saving time changes and regional rules."
+        "title": "DST-anpassad och pålitlig",
+        "body": "Timezio använder officiella IANA-tidszonsdata. Alla resultat justeras automatiskt för sommartidsändringar och regionala regler."
       },
       {
-        "title": "Built for Global Use",
-        "body": "Supports regions with non-standard offsets (including 30- or 45-minute differences) and date changes when crossing time zones."
+        "title": "Byggd för global användning",
+        "body": "Stöder regioner med icke-standardiserade offset (inklusive skillnader på 30 eller 45 minuter) och datumändringar när du korsar tidszoner."
       }
     ]
   },
   "pages": {
     "explore": {
-      "heading": "Explore Time Zones",
-      "description": "Pick any point on the globe to see the local time, UTC offset, and daylight saving status. Use Explore to understand where time changes across borders.",
-      "breadcrumb": "Explore",
+      "heading": "Utforska tidszoner",
+      "description": "Välj valfri punkt på jordgloben för att se lokal tid, UTC-offset och sommartidsstatus. Använd Utforska för att förstå var tiden ändras över gränser.",
+      "breadcrumb": "Utforska",
       "ctas": [
-        "Current time in major cities",
-        "Popular time zone converters",
-        "Daylight saving time checker"
+        "Aktuell tid i storstäder",
+        "Populära tidszonskonverterare",
+        "Sommartidskontroll"
       ],
-      "articleH2": "How to explore the globe",
+      "articleH2": "Så utforskar du jordgloben",
       "articleParagraphs": [
-        "The interactive 3D globe turns time zones into something you can see rather than calculate. Click any location and Timezio reads its exact latitude and longitude, looks up the matching IANA time zone, and shows the current local time, the UTC offset, and whether daylight saving time is currently in effect. Because the data comes from the official IANA time zone database, it covers the awkward cases too — half-hour offsets like India (UTC+5:30), 45-minute offsets like Nepal, and regions that change their clocks on different dates.",
-        "Explore is the quickest way to answer “what time is it there right now?” without typing a city name. Spin the globe to a continent, click a coastline, and read the time instantly. When you want to line up several places at once, switch to Compare; when you need to find a slot that works for a team, jump to the Planner. Every view stays in sync, so a city you click here is ready to compare or schedule with one tap.",
-        "Time zones are political as much as geographic — borders, exceptions, and seasonal rules all shift the clock. Seeing them on a globe makes those boundaries obvious, which is why Explore is a good starting point before you convert a specific time or book an international call."
+        "Den interaktiva 3D-jordgloben förvandlar tidszoner till något du kan se snarare än beräkna. Klicka på valfri plats så läser Timezio av dess exakta latitud och longitud, slår upp den matchande IANA-tidszonen och visar den aktuella lokala tiden, UTC-offset och om sommartid för närvarande gäller. Eftersom data kommer från den officiella IANA-tidszonsdatabasen täcker den även de knepiga fallen — halvtimmesoffset som Indien (UTC+5:30), 45-minutersoffset som Nepal och regioner som ställer om sina klockor på olika datum.",
+        "Utforska är det snabbaste sättet att svara på frågan ”vad är klockan där just nu?” utan att skriva ett stadsnamn. Snurra jordgloben till en kontinent, klicka på en kustlinje och läs av tiden direkt. När du vill ställa upp flera platser samtidigt, växla till Jämför; när du behöver hitta en tid som fungerar för ett team, hoppa till Planeraren. Varje vy hålls synkroniserad, så en stad du klickar på här är redo att jämföras eller schemaläggas med en knapptryckning.",
+        "Tidszoner är lika mycket politiska som geografiska — gränser, undantag och säsongsregler förskjuter alla klockan. Att se dem på en jordglob gör de gränserna tydliga, vilket är varför Utforska är en bra utgångspunkt innan du konverterar en specifik tid eller bokar ett internationellt samtal."
       ]
     },
     "compare": {
-      "heading": "Compare Time Zones",
-      "description": "Compare multiple time zones side-by-side with DST-aware offsets. Add cities, choose a base location, and verify the time difference before you schedule.",
-      "breadcrumb": "Compare",
+      "heading": "Jämför tidszoner",
+      "description": "Jämför flera tidszoner sida vid sida med DST-anpassade offset. Lägg till städer, välj en basplats och verifiera tidsskillnaden innan du schemalägger.",
+      "breadcrumb": "Jämför",
       "ctas": [
-        "Popular time zone converters",
-        "Best meeting times by city pair",
-        "Daylight saving time checker"
+        "Populära tidszonskonverterare",
+        "Bästa mötestider per stadspar",
+        "Sommartidskontroll"
       ],
-      "articleH2": "Compare several cities at once",
+      "articleH2": "Jämför flera städer samtidigt",
       "articleParagraphs": [
-        "Add up to six cities and Timezio lines up their current local times in a single view. Pick one as the “base” and every other city shows its difference relative to it, so you can answer questions like “when it’s 9:00 AM in Berlin, what time is it in New York and Singapore?” at a glance. The offsets are calculated from official IANA data and update in real time, including the one-hour shifts that happen when a region enters or leaves daylight saving time.",
-        "Comparing is most useful when the difference isn’t obvious. Many country pairs sit a fractional number of hours apart, and several change their clocks on different weekends, so the gap between two cities can be nine hours one month and ten the next. Lining the cities up side by side catches those edge cases before they turn into a missed call. For a date in the future, change the date and the comparison recalculates with the correct DST rules for that day.",
-        "When you’ve confirmed the difference, copy the share link to send the exact comparison to your team, or move the same set of cities into the Planner to find a meeting slot that works for everyone."
+        "Lägg till upp till sex städer så ställer Timezio upp deras aktuella lokala tider i en enda vy. Välj en som ”bas” och varje annan stad visar sin skillnad i förhållande till den, så att du med en blick kan svara på frågor som ”när klockan är 09:00 i Berlin, vad är den då i New York och Singapore?” Offseten beräknas utifrån officiella IANA-data och uppdateras i realtid, inklusive entimmesförskjutningarna som sker när en region går in i eller ut ur sommartid.",
+        "Att jämföra är mest användbart när skillnaden inte är uppenbar. Många landspar ligger ett brutet antal timmar isär, och flera ställer om sina klockor olika helger, så glappet mellan två städer kan vara nio timmar en månad och tio nästa. Att ställa upp städerna sida vid sida fångar de gränsfallen innan de blir ett missat samtal. För ett datum i framtiden, ändra datumet så räknas jämförelsen om med korrekta DST-regler för den dagen.",
+        "När du har bekräftat skillnaden kan du kopiera delningslänken för att skicka den exakta jämförelsen till ditt team, eller flytta samma uppsättning städer till Planeraren för att hitta en mötestid som fungerar för alla."
       ]
     },
     "planner": {
-      "heading": "Meeting Planner",
-      "description": "Plan meetings across multiple time zones. Add participants, set working hours, and find overlap windows automatically — fully DST-aware.",
-      "breadcrumb": "Planner",
+      "heading": "Mötesplanerare",
+      "description": "Planera möten över flera tidszoner. Lägg till deltagare, ställ in arbetstider och hitta överlappningsfönster automatiskt — fullt DST-anpassat.",
+      "breadcrumb": "Planerare",
       "ctas": [
-        "Best meeting times by city pair",
-        "Compare time zones",
-        "Daylight saving time checker"
+        "Bästa mötestider per stadspar",
+        "Jämför tidszoner",
+        "Sommartidskontroll"
       ],
-      "articleH2": "Find a time that works for everyone",
+      "articleH2": "Hitta en tid som fungerar för alla",
       "articleParagraphs": [
-        "Add each participant by city, set their working hours, and the planner overlays every schedule to surface the windows when everyone is available. Instead of mentally juggling offsets, you get a ranked list of slots that fall inside each person’s working day, with early-morning and late-night times de-prioritized so nobody has to take a 6 a.m. call. Every calculation is daylight-saving aware, so a slot that works this week still works after a region changes its clocks.",
-        "The planner is built for distributed teams, client calls across continents, and catching up with friends or family abroad. Set a meeting duration, choose a date, and adjust each participant’s hours if they work an unusual shift. You can also widen the search when there is no clean overlap — a common situation for pairs that are ten or more hours apart, where someone has to take an edge slot. For Google Calendar invites and Meet links, connect your account in the planner and confirm a slot.",
-        "Already know the two cities? The pre-built best-meeting-time pages show the overlap for popular pairs without any setup."
+        "Lägg till varje deltagare efter stad, ställ in deras arbetstider, så lägger planeraren alla scheman ovanpå varandra för att lyfta fram de fönster när alla är tillgängliga. I stället för att jonglera offset i huvudet får du en rangordnad lista över tider som infaller inom varje persons arbetsdag, där tidiga morgnar och sena kvällar nedprioriteras så att ingen behöver ta ett samtal klockan 6 på morgonen. Varje beräkning är sommartidsanpassad, så en tid som fungerar den här veckan fungerar fortfarande efter att en region ställt om sina klockor.",
+        "Planeraren är byggd för distribuerade team, kundsamtal över kontinenter och för att hålla kontakten med vänner eller familj utomlands. Ange en möteslängd, välj ett datum och justera varje deltagares timmar om de jobbar ovanliga skift. Du kan också bredda sökningen när det inte finns någon tydlig överlappning — en vanlig situation för par som ligger tio eller fler timmar isär, där någon måste ta en kanttid. För inbjudningar i Google Calendar och Meet-länkar, anslut ditt konto i planeraren och bekräfta en tid.",
+        "Vet du redan vilka två städer det gäller? De förbyggda sidorna för bästa mötestid visar överlappningen för populära par utan någon installation."
       ]
     },
     "saved": {
-      "heading": "Saved",
-      "description": "Save your frequently used locations so you can return instantly to their current time, offset, and daylight saving status.",
-      "breadcrumb": "Saved",
+      "heading": "Sparade",
+      "description": "Spara dina ofta använda platser så att du direkt kan återgå till deras aktuella tid, offset och sommartidsstatus.",
+      "breadcrumb": "Sparade",
       "ctas": [
-        "Explore time zones",
-        "Compare time zones",
-        "Plan a meeting across time zones"
+        "Utforska tidszoner",
+        "Jämför tidszoner",
+        "Planera ett möte över tidszoner"
       ]
     },
     "convertHub": {
-      "title": "Popular Time Zone Converters",
-      "intro1": "A time zone converter answers a deceptively tricky question: when it’s a given time in one place, what time is it somewhere else? The catch is that the gap between two zones isn’t fixed. Daylight saving time shifts it by an hour, the two regions often change their clocks on different weekends, and some zones sit a fractional number of hours apart. Each converter below uses official IANA data, so the result is correct on any date — including the weeks around a clock change when manual math usually goes wrong.",
-      "intro2": "Every converter page includes a full hour-by-hour table for the current day, the live offset between the two zones, and notes on which side observes daylight saving time. Need to check a city rather than an abbreviation? Browse the <world>world clock</world>, or jump to <compare>Compare</compare> to line up more than two places at once.",
-      "listHeading": "Converters"
+      "title": "Populära tidszonskonverterare",
+      "intro1": "En tidszonskonverterare besvarar en bedrägligt knepig fråga: när det är en viss tid på en plats, vad är klockan någon annanstans? Haken är att glappet mellan två zoner inte är fast. Sommartid förskjuter det med en timme, de två regionerna ställer ofta om sina klockor olika helger, och vissa zoner ligger ett brutet antal timmar isär. Varje konverterare nedan använder officiella IANA-data, så resultatet är korrekt vilket datum som helst — inklusive veckorna kring en klockomställning då manuell matematik vanligtvis går fel.",
+      "intro2": "Varje konverterarsida innehåller en fullständig timme-för-timme-tabell för den aktuella dagen, den aktuella offseten mellan de två zonerna och anteckningar om vilken sida som tillämpar sommartid. Behöver du kontrollera en stad i stället för en förkortning? Bläddra i <world>världsklockan</world>, eller hoppa till <compare>Jämför</compare> för att ställa upp fler än två platser samtidigt.",
+      "listHeading": "Konverterare"
     },
     "timeHub": {
-      "title": "Current Time in Major Cities Worldwide",
-      "intro1": "Pick a city to see its current local time, the exact UTC offset, the IANA time zone it uses, and whether daylight saving time is in effect right now. Every page updates in real time and is calculated from the official IANA time zone database, so the awkward cases — half-hour offsets, regions that change clocks on different dates, and places that don’t observe DST at all — are handled correctly.",
-      "intro2": "These world-clock pages are the quickest way to check “what time is it there?” before you call, travel, or schedule. To convert a specific time between two places use the <convert>converters</convert>, to line up several cities use <compare>Compare</compare>, and to find a slot that works for a group use the <planner>Meeting Planner</planner>.",
-      "listHeading": "Cities ({count})"
+      "title": "Aktuell tid i storstäder världen över",
+      "intro1": "Välj en stad för att se dess aktuella lokala tid, den exakta UTC-offseten, vilken IANA-tidszon den använder och om sommartid gäller just nu. Varje sida uppdateras i realtid och beräknas utifrån den officiella IANA-tidszonsdatabasen, så de knepiga fallen — halvtimmesoffset, regioner som ställer om klockor på olika datum och platser som inte tillämpar DST alls — hanteras korrekt.",
+      "intro2": "Dessa världsklockssidor är det snabbaste sättet att kontrollera ”vad är klockan där?” innan du ringer, reser eller schemalägger. För att konvertera en specifik tid mellan två platser, använd <convert>konverterarna</convert>, för att ställa upp flera städer använd <compare>Jämför</compare>, och för att hitta en tid som fungerar för en grupp använd <planner>Mötesplaneraren</planner>.",
+      "listHeading": "Städer ({count})"
     },
     "meetingHub": {
-      "title": "Best Meeting Times by City Pair",
-      "intro1": "Scheduling across continents usually means someone takes a call at a bad hour. These pages do the hard part for you: for each popular city pair, Timezio overlays both teams’ standard 9-to-5 day and lists the hours when everyone is awake and working, plus a recommended slot in the middle of that window. Because the math uses official IANA data, the overlap stays correct even when one city changes its clocks and the other doesn’t.",
-      "intro2": "Pick a pair below for an instant answer, or open the <planner>Meeting Planner</planner> to add your own cities, adjust each participant’s working hours, and generate calendar invites. To double-check the raw time difference first, use <compare>Compare</compare>."
+      "title": "Bästa mötestider per stadspar",
+      "intro1": "Att schemalägga över kontinenter innebär vanligtvis att någon tar ett samtal på en dålig tid. De här sidorna gör det svåra åt dig: för varje populärt stadspar lägger Timezio bägge teamens standardarbetsdag 9–17 ovanpå varandra och listar de timmar då alla är vakna och arbetar, plus en rekommenderad tid mitt i det fönstret. Eftersom matematiken använder officiella IANA-data förblir överlappningen korrekt även när en stad ställer om sina klockor och den andra inte gör det.",
+      "intro2": "Välj ett par nedan för ett omedelbart svar, eller öppna <planner>Mötesplaneraren</planner> för att lägga till egna städer, justera varje deltagares arbetstider och generera kalenderinbjudningar. För att först dubbelkolla den råa tidsskillnaden, använd <compare>Jämför</compare>."
     },
     "dstHub": {
-      "title": "Daylight Saving Time by Country",
-      "intro1": "Daylight saving time is one of the biggest sources of scheduling mistakes: clocks move an hour, but not everywhere and not on the same day. These pages tell you, for each region, whether DST is currently in effect, what the present UTC offset is, and the exact dates of the next spring-forward and fall-back transitions — all computed from the official IANA time zone database rather than hard-coded rules that go stale.",
-      "intro2": "Knowing when a region changes its clocks helps you protect recurring meetings, travel plans, and deadlines that span borders. Choose a region below, then use <compare>Compare</compare> or the <planner>Meeting Planner</planner> to see how an upcoming change shifts the time difference with your own location."
+      "title": "Sommartid per land",
+      "intro1": "Sommartid är en av de största källorna till schemaläggningsmisstag: klockorna flyttas en timme, men inte överallt och inte samma dag. De här sidorna talar om för dig, för varje region, om DST för närvarande gäller, vad den aktuella UTC-offseten är och de exakta datumen för nästa övergång till sommartid och tillbaka till vintertid — allt beräknat utifrån den officiella IANA-tidszonsdatabasen i stället för hårdkodade regler som blir inaktuella.",
+      "intro2": "Att veta när en region ställer om sina klockor hjälper dig att skydda återkommande möten, resplaner och deadlines som spänner över gränser. Välj en region nedan, använd sedan <compare>Jämför</compare> eller <planner>Mötesplaneraren</planner> för att se hur en kommande ändring förskjuter tidsskillnaden mot din egen plats."
     }
   },
   "prog": {
     "time": {
-      "breadcrumb": "World Clock",
-      "h1": "Current Time in {city}",
-      "localTime": "Local time",
+      "breadcrumb": "Världsklocka",
+      "h1": "Aktuell tid i {city}",
+      "localTime": "Lokal tid",
       "dateLine": "{date} · {abbr} ({offset})",
-      "factTimeZone": "Time zone",
-      "factUtcOffset": "UTC offset",
-      "factAbbreviation": "Abbreviation",
-      "factDaylight": "Daylight saving",
-      "daylightInEffect": "In effect now",
-      "daylightObservedInactive": "Observed (not active)",
-      "daylightNotObserved": "Not observed",
-      "introMain": "The current local time in {city} is <b>{time}</b> on {date}. {city} runs on the <b>{tz}</b> time zone, which is presently {offsetAbbr}.",
-      "dstSentence": "{observesDst, select, yes {{city} observes daylight saving time, so its UTC offset shifts by one hour between standard and summer time.} other {{city} does not observe daylight saving time, so its UTC offset ({offset}) stays the same all year.}}",
+      "factTimeZone": "Tidszon",
+      "factUtcOffset": "UTC-förskjutning",
+      "factAbbreviation": "Förkortning",
+      "factDaylight": "Sommartid",
+      "daylightInEffect": "Gäller nu",
+      "daylightObservedInactive": "Tillämpas (inte aktiv)",
+      "daylightNotObserved": "Tillämpas inte",
+      "introMain": "Den aktuella lokala tiden i {city} är <b>{time}</b> den {date}. {city} använder tidszonen <b>{tz}</b>, som för närvarande är {offsetAbbr}.",
+      "dstSentence": "{observesDst, select, yes {{city} tillämpar sommartid, så UTC-förskjutningen ändras med en timme mellan normaltid och sommartid.} other {{city} tillämpar inte sommartid, så UTC-förskjutningen ({offset}) är densamma hela året.}}",
       "transitionLabel": "{type, select, begins {Clocks spring forward — DST begins} other {Clocks fall back — DST ends}}",
-      "nextChange": "<b>Next clock change:</b> {date} — {label}. The UTC offset moves from {fromOffset} to {toOffset}. Plan calls and travel around this date to avoid being an hour off.",
-      "crosslinks": "Use the interactive globe above to compare {city} with other cities, or open the <compare>Compare</compare> tab to line up several time zones side by side. Planning a call? The <planner>Meeting Planner</planner> finds overlapping working hours automatically, and the <dst>DST checker</dst> tracks upcoming clock changes.",
-      "relatedHeading": "Current time in other cities",
-      "wpName": "Current Time in {city}",
-      "wpDesc": "Live local time in {city} ({tz}). Current UTC offset {offsetAbbr}, with daylight saving status and the next clock change.",
-      "faq1q": "What time is it in {city} right now?",
-      "faq1a": "As of {date}, the local time in {city} is around {time} ({abbr}). The clock at the top of this page ticks in real time, and the offset shown is {offset}.",
-      "faq2q": "What time zone is {city} in?",
-      "faq2a": "{city} uses the {tz} IANA time zone{hasAbbr, select, yes {, currently abbreviated {abbr}} other {}}. Its current offset from Coordinated Universal Time is {offset}.",
-      "faq3q": "Does {city} observe daylight saving time?",
+      "nextChange": "<b>Nästa tidsomställning:</b> {date} — {label}. UTC-förskjutningen ändras från {fromOffset} till {toOffset}. Planera samtal och resor runt detta datum för att inte hamna en timme fel.",
+      "crosslinks": "Använd den interaktiva globen ovan för att jämföra {city} med andra städer, eller öppna fliken <compare>Jämför</compare> för att ställa upp flera tidszoner sida vid sida. Planerar du ett samtal? <planner>Mötesplaneraren</planner> hittar automatiskt överlappande arbetstider, och <dst>sommartidskontrollen</dst> håller koll på kommande tidsomställningar.",
+      "relatedHeading": "Aktuell tid i andra städer",
+      "wpName": "Aktuell tid i {city}",
+      "wpDesc": "Live lokal tid i {city} ({tz}). Aktuell UTC-förskjutning {offsetAbbr}, med sommartidsstatus och nästa tidsomställning.",
+      "faq1q": "Vad är klockan i {city} just nu?",
+      "faq1a": "Den {date} är den lokala tiden i {city} omkring {time} ({abbr}). Klockan högst upp på sidan tickar i realtid, och förskjutningen som visas är {offset}.",
+      "faq2q": "Vilken tidszon ligger {city} i?",
+      "faq2a": "{city} använder IANA-tidszonen {tz}{hasAbbr, select, yes {, för närvarande förkortad {abbr}} other {}}. Dess aktuella förskjutning från koordinerad universaltid är {offset}.",
+      "faq3q": "Tillämpar {city} sommartid?",
       "faq3a": "{observesDst, select, yes {Yes. {city} observes daylight saving time, so its UTC offset shifts by one hour between standard and summer time.{hasNext, select, yes { The next change is on {nextDate}, when the clocks {nextDir, select, forward {move forward} other {move back}} and the offset becomes {nextOffset}.} other {}}} other {{city} does not observe daylight saving time, so its UTC offset ({offset}) stays the same all year.}}",
-      "faq4q": "What is the UTC offset for {city}?",
+      "faq4q": "Vad är UTC-förskjutningen för {city}?",
       "faq4a": "{city} is currently at {offset}. {observesDst, select, yes {This offset changes by one hour during the daylight saving period.} other {This offset is fixed throughout the year.}}"
     },
     "convert": {
-      "breadcrumb": "Converters",
-      "h1": "{from} to {to} Time Converter",
-      "diffSummary": "{dir, select, same {{to} is currently the same time as {from}.} ahead {{to} is currently {h}h{m, plural, =0 {} other { #m}} ahead of {from}.} other {{to} is currently {h}h{m, plural, =0 {} other { #m}} behind {from}.}}",
-      "introBody": "{from} is {fromFull}; {to} is {toFull}. The table below shows the conversion for every part of the day, with daylight saving time handled automatically.",
-      "factDifference": "Difference",
-      "diffNone": "None",
-      "tableHeading": "{from} → {to} conversion table",
-      "dayNext": "next day",
-      "dayPrev": "previous day",
-      "crosslinks": "Need a specific date or a different pair? Use the interactive globe and the <compare>Compare</compare> tab to preview any moment, including future dates that cross a daylight saving boundary. To schedule a call between these zones, try the <planner>Meeting Planner</planner>.",
-      "relatedHeading": "Related converters",
-      "wpDesc": "Convert {from} to {to}. {summary}",
-      "faq1q": "What is the time difference between {from} and {to}?",
+      "breadcrumb": "Omvandlare",
+      "h1": "Tidsomvandlare {from} till {to}",
+      "diffSummary": "{dir, select, same {{to} är för närvarande samma tid som {from}.} ahead {{to} ligger för närvarande {h}h{m, plural, =0 {} other { #m}} före {from}.} other {{to} ligger för närvarande {h}h{m, plural, =0 {} other { #m}} efter {from}.}}",
+      "introBody": "{from} är {fromFull}; {to} är {toFull}. Tabellen nedan visar omvandlingen för varje del av dygnet, med sommartid hanterad automatiskt.",
+      "factDifference": "Skillnad",
+      "diffNone": "Ingen",
+      "tableHeading": "Omvandlingstabell {from} → {to}",
+      "dayNext": "nästa dag",
+      "dayPrev": "föregående dag",
+      "crosslinks": "Behöver du ett specifikt datum eller ett annat par? Använd den interaktiva globen och fliken <compare>Jämför</compare> för att förhandsgranska vilket ögonblick som helst, inklusive framtida datum som passerar en sommartidsgräns. För att boka ett samtal mellan dessa zoner, prova <planner>Mötesplaneraren</planner>.",
+      "relatedHeading": "Relaterade omvandlare",
+      "wpDesc": "Omvandla {from} till {to}. {summary}",
+      "faq1q": "Vad är tidsskillnaden mellan {from} och {to}?",
       "faq1a": "Right now {to} ({toFull}) is {dir, select, same {the same time as} ahead {ahead of} other {behind}} {from} ({fromFull}). The difference is {absH, plural, =0 {zero hours} one {# hour} other {# hours}} and can shift by an hour when either zone enters or leaves daylight saving time.",
-      "faq2q": "How do I convert {from} to {to}?",
-      "faq2a": "Add the {from} time to the offset difference. For example, {exampleFrom} {from} is {exampleTo} {to}. The full hour-by-hour table on this page lists each conversion for the current date.",
-      "faq3q": "Does {from} or {to} use daylight saving time?",
+      "faq2q": "Hur omvandlar jag {from} till {to}?",
+      "faq2a": "Lägg till {from}-tiden till förskjutningsskillnaden. Till exempel är {exampleFrom} {from} lika med {exampleTo} {to}. Den fullständiga timme-för-timme-tabellen på den här sidan listar varje omvandling för aktuellt datum.",
+      "faq3q": "Använder {from} eller {to} sommartid?",
       "faq3a": "{from} is currently {fromDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({fromOffset}), and {to} is {toDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({toOffset}). The converter uses official IANA data and adjusts automatically.",
-      "faq4q": "Is this {from} to {to} converter accurate?",
-      "faq4a": "Yes — conversions use the IANA time zone database, the same source operating systems use, and account for current daylight saving rules to the minute."
+      "faq4q": "Är denna omvandlare från {from} till {to} korrekt?",
+      "faq4a": "Ja — omvandlingarna använder IANA:s tidszonsdatabas, samma källa som operativsystem använder, och tar hänsyn till aktuella sommartidsregler ner till minuten."
     },
     "meeting": {
-      "breadcrumb": "Meeting Planner",
-      "h1": "Best Meeting Time: {a} ↔ {b}",
+      "breadcrumb": "Mötesplanerare",
+      "h1": "Bästa mötestid: {a} ↔ {b}",
       "overlapSentence": "{hasOverlap, select, yes {Standard 9-to-5 working hours in {a} and {b} overlap from {start} to {end} {a} time. A good middle slot is around {bestA} in {a} ({bestB} in {b}).} other {Standard 9-to-5 working hours in {a} and {b} do not overlap, so one side will need an early or late slot. Aim for the start of one city's day and the end of the other's.}}",
-      "introTail": "All times below are for today and adjust automatically for daylight saving time.",
-      "sharedWorkHours": "Shared work hours",
+      "introTail": "Alla tider nedan gäller idag och justeras automatiskt för sommartid.",
+      "sharedWorkHours": "Gemensamma arbetstider",
       "hoursUnit": "{count} h",
-      "noneWorkHours": "None (9–5)",
-      "tableHeading": "Overlapping working hours",
-      "noOverlapBody": "No 9-to-5 overlap today. Open the Planner above to widen working hours or pick an edge slot that works for both teams.",
-      "crosslinks": "The Planner tab above already has {a} and {b} loaded. Adjust each participant's hours, set a duration, and Timezio ranks the best slots. To double-check the raw offset, use the <compare>Compare</compare> tab.",
-      "relatedHeading": "More meeting pairs",
-      "wpDesc": "Find the best meeting time between {a} and {b}. {overlap}",
-      "faq1q": "What is the best time to schedule a meeting between {a} and {b}?",
+      "noneWorkHours": "Ingen (9–17)",
+      "tableHeading": "Överlappande arbetstider",
+      "noOverlapBody": "Ingen överlappning 9–17 idag. Öppna Planeraren ovan för att utöka arbetstiderna eller välja en kanttid som fungerar för båda teamen.",
+      "crosslinks": "Fliken Planeraren ovan har redan {a} och {b} inlästa. Justera varje deltagares arbetstider, ange en längd, så rangordnar Timezio de bästa tiderna. För att dubbelkolla den råa förskjutningen, använd fliken <compare>Jämför</compare>.",
+      "relatedHeading": "Fler mötespar",
+      "wpDesc": "Hitta den bästa mötestiden mellan {a} och {b}. {overlap}",
+      "faq1q": "Vilken är den bästa tiden att boka ett möte mellan {a} och {b}?",
       "faq1a": "{hasOverlap, select, yes {The cleanest option is around {bestA} in {a}, which is {bestB} in {b} — inside both teams' working day. The overlap table on this page lists every shared hour for today.} other {There is no clean overlap during standard hours, so pick the least disruptive edge: early morning for one city or early evening for the other. The table on this page shows each hour side by side.}}",
-      "faq2q": "What is the time difference between {a} and {b}?",
-      "faq2a": "{a} is currently {offsetA} and {b} is {offsetB}. The difference can move by an hour around daylight saving transitions, which this tool accounts for automatically.",
-      "faq3q": "How do I plan a recurring call across {a} and {b}?",
-      "faq3a": "Use the Planner tab above — both cities are pre-loaded. Set each participant's working hours and Timezio highlights overlapping slots and warns about early-morning or late-night times."
+      "faq2q": "Vad är tidsskillnaden mellan {a} och {b}?",
+      "faq2a": "{a} ligger för närvarande på {offsetA} och {b} på {offsetB}. Skillnaden kan ändras med en timme runt sommartidsomställningar, vilket detta verktyg tar hänsyn till automatiskt.",
+      "faq3q": "Hur planerar jag ett återkommande samtal mellan {a} och {b}?",
+      "faq3a": "Använd fliken Planeraren ovan — båda städerna är förinlästa. Ange varje deltagares arbetstider, så markerar Timezio överlappande tider och varnar för tider tidigt på morgonen eller sent på natten."
     },
     "dst": {
-      "breadcrumb": "Daylight Saving Time",
-      "h1": "{region} Daylight Saving Time",
+      "breadcrumb": "Sommartid",
+      "h1": "Sommartid i {region}",
       "intro": "{observesDst, select, yes {{region} observes daylight saving time. Clocks are currently {isDst, select, yes {on summer time (DST in effect)} other {on standard time}}, at {offset}. The reference zone for {region} is {tz} ({city}).} other {{region} does not currently observe daylight saving time. The offset stays at {offset} all year. The reference zone is {tz} ({city}).}}",
-      "factObservesDst": "Observes DST",
-      "yes": "Yes",
-      "no": "No",
-      "factCurrentOffset": "Current offset",
+      "factObservesDst": "Tillämpar sommartid",
+      "yes": "Ja",
+      "no": "Nej",
+      "factCurrentOffset": "Aktuell förskjutning",
       "factStatus": "Status",
-      "summerTime": "Summer time",
-      "standardTime": "Standard time",
-      "factReferenceZone": "Reference zone",
-      "changesHeading": "Next clock changes",
-      "colChange": "Change",
-      "colDate": "Date",
-      "colOffset": "Offset",
-      "springForward": "Spring forward (DST begins)",
-      "fallBack": "Fall back (DST ends)",
-      "crosslinks": "Daylight saving changes shift {region}'s offset by an hour, which can quietly break recurring meetings. Check the live difference against your own zone with the <compare>Compare</compare> tab, or schedule around the change using the <planner>Meeting Planner</planner>.",
-      "relatedHeading": "DST in other regions",
-      "faq1q": "Does {region} observe daylight saving time?",
+      "summerTime": "Sommartid",
+      "standardTime": "Normaltid",
+      "factReferenceZone": "Referenszon",
+      "changesHeading": "Nästa tidsomställningar",
+      "colChange": "Ändring",
+      "colDate": "Datum",
+      "colOffset": "Förskjutning",
+      "springForward": "Ställ fram (sommartid börjar)",
+      "fallBack": "Ställ tillbaka (sommartid slutar)",
+      "crosslinks": "Sommartidsomställningar ändrar {region}s förskjutning med en timme, vilket diskret kan ställa till med återkommande möten. Kontrollera den aktuella skillnaden mot din egen zon med fliken <compare>Jämför</compare>, eller planera runt ändringen med <planner>Mötesplaneraren</planner>.",
+      "relatedHeading": "Sommartid i andra regioner",
+      "faq1q": "Tillämpar {region} sommartid?",
       "faq1a": "{observesDst, select, yes {Yes. {region} changes its clocks twice a year. It is currently {isDst, select, yes {on daylight saving (summer) time} other {on standard time}} at {offset}.} other {No. {region} keeps a fixed offset of {offset} throughout the year and does not change its clocks.}}",
-      "faq2q": "When do the clocks change in {region}?",
+      "faq2q": "När ställs klockan om i {region}?",
       "faq2a": "{observesDst, select, yes {{hasBegins, select, yes {Clocks next spring forward on {beginsDate} (offset {beginsFrom} → {beginsTo}). } other {}}{hasEnds, select, yes {Clocks next fall back on {endsDate} (offset {endsFrom} → {endsTo}).} other {}}} other {{region} does not change its clocks, so there is no spring-forward or fall-back date.}}",
-      "faq3q": "What is the current UTC offset for {region}?",
+      "faq3q": "Vad är den aktuella UTC-förskjutningen för {region}?",
       "faq3a": "{region} is currently at {offset}{hasAbbr, select, yes { ({abbr})} other {}}. {observesDst, select, yes {This shifts by one hour when daylight saving begins or ends.} other {This offset is fixed.}}"
     }
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 09.01.2026",
+      "title": "Integritetspolicy",
+      "updated": "Senast uppdaterad: 09.01.2026",
       "intro": [
         {
           "type": "p",
-          "text": "This Privacy Policy explains how we collect, use, and protect information when you visit and use this website (the \"Website\")."
+          "text": "Denna integritetspolicy förklarar hur vi samlar in, använder och skyddar information när du besöker och använder denna webbplats (\"Webbplatsen\")."
         },
         {
           "type": "p",
-          "text": "We are committed to protecting your privacy and processing personal data in accordance with applicable data protection laws, including the General Data Protection Regulation (EU) 2016/679 (GDPR)."
+          "text": "Vi är angelägna om att skydda din integritet och att behandla personuppgifter i enlighet med tillämplig dataskyddslagstiftning, inklusive den allmänna dataskyddsförordningen (EU) 2016/679 (GDPR)."
         }
       ],
       "sections": [
         {
-          "heading": "1. Information We Collect",
+          "heading": "1. Information vi samlar in",
           "blocks": [
             {
               "type": "subheading",
-              "text": "1.1 Information You Do Not Provide Directly"
+              "text": "1.1 Information du inte lämnar direkt"
             },
             {
               "type": "p",
-              "text": "This Website does not require user registration and does not ask users to provide personal information to use its core features."
-            },
-            {
-              "type": "subheading",
-              "text": "1.2 Automatically Collected Information"
-            },
-            {
-              "type": "p",
-              "text": "When you visit the Website, limited information may be collected automatically, including:"
-            },
-            {
-              "type": "list",
-              "items": [
-                "IP address (anonymized/truncated where supported by the tool)",
-                "Browser type and version",
-                "Device type and operating system",
-                "Pages visited and interaction data",
-                "Referring website",
-                "Approximate geographic location (city or country level)"
-              ]
-            },
-            {
-              "type": "p",
-              "text": "This information is used only for analytics, security, and service improvement purposes."
-            }
-          ]
-        },
-        {
-          "heading": "1.3 Service Data You May Provide",
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Core tools (time conversion, planner) work without registration. If you choose to save/share meeting data, connect a calendar, or sign in with Google, we may store the meeting/session details you submit (e.g., participant names or labels, time slots, titles) and your Google account email to enable the feature. You can request deletion of this stored data at any time (see Contact)."
-            }
-          ]
-        },
-        {
-          "heading": "2. Cookies and Similar Technologies",
-          "blocks": [
-            {
-              "type": "p",
-              "text": "The Website may use cookies or similar technologies to:"
-            },
-            {
-              "type": "list",
-              "items": [
-                "Measure traffic and usage patterns",
-                "Understand how users interact with the Website",
-                "Improve performance and user experience",
-                "Show advertising where enabled"
-              ]
-            },
-            {
-              "type": "p",
-              "text": "Cookies used on this Website do not directly identify you as an individual."
-            },
-            {
-              "type": "p",
-              "text": "Where required by applicable law, cookies that are not strictly necessary are used only after obtaining user consent through a cookie banner or consent mechanism."
-            },
-            {
-              "type": "p",
-              "text": "You can manage or withdraw your consent at any time through your browser settings or the cookie settings provided on the Website."
-            }
-          ]
-        },
-        {
-          "heading": "3. Analytics and Advertising",
-          "blocks": [
-            {
-              "type": "subheading",
-              "text": "3.1 Analytics"
-            },
-            {
-              "type": "p",
-              "text": "We may use analytics tools (e.g., Google Analytics via Google Tag Manager or privacy-focused alternatives) to understand how visitors use the Website. These tools collect usage data (pages viewed, device/browser info, approximate location) and can be configured to anonymize IP where supported. Non-essential analytics only load after consent where required."
+              "text": "Denna webbplats kräver ingen användarregistrering och ber inte användare att lämna personuppgifter för att använda dess grundläggande funktioner."
             },
             {
               "type": "subheading",
-              "text": "3.2 Advertising"
+              "text": "1.2 Automatiskt insamlad information"
             },
             {
               "type": "p",
-              "text": "The Website may display advertisements from third-party partners such as Google AdSense (served via Google Tag Manager). These partners may use cookies or similar technologies to display relevant ads and may process data (e.g., cookie IDs, coarse location, device info). Advertising cookies are loaded only after consent where required."
-            },
-            {
-              "type": "p",
-              "text": "Advertising partners process information under their own privacy policies and may transfer data outside your region under appropriate safeguards (e.g., Standard Contractual Clauses). You can withdraw or change your cookie and advertising consent at any time using the **“Cookie settings”** link in the website footer, or through your browser settings."
-            },
-            {
-              "type": "p",
-              "text": "You can also control or opt out of personalized advertising directly with the providers and industry programs:"
+              "text": "När du besöker webbplatsen kan begränsad information samlas in automatiskt, inklusive:"
             },
             {
               "type": "list",
               "items": [
-                "Google Ads Settings — [adssettings.google.com](https://adssettings.google.com)",
-                "How Google uses data from partner sites — [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites)",
-                "US opt-out (DAA) — [optout.aboutads.info](https://optout.aboutads.info) · [youradchoices.com](https://www.youradchoices.com)",
-                "EU opt-out (EDAA) — [youronlinechoices.eu](https://www.youronlinechoices.eu)"
+                "IP-adress (anonymiserad/avkortad där verktyget stöder det)",
+                "Webbläsartyp och version",
+                "Enhetstyp och operativsystem",
+                "Besökta sidor och interaktionsdata",
+                "Hänvisande webbplats",
+                "Ungefärlig geografisk plats (stads- eller landsnivå)"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Denna information används endast för analys, säkerhet och förbättring av tjänsten."
+            }
+          ]
+        },
+        {
+          "heading": "1.3 Tjänstedata du kan lämna",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Grundverktygen (tidsomvandling, planeraren) fungerar utan registrering. Om du väljer att spara/dela mötesdata, ansluta en kalender eller logga in med Google kan vi lagra de möte-/sessionsuppgifter du skickar in (t.ex. deltagarnamn eller etiketter, tidsluckor, titlar) samt din Google-kontoadress för att möjliggöra funktionen. Du kan när som helst begära radering av dessa lagrade uppgifter (se Kontakt)."
+            }
+          ]
+        },
+        {
+          "heading": "2. Cookies och liknande tekniker",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Webbplatsen kan använda cookies eller liknande tekniker för att:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Mäta trafik och användningsmönster",
+                "Förstå hur användare interagerar med webbplatsen",
+                "Förbättra prestanda och användarupplevelse",
+                "Visa annonser där det är aktiverat"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "De cookies som används på denna webbplats identifierar dig inte direkt som individ."
+            },
+            {
+              "type": "p",
+              "text": "Där tillämplig lag kräver det används cookies som inte är strikt nödvändiga endast efter att användarens samtycke har inhämtats via en cookie-banner eller en samtyckesmekanism."
+            },
+            {
+              "type": "p",
+              "text": "Du kan när som helst hantera eller återkalla ditt samtycke via din webbläsares inställningar eller de cookie-inställningar som finns på webbplatsen."
+            }
+          ]
+        },
+        {
+          "heading": "3. Analys och annonsering",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "3.1 Analys"
+            },
+            {
+              "type": "p",
+              "text": "Vi kan använda analysverktyg (t.ex. Google Analytics via Google Tag Manager eller integritetsfokuserade alternativ) för att förstå hur besökare använder webbplatsen. Dessa verktyg samlar in användningsdata (visade sidor, enhets-/webbläsarinformation, ungefärlig plats) och kan konfigureras för att anonymisera IP där det stöds. Icke-nödvändig analys laddas endast efter samtycke där så krävs."
+            },
+            {
+              "type": "subheading",
+              "text": "3.2 Annonsering"
+            },
+            {
+              "type": "p",
+              "text": "Webbplatsen kan visa annonser från tredjepartspartner såsom Google AdSense (levererat via Google Tag Manager). Dessa partner kan använda cookies eller liknande tekniker för att visa relevanta annonser och kan behandla data (t.ex. cookie-ID:n, grov plats, enhetsinformation). Annonscookies laddas endast efter samtycke där så krävs."
+            },
+            {
+              "type": "p",
+              "text": "Annonspartner behandlar information enligt sina egna integritetspolicyer och kan överföra data utanför din region under lämpliga skyddsåtgärder (t.ex. Standard Contractual Clauses). Du kan när som helst återkalla eller ändra ditt samtycke till cookies och annonsering med hjälp av länken **”Cookie-inställningar”** i webbplatsens sidfot, eller via din webbläsares inställningar."
+            },
+            {
+              "type": "p",
+              "text": "Du kan också styra eller välja bort personanpassad annonsering direkt hos leverantörerna och branschprogrammen:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Google Ads-inställningar — [adssettings.google.com](https://adssettings.google.com)",
+                "Hur Google använder data från partnersajter — [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites)",
+                "Bortval i USA (DAA) — [optout.aboutads.info](https://optout.aboutads.info) · [youradchoices.com](https://www.youradchoices.com)",
+                "Bortval i EU (EDAA) — [youronlinechoices.eu](https://www.youronlinechoices.eu)"
               ]
             }
           ]
         },
         {
-          "heading": "4. How We Use Information",
+          "heading": "4. Hur vi använder information",
           "blocks": [
             {
               "type": "p",
-              "text": "Collected information may be used to:"
+              "text": "Insamlad information kan användas för att:"
             },
             {
               "type": "list",
               "items": [
-                "Operate and maintain the Website",
-                "Improve tools, features, and usability",
-                "Analyze usage trends and performance",
-                "Ensure security and prevent abuse",
-                "Comply with legal obligations"
+                "Driva och underhålla webbplatsen",
+                "Förbättra verktyg, funktioner och användbarhet",
+                "Analysera användningstrender och prestanda",
+                "Säkerställa säkerhet och förhindra missbruk",
+                "Uppfylla rättsliga skyldigheter"
               ]
             },
             {
               "type": "p",
-              "text": "**We do not sell personal data.**"
+              "text": "**Vi säljer inte personuppgifter.**"
             }
           ]
         },
         {
-          "heading": "5. Legal Basis for Processing (GDPR)",
+          "heading": "5. Rättslig grund för behandling (GDPR)",
           "blocks": [
             {
               "type": "p",
-              "text": "Under the GDPR, personal data is processed on the following legal bases:"
+              "text": "Enligt GDPR behandlas personuppgifter på följande rättsliga grunder:"
             },
             {
               "type": "list",
               "items": [
-                "**Consent** — for non-essential cookies/analytics/advertising where required",
-                "**Legitimate interests** — to operate, secure, and improve the Website",
-                "**Legal obligation** — where processing is required by law"
+                "**Samtycke** — för icke-nödvändiga cookies/analys/annonsering där så krävs",
+                "**Berättigat intresse** — för att driva, säkra och förbättra webbplatsen",
+                "**Rättslig skyldighet** — där behandling krävs enligt lag"
               ]
             }
           ]
         },
         {
-          "heading": "6. Data Retention",
+          "heading": "6. Lagring av uppgifter",
           "blocks": [
             {
               "type": "p",
-              "text": "We retain collected data only for as long as necessary to fulfill the purposes described in this Privacy Policy, unless a longer retention period is required or permitted by law."
+              "text": "Vi lagrar insamlade uppgifter endast så länge som är nödvändigt för att uppfylla de syften som beskrivs i denna integritetspolicy, om inte en längre lagringstid krävs eller tillåts enligt lag."
             }
           ]
         },
         {
-          "heading": "7. Data Sharing and Third Parties",
+          "heading": "7. Delning av uppgifter och tredje part",
           "blocks": [
             {
               "type": "p",
-              "text": "We may share limited data with trusted third-party service providers (such as analytics or advertising providers) strictly for the purposes described in this Privacy Policy."
+              "text": "Vi kan dela begränsade uppgifter med betrodda tredjepartsleverantörer (såsom analys- eller annonsleverantörer) uteslutande för de syften som beskrivs i denna integritetspolicy."
             },
             {
               "type": "p",
-              "text": "All such providers are required to process data in compliance with applicable data protection laws."
+              "text": "Alla sådana leverantörer är skyldiga att behandla uppgifter i enlighet med tillämplig dataskyddslagstiftning."
             },
             {
               "type": "p",
-              "text": "Some providers (e.g., Google) may process data outside the European Economic Area (EEA). When that occurs, we rely on appropriate safeguards such as Standard Contractual Clauses or equivalent mechanisms."
+              "text": "Vissa leverantörer (t.ex. Google) kan behandla uppgifter utanför Europeiska ekonomiska samarbetsområdet (EES). När så sker förlitar vi oss på lämpliga skyddsåtgärder såsom Standard Contractual Clauses eller motsvarande mekanismer."
             }
           ]
         },
         {
-          "heading": "8. Your Rights Under GDPR",
+          "heading": "8. Dina rättigheter enligt GDPR",
           "blocks": [
             {
               "type": "p",
-              "text": "If you are located in the European Union, you have the right to:"
+              "text": "Om du befinner dig inom Europeiska unionen har du rätt att:"
             },
             {
               "type": "list",
               "items": [
-                "Access your personal data",
-                "Request correction of inaccurate data",
-                "Request deletion of your data",
-                "Restrict or object to processing",
-                "Withdraw consent at any time",
-                "Lodge a complaint with a supervisory authority"
+                "Få tillgång till dina personuppgifter",
+                "Begära rättelse av felaktiga uppgifter",
+                "Begära radering av dina uppgifter",
+                "Begränsa eller invända mot behandling",
+                "Återkalla samtycke när som helst",
+                "Lämna in ett klagomål till en tillsynsmyndighet"
               ]
             },
             {
               "type": "p",
-              "text": "You may exercise these rights by contacting us using the details provided below."
+              "text": "Du kan utöva dessa rättigheter genom att kontakta oss med de uppgifter som anges nedan."
             }
           ]
         },
         {
-          "heading": "9. US State Privacy Rights (CCPA / CPRA & similar)",
+          "heading": "9. Integritetsrättigheter i amerikanska delstater (CCPA / CPRA m.fl.)",
           "blocks": [
             {
               "type": "p",
-              "text": "If you are a resident of California or another US state with comprehensive privacy laws, you may have the right to know what personal information is collected, to request access or deletion, to correct inaccurate information, and to opt out of the “sale” or “sharing” of personal information and of targeted advertising."
+              "text": "Om du är bosatt i Kalifornien eller en annan amerikansk delstat med omfattande integritetslagar kan du ha rätt att få veta vilka personuppgifter som samlas in, att begära tillgång eller radering, att rätta felaktig information samt att välja bort ”försäljning” eller ”delning” av personuppgifter och riktad annonsering."
             },
             {
               "type": "p",
-              "text": "We do not sell personal information for money. However, the use of advertising cookies may be considered “sharing” or a “sale” under some state laws. You can opt out of personalized advertising using the **“Cookie settings”** link in the footer and the industry opt-out tools listed in Section 3.2. Where supported, we honor the Global Privacy Control (GPC) browser signal as a valid opt-out request."
+              "text": "Vi säljer inte personuppgifter mot betalning. Användningen av annonscookies kan dock betraktas som ”delning” eller ”försäljning” enligt vissa delstatslagar. Du kan välja bort personanpassad annonsering med hjälp av länken **”Cookie-inställningar”** i sidfoten och de branschverktyg för bortval som anges i avsnitt 3.2. Där det stöds respekterar vi webbläsarsignalen Global Privacy Control (GPC) som en giltig begäran om bortval."
             },
             {
               "type": "p",
-              "text": "To exercise any of these rights, contact us using the details in Section 14. We will not discriminate against you for exercising your privacy rights."
+              "text": "För att utöva någon av dessa rättigheter, kontakta oss med uppgifterna i avsnitt 14. Vi kommer inte att diskriminera dig för att du utövar dina integritetsrättigheter."
             }
           ]
         },
         {
-          "heading": "10. Children's Privacy",
+          "heading": "10. Barns integritet",
           "blocks": [
             {
               "type": "p",
-              "text": "This Website is not intended for children under the age of 16. We do not knowingly collect personal data from children."
+              "text": "Denna webbplats är inte avsedd för barn under 16 år. Vi samlar inte medvetet in personuppgifter från barn."
             }
           ]
         },
         {
-          "heading": "11. Security",
+          "heading": "11. Säkerhet",
           "blocks": [
             {
               "type": "p",
-              "text": "We take reasonable technical and organizational measures to protect information against unauthorized access, loss, misuse, or alteration. However, no method of transmission or storage is completely secure."
+              "text": "Vi vidtar rimliga tekniska och organisatoriska åtgärder för att skydda information mot obehörig åtkomst, förlust, missbruk eller ändring. Ingen metod för överföring eller lagring är dock helt säker."
             }
           ]
         },
         {
-          "heading": "12. External Links",
+          "heading": "12. Externa länkar",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website may contain links to third-party websites. We are not responsible for the content or privacy practices of those websites."
+              "text": "Webbplatsen kan innehålla länkar till tredjepartswebbplatser. Vi ansvarar inte för innehållet eller integritetsrutinerna på dessa webbplatser."
             }
           ]
         },
         {
-          "heading": "13. Changes to This Privacy Policy",
+          "heading": "13. Ändringar i denna integritetspolicy",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated \"Last updated\" date."
+              "text": "Vi kan komma att uppdatera denna integritetspolicy från tid till annan. Eventuella ändringar publiceras på denna sida med ett uppdaterat datum för \"Senast uppdaterad\"."
             },
             {
               "type": "p",
-              "text": "We encourage users to review this page periodically. If changes materially affect how we process your data, we will provide a clear notice (e.g., on this page or via the Website interface)."
+              "text": "Vi uppmuntrar användare att regelbundet granska denna sida. Om ändringar väsentligt påverkar hur vi behandlar dina uppgifter kommer vi att lämna ett tydligt meddelande (t.ex. på denna sida eller via webbplatsens gränssnitt)."
             }
           ]
         },
         {
-          "heading": "14. Contact Information",
+          "heading": "14. Kontaktuppgifter",
           "blocks": [
             {
               "type": "p",
-              "text": "If you have questions about this Privacy Policy or how data is processed on this Website, you may contact us at:"
+              "text": "Om du har frågor om denna integritetspolicy eller om hur uppgifter behandlas på denna webbplats kan du kontakta oss på:"
             },
             {
               "type": "emailBox",
-              "label": "Email:",
+              "label": "E-post:",
               "email": "hello@timezio.com"
             }
           ]
@@ -716,173 +716,173 @@
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 09.01.2026",
+      "title": "Användarvillkor",
+      "updated": "Senast uppdaterad: 09.01.2026",
       "intro": [
         {
           "type": "p",
-          "text": "These Terms of Service (\"Terms\") govern your access to and use of this website (the \"Website\"). By accessing or using the Website, you agree to be bound by these Terms. If you do not agree, please discontinue use of the Website."
+          "text": "Dessa användarvillkor (\"Villkoren\") reglerar din åtkomst till och användning av denna webbplats (\"Webbplatsen\"). Genom att besöka eller använda webbplatsen godkänner du att vara bunden av dessa villkor. Om du inte godkänner dem ber vi dig att sluta använda webbplatsen."
         }
       ],
       "sections": [
         {
-          "heading": "1. Purpose of the Website",
+          "heading": "1. Webbplatsens syfte",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website provides tools and information related to time zones, time differences, UTC conversions, and meeting planning for general informational purposes only."
+              "text": "Webbplatsen tillhandahåller verktyg och information om tidszoner, tidsskillnader, UTC-omvandlingar och mötesplanering, enbart i allmänt informationssyfte."
             },
             {
               "type": "p",
-              "text": "The Website does not provide legal, financial, professional, or time-critical advisory services."
+              "text": "Webbplatsen tillhandahåller inte juridisk, ekonomisk, professionell eller tidskritisk rådgivning."
             }
           ]
         },
         {
-          "heading": "2. Use of the Website",
+          "heading": "2. Användning av webbplatsen",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree to use the Website only for lawful purposes and in a manner that does not:"
+              "text": "Du samtycker till att använda webbplatsen endast för lagliga ändamål och på ett sätt som inte:"
             },
             {
               "type": "list",
               "items": [
-                "Violate applicable laws or regulations",
-                "Infringe the rights of others",
-                "Interfere with or disrupt the operation of the Website",
-                "Attempt to gain unauthorized access to any part of the Website"
+                "Bryter mot tillämpliga lagar eller bestämmelser",
+                "Gör intrång i andras rättigheter",
+                "Stör eller avbryter driften av webbplatsen",
+                "Försöker få obehörig åtkomst till någon del av webbplatsen"
               ]
             },
             {
               "type": "p",
-              "text": "We reserve the right to restrict or terminate access to the Website at any time if misuse is detected."
+              "text": "Vi förbehåller oss rätten att begränsa eller avsluta åtkomsten till webbplatsen när som helst om missbruk upptäcks."
             }
           ]
         },
         {
-          "heading": "3. Accuracy of Information",
+          "heading": "3. Informationens riktighet",
           "blocks": [
             {
               "type": "p",
-              "text": "While we make reasonable efforts to ensure that the information and calculations provided on the Website are accurate and based on recognized public time zone data, we do not guarantee that the content is complete, current, or error-free."
+              "text": "Även om vi gör rimliga ansträngningar för att säkerställa att informationen och beräkningarna på webbplatsen är korrekta och baserade på erkända offentliga tidszonsdata, garanterar vi inte att innehållet är fullständigt, aktuellt eller felfritt."
             },
             {
               "type": "p",
-              "text": "Time zone rules and daylight saving time practices may change due to governmental or regulatory decisions. You acknowledge that any reliance on the information provided is at your own risk."
+              "text": "Regler för tidszoner och praxis för sommartid kan ändras till följd av statliga eller myndighetsbeslut. Du är medveten om att all tillit till den tillhandahållna informationen sker på egen risk."
             }
           ]
         },
         {
-          "heading": "4. No Warranty",
+          "heading": "4. Ingen garanti",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website and all content and tools are provided on an \"as is\" and \"as available\" basis."
+              "text": "Webbplatsen samt allt innehåll och alla verktyg tillhandahålls i befintligt skick och i mån av tillgänglighet."
             },
             {
               "type": "p",
-              "text": "To the fullest extent permitted by applicable law, we disclaim all warranties, whether express or implied, including but not limited to implied warranties of accuracy, reliability, fitness for a particular purpose, and non-infringement."
+              "text": "I den utsträckning som tillämplig lag tillåter friskriver vi oss från alla garantier, vare sig uttryckliga eller underförstådda, inklusive men inte begränsat till underförstådda garantier om riktighet, tillförlitlighet, lämplighet för ett visst ändamål och icke-intrång."
             }
           ]
         },
         {
-          "heading": "5. Limitation of Liability",
+          "heading": "5. Ansvarsbegränsning",
           "blocks": [
             {
               "type": "p",
-              "text": "To the extent permitted by applicable European Union law, we shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with your use of, or inability to use, the Website or reliance on its content."
+              "text": "I den utsträckning som tillämplig EU-lagstiftning tillåter ansvarar vi inte för några direkta, indirekta, tillfälliga, följdmässiga eller särskilda skador som uppstår till följd av eller i samband med din användning av, eller oförmåga att använda, webbplatsen eller din tillit till dess innehåll."
             },
             {
               "type": "p",
-              "text": "This includes, without limitation, loss of data, loss of business, missed meetings, or scheduling errors."
+              "text": "Detta inkluderar, utan begränsning, förlust av data, förlust av affärsverksamhet, missade möten eller schemaläggningsfel."
             }
           ]
         },
         {
-          "heading": "6. Intellectual Property",
+          "heading": "6. Immateriella rättigheter",
           "blocks": [
             {
               "type": "p",
-              "text": "All content on the Website, including text, design, layout, logos, and software, is the property of the Website owner or its licensors and is protected by applicable intellectual property laws."
+              "text": "Allt innehåll på webbplatsen, inklusive text, design, layout, logotyper och programvara, tillhör webbplatsens ägare eller dess licensgivare och skyddas av tillämpliga immaterialrättsliga lagar."
             },
             {
               "type": "p",
-              "text": "You may use the Website for personal and non-commercial purposes. You may not copy, reproduce, distribute, modify, or exploit any part of the Website without prior written permission, except where permitted by law."
+              "text": "Du får använda webbplatsen för personliga och icke-kommersiella ändamål. Du får inte kopiera, reproducera, distribuera, ändra eller utnyttja någon del av webbplatsen utan föregående skriftligt tillstånd, förutom där lagen tillåter det."
             }
           ]
         },
         {
-          "heading": "7. Third-Party Services and Advertising",
+          "heading": "7. Tredjepartstjänster och annonsering",
           "blocks": [
             {
               "type": "p",
-              "text": "The Website may display advertisements or include links to third-party websites or services."
+              "text": "Webbplatsen kan visa annonser eller innehålla länkar till tredjepartswebbplatser eller -tjänster."
             },
             {
               "type": "p",
-              "text": "We do not control and are not responsible for the content, availability, or practices of third-party websites. Your interaction with third-party services is governed by their respective terms and privacy policies."
+              "text": "Vi kontrollerar inte och ansvarar inte för innehållet, tillgängligheten eller rutinerna på tredjepartswebbplatser. Din interaktion med tredjepartstjänster regleras av deras respektive villkor och integritetspolicyer."
             }
           ]
         },
         {
-          "heading": "8. Privacy and Data Protection",
+          "heading": "8. Integritet och dataskydd",
           "blocks": [
             {
               "type": "p",
-              "text": "Your use of the Website is also governed by our [Privacy Policy](/privacy), which explains how personal data is processed in accordance with applicable data protection laws, including the GDPR."
+              "text": "Din användning av webbplatsen regleras även av vår [Integritetspolicy](/privacy), som förklarar hur personuppgifter behandlas i enlighet med tillämplig dataskyddslagstiftning, inklusive GDPR."
             }
           ]
         },
         {
-          "heading": "9. Changes to the Website or Terms",
+          "heading": "9. Ändringar av webbplatsen eller villkoren",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update, modify, suspend, or discontinue any part of the Website at any time without prior notice."
+              "text": "Vi kan när som helst uppdatera, ändra, tillfälligt stänga av eller avbryta någon del av webbplatsen utan föregående meddelande."
             },
             {
               "type": "p",
-              "text": "We may also update these Terms from time to time. Any changes will be effective once posted on this page, with the \"Last updated\" date revised accordingly."
+              "text": "Vi kan även uppdatera dessa villkor från tid till annan. Eventuella ändringar träder i kraft när de publicerats på denna sida, med datumet för \"Senast uppdaterad\" reviderat i enlighet med detta."
             },
             {
               "type": "p",
-              "text": "Continued use of the Website after changes constitutes acceptance of the updated Terms."
+              "text": "Fortsatt användning av webbplatsen efter ändringar innebär att du godkänner de uppdaterade villkoren."
             }
           ]
         },
         {
-          "heading": "10. Governing Law and Jurisdiction",
+          "heading": "10. Tillämplig lag och jurisdiktion",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms shall be governed by and construed in accordance with the laws of the European Union and, where applicable, the laws of the country in which the Website operator is established."
+              "text": "Dessa villkor ska regleras av och tolkas i enlighet med Europeiska unionens lagar och, i tillämpliga fall, lagarna i det land där webbplatsens operatör är etablerad."
             },
             {
               "type": "p",
-              "text": "Nothing in these Terms limits your statutory rights as a consumer under applicable EU law."
+              "text": "Inget i dessa villkor begränsar dina lagstadgade rättigheter som konsument enligt tillämplig EU-lagstiftning."
             }
           ]
         },
         {
-          "heading": "11. Severability",
+          "heading": "11. Avskiljbarhet",
           "blocks": [
             {
               "type": "p",
-              "text": "If any provision of these Terms is found to be unlawful, invalid, or unenforceable, the remaining provisions shall remain in full force and effect."
+              "text": "Om någon bestämmelse i dessa villkor befinns vara olaglig, ogiltig eller inte verkställbar, ska de återstående bestämmelserna fortsätta att gälla fullt ut."
             }
           ]
         },
         {
-          "heading": "12. Contact Information",
+          "heading": "12. Kontaktuppgifter",
           "blocks": [
             {
               "type": "p",
-              "text": "If you have any questions regarding these Terms of Service, you may contact us at:"
+              "text": "Om du har några frågor angående dessa användarvillkor kan du kontakta oss på:"
             },
             {
               "type": "emailBox",
-              "label": "Email:",
+              "label": "E-post:",
               "email": "hello@timezio.com"
             }
           ]
@@ -890,309 +890,309 @@
       ]
     },
     "about": {
-      "title": "About This Website",
+      "title": "Om denna webbplats",
       "intro": [
         {
           "type": "p",
-          "text": "This website was created to make working across time zones simple, accurate, and stress-free. Whether you're planning a meeting with colleagues abroad, checking the current time in another city, converting UTC, or traveling across countries, our tools help you instantly understand time differences without confusion."
+          "text": "Denna webbplats skapades för att göra arbetet över tidszoner enkelt, korrekt och stressfritt. Oavsett om du planerar ett möte med kollegor utomlands, kontrollerar aktuell tid i en annan stad, omvandlar UTC eller reser mellan länder, hjälper våra verktyg dig att direkt förstå tidsskillnader utan förvirring."
         }
       ],
       "sections": [
         {
-          "heading": "Who runs Timezio",
+          "heading": "Vilka driver Timezio",
           "blocks": [
             {
               "type": "p",
-              "text": "Timezio is built and operated by **AffSquad**, an independent studio that makes free, privacy-respecting web utilities. We're a small team that relies on these tools ourselves to coordinate across time zones, and we keep Timezio free by displaying ads. Questions, corrections, or feedback are always welcome at [hello@timezio.com](mailto:hello@timezio.com) — see the [Contact](/contact) page for more ways to reach us."
+              "text": "Timezio byggs och drivs av **AffSquad**, en oberoende studio som skapar gratis, integritetsvänliga webbverktyg. Vi är ett litet team som själva förlitar oss på dessa verktyg för att samordna över tidszoner, och vi håller Timezio gratis genom att visa annonser. Frågor, rättelser eller feedback är alltid välkomna på [hello@timezio.com](mailto:hello@timezio.com) — se [Kontakt](/contact)-sidan för fler sätt att nå oss."
             }
           ]
         },
         {
-          "heading": "Core Principles",
+          "heading": "Grundprinciper",
           "blocks": [
             {
               "type": "subheading",
-              "text": "Accuracy"
+              "text": "Noggrannhet"
             },
             {
               "type": "p",
-              "text": "All calculations are based on official IANA time zone data and are fully daylight-saving-time (DST) aware."
+              "text": "Alla beräkningar baseras på officiella IANA-tidszonsdata och tar fullt hänsyn till sommartid (DST)."
             },
             {
               "type": "subheading",
-              "text": "Simplicity"
+              "text": "Enkelhet"
             },
             {
               "type": "p",
-              "text": "Clean, fast tools that work instantly without unnecessary steps."
+              "text": "Rena, snabba verktyg som fungerar direkt utan onödiga steg."
             },
             {
               "type": "subheading",
-              "text": "Reliability"
+              "text": "Tillförlitlighet"
             },
             {
               "type": "p",
-              "text": "Built for daily use by professionals, travelers, remote teams, and digital nomads."
+              "text": "Byggda för daglig användning av yrkesverksamma, resenärer, distansteam och digitala nomader."
             }
           ]
         },
         {
-          "heading": "Automatic Calculations",
+          "heading": "Automatiska beräkningar",
           "blocks": [
             {
               "type": "p",
-              "text": "Our calculators automatically account for:"
+              "text": "Våra kalkylatorer tar automatiskt hänsyn till:"
             },
             {
               "type": "list",
               "items": [
-                "Daylight saving time changes",
-                "Different UTC offsets",
-                "Date changes when crossing time zones",
-                "Regions with non-standard offsets (such as 30- or 45-minute differences)"
+                "Ändringar av sommartid",
+                "Olika UTC-offset",
+                "Datumändringar vid passage av tidszoner",
+                "Regioner med icke-standardiserade offset (såsom skillnader på 30 eller 45 minuter)"
               ]
             },
             {
               "type": "p",
-              "text": "This website is designed to be useful worldwide and is updated regularly to reflect official time zone rules."
+              "text": "Denna webbplats är utformad för att vara användbar världen över och uppdateras regelbundet för att återspegla officiella tidszonsregler."
             }
           ]
         },
         {
-          "heading": "Who This Website Is For",
+          "heading": "Vem denna webbplats är till för",
           "blocks": [
             {
               "type": "list",
               "items": [
-                "Remote workers and distributed teams",
-                "Business professionals scheduling international meetings",
-                "Travelers and frequent flyers",
-                "Students and educators",
-                "Anyone who needs to convert or compare time zones accurately"
+                "Distansarbetare och utspridda team",
+                "Yrkesverksamma som schemalägger internationella möten",
+                "Resenärer och flitiga flygresenärer",
+                "Studenter och lärare",
+                "Alla som behöver omvandla eller jämföra tidszoner korrekt"
               ]
             },
             {
               "type": "p",
-              "text": "**No accounts. No complexity. Just clear answers.**"
+              "text": "**Inga konton. Ingen komplexitet. Bara tydliga svar.**"
             }
           ]
         },
         {
-          "heading": "How to Use This Website",
+          "heading": "Så här använder du denna webbplats",
           "blocks": [
             {
               "type": "subheading",
-              "text": "1. Explore — Interactive Globe"
+              "text": "1. Utforska — Interaktiv jordglob"
             },
             {
               "type": "p",
-              "text": "Click anywhere on the 3D globe to instantly see the local time for that location."
+              "text": "Klicka var som helst på 3D-jordgloben för att direkt se lokal tid för den platsen."
             },
             {
               "type": "p",
-              "text": "**How it works:** Click a location on the globe or search for a city. View the current time, UTC offset, and DST status. Perfect for quick checks and exploring time zones visually."
+              "text": "**Så fungerar det:** Klicka på en plats på jordgloben eller sök efter en stad. Se aktuell tid, UTC-offset och DST-status. Perfekt för snabba kontroller och för att utforska tidszoner visuellt."
             },
             {
               "type": "subheading",
-              "text": "2. Compare — Time Zone Comparison"
+              "text": "2. Jämför — Jämförelse av tidszoner"
             },
             {
               "type": "p",
-              "text": "Compare time differences between multiple cities simultaneously."
+              "text": "Jämför tidsskillnader mellan flera städer samtidigt."
             },
             {
               "type": "p",
-              "text": "**How it works:** Add up to 6 cities to compare. Select a base city to see time differences relative to it. Instantly see current local times, offsets, and visual comparisons. This is ideal for answering questions like \"When it's 9:00 AM in Berlin, what time is it in New York?\""
+              "text": "**Så fungerar det:** Lägg till upp till 6 städer för att jämföra. Välj en basstad för att se tidsskillnader i förhållande till den. Se direkt aktuella lokala tider, offset och visuella jämförelser. Detta är idealiskt för att besvara frågor som \"När klockan är 09:00 i Berlin, vad är klockan i New York?\""
             },
             {
               "type": "subheading",
-              "text": "3. Planner — Meeting Planner"
+              "text": "3. Planeraren — Mötesplanerare"
             },
             {
               "type": "p",
-              "text": "Find the best meeting time for people in different locations."
+              "text": "Hitta den bästa mötestiden för personer på olika platser."
             },
             {
               "type": "p",
-              "text": "**How it works:** Add participants by city, select a meeting date, and optionally adjust working hours for each participant. View overlapping time windows and share the meeting details. This tool automatically avoids early-morning or late-night hours when possible."
+              "text": "**Så fungerar det:** Lägg till deltagare per stad, välj ett mötesdatum och justera valfritt arbetstiderna för varje deltagare. Se överlappande tidsfönster och dela mötesuppgifterna. Detta verktyg undviker automatiskt tidiga morgnar eller sena kvällar när det är möjligt."
             },
             {
               "type": "subheading",
-              "text": "4. DST — Daylight Saving Time"
+              "text": "4. DST — Sommartid"
             },
             {
               "type": "p",
-              "text": "Track daylight saving time changes and transitions throughout the year."
+              "text": "Följ ändringar och övergångar av sommartid under hela året."
             },
             {
               "type": "p",
-              "text": "**How it works:** View DST status for any location, see upcoming transitions, and understand when clocks change. Check how DST affects time differences between regions."
+              "text": "**Så fungerar det:** Se DST-status för valfri plats, se kommande övergångar och förstå när klockan ställs om. Kontrollera hur DST påverkar tidsskillnader mellan regioner."
             },
             {
               "type": "subheading",
-              "text": "5. Saved — Favorite Locations"
+              "text": "5. Sparat — Favoritplatser"
             },
             {
               "type": "p",
-              "text": "Save your frequently used locations for quick access."
+              "text": "Spara dina ofta använda platser för snabb åtkomst."
             },
             {
               "type": "p",
-              "text": "**How it works:** Save locations you check often. Access them instantly without searching. Your saved locations are stored locally in your browser."
+              "text": "**Så fungerar det:** Spara platser du ofta kontrollerar. Få direkt åtkomst till dem utan att söka. Dina sparade platser lagras lokalt i din webbläsare."
             }
           ]
         },
         {
-          "heading": "Frequently Asked Questions",
+          "heading": "Vanliga frågor",
           "blocks": [
             {
               "type": "subheading",
-              "text": "What time zone data does this website use?"
+              "text": "Vilka tidszonsdata använder denna webbplats?"
             },
             {
               "type": "p",
-              "text": "We use official IANA time zone definitions, which are the global standard for accurate time calculations."
+              "text": "Vi använder officiella IANA-tidszonsdefinitioner, som är den globala standarden för noggranna tidsberäkningar."
             },
             {
               "type": "subheading",
-              "text": "Does the website account for daylight saving time?"
+              "text": "Tar webbplatsen hänsyn till sommartid?"
             },
             {
               "type": "p",
-              "text": "Yes. All calculations automatically adjust for daylight saving time based on the selected date and location."
+              "text": "Ja. Alla beräkningar justeras automatiskt för sommartid baserat på valt datum och vald plats."
             },
             {
               "type": "subheading",
-              "text": "Can I check future or past dates?"
+              "text": "Kan jag kontrollera framtida eller tidigare datum?"
             },
             {
               "type": "p",
-              "text": "Yes. You can select any date and time to see how time differences change throughout the year."
+              "text": "Ja. Du kan välja vilket datum och vilken tid som helst för att se hur tidsskillnader förändras under året."
             },
             {
               "type": "subheading",
-              "text": "Why does the time difference change during the year?"
+              "text": "Varför ändras tidsskillnaden under året?"
             },
             {
               "type": "p",
-              "text": "Time differences change because some regions observe daylight saving time while others do not, or they change clocks on different dates."
+              "text": "Tidsskillnader ändras eftersom vissa regioner tillämpar sommartid medan andra inte gör det, eller för att de ställer om klockorna på olika datum."
             },
             {
               "type": "subheading",
-              "text": "Are cities with the same name supported?"
+              "text": "Stöds städer med samma namn?"
             },
             {
               "type": "p",
-              "text": "Yes. Cities are identified by both name and country to avoid confusion (for example, multiple cities named \"Springfield\")."
+              "text": "Ja. Städer identifieras med både namn och land för att undvika förvirring (till exempel flera städer som heter \"Springfield\")."
             },
             {
               "type": "subheading",
-              "text": "Is this website free to use?"
+              "text": "Är denna webbplats gratis att använda?"
             },
             {
               "type": "p",
-              "text": "Yes. All tools on this website are completely free to use and require no registration."
+              "text": "Ja. Alla verktyg på denna webbplats är helt gratis att använda och kräver ingen registrering."
             },
             {
               "type": "subheading",
-              "text": "Can I share or bookmark results?"
+              "text": "Kan jag dela eller bokmärka resultat?"
             },
             {
               "type": "p",
-              "text": "Yes. Tool pages generate clean, shareable URLs that you can bookmark or send to others using the \"Copy link\" button."
+              "text": "Ja. Verktygssidor genererar rena, delbara URL:er som du kan bokmärka eller skicka till andra med knappen \"Kopiera länk\"."
             },
             {
               "type": "subheading",
-              "text": "How accurate are the results?"
+              "text": "Hur noggranna är resultaten?"
             },
             {
               "type": "p",
-              "text": "Results are accurate to the minute and based on official time zone rules, but should not be used for legal or critical decisions without verification."
+              "text": "Resultaten är korrekta på minuten och baserade på officiella tidszonsregler, men bör inte användas för juridiska eller kritiska beslut utan verifiering."
             }
           ]
         }
       ]
     },
     "contact": {
-      "title": "Contact Us",
+      "title": "Kontakta oss",
       "intro": [
         {
           "type": "p",
-          "text": "We value your feedback and are happy to hear from you."
+          "text": "Vi värdesätter din feedback och hör gärna från dig."
         },
         {
           "type": "p",
-          "text": "If you have questions about how our tools work, would like to report an issue, or want to share suggestions for improvement, please feel free to get in touch."
+          "text": "Om du har frågor om hur våra verktyg fungerar, vill rapportera ett problem eller vill dela med dig av förbättringsförslag, är du varmt välkommen att höra av dig."
         },
         {
           "type": "p",
-          "text": "Timezio is operated by **AffSquad**, an independent studio that builds free web utilities."
+          "text": "Timezio drivs av **AffSquad**, en oberoende studio som bygger gratis webbverktyg."
         }
       ],
       "sections": [
         {
-          "heading": "How to Contact Us",
+          "heading": "Så här kontaktar du oss",
           "blocks": [
             {
               "type": "p",
-              "text": "You can contact us by email:"
+              "text": "Du kan kontakta oss via e-post:"
             },
             {
               "type": "emailBox",
-              "label": "Email:",
+              "label": "E-post:",
               "email": "hello@timezio.com"
             },
             {
               "type": "p",
-              "text": "We aim to respond to messages within a reasonable time. Please note that response times may vary depending on the volume of inquiries."
+              "text": "Vi strävar efter att besvara meddelanden inom rimlig tid. Observera att svarstiderna kan variera beroende på mängden förfrågningar."
             }
           ]
         },
         {
-          "heading": "What You Can Contact Us About",
+          "heading": "Vad du kan kontakta oss om",
           "blocks": [
             {
               "type": "p",
-              "text": "You may contact us regarding:"
+              "text": "Du kan kontakta oss angående:"
             },
             {
               "type": "list",
               "items": [
-                "Questions about time zone calculations or tool functionality",
-                "Reporting incorrect or outdated information",
-                "Technical issues or bugs on the website",
-                "General feedback and improvement suggestions"
+                "Frågor om tidszonsberäkningar eller verktygens funktioner",
+                "Rapportering av felaktig eller inaktuell information",
+                "Tekniska problem eller buggar på webbplatsen",
+                "Allmän feedback och förbättringsförslag"
               ]
             },
             {
               "type": "note",
-              "text": "**Please note:** We are unable to provide personalized scheduling advice, legal guidance, or time-critical confirmations."
+              "text": "**Observera:** Vi kan inte ge personlig schemaläggningsrådgivning, juridisk vägledning eller tidskritiska bekräftelser."
             }
           ]
         },
         {
-          "heading": "Personal Data and Privacy",
+          "heading": "Personuppgifter och integritet",
           "blocks": [
             {
               "type": "p",
-              "text": "If you contact us by email, we will process any personal data you provide (such as your email address and message content) solely for the purpose of responding to your inquiry."
+              "text": "Om du kontaktar oss via e-post behandlar vi de personuppgifter du lämnar (såsom din e-postadress och meddelandets innehåll) enbart i syfte att besvara din förfrågan."
             },
             {
               "type": "p",
-              "text": "Your information will be handled in accordance with applicable data protection laws, including the General Data Protection Regulation (EU) 2016/679 (GDPR)."
+              "text": "Dina uppgifter hanteras i enlighet med tillämplig dataskyddslagstiftning, inklusive den allmänna dataskyddsförordningen (EU) 2016/679 (GDPR)."
             },
             {
               "type": "p",
-              "text": "For more details, please refer to our [Privacy Policy](/privacy)."
+              "text": "För mer information, se vår [Integritetspolicy](/privacy)."
             }
           ]
         },
         {
-          "heading": "Important Notice",
+          "heading": "Viktigt meddelande",
           "blocks": [
             {
               "type": "note",
-              "text": "The information provided through this website and via email responses is for general informational purposes only and should not be relied upon for legal, financial, aviation, or other time-critical decisions."
+              "text": "Informationen som tillhandahålls via denna webbplats och via e-postsvar är endast avsedd för allmänt informationssyfte och bör inte ligga till grund för juridiska, ekonomiska, flygrelaterade eller andra tidskritiska beslut."
             }
           ]
         }
@@ -1201,392 +1201,392 @@
   },
   "ui": {
     "converter": {
-      "heading": "Time Zone Converter",
-      "description": "Explore and convert time zones on an interactive globe, check local times, and find overlaps for meetings. Fully DST-aware and powered by official IANA data.",
-      "compareCta": "Compare time zones",
-      "plannerCta": "Plan a meeting"
+      "heading": "Tidszonsomvandlare",
+      "description": "Utforska och konvertera tidszoner på en interaktiv jordglob, kontrollera lokala tider och hitta överlapp för möten. Helt sommartidsmedveten och baserad på officiella IANA-data.",
+      "compareCta": "Jämför tidszoner",
+      "plannerCta": "Planera ett möte"
     },
     "tabBar": {
-      "explore": "Explore",
-      "planner": "Planner",
-      "compare": "Compare",
-      "dst": "DST",
-      "saved": "Saved"
+      "explore": "Utforska",
+      "planner": "Planerare",
+      "compare": "Jämför",
+      "dst": "Sommartid",
+      "saved": "Sparade"
     },
     "exploreTab": {
-      "searchCity": "Search City",
-      "searchCitySubtitle": "Find any city around the world",
-      "popularCities": "Popular Cities",
-      "popularCitiesSubtitle": "Click on a city to view its time"
+      "searchCity": "Sök stad",
+      "searchCitySubtitle": "Hitta vilken stad som helst i världen",
+      "popularCities": "Populära städer",
+      "popularCitiesSubtitle": "Klicka på en stad för att se dess tid"
     },
     "compareTab": {
-      "compare": "Compare",
-      "subtitle": "Add 2–6 locations and compare offsets/time. (MVP: offsets + diff)",
-      "addCityPlaceholder": "Add city to compare…",
-      "addSelected": "Add selected",
-      "clear": "Clear",
-      "noItems": "No compare items. Add a city or “Add selected”.",
-      "baseLabel": "Base:",
-      "base": "Base",
-      "focus": "Focus",
-      "remove": "Remove",
-      "offsetMatrix": "Offset matrix (vs base)",
-      "location": "Location",
-      "localTime": "Local time",
-      "utcOffset": "UTC offset",
-      "deltaHours": "Δ hours"
+      "compare": "Jämför",
+      "subtitle": "Lägg till 2–6 platser och jämför tidsskillnader/tid. (MVP: tidsskillnader + diff)",
+      "addCityPlaceholder": "Lägg till stad att jämföra…",
+      "addSelected": "Lägg till markerad",
+      "clear": "Rensa",
+      "noItems": "Inga objekt att jämföra. Lägg till en stad eller \"Lägg till markerad\".",
+      "baseLabel": "Bas:",
+      "base": "Bas",
+      "focus": "Fokus",
+      "remove": "Ta bort",
+      "offsetMatrix": "Tidsskillnadsmatris (mot bas)",
+      "location": "Plats",
+      "localTime": "Lokal tid",
+      "utcOffset": "UTC-förskjutning",
+      "deltaHours": "Δ timmar"
     },
     "dstTab": {
-      "noChangeFound": "No change found (≈370 days scan)",
-      "title": "DST",
-      "bestEffort": "Best-effort: Luxon doesn’t expose IANA transition tables, so we scan forward until offset changes.",
-      "selectLocation": "Select a location in Explore.",
-      "timezone": "Timezone",
-      "currentLocalTime": "Current local time",
-      "abbrev": "Abbrev",
-      "nextOffsetChange": "Next offset change",
-      "transitionNote": "Note: Transition timestamp is approximate (minute-level). For exact changes you’d need a tzdb transition table.",
-      "infrequentChange": "Some timezones don’t change offset often (or at all)."
+      "noChangeFound": "Ingen ändring hittad (skanning av ca 370 dagar)",
+      "title": "Sommartid",
+      "bestEffort": "Bästa möjliga: Luxon exponerar inte IANA:s övergångstabeller, så vi skannar framåt tills förskjutningen ändras.",
+      "selectLocation": "Välj en plats i Utforska.",
+      "timezone": "Tidszon",
+      "currentLocalTime": "Aktuell lokal tid",
+      "abbrev": "Förkortning",
+      "nextOffsetChange": "Nästa förändring av förskjutning",
+      "transitionNote": "Obs: Övergångens tidsstämpel är ungefärlig (på minutnivå). För exakta ändringar behövs en övergångstabell från tzdb.",
+      "infrequentChange": "Vissa tidszoner ändrar inte sin förskjutning ofta (eller alls)."
     },
     "savedTab": {
-      "title": "Saved",
-      "subtitle": "Stored in localStorage (ids only). Use share link to carry full payload.",
-      "emptyState": "No saved locations yet. Save from Explore.",
-      "select": "Select",
-      "compare": "Compare",
-      "remove": "Remove"
+      "title": "Sparade",
+      "subtitle": "Lagras i localStorage (endast id:n). Använd delningslänk för att överföra hela innehållet.",
+      "emptyState": "Inga sparade platser ännu. Spara från Utforska.",
+      "select": "Välj",
+      "compare": "Jämför",
+      "remove": "Ta bort"
     },
     "plannerTab": {
-      "errProvideTitle": "Please provide title",
-      "msgSessionCreated": "Meeting session created",
-      "msgSessionCreatedWithTz": "Meeting session created with your timezone added automatically",
-      "errCreateSession": "Failed to create session",
-      "errCreateSessionFirst": "Create a session first",
-      "errNameRequired": "Name is required",
-      "errSelectLocation": "Please select a location on the globe or search for a city first",
-      "msgParticipantAdded": "Participant added",
-      "errAddParticipant": "Failed to add participant",
-      "errAddParticipantBackend": "Failed to add participant to backend",
-      "errAddTwoParticipants": "Add at least 2 participants first",
-      "msgGeneratedSlots": "Generated {count} slots on backend",
-      "errGenerateSlots": "Failed to generate slots",
-      "errCreateSessionSelectSlot": "Please create session and select slot first",
-      "msgMeetCreated": "Meet created! Link: {link}",
-      "errCreateMeet": "Failed to create Meet",
-      "heading": "Meeting Planner",
-      "intro": "Add participants from different time zones, set their working hours, and find the best meeting times. Choose between automatic slot finding or manual time selection. All calculations account for daylight saving time.",
-      "connected": "Connected",
-      "connectGoogleCalendar": "Connect Google Calendar",
-      "requiredForMeet": "(required for Meet links)",
-      "yourTimezone": "Your Timezone",
-      "yourNamePlaceholder": "Your name (optional)",
-      "createMeetingSession": "Create Meeting Session",
-      "meetingTitlePlaceholder": "Meeting Title",
-      "descriptionPlaceholder": "Description (optional)",
-      "createSession": "Create Session",
+      "errProvideTitle": "Ange en titel",
+      "msgSessionCreated": "Mötessession skapad",
+      "msgSessionCreatedWithTz": "Mötessession skapad med din tidszon automatiskt tillagd",
+      "errCreateSession": "Det gick inte att skapa session",
+      "errCreateSessionFirst": "Skapa en session först",
+      "errNameRequired": "Namn krävs",
+      "errSelectLocation": "Välj en plats på jordgloben eller sök efter en stad först",
+      "msgParticipantAdded": "Deltagare tillagd",
+      "errAddParticipant": "Det gick inte att lägga till deltagare",
+      "errAddParticipantBackend": "Det gick inte att lägga till deltagare i backend",
+      "errAddTwoParticipants": "Lägg till minst 2 deltagare först",
+      "msgGeneratedSlots": "Genererade {count} tider i backend",
+      "errGenerateSlots": "Det gick inte att generera tider",
+      "errCreateSessionSelectSlot": "Skapa en session och välj en tid först",
+      "msgMeetCreated": "Meet skapat! Länk: {link}",
+      "errCreateMeet": "Det gick inte att skapa Meet",
+      "heading": "Mötesplanerare",
+      "intro": "Lägg till deltagare från olika tidszoner, ange deras arbetstider och hitta de bästa mötestiderna. Välj mellan automatisk tidssökning eller manuellt tidsval. Alla beräkningar tar hänsyn till sommartid.",
+      "connected": "Ansluten",
+      "connectGoogleCalendar": "Anslut Google Calendar",
+      "requiredForMeet": "(krävs för Meet-länkar)",
+      "yourTimezone": "Din tidszon",
+      "yourNamePlaceholder": "Ditt namn (valfritt)",
+      "createMeetingSession": "Skapa mötessession",
+      "meetingTitlePlaceholder": "Mötestitel",
+      "descriptionPlaceholder": "Beskrivning (valfritt)",
+      "createSession": "Skapa session",
       "sessionLabel": "Session: {title}",
-      "mode": "MODE",
-      "autoFindSlots": "Auto Find Slots",
-      "autoFindSlotsDesc": "System finds optimal meeting times by analyzing working hours overlap across all participants",
-      "manualTimePick": "Manual Time Pick",
-      "manualTimePickDesc": "You choose a specific time, and the system converts it to all participants' time zones",
-      "howAutoFindWorks": "How Auto Find Works:",
-      "howManualPickWorks": "How Manual Pick Works:",
-      "autoBullet1": "Analyzes working hours of all participants",
-      "autoBullet2": "Finds time windows where everyone is available",
-      "autoBullet3": "Generates slots every 15 minutes within overlap",
-      "autoBullet4": "Ranks slots by quality (time of day, work hours position)",
-      "autoBullet5": "Shows best options first (sorted by quality score)",
-      "manualBullet1": "Select a time in one participant's timezone",
-      "manualBullet2": "System converts to UTC internally",
-      "manualBullet3": "Displays the same moment in all other timezones",
-      "manualBullet4": "Perfect for fixed meeting times or specific schedules",
-      "manualBullet5": "All calculations respect DST transitions",
-      "duration": "Duration",
-      "twoHours": "2 hours",
+      "mode": "LÄGE",
+      "autoFindSlots": "Hitta tider automatiskt",
+      "autoFindSlotsDesc": "Systemet hittar optimala mötestider genom att analysera överlappande arbetstider för alla deltagare",
+      "manualTimePick": "Välj tid manuellt",
+      "manualTimePickDesc": "Du väljer en specifik tid och systemet konverterar den till alla deltagares tidszoner",
+      "howAutoFindWorks": "Så fungerar automatisk sökning:",
+      "howManualPickWorks": "Så fungerar manuellt val:",
+      "autoBullet1": "Analyserar alla deltagares arbetstider",
+      "autoBullet2": "Hittar tidsfönster då alla är tillgängliga",
+      "autoBullet3": "Genererar tider var 15:e minut inom överlappet",
+      "autoBullet4": "Rangordnar tider efter kvalitet (tid på dygnet, placering inom arbetstid)",
+      "autoBullet5": "Visar de bästa alternativen först (sorterade efter kvalitetspoäng)",
+      "manualBullet1": "Välj en tid i en deltagares tidszon",
+      "manualBullet2": "Systemet konverterar internt till UTC",
+      "manualBullet3": "Visar samma ögonblick i alla andra tidszoner",
+      "manualBullet4": "Perfekt för fasta mötestider eller specifika scheman",
+      "manualBullet5": "Alla beräkningar tar hänsyn till sommartidsövergångar",
+      "duration": "Längd",
+      "twoHours": "2 timmar",
       "minutes": "{mins} min",
-      "date": "Date",
-      "preferences": "Preferences",
-      "includeWeekends": "Include weekends",
-      "includeWeekendsDesc": "Allow slots on Sat/Sun using default working hours",
-      "avoidEarly": "Avoid meetings before 8 AM",
-      "avoidLate": "Avoid meetings after 8 PM",
-      "localTime": "Local time",
-      "avoidLunch": "Avoid lunch time",
+      "date": "Datum",
+      "preferences": "Inställningar",
+      "includeWeekends": "Inkludera helger",
+      "includeWeekendsDesc": "Tillåt tider på lör/sön med standardarbetstider",
+      "avoidEarly": "Undvik möten före kl. 08",
+      "avoidLate": "Undvik möten efter kl. 20",
+      "localTime": "Lokal tid",
+      "avoidLunch": "Undvik lunchtid",
       "lunchTime": "12:00-13:00",
-      "addParticipant": "Add Participant",
-      "quick": "Quick",
-      "withEmail": "With Email",
-      "searchCityPlaceholder": "Search city to add quickly…",
-      "namePlaceholder": "Name *",
-      "emailPlaceholder": "Email (optional, for calendar invites)",
-      "clickGlobeHint": "Click on the globe or search for a city first to select location",
-      "addAllFromCompare": "Add all from Compare ({count})",
-      "clickGlobeFormHint": "Click on the globe to select a location, then fill the form above",
-      "participantsCount": "Participants ({count})",
-      "remove": "Remove",
-      "namePrompt": "Name:",
-      "rename": "Rename",
-      "selectTime": "Select Time",
-      "baseTimezone": "Base Timezone",
-      "unknown": "Unknown",
-      "meetingTime": "Meeting Time",
-      "meetingTimeTzSuffix": "({name}'s timezone)",
+      "addParticipant": "Lägg till deltagare",
+      "quick": "Snabb",
+      "withEmail": "Med e-post",
+      "searchCityPlaceholder": "Sök stad för att lägga till snabbt…",
+      "namePlaceholder": "Namn *",
+      "emailPlaceholder": "E-post (valfritt, för kalenderinbjudningar)",
+      "clickGlobeHint": "Klicka på jordgloben eller sök efter en stad först för att välja plats",
+      "addAllFromCompare": "Lägg till alla från Jämför ({count})",
+      "clickGlobeFormHint": "Klicka på jordgloben för att välja en plats och fyll sedan i formuläret ovan",
+      "participantsCount": "Deltagare ({count})",
+      "remove": "Ta bort",
+      "namePrompt": "Namn:",
+      "rename": "Byt namn",
+      "selectTime": "Välj tid",
+      "baseTimezone": "Bastidszon",
+      "unknown": "Okänd",
+      "meetingTime": "Mötestid",
+      "meetingTimeTzSuffix": "({name}s tidszon)",
       "meetingTimeUtcSuffix": "(UTC)",
-      "availableSlots": "Available Slots",
-      "generateSlots": "Generate slots",
-      "emptySlotsWithSession": "Click \"Generate slots\" to find available meeting times. Or adjust working hours/date and try again.",
-      "emptySlotsNoSession": "Create a session first, then add at least 2 participants and set their working hours to find available meeting times.",
-      "qualityGreat": "Great",
-      "qualityGood": "Good",
-      "qualityFair": "Fair",
-      "qualityScoreTitle": "Quality score: {score}/100",
-      "selected": "Selected",
-      "morning": "Morning",
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "night": "Night",
-      "showingTopSlots": "Showing top 15 of {total} available slots (sorted by quality)",
-      "selectedTime": "Selected Time",
-      "selectedSlot": "Selected Slot",
-      "utcTime": "UTC Time",
-      "daytime": "Daytime",
-      "nighttime": "Nighttime",
-      "confirmed": "Confirmed",
-      "confirmCreateMeet": "Confirm & Create Google Meet",
-      "manualNeedParticipant": "Add at least one participant to convert time to different time zones",
-      "autoNeedTwoParticipants": "Add at least 2 participants to start finding meeting slots",
-      "autoNeedOneMoreParticipant": "Add one more participant to find available meeting times",
-      "meetingConfirmed": "Meeting Confirmed",
-      "googleMeetLink": "Google Meet Link:",
-      "eventId": "Event ID: {id}"
+      "availableSlots": "Tillgängliga tider",
+      "generateSlots": "Generera tider",
+      "emptySlotsWithSession": "Klicka på \"Generera tider\" för att hitta tillgängliga mötestider. Eller justera arbetstider/datum och försök igen.",
+      "emptySlotsNoSession": "Skapa en session först, lägg sedan till minst 2 deltagare och ange deras arbetstider för att hitta tillgängliga mötestider.",
+      "qualityGreat": "Utmärkt",
+      "qualityGood": "Bra",
+      "qualityFair": "Okej",
+      "qualityScoreTitle": "Kvalitetspoäng: {score}/100",
+      "selected": "Vald",
+      "morning": "Morgon",
+      "afternoon": "Eftermiddag",
+      "evening": "Kväll",
+      "night": "Natt",
+      "showingTopSlots": "Visar de 15 bästa av {total} tillgängliga tider (sorterade efter kvalitet)",
+      "selectedTime": "Vald tid",
+      "selectedSlot": "Vald tid",
+      "utcTime": "UTC-tid",
+      "daytime": "Dagtid",
+      "nighttime": "Nattetid",
+      "confirmed": "Bekräftad",
+      "confirmCreateMeet": "Bekräfta och skapa Google Meet",
+      "manualNeedParticipant": "Lägg till minst en deltagare för att konvertera tid till olika tidszoner",
+      "autoNeedTwoParticipants": "Lägg till minst 2 deltagare för att börja hitta mötestider",
+      "autoNeedOneMoreParticipant": "Lägg till en deltagare till för att hitta tillgängliga mötestider",
+      "meetingConfirmed": "Möte bekräftat",
+      "googleMeetLink": "Google Meet-länk:",
+      "eventId": "Händelse-ID: {id}"
     },
     "citySearch": {
-      "placeholder": "Search city…",
-      "unableToSearchStatus": "Unable to search ({status})",
-      "unableToSearchCities": "Unable to search cities",
-      "typeAtLeast": "Type at least {count} characters",
-      "searchingCities": "Searching cities…",
-      "unableToFetchCities": "Unable to fetch cities",
-      "noMatchesFound": "No matches found"
+      "placeholder": "Sök stad…",
+      "unableToSearchStatus": "Det gick inte att söka ({status})",
+      "unableToSearchCities": "Det gick inte att söka efter städer",
+      "typeAtLeast": "Skriv minst {count} tecken",
+      "searchingCities": "Söker städer…",
+      "unableToFetchCities": "Det gick inte att hämta städer",
+      "noMatchesFound": "Inga träffar hittades"
     },
     "meetingPlanner": {
-      "errProvideTitle": "Please provide title",
-      "msgSessionCreated": "Meeting session created",
-      "msgSessionCreatedWithTz": "Meeting session created with your timezone added automatically",
-      "errCreateSession": "Failed to create session",
-      "errCreateSessionFirst": "Create a session first",
-      "errNameRequired": "Name is required",
-      "errSelectLocation": "Please select a location on the globe or search for a city first",
-      "msgParticipantAdded": "Participant added",
-      "errAddParticipant": "Failed to add participant",
-      "errAddParticipantBackend": "Failed to add participant to backend",
-      "errAddTwoParticipants": "Add at least 2 participants first",
-      "msgGeneratedSlots": "Generated {count} slots on backend",
-      "errGenerateSlots": "Failed to generate slots",
-      "errSelectSlotFirst": "Please create session and select slot first",
-      "msgMeetCreated": "Meet created! Link: {link}",
-      "errCreateMeet": "Failed to create Meet",
-      "pageTitle": "Meeting Planner",
-      "pageSubtitle": "Add participants from different time zones, set their working hours, and find the best meeting times. Choose between automatic slot finding or manual time selection. All calculations account for daylight saving time.",
-      "connected": "Connected",
-      "connectGoogleCalendar": "Connect Google Calendar",
-      "requiredForMeetLinks": "(required for Meet links)",
-      "yourTimezone": "Your Timezone",
-      "yourNamePlaceholder": "Your name (optional)",
-      "createMeetingSession": "Create Meeting Session",
-      "meetingTitlePlaceholder": "Meeting Title",
-      "descriptionPlaceholder": "Description (optional)",
-      "createSession": "Create Session",
+      "errProvideTitle": "Ange en titel",
+      "msgSessionCreated": "Mötessession skapad",
+      "msgSessionCreatedWithTz": "Mötessession skapad med din tidszon automatiskt tillagd",
+      "errCreateSession": "Det gick inte att skapa session",
+      "errCreateSessionFirst": "Skapa en session först",
+      "errNameRequired": "Namn krävs",
+      "errSelectLocation": "Välj en plats på jordgloben eller sök efter en stad först",
+      "msgParticipantAdded": "Deltagare tillagd",
+      "errAddParticipant": "Det gick inte att lägga till deltagare",
+      "errAddParticipantBackend": "Det gick inte att lägga till deltagare i backend",
+      "errAddTwoParticipants": "Lägg till minst 2 deltagare först",
+      "msgGeneratedSlots": "Genererade {count} tider i backend",
+      "errGenerateSlots": "Det gick inte att generera tider",
+      "errSelectSlotFirst": "Skapa en session och välj en tid först",
+      "msgMeetCreated": "Meet skapat! Länk: {link}",
+      "errCreateMeet": "Det gick inte att skapa Meet",
+      "pageTitle": "Mötesplanerare",
+      "pageSubtitle": "Lägg till deltagare från olika tidszoner, ange deras arbetstider och hitta de bästa mötestiderna. Välj mellan automatisk tidssökning eller manuellt tidsval. Alla beräkningar tar hänsyn till sommartid.",
+      "connected": "Ansluten",
+      "connectGoogleCalendar": "Anslut Google Calendar",
+      "requiredForMeetLinks": "(krävs för Meet-länkar)",
+      "yourTimezone": "Din tidszon",
+      "yourNamePlaceholder": "Ditt namn (valfritt)",
+      "createMeetingSession": "Skapa mötessession",
+      "meetingTitlePlaceholder": "Mötestitel",
+      "descriptionPlaceholder": "Beskrivning (valfritt)",
+      "createSession": "Skapa session",
       "sessionLabel": "Session: {title}",
-      "mode": "MODE",
-      "autoFindSlots": "Auto Find Slots",
-      "autoFindSlotsDesc": "System finds optimal meeting times by analyzing working hours overlap across all participants",
-      "manualTimePick": "Manual Time Pick",
-      "manualTimePickDesc": "You choose a specific time, and the system converts it to all participants' time zones",
-      "howAutoFindWorks": "How Auto Find Works:",
-      "howManualPickWorks": "How Manual Pick Works:",
-      "autoStep1": "Analyzes working hours of all participants",
-      "autoStep2": "Finds time windows where everyone is available",
-      "autoStep3": "Generates slots every 15 minutes within overlap",
-      "autoStep4": "Ranks slots by quality (time of day, work hours position)",
-      "autoStep5": "Shows best options first (sorted by quality score)",
-      "manualStep1": "Select a time in one participant's timezone",
-      "manualStep2": "System converts to UTC internally",
-      "manualStep3": "Displays the same moment in all other timezones",
-      "manualStep4": "Perfect for fixed meeting times or specific schedules",
-      "manualStep5": "All calculations respect DST transitions",
-      "duration": "Duration",
-      "twoHours": "2 hours",
+      "mode": "LÄGE",
+      "autoFindSlots": "Hitta tider automatiskt",
+      "autoFindSlotsDesc": "Systemet hittar optimala mötestider genom att analysera överlappande arbetstider för alla deltagare",
+      "manualTimePick": "Välj tid manuellt",
+      "manualTimePickDesc": "Du väljer en specifik tid och systemet konverterar den till alla deltagares tidszoner",
+      "howAutoFindWorks": "Så fungerar automatisk sökning:",
+      "howManualPickWorks": "Så fungerar manuellt val:",
+      "autoStep1": "Analyserar alla deltagares arbetstider",
+      "autoStep2": "Hittar tidsfönster då alla är tillgängliga",
+      "autoStep3": "Genererar tider var 15:e minut inom överlappet",
+      "autoStep4": "Rangordnar tider efter kvalitet (tid på dygnet, placering inom arbetstid)",
+      "autoStep5": "Visar de bästa alternativen först (sorterade efter kvalitetspoäng)",
+      "manualStep1": "Välj en tid i en deltagares tidszon",
+      "manualStep2": "Systemet konverterar internt till UTC",
+      "manualStep3": "Visar samma ögonblick i alla andra tidszoner",
+      "manualStep4": "Perfekt för fasta mötestider eller specifika scheman",
+      "manualStep5": "Alla beräkningar tar hänsyn till sommartidsövergångar",
+      "duration": "Längd",
+      "twoHours": "2 timmar",
       "minutes": "{mins} min",
-      "date": "Date",
-      "preferences": "Preferences",
-      "avoidBefore8am": "Avoid meetings before 8 AM",
-      "localTime": "Local time",
-      "avoidAfter8pm": "Avoid meetings after 8 PM",
-      "avoidLunchTime": "Avoid lunch time",
-      "addParticipant": "Add Participant",
-      "quick": "Quick",
-      "withEmail": "With Email",
-      "searchCityPlaceholder": "Search city to add quickly…",
-      "namePlaceholder": "Name *",
-      "emailPlaceholder": "Email (optional, for calendar invites)",
-      "addParticipantBtn": "Add Participant",
-      "clickGlobeHint": "Click on the globe or search for a city first to select location",
-      "addAllFromCompare": "Add all from Compare ({count})",
-      "clickGlobeFillForm": "Click on the globe to select a location, then fill the form above",
-      "participantsCount": "Participants ({count})",
-      "remove": "Remove",
-      "namePrompt": "Name:",
-      "rename": "Rename",
-      "selectTime": "Select Time",
-      "baseTimezone": "Base Timezone",
-      "unknown": "Unknown",
-      "meetingTime": "Meeting Time",
-      "meetingTimeTzSuffix": "({name}'s timezone)",
+      "date": "Datum",
+      "preferences": "Inställningar",
+      "avoidBefore8am": "Undvik möten före kl. 08",
+      "localTime": "Lokal tid",
+      "avoidAfter8pm": "Undvik möten efter kl. 20",
+      "avoidLunchTime": "Undvik lunchtid",
+      "addParticipant": "Lägg till deltagare",
+      "quick": "Snabb",
+      "withEmail": "Med e-post",
+      "searchCityPlaceholder": "Sök stad för att lägga till snabbt…",
+      "namePlaceholder": "Namn *",
+      "emailPlaceholder": "E-post (valfritt, för kalenderinbjudningar)",
+      "addParticipantBtn": "Lägg till deltagare",
+      "clickGlobeHint": "Klicka på jordgloben eller sök efter en stad först för att välja plats",
+      "addAllFromCompare": "Lägg till alla från Jämför ({count})",
+      "clickGlobeFillForm": "Klicka på jordgloben för att välja en plats och fyll sedan i formuläret ovan",
+      "participantsCount": "Deltagare ({count})",
+      "remove": "Ta bort",
+      "namePrompt": "Namn:",
+      "rename": "Byt namn",
+      "selectTime": "Välj tid",
+      "baseTimezone": "Bastidszon",
+      "unknown": "Okänd",
+      "meetingTime": "Mötestid",
+      "meetingTimeTzSuffix": "({name}s tidszon)",
       "meetingTimeUtcSuffix": "(UTC)",
-      "availableSlots": "Available Slots",
-      "generateSlotsBackend": "Generate Slots on Backend",
-      "slotsEmptyState": "Click \"Generate Slots on Backend\" to find available meeting times. Or adjust working hours/date and try again.",
-      "qualityGreat": "Great",
-      "qualityGood": "Good",
-      "qualityFair": "Fair",
-      "qualityScoreTitle": "Quality score: {score}/100",
-      "selected": "Selected",
-      "morning": "Morning",
-      "afternoon": "Afternoon",
-      "evening": "Evening",
-      "night": "Night",
-      "showingTop15": "Showing top 15 of {total} available slots (sorted by quality)",
-      "selectedTime": "Selected Time",
-      "selectedSlot": "Selected Slot",
-      "utcTime": "UTC Time",
-      "daytime": "Daytime",
-      "nighttime": "Nighttime",
-      "confirmCreateMeet": "Confirm & Create Google Meet",
-      "addOneParticipantHint": "Add at least one participant to convert time to different time zones",
-      "addTwoParticipantsHint": "Add at least 2 participants to start finding meeting slots",
-      "addOneMoreParticipantHint": "Add one more participant to find available meeting times",
-      "meetingConfirmed": "Meeting Confirmed",
-      "googleMeetLink": "Google Meet Link:",
-      "eventId": "Event ID: {id}"
+      "availableSlots": "Tillgängliga tider",
+      "generateSlotsBackend": "Generera tider i backend",
+      "slotsEmptyState": "Klicka på \"Generera tider i backend\" för att hitta tillgängliga mötestider. Eller justera arbetstider/datum och försök igen.",
+      "qualityGreat": "Utmärkt",
+      "qualityGood": "Bra",
+      "qualityFair": "Okej",
+      "qualityScoreTitle": "Kvalitetspoäng: {score}/100",
+      "selected": "Vald",
+      "morning": "Morgon",
+      "afternoon": "Eftermiddag",
+      "evening": "Kväll",
+      "night": "Natt",
+      "showingTop15": "Visar de 15 bästa av {total} tillgängliga tider (sorterade efter kvalitet)",
+      "selectedTime": "Vald tid",
+      "selectedSlot": "Vald tid",
+      "utcTime": "UTC-tid",
+      "daytime": "Dagtid",
+      "nighttime": "Nattetid",
+      "confirmCreateMeet": "Bekräfta och skapa Google Meet",
+      "addOneParticipantHint": "Lägg till minst en deltagare för att konvertera tid till olika tidszoner",
+      "addTwoParticipantsHint": "Lägg till minst 2 deltagare för att börja hitta mötestider",
+      "addOneMoreParticipantHint": "Lägg till en deltagare till för att hitta tillgängliga mötestider",
+      "meetingConfirmed": "Möte bekräftat",
+      "googleMeetLink": "Google Meet-länk:",
+      "eventId": "Händelse-ID: {id}"
     },
     "participants": {
-      "timezone": "Timezone",
-      "localTimeNow": "Local time now",
-      "meetingTimeForYou": "Meeting time for you:"
+      "timezone": "Tidszon",
+      "localTimeNow": "Lokal tid nu",
+      "meetingTimeForYou": "Mötestid för dig:"
     },
     "poll": {
-      "failedToLoad": "Failed to load poll",
-      "provideNameEmail": "Please provide name and email",
-      "voteAtLeastOne": "Please vote for at least one slot",
-      "failedToSubmit": "Failed to submit vote",
-      "voteSubmitted": "Vote submitted successfully!",
-      "loading": "Loading...",
-      "duration": "Duration: {minutes} minutes",
-      "voteForSlots": "Vote for Available Slots",
-      "noSlots": "No slots available",
+      "failedToLoad": "Det gick inte att läsa in omröstningen",
+      "provideNameEmail": "Ange namn och e-post",
+      "voteAtLeastOne": "Rösta på minst en tid",
+      "failedToSubmit": "Det gick inte att skicka rösten",
+      "voteSubmitted": "Rösten skickades!",
+      "loading": "Läser in...",
+      "duration": "Längd: {minutes} minuter",
+      "voteForSlots": "Rösta på tillgängliga tider",
+      "noSlots": "Inga tider tillgängliga",
       "utcLabel": "UTC:",
-      "yourTimeLabel": "Your time ({timezone}):",
-      "score": "Score: {score}",
-      "yes": "✓ Yes",
-      "maybe": "? Maybe",
-      "no": "✗ No",
-      "summary": "Summary: {yes} yes, {maybe} maybe, {no} no",
-      "submitYourVote": "Submit Your Vote",
-      "yourName": "Your Name",
-      "yourEmail": "Your Email",
-      "submitting": "Submitting...",
-      "submitVote": "Submit Vote"
+      "yourTimeLabel": "Din tid ({timezone}):",
+      "score": "Poäng: {score}",
+      "yes": "✓ Ja",
+      "maybe": "? Kanske",
+      "no": "✗ Nej",
+      "summary": "Sammanfattning: {yes} ja, {maybe} kanske, {no} nej",
+      "submitYourVote": "Skicka din röst",
+      "yourName": "Ditt namn",
+      "yourEmail": "Din e-post",
+      "submitting": "Skickar...",
+      "submitVote": "Skicka röst"
     },
     "book": {
-      "failedLoadBooking": "Failed to load booking",
-      "selectSlotProvideInfo": "Please select a slot and provide name/email",
-      "failedReserve": "Failed to reserve",
-      "slotReserved": "Slot reserved! Meet link created.",
-      "failedReserveSlot": "Failed to reserve slot",
-      "loading": "Loading...",
-      "duration": "Duration: {minutes} minutes",
-      "meetingReserved": "Meeting Reserved",
-      "timeLabel": "Time:",
-      "yourLocalTimeLabel": "Your local time:",
-      "meetLinkLabel": "Meet Link:",
-      "availableSlots": "Available Slots",
-      "noSlots": "No slots available",
+      "failedLoadBooking": "Det gick inte att läsa in bokningen",
+      "selectSlotProvideInfo": "Välj en tid och ange namn/e-post",
+      "failedReserve": "Det gick inte att reservera",
+      "slotReserved": "Tid reserverad! Meet-länk skapad.",
+      "failedReserveSlot": "Det gick inte att reservera tiden",
+      "loading": "Läser in...",
+      "duration": "Längd: {minutes} minuter",
+      "meetingReserved": "Möte reserverat",
+      "timeLabel": "Tid:",
+      "yourLocalTimeLabel": "Din lokala tid:",
+      "meetLinkLabel": "Meet-länk:",
+      "availableSlots": "Tillgängliga tider",
+      "noSlots": "Inga tider tillgängliga",
       "utcLabel": "UTC:",
-      "yourTimeLabel": "Your time ({timezone}):",
-      "score": "Score: {score}",
-      "select": "Select",
-      "reserveSlot": "Reserve Slot",
-      "yourName": "Your Name",
-      "yourEmail": "Your Email",
-      "reserving": "Reserving...",
-      "reserveSlotButton": "Reserve Slot"
+      "yourTimeLabel": "Din tid ({timezone}):",
+      "score": "Poäng: {score}",
+      "select": "Välj",
+      "reserveSlot": "Reservera tid",
+      "yourName": "Ditt namn",
+      "yourEmail": "Din e-post",
+      "reserving": "Reserverar...",
+      "reserveSlotButton": "Reservera tid"
     },
     "toast": {
-      "close": "Close"
+      "close": "Stäng"
     },
     "timeDisplay": {
-      "selectLocation": "Select a location to view time",
-      "sun": "Sun:",
+      "selectLocation": "Välj en plats för att se tiden",
+      "sun": "Sol:",
       "format12h": "12h",
       "format24h": "24h"
     },
     "dstBadge": {
-      "active": "DST active",
-      "inactive": "DST inactive"
+      "active": "Sommartid aktiv",
+      "inactive": "Sommartid inaktiv"
     },
     "workingHours": {
-      "workingHours": "Working hours",
+      "workingHours": "Arbetstider",
       "start": "Start",
-      "end": "End"
+      "end": "Slut"
     },
     "cityTimeCard": {
-      "day": "Day",
-      "night": "Night"
+      "day": "Dag",
+      "night": "Natt"
     },
     "timezoneSelector": {
-      "savedToast": "Timezone \"{name}\" saved!",
-      "clearedToast": "Saved timezone cleared!",
-      "selectTimezone": "Select timezone",
-      "savedLabel": "Saved: {name}",
-      "hideTimezone": "Hide Timezone",
-      "selectTimezoneButton": "Select Timezone",
-      "saveTitle": "Save timezone to localStorage",
-      "save": "Save",
-      "clearTitle": "Clear saved timezone",
-      "clear": "Clear",
-      "searchPlaceholder": "Search timezone (e.g., Kyiv, New York, Tokyo)...",
-      "noResults": "No timezones found for \"{query}\"",
-      "selectRegion": "Select Region:",
-      "regionTimezones": "{region} timezones:"
+      "savedToast": "Tidszonen \"{name}\" sparad!",
+      "clearedToast": "Sparad tidszon rensad!",
+      "selectTimezone": "Välj tidszon",
+      "savedLabel": "Sparad: {name}",
+      "hideTimezone": "Dölj tidszon",
+      "selectTimezoneButton": "Välj tidszon",
+      "saveTitle": "Spara tidszon i localStorage",
+      "save": "Spara",
+      "clearTitle": "Rensa sparad tidszon",
+      "clear": "Rensa",
+      "searchPlaceholder": "Sök tidszon (t.ex. Kyiv, New York, Tokyo)...",
+      "noResults": "Inga tidszoner hittades för \"{query}\"",
+      "selectRegion": "Välj region:",
+      "regionTimezones": "Tidszoner i {region}:"
     },
     "datePicker": {
-      "today": "Today",
+      "today": "Idag",
       "weekday": {
-        "Sun": "Sun",
-        "Mon": "Mon",
-        "Tue": "Tue",
-        "Wed": "Wed",
-        "Thu": "Thu",
-        "Fri": "Fri",
-        "Sat": "Sat"
+        "Sun": "Sön",
+        "Mon": "Mån",
+        "Tue": "Tis",
+        "Wed": "Ons",
+        "Thu": "Tor",
+        "Fri": "Fre",
+        "Sat": "Lör"
       }
     },
     "timePicker": {
-      "hour": "Hour",
+      "hour": "Timme",
       "min": "Min"
     },
     "copyButton": {
-      "copy": "Copy"
+      "copy": "Kopiera"
     },
     "themeToggle": {
-      "dark": "Dark",
-      "light": "Light",
-      "switchTitle": "Switch to {theme} theme"
+      "dark": "Mörkt",
+      "light": "Ljust",
+      "switchTitle": "Byt till {theme} tema"
     },
     "timeSlider": {
-      "time": "Time"
+      "time": "Tid"
     }
   }
 }
