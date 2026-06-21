@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 import { getOAuthClient } from '@/lib/google';
 
@@ -18,7 +18,7 @@ function createState() {
   return crypto.randomBytes(16).toString('hex');
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const oauth2Client = getOAuthClient();
     const state = createState();
@@ -43,23 +43,6 @@ export async function GET(request: NextRequest) {
     return response;
   } catch (error) {
     console.error('Google OAuth init failed', error);
-    // Temporary diagnostic: ?diag=1 returns presence booleans only (never values).
-    if (request.nextUrl.searchParams.get('diag') === '1') {
-      return NextResponse.json(
-        {
-          error: 'OAuth init failed',
-          message: error instanceof Error ? error.message : String(error),
-          present: {
-            GOOGLE_CLIENT_ID: Boolean(process.env.GOOGLE_CLIENT_ID),
-            GOOGLE_CLIENT_SECRET: Boolean(process.env.GOOGLE_CLIENT_SECRET),
-            GOOGLE_REDIRECT_URI: Boolean(process.env.GOOGLE_REDIRECT_URI),
-            DATABASE_URL: Boolean(process.env.DATABASE_URL),
-          },
-          nodeEnv: process.env.NODE_ENV,
-        },
-        { status: 500 }
-      );
-    }
     return NextResponse.json({ error: 'OAuth init failed' }, { status: 500 });
   }
 }
