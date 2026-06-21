@@ -36,13 +36,19 @@ npm install
 Create a `.env` file with:
 
 ```
-DATABASE_URL="file:./prisma/dev.db"
+DATABASE_URL="postgresql://user:password@host:5432/dbname"
 GOOGLE_CLIENT_ID="your-google-client-id"
 GOOGLE_CLIENT_SECRET="your-google-client-secret"
+# Local dev only. In production the redirect URI is derived from the canonical
+# www host, so GOOGLE_REDIRECT_URI does not need to be set on the host.
 GOOGLE_REDIRECT_URI="http://localhost:3000/api/auth/google/callback"
 ```
 
-## Database (Prisma + SQLite)
+In production (Vercel) only `DATABASE_URL`, `GOOGLE_CLIENT_ID`, and
+`GOOGLE_CLIENT_SECRET` are required. The Google Cloud OAuth client must list
+`https://www.timezio.com/api/auth/google/callback` as an authorized redirect URI.
+
+## Database (Prisma + Postgres)
 
 1. Generate Prisma client and create the SQLite db:
 

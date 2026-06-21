@@ -1,13 +1,26 @@
 import { google, type calendar_v3 } from 'googleapis';
+import { SITE_URL } from '@/lib/site';
 
-export function getOAuthClient() {
-  const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REDIRECT_URI } = process.env;
+// In production the redirect URI is derived from the canonical www host, so the
+// only required env vars are the client id + secret. GOOGLE_REDIRECT_URI is only
+// consulted for local development (e.g. http://localhost:3000/...).
+function resolveRedirectUri(explicit?: string): string {
+  if (explicit) return explicit;
+  if (process.env.NODE_ENV === 'production') return `${SITE_URL}/api/auth/google/callback`;
+  return process.env.GOOGLE_REDIRECT_URI || 'http://localhost:3000/api/auth/google/callback';
+}
 
-  if (!GOOGLE_CLIENT_ID || !GOOGLE_CLIENT_SECRET || !GOOGLE_REDIRECT_URI) {
-    throw new Error('Missing Google OAuth environment variables');
+export function getOAuthClient(redirectUri?: string) {
+  const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } = process.env;
+
+  const missing: string[] = [];
+  if (!GOOGLE_CLIENT_ID) missing.push('GOOGLE_CLIENT_ID');
+  if (!GOOGLE_CLIENT_SECRET) missing.push('GOOGLE_CLIENT_SECRET');
+  if (missing.length) {
+    throw new Error(`Missing Google OAuth environment variables: ${missing.join(', ')}`);
   }
 
-  return new google.auth.OAuth2(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REDIRECT_URI);
+  return new google.auth.OAuth2(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, resolveRedirectUri(redirectUri));
 }
 
 function extractMeetLink(event?: calendar_v3.Schema$Event | null) {
