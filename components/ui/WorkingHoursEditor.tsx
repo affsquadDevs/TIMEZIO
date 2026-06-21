@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import styles from './ui.module.css';
 import type { WorkingHours } from '@/types/domain';
 import { timeToMinutes, minutesToTime } from '@/utils/time';
@@ -8,6 +9,7 @@ export function WorkingHoursEditor(props: {
   hours: WorkingHours;
   onChange: (hours: WorkingHours) => void;
 }) {
+  const t = useTranslations('ui.workingHours');
   const startMinutes = timeToMinutes(props.hours.start);
   const endMinutes = timeToMinutes(props.hours.end);
 
@@ -15,9 +17,9 @@ export function WorkingHoursEditor(props: {
     <div className={styles.card} style={{ padding: 14, width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
       <div className={styles.title} style={{ marginBottom: 12, wordBreak: 'break-word' }}>{props.participantName}</div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%' }}>
-        <div className={styles.label} style={{ marginBottom: 4 }}>Working hours</div>
+        <div className={styles.label} style={{ marginBottom: 4 }}>{t('workingHours')}</div>
         <div style={{ width: '100%' }}>
-          <div className={styles.label} style={{ marginBottom: 6 }}>Start</div>
+          <div className={styles.label} style={{ marginBottom: 6 }}>{t('start')}</div>
           <input
             type="time"
             value={props.hours.start}
@@ -32,7 +34,7 @@ export function WorkingHoursEditor(props: {
           />
         </div>
         <div style={{ width: '100%' }}>
-          <div className={styles.label} style={{ marginBottom: 6 }}>End</div>
+          <div className={styles.label} style={{ marginBottom: 6 }}>{t('end')}</div>
           <input
             type="time"
             value={props.hours.end}

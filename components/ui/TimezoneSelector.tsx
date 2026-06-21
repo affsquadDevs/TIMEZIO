@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { DateTime } from 'luxon';
 import ui from '@/components/ui/ui.module.css';
 import { getAllTimezones, formatTimezoneName, searchTimezones } from '@/utils/timezones';
@@ -15,6 +16,7 @@ interface TimezoneSelectorProps {
 }
 
 export function TimezoneSelector({ value, onChange, showSaveOption = false, showClearOption = false }: TimezoneSelectorProps) {
+  const t = useTranslations('ui.timezoneSelector');
   const { showToast } = useToast();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
@@ -79,7 +81,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
     if (currentValue) {
       saveUserTimezone(currentValue);
       setSavedTimezone(currentValue);
-      showToast(`Timezone "${formatTimezoneName(currentValue)}" saved!`, 'success');
+      showToast(t('savedToast', { name: formatTimezoneName(currentValue) }), 'success');
     }
   };
 
@@ -91,7 +93,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
       const browserTz = getCurrentUserTimezone();
       onChange(browserTz);
     }
-    showToast('Saved timezone cleared!', 'success');
+    showToast(t('clearedToast'), 'success');
   };
 
   return (
@@ -100,11 +102,11 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
         <div style={{ flex: 1, minWidth: 200 }}>
           <div className={ui.label} style={{ marginBottom: 4, fontSize: '12px' }} suppressHydrationWarning>
-            {isMounted && currentValue ? formatTimezoneName(currentValue) : (value || 'Select timezone')}
+            {isMounted && currentValue ? formatTimezoneName(currentValue) : (value || t('selectTimezone'))}
           </div>
           {isMounted && savedTimezone && (
             <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 4 }} suppressHydrationWarning>
-              Saved: {formatTimezoneName(savedTimezone)}
+              {t('savedLabel', { name: formatTimezoneName(savedTimezone) })}
             </div>
           )}
         </div>
@@ -113,16 +115,16 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
           onClick={() => setIsExpanded(!isExpanded)}
           style={{ fontSize: '12px', padding: '6px 12px' }}
         >
-          {isExpanded ? 'Hide' : 'Select'} Timezone
+          {isExpanded ? t('hideTimezone') : t('selectTimezoneButton')}
         </button>
         {showSaveOption && currentValue && (
           <button
             className={ui.btn}
             onClick={handleSave}
             style={{ fontSize: '12px', padding: '6px 12px' }}
-            title="Save timezone to localStorage"
+            title={t('saveTitle')}
           >
-            Save
+            {t('save')}
           </button>
         )}
         {showClearOption && savedTimezone && (
@@ -130,9 +132,9 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
             className={`${ui.btn} ${ui.btnDanger}`}
             onClick={handleClear}
             style={{ fontSize: '12px', padding: '6px 12px' }}
-            title="Clear saved timezone"
+            title={t('clearTitle')}
           >
-            Clear
+            {t('clear')}
           </button>
         )}
       </div>
@@ -144,7 +146,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
           <div style={{ marginBottom: 12 }}>
             <input
               type="text"
-              placeholder="Search timezone (e.g., Kyiv, New York, Tokyo)..."
+              placeholder={t('searchPlaceholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className={ui.input}
@@ -180,7 +182,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
                 </div>
               ) : (
                 <div className={ui.subtitle} style={{ fontSize: '12px', textAlign: 'center', padding: 16 }}>
-                  No timezones found for "{searchQuery}"
+                  {t('noResults', { query: searchQuery })}
                 </div>
               )}
             </div>
@@ -188,7 +190,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
             // Region selector
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               <div className={ui.label} style={{ fontSize: '12px', marginBottom: 4 }}>
-                Select Region:
+                {t('selectRegion')}
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                 {regions.map((region) => (
@@ -212,7 +214,7 @@ export function TimezoneSelector({ value, onChange, showSaveOption = false, show
               {selectedRegion && timezonesToShow.length > 0 && (
                 <div style={{ maxHeight: 300, overflowY: 'auto', borderTop: '1px solid var(--border)', paddingTop: 12 }}>
                   <div className={ui.label} style={{ fontSize: '12px', marginBottom: 8 }}>
-                    {selectedRegion} timezones:
+                    {t('regionTimezones', { region: selectedRegion })}
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                     {timezonesToShow.map((tz) => {

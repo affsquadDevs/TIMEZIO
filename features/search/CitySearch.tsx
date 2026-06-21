@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react';
+import { useTranslations } from 'next-intl';
 
 import ui from '@/components/ui/ui.module.css';
 import styles from './CitySearch.module.css';
@@ -24,7 +25,9 @@ type ApiResponse = {
   results?: CitySearchResult[];
 };
 
-export function CitySearch({ placeholder = 'Search city…', onPick }: CitySearchProps) {
+export function CitySearch({ placeholder, onPick }: CitySearchProps) {
+  const t = useTranslations('ui.citySearch');
+  const resolvedPlaceholder = placeholder ?? t('placeholder');
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<CitySearchResult[]>([]);
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
@@ -59,7 +62,7 @@ export function CitySearch({ placeholder = 'Search city…', onPick }: CitySearc
     })
       .then((res) => {
         if (!res.ok) {
-          throw new Error(`Unable to search (${res.status})`);
+          throw new Error(t('unableToSearchStatus', { status: res.status }));
         }
         return res.json() as Promise<ApiResponse>;
       })
@@ -71,7 +74,7 @@ export function CitySearch({ placeholder = 'Search city…', onPick }: CitySearc
       .catch((error) => {
         if (controller.signal.aborted || requestIdRef.current !== currentRequestId) return;
         setStatus('error');
-        setErrorMessage(error?.message ?? 'Unable to search cities');
+        setErrorMessage(error?.message ?? t('unableToSearchCities'));
       });
 
     return () => controller.abort();
@@ -87,12 +90,12 @@ export function CitySearch({ placeholder = 'Search city…', onPick }: CitySearc
 
   const helperMessage = useMemo(() => {
     if (query.length === 0) return undefined;
-    if (query.length < MIN_QUERY_LENGTH) return `Type at least ${MIN_QUERY_LENGTH} characters`;
-    if (status === 'loading') return 'Searching cities…';
-    if (status === 'error') return errorMessage ?? 'Unable to fetch cities';
-    if (results.length === 0) return 'No matches found';
+    if (query.length < MIN_QUERY_LENGTH) return t('typeAtLeast', { count: MIN_QUERY_LENGTH });
+    if (status === 'loading') return t('searchingCities');
+    if (status === 'error') return errorMessage ?? t('unableToFetchCities');
+    if (results.length === 0) return t('noMatchesFound');
     return undefined;
-  }, [query.length, status, errorMessage, results.length]);
+  }, [query.length, status, errorMessage, results.length, t]);
 
   const showDropdown = useMemo(() => {
     if (query.length === 0) return false;
@@ -142,7 +145,7 @@ export function CitySearch({ placeholder = 'Search city…', onPick }: CitySearc
       <input
         ref={inputRef}
         className={ui.input}
-        placeholder={placeholder}
+        placeholder={resolvedPlaceholder}
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         onKeyDown={handleKeyDown}

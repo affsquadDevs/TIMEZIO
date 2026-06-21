@@ -1,6 +1,8 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 // First-party consent UI wired to Google Consent Mode v2. Defaults are set to
 // "denied" in the document <head> before tags load; this banner flips them to
@@ -30,6 +32,7 @@ function applyConsent(value: Consent) {
 
 export function ConsentBanner() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations('consent');
 
   useEffect(() => {
     let stored: string | null = null;
@@ -83,12 +86,13 @@ export function ConsentBanner() {
       }}
     >
       <p style={{ margin: 0, flex: '1 1 320px', fontSize: '14px', lineHeight: 1.55, color: 'var(--text-secondary, #94a3b8)' }}>
-        We use cookies for analytics and to show ads (including Google AdSense). You can accept or reject non-essential
-        cookies. See our{' '}
-        <a href="/privacy" style={{ color: 'var(--highlight, #60a5fa)' }}>
-          Privacy Policy
-        </a>
-        .
+        {t.rich('message', {
+          link: (chunks) => (
+            <Link href="/privacy" style={{ color: 'var(--highlight, #60a5fa)' }}>
+              {chunks}
+            </Link>
+          ),
+        })}
       </p>
       <div style={{ display: 'flex', gap: '8px', flex: '0 0 auto' }}>
         <button
@@ -104,7 +108,7 @@ export function ConsentBanner() {
             cursor: 'pointer',
           }}
         >
-          Reject
+          {t('reject')}
         </button>
         <button
           onClick={() => choose('granted')}
@@ -122,7 +126,7 @@ export function ConsentBanner() {
             cursor: 'pointer',
           }}
         >
-          Accept all
+          {t('acceptAll')}
         </button>
       </div>
     </div>

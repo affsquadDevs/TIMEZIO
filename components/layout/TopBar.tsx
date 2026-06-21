@@ -1,8 +1,8 @@
 'use client';
 
 import { useMemo } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/navigation';
 import styles from './layout.module.css';
 import ui from '@/components/ui/ui.module.css';
 
@@ -10,9 +10,11 @@ import { useAppStore } from '@/store/useAppStore';
 import { buildShareUrl } from '@/utils/share';
 import { CopyButton } from '@/components/ui/CopyButton';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher';
 
 export function TopBar() {
   const pathname = usePathname();
+  const t = useTranslations('nav');
   const toggle24h = useAppStore((s) => s.toggle24h);
   const use24h = useAppStore((s) => s.use24h);
   const tab = useAppStore((s) => s.tab);
@@ -48,30 +50,29 @@ export function TopBar() {
         </Link>
 
         <nav className={styles.nav}>
-          <Link 
-            href="/blog" 
+          <Link
+            href="/blog"
             className={`${styles.navLink} ${isActive('/blog') ? styles.navLinkActive : ''}`}
           >
-            Blog
+            {t('blog')}
           </Link>
-          <Link 
-            href="/about" 
+          <Link
+            href="/about"
             className={`${styles.navLink} ${isActive('/about') ? styles.navLinkActive : ''}`}
           >
-            About
+            {t('about')}
           </Link>
         </nav>
       </div>
 
       <div className={styles.topActions}>
-        <button className={ui.btn} onClick={toggle24h} title="Toggle 12/24h">
+        <button className={ui.btn} onClick={toggle24h} title={t('toggleHourFormat')}>
           {use24h ? '24h' : '12h'}
         </button>
         <ThemeToggle />
-        <CopyButton text={shareUrl} label="Copy link" />
+        <LanguageSwitcher />
+        <CopyButton text={shareUrl} label={t('copyLink')} />
       </div>
     </header>
   );
 }
-
-

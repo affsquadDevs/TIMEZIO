@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { DateTime } from 'luxon';
 import tzLookup from 'tz-lookup';
 import ui from '@/components/ui/ui.module.css';
@@ -45,6 +46,7 @@ type SessionResponse = {
 };
 
 export function PlannerTab() {
+  const t = useTranslations('ui.plannerTab');
   const { showToast } = useToast();
   const now = useTicker(1000);
 
@@ -235,7 +237,7 @@ export function PlannerTab() {
   const handleCreateSession = async () => {
     resetMessages();
     if (!sessionForm.title) {
-      setError('Please provide title');
+      setError(t('errProvideTitle'));
       return;
     }
 
@@ -260,7 +262,7 @@ export function PlannerTab() {
       });
 
       setSession(data);
-      setMessage('Meeting session created');
+      setMessage(t('msgSessionCreated'));
 
       const savedUserTz = getUserTimezone();
       const tzToUse = savedUserTz || userTimezone;
@@ -319,13 +321,13 @@ export function PlannerTab() {
           }
 
           setSession(updated);
-          setMessage('Meeting session created with your timezone added automatically');
+          setMessage(t('msgSessionCreatedWithTz'));
         } catch (err) {
           console.error('Failed to add user timezone:', err);
         }
       }
     } catch (err: unknown) {
-      setError(getErrorMessage(err, 'Failed to create session'));
+      setError(getErrorMessage(err, t('errCreateSession')));
     }
   };
 
@@ -360,19 +362,19 @@ export function PlannerTab() {
     resetMessages();
 
     if (!session) {
-      setError('Create a session first');
+      setError(t('errCreateSessionFirst'));
       return;
     }
 
     if (!participantForm.name) {
-      setError('Name is required');
+      setError(t('errNameRequired'));
       return;
     }
 
     const selectedLoc = selected || (participants.length > 0 ? participants[participants.length - 1].location : null);
     
     if (!selectedLoc) {
-      setError('Please select a location on the globe or search for a city first');
+      setError(t('errSelectLocation'));
       return;
     }
 
@@ -407,9 +409,9 @@ export function PlannerTab() {
 
       setSession(updated);
       setParticipantForm({ name: '', email: '' });
-      setMessage('Participant added');
+      setMessage(t('msgParticipantAdded'));
     } catch (err: unknown) {
-      setError(getErrorMessage(err, 'Failed to add participant'));
+      setError(getErrorMessage(err, t('errAddParticipant')));
     }
   };
 
@@ -417,7 +419,7 @@ export function PlannerTab() {
     resetMessages();
 
     if (!session) {
-      showToast('Create a session first', 'error');
+      showToast(t('errCreateSessionFirst'), 'error');
       return;
     }
 
@@ -449,9 +451,9 @@ export function PlannerTab() {
       }
       
       setSession(updated);
-      setMessage('Participant added');
+      setMessage(t('msgParticipantAdded'));
     } catch (err: unknown) {
-      setError(getErrorMessage(err, 'Failed to add participant to backend'));
+      setError(getErrorMessage(err, t('errAddParticipantBackend')));
     }
   };
 
@@ -459,12 +461,12 @@ export function PlannerTab() {
     resetMessages();
 
     if (!session) {
-      setError('Create a session first');
+      setError(t('errCreateSessionFirst'));
       return;
     }
 
     if (session.participants.length < 2) {
-      setError('Add at least 2 participants first');
+      setError(t('errAddTwoParticipants'));
       return;
     }
 
@@ -485,16 +487,16 @@ export function PlannerTab() {
 
       setBackendSlots(data.proposedSlots);
       setSession((prev) => (prev ? { ...prev, proposedSlots: data.proposedSlots } : prev));
-      setMessage(`Generated ${data.proposedSlots.length} slots on backend`);
+      setMessage(t('msgGeneratedSlots', { count: data.proposedSlots.length }));
     } catch (err: unknown) {
-      setError(getErrorMessage(err, 'Failed to generate slots'));
+      setError(getErrorMessage(err, t('errGenerateSlots')));
     }
   };
 
   const handleConfirmMeet = async () => {
     resetMessages();
     if (!session || !selectedSlot) {
-      setError('Please create session and select slot first');
+      setError(t('errCreateSessionSelectSlot'));
       return;
     }
 
@@ -515,11 +517,11 @@ export function PlannerTab() {
       });
 
       setSession((prev) => (prev ? { ...prev, confirmedEvent: confirmed, selectedSlot: slotData } : prev));
-      setMessage(`Meet created! Link: ${confirmed.meetLink}`);
+      setMessage(t('msgMeetCreated', { link: confirmed.meetLink }));
       setConfirmSuccess(true);
       setTimeout(() => setConfirmSuccess(false), 1400);
     } catch (err: unknown) {
-      setError(getErrorMessage(err, 'Failed to create Meet'));
+      setError(getErrorMessage(err, t('errCreateMeet')));
     }
   };
 
@@ -527,10 +529,9 @@ export function PlannerTab() {
     <div className={ui.card} style={{ maxHeight: 'calc(100vh - 140px)', overflowY: 'auto', position: 'relative' }}>
       <div className={ui.cardBody} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <div>
-          <div className={ui.title}>Meeting Planner</div>
+          <div className={ui.title}>{t('heading')}</div>
           <div className={ui.subtitle}>
-            Add participants from different time zones, set their working hours, and find the best meeting times.
-            Choose between automatic slot finding or manual time selection. All calculations account for daylight saving time.
+            {t('intro')}
           </div>
         </div>
 
@@ -556,7 +557,7 @@ export function PlannerTab() {
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
-              {googleUser.name || googleUser.email || 'Connected'}
+              {googleUser.name || googleUser.email || t('connected')}
             </div>
           ) : (
             <a 
@@ -580,9 +581,9 @@ export function PlannerTab() {
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
               </svg>
-              Connect Google Calendar
+              {t('connectGoogleCalendar')}
               <span style={{ fontSize: '12px', opacity: 0.9, fontWeight: 400 }}>
-                (required for Meet links)
+                {t('requiredForMeet')}
               </span>
             </a>
           )}
@@ -591,7 +592,7 @@ export function PlannerTab() {
         <div className={ui.divider} />
 
         <div>
-          <div className={ui.label} style={{ marginBottom: 12 }}>Your Timezone</div>
+          <div className={ui.label} style={{ marginBottom: 12 }}>{t('yourTimezone')}</div>
           <TimezoneSelector
             value={userTimezone}
             onChange={(tz) => {
@@ -606,7 +607,7 @@ export function PlannerTab() {
           <div style={{ marginTop: 12 }}>
             <input
               type="text"
-              placeholder="Your name (optional)"
+              placeholder={t('yourNamePlaceholder')}
               value={userTimezoneName}
               onChange={(e) => setUserTimezoneName(e.target.value)}
               className={ui.input}
@@ -618,10 +619,10 @@ export function PlannerTab() {
         {!session && (
           <>
             <div>
-              <div className={ui.label} style={{ marginBottom: 8 }}>Create Meeting Session</div>
+              <div className={ui.label} style={{ marginBottom: 8 }}>{t('createMeetingSession')}</div>
               <input
                 type="text"
-                placeholder="Meeting Title"
+                placeholder={t('meetingTitlePlaceholder')}
                 value={sessionForm.title}
                 onChange={(e) => setSessionForm((prev) => ({ ...prev, title: e.target.value }))}
                 className={ui.input}
@@ -629,13 +630,13 @@ export function PlannerTab() {
               />
               <input
                 type="text"
-                placeholder="Description (optional)"
+                placeholder={t('descriptionPlaceholder')}
                 value={sessionForm.description}
                 onChange={(e) => setSessionForm((prev) => ({ ...prev, description: e.target.value }))}
                 className={ui.input}
               />
               <button className={ui.btn} onClick={handleCreateSession} style={{ marginTop: 8, width: '100%' }}>
-                Create Session
+                {t('createSession')}
               </button>
             </div>
             {error && <div style={{ color: '#ef4444', fontSize: '13px' }}>{error}</div>}
@@ -646,12 +647,12 @@ export function PlannerTab() {
         {session && (
           <>
             <div>
-              <div className={ui.title} style={{ fontSize: 14 }}>Session: {session.title}</div>
+              <div className={ui.title} style={{ fontSize: 14 }}>{t('sessionLabel', { title: session.title })}</div>
               {session.description && <div className={ui.subtitle} style={{ fontSize: '12px' }}>{session.description}</div>}
             </div>
 
             <div>
-              <div className={ui.label} style={{ marginBottom: 12, fontSize: '11px', fontWeight: 600, letterSpacing: '0.5px' }}>MODE</div>
+              <div className={ui.label} style={{ marginBottom: 12, fontSize: '11px', fontWeight: 600, letterSpacing: '0.5px' }}>{t('mode')}</div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
                 <button
                   onClick={() => setPlannerMode('auto')}
@@ -688,10 +689,10 @@ export function PlannerTab() {
                       <circle cx="11" cy="11" r="8"></circle>
                       <path d="m21 21-4.35-4.35"></path>
                     </svg>
-                    <span style={{ fontWeight: 600, fontSize: '14px' }}>Auto Find Slots</span>
+                    <span style={{ fontWeight: 600, fontSize: '14px' }}>{t('autoFindSlots')}</span>
                   </div>
                   <div style={{ fontSize: '12px', opacity: 0.9, lineHeight: 1.4 }}>
-                    System finds optimal meeting times by analyzing working hours overlap across all participants
+                    {t('autoFindSlotsDesc')}
                   </div>
                 </button>
                 <button
@@ -729,10 +730,10 @@ export function PlannerTab() {
                       <circle cx="12" cy="12" r="10"></circle>
                       <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
-                    <span style={{ fontWeight: 600, fontSize: '14px' }}>Manual Time Pick</span>
+                    <span style={{ fontWeight: 600, fontSize: '14px' }}>{t('manualTimePick')}</span>
                   </div>
                   <div style={{ fontSize: '12px', opacity: 0.9, lineHeight: 1.4 }}>
-                    You choose a specific time, and the system converts it to all participants' time zones
+                    {t('manualTimePickDesc')}
                   </div>
                 </button>
               </div>
@@ -746,23 +747,23 @@ export function PlannerTab() {
                 lineHeight: 1.5
               }}>
                 <div style={{ fontWeight: 600, marginBottom: 4, color: 'var(--text-primary)' }}>
-                  {planner.mode === 'auto' ? 'How Auto Find Works:' : 'How Manual Pick Works:'}
+                  {planner.mode === 'auto' ? t('howAutoFindWorks') : t('howManualPickWorks')}
                 </div>
                 {planner.mode === 'auto' ? (
                   <ul style={{ margin: 0, paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <li>Analyzes working hours of all participants</li>
-                    <li>Finds time windows where everyone is available</li>
-                    <li>Generates slots every 15 minutes within overlap</li>
-                    <li>Ranks slots by quality (time of day, work hours position)</li>
-                    <li>Shows best options first (sorted by quality score)</li>
+                    <li>{t('autoBullet1')}</li>
+                    <li>{t('autoBullet2')}</li>
+                    <li>{t('autoBullet3')}</li>
+                    <li>{t('autoBullet4')}</li>
+                    <li>{t('autoBullet5')}</li>
                   </ul>
                 ) : (
                   <ul style={{ margin: 0, paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <li>Select a time in one participant's timezone</li>
-                    <li>System converts to UTC internally</li>
-                    <li>Displays the same moment in all other timezones</li>
-                    <li>Perfect for fixed meeting times or specific schedules</li>
-                    <li>All calculations respect DST transitions</li>
+                    <li>{t('manualBullet1')}</li>
+                    <li>{t('manualBullet2')}</li>
+                    <li>{t('manualBullet3')}</li>
+                    <li>{t('manualBullet4')}</li>
+                    <li>{t('manualBullet5')}</li>
                   </ul>
                 )}
               </div>
@@ -771,7 +772,7 @@ export function PlannerTab() {
             <div className={ui.divider} />
 
             <div>
-              <div className={ui.label} style={{ marginBottom: 8 }}>Duration</div>
+              <div className={ui.label} style={{ marginBottom: 8 }}>{t('duration')}</div>
               <div className={ui.pillRow}>
                 {[15, 30, 45, 60, 90, 120].map((mins) => (
                   <button
@@ -780,14 +781,14 @@ export function PlannerTab() {
                     onClick={() => setPlannerDuration(mins as 15 | 30 | 45 | 60 | 90 | 120)}
                     style={{ fontSize: '12px', padding: '6px 10px' }}
                   >
-                    {mins === 120 ? '2 hours' : `${mins} min`}
+                    {mins === 120 ? t('twoHours') : t('minutes', { mins })}
                   </button>
                 ))}
               </div>
             </div>
 
             <div>
-              <div className={ui.label} style={{ marginBottom: 8 }}>Date</div>
+              <div className={ui.label} style={{ marginBottom: 8 }}>{t('date')}</div>
               <DatePicker
                 value={planner.date}
                 onChange={setPlannerDate}
@@ -795,7 +796,7 @@ export function PlannerTab() {
             </div>
 
             <div>
-              <div className={ui.label} style={{ marginBottom: 12 }}>Preferences</div>
+              <div className={ui.label} style={{ marginBottom: 12 }}>{t('preferences')}</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                 <button
                   type="button"
@@ -850,10 +851,10 @@ export function PlannerTab() {
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                       <span style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text-primary)' }}>
-                        Include weekends
+                        {t('includeWeekends')}
                       </span>
                       <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
-                        Allow slots on Sat/Sun using default working hours
+                        {t('includeWeekendsDesc')}
                       </span>
                     </div>
                   </div>
@@ -916,9 +917,9 @@ export function PlannerTab() {
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                       <span style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text-primary)' }}>
-                        Avoid meetings before 8 AM
+                        {t('avoidEarly')}
                       </span>
-                      <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>Local time</span>
+                      <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>{t('localTime')}</span>
                     </div>
                   </div>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--text-secondary)', flexShrink: 0 }}>
@@ -980,9 +981,9 @@ export function PlannerTab() {
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                       <span style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text-primary)' }}>
-                        Avoid meetings after 8 PM
+                        {t('avoidLate')}
                       </span>
-                      <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>Local time</span>
+                      <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>{t('localTime')}</span>
                     </div>
                   </div>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--text-secondary)', flexShrink: 0 }}>
@@ -1044,9 +1045,9 @@ export function PlannerTab() {
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                       <span style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text-primary)' }}>
-                        Avoid lunch time
+                        {t('avoidLunch')}
                       </span>
-                      <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>12:00-13:00</span>
+                      <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>{t('lunchTime')}</span>
                     </div>
                   </div>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--text-secondary)', flexShrink: 0 }}>
@@ -1062,10 +1063,10 @@ export function PlannerTab() {
 
             <div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                <div className={ui.label}>Add Participant</div>
+                <div className={ui.label}>{t('addParticipant')}</div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <span style={{ fontSize: '12px', color: participantAddMode === 'simple' ? 'var(--text-primary)' : 'var(--text-secondary)', fontWeight: participantAddMode === 'simple' ? 500 : 400 }}>
-                    Quick
+                    {t('quick')}
                   </span>
                   <button
                     type="button"
@@ -1097,21 +1098,21 @@ export function PlannerTab() {
                     />
                   </button>
                   <span style={{ fontSize: '12px', color: participantAddMode === 'detailed' ? 'var(--text-primary)' : 'var(--text-secondary)', fontWeight: participantAddMode === 'detailed' ? 500 : 400 }}>
-                    With Email
+                    {t('withEmail')}
                   </span>
                 </div>
               </div>
               
               {participantAddMode === 'simple' ? (
                 <CitySearch
-                  placeholder="Search city to add quickly…"
+                  placeholder={t('searchCityPlaceholder')}
                   onPick={handleAddParticipantFromGlobe}
                 />
               ) : (
                 <form onSubmit={handleAddParticipantFromForm} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                   <input
                     type="text"
-                    placeholder="Name *"
+                    placeholder={t('namePlaceholder')}
                     value={participantForm.name}
                     onChange={(e) => setParticipantForm((prev) => ({ ...prev, name: e.target.value }))}
                     className={ui.input}
@@ -1119,16 +1120,16 @@ export function PlannerTab() {
                   />
                   <input
                     type="email"
-                    placeholder="Email (optional, for calendar invites)"
+                    placeholder={t('emailPlaceholder')}
                     value={participantForm.email}
                     onChange={(e) => setParticipantForm((prev) => ({ ...prev, email: e.target.value }))}
                     className={ui.input}
                   />
                   <button className={`${ui.btn} ${ui.btnPrimary}`} type="submit" style={{ width: '100%' }}>
-                    Add Participant
+                    {t('addParticipant')}
                   </button>
                   <div style={{ fontSize: '11px', color: 'var(--text-secondary)', lineHeight: 1.4, marginTop: -4 }}>
-                    Click on the globe or search for a city first to select location
+                    {t('clickGlobeHint')}
                   </div>
                 </form>
               )}
@@ -1170,11 +1171,11 @@ export function PlannerTab() {
                     }
                   }}
                 >
-                  Add all from Compare ({compare.items.length})
+                  {t('addAllFromCompare', { count: compare.items.length })}
                 </button>
               )}
               <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 8 }}>
-                Click on the globe to select a location, then fill the form above
+                {t('clickGlobeFormHint')}
               </div>
             </div>
 
@@ -1183,7 +1184,7 @@ export function PlannerTab() {
                 <div className={ui.divider} />
                 <div>
                   <div className={ui.title} style={{ fontSize: 14, marginBottom: 8 }}>
-                    Participants ({Math.max(participants.length, session.participants.length)})
+                    {t('participantsCount', { count: Math.max(participants.length, session.participants.length) })}
                   </div>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                     {session.participants.map((backendPpt) => {
@@ -1223,7 +1224,7 @@ export function PlannerTab() {
                                 }
                               }}
                             >
-                              Remove
+                              {t('remove')}
                             </button>
                           </div>
                           {frontendPpt && (
@@ -1251,18 +1252,18 @@ export function PlannerTab() {
                             className={ui.btn}
                             style={{ fontSize: 12, padding: '6px 10px' }}
                             onClick={() => {
-                              const newName = prompt('Name:', ppt.name);
+                              const newName = prompt(t('namePrompt'), ppt.name);
                               if (newName) updatePlannerParticipantName(ppt.id, newName);
                             }}
                           >
-                            Rename
+                            {t('rename')}
                           </button>
                           <button
                             className={`${ui.btn} ${ui.btnDanger}`}
                             style={{ fontSize: 12, padding: '6px 10px' }}
                             onClick={() => removePlannerParticipant(ppt.id)}
                           >
-                            Remove
+                            {t('remove')}
                           </button>
                         </div>
                       </div>
@@ -1276,10 +1277,10 @@ export function PlannerTab() {
               <>
                 <div className={ui.divider} />
                 <div>
-                  <div className={ui.label} style={{ marginBottom: 12 }}>Select Time</div>
+                  <div className={ui.label} style={{ marginBottom: 12 }}>{t('selectTime')}</div>
                   {participants.length > 0 && (
                     <div>
-                      <div className={ui.label} style={{ marginBottom: 6, fontSize: '12px' }}>Base Timezone</div>
+                      <div className={ui.label} style={{ marginBottom: 6, fontSize: '12px' }}>{t('baseTimezone')}</div>
                       <select
                         className={ui.input}
                         value={planner.manualTimeBaseParticipantId || participants[0]?.id || ''}
@@ -1294,7 +1295,7 @@ export function PlannerTab() {
                           const loc = locationsById[ppt.locationId];
                           return (
                             <option key={ppt.id} value={ppt.id}>
-                              {ppt.name} ({loc?.tz || 'Unknown'})
+                              {ppt.name} ({loc?.tz || t('unknown')})
                             </option>
                           );
                         })}
@@ -1303,10 +1304,10 @@ export function PlannerTab() {
                   )}
                   <div>
                     <div className={ui.label} style={{ marginBottom: 8, fontSize: '12px' }}>
-                      Meeting Time{' '}
+                      {t('meetingTime')}{' '}
                       {participants.length > 0
-                        ? `(${participants.find((p) => p.id === planner.manualTimeBaseParticipantId)?.name || participants[0]?.name || 'UTC'}'s timezone)`
-                        : '(UTC)'}
+                        ? t('meetingTimeTzSuffix', { name: participants.find((p) => p.id === planner.manualTimeBaseParticipantId)?.name || participants[0]?.name || 'UTC' })
+                        : t('meetingTimeUtcSuffix')}
                     </div>
                     <TimePicker
                       value={planner.manualTime || manualTimeInput || '14:00'}
@@ -1334,7 +1335,7 @@ export function PlannerTab() {
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8, flexWrap: 'wrap', gap: 8 }}>
                     <div className={ui.title} style={{ fontSize: 14, margin: 0 }}>
-                      Available Slots
+                      {t('availableSlots')}
                     </div>
                     {session && backendSlots.length === 0 && (
                       <button
@@ -1342,7 +1343,7 @@ export function PlannerTab() {
                         onClick={handleGenerateSlotsBackend}
                         style={{ fontSize: 12, padding: '6px 12px' }}
                       >
-                        Generate slots
+                        {t('generateSlots')}
                       </button>
                     )}
                   </div>
@@ -1350,9 +1351,9 @@ export function PlannerTab() {
                   {backendSlots.length === 0 && slots.length === 0 ? (
                     <div className={ui.subtitle}>
                       {session ? (
-                        'Click "Generate slots" to find available meeting times. Or adjust working hours/date and try again.'
+                        t('emptySlotsWithSession')
                       ) : (
-                        'Create a session first, then add at least 2 participants and set their working hours to find available meeting times.'
+                        t('emptySlotsNoSession')
                       )}
                     </div>
                   ) : (
@@ -1365,7 +1366,7 @@ export function PlannerTab() {
                                 const backendSlot = backendSlots.find((bs) => bs.startUtcISO === slot.startUtc);
                         const qualityScore = backendSlot?.score ?? slot.qualityScore ?? 0;
                         const qualityColor = qualityScore >= 80 ? '#22c55e' : qualityScore >= 60 ? '#eab308' : '#ef4444';
-                        const qualityLabel = qualityScore >= 80 ? 'Great' : qualityScore >= 60 ? 'Good' : 'Fair';
+                        const qualityLabel = qualityScore >= 80 ? t('qualityGreat') : qualityScore >= 60 ? t('qualityGood') : t('qualityFair');
 
                         return (
                           <div
@@ -1407,14 +1408,14 @@ export function PlannerTab() {
                                     fontWeight: 600,
                                     border: `1px solid ${qualityColor}40`,
                                   }}
-                                  title={`Quality score: ${qualityScore.toFixed(0)}/100`}
+                                  title={t('qualityScoreTitle', { score: qualityScore.toFixed(0) })}
                                 >
                                   {qualityLabel}
                                 </div>
                               </div>
                               {isSelected && (
                                 <span className={ui.badge} style={{ fontSize: 11, backgroundColor: 'var(--highlight)', color: 'var(--background)' }}>
-                                  Selected
+                                  {t('selected')}
                                 </span>
                               )}
                             </div>
@@ -1473,7 +1474,7 @@ export function PlannerTab() {
                                     if (!loc || !localTime) return null;
 
                                             const hour = localTimeFull?.hour ?? parseInt(localTime.split(':')[0]);
-                                            const timeLabel = hour < 12 ? 'Morning' : hour < 17 ? 'Afternoon' : hour < 21 ? 'Evening' : 'Night';
+                                            const timeLabel = hour < 12 ? t('morning') : hour < 17 ? t('afternoon') : hour < 21 ? t('evening') : t('night');
                                             const tz = (loc as { tz?: string })?.tz || (ppt as { timezone?: string }).timezone || 'UTC';
 
                                     return (
@@ -1510,7 +1511,7 @@ export function PlannerTab() {
                       })}
                       {availableSlots.length > 15 && (
                         <div className={ui.subtitle} style={{ textAlign: 'center', padding: 8 }}>
-                          Showing top 15 of {availableSlots.length} available slots (sorted by quality)
+                          {t('showingTopSlots', { total: availableSlots.length })}
                         </div>
                       )}
                     </div>
@@ -1525,12 +1526,12 @@ export function PlannerTab() {
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12, flexWrap: 'wrap', gap: 8 }}>
                     <div className={ui.title} style={{ fontSize: 14, margin: 0 }}>
-                      {planner.mode === 'manual' ? 'Selected Time' : 'Selected Slot'}
+                      {planner.mode === 'manual' ? t('selectedTime') : t('selectedSlot')}
                     </div>
                   </div>
                   <div className={ui.card} style={{ padding: 12, backgroundColor: 'var(--card-bg)', marginBottom: 12 }}>
                     <TimeRow
-                      label="UTC Time"
+                      label={t('utcTime')}
                       value={`${DateTime.fromISO(selectedSlot.startUtc).toFormat('HH:mm')} - ${DateTime.fromISO(selectedSlot.startUtc).plus({ minutes: planner.durationMinutes }).toFormat('HH:mm')}`}
                       mono
                     />
@@ -1555,7 +1556,7 @@ export function PlannerTab() {
                           <div key={pptId} className={ui.card} style={{ padding: 10 }}>
                             <TimeRow label={`${ppt.name}`} value={`${localTime} (${dateStr})`} mono />
                             <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginTop: 4 }}>
-                              {tz} • {hour >= 6 && hour < 18 ? 'Daytime' : 'Nighttime'}
+                              {tz} • {hour >= 6 && hour < 18 ? t('daytime') : t('nighttime')}
                             </div>
                           </div>
                         );
@@ -1586,7 +1587,7 @@ export function PlannerTab() {
                           <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                           <polyline points="22 4 12 14.01 9 11.01" />
                         </svg>
-                        Confirmed
+                        {t('confirmed')}
                       </>
                     ) : (
                       <>
@@ -1594,7 +1595,7 @@ export function PlannerTab() {
                           <polyline points="9 11 12 14 22 4" />
                           <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
                         </svg>
-                        Confirm & Create Google Meet
+                        {t('confirmCreateMeet')}
                       </>
                     )}
                   </button>
@@ -1605,7 +1606,7 @@ export function PlannerTab() {
             {planner.mode === 'manual' && participants.length === 0 && (
               <div className={ui.card} style={{ padding: 16, textAlign: 'center', backgroundColor: 'var(--card-bg)', borderStyle: 'dashed' }}>
                 <div className={ui.subtitle} style={{ margin: 0 }}>
-                  Add at least one participant to convert time to different time zones
+                  {t('manualNeedParticipant')}
                 </div>
               </div>
             )}
@@ -1614,8 +1615,8 @@ export function PlannerTab() {
               <div className={ui.card} style={{ padding: 16, textAlign: 'center', backgroundColor: 'var(--card-bg)', borderStyle: 'dashed' }}>
                 <div className={ui.subtitle} style={{ margin: 0 }}>
                   {participants.length === 0
-                    ? 'Add at least 2 participants to start finding meeting slots'
-                    : 'Add one more participant to find available meeting times'}
+                    ? t('autoNeedTwoParticipants')
+                    : t('autoNeedOneMoreParticipant')}
                 </div>
               </div>
             )}
@@ -1624,14 +1625,14 @@ export function PlannerTab() {
               <>
                 <div className={ui.divider} />
                 <div>
-                  <div className={ui.title} style={{ fontSize: 14, marginBottom: 8 }}>Meeting Confirmed</div>
+                  <div className={ui.title} style={{ fontSize: 14, marginBottom: 8 }}>{t('meetingConfirmed')}</div>
                   <div className={ui.card} style={{ padding: 12, backgroundColor: '#22c55e20', borderColor: '#22c55e' }}>
-                    <div style={{ fontSize: '13px', marginBottom: 8, fontWeight: 600 }}>Google Meet Link:</div>
+                    <div style={{ fontSize: '13px', marginBottom: 8, fontWeight: 600 }}>{t('googleMeetLink')}</div>
                     <a href={session.confirmedEvent.meetLink} target="_blank" rel="noopener noreferrer" className={ui.link} style={{ wordBreak: 'break-all' }}>
                       {session.confirmedEvent.meetLink}
                     </a>
                     <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: 8 }}>
-                      Event ID: {session.confirmedEvent.eventId}
+                      {t('eventId', { id: session.confirmedEvent.eventId })}
                     </div>
                   </div>
                 </div>

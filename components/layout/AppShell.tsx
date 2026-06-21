@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useRef } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import styles from '@/components/layout/layout.module.css';
 import ui from '@/components/ui/ui.module.css';
 import GlobeCanvas, { GlobeCanvasHandle } from '@/components/globe/GlobeCanvas';

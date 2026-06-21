@@ -1,0 +1,1592 @@
+{
+  "common": {
+    "appName": "Timezio",
+    "breadcrumbHome": "Inicio",
+    "faqTitle": "Preguntas frecuentes",
+    "backToHome": "Volver al inicio",
+    "legalDisclaimer": "Esta página es una traducción asistida por máquina que se ofrece por comodidad. La versión en inglés es la versión oficial."
+  },
+  "nav": {
+    "blog": "Blog",
+    "about": "Acerca de",
+    "toggleHourFormat": "Cambiar 12/24 h",
+    "copyLink": "Copiar enlace"
+  },
+  "language": {
+    "label": "Idioma",
+    "select": "Seleccionar idioma"
+  },
+  "meta": {
+    "home": {
+      "title": "Timezio – Conversor de zonas horarias y planificador de reuniones",
+      "description": "Conversor instantáneo de zonas horarias, reloj mundial, planificador de reuniones con horario de verano y comparación de zonas horarias en un globo interactivo."
+    },
+    "explore": {
+      "title": "Explora las zonas horarias en un globo",
+      "description": "Explora las zonas horarias en un globo 3D interactivo. Consulta la hora actual, el desfase UTC y el estado del horario de verano de cualquier ubicación."
+    },
+    "compare": {
+      "title": "Compara zonas horarias",
+      "description": "Compara zonas horarias en paralelo con desfases que tienen en cuenta el horario de verano. Visualiza ubicaciones en un globo interactivo y evita errores al planificar."
+    },
+    "planner": {
+      "title": "Planificador de reuniones entre zonas horarias",
+      "description": "Planifica reuniones entre zonas horarias con horarios laborales, ventanas de coincidencia y cálculos que tienen en cuenta el horario de verano."
+    },
+    "saved": {
+      "title": "Ubicaciones y zonas horarias guardadas",
+      "description": "Guarda las ubicaciones que usas con frecuencia y vuelve rápidamente a su hora actual, desfase y estado del horario de verano."
+    },
+    "timeConverter": {
+      "title": "Conversor de zonas horarias: compara horas, planifica reuniones y explora ciudades",
+      "description": "Compara zonas horarias entre ciudades, planifica reuniones entre regiones y explora las horas locales de todo el mundo. Tiene en cuenta el horario de verano, es preciso y gratuito."
+    },
+    "meetingPlanner": {
+      "title": "Planificador de reuniones"
+    },
+    "convertHub": {
+      "title": "Conversores de zonas horarias populares",
+      "description": "Convierte la hora entre zonas al instante: PST a EST, UTC a EST, GMT a EST, CET a EST, IST a EST y más. Cada conversor tiene en cuenta el horario de verano y muestra una tabla completa hora por hora."
+    },
+    "timeHub": {
+      "title": "Hora actual en las principales ciudades del mundo",
+      "description": "Consulta la hora local actual en ciudades de todo el mundo. Cada página muestra la hora local en directo, el desfase UTC, la zona horaria y el estado del horario de verano, teniendo en cuenta el horario de verano y actualizado en tiempo real."
+    },
+    "meetingHub": {
+      "title": "Las mejores horas de reunión entre zonas horarias",
+      "description": "Encuentra horarios laborales coincidentes para pares de ciudades populares. Cada página muestra una tabla de horas compartidas y el mejor momento, teniendo plenamente en cuenta el horario de verano."
+    },
+    "dstHub": {
+      "title": "Comprobador del horario de verano",
+      "description": "¿Una región está aplicando ahora mismo el horario de verano? Consulta el estado del horario de verano, el desfase UTC actual y las fechas exactas del próximo cambio de hora en países de todo el mundo."
+    },
+    "time": {
+      "title": "Hora actual en {city}",
+      "description": "Consulta la hora local actual en {city}, con el desfase UTC y el estado del horario de verano."
+    },
+    "convert": {
+      "title": "Conversor de hora de {from} a {to}",
+      "description": "Convierte de {from} a {to} con una tabla completa hora por hora, teniendo en cuenta el horario de verano y usando datos oficiales de IANA."
+    },
+    "meeting": {
+      "title": "Mejor hora de reunión: {a} ↔ {b}",
+      "description": "Encuentra los horarios laborales coincidentes y la mejor hora de reunión entre {a} y {b}, teniendo plenamente en cuenta el horario de verano."
+    },
+    "dst": {
+      "title": "Horario de verano de {region}",
+      "description": "Estado del horario de verano, el desfase UTC actual y las fechas del próximo cambio de hora para {region}."
+    },
+    "privacy": {
+      "title": "Política de Privacidad",
+      "description": "Cómo Timezio recopila, usa y protege la información en cumplimiento del RGPD y las leyes de protección de datos aplicables."
+    },
+    "terms": {
+      "title": "Términos del Servicio",
+      "description": "Términos y condiciones para usar las herramientas de zonas horarias, los conversores y el planificador de reuniones de Timezio."
+    },
+    "about": {
+      "title": "Acerca de Timezio",
+      "description": "Timezio es un conversor de zonas horarias, reloj mundial y planificador de reuniones gratuito que tiene en cuenta el horario de verano, creado por AffSquad. Descubre quién lo gestiona, cómo funciona y los datos en los que se basa."
+    },
+    "contact": {
+      "title": "Contacta con el soporte de Timezio",
+      "description": "Obtén ayuda, informa de problemas o solicita funciones para las herramientas de zonas horarias de Timezio. Respondemos a comentarios y consultas de soporte."
+    },
+    "blogIndex": {
+      "title": "Guías de zonas horarias y consejos de trabajo remoto",
+      "description": "Guías detalladas sobre zonas horarias, horario de verano, colaboración remota y cómo usar Timezio de forma eficaz."
+    }
+  },
+  "footer": {
+    "productTitle": "PRODUCTO",
+    "exploreTitle": "EXPLORAR",
+    "popularTitle": "POPULARES",
+    "legalTitle": "LEGAL",
+    "home": "Inicio",
+    "exploreGlobe": "Explorar el globo",
+    "compareZones": "Comparar zonas",
+    "meetingPlanner": "Planificador de reuniones",
+    "timeConverter": "Conversor de hora",
+    "worldClock": "Reloj mundial",
+    "converters": "Conversores",
+    "meetingTimes": "Horas de reunión",
+    "daylightSaving": "Horario de verano",
+    "blog": "Blog",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos del Servicio",
+    "cookieSettings": "Configuración de cookies",
+    "copyright": "© {year} Timezio de AffSquad. Todos los derechos reservados.",
+    "disclaimer": "La información de este sitio web se ofrece únicamente como referencia general. No se garantiza su exactitud. No se acepta responsabilidad alguna en la medida en que lo permita la legislación de la UE. Pueden utilizarse cookies o tecnologías similares para análisis y publicidad de acuerdo con tus opciones de consentimiento.",
+    "privacyShort": "Privacidad",
+    "termsShort": "Términos"
+  },
+  "consent": {
+    "message": "Usamos cookies para análisis y para mostrar anuncios (incluido Google AdSense). Puedes aceptar o rechazar las cookies no esenciales. Consulta nuestra <link>Política de Privacidad</link>.",
+    "reject": "Rechazar",
+    "acceptAll": "Aceptar todo"
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexDescription": "Artículos y guías sobre zonas horarias, trabajo remoto y cómo aprovechar Timezio al máximo.",
+    "readMore": "Leer más",
+    "backToBlog": "Volver al blog",
+    "byTeam": "Por el equipo de Timezio",
+    "toolsTitle": "Herramientas de Timezio",
+    "relatedTitle": "Artículos relacionados",
+    "tools": [
+      {
+        "title": "Explorar el globo",
+        "desc": "Haz clic en cualquier punto del globo interactivo para ver la hora local"
+      },
+      {
+        "title": "Comparar zonas horarias",
+        "desc": "Compara las diferencias horarias entre varias ciudades"
+      },
+      {
+        "title": "Planificador de reuniones",
+        "desc": "Encuentra la mejor hora para reunir a personas en distintas ubicaciones"
+      },
+      {
+        "title": "Rastreador de horario de verano",
+        "desc": "Sigue los cambios y transiciones del horario de verano"
+      },
+      {
+        "title": "Conversor de hora",
+        "desc": "Convierte horas UTC o locales entre zonas horarias"
+      }
+    ]
+  },
+  "home": {
+    "badges": [
+      "En vivo y con DST",
+      "Sin registro",
+      "Gratis para siempre"
+    ],
+    "title": "Planifica entre zonas horarias sin complicaciones.",
+    "lede": "Timezio te ayuda a comparar zonas horarias, convertir UTC y fijar horarios de reuniones entre ciudades. Cada cálculo tiene en cuenta el horario de verano (DST) y se basa en datos oficiales de la IANA.",
+    "ctaPlanner": "Planificar una reunión",
+    "ctaConverter": "Abrir el conversor",
+    "highlights": [
+      {
+        "title": "Compatible con DST",
+        "body": "Funciona con datos oficiales de zonas horarias de la IANA, actualizados automáticamente."
+      },
+      {
+        "title": "Más de 10.000 ciudades",
+        "body": "Cubre todos los desfases, incluidas las diferencias de 30 y 45 minutos."
+      },
+      {
+        "title": "Listo para compartir",
+        "body": "Copia enlaces limpios y envía el plan horario exacto a tu equipo."
+      }
+    ],
+    "panelEyebrow": "Vista en vivo",
+    "panelTitle": "Lo que está pasando ahora mismo",
+    "panelBadge": "DST verificado",
+    "panelFooter": "Ejemplos en vivo. Los desfases poco habituales y las reglas del horario de verano se gestionan automáticamente.",
+    "toolkitEyebrow": "Herramientas",
+    "toolkitTitle": "Todo lo que necesitas para coordinar horarios globales",
+    "toolkitBody": "Cambia entre el planificador, el conversor y la comparación de ciudades sin perder el contexto.",
+    "tools": [
+      {
+        "label": "Planificador de reuniones",
+        "desc": "Encuentra automáticamente horarios con buena coincidencia y evita que alguien tenga que trasnochar.",
+        "badge": "Favorito del equipo"
+      },
+      {
+        "label": "Conversor de horas",
+        "desc": "Convierte horas UTC o locales, previsualiza fechas futuras y comparte los resultados al instante.",
+        "badge": "El más usado"
+      },
+      {
+        "label": "Comparar ciudades",
+        "desc": "Coloca varias ciudades una al lado de otra para ver las diferencias exactas de un vistazo.",
+        "badge": ""
+      },
+      {
+        "label": "Explorar el globo",
+        "desc": "Navega por el globo interactivo y salta directamente a cualquier ciudad o región.",
+        "badge": ""
+      }
+    ],
+    "toolOpen": "Abrir →",
+    "whyEyebrow": "Por qué Timezio",
+    "whyTitle": "Preciso por defecto, amigable por diseño",
+    "whyBody": "Creado para equipos remotos, autónomos y amigos repartidos por todo el mundo.",
+    "values": [
+      {
+        "title": "Cálculos precisos de zonas horarias",
+        "body": "Compara las horas locales entre ciudades con ajuste automático del horario de verano y los desfases UTC regionales."
+      },
+      {
+        "title": "Conversión de hora UTC y local",
+        "body": "Convierte UTC a hora local (y viceversa) para cualquier ciudad — con soporte para fechas pasadas, presentes o futuras."
+      },
+      {
+        "title": "Planificador de reuniones entre zonas horarias",
+        "body": "Encuentra el mejor horario de reunión que coincida para participantes en distintas ciudades, sin madrugones ni trasnoches."
+      },
+      {
+        "title": "Rápido, sencillo y gratis",
+        "body": "Sin cuentas, sin configuración, sin complicaciones. Solo respuestas claras, al instante."
+      },
+      {
+        "title": "Compatible con DST y fiable",
+        "body": "Timezio utiliza datos oficiales de zonas horarias de la IANA. Todos los resultados se ajustan automáticamente a los cambios del horario de verano y a las reglas regionales."
+      },
+      {
+        "title": "Diseñado para uso global",
+        "body": "Admite regiones con desfases no estándar (incluidas diferencias de 30 o 45 minutos) y cambios de fecha al cruzar zonas horarias."
+      }
+    ]
+  },
+  "pages": {
+    "explore": {
+      "heading": "Explorar zonas horarias",
+      "description": "Elige cualquier punto del globo para ver la hora local, el desfase UTC y el estado del horario de verano. Usa Explorar para entender dónde cambia la hora al cruzar fronteras.",
+      "breadcrumb": "Explorar",
+      "ctas": [
+        "Hora actual en las principales ciudades",
+        "Conversores de zonas horarias populares",
+        "Verificador del horario de verano"
+      ],
+      "articleH2": "Cómo explorar el globo",
+      "articleParagraphs": [
+        "El globo 3D interactivo convierte las zonas horarias en algo que puedes ver en lugar de calcular. Haz clic en cualquier lugar y Timezio lee su latitud y longitud exactas, busca la zona horaria IANA correspondiente y muestra la hora local actual, el desfase UTC y si el horario de verano está en vigor en ese momento. Como los datos provienen de la base de datos oficial de zonas horarias de la IANA, también cubre los casos complicados: desfases de media hora como India (UTC+5:30), desfases de 45 minutos como Nepal y regiones que cambian sus relojes en fechas distintas.",
+        "Explorar es la forma más rápida de responder “¿qué hora es allí ahora mismo?” sin escribir el nombre de una ciudad. Gira el globo hasta un continente, haz clic en una costa y lee la hora al instante. Cuando quieras alinear varios lugares a la vez, cambia a Comparar; cuando necesites encontrar un horario que funcione para un equipo, ve al Planificador. Cada vista se mantiene sincronizada, así que una ciudad en la que hagas clic aquí queda lista para comparar o programar con un solo toque.",
+        "Las zonas horarias son tanto políticas como geográficas: las fronteras, las excepciones y las reglas estacionales mueven el reloj. Verlas en un globo hace evidentes esos límites, por lo que Explorar es un buen punto de partida antes de convertir una hora concreta o reservar una llamada internacional."
+      ]
+    },
+    "compare": {
+      "heading": "Comparar zonas horarias",
+      "description": "Compara varias zonas horarias una al lado de otra con desfases que tienen en cuenta el horario de verano. Añade ciudades, elige una ubicación base y verifica la diferencia horaria antes de programar.",
+      "breadcrumb": "Comparar",
+      "ctas": [
+        "Conversores de zonas horarias populares",
+        "Mejores horarios de reunión por par de ciudades",
+        "Verificador del horario de verano"
+      ],
+      "articleH2": "Compara varias ciudades a la vez",
+      "articleParagraphs": [
+        "Añade hasta seis ciudades y Timezio alinea sus horas locales actuales en una sola vista. Elige una como “base” y cada una de las demás ciudades mostrará su diferencia con respecto a ella, para que puedas responder de un vistazo preguntas como “cuando son las 9:00 en Berlín, ¿qué hora es en Nueva York y Singapur?”. Los desfases se calculan a partir de datos oficiales de la IANA y se actualizan en tiempo real, incluidos los cambios de una hora que se producen cuando una región entra o sale del horario de verano.",
+        "Comparar es más útil cuando la diferencia no es obvia. Muchos pares de países están separados por un número fraccionario de horas, y varios cambian sus relojes en fines de semana distintos, por lo que la diferencia entre dos ciudades puede ser de nueve horas un mes y de diez al siguiente. Alinear las ciudades una al lado de otra detecta esos casos límite antes de que se conviertan en una llamada perdida. Para una fecha futura, cambia la fecha y la comparación se recalcula con las reglas de DST correctas para ese día.",
+        "Cuando hayas confirmado la diferencia, copia el enlace para compartir y envía la comparación exacta a tu equipo, o traslada el mismo conjunto de ciudades al Planificador para encontrar un horario de reunión que funcione para todos."
+      ]
+    },
+    "planner": {
+      "heading": "Planificador de reuniones",
+      "description": "Planifica reuniones entre varias zonas horarias. Añade participantes, establece horarios laborales y encuentra ventanas de coincidencia automáticamente — totalmente compatible con DST.",
+      "breadcrumb": "Planificador",
+      "ctas": [
+        "Mejores horarios de reunión por par de ciudades",
+        "Comparar zonas horarias",
+        "Verificador del horario de verano"
+      ],
+      "articleH2": "Encuentra un horario que funcione para todos",
+      "articleParagraphs": [
+        "Añade a cada participante por ciudad, establece sus horarios laborales y el planificador superpone todas las agendas para mostrar las ventanas en las que todos están disponibles. En lugar de hacer malabares mentales con los desfases, obtienes una lista clasificada de horarios que caen dentro de la jornada laboral de cada persona, con las horas de madrugada y de la noche relegadas para que nadie tenga que atender una llamada a las 6 de la mañana. Cada cálculo tiene en cuenta el horario de verano, así que un horario que funciona esta semana seguirá funcionando después de que una región cambie sus relojes.",
+        "El planificador está diseñado para equipos distribuidos, llamadas con clientes entre continentes y para ponerte al día con amigos o familiares en el extranjero. Establece la duración de la reunión, elige una fecha y ajusta los horarios de cada participante si trabaja en un turno inusual. También puedes ampliar la búsqueda cuando no hay una coincidencia clara — una situación habitual para pares que están separados por diez o más horas, donde alguien tiene que aceptar un horario extremo. Para invitaciones de Google Calendar y enlaces de Meet, conecta tu cuenta en el planificador y confirma un horario.",
+        "¿Ya conoces las dos ciudades? Las páginas predefinidas de mejores horarios de reunión muestran la coincidencia para los pares populares sin ninguna configuración."
+      ]
+    },
+    "saved": {
+      "heading": "Guardados",
+      "description": "Guarda tus ubicaciones más usadas para volver al instante a su hora actual, desfase y estado del horario de verano.",
+      "breadcrumb": "Guardados",
+      "ctas": [
+        "Explorar zonas horarias",
+        "Comparar zonas horarias",
+        "Planificar una reunión entre zonas horarias"
+      ]
+    },
+    "convertHub": {
+      "title": "Conversores de zonas horarias populares",
+      "intro1": "Un conversor de zonas horarias responde a una pregunta engañosamente complicada: cuando es una hora determinada en un lugar, ¿qué hora es en otro? El truco está en que la diferencia entre dos zonas no es fija. El horario de verano la desplaza una hora, las dos regiones suelen cambiar sus relojes en fines de semana distintos y algunas zonas están separadas por un número fraccionario de horas. Cada conversor de abajo utiliza datos oficiales de la IANA, así que el resultado es correcto en cualquier fecha — incluidas las semanas en torno a un cambio de hora, cuando los cálculos manuales suelen fallar.",
+      "intro2": "Cada página de conversor incluye una tabla completa hora por hora para el día actual, el desfase en vivo entre las dos zonas y notas sobre cuál de los lados observa el horario de verano. ¿Necesitas consultar una ciudad en lugar de una abreviatura? Explora el <world>reloj mundial</world>, o ve a <compare>Comparar</compare> para alinear más de dos lugares a la vez.",
+      "listHeading": "Conversores"
+    },
+    "timeHub": {
+      "title": "Hora actual en las principales ciudades del mundo",
+      "intro1": "Elige una ciudad para ver su hora local actual, el desfase UTC exacto, la zona horaria IANA que utiliza y si el horario de verano está en vigor en este momento. Cada página se actualiza en tiempo real y se calcula a partir de la base de datos oficial de zonas horarias de la IANA, por lo que los casos complicados — desfases de media hora, regiones que cambian los relojes en fechas distintas y lugares que no observan el horario de verano en absoluto — se gestionan correctamente.",
+      "intro2": "Estas páginas de reloj mundial son la forma más rápida de comprobar “¿qué hora es allí?” antes de llamar, viajar o programar. Para convertir una hora concreta entre dos lugares usa los <convert>conversores</convert>, para alinear varias ciudades usa <compare>Comparar</compare>, y para encontrar un horario que funcione para un grupo usa el <planner>Planificador de reuniones</planner>.",
+      "listHeading": "Ciudades ({count})"
+    },
+    "meetingHub": {
+      "title": "Mejores horarios de reunión por par de ciudades",
+      "intro1": "Programar entre continentes suele significar que alguien atiende una llamada a una mala hora. Estas páginas hacen la parte difícil por ti: para cada par de ciudades populares, Timezio superpone la jornada estándar de 9 a 5 de ambos equipos y enumera las horas en que todos están despiertos y trabajando, además de un horario recomendado en medio de esa ventana. Como el cálculo utiliza datos oficiales de la IANA, la coincidencia se mantiene correcta incluso cuando una ciudad cambia sus relojes y la otra no.",
+      "intro2": "Elige un par a continuación para obtener una respuesta instantánea, o abre el <planner>Planificador de reuniones</planner> para añadir tus propias ciudades, ajustar los horarios laborales de cada participante y generar invitaciones de calendario. Para comprobar primero la diferencia horaria real, usa <compare>Comparar</compare>."
+    },
+    "dstHub": {
+      "title": "Horario de verano por país",
+      "intro1": "El horario de verano es una de las mayores fuentes de errores de programación: los relojes se mueven una hora, pero no en todas partes ni el mismo día. Estas páginas te indican, para cada región, si el horario de verano está actualmente en vigor, cuál es el desfase UTC presente y las fechas exactas de las próximas transiciones de adelanto en primavera y atraso en otoño — todo calculado a partir de la base de datos oficial de zonas horarias de la IANA en lugar de reglas codificadas a mano que quedan obsoletas.",
+      "intro2": "Saber cuándo una región cambia sus relojes te ayuda a proteger reuniones periódicas, planes de viaje y plazos que cruzan fronteras. Elige una región a continuación y luego usa <compare>Comparar</compare> o el <planner>Planificador de reuniones</planner> para ver cómo un próximo cambio desplaza la diferencia horaria con tu propia ubicación."
+    }
+  },
+  "prog": {
+    "time": {
+      "breadcrumb": "Reloj mundial",
+      "h1": "Hora actual en {city}",
+      "localTime": "Hora local",
+      "dateLine": "{date} · {abbr} ({offset})",
+      "factTimeZone": "Zona horaria",
+      "factUtcOffset": "Desfase UTC",
+      "factAbbreviation": "Abreviatura",
+      "factDaylight": "Horario de verano",
+      "daylightInEffect": "En vigor ahora",
+      "daylightObservedInactive": "Se aplica (no activo)",
+      "daylightNotObserved": "No se aplica",
+      "introMain": "La hora local actual en {city} es <b>{time}</b> del {date}. {city} se rige por la zona horaria <b>{tz}</b>, que actualmente es {offsetAbbr}.",
+      "dstSentence": "{observesDst, select, yes {{city} aplica el horario de verano, por lo que su desfase UTC cambia una hora entre el horario estándar y el de verano.} other {{city} no aplica el horario de verano, por lo que su desfase UTC ({offset}) se mantiene igual todo el año.}}",
+      "transitionLabel": "{type, select, begins {Clocks spring forward — DST begins} other {Clocks fall back — DST ends}}",
+      "nextChange": "<b>Próximo cambio de hora:</b> {date} — {label}. El desfase UTC pasa de {fromOffset} a {toOffset}. Planifica las llamadas y los viajes en torno a esta fecha para no desfasarte una hora.",
+      "crosslinks": "Usa el globo interactivo de arriba para comparar {city} con otras ciudades, o abre la pestaña <compare>Comparar</compare> para alinear varias zonas horarias una junto a otra. ¿Planeas una llamada? El <planner>Planificador de reuniones</planner> encuentra automáticamente las horas de trabajo coincidentes, y el <dst>verificador de DST</dst> hace seguimiento de los próximos cambios de hora.",
+      "relatedHeading": "Hora actual en otras ciudades",
+      "wpName": "Hora actual en {city}",
+      "wpDesc": "Hora local en directo en {city} ({tz}). Desfase UTC actual {offsetAbbr}, con el estado del horario de verano y el próximo cambio de hora.",
+      "faq1q": "¿Qué hora es en {city} ahora mismo?",
+      "faq1a": "A fecha de {date}, la hora local en {city} es alrededor de las {time} ({abbr}). El reloj de la parte superior de esta página avanza en tiempo real, y el desfase mostrado es {offset}.",
+      "faq2q": "¿En qué zona horaria está {city}?",
+      "faq2a": "{city} utiliza la zona horaria IANA {tz}{hasAbbr, select, yes {, actualmente abreviada como {abbr}} other {}}. Su desfase actual respecto al Tiempo Universal Coordinado es {offset}.",
+      "faq3q": "¿{city} aplica el horario de verano?",
+      "faq3a": "{observesDst, select, yes {Yes. {city} observes daylight saving time, so its UTC offset shifts by one hour between standard and summer time.{hasNext, select, yes { The next change is on {nextDate}, when the clocks {nextDir, select, forward {move forward} other {move back}} and the offset becomes {nextOffset}.} other {}}} other {{city} does not observe daylight saving time, so its UTC offset ({offset}) stays the same all year.}}",
+      "faq4q": "¿Cuál es el desfase UTC de {city}?",
+      "faq4a": "{city} is currently at {offset}. {observesDst, select, yes {This offset changes by one hour during the daylight saving period.} other {This offset is fixed throughout the year.}}"
+    },
+    "convert": {
+      "breadcrumb": "Convertidores",
+      "h1": "Convertidor de hora de {from} a {to}",
+      "diffSummary": "{dir, select, same {{to} tiene actualmente la misma hora que {from}.} ahead {{to} va actualmente {h}h{m, plural, =0 {} other { #m}} por delante de {from}.} other {{to} va actualmente {h}h{m, plural, =0 {} other { #m}} por detrás de {from}.}}",
+      "introBody": "{from} es {fromFull}; {to} es {toFull}. La tabla siguiente muestra la conversión para cada parte del día, con el horario de verano gestionado automáticamente.",
+      "factDifference": "Diferencia",
+      "diffNone": "Ninguna",
+      "tableHeading": "Tabla de conversión de {from} → {to}",
+      "dayNext": "día siguiente",
+      "dayPrev": "día anterior",
+      "crosslinks": "¿Necesitas una fecha concreta o un par diferente? Usa el globo interactivo y la pestaña <compare>Comparar</compare> para previsualizar cualquier momento, incluidas fechas futuras que crucen un límite del horario de verano. Para programar una llamada entre estas zonas, prueba el <planner>Planificador de reuniones</planner>.",
+      "relatedHeading": "Convertidores relacionados",
+      "wpDesc": "Convierte de {from} a {to}. {summary}",
+      "faq1q": "¿Cuál es la diferencia horaria entre {from} y {to}?",
+      "faq1a": "Right now {to} ({toFull}) is {dir, select, same {the same time as} ahead {ahead of} other {behind}} {from} ({fromFull}). The difference is {absH, plural, =0 {zero hours} one {# hour} other {# hours}} and can shift by an hour when either zone enters or leaves daylight saving time.",
+      "faq2q": "¿Cómo convierto de {from} a {to}?",
+      "faq2a": "Suma la hora de {from} a la diferencia de desfase. Por ejemplo, las {exampleFrom} de {from} son las {exampleTo} de {to}. La tabla completa hora por hora de esta página enumera cada conversión para la fecha actual.",
+      "faq3q": "¿{from} o {to} usan el horario de verano?",
+      "faq3a": "{from} is currently {fromDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({fromOffset}), and {to} is {toDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({toOffset}). The converter uses official IANA data and adjusts automatically.",
+      "faq4q": "¿Es preciso este convertidor de {from} a {to}?",
+      "faq4a": "Sí: las conversiones usan la base de datos de zonas horarias de IANA, la misma fuente que utilizan los sistemas operativos, y tienen en cuenta las reglas actuales del horario de verano al minuto."
+    },
+    "meeting": {
+      "breadcrumb": "Planificador de reuniones",
+      "h1": "Mejor hora de reunión: {a} ↔ {b}",
+      "overlapSentence": "{hasOverlap, select, yes {Standard 9-to-5 working hours in {a} and {b} overlap from {start} to {end} {a} time. A good middle slot is around {bestA} in {a} ({bestB} in {b}).} other {Standard 9-to-5 working hours in {a} and {b} do not overlap, so one side will need an early or late slot. Aim for the start of one city's day and the end of the other's.}}",
+      "introTail": "Todas las horas indicadas a continuación son para hoy y se ajustan automáticamente al horario de verano.",
+      "sharedWorkHours": "Horas laborales compartidas",
+      "hoursUnit": "{count} h",
+      "noneWorkHours": "Ninguna (9–5)",
+      "tableHeading": "Horas laborales coincidentes",
+      "noOverlapBody": "Hoy no hay coincidencia de 9 a 5. Abre el Planificador de arriba para ampliar el horario laboral o elegir una franja límite que funcione para ambos equipos.",
+      "crosslinks": "La pestaña del Planificador de arriba ya tiene cargadas {a} y {b}. Ajusta las horas de cada participante, fija una duración y Timezio clasifica las mejores franjas. Para comprobar el desfase exacto, usa la pestaña <compare>Comparar</compare>.",
+      "relatedHeading": "Más pares de reuniones",
+      "wpDesc": "Encuentra la mejor hora de reunión entre {a} y {b}. {overlap}",
+      "faq1q": "¿Cuál es la mejor hora para programar una reunión entre {a} y {b}?",
+      "faq1a": "{hasOverlap, select, yes {The cleanest option is around {bestA} in {a}, which is {bestB} in {b} — inside both teams' working day. The overlap table on this page lists every shared hour for today.} other {There is no clean overlap during standard hours, so pick the least disruptive edge: early morning for one city or early evening for the other. The table on this page shows each hour side by side.}}",
+      "faq2q": "¿Cuál es la diferencia horaria entre {a} y {b}?",
+      "faq2a": "{a} está actualmente en {offsetA} y {b} en {offsetB}. La diferencia puede cambiar una hora en torno a las transiciones del horario de verano, lo cual esta herramienta tiene en cuenta automáticamente.",
+      "faq3q": "¿Cómo planifico una llamada periódica entre {a} y {b}?",
+      "faq3a": "Usa la pestaña del Planificador de arriba: ambas ciudades están precargadas. Establece el horario laboral de cada participante y Timezio resalta las franjas coincidentes y avisa de las horas de madrugada o de noche."
+    },
+    "dst": {
+      "breadcrumb": "Horario de verano",
+      "h1": "Horario de verano en {region}",
+      "intro": "{observesDst, select, yes {{region} observes daylight saving time. Clocks are currently {isDst, select, yes {on summer time (DST in effect)} other {on standard time}}, at {offset}. The reference zone for {region} is {tz} ({city}).} other {{region} does not currently observe daylight saving time. The offset stays at {offset} all year. The reference zone is {tz} ({city}).}}",
+      "factObservesDst": "Aplica DST",
+      "yes": "Sí",
+      "no": "No",
+      "factCurrentOffset": "Desfase actual",
+      "factStatus": "Estado",
+      "summerTime": "Horario de verano",
+      "standardTime": "Horario estándar",
+      "factReferenceZone": "Zona de referencia",
+      "changesHeading": "Próximos cambios de hora",
+      "colChange": "Cambio",
+      "colDate": "Fecha",
+      "colOffset": "Desfase",
+      "springForward": "Adelanto (comienza el DST)",
+      "fallBack": "Atraso (termina el DST)",
+      "crosslinks": "Los cambios del horario de verano modifican una hora el desfase de {region}, lo que puede romper sin avisar las reuniones periódicas. Comprueba la diferencia en directo respecto a tu propia zona con la pestaña <compare>Comparar</compare>, o programa en torno al cambio usando el <planner>Planificador de reuniones</planner>.",
+      "relatedHeading": "DST en otras regiones",
+      "faq1q": "¿{region} aplica el horario de verano?",
+      "faq1a": "{observesDst, select, yes {Yes. {region} changes its clocks twice a year. It is currently {isDst, select, yes {on daylight saving (summer) time} other {on standard time}} at {offset}.} other {No. {region} keeps a fixed offset of {offset} throughout the year and does not change its clocks.}}",
+      "faq2q": "¿Cuándo cambian los relojes en {region}?",
+      "faq2a": "{observesDst, select, yes {{hasBegins, select, yes {Clocks next spring forward on {beginsDate} (offset {beginsFrom} → {beginsTo}). } other {}}{hasEnds, select, yes {Clocks next fall back on {endsDate} (offset {endsFrom} → {endsTo}).} other {}}} other {{region} does not change its clocks, so there is no spring-forward or fall-back date.}}",
+      "faq3q": "¿Cuál es el desfase UTC actual de {region}?",
+      "faq3a": "{region} is currently at {offset}{hasAbbr, select, yes { ({abbr})} other {}}. {observesDst, select, yes {This shifts by one hour when daylight saving begins or ends.} other {This offset is fixed.}}"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Política de privacidad",
+      "updated": "Última actualización: 09.01.2026",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Esta Política de privacidad explica cómo recopilamos, utilizamos y protegemos la información cuando visitas y utilizas este sitio web (el \"Sitio web\")."
+        },
+        {
+          "type": "p",
+          "text": "Nos comprometemos a proteger tu privacidad y a tratar los datos personales de conformidad con las leyes de protección de datos aplicables, incluido el Reglamento General de Protección de Datos (UE) 2016/679 (GDPR)."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "1. Información que recopilamos",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "1.1 Información que no proporcionas directamente"
+            },
+            {
+              "type": "p",
+              "text": "Este Sitio web no requiere registro de usuario ni solicita a los usuarios que proporcionen información personal para utilizar sus funciones principales."
+            },
+            {
+              "type": "subheading",
+              "text": "1.2 Información recopilada automáticamente"
+            },
+            {
+              "type": "p",
+              "text": "Cuando visitas el Sitio web, es posible que se recopile automáticamente información limitada, que incluye:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Dirección IP (anonimizada/truncada cuando la herramienta lo permite)",
+                "Tipo y versión del navegador",
+                "Tipo de dispositivo y sistema operativo",
+                "Páginas visitadas y datos de interacción",
+                "Sitio web de referencia",
+                "Ubicación geográfica aproximada (a nivel de ciudad o país)"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Esta información se utiliza únicamente con fines de análisis, seguridad y mejora del servicio."
+            }
+          ]
+        },
+        {
+          "heading": "1.3 Datos del servicio que puedes proporcionar",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Las herramientas principales (conversión de hora, planificador) funcionan sin registro. Si decides guardar/compartir datos de una reunión, conectar un calendario o iniciar sesión con Google, podemos almacenar los detalles de la reunión/sesión que envíes (por ejemplo, nombres o etiquetas de participantes, franjas horarias, títulos) y el correo electrónico de tu cuenta de Google para habilitar la función. Puedes solicitar la eliminación de estos datos almacenados en cualquier momento (consulta Contacto)."
+            }
+          ]
+        },
+        {
+          "heading": "2. Cookies y tecnologías similares",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El Sitio web puede utilizar cookies o tecnologías similares para:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Medir el tráfico y los patrones de uso",
+                "Comprender cómo interactúan los usuarios con el Sitio web",
+                "Mejorar el rendimiento y la experiencia del usuario",
+                "Mostrar publicidad cuando esté habilitada"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Las cookies utilizadas en este Sitio web no te identifican directamente como persona."
+            },
+            {
+              "type": "p",
+              "text": "Cuando lo exija la legislación aplicable, las cookies que no son estrictamente necesarias se utilizan únicamente tras obtener el consentimiento del usuario mediante un banner de cookies o un mecanismo de consentimiento."
+            },
+            {
+              "type": "p",
+              "text": "Puedes gestionar o retirar tu consentimiento en cualquier momento a través de la configuración de tu navegador o de la configuración de cookies disponible en el Sitio web."
+            }
+          ]
+        },
+        {
+          "heading": "3. Análisis y publicidad",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "3.1 Análisis"
+            },
+            {
+              "type": "p",
+              "text": "Podemos utilizar herramientas de análisis (por ejemplo, Google Analytics a través de Google Tag Manager o alternativas centradas en la privacidad) para comprender cómo utilizan los visitantes el Sitio web. Estas herramientas recopilan datos de uso (páginas vistas, información del dispositivo/navegador, ubicación aproximada) y pueden configurarse para anonimizar la IP cuando se admita. Los análisis no esenciales solo se cargan tras el consentimiento cuando es obligatorio."
+            },
+            {
+              "type": "subheading",
+              "text": "3.2 Publicidad"
+            },
+            {
+              "type": "p",
+              "text": "El Sitio web puede mostrar anuncios de socios externos como Google AdSense (servidos a través de Google Tag Manager). Estos socios pueden utilizar cookies o tecnologías similares para mostrar anuncios relevantes y pueden tratar datos (por ejemplo, identificadores de cookies, ubicación aproximada, información del dispositivo). Las cookies publicitarias se cargan únicamente tras el consentimiento cuando es obligatorio."
+            },
+            {
+              "type": "p",
+              "text": "Los socios publicitarios tratan la información conforme a sus propias políticas de privacidad y pueden transferir datos fuera de tu región bajo las garantías adecuadas (por ejemplo, Standard Contractual Clauses). Puedes retirar o modificar tu consentimiento de cookies y publicidad en cualquier momento mediante el enlace **«Configuración de cookies»** en el pie de página del sitio web, o a través de la configuración de tu navegador."
+            },
+            {
+              "type": "p",
+              "text": "También puedes controlar o cancelar la publicidad personalizada directamente con los proveedores y los programas del sector:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Configuración de anuncios de Google — [adssettings.google.com](https://adssettings.google.com)",
+                "Cómo utiliza Google los datos de los sitios de sus socios — [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites)",
+                "Exclusión en EE. UU. (DAA) — [optout.aboutads.info](https://optout.aboutads.info) · [youradchoices.com](https://www.youradchoices.com)",
+                "Exclusión en la UE (EDAA) — [youronlinechoices.eu](https://www.youronlinechoices.eu)"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. Cómo utilizamos la información",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "La información recopilada puede utilizarse para:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Operar y mantener el Sitio web",
+                "Mejorar las herramientas, las funciones y la usabilidad",
+                "Analizar las tendencias de uso y el rendimiento",
+                "Garantizar la seguridad y prevenir el uso indebido",
+                "Cumplir con las obligaciones legales"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "**No vendemos datos personales.**"
+            }
+          ]
+        },
+        {
+          "heading": "5. Base jurídica para el tratamiento (GDPR)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "En virtud del GDPR, los datos personales se tratan sobre las siguientes bases jurídicas:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Consentimiento** — para cookies/análisis/publicidad no esenciales cuando sea obligatorio",
+                "**Intereses legítimos** — para operar, proteger y mejorar el Sitio web",
+                "**Obligación legal** — cuando el tratamiento sea exigido por ley"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "6. Conservación de datos",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Conservamos los datos recopilados únicamente durante el tiempo necesario para cumplir los fines descritos en esta Política de privacidad, salvo que la ley exija o permita un período de conservación más largo."
+            }
+          ]
+        },
+        {
+          "heading": "7. Intercambio de datos y terceros",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Podemos compartir datos limitados con proveedores de servicios externos de confianza (como proveedores de análisis o publicidad) estrictamente para los fines descritos en esta Política de privacidad."
+            },
+            {
+              "type": "p",
+              "text": "Todos estos proveedores están obligados a tratar los datos conforme a las leyes de protección de datos aplicables."
+            },
+            {
+              "type": "p",
+              "text": "Algunos proveedores (por ejemplo, Google) pueden tratar datos fuera del Espacio Económico Europeo (EEE). Cuando esto ocurra, nos basamos en garantías adecuadas como las Standard Contractual Clauses o mecanismos equivalentes."
+            }
+          ]
+        },
+        {
+          "heading": "8. Tus derechos en virtud del GDPR",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Si te encuentras en la Unión Europea, tienes derecho a:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Acceder a tus datos personales",
+                "Solicitar la corrección de datos inexactos",
+                "Solicitar la eliminación de tus datos",
+                "Restringir u oponerte al tratamiento",
+                "Retirar el consentimiento en cualquier momento",
+                "Presentar una reclamación ante una autoridad de control"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Puedes ejercer estos derechos poniéndote en contacto con nosotros utilizando los datos que se facilitan a continuación."
+            }
+          ]
+        },
+        {
+          "heading": "9. Derechos de privacidad estatales de EE. UU. (CCPA / CPRA y similares)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Si resides en California u otro estado de EE. UU. con leyes de privacidad integrales, es posible que tengas derecho a saber qué información personal se recopila, a solicitar el acceso o la eliminación, a corregir información inexacta y a excluirte de la «venta» o el «intercambio» de información personal y de la publicidad dirigida."
+            },
+            {
+              "type": "p",
+              "text": "No vendemos información personal a cambio de dinero. No obstante, el uso de cookies publicitarias puede considerarse «intercambio» o «venta» según algunas leyes estatales. Puedes excluirte de la publicidad personalizada mediante el enlace **«Configuración de cookies»** del pie de página y las herramientas de exclusión del sector enumeradas en la Sección 3.2. Cuando se admita, respetamos la señal del navegador Global Privacy Control (GPC) como una solicitud de exclusión válida."
+            },
+            {
+              "type": "p",
+              "text": "Para ejercer cualquiera de estos derechos, ponte en contacto con nosotros utilizando los datos de la Sección 14. No te discriminaremos por ejercer tus derechos de privacidad."
+            }
+          ]
+        },
+        {
+          "heading": "10. Privacidad de los menores",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Este Sitio web no está destinado a menores de 16 años. No recopilamos conscientemente datos personales de menores."
+            }
+          ]
+        },
+        {
+          "heading": "11. Seguridad",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Adoptamos medidas técnicas y organizativas razonables para proteger la información frente a accesos no autorizados, pérdidas, usos indebidos o alteraciones. Sin embargo, ningún método de transmisión o almacenamiento es completamente seguro."
+            }
+          ]
+        },
+        {
+          "heading": "12. Enlaces externos",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El Sitio web puede contener enlaces a sitios web de terceros. No somos responsables del contenido ni de las prácticas de privacidad de dichos sitios web."
+            }
+          ]
+        },
+        {
+          "heading": "13. Cambios en esta Política de privacidad",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Podemos actualizar esta Política de privacidad de vez en cuando. Cualquier cambio se publicará en esta página con una fecha de \"Última actualización\" actualizada."
+            },
+            {
+              "type": "p",
+              "text": "Recomendamos a los usuarios revisar esta página periódicamente. Si los cambios afectan de forma sustancial a cómo tratamos tus datos, proporcionaremos un aviso claro (por ejemplo, en esta página o a través de la interfaz del Sitio web)."
+            }
+          ]
+        },
+        {
+          "heading": "14. Información de contacto",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Si tienes preguntas sobre esta Política de privacidad o sobre cómo se tratan los datos en este Sitio web, puedes ponerte en contacto con nosotros en:"
+            },
+            {
+              "type": "emailBox",
+              "label": "Correo electrónico:",
+              "email": "hello@timezio.com"
+            }
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Términos del servicio",
+      "updated": "Última actualización: 09.01.2026",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Estos Términos del servicio (\"Términos\") rigen tu acceso y uso de este sitio web (el \"Sitio web\"). Al acceder o utilizar el Sitio web, aceptas quedar vinculado por estos Términos. Si no estás de acuerdo, deja de utilizar el Sitio web."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "1. Finalidad del Sitio web",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El Sitio web proporciona herramientas e información relacionadas con las zonas horarias, las diferencias horarias, las conversiones a UTC y la planificación de reuniones, únicamente con fines informativos generales."
+            },
+            {
+              "type": "p",
+              "text": "El Sitio web no presta servicios de asesoramiento legal, financiero, profesional ni de carácter urgente."
+            }
+          ]
+        },
+        {
+          "heading": "2. Uso del Sitio web",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Aceptas utilizar el Sitio web únicamente con fines lícitos y de una manera que no:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Infrinja las leyes o normativas aplicables",
+                "Vulnere los derechos de terceros",
+                "Interfiera o altere el funcionamiento del Sitio web",
+                "Intente obtener acceso no autorizado a cualquier parte del Sitio web"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Nos reservamos el derecho de restringir o cancelar el acceso al Sitio web en cualquier momento si se detecta un uso indebido."
+            }
+          ]
+        },
+        {
+          "heading": "3. Exactitud de la información",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Aunque hacemos esfuerzos razonables para garantizar que la información y los cálculos proporcionados en el Sitio web sean precisos y se basen en datos públicos reconocidos sobre zonas horarias, no garantizamos que el contenido sea completo, actual ni esté libre de errores."
+            },
+            {
+              "type": "p",
+              "text": "Las normas de las zonas horarias y las prácticas del horario de verano pueden cambiar debido a decisiones gubernamentales o reglamentarias. Reconoces que cualquier confianza en la información proporcionada corre por tu cuenta y riesgo."
+            }
+          ]
+        },
+        {
+          "heading": "4. Exención de garantías",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El Sitio web y todo su contenido y herramientas se proporcionan \"tal cual\" y \"según disponibilidad\"."
+            },
+            {
+              "type": "p",
+              "text": "En la máxima medida permitida por la legislación aplicable, declinamos toda garantía, ya sea expresa o implícita, incluidas, entre otras, las garantías implícitas de exactitud, fiabilidad, idoneidad para un fin determinado y no infracción."
+            }
+          ]
+        },
+        {
+          "heading": "5. Limitación de responsabilidad",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "En la medida permitida por la legislación aplicable de la Unión Europea, no seremos responsables de ningún daño directo, indirecto, incidental, consecuente o especial que surja de tu uso del Sitio web, o de la imposibilidad de usarlo, o de la confianza en su contenido, o en relación con ellos."
+            },
+            {
+              "type": "p",
+              "text": "Esto incluye, sin limitación, la pérdida de datos, la pérdida de negocio, las reuniones perdidas o los errores de programación."
+            }
+          ]
+        },
+        {
+          "heading": "6. Propiedad intelectual",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Todo el contenido del Sitio web, incluidos el texto, el diseño, la disposición, los logotipos y el software, es propiedad del titular del Sitio web o de sus licenciantes y está protegido por las leyes de propiedad intelectual aplicables."
+            },
+            {
+              "type": "p",
+              "text": "Puedes utilizar el Sitio web con fines personales y no comerciales. No puedes copiar, reproducir, distribuir, modificar ni explotar ninguna parte del Sitio web sin autorización previa por escrito, salvo cuando la ley lo permita."
+            }
+          ]
+        },
+        {
+          "heading": "7. Servicios de terceros y publicidad",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El Sitio web puede mostrar anuncios o incluir enlaces a sitios web o servicios de terceros."
+            },
+            {
+              "type": "p",
+              "text": "No controlamos ni somos responsables del contenido, la disponibilidad ni las prácticas de los sitios web de terceros. Tu interacción con servicios de terceros se rige por sus respectivos términos y políticas de privacidad."
+            }
+          ]
+        },
+        {
+          "heading": "8. Privacidad y protección de datos",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Tu uso del Sitio web también se rige por nuestra [Política de privacidad](/privacy), que explica cómo se tratan los datos personales de conformidad con las leyes de protección de datos aplicables, incluido el GDPR."
+            }
+          ]
+        },
+        {
+          "heading": "9. Cambios en el Sitio web o en los Términos",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Podemos actualizar, modificar, suspender o interrumpir cualquier parte del Sitio web en cualquier momento sin previo aviso."
+            },
+            {
+              "type": "p",
+              "text": "También podemos actualizar estos Términos de vez en cuando. Cualquier cambio será efectivo una vez publicado en esta página, con la fecha de \"Última actualización\" revisada en consecuencia."
+            },
+            {
+              "type": "p",
+              "text": "El uso continuado del Sitio web tras los cambios constituye la aceptación de los Términos actualizados."
+            }
+          ]
+        },
+        {
+          "heading": "10. Legislación aplicable y jurisdicción",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Estos Términos se regirán e interpretarán de conformidad con las leyes de la Unión Europea y, cuando proceda, las leyes del país en el que esté establecido el operador del Sitio web."
+            },
+            {
+              "type": "p",
+              "text": "Nada en estos Términos limita tus derechos legales como consumidor en virtud de la legislación aplicable de la UE."
+            }
+          ]
+        },
+        {
+          "heading": "11. Divisibilidad",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Si alguna disposición de estos Términos resulta ser ilegal, inválida o inaplicable, las disposiciones restantes seguirán teniendo plena vigencia y efecto."
+            }
+          ]
+        },
+        {
+          "heading": "12. Información de contacto",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Si tienes alguna pregunta sobre estos Términos del servicio, puedes ponerte en contacto con nosotros en:"
+            },
+            {
+              "type": "emailBox",
+              "label": "Correo electrónico:",
+              "email": "hello@timezio.com"
+            }
+          ]
+        }
+      ]
+    },
+    "about": {
+      "title": "Acerca de este sitio web",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Este sitio web se creó para que trabajar entre zonas horarias resulte sencillo, preciso y sin estrés. Ya sea que estés planificando una reunión con colegas en el extranjero, comprobando la hora actual en otra ciudad, convirtiendo UTC o viajando entre países, nuestras herramientas te ayudan a entender al instante las diferencias horarias sin confusiones."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Quién gestiona Timezio",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Timezio está desarrollado y operado por **AffSquad**, un estudio independiente que crea utilidades web gratuitas y respetuosas con la privacidad. Somos un equipo pequeño que utiliza estas herramientas a diario para coordinarnos entre zonas horarias, y mantenemos Timezio gratuito mostrando anuncios. Las preguntas, correcciones o comentarios son siempre bienvenidos en [hello@timezio.com](mailto:hello@timezio.com) — consulta la página de [Contacto](/contact) para más formas de comunicarte con nosotros."
+            }
+          ]
+        },
+        {
+          "heading": "Principios fundamentales",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "Precisión"
+            },
+            {
+              "type": "p",
+              "text": "Todos los cálculos se basan en los datos oficiales de zonas horarias de la IANA y tienen plenamente en cuenta el horario de verano (DST)."
+            },
+            {
+              "type": "subheading",
+              "text": "Simplicidad"
+            },
+            {
+              "type": "p",
+              "text": "Herramientas limpias y rápidas que funcionan al instante, sin pasos innecesarios."
+            },
+            {
+              "type": "subheading",
+              "text": "Fiabilidad"
+            },
+            {
+              "type": "p",
+              "text": "Diseñadas para el uso diario de profesionales, viajeros, equipos remotos y nómadas digitales."
+            }
+          ]
+        },
+        {
+          "heading": "Cálculos automáticos",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Nuestras calculadoras tienen en cuenta automáticamente:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Los cambios del horario de verano",
+                "Los distintos desfases respecto a UTC",
+                "Los cambios de fecha al cruzar zonas horarias",
+                "Las regiones con desfases no estándar (como diferencias de 30 o 45 minutos)"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Este sitio web está diseñado para ser útil en todo el mundo y se actualiza periódicamente para reflejar las normas oficiales de las zonas horarias."
+            }
+          ]
+        },
+        {
+          "heading": "Para quién es este sitio web",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Trabajadores remotos y equipos distribuidos",
+                "Profesionales que programan reuniones internacionales",
+                "Viajeros y pasajeros frecuentes",
+                "Estudiantes y educadores",
+                "Cualquier persona que necesite convertir o comparar zonas horarias con precisión"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "**Sin cuentas. Sin complicaciones. Solo respuestas claras.**"
+            }
+          ]
+        },
+        {
+          "heading": "Cómo usar este sitio web",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "1. Explorar — Globo interactivo"
+            },
+            {
+              "type": "p",
+              "text": "Haz clic en cualquier punto del globo 3D para ver al instante la hora local de esa ubicación."
+            },
+            {
+              "type": "p",
+              "text": "**Cómo funciona:** Haz clic en una ubicación del globo o busca una ciudad. Consulta la hora actual, el desfase respecto a UTC y el estado del DST. Perfecto para comprobaciones rápidas y para explorar zonas horarias de forma visual."
+            },
+            {
+              "type": "subheading",
+              "text": "2. Comparar — Comparación de zonas horarias"
+            },
+            {
+              "type": "p",
+              "text": "Compara las diferencias horarias entre varias ciudades simultáneamente."
+            },
+            {
+              "type": "p",
+              "text": "**Cómo funciona:** Añade hasta 6 ciudades para comparar. Selecciona una ciudad base para ver las diferencias horarias respecto a ella. Consulta al instante las horas locales actuales, los desfases y las comparaciones visuales. Es ideal para responder preguntas como \"Cuando son las 9:00 en Berlín, ¿qué hora es en Nueva York?\""
+            },
+            {
+              "type": "subheading",
+              "text": "3. Planificador — Planificador de reuniones"
+            },
+            {
+              "type": "p",
+              "text": "Encuentra la mejor hora de reunión para personas en diferentes ubicaciones."
+            },
+            {
+              "type": "p",
+              "text": "**Cómo funciona:** Añade participantes por ciudad, selecciona una fecha de reunión y, opcionalmente, ajusta el horario laboral de cada participante. Visualiza las franjas horarias que se solapan y comparte los detalles de la reunión. Esta herramienta evita automáticamente las horas muy tempranas o de madrugada siempre que es posible."
+            },
+            {
+              "type": "subheading",
+              "text": "4. DST — Horario de verano"
+            },
+            {
+              "type": "p",
+              "text": "Realiza un seguimiento de los cambios y transiciones del horario de verano a lo largo del año."
+            },
+            {
+              "type": "p",
+              "text": "**Cómo funciona:** Consulta el estado del DST de cualquier ubicación, observa las próximas transiciones y comprende cuándo cambian los relojes. Comprueba cómo afecta el DST a las diferencias horarias entre regiones."
+            },
+            {
+              "type": "subheading",
+              "text": "5. Guardados — Ubicaciones favoritas"
+            },
+            {
+              "type": "p",
+              "text": "Guarda tus ubicaciones más utilizadas para acceder a ellas rápidamente."
+            },
+            {
+              "type": "p",
+              "text": "**Cómo funciona:** Guarda las ubicaciones que consultas con frecuencia. Accede a ellas al instante sin necesidad de buscar. Tus ubicaciones guardadas se almacenan localmente en tu navegador."
+            }
+          ]
+        },
+        {
+          "heading": "Preguntas frecuentes",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "¿Qué datos de zonas horarias utiliza este sitio web?"
+            },
+            {
+              "type": "p",
+              "text": "Utilizamos las definiciones oficiales de zonas horarias de la IANA, que son el estándar global para realizar cálculos de hora precisos."
+            },
+            {
+              "type": "subheading",
+              "text": "¿El sitio web tiene en cuenta el horario de verano?"
+            },
+            {
+              "type": "p",
+              "text": "Sí. Todos los cálculos se ajustan automáticamente al horario de verano según la fecha y la ubicación seleccionadas."
+            },
+            {
+              "type": "subheading",
+              "text": "¿Puedo consultar fechas futuras o pasadas?"
+            },
+            {
+              "type": "p",
+              "text": "Sí. Puedes seleccionar cualquier fecha y hora para ver cómo cambian las diferencias horarias a lo largo del año."
+            },
+            {
+              "type": "subheading",
+              "text": "¿Por qué cambia la diferencia horaria durante el año?"
+            },
+            {
+              "type": "p",
+              "text": "Las diferencias horarias cambian porque algunas regiones aplican el horario de verano mientras que otras no, o porque cambian los relojes en fechas distintas."
+            },
+            {
+              "type": "subheading",
+              "text": "¿Se admiten ciudades con el mismo nombre?"
+            },
+            {
+              "type": "p",
+              "text": "Sí. Las ciudades se identifican tanto por su nombre como por su país para evitar confusiones (por ejemplo, varias ciudades llamadas \"Springfield\")."
+            },
+            {
+              "type": "subheading",
+              "text": "¿Es gratuito el uso de este sitio web?"
+            },
+            {
+              "type": "p",
+              "text": "Sí. Todas las herramientas de este sitio web son completamente gratuitas y no requieren registro."
+            },
+            {
+              "type": "subheading",
+              "text": "¿Puedo compartir o guardar los resultados?"
+            },
+            {
+              "type": "p",
+              "text": "Sí. Las páginas de herramientas generan URLs limpias y compartibles que puedes guardar como marcador o enviar a otras personas mediante el botón \"Copiar enlace\"."
+            },
+            {
+              "type": "subheading",
+              "text": "¿Qué precisión tienen los resultados?"
+            },
+            {
+              "type": "p",
+              "text": "Los resultados son precisos al minuto y se basan en las normas oficiales de las zonas horarias, pero no deben utilizarse para decisiones legales o críticas sin verificación."
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contacto",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Valoramos tus comentarios y estaremos encantados de saber de ti."
+        },
+        {
+          "type": "p",
+          "text": "Si tienes preguntas sobre cómo funcionan nuestras herramientas, deseas informar de un problema o quieres compartir sugerencias de mejora, no dudes en ponerte en contacto."
+        },
+        {
+          "type": "p",
+          "text": "Timezio está operado por **AffSquad**, un estudio independiente que crea utilidades web gratuitas."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Cómo contactarnos",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Puedes ponerte en contacto con nosotros por correo electrónico:"
+            },
+            {
+              "type": "emailBox",
+              "label": "Correo electrónico:",
+              "email": "hello@timezio.com"
+            },
+            {
+              "type": "p",
+              "text": "Procuramos responder a los mensajes en un plazo razonable. Ten en cuenta que los tiempos de respuesta pueden variar según el volumen de consultas."
+            }
+          ]
+        },
+        {
+          "heading": "Sobre qué puedes contactarnos",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Puedes ponerte en contacto con nosotros en relación con:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Preguntas sobre los cálculos de zonas horarias o la funcionalidad de las herramientas",
+                "Informar de información incorrecta o desactualizada",
+                "Problemas técnicos o errores en el sitio web",
+                "Comentarios generales y sugerencias de mejora"
+              ]
+            },
+            {
+              "type": "note",
+              "text": "**Ten en cuenta:** No podemos ofrecer asesoramiento personalizado sobre programación, orientación legal ni confirmaciones de carácter urgente."
+            }
+          ]
+        },
+        {
+          "heading": "Datos personales y privacidad",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Si te pones en contacto con nosotros por correo electrónico, trataremos los datos personales que nos facilites (como tu dirección de correo electrónico y el contenido del mensaje) únicamente con el fin de responder a tu consulta."
+            },
+            {
+              "type": "p",
+              "text": "Tu información se tratará de conformidad con las leyes de protección de datos aplicables, incluido el Reglamento General de Protección de Datos (UE) 2016/679 (GDPR)."
+            },
+            {
+              "type": "p",
+              "text": "Para más detalles, consulta nuestra [Política de privacidad](/privacy)."
+            }
+          ]
+        },
+        {
+          "heading": "Aviso importante",
+          "blocks": [
+            {
+              "type": "note",
+              "text": "La información proporcionada a través de este sitio web y mediante las respuestas por correo electrónico tiene únicamente fines informativos generales y no debe utilizarse como base para decisiones legales, financieras, aeronáuticas u otras de carácter urgente."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ui": {
+    "converter": {
+      "heading": "Conversor de zonas horarias",
+      "description": "Explora y convierte zonas horarias en un globo interactivo, consulta horas locales y encuentra coincidencias para reuniones. Totalmente adaptado al horario de verano y con datos oficiales de IANA.",
+      "compareCta": "Comparar zonas horarias",
+      "plannerCta": "Planificar una reunión"
+    },
+    "tabBar": {
+      "explore": "Explorar",
+      "planner": "Planificador",
+      "compare": "Comparar",
+      "dst": "DST",
+      "saved": "Guardados"
+    },
+    "exploreTab": {
+      "searchCity": "Buscar ciudad",
+      "searchCitySubtitle": "Encuentra cualquier ciudad del mundo",
+      "popularCities": "Ciudades populares",
+      "popularCitiesSubtitle": "Haz clic en una ciudad para ver su hora"
+    },
+    "compareTab": {
+      "compare": "Comparar",
+      "subtitle": "Añade de 2 a 6 ubicaciones y compara desfases y horas. (MVP: desfases + diferencia)",
+      "addCityPlaceholder": "Añadir ciudad para comparar…",
+      "addSelected": "Añadir seleccionada",
+      "clear": "Borrar",
+      "noItems": "No hay elementos para comparar. Añade una ciudad o usa «Añadir seleccionada».",
+      "baseLabel": "Base:",
+      "base": "Base",
+      "focus": "Enfocar",
+      "remove": "Quitar",
+      "offsetMatrix": "Matriz de desfases (respecto a la base)",
+      "location": "Ubicación",
+      "localTime": "Hora local",
+      "utcOffset": "Desfase UTC",
+      "deltaHours": "Δ horas"
+    },
+    "dstTab": {
+      "noChangeFound": "No se encontraron cambios (análisis de ≈370 días)",
+      "title": "DST",
+      "bestEffort": "Aproximado: Luxon no expone las tablas de transición de IANA, así que avanzamos en el tiempo hasta que cambia el desfase.",
+      "selectLocation": "Selecciona una ubicación en Explorar.",
+      "timezone": "Zona horaria",
+      "currentLocalTime": "Hora local actual",
+      "abbrev": "Abrev.",
+      "nextOffsetChange": "Próximo cambio de desfase",
+      "transitionNote": "Nota: la marca de tiempo de la transición es aproximada (a nivel de minutos). Para cambios exactos necesitarías una tabla de transiciones de tzdb.",
+      "infrequentChange": "Algunas zonas horarias no cambian de desfase con frecuencia (o nunca)."
+    },
+    "savedTab": {
+      "title": "Guardados",
+      "subtitle": "Almacenado en localStorage (solo ids). Usa el enlace para compartir y llevar todos los datos.",
+      "emptyState": "Aún no hay ubicaciones guardadas. Guárdalas desde Explorar.",
+      "select": "Seleccionar",
+      "compare": "Comparar",
+      "remove": "Quitar"
+    },
+    "plannerTab": {
+      "errProvideTitle": "Por favor, indica un título",
+      "msgSessionCreated": "Sesión de reunión creada",
+      "msgSessionCreatedWithTz": "Sesión de reunión creada con tu zona horaria añadida automáticamente",
+      "errCreateSession": "No se pudo crear la sesión",
+      "errCreateSessionFirst": "Primero crea una sesión",
+      "errNameRequired": "El nombre es obligatorio",
+      "errSelectLocation": "Por favor, selecciona una ubicación en el globo o busca una ciudad primero",
+      "msgParticipantAdded": "Participante añadido",
+      "errAddParticipant": "No se pudo añadir el participante",
+      "errAddParticipantBackend": "No se pudo añadir el participante al backend",
+      "errAddTwoParticipants": "Primero añade al menos 2 participantes",
+      "msgGeneratedSlots": "Se generaron {count} franjas en el backend",
+      "errGenerateSlots": "No se pudieron generar las franjas",
+      "errCreateSessionSelectSlot": "Por favor, crea una sesión y selecciona una franja primero",
+      "msgMeetCreated": "¡Meet creado! Enlace: {link}",
+      "errCreateMeet": "No se pudo crear el Meet",
+      "heading": "Planificador de reuniones",
+      "intro": "Añade participantes de distintas zonas horarias, define sus horas de trabajo y encuentra los mejores horarios para reunirse. Elige entre la búsqueda automática de franjas o la selección manual de la hora. Todos los cálculos tienen en cuenta el horario de verano.",
+      "connected": "Conectado",
+      "connectGoogleCalendar": "Conectar Google Calendar",
+      "requiredForMeet": "(necesario para los enlaces de Meet)",
+      "yourTimezone": "Tu zona horaria",
+      "yourNamePlaceholder": "Tu nombre (opcional)",
+      "createMeetingSession": "Crear sesión de reunión",
+      "meetingTitlePlaceholder": "Título de la reunión",
+      "descriptionPlaceholder": "Descripción (opcional)",
+      "createSession": "Crear sesión",
+      "sessionLabel": "Sesión: {title}",
+      "mode": "MODO",
+      "autoFindSlots": "Buscar franjas automáticamente",
+      "autoFindSlotsDesc": "El sistema encuentra los horarios óptimos para reunirse analizando la coincidencia de horas de trabajo de todos los participantes",
+      "manualTimePick": "Selección manual de hora",
+      "manualTimePickDesc": "Tú eliges una hora concreta y el sistema la convierte a las zonas horarias de todos los participantes",
+      "howAutoFindWorks": "Cómo funciona la búsqueda automática:",
+      "howManualPickWorks": "Cómo funciona la selección manual:",
+      "autoBullet1": "Analiza las horas de trabajo de todos los participantes",
+      "autoBullet2": "Encuentra los intervalos en los que todos están disponibles",
+      "autoBullet3": "Genera franjas cada 15 minutos dentro de la coincidencia",
+      "autoBullet4": "Clasifica las franjas por calidad (momento del día, posición dentro de las horas de trabajo)",
+      "autoBullet5": "Muestra primero las mejores opciones (ordenadas por puntuación de calidad)",
+      "manualBullet1": "Selecciona una hora en la zona horaria de un participante",
+      "manualBullet2": "El sistema la convierte internamente a UTC",
+      "manualBullet3": "Muestra el mismo momento en todas las demás zonas horarias",
+      "manualBullet4": "Ideal para horarios de reunión fijos o agendas concretas",
+      "manualBullet5": "Todos los cálculos respetan las transiciones de horario de verano",
+      "duration": "Duración",
+      "twoHours": "2 horas",
+      "minutes": "{mins} min",
+      "date": "Fecha",
+      "preferences": "Preferencias",
+      "includeWeekends": "Incluir fines de semana",
+      "includeWeekendsDesc": "Permitir franjas el sábado y domingo usando las horas de trabajo predeterminadas",
+      "avoidEarly": "Evitar reuniones antes de las 8:00",
+      "avoidLate": "Evitar reuniones después de las 20:00",
+      "localTime": "Hora local",
+      "avoidLunch": "Evitar la hora de la comida",
+      "lunchTime": "12:00-13:00",
+      "addParticipant": "Añadir participante",
+      "quick": "Rápido",
+      "withEmail": "Con correo",
+      "searchCityPlaceholder": "Busca una ciudad para añadirla rápido…",
+      "namePlaceholder": "Nombre *",
+      "emailPlaceholder": "Correo (opcional, para invitaciones de calendario)",
+      "clickGlobeHint": "Haz clic en el globo o busca una ciudad primero para seleccionar la ubicación",
+      "addAllFromCompare": "Añadir todas desde Comparar ({count})",
+      "clickGlobeFormHint": "Haz clic en el globo para seleccionar una ubicación y luego rellena el formulario de arriba",
+      "participantsCount": "Participantes ({count})",
+      "remove": "Quitar",
+      "namePrompt": "Nombre:",
+      "rename": "Cambiar nombre",
+      "selectTime": "Seleccionar hora",
+      "baseTimezone": "Zona horaria base",
+      "unknown": "Desconocida",
+      "meetingTime": "Hora de la reunión",
+      "meetingTimeTzSuffix": "(zona horaria de {name})",
+      "meetingTimeUtcSuffix": "(UTC)",
+      "availableSlots": "Franjas disponibles",
+      "generateSlots": "Generar franjas",
+      "emptySlotsWithSession": "Haz clic en «Generar franjas» para encontrar horarios disponibles para reunirse. O ajusta las horas de trabajo o la fecha e inténtalo de nuevo.",
+      "emptySlotsNoSession": "Primero crea una sesión, luego añade al menos 2 participantes y define sus horas de trabajo para encontrar horarios disponibles para reunirse.",
+      "qualityGreat": "Excelente",
+      "qualityGood": "Buena",
+      "qualityFair": "Aceptable",
+      "qualityScoreTitle": "Puntuación de calidad: {score}/100",
+      "selected": "Seleccionada",
+      "morning": "Mañana",
+      "afternoon": "Tarde",
+      "evening": "Noche",
+      "night": "Madrugada",
+      "showingTopSlots": "Mostrando las 15 mejores de {total} franjas disponibles (ordenadas por calidad)",
+      "selectedTime": "Hora seleccionada",
+      "selectedSlot": "Franja seleccionada",
+      "utcTime": "Hora UTC",
+      "daytime": "De día",
+      "nighttime": "De noche",
+      "confirmed": "Confirmada",
+      "confirmCreateMeet": "Confirmar y crear Google Meet",
+      "manualNeedParticipant": "Añade al menos un participante para convertir la hora a distintas zonas horarias",
+      "autoNeedTwoParticipants": "Añade al menos 2 participantes para empezar a buscar franjas de reunión",
+      "autoNeedOneMoreParticipant": "Añade un participante más para encontrar horarios disponibles para reunirse",
+      "meetingConfirmed": "Reunión confirmada",
+      "googleMeetLink": "Enlace de Google Meet:",
+      "eventId": "ID del evento: {id}"
+    },
+    "citySearch": {
+      "placeholder": "Buscar ciudad…",
+      "unableToSearchStatus": "No se pudo buscar ({status})",
+      "unableToSearchCities": "No se pudieron buscar ciudades",
+      "typeAtLeast": "Escribe al menos {count} caracteres",
+      "searchingCities": "Buscando ciudades…",
+      "unableToFetchCities": "No se pudieron obtener las ciudades",
+      "noMatchesFound": "No se encontraron coincidencias"
+    },
+    "meetingPlanner": {
+      "errProvideTitle": "Por favor, indica un título",
+      "msgSessionCreated": "Sesión de reunión creada",
+      "msgSessionCreatedWithTz": "Sesión de reunión creada con tu zona horaria añadida automáticamente",
+      "errCreateSession": "No se pudo crear la sesión",
+      "errCreateSessionFirst": "Primero crea una sesión",
+      "errNameRequired": "El nombre es obligatorio",
+      "errSelectLocation": "Por favor, selecciona una ubicación en el globo o busca una ciudad primero",
+      "msgParticipantAdded": "Participante añadido",
+      "errAddParticipant": "No se pudo añadir el participante",
+      "errAddParticipantBackend": "No se pudo añadir el participante al backend",
+      "errAddTwoParticipants": "Primero añade al menos 2 participantes",
+      "msgGeneratedSlots": "Se generaron {count} franjas en el backend",
+      "errGenerateSlots": "No se pudieron generar las franjas",
+      "errSelectSlotFirst": "Por favor, crea una sesión y selecciona una franja primero",
+      "msgMeetCreated": "¡Meet creado! Enlace: {link}",
+      "errCreateMeet": "No se pudo crear el Meet",
+      "pageTitle": "Planificador de reuniones",
+      "pageSubtitle": "Añade participantes de distintas zonas horarias, define sus horas de trabajo y encuentra los mejores horarios para reunirse. Elige entre la búsqueda automática de franjas o la selección manual de la hora. Todos los cálculos tienen en cuenta el horario de verano.",
+      "connected": "Conectado",
+      "connectGoogleCalendar": "Conectar Google Calendar",
+      "requiredForMeetLinks": "(necesario para los enlaces de Meet)",
+      "yourTimezone": "Tu zona horaria",
+      "yourNamePlaceholder": "Tu nombre (opcional)",
+      "createMeetingSession": "Crear sesión de reunión",
+      "meetingTitlePlaceholder": "Título de la reunión",
+      "descriptionPlaceholder": "Descripción (opcional)",
+      "createSession": "Crear sesión",
+      "sessionLabel": "Sesión: {title}",
+      "mode": "MODO",
+      "autoFindSlots": "Buscar franjas automáticamente",
+      "autoFindSlotsDesc": "El sistema encuentra los horarios óptimos para reunirse analizando la coincidencia de horas de trabajo de todos los participantes",
+      "manualTimePick": "Selección manual de hora",
+      "manualTimePickDesc": "Tú eliges una hora concreta y el sistema la convierte a las zonas horarias de todos los participantes",
+      "howAutoFindWorks": "Cómo funciona la búsqueda automática:",
+      "howManualPickWorks": "Cómo funciona la selección manual:",
+      "autoStep1": "Analiza las horas de trabajo de todos los participantes",
+      "autoStep2": "Encuentra los intervalos en los que todos están disponibles",
+      "autoStep3": "Genera franjas cada 15 minutos dentro de la coincidencia",
+      "autoStep4": "Clasifica las franjas por calidad (momento del día, posición dentro de las horas de trabajo)",
+      "autoStep5": "Muestra primero las mejores opciones (ordenadas por puntuación de calidad)",
+      "manualStep1": "Selecciona una hora en la zona horaria de un participante",
+      "manualStep2": "El sistema la convierte internamente a UTC",
+      "manualStep3": "Muestra el mismo momento en todas las demás zonas horarias",
+      "manualStep4": "Ideal para horarios de reunión fijos o agendas concretas",
+      "manualStep5": "Todos los cálculos respetan las transiciones de horario de verano",
+      "duration": "Duración",
+      "twoHours": "2 horas",
+      "minutes": "{mins} min",
+      "date": "Fecha",
+      "preferences": "Preferencias",
+      "avoidBefore8am": "Evitar reuniones antes de las 8:00",
+      "localTime": "Hora local",
+      "avoidAfter8pm": "Evitar reuniones después de las 20:00",
+      "avoidLunchTime": "Evitar la hora de la comida",
+      "addParticipant": "Añadir participante",
+      "quick": "Rápido",
+      "withEmail": "Con correo",
+      "searchCityPlaceholder": "Busca una ciudad para añadirla rápido…",
+      "namePlaceholder": "Nombre *",
+      "emailPlaceholder": "Correo (opcional, para invitaciones de calendario)",
+      "addParticipantBtn": "Añadir participante",
+      "clickGlobeHint": "Haz clic en el globo o busca una ciudad primero para seleccionar la ubicación",
+      "addAllFromCompare": "Añadir todas desde Comparar ({count})",
+      "clickGlobeFillForm": "Haz clic en el globo para seleccionar una ubicación y luego rellena el formulario de arriba",
+      "participantsCount": "Participantes ({count})",
+      "remove": "Quitar",
+      "namePrompt": "Nombre:",
+      "rename": "Cambiar nombre",
+      "selectTime": "Seleccionar hora",
+      "baseTimezone": "Zona horaria base",
+      "unknown": "Desconocida",
+      "meetingTime": "Hora de la reunión",
+      "meetingTimeTzSuffix": "(zona horaria de {name})",
+      "meetingTimeUtcSuffix": "(UTC)",
+      "availableSlots": "Franjas disponibles",
+      "generateSlotsBackend": "Generar franjas en el backend",
+      "slotsEmptyState": "Haz clic en «Generar franjas en el backend» para encontrar horarios disponibles para reunirse. O ajusta las horas de trabajo o la fecha e inténtalo de nuevo.",
+      "qualityGreat": "Excelente",
+      "qualityGood": "Buena",
+      "qualityFair": "Aceptable",
+      "qualityScoreTitle": "Puntuación de calidad: {score}/100",
+      "selected": "Seleccionada",
+      "morning": "Mañana",
+      "afternoon": "Tarde",
+      "evening": "Noche",
+      "night": "Madrugada",
+      "showingTop15": "Mostrando las 15 mejores de {total} franjas disponibles (ordenadas por calidad)",
+      "selectedTime": "Hora seleccionada",
+      "selectedSlot": "Franja seleccionada",
+      "utcTime": "Hora UTC",
+      "daytime": "De día",
+      "nighttime": "De noche",
+      "confirmCreateMeet": "Confirmar y crear Google Meet",
+      "addOneParticipantHint": "Añade al menos un participante para convertir la hora a distintas zonas horarias",
+      "addTwoParticipantsHint": "Añade al menos 2 participantes para empezar a buscar franjas de reunión",
+      "addOneMoreParticipantHint": "Añade un participante más para encontrar horarios disponibles para reunirse",
+      "meetingConfirmed": "Reunión confirmada",
+      "googleMeetLink": "Enlace de Google Meet:",
+      "eventId": "ID del evento: {id}"
+    },
+    "participants": {
+      "timezone": "Zona horaria",
+      "localTimeNow": "Hora local ahora",
+      "meetingTimeForYou": "Hora de la reunión para ti:"
+    },
+    "poll": {
+      "failedToLoad": "No se pudo cargar la encuesta",
+      "provideNameEmail": "Por favor, indica tu nombre y correo",
+      "voteAtLeastOne": "Por favor, vota al menos una franja",
+      "failedToSubmit": "No se pudo enviar el voto",
+      "voteSubmitted": "¡Voto enviado correctamente!",
+      "loading": "Cargando...",
+      "duration": "Duración: {minutes} minutos",
+      "voteForSlots": "Vota las franjas disponibles",
+      "noSlots": "No hay franjas disponibles",
+      "utcLabel": "UTC:",
+      "yourTimeLabel": "Tu hora ({timezone}):",
+      "score": "Puntuación: {score}",
+      "yes": "✓ Sí",
+      "maybe": "? Quizás",
+      "no": "✗ No",
+      "summary": "Resumen: {yes} sí, {maybe} quizás, {no} no",
+      "submitYourVote": "Envía tu voto",
+      "yourName": "Tu nombre",
+      "yourEmail": "Tu correo",
+      "submitting": "Enviando...",
+      "submitVote": "Enviar voto"
+    },
+    "book": {
+      "failedLoadBooking": "No se pudo cargar la reserva",
+      "selectSlotProvideInfo": "Por favor, selecciona una franja e indica tu nombre y correo",
+      "failedReserve": "No se pudo reservar",
+      "slotReserved": "¡Franja reservada! Se creó el enlace de Meet.",
+      "failedReserveSlot": "No se pudo reservar la franja",
+      "loading": "Cargando...",
+      "duration": "Duración: {minutes} minutos",
+      "meetingReserved": "Reunión reservada",
+      "timeLabel": "Hora:",
+      "yourLocalTimeLabel": "Tu hora local:",
+      "meetLinkLabel": "Enlace de Meet:",
+      "availableSlots": "Franjas disponibles",
+      "noSlots": "No hay franjas disponibles",
+      "utcLabel": "UTC:",
+      "yourTimeLabel": "Tu hora ({timezone}):",
+      "score": "Puntuación: {score}",
+      "select": "Seleccionar",
+      "reserveSlot": "Reservar franja",
+      "yourName": "Tu nombre",
+      "yourEmail": "Tu correo",
+      "reserving": "Reservando...",
+      "reserveSlotButton": "Reservar franja"
+    },
+    "toast": {
+      "close": "Cerrar"
+    },
+    "timeDisplay": {
+      "selectLocation": "Selecciona una ubicación para ver la hora",
+      "sun": "Sol:",
+      "format12h": "12 h",
+      "format24h": "24 h"
+    },
+    "dstBadge": {
+      "active": "DST activo",
+      "inactive": "DST inactivo"
+    },
+    "workingHours": {
+      "workingHours": "Horas de trabajo",
+      "start": "Inicio",
+      "end": "Fin"
+    },
+    "cityTimeCard": {
+      "day": "Día",
+      "night": "Noche"
+    },
+    "timezoneSelector": {
+      "savedToast": "¡Zona horaria «{name}» guardada!",
+      "clearedToast": "¡Zona horaria guardada eliminada!",
+      "selectTimezone": "Selecciona una zona horaria",
+      "savedLabel": "Guardada: {name}",
+      "hideTimezone": "Ocultar zona horaria",
+      "selectTimezoneButton": "Seleccionar zona horaria",
+      "saveTitle": "Guardar la zona horaria en localStorage",
+      "save": "Guardar",
+      "clearTitle": "Eliminar la zona horaria guardada",
+      "clear": "Borrar",
+      "searchPlaceholder": "Buscar zona horaria (p. ej., Kiev, Nueva York, Tokio)...",
+      "noResults": "No se encontraron zonas horarias para «{query}»",
+      "selectRegion": "Selecciona una región:",
+      "regionTimezones": "Zonas horarias de {region}:"
+    },
+    "datePicker": {
+      "today": "Hoy",
+      "weekday": {
+        "Sun": "Dom",
+        "Mon": "Lun",
+        "Tue": "Mar",
+        "Wed": "Mié",
+        "Thu": "Jue",
+        "Fri": "Vie",
+        "Sat": "Sáb"
+      }
+    },
+    "timePicker": {
+      "hour": "Hora",
+      "min": "Min"
+    },
+    "copyButton": {
+      "copy": "Copiar"
+    },
+    "themeToggle": {
+      "dark": "Oscuro",
+      "light": "Claro",
+      "switchTitle": "Cambiar al tema {theme}"
+    },
+    "timeSlider": {
+      "time": "Hora"
+    }
+  }
+}

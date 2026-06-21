@@ -1,0 +1,1592 @@
+{
+  "common": {
+    "appName": "Timezio",
+    "breadcrumbHome": "Domů",
+    "faqTitle": "Často kladené otázky",
+    "backToHome": "Zpět na úvodní stránku",
+    "legalDisclaimer": "Tato stránka je strojově asistovaný překlad poskytnutý pro pohodlí. Závazná je anglická verze."
+  },
+  "nav": {
+    "blog": "Blog",
+    "about": "O nás",
+    "toggleHourFormat": "Přepnout 12/24h",
+    "copyLink": "Kopírovat odkaz"
+  },
+  "language": {
+    "label": "Jazyk",
+    "select": "Vyberte jazyk"
+  },
+  "meta": {
+    "home": {
+      "title": "Timezio – Převodník časových pásem a plánovač schůzek",
+      "description": "Okamžitý převodník časových pásem, světový čas, plánovač schůzek zohledňující letní čas a porovnání časových pásem na interaktivním glóbu."
+    },
+    "explore": {
+      "title": "Prozkoumejte časová pásma na glóbu",
+      "description": "Prozkoumejte časová pásma na interaktivním 3D glóbu. Zjistěte aktuální čas, posun UTC a stav letního času pro libovolné místo."
+    },
+    "compare": {
+      "title": "Porovnat časová pásma",
+      "description": "Porovnávejte časová pásma vedle sebe s posuny zohledňujícími letní čas. Vizualizujte místa na interaktivním glóbu a vyhněte se chybám při plánování."
+    },
+    "planner": {
+      "title": "Plánovač schůzek napříč časovými pásmy",
+      "description": "Plánujte schůzky napříč časovými pásmy s pracovní dobou, okny překryvu a výpočty zohledňujícími letní čas."
+    },
+    "saved": {
+      "title": "Uložená místa a časová pásma",
+      "description": "Uložte si často používaná místa a rychle se vraťte k jejich aktuálnímu času, posunu a stavu letního času."
+    },
+    "timeConverter": {
+      "title": "Převodník časových pásem – Porovnávejte časy, plánujte schůzky a objevujte města",
+      "description": "Porovnávejte časová pásma mezi městy, plánujte schůzky napříč regiony a objevujte místní časy po celém světě. Zohledňuje letní čas, přesný a zdarma."
+    },
+    "meetingPlanner": {
+      "title": "Plánovač schůzek"
+    },
+    "convertHub": {
+      "title": "Oblíbené převodníky časových pásem",
+      "description": "Převádějte čas mezi pásmy okamžitě: PST na EST, UTC na EST, GMT na EST, CET na EST, IST na EST a další. Každý převodník zohledňuje letní čas a zobrazuje úplnou tabulku hodinu po hodině."
+    },
+    "timeHub": {
+      "title": "Aktuální čas ve velkých městech po celém světě",
+      "description": "Zjistěte aktuální místní čas ve městech po celém světě. Každá stránka zobrazuje živý místní čas, posun UTC, časové pásmo a stav letního času – zohledňuje letní čas a aktualizuje se v reálném čase."
+    },
+    "meetingHub": {
+      "title": "Nejlepší časy schůzek napříč časovými pásmy",
+      "description": "Najděte překrývající se pracovní dobu pro oblíbené dvojice měst. Každá stránka zobrazuje tabulku sdílených hodin a nejlepší časový slot, plně zohledňující letní čas."
+    },
+    "dstHub": {
+      "title": "Kontrola letního času",
+      "description": "Dodržuje region právě teď letní čas? Zkontrolujte stav letního času, aktuální posun UTC a přesná data následujících změn času pro země po celém světě."
+    },
+    "time": {
+      "title": "Aktuální čas ve městě {city}",
+      "description": "Zobrazte aktuální místní čas ve městě {city} s posunem UTC a stavem letního času."
+    },
+    "convert": {
+      "title": "Převodník času {from} na {to}",
+      "description": "Převádějte {from} na {to} s úplnou tabulkou hodinu po hodině – zohledňuje letní čas, používá oficiální data IANA."
+    },
+    "meeting": {
+      "title": "Nejlepší čas na schůzku: {a} ↔ {b}",
+      "description": "Najděte překrývající se pracovní dobu a nejlepší čas na schůzku mezi {a} a {b} – plně zohledňující letní čas."
+    },
+    "dst": {
+      "title": "Letní čas v regionu {region}",
+      "description": "Stav letního času, aktuální posun UTC a data následujících změn času pro {region}."
+    },
+    "privacy": {
+      "title": "Zásady ochrany osobních údajů",
+      "description": "Jak Timezio shromažďuje, používá a chrání informace v souladu s GDPR a platnými zákony o ochraně osobních údajů."
+    },
+    "terms": {
+      "title": "Podmínky používání",
+      "description": "Smluvní podmínky pro používání nástrojů Timezio pro časová pásma, převodníků a plánovače schůzek."
+    },
+    "about": {
+      "title": "O Timezio",
+      "description": "Timezio je bezplatný převodník časových pásem zohledňující letní čas, světový čas a plánovač schůzek vytvořený společností AffSquad. Zjistěte, kdo jej provozuje, jak funguje a jaká data stojí za ním."
+    },
+    "contact": {
+      "title": "Kontaktujte podporu Timezio",
+      "description": "Získejte pomoc, nahlaste problémy nebo požádejte o nové funkce pro nástroje Timezio pro časová pásma. Reagujeme na zpětnou vazbu a dotazy podpory."
+    },
+    "blogIndex": {
+      "title": "Průvodci časovými pásmy a tipy pro práci na dálku",
+      "description": "Podrobní průvodci o časových pásmech, letním čase, spolupráci na dálku a efektivním používání Timezio."
+    }
+  },
+  "footer": {
+    "productTitle": "PRODUKT",
+    "exploreTitle": "PROZKOUMAT",
+    "popularTitle": "OBLÍBENÉ",
+    "legalTitle": "PRÁVNÍ INFORMACE",
+    "home": "Domů",
+    "exploreGlobe": "Prozkoumat glóbus",
+    "compareZones": "Porovnat pásma",
+    "meetingPlanner": "Plánovač schůzek",
+    "timeConverter": "Převodník času",
+    "worldClock": "Světový čas",
+    "converters": "Převodníky",
+    "meetingTimes": "Časy schůzek",
+    "daylightSaving": "Letní čas",
+    "blog": "Blog",
+    "about": "O nás",
+    "contact": "Kontakt",
+    "privacy": "Zásady ochrany osobních údajů",
+    "terms": "Podmínky používání",
+    "cookieSettings": "Nastavení cookies",
+    "copyright": "© {year} Timezio od AffSquad. Všechna práva vyhrazena.",
+    "disclaimer": "Informace na tomto webu jsou poskytovány pouze pro obecnou orientaci. Jejich přesnost není zaručena. V rozsahu povoleném právem EU se nepřebírá žádná odpovědnost. K analytice a reklamě mohou být v souladu s vaším souhlasem používány soubory cookie nebo podobné technologie.",
+    "privacyShort": "Soukromí",
+    "termsShort": "Podmínky"
+  },
+  "consent": {
+    "message": "Používáme soubory cookie pro analytiku a zobrazování reklam (včetně Google AdSense). Nepodstatné soubory cookie můžete přijmout nebo odmítnout. Přečtěte si naše <link>Zásady ochrany osobních údajů</link>.",
+    "reject": "Odmítnout",
+    "acceptAll": "Přijmout vše"
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexDescription": "Články a průvodci o časových pásmech, práci na dálku a efektivním používání Timezio.",
+    "readMore": "Číst dál",
+    "backToBlog": "Zpět na blog",
+    "byTeam": "Tým Timezio",
+    "toolsTitle": "Nástroje Timezio",
+    "relatedTitle": "Související články",
+    "tools": [
+      {
+        "title": "Prozkoumat glóbus",
+        "desc": "Klikněte kamkoli na interaktivním glóbu a zobrazte si místní čas"
+      },
+      {
+        "title": "Porovnat časová pásma",
+        "desc": "Porovnejte časové rozdíly mezi více městy"
+      },
+      {
+        "title": "Plánovač schůzek",
+        "desc": "Najděte nejlepší čas na schůzku pro lidi na různých místech"
+      },
+      {
+        "title": "Sledování DST",
+        "desc": "Sledujte změny a přechody letního času"
+      },
+      {
+        "title": "Převodník času",
+        "desc": "Převádějte UTC nebo místní čas mezi časovými pásmy"
+      }
+    ]
+  },
+  "home": {
+    "badges": [
+      "Živé a respektující letní čas",
+      "Bez registrace",
+      "Navždy zdarma"
+    ],
+    "title": "Plánujte napříč časovými pásmy bez starostí.",
+    "lede": "Timezio vám pomáhá porovnávat časová pásma, převádět UTC a domlouvat termíny schůzek mezi městy. Každý výpočet zohledňuje letní čas a vychází z oficiálních dat IANA.",
+    "ctaPlanner": "Naplánovat schůzku",
+    "ctaConverter": "Otevřít převodník",
+    "highlights": [
+      {
+        "title": "Zohledňuje letní čas",
+        "body": "Vychází z oficiálních dat časových pásem IANA, která se aktualizují automaticky."
+      },
+      {
+        "title": "Více než 10 tisíc měst",
+        "body": "Pokrývá každý posun, včetně rozdílů o 30 a 45 minut."
+      },
+      {
+        "title": "Připraveno ke sdílení",
+        "body": "Zkopírujte přehledné odkazy a pošlete týmu přesný časový plán."
+      }
+    ],
+    "panelEyebrow": "Živý přehled",
+    "panelTitle": "Co se právě teď děje",
+    "panelBadge": "Letní čas ověřen",
+    "panelFooter": "Živé příklady. Neobvyklé posuny a pravidla letního času jsou řešeny automaticky.",
+    "toolkitEyebrow": "Sada nástrojů",
+    "toolkitTitle": "Vše, co potřebujete pro globální načasování",
+    "toolkitBody": "Přepínejte mezi plánovačem, převodníkem a porovnáním měst, aniž byste ztratili kontext.",
+    "tools": [
+      {
+        "label": "Plánovač schůzek",
+        "desc": "Najděte automaticky termíny s vhodným překryvem a ušetřete všechny pozdních nočních hovorů.",
+        "badge": "Oblíbenec týmů"
+      },
+      {
+        "label": "Převodník času",
+        "desc": "Převádějte UTC nebo místní časy, prohlížejte budoucí data a sdílejte výsledky okamžitě.",
+        "badge": "Nejpoužívanější"
+      },
+      {
+        "label": "Porovnání měst",
+        "desc": "Seřaďte několik měst vedle sebe a uvidíte přesné rozdíly na první pohled.",
+        "badge": ""
+      },
+      {
+        "label": "Prozkoumat glóbus",
+        "desc": "Procházejte interaktivní glóbus a přejděte přímo na libovolné město či region.",
+        "badge": ""
+      }
+    ],
+    "toolOpen": "Otevřít →",
+    "whyEyebrow": "Proč Timezio",
+    "whyTitle": "Přesnost ve výchozím nastavení, přívětivost v designu",
+    "whyBody": "Vytvořeno pro vzdálené týmy, freelancery a přátele rozesety po celém světě.",
+    "values": [
+      {
+        "title": "Přesné výpočty časových pásem",
+        "body": "Porovnávejte místní časy mezi městy s automatickým zohledněním letního času a regionálních posunů UTC."
+      },
+      {
+        "title": "Převod mezi UTC a místním časem",
+        "body": "Převádějte UTC na místní čas (a zpět) pro libovolné město — minulá, současná i budoucí data jsou podporována."
+      },
+      {
+        "title": "Plánovač schůzek napříč časovými pásmy",
+        "body": "Najděte nejlepší společný čas schůzky pro účastníky v různých městech, bez brzkých rán a pozdních nocí."
+      },
+      {
+        "title": "Rychlé, jednoduché a zdarma",
+        "body": "Žádné účty, žádné nastavování, žádná složitost. Jen jasné odpovědi — okamžitě."
+      },
+      {
+        "title": "Zohledňuje letní čas a je spolehlivé",
+        "body": "Timezio používá oficiální data časových pásem IANA. Všechny výsledky se automaticky přizpůsobují změnám letního času a regionálním pravidlům."
+      },
+      {
+        "title": "Vytvořeno pro celosvětové použití",
+        "body": "Podporuje regiony s nestandardními posuny (včetně rozdílů o 30 nebo 45 minut) a změny data při překračování časových pásem."
+      }
+    ]
+  },
+  "pages": {
+    "explore": {
+      "heading": "Prozkoumejte časová pásma",
+      "description": "Vyberte libovolný bod na glóbu a zobrazte si místní čas, posun UTC a stav letního času. Funkci Prozkoumat využijte k pochopení, jak se čas mění přes hranice.",
+      "breadcrumb": "Prozkoumat",
+      "ctas": [
+        "Aktuální čas ve velkých městech",
+        "Oblíbené převodníky časových pásem",
+        "Kontrola letního času"
+      ],
+      "articleH2": "Jak prozkoumávat glóbus",
+      "articleParagraphs": [
+        "Interaktivní 3D glóbus mění časová pásma v něco, co lze vidět, místo aby se počítalo. Klikněte na libovolné místo a Timezio přečte jeho přesnou zeměpisnou šířku a délku, vyhledá odpovídající časové pásmo IANA a zobrazí aktuální místní čas, posun UTC a zda právě platí letní čas. Protože data pocházejí z oficiální databáze časových pásem IANA, pokrývají i ošemetné případy — půlhodinové posuny jako v Indii (UTC+5:30), 45minutové posuny jako v Nepálu a regiony, které mění své hodiny v různá data.",
+        "Funkce Prozkoumat je nejrychlejší způsob, jak odpovědět na otázku „kolik je tam právě teď?“ bez psaní názvu města. Otočte glóbus na kontinent, klikněte na pobřeží a okamžitě si přečtěte čas. Když chcete seřadit několik míst najednou, přepněte na Porovnat; když potřebujete najít termín, který vyhovuje celému týmu, přejděte do Plánovače. Každé zobrazení zůstává synchronizované, takže město, na které zde kliknete, je připraveno k porovnání nebo naplánování jedním klepnutím.",
+        "Časová pásma jsou stejně politická jako geografická — hranice, výjimky a sezónní pravidla posouvají hodiny. Při zobrazení na glóbu jsou tyto hranice zřejmé, a proto je Prozkoumat dobrým výchozím bodem, než převedete konkrétní čas nebo si domluvíte mezinárodní hovor."
+      ]
+    },
+    "compare": {
+      "heading": "Porovnejte časová pásma",
+      "description": "Porovnejte několik časových pásem vedle sebe s posuny zohledňujícími letní čas. Přidejte města, zvolte základní lokalitu a ověřte si časový rozdíl, než si něco naplánujete.",
+      "breadcrumb": "Porovnat",
+      "ctas": [
+        "Oblíbené převodníky časových pásem",
+        "Nejlepší časy schůzek podle dvojic měst",
+        "Kontrola letního času"
+      ],
+      "articleH2": "Porovnejte několik měst najednou",
+      "articleParagraphs": [
+        "Přidejte až šest měst a Timezio seřadí jejich aktuální místní časy do jednoho přehledu. Jedno vyberte jako „základní“ a každé další město zobrazí svůj rozdíl vůči němu, takže můžete na první pohled odpovědět na otázky jako „když je v Berlíně 9:00, kolik je v New Yorku a Singapuru?“. Posuny se počítají z oficiálních dat IANA a aktualizují se v reálném čase, včetně hodinových posunů, ke kterým dochází, když region přechází na letní čas nebo z něj.",
+        "Porovnávání je nejužitečnější, když rozdíl není zřejmý. Mnoho dvojic zemí dělí necelý počet hodin a několik z nich mění své hodiny v různé víkendy, takže rozdíl mezi dvěma městy může být jeden měsíc devět hodin a další deset. Seřazení měst vedle sebe odhalí tyto hraniční případy dříve, než se z nich stane zmeškaný hovor. Pro budoucí datum změňte datum a porovnání se přepočítá se správnými pravidly letního času pro daný den.",
+        "Jakmile rozdíl potvrdíte, zkopírujte odkaz pro sdílení a pošlete týmu přesné porovnání, nebo přesuňte stejnou sadu měst do Plánovače a najděte termín schůzky, který vyhovuje všem."
+      ]
+    },
+    "planner": {
+      "heading": "Plánovač schůzek",
+      "description": "Plánujte schůzky napříč více časovými pásmy. Přidejte účastníky, nastavte pracovní dobu a najděte okna překryvu automaticky — s plným zohledněním letního času.",
+      "breadcrumb": "Plánovač",
+      "ctas": [
+        "Nejlepší časy schůzek podle dvojic měst",
+        "Porovnat časová pásma",
+        "Kontrola letního času"
+      ],
+      "articleH2": "Najděte čas, který vyhovuje všem",
+      "articleParagraphs": [
+        "Přidejte každého účastníka podle města, nastavte jeho pracovní dobu a plánovač překryje všechny rozvrhy, aby odhalil okna, kdy jsou všichni k dispozici. Místo abyste v hlavě žonglovali s posuny, dostanete seřazený seznam termínů, které spadají do pracovního dne každého účastníka, přičemž brzké ranní a pozdní noční časy mají nižší prioritu, aby nikdo nemusel mít hovor v 6 ráno. Každý výpočet zohledňuje letní čas, takže termín, který funguje tento týden, bude fungovat i poté, co region změní své hodiny.",
+        "Plánovač je vytvořen pro rozprostřené týmy, klientské hovory napříč kontinenty a setkávání s přáteli či rodinou v zahraničí. Nastavte délku schůzky, zvolte datum a upravte hodiny každého účastníka, pokud pracuje na neobvyklou směnu. Vyhledávání můžete také rozšířit, když neexistuje čistý překryv — častá situace u dvojic, které dělí deset či více hodin, kdy někdo musí přijmout hraniční termín. Pro pozvánky v Google Calendar a odkazy na Meet propojte svůj účet v plánovači a potvrďte termín.",
+        "Znáte už ta dvě města? Předpřipravené stránky s nejlepším časem schůzky zobrazují překryv pro oblíbené dvojice bez jakéhokoli nastavování."
+      ]
+    },
+    "saved": {
+      "heading": "Uložené",
+      "description": "Uložte si často používané lokality, abyste se mohli okamžitě vrátit k jejich aktuálnímu času, posunu a stavu letního času.",
+      "breadcrumb": "Uložené",
+      "ctas": [
+        "Prozkoumat časová pásma",
+        "Porovnat časová pásma",
+        "Naplánovat schůzku napříč časovými pásmy"
+      ]
+    },
+    "convertHub": {
+      "title": "Oblíbené převodníky časových pásem",
+      "intro1": "Převodník časových pásem odpovídá na zdánlivě záludnou otázku: když je v jednom místě daný čas, kolik je jinde? Háček je v tom, že rozdíl mezi dvěma pásmy není neměnný. Letní čas jej posune o hodinu, dva regiony často mění své hodiny v různé víkendy a některá pásma dělí necelý počet hodin. Každý převodník níže používá oficiální data IANA, takže výsledek je správný k libovolnému datu — včetně týdnů kolem změny času, kdy ruční počítání obvykle selhává.",
+      "intro2": "Každá stránka převodníku obsahuje úplnou tabulku po hodinách pro aktuální den, živý posun mezi oběma pásmy a poznámky k tomu, na které straně platí letní čas. Potřebujete zkontrolovat město místo zkratky? Projděte si <world>světový čas</world>, nebo přejděte na <compare>Porovnat</compare> a seřaďte více než dvě místa najednou.",
+      "listHeading": "Převodníky"
+    },
+    "timeHub": {
+      "title": "Aktuální čas ve velkých městech po celém světě",
+      "intro1": "Vyberte město a zobrazte si jeho aktuální místní čas, přesný posun UTC, časové pásmo IANA, které používá, a zda právě platí letní čas. Každá stránka se aktualizuje v reálném čase a počítá se z oficiální databáze časových pásem IANA, takže ošemetné případy — půlhodinové posuny, regiony měnící hodiny v různá data a místa, která letní čas vůbec nedodržují — jsou řešeny správně.",
+      "intro2": "Tyto stránky se světovým časem jsou nejrychlejší způsob, jak zjistit „kolik je tam?“, než zavoláte, vyrazíte na cestu nebo si něco naplánujete. K převodu konkrétního času mezi dvěma místy použijte <convert>převodníky</convert>, k seřazení několika měst použijte <compare>Porovnat</compare> a k nalezení termínu vyhovujícího skupině použijte <planner>Plánovač schůzek</planner>.",
+      "listHeading": "Města ({count})"
+    },
+    "meetingHub": {
+      "title": "Nejlepší časy schůzek podle dvojic měst",
+      "intro1": "Plánování napříč kontinenty obvykle znamená, že někdo přijímá hovor v nevhodnou hodinu. Tyto stránky za vás udělají tu těžkou část: pro každou oblíbenou dvojici měst Timezio překryje standardní pracovní den od 9 do 17 obou týmů a vypíše hodiny, kdy jsou všichni vzhůru a pracují, a navíc doporučený termín uprostřed tohoto okna. Protože výpočet používá oficiální data IANA, zůstává překryv správný i tehdy, když jedno město mění své hodiny a druhé ne.",
+      "intro2": "Vyberte níže dvojici pro okamžitou odpověď, nebo otevřete <planner>Plánovač schůzek</planner> a přidejte vlastní města, upravte pracovní dobu každého účastníka a vygenerujte pozvánky do kalendáře. Pro ověření samotného časového rozdílu nejdříve použijte <compare>Porovnat</compare>."
+    },
+    "dstHub": {
+      "title": "Letní čas podle zemí",
+      "intro1": "Letní čas je jedním z největších zdrojů chyb při plánování: hodiny se posunou o hodinu, ale ne všude a ne ve stejný den. Tyto stránky vám pro každý region řeknou, zda právě platí letní čas, jaký je současný posun UTC a přesná data následujícího jarního posunu vpřed a podzimního posunu vzad — vše vypočteno z oficiální databáze časových pásem IANA, nikoli z napevno zakódovaných pravidel, která zastarávají.",
+      "intro2": "Vědět, kdy region mění své hodiny, vám pomůže ochránit opakující se schůzky, plány na cesty a termíny přesahující hranice. Vyberte níže region a poté použijte <compare>Porovnat</compare> nebo <planner>Plánovač schůzek</planner> a zjistěte, jak nadcházející změna posune časový rozdíl vůči vaší vlastní lokalitě."
+    }
+  },
+  "prog": {
+    "time": {
+      "breadcrumb": "Světový čas",
+      "h1": "Aktuální čas ve městě {city}",
+      "localTime": "Místní čas",
+      "dateLine": "{date} · {abbr} ({offset})",
+      "factTimeZone": "Časové pásmo",
+      "factUtcOffset": "Posun UTC",
+      "factAbbreviation": "Zkratka",
+      "factDaylight": "Letní čas",
+      "daylightInEffect": "Aktuálně platí",
+      "daylightObservedInactive": "Používá se (nyní neaktivní)",
+      "daylightNotObserved": "Nepoužívá se",
+      "introMain": "Aktuální místní čas ve městě {city} je <b>{time}</b> dne {date}. {city} se řídí časovým pásmem <b>{tz}</b>, které je nyní {offsetAbbr}.",
+      "dstSentence": "{observesDst, select, yes {{city} používá letní čas, takže se jeho posun UTC mezi standardním a letním časem mění o jednu hodinu.} other {{city} nepoužívá letní čas, takže jeho posun UTC ({offset}) zůstává po celý rok stejný.}}",
+      "transitionLabel": "{type, select, begins {Clocks spring forward — DST begins} other {Clocks fall back — DST ends}}",
+      "nextChange": "<b>Příští změna času:</b> {date} — {label}. Posun UTC se změní z {fromOffset} na {toOffset}. Naplánujte hovory a cesty kolem tohoto data, abyste se nespletli o hodinu.",
+      "crosslinks": "Pomocí interaktivního glóbu výše porovnejte {city} s jinými městy, nebo otevřete kartu <compare>Porovnání</compare> a srovnejte několik časových pásem vedle sebe. Plánujete hovor? <planner>Plánovač schůzek</planner> automaticky najde překrývající se pracovní hodiny a <dst>kontrola letního času</dst> sleduje nadcházející změny času.",
+      "relatedHeading": "Aktuální čas v dalších městech",
+      "wpName": "Aktuální čas ve městě {city}",
+      "wpDesc": "Živý místní čas ve městě {city} ({tz}). Aktuální posun UTC {offsetAbbr}, stav letního času a příští změna času.",
+      "faq1q": "Kolik je teď hodin ve městě {city}?",
+      "faq1a": "Ke dni {date} je místní čas ve městě {city} přibližně {time} ({abbr}). Hodiny v horní části této stránky tikají v reálném čase a zobrazený posun je {offset}.",
+      "faq2q": "V jakém časovém pásmu se nachází {city}?",
+      "faq2a": "{city} používá časové pásmo IANA {tz}{hasAbbr, select, yes {, aktuálně se zkratkou {abbr}} other {}}. Jeho aktuální posun od koordinovaného světového času je {offset}.",
+      "faq3q": "Používá {city} letní čas?",
+      "faq3a": "{observesDst, select, yes {Yes. {city} observes daylight saving time, so its UTC offset shifts by one hour between standard and summer time.{hasNext, select, yes { The next change is on {nextDate}, when the clocks {nextDir, select, forward {move forward} other {move back}} and the offset becomes {nextOffset}.} other {}}} other {{city} does not observe daylight saving time, so its UTC offset ({offset}) stays the same all year.}}",
+      "faq4q": "Jaký je posun UTC pro {city}?",
+      "faq4a": "{city} is currently at {offset}. {observesDst, select, yes {This offset changes by one hour during the daylight saving period.} other {This offset is fixed throughout the year.}}"
+    },
+    "convert": {
+      "breadcrumb": "Převodníky",
+      "h1": "Převodník času {from} na {to}",
+      "diffSummary": "{dir, select, same {{to} má aktuálně stejný čas jako {from}.} ahead {{to} je aktuálně o {h} h{m, plural, =0 {} other { #m}} napřed oproti {from}.} other {{to} je aktuálně o {h} h{m, plural, =0 {} other { #m}} pozadu za {from}.}}",
+      "introBody": "{from} je {fromFull}; {to} je {toFull}. Tabulka níže ukazuje převod pro každou část dne s automatickým zohledněním letního času.",
+      "factDifference": "Rozdíl",
+      "diffNone": "Žádný",
+      "tableHeading": "Převodní tabulka {from} → {to}",
+      "dayNext": "následující den",
+      "dayPrev": "předchozí den",
+      "crosslinks": "Potřebujete konkrétní datum nebo jinou dvojici? Pomocí interaktivního glóbu a karty <compare>Porovnání</compare> si zobrazte libovolný okamžik, včetně budoucích dat, která přecházejí přes hranici letního času. Pro naplánování hovoru mezi těmito pásmy vyzkoušejte <planner>Plánovač schůzek</planner>.",
+      "relatedHeading": "Související převodníky",
+      "wpDesc": "Převeďte {from} na {to}. {summary}",
+      "faq1q": "Jaký je časový rozdíl mezi {from} a {to}?",
+      "faq1a": "Right now {to} ({toFull}) is {dir, select, same {the same time as} ahead {ahead of} other {behind}} {from} ({fromFull}). The difference is {absH, plural, =0 {zero hours} one {# hour} other {# hours}} and can shift by an hour when either zone enters or leaves daylight saving time.",
+      "faq2q": "Jak převedu {from} na {to}?",
+      "faq2a": "K času {from} přičtěte rozdíl posunů. Například {exampleFrom} {from} je {exampleTo} {to}. Úplná hodinová tabulka na této stránce uvádí každý převod pro aktuální datum.",
+      "faq3q": "Používá {from} nebo {to} letní čas?",
+      "faq3a": "{from} is currently {fromDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({fromOffset}), and {to} is {toDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({toOffset}). The converter uses official IANA data and adjusts automatically.",
+      "faq4q": "Je tento převodník z {from} na {to} přesný?",
+      "faq4a": "Ano — převody využívají databázi časových pásem IANA, stejný zdroj, jaký používají operační systémy, a zohledňují aktuální pravidla letního času s přesností na minutu."
+    },
+    "meeting": {
+      "breadcrumb": "Plánovač schůzek",
+      "h1": "Nejlepší čas na schůzku: {a} ↔ {b}",
+      "overlapSentence": "{hasOverlap, select, yes {Standard 9-to-5 working hours in {a} and {b} overlap from {start} to {end} {a} time. A good middle slot is around {bestA} in {a} ({bestB} in {b}).} other {Standard 9-to-5 working hours in {a} and {b} do not overlap, so one side will need an early or late slot. Aim for the start of one city's day and the end of the other's.}}",
+      "introTail": "Všechny časy níže platí pro dnešní den a automaticky se přizpůsobují letnímu času.",
+      "sharedWorkHours": "Společná pracovní doba",
+      "hoursUnit": "{count} h",
+      "noneWorkHours": "Žádná (9–17)",
+      "tableHeading": "Překrývající se pracovní hodiny",
+      "noOverlapBody": "Dnes se pracovní doba 9 až 17 hodin nepřekrývá. Otevřete Plánovač výše a rozšiřte pracovní hodiny nebo vyberte okrajový termín, který vyhovuje oběma týmům.",
+      "crosslinks": "Karta Plánovač výše už má {a} a {b} načtené. Upravte hodiny každého účastníka, nastavte délku trvání a Timezio seřadí nejlepší termíny. Pro ověření samotného posunu použijte kartu <compare>Porovnání</compare>.",
+      "relatedHeading": "Další dvojice schůzek",
+      "wpDesc": "Najděte nejlepší čas na schůzku mezi {a} a {b}. {overlap}",
+      "faq1q": "Kdy je nejlepší naplánovat schůzku mezi {a} a {b}?",
+      "faq1a": "{hasOverlap, select, yes {The cleanest option is around {bestA} in {a}, which is {bestB} in {b} — inside both teams' working day. The overlap table on this page lists every shared hour for today.} other {There is no clean overlap during standard hours, so pick the least disruptive edge: early morning for one city or early evening for the other. The table on this page shows each hour side by side.}}",
+      "faq2q": "Jaký je časový rozdíl mezi {a} a {b}?",
+      "faq2a": "{a} má aktuálně {offsetA} a {b} má {offsetB}. Rozdíl se může kolem přechodů na letní čas posunout o hodinu, což tento nástroj automaticky zohledňuje.",
+      "faq3q": "Jak naplánuji pravidelný hovor mezi {a} a {b}?",
+      "faq3a": "Použijte kartu Plánovač výše — obě města jsou již načtena. Nastavte pracovní hodiny každého účastníka a Timezio zvýrazní překrývající se termíny a upozorní na časy brzy ráno nebo pozdě v noci."
+    },
+    "dst": {
+      "breadcrumb": "Letní čas",
+      "h1": "Letní čas v oblasti {region}",
+      "intro": "{observesDst, select, yes {{region} observes daylight saving time. Clocks are currently {isDst, select, yes {on summer time (DST in effect)} other {on standard time}}, at {offset}. The reference zone for {region} is {tz} ({city}).} other {{region} does not currently observe daylight saving time. The offset stays at {offset} all year. The reference zone is {tz} ({city}).}}",
+      "factObservesDst": "Používá letní čas",
+      "yes": "Ano",
+      "no": "Ne",
+      "factCurrentOffset": "Aktuální posun",
+      "factStatus": "Stav",
+      "summerTime": "Letní čas",
+      "standardTime": "Standardní čas",
+      "factReferenceZone": "Referenční pásmo",
+      "changesHeading": "Příští změny času",
+      "colChange": "Změna",
+      "colDate": "Datum",
+      "colOffset": "Posun",
+      "springForward": "Posun vpřed (začíná letní čas)",
+      "fallBack": "Posun zpět (končí letní čas)",
+      "crosslinks": "Přechod na letní čas posune posun oblasti {region} o hodinu, což může nenápadně narušit pravidelné schůzky. Zkontrolujte živý rozdíl oproti vašemu vlastnímu pásmu pomocí karty <compare>Porovnání</compare> nebo naplánujte schůzky kolem změny pomocí <planner>Plánovače schůzek</planner>.",
+      "relatedHeading": "Letní čas v dalších oblastech",
+      "faq1q": "Používá {region} letní čas?",
+      "faq1a": "{observesDst, select, yes {Yes. {region} changes its clocks twice a year. It is currently {isDst, select, yes {on daylight saving (summer) time} other {on standard time}} at {offset}.} other {No. {region} keeps a fixed offset of {offset} throughout the year and does not change its clocks.}}",
+      "faq2q": "Kdy se v oblasti {region} mění hodiny?",
+      "faq2a": "{observesDst, select, yes {{hasBegins, select, yes {Clocks next spring forward on {beginsDate} (offset {beginsFrom} → {beginsTo}). } other {}}{hasEnds, select, yes {Clocks next fall back on {endsDate} (offset {endsFrom} → {endsTo}).} other {}}} other {{region} does not change its clocks, so there is no spring-forward or fall-back date.}}",
+      "faq3q": "Jaký je aktuální posun UTC pro {region}?",
+      "faq3a": "{region} is currently at {offset}{hasAbbr, select, yes { ({abbr})} other {}}. {observesDst, select, yes {This shifts by one hour when daylight saving begins or ends.} other {This offset is fixed.}}"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Zásady ochrany osobních údajů",
+      "updated": "Naposledy aktualizováno: 09.01.2026",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Tyto Zásady ochrany osobních údajů vysvětlují, jak shromažďujeme, používáme a chráníme informace, když navštívíte a používáte tento web (dále jen „web“)."
+        },
+        {
+          "type": "p",
+          "text": "Zavazujeme se chránit vaše soukromí a zpracovávat osobní údaje v souladu s platnými právními předpisy o ochraně osobních údajů, včetně obecného nařízení o ochraně osobních údajů (EU) 2016/679 (GDPR)."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "1. Informace, které shromažďujeme",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "1.1 Informace, které nám přímo neposkytujete"
+            },
+            {
+              "type": "p",
+              "text": "Tento web nevyžaduje registraci uživatelů a nežádá uživatele o poskytnutí osobních údajů k používání svých základních funkcí."
+            },
+            {
+              "type": "subheading",
+              "text": "1.2 Automaticky shromažďované informace"
+            },
+            {
+              "type": "p",
+              "text": "Při návštěvě webu mohou být automaticky shromažďovány omezené informace, včetně:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "IP adresa (anonymizovaná/zkrácená tam, kde to nástroj podporuje)",
+                "Typ a verze prohlížeče",
+                "Typ zařízení a operační systém",
+                "Navštívené stránky a údaje o interakcích",
+                "Odkazující web",
+                "Přibližná zeměpisná poloha (na úrovni města nebo země)"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Tyto informace se používají výhradně pro účely analytiky, zabezpečení a zlepšování služby."
+            }
+          ]
+        },
+        {
+          "heading": "1.3 Údaje o službě, které můžete poskytnout",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Základní nástroje (převod času, plánovač) fungují bez registrace. Pokud se rozhodnete uložit/sdílet údaje o schůzce, propojit kalendář nebo se přihlásit přes Google, můžeme ukládat údaje o schůzce/relaci, které odešlete (např. jména nebo označení účastníků, časové sloty, názvy), a e-mail vašeho účtu Google, abychom danou funkci umožnili. Smazání těchto uložených údajů můžete kdykoli požádat (viz Kontakt)."
+            }
+          ]
+        },
+        {
+          "heading": "2. Soubory cookie a podobné technologie",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Web může používat soubory cookie nebo podobné technologie k:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Měření návštěvnosti a vzorců používání",
+                "Pochopení toho, jak uživatelé s webem interagují",
+                "Zlepšování výkonu a uživatelského zážitku",
+                "Zobrazování reklamy tam, kde je povolena"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Soubory cookie používané na tomto webu vás přímo neidentifikují jako jednotlivce."
+            },
+            {
+              "type": "p",
+              "text": "Tam, kde to vyžadují platné právní předpisy, se soubory cookie, které nejsou nezbytně nutné, používají až po získání souhlasu uživatele prostřednictvím cookie banneru nebo mechanismu souhlasu."
+            },
+            {
+              "type": "p",
+              "text": "Svůj souhlas můžete kdykoli spravovat nebo odvolat prostřednictvím nastavení prohlížeče nebo nastavení souborů cookie poskytnutého na webu."
+            }
+          ]
+        },
+        {
+          "heading": "3. Analytika a reklama",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "3.1 Analytika"
+            },
+            {
+              "type": "p",
+              "text": "Můžeme používat analytické nástroje (např. Google Analytics prostřednictvím Google Tag Manager nebo alternativy zaměřené na soukromí) k pochopení toho, jak návštěvníci web používají. Tyto nástroje shromažďují údaje o používání (zobrazené stránky, informace o zařízení/prohlížeči, přibližná poloha) a lze je nakonfigurovat tak, aby anonymizovaly IP adresu, kde je to podporováno. Nepodstatná analytika se načítá až po udělení souhlasu tam, kde je vyžadován."
+            },
+            {
+              "type": "subheading",
+              "text": "3.2 Reklama"
+            },
+            {
+              "type": "p",
+              "text": "Web může zobrazovat reklamy od partnerů třetích stran, jako je Google AdSense (zobrazované prostřednictvím Google Tag Manager). Tito partneři mohou používat soubory cookie nebo podobné technologie k zobrazování relevantních reklam a mohou zpracovávat údaje (např. ID souborů cookie, hrubou polohu, informace o zařízení). Reklamní soubory cookie se načítají až po udělení souhlasu tam, kde je vyžadován."
+            },
+            {
+              "type": "p",
+              "text": "Reklamní partneři zpracovávají informace podle svých vlastních zásad ochrany osobních údajů a mohou přenášet údaje mimo váš region za vhodných záruk (např. Standard Contractual Clauses). Svůj souhlas se soubory cookie a reklamou můžete kdykoli odvolat nebo změnit pomocí odkazu **„Nastavení souborů cookie“** v zápatí webu nebo prostřednictvím nastavení prohlížeče."
+            },
+            {
+              "type": "p",
+              "text": "Personalizovanou reklamu můžete také ovládat nebo se z ní odhlásit přímo u poskytovatelů a oborových programů:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Nastavení reklam Google — [adssettings.google.com](https://adssettings.google.com)",
+                "Jak Google používá data z partnerských webů — [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites)",
+                "Odhlášení v USA (DAA) — [optout.aboutads.info](https://optout.aboutads.info) · [youradchoices.com](https://www.youradchoices.com)",
+                "Odhlášení v EU (EDAA) — [youronlinechoices.eu](https://www.youronlinechoices.eu)"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. Jak informace používáme",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Shromážděné informace mohou být použity k:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Provozování a údržbě webu",
+                "Zlepšování nástrojů, funkcí a použitelnosti",
+                "Analýze trendů používání a výkonu",
+                "Zajištění zabezpečení a prevenci zneužití",
+                "Plnění zákonných povinností"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "**Osobní údaje neprodáváme.**"
+            }
+          ]
+        },
+        {
+          "heading": "5. Právní základ pro zpracování (GDPR)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Podle GDPR jsou osobní údaje zpracovávány na následujících právních základech:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Souhlas** — pro nepodstatné soubory cookie/analytiku/reklamu tam, kde je vyžadován",
+                "**Oprávněné zájmy** — pro provoz, zabezpečení a zlepšování webu",
+                "**Zákonná povinnost** — tam, kde je zpracování vyžadováno zákonem"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "6. Uchovávání údajů",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Shromážděné údaje uchováváme pouze po dobu nezbytně nutnou ke splnění účelů popsaných v těchto Zásadách ochrany osobních údajů, pokud delší doba uchovávání není vyžadována nebo povolena zákonem."
+            }
+          ]
+        },
+        {
+          "heading": "7. Sdílení údajů a třetí strany",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Omezené údaje můžeme sdílet s důvěryhodnými poskytovateli služeb třetích stran (například poskytovateli analytiky nebo reklamy) výhradně pro účely popsané v těchto Zásadách ochrany osobních údajů."
+            },
+            {
+              "type": "p",
+              "text": "Všichni tito poskytovatelé jsou povinni zpracovávat údaje v souladu s platnými právními předpisy o ochraně osobních údajů."
+            },
+            {
+              "type": "p",
+              "text": "Někteří poskytovatelé (např. Google) mohou zpracovávat údaje mimo Evropský hospodářský prostor (EHP). Pokud k tomu dojde, spoléháme se na vhodné záruky, jako jsou Standard Contractual Clauses nebo rovnocenné mechanismy."
+            }
+          ]
+        },
+        {
+          "heading": "8. Vaše práva podle GDPR",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Pokud se nacházíte v Evropské unii, máte právo:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Na přístup ke svým osobním údajům",
+                "Požádat o opravu nepřesných údajů",
+                "Požádat o smazání svých údajů",
+                "Omezit zpracování nebo proti němu vznést námitku",
+                "Kdykoli odvolat souhlas",
+                "Podat stížnost u dozorového úřadu"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Tato práva můžete uplatnit tak, že nás kontaktujete pomocí níže uvedených údajů."
+            }
+          ]
+        },
+        {
+          "heading": "9. Práva na ochranu soukromí podle zákonů států USA (CCPA / CPRA a podobné)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Pokud jste rezidentem Kalifornie nebo jiného státu USA s komplexními zákony na ochranu soukromí, můžete mít právo vědět, jaké osobní informace jsou shromažďovány, požádat o přístup nebo smazání, opravit nepřesné informace a odhlásit se z „prodeje“ nebo „sdílení“ osobních informací a z cílené reklamy."
+            },
+            {
+              "type": "p",
+              "text": "Osobní informace neprodáváme za peníze. Používání reklamních souborů cookie však může být podle některých státních zákonů považováno za „sdílení“ nebo „prodej“. Z personalizované reklamy se můžete odhlásit pomocí odkazu **„Nastavení souborů cookie“** v zápatí a oborových nástrojů pro odhlášení uvedených v oddíle 3.2. Tam, kde je to podporováno, respektujeme signál prohlížeče Global Privacy Control (GPC) jako platnou žádost o odhlášení."
+            },
+            {
+              "type": "p",
+              "text": "K uplatnění kteréhokoli z těchto práv nás kontaktujte pomocí údajů v oddíle 14. Za uplatnění vašich práv na ochranu soukromí vás nebudeme diskriminovat."
+            }
+          ]
+        },
+        {
+          "heading": "10. Soukromí dětí",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Tento web není určen pro děti mladší 16 let. Vědomě neshromažďujeme osobní údaje od dětí."
+            }
+          ]
+        },
+        {
+          "heading": "11. Zabezpečení",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Přijímáme přiměřená technická a organizační opatření k ochraně informací před neoprávněným přístupem, ztrátou, zneužitím nebo pozměněním. Žádný způsob přenosu nebo ukládání však není zcela bezpečný."
+            }
+          ]
+        },
+        {
+          "heading": "12. Externí odkazy",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Web může obsahovat odkazy na weby třetích stran. Neneseme odpovědnost za obsah ani postupy ochrany soukromí těchto webů."
+            }
+          ]
+        },
+        {
+          "heading": "13. Změny těchto Zásad ochrany osobních údajů",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Tyto Zásady ochrany osobních údajů můžeme čas od času aktualizovat. Veškeré změny budou zveřejněny na této stránce s aktualizovaným datem „Naposledy aktualizováno“."
+            },
+            {
+              "type": "p",
+              "text": "Doporučujeme uživatelům tuto stránku pravidelně kontrolovat. Pokud změny podstatně ovlivní způsob, jakým zpracováváme vaše údaje, poskytneme jasné upozornění (např. na této stránce nebo prostřednictvím rozhraní webu)."
+            }
+          ]
+        },
+        {
+          "heading": "14. Kontaktní informace",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Máte-li dotazy ohledně těchto Zásad ochrany osobních údajů nebo způsobu zpracování údajů na tomto webu, můžete nás kontaktovat na:"
+            },
+            {
+              "type": "emailBox",
+              "label": "E-mail:",
+              "email": "hello@timezio.com"
+            }
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Podmínky služby",
+      "updated": "Naposledy aktualizováno: 09.01.2026",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Tyto Podmínky služby (dále jen „podmínky“) upravují váš přístup k tomuto webu (dále jen „web“) a jeho používání. Přístupem k webu nebo jeho používáním souhlasíte s tím, že jste těmito podmínkami vázáni. Pokud nesouhlasíte, ukončete prosím používání webu."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "1. Účel webu",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Web poskytuje nástroje a informace týkající se časových pásem, časových rozdílů, převodů UTC a plánování schůzek pouze pro obecné informační účely."
+            },
+            {
+              "type": "p",
+              "text": "Web neposkytuje právní, finanční, profesionální ani časově kritické poradenské služby."
+            }
+          ]
+        },
+        {
+          "heading": "2. Používání webu",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Souhlasíte s tím, že budete web používat pouze k zákonným účelům a způsobem, který:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Neporušuje platné zákony ani předpisy",
+                "Nezasahuje do práv ostatních",
+                "Nenarušuje provoz webu",
+                "Nepokouší se získat neoprávněný přístup k jakékoli části webu"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Vyhrazujeme si právo kdykoli omezit nebo ukončit přístup k webu, pokud zjistíme jeho zneužití."
+            }
+          ]
+        },
+        {
+          "heading": "3. Přesnost informací",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Přestože vyvíjíme přiměřené úsilí k zajištění toho, aby informace a výpočty poskytované na webu byly přesné a založené na uznávaných veřejných datech o časových pásmech, nezaručujeme, že obsah je úplný, aktuální nebo bez chyb."
+            },
+            {
+              "type": "p",
+              "text": "Pravidla časových pásem a praktiky letního času se mohou měnit v důsledku vládních nebo regulačních rozhodnutí. Berete na vědomí, že jakékoli spoléhání se na poskytnuté informace je na vaše vlastní riziko."
+            }
+          ]
+        },
+        {
+          "heading": "4. Bez záruky",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Web a veškerý obsah a nástroje jsou poskytovány „tak, jak jsou“ a „jak jsou k dispozici“."
+            },
+            {
+              "type": "p",
+              "text": "V plném rozsahu povoleném platnými právními předpisy se zříkáme všech záruk, ať už výslovných nebo předpokládaných, mimo jiné včetně předpokládaných záruk přesnosti, spolehlivosti, vhodnosti pro určitý účel a neporušení práv."
+            }
+          ]
+        },
+        {
+          "heading": "5. Omezení odpovědnosti",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "V rozsahu povoleném platnými právními předpisy Evropské unie neneseme odpovědnost za jakékoli přímé, nepřímé, náhodné, následné nebo zvláštní škody vzniklé v souvislosti s vaším používáním webu nebo nemožností jej používat či spoléháním se na jeho obsah."
+            },
+            {
+              "type": "p",
+              "text": "To zahrnuje mimo jiné ztrátu dat, ztrátu obchodu, zmeškané schůzky nebo chyby v plánování."
+            }
+          ]
+        },
+        {
+          "heading": "6. Duševní vlastnictví",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Veškerý obsah na webu, včetně textu, designu, rozvržení, log a softwaru, je majetkem vlastníka webu nebo jeho poskytovatelů licencí a je chráněn platnými právními předpisy o duševním vlastnictví."
+            },
+            {
+              "type": "p",
+              "text": "Web můžete používat pro osobní a nekomerční účely. Bez předchozího písemného souhlasu nesmíte kopírovat, reprodukovat, distribuovat, upravovat ani využívat jakoukoli část webu, s výjimkou případů povolených zákonem."
+            }
+          ]
+        },
+        {
+          "heading": "7. Služby třetích stran a reklama",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Web může zobrazovat reklamy nebo obsahovat odkazy na weby či služby třetích stran."
+            },
+            {
+              "type": "p",
+              "text": "Neovládáme obsah, dostupnost ani postupy webů třetích stran a neneseme za ně odpovědnost. Vaše interakce se službami třetích stran se řídí jejich příslušnými podmínkami a zásadami ochrany osobních údajů."
+            }
+          ]
+        },
+        {
+          "heading": "8. Soukromí a ochrana údajů",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Vaše používání webu se rovněž řídí našimi [Zásadami ochrany osobních údajů](/privacy), které vysvětlují, jak jsou osobní údaje zpracovávány v souladu s platnými právními předpisy o ochraně osobních údajů, včetně GDPR."
+            }
+          ]
+        },
+        {
+          "heading": "9. Změny webu nebo podmínek",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Jakoukoli část webu můžeme kdykoli bez předchozího upozornění aktualizovat, upravit, pozastavit nebo ukončit."
+            },
+            {
+              "type": "p",
+              "text": "Tyto podmínky můžeme rovněž čas od času aktualizovat. Veškeré změny nabývají účinnosti po zveřejnění na této stránce s odpovídajícím způsobem upraveným datem „Naposledy aktualizováno“."
+            },
+            {
+              "type": "p",
+              "text": "Pokračující používání webu po provedení změn představuje přijetí aktualizovaných podmínek."
+            }
+          ]
+        },
+        {
+          "heading": "10. Rozhodné právo a soudní příslušnost",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Tyto podmínky se řídí a vykládají v souladu s právními předpisy Evropské unie a případně právními předpisy země, ve které je provozovatel webu usazen."
+            },
+            {
+              "type": "p",
+              "text": "Nic v těchto podmínkách neomezuje vaše zákonná práva spotřebitele podle platných právních předpisů EU."
+            }
+          ]
+        },
+        {
+          "heading": "11. Oddělitelnost ustanovení",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Pokud bude jakékoli ustanovení těchto podmínek shledáno protiprávním, neplatným nebo nevymahatelným, zůstávají ostatní ustanovení v plné platnosti a účinnosti."
+            }
+          ]
+        },
+        {
+          "heading": "12. Kontaktní informace",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Máte-li jakékoli dotazy ohledně těchto Podmínek služby, můžete nás kontaktovat na:"
+            },
+            {
+              "type": "emailBox",
+              "label": "E-mail:",
+              "email": "hello@timezio.com"
+            }
+          ]
+        }
+      ]
+    },
+    "about": {
+      "title": "O tomto webu",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Tento web byl vytvořen, aby práce napříč časovými pásmy byla jednoduchá, přesná a bezstarostná. Ať už plánujete schůzku s kolegy v zahraničí, kontrolujete aktuální čas v jiném městě, převádíte UTC nebo cestujete mezi zeměmi, naše nástroje vám pomohou okamžitě a bez zmatků porozumět časovým rozdílům."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Kdo provozuje Timezio",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Timezio vytváří a provozuje **AffSquad**, nezávislé studio, které vytváří bezplatné webové nástroje respektující soukromí. Jsme malý tým, který tyto nástroje sám používá ke koordinaci napříč časovými pásmy, a Timezio udržujeme zdarma díky zobrazování reklam. Dotazy, opravy nebo zpětnou vazbu vždy uvítáme na [hello@timezio.com](mailto:hello@timezio.com) — další možnosti, jak nás kontaktovat, najdete na stránce [Kontakt](/contact)."
+            }
+          ]
+        },
+        {
+          "heading": "Základní principy",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "Přesnost"
+            },
+            {
+              "type": "p",
+              "text": "Všechny výpočty vycházejí z oficiálních dat časových pásem IANA a plně zohledňují letní čas (DST)."
+            },
+            {
+              "type": "subheading",
+              "text": "Jednoduchost"
+            },
+            {
+              "type": "p",
+              "text": "Přehledné a rychlé nástroje, které fungují okamžitě bez zbytečných kroků."
+            },
+            {
+              "type": "subheading",
+              "text": "Spolehlivost"
+            },
+            {
+              "type": "p",
+              "text": "Vytvořeno pro každodenní použití profesionály, cestovateli, vzdálenými týmy a digitálními nomády."
+            }
+          ]
+        },
+        {
+          "heading": "Automatické výpočty",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Naše kalkulačky automaticky zohledňují:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Změny letního času",
+                "Různá UTC posunutí",
+                "Změny data při přechodu časových pásem",
+                "Regiony s nestandardními posuny (například rozdíly 30 nebo 45 minut)"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Tento web je navržen tak, aby byl užitečný po celém světě, a je pravidelně aktualizován, aby odrážel oficiální pravidla časových pásem."
+            }
+          ]
+        },
+        {
+          "heading": "Pro koho je tento web určen",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Pracovníci na dálku a distribuované týmy",
+                "Obchodní profesionálové plánující mezinárodní schůzky",
+                "Cestovatelé a častí letci",
+                "Studenti a pedagogové",
+                "Kdokoli, kdo potřebuje přesně převádět nebo porovnávat časová pásma"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "**Žádné účty. Žádná složitost. Jen jasné odpovědi.**"
+            }
+          ]
+        },
+        {
+          "heading": "Jak tento web používat",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "1. Prozkoumat — Interaktivní globus"
+            },
+            {
+              "type": "p",
+              "text": "Klikněte kdekoli na 3D globus a okamžitě uvidíte místní čas pro dané místo."
+            },
+            {
+              "type": "p",
+              "text": "**Jak to funguje:** Klikněte na místo na globusu nebo vyhledejte město. Zobrazte aktuální čas, UTC posunutí a stav letního času. Ideální pro rychlou kontrolu a vizuální prozkoumávání časových pásem."
+            },
+            {
+              "type": "subheading",
+              "text": "2. Porovnat — Porovnání časových pásem"
+            },
+            {
+              "type": "p",
+              "text": "Porovnejte časové rozdíly mezi více městy současně."
+            },
+            {
+              "type": "p",
+              "text": "**Jak to funguje:** Přidejte až 6 měst k porovnání. Vyberte základní město a uvidíte časové rozdíly vůči němu. Okamžitě zobrazte aktuální místní časy, posuny a vizuální porovnání. Ideální pro zodpovězení otázek jako „Když je v Berlíně 9:00, kolik je hodin v New Yorku?“"
+            },
+            {
+              "type": "subheading",
+              "text": "3. Plánovač — Plánovač schůzek"
+            },
+            {
+              "type": "p",
+              "text": "Najděte nejlepší čas schůzky pro lidi na různých místech."
+            },
+            {
+              "type": "p",
+              "text": "**Jak to funguje:** Přidejte účastníky podle města, vyberte datum schůzky a volitelně upravte pracovní dobu pro každého účastníka. Zobrazte překrývající se časová okna a sdílejte podrobnosti o schůzce. Tento nástroj se automaticky vyhýbá brzkým ranním nebo pozdním nočním hodinám, kdykoli je to možné."
+            },
+            {
+              "type": "subheading",
+              "text": "4. DST — Letní čas"
+            },
+            {
+              "type": "p",
+              "text": "Sledujte změny a přechody letního času v průběhu roku."
+            },
+            {
+              "type": "p",
+              "text": "**Jak to funguje:** Zobrazte stav letního času pro libovolné místo, podívejte se na nadcházející přechody a pochopte, kdy se mění čas. Zkontrolujte, jak letní čas ovlivňuje časové rozdíly mezi regiony."
+            },
+            {
+              "type": "subheading",
+              "text": "5. Uložené — Oblíbená místa"
+            },
+            {
+              "type": "p",
+              "text": "Uložte si často používaná místa pro rychlý přístup."
+            },
+            {
+              "type": "p",
+              "text": "**Jak to funguje:** Uložte si místa, která často kontrolujete. Získejte k nim okamžitý přístup bez vyhledávání. Vaše uložená místa jsou uchovávána lokálně ve vašem prohlížeči."
+            }
+          ]
+        },
+        {
+          "heading": "Často kladené otázky",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "Jaká data časových pásem tento web používá?"
+            },
+            {
+              "type": "p",
+              "text": "Používáme oficiální definice časových pásem IANA, které jsou globálním standardem pro přesné výpočty času."
+            },
+            {
+              "type": "subheading",
+              "text": "Zohledňuje web letní čas?"
+            },
+            {
+              "type": "p",
+              "text": "Ano. Všechny výpočty se automaticky přizpůsobují letnímu času na základě vybraného data a místa."
+            },
+            {
+              "type": "subheading",
+              "text": "Mohu zkontrolovat budoucí nebo minulá data?"
+            },
+            {
+              "type": "p",
+              "text": "Ano. Můžete vybrat libovolné datum a čas a podívat se, jak se časové rozdíly v průběhu roku mění."
+            },
+            {
+              "type": "subheading",
+              "text": "Proč se časový rozdíl během roku mění?"
+            },
+            {
+              "type": "p",
+              "text": "Časové rozdíly se mění, protože některé regiony dodržují letní čas, zatímco jiné ne, nebo mění čas v různá data."
+            },
+            {
+              "type": "subheading",
+              "text": "Jsou podporována města se stejným názvem?"
+            },
+            {
+              "type": "p",
+              "text": "Ano. Města jsou identifikována podle názvu i země, aby nedocházelo k záměně (například více měst s názvem „Springfield“)."
+            },
+            {
+              "type": "subheading",
+              "text": "Je tento web zdarma?"
+            },
+            {
+              "type": "p",
+              "text": "Ano. Všechny nástroje na tomto webu jsou zcela zdarma a nevyžadují žádnou registraci."
+            },
+            {
+              "type": "subheading",
+              "text": "Mohu výsledky sdílet nebo přidat do záložek?"
+            },
+            {
+              "type": "p",
+              "text": "Ano. Stránky nástrojů generují přehledné, sdílitelné adresy URL, které si můžete přidat do záložek nebo poslat ostatním pomocí tlačítka „Kopírovat odkaz“."
+            },
+            {
+              "type": "subheading",
+              "text": "Jak přesné jsou výsledky?"
+            },
+            {
+              "type": "p",
+              "text": "Výsledky jsou přesné na minutu a vycházejí z oficiálních pravidel časových pásem, neměly by však být bez ověření používány pro právní nebo zásadní rozhodnutí."
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Kontaktujte nás",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Vážíme si vaší zpětné vazby a rádi se od vás dozvíme více."
+        },
+        {
+          "type": "p",
+          "text": "Máte-li dotazy ohledně toho, jak naše nástroje fungují, chcete nahlásit problém nebo se podělit o návrhy na zlepšení, neváhejte nás kontaktovat."
+        },
+        {
+          "type": "p",
+          "text": "Timezio provozuje **AffSquad**, nezávislé studio, které vytváří bezplatné webové nástroje."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Jak nás kontaktovat",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Můžete nás kontaktovat e-mailem:"
+            },
+            {
+              "type": "emailBox",
+              "label": "E-mail:",
+              "email": "hello@timezio.com"
+            },
+            {
+              "type": "p",
+              "text": "Snažíme se na zprávy odpovídat v přiměřené době. Upozorňujeme, že doba odezvy se může lišit v závislosti na množství dotazů."
+            }
+          ]
+        },
+        {
+          "heading": "S čím se na nás můžete obrátit",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Můžete nás kontaktovat ohledně:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Dotazů ohledně výpočtů časových pásem nebo funkčnosti nástrojů",
+                "Nahlášení nesprávných nebo zastaralých informací",
+                "Technických problémů nebo chyb na webu",
+                "Obecné zpětné vazby a návrhů na zlepšení"
+              ]
+            },
+            {
+              "type": "note",
+              "text": "**Upozornění:** Nejsme schopni poskytovat personalizované poradenství ohledně plánování, právní vedení ani časově kritická potvrzení."
+            }
+          ]
+        },
+        {
+          "heading": "Osobní údaje a soukromí",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Pokud nás kontaktujete e-mailem, budeme veškeré osobní údaje, které poskytnete (například vaši e-mailovou adresu a obsah zprávy), zpracovávat výhradně za účelem zodpovězení vašeho dotazu."
+            },
+            {
+              "type": "p",
+              "text": "S vašimi informacemi bude nakládáno v souladu s platnými právními předpisy o ochraně osobních údajů, včetně obecného nařízení o ochraně osobních údajů (EU) 2016/679 (GDPR)."
+            },
+            {
+              "type": "p",
+              "text": "Další podrobnosti najdete v našich [Zásadách ochrany osobních údajů](/privacy)."
+            }
+          ]
+        },
+        {
+          "heading": "Důležité upozornění",
+          "blocks": [
+            {
+              "type": "note",
+              "text": "Informace poskytované prostřednictvím tohoto webu a e-mailových odpovědí slouží pouze pro obecné informační účely a neměly by být využívány pro právní, finanční, letecká nebo jiná časově kritická rozhodnutí."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ui": {
+    "converter": {
+      "heading": "Převodník časových pásem",
+      "description": "Prozkoumávejte a převádějte časová pásma na interaktivním glóbu, kontrolujte místní časy a hledejte společné okno pro schůzky. Plně zohledňuje letní čas a využívá oficiální data IANA.",
+      "compareCta": "Porovnat časová pásma",
+      "plannerCta": "Naplánovat schůzku"
+    },
+    "tabBar": {
+      "explore": "Prozkoumat",
+      "planner": "Plánovač",
+      "compare": "Porovnat",
+      "dst": "Letní čas",
+      "saved": "Uložené"
+    },
+    "exploreTab": {
+      "searchCity": "Hledat město",
+      "searchCitySubtitle": "Najděte libovolné město na světě",
+      "popularCities": "Oblíbená města",
+      "popularCitiesSubtitle": "Kliknutím na město zobrazíte jeho čas"
+    },
+    "compareTab": {
+      "compare": "Porovnat",
+      "subtitle": "Přidejte 2–6 lokalit a porovnejte posuny / časy. (MVP: posuny + rozdíl)",
+      "addCityPlaceholder": "Přidat město k porovnání…",
+      "addSelected": "Přidat vybrané",
+      "clear": "Vymazat",
+      "noItems": "Žádné položky k porovnání. Přidejte město nebo zvolte „Přidat vybrané“.",
+      "baseLabel": "Základ:",
+      "base": "Základ",
+      "focus": "Zaměřit",
+      "remove": "Odebrat",
+      "offsetMatrix": "Matice posunů (vůči základu)",
+      "location": "Lokalita",
+      "localTime": "Místní čas",
+      "utcOffset": "Posun UTC",
+      "deltaHours": "Δ hodin"
+    },
+    "dstTab": {
+      "noChangeFound": "Nenalezena žádná změna (sken cca 370 dní)",
+      "title": "Letní čas",
+      "bestEffort": "Nejlepší možný odhad: Luxon nezpřístupňuje tabulky přechodů IANA, proto skenujeme dopředu, dokud se posun nezmění.",
+      "selectLocation": "Vyberte lokalitu v záložce Prozkoumat.",
+      "timezone": "Časové pásmo",
+      "currentLocalTime": "Aktuální místní čas",
+      "abbrev": "Zkratka",
+      "nextOffsetChange": "Příští změna posunu",
+      "transitionNote": "Poznámka: Časové razítko přechodu je přibližné (na úrovni minut). Pro přesné změny byste potřebovali tabulku přechodů tzdb.",
+      "infrequentChange": "Některá časová pásma posun nemění často (nebo vůbec)."
+    },
+    "savedTab": {
+      "title": "Uložené",
+      "subtitle": "Uloženo v localStorage (pouze identifikátory). Pro přenos celé datové sady použijte odkaz pro sdílení.",
+      "emptyState": "Zatím žádné uložené lokality. Uložte je v záložce Prozkoumat.",
+      "select": "Vybrat",
+      "compare": "Porovnat",
+      "remove": "Odebrat"
+    },
+    "plannerTab": {
+      "errProvideTitle": "Zadejte prosím název",
+      "msgSessionCreated": "Schůzka byla vytvořena",
+      "msgSessionCreatedWithTz": "Schůzka byla vytvořena a vaše časové pásmo bylo automaticky přidáno",
+      "errCreateSession": "Vytvoření schůzky se nezdařilo",
+      "errCreateSessionFirst": "Nejprve vytvořte schůzku",
+      "errNameRequired": "Jméno je povinné",
+      "errSelectLocation": "Nejprve prosím vyberte lokalitu na glóbu nebo vyhledejte město",
+      "msgParticipantAdded": "Účastník byl přidán",
+      "errAddParticipant": "Přidání účastníka se nezdařilo",
+      "errAddParticipantBackend": "Přidání účastníka do backendu se nezdařilo",
+      "errAddTwoParticipants": "Nejprve přidejte alespoň 2 účastníky",
+      "msgGeneratedSlots": "Na backendu bylo vygenerováno {count} termínů",
+      "errGenerateSlots": "Generování termínů se nezdařilo",
+      "errCreateSessionSelectSlot": "Nejprve prosím vytvořte schůzku a vyberte termín",
+      "msgMeetCreated": "Meet byl vytvořen! Odkaz: {link}",
+      "errCreateMeet": "Vytvoření Meetu se nezdařilo",
+      "heading": "Plánovač schůzek",
+      "intro": "Přidejte účastníky z různých časových pásem, nastavte jejich pracovní dobu a najděte nejlepší časy pro schůzku. Vyberte si mezi automatickým hledáním termínů nebo ručním výběrem času. Všechny výpočty zohledňují letní čas.",
+      "connected": "Připojeno",
+      "connectGoogleCalendar": "Připojit Google Calendar",
+      "requiredForMeet": "(vyžadováno pro odkazy na Meet)",
+      "yourTimezone": "Vaše časové pásmo",
+      "yourNamePlaceholder": "Vaše jméno (nepovinné)",
+      "createMeetingSession": "Vytvořit schůzku",
+      "meetingTitlePlaceholder": "Název schůzky",
+      "descriptionPlaceholder": "Popis (nepovinné)",
+      "createSession": "Vytvořit schůzku",
+      "sessionLabel": "Schůzka: {title}",
+      "mode": "REŽIM",
+      "autoFindSlots": "Automatické hledání termínů",
+      "autoFindSlotsDesc": "Systém najde optimální časy schůzky analýzou překryvu pracovní doby všech účastníků",
+      "manualTimePick": "Ruční výběr času",
+      "manualTimePickDesc": "Vyberete konkrétní čas a systém jej převede do časových pásem všech účastníků",
+      "howAutoFindWorks": "Jak funguje automatické hledání:",
+      "howManualPickWorks": "Jak funguje ruční výběr:",
+      "autoBullet1": "Analyzuje pracovní dobu všech účastníků",
+      "autoBullet2": "Najde časová okna, kdy jsou všichni dostupní",
+      "autoBullet3": "Generuje termíny každých 15 minut v rámci překryvu",
+      "autoBullet4": "Řadí termíny podle kvality (denní doba, pozice v pracovní době)",
+      "autoBullet5": "Zobrazuje nejlepší možnosti jako první (seřazené podle skóre kvality)",
+      "manualBullet1": "Vyberte čas v časovém pásmu jednoho účastníka",
+      "manualBullet2": "Systém jej interně převede na UTC",
+      "manualBullet3": "Zobrazí stejný okamžik ve všech ostatních časových pásmech",
+      "manualBullet4": "Ideální pro pevné časy schůzek nebo konkrétní rozvrhy",
+      "manualBullet5": "Všechny výpočty respektují přechody na letní čas",
+      "duration": "Délka",
+      "twoHours": "2 hodiny",
+      "minutes": "{mins} min",
+      "date": "Datum",
+      "preferences": "Předvolby",
+      "includeWeekends": "Zahrnout víkendy",
+      "includeWeekendsDesc": "Povolit termíny v so/ne s výchozí pracovní dobou",
+      "avoidEarly": "Vyhnout se schůzkám před 8:00",
+      "avoidLate": "Vyhnout se schůzkám po 20:00",
+      "localTime": "Místní čas",
+      "avoidLunch": "Vyhnout se obědové pauze",
+      "lunchTime": "12:00-13:00",
+      "addParticipant": "Přidat účastníka",
+      "quick": "Rychle",
+      "withEmail": "S e-mailem",
+      "searchCityPlaceholder": "Vyhledejte město pro rychlé přidání…",
+      "namePlaceholder": "Jméno *",
+      "emailPlaceholder": "E-mail (nepovinné, pro pozvánky do kalendáře)",
+      "clickGlobeHint": "Pro výběr lokality nejprve klikněte na glóbus nebo vyhledejte město",
+      "addAllFromCompare": "Přidat vše z porovnání ({count})",
+      "clickGlobeFormHint": "Klikněte na glóbus pro výběr lokality a poté vyplňte formulář výše",
+      "participantsCount": "Účastníci ({count})",
+      "remove": "Odebrat",
+      "namePrompt": "Jméno:",
+      "rename": "Přejmenovat",
+      "selectTime": "Vyberte čas",
+      "baseTimezone": "Základní časové pásmo",
+      "unknown": "Neznámé",
+      "meetingTime": "Čas schůzky",
+      "meetingTimeTzSuffix": "(časové pásmo účastníka {name})",
+      "meetingTimeUtcSuffix": "(UTC)",
+      "availableSlots": "Dostupné termíny",
+      "generateSlots": "Vygenerovat termíny",
+      "emptySlotsWithSession": "Kliknutím na „Vygenerovat termíny“ najdete dostupné časy schůzek. Nebo upravte pracovní dobu / datum a zkuste to znovu.",
+      "emptySlotsNoSession": "Nejprve vytvořte schůzku, poté přidejte alespoň 2 účastníky a nastavte jejich pracovní dobu, abyste našli dostupné časy schůzek.",
+      "qualityGreat": "Skvělé",
+      "qualityGood": "Dobré",
+      "qualityFair": "Přijatelné",
+      "qualityScoreTitle": "Skóre kvality: {score}/100",
+      "selected": "Vybráno",
+      "morning": "Ráno",
+      "afternoon": "Odpoledne",
+      "evening": "Večer",
+      "night": "Noc",
+      "showingTopSlots": "Zobrazuje se 15 nejlepších z {total} dostupných termínů (seřazeno podle kvality)",
+      "selectedTime": "Vybraný čas",
+      "selectedSlot": "Vybraný termín",
+      "utcTime": "Čas UTC",
+      "daytime": "Den",
+      "nighttime": "Noc",
+      "confirmed": "Potvrzeno",
+      "confirmCreateMeet": "Potvrdit a vytvořit Google Meet",
+      "manualNeedParticipant": "Přidejte alespoň jednoho účastníka pro převod času do různých časových pásem",
+      "autoNeedTwoParticipants": "Přidejte alespoň 2 účastníky, abyste mohli začít hledat termíny schůzek",
+      "autoNeedOneMoreParticipant": "Přidejte ještě jednoho účastníka pro nalezení dostupných časů schůzek",
+      "meetingConfirmed": "Schůzka potvrzena",
+      "googleMeetLink": "Odkaz na Google Meet:",
+      "eventId": "ID události: {id}"
+    },
+    "citySearch": {
+      "placeholder": "Hledat město…",
+      "unableToSearchStatus": "Nelze vyhledávat ({status})",
+      "unableToSearchCities": "Nelze vyhledat města",
+      "typeAtLeast": "Zadejte alespoň {count} znaků",
+      "searchingCities": "Hledání měst…",
+      "unableToFetchCities": "Nelze načíst města",
+      "noMatchesFound": "Nenalezeny žádné shody"
+    },
+    "meetingPlanner": {
+      "errProvideTitle": "Zadejte prosím název",
+      "msgSessionCreated": "Schůzka byla vytvořena",
+      "msgSessionCreatedWithTz": "Schůzka byla vytvořena a vaše časové pásmo bylo automaticky přidáno",
+      "errCreateSession": "Vytvoření schůzky se nezdařilo",
+      "errCreateSessionFirst": "Nejprve vytvořte schůzku",
+      "errNameRequired": "Jméno je povinné",
+      "errSelectLocation": "Nejprve prosím vyberte lokalitu na glóbu nebo vyhledejte město",
+      "msgParticipantAdded": "Účastník byl přidán",
+      "errAddParticipant": "Přidání účastníka se nezdařilo",
+      "errAddParticipantBackend": "Přidání účastníka do backendu se nezdařilo",
+      "errAddTwoParticipants": "Nejprve přidejte alespoň 2 účastníky",
+      "msgGeneratedSlots": "Na backendu bylo vygenerováno {count} termínů",
+      "errGenerateSlots": "Generování termínů se nezdařilo",
+      "errSelectSlotFirst": "Nejprve prosím vytvořte schůzku a vyberte termín",
+      "msgMeetCreated": "Meet byl vytvořen! Odkaz: {link}",
+      "errCreateMeet": "Vytvoření Meetu se nezdařilo",
+      "pageTitle": "Plánovač schůzek",
+      "pageSubtitle": "Přidejte účastníky z různých časových pásem, nastavte jejich pracovní dobu a najděte nejlepší časy pro schůzku. Vyberte si mezi automatickým hledáním termínů nebo ručním výběrem času. Všechny výpočty zohledňují letní čas.",
+      "connected": "Připojeno",
+      "connectGoogleCalendar": "Připojit Google Calendar",
+      "requiredForMeetLinks": "(vyžadováno pro odkazy na Meet)",
+      "yourTimezone": "Vaše časové pásmo",
+      "yourNamePlaceholder": "Vaše jméno (nepovinné)",
+      "createMeetingSession": "Vytvořit schůzku",
+      "meetingTitlePlaceholder": "Název schůzky",
+      "descriptionPlaceholder": "Popis (nepovinné)",
+      "createSession": "Vytvořit schůzku",
+      "sessionLabel": "Schůzka: {title}",
+      "mode": "REŽIM",
+      "autoFindSlots": "Automatické hledání termínů",
+      "autoFindSlotsDesc": "Systém najde optimální časy schůzky analýzou překryvu pracovní doby všech účastníků",
+      "manualTimePick": "Ruční výběr času",
+      "manualTimePickDesc": "Vyberete konkrétní čas a systém jej převede do časových pásem všech účastníků",
+      "howAutoFindWorks": "Jak funguje automatické hledání:",
+      "howManualPickWorks": "Jak funguje ruční výběr:",
+      "autoStep1": "Analyzuje pracovní dobu všech účastníků",
+      "autoStep2": "Najde časová okna, kdy jsou všichni dostupní",
+      "autoStep3": "Generuje termíny každých 15 minut v rámci překryvu",
+      "autoStep4": "Řadí termíny podle kvality (denní doba, pozice v pracovní době)",
+      "autoStep5": "Zobrazuje nejlepší možnosti jako první (seřazené podle skóre kvality)",
+      "manualStep1": "Vyberte čas v časovém pásmu jednoho účastníka",
+      "manualStep2": "Systém jej interně převede na UTC",
+      "manualStep3": "Zobrazí stejný okamžik ve všech ostatních časových pásmech",
+      "manualStep4": "Ideální pro pevné časy schůzek nebo konkrétní rozvrhy",
+      "manualStep5": "Všechny výpočty respektují přechody na letní čas",
+      "duration": "Délka",
+      "twoHours": "2 hodiny",
+      "minutes": "{mins} min",
+      "date": "Datum",
+      "preferences": "Předvolby",
+      "avoidBefore8am": "Vyhnout se schůzkám před 8:00",
+      "localTime": "Místní čas",
+      "avoidAfter8pm": "Vyhnout se schůzkám po 20:00",
+      "avoidLunchTime": "Vyhnout se obědové pauze",
+      "addParticipant": "Přidat účastníka",
+      "quick": "Rychle",
+      "withEmail": "S e-mailem",
+      "searchCityPlaceholder": "Vyhledejte město pro rychlé přidání…",
+      "namePlaceholder": "Jméno *",
+      "emailPlaceholder": "E-mail (nepovinné, pro pozvánky do kalendáře)",
+      "addParticipantBtn": "Přidat účastníka",
+      "clickGlobeHint": "Pro výběr lokality nejprve klikněte na glóbus nebo vyhledejte město",
+      "addAllFromCompare": "Přidat vše z porovnání ({count})",
+      "clickGlobeFillForm": "Klikněte na glóbus pro výběr lokality a poté vyplňte formulář výše",
+      "participantsCount": "Účastníci ({count})",
+      "remove": "Odebrat",
+      "namePrompt": "Jméno:",
+      "rename": "Přejmenovat",
+      "selectTime": "Vyberte čas",
+      "baseTimezone": "Základní časové pásmo",
+      "unknown": "Neznámé",
+      "meetingTime": "Čas schůzky",
+      "meetingTimeTzSuffix": "(časové pásmo účastníka {name})",
+      "meetingTimeUtcSuffix": "(UTC)",
+      "availableSlots": "Dostupné termíny",
+      "generateSlotsBackend": "Vygenerovat termíny na backendu",
+      "slotsEmptyState": "Kliknutím na „Vygenerovat termíny na backendu“ najdete dostupné časy schůzek. Nebo upravte pracovní dobu / datum a zkuste to znovu.",
+      "qualityGreat": "Skvělé",
+      "qualityGood": "Dobré",
+      "qualityFair": "Přijatelné",
+      "qualityScoreTitle": "Skóre kvality: {score}/100",
+      "selected": "Vybráno",
+      "morning": "Ráno",
+      "afternoon": "Odpoledne",
+      "evening": "Večer",
+      "night": "Noc",
+      "showingTop15": "Zobrazuje se 15 nejlepších z {total} dostupných termínů (seřazeno podle kvality)",
+      "selectedTime": "Vybraný čas",
+      "selectedSlot": "Vybraný termín",
+      "utcTime": "Čas UTC",
+      "daytime": "Den",
+      "nighttime": "Noc",
+      "confirmCreateMeet": "Potvrdit a vytvořit Google Meet",
+      "addOneParticipantHint": "Přidejte alespoň jednoho účastníka pro převod času do různých časových pásem",
+      "addTwoParticipantsHint": "Přidejte alespoň 2 účastníky, abyste mohli začít hledat termíny schůzek",
+      "addOneMoreParticipantHint": "Přidejte ještě jednoho účastníka pro nalezení dostupných časů schůzek",
+      "meetingConfirmed": "Schůzka potvrzena",
+      "googleMeetLink": "Odkaz na Google Meet:",
+      "eventId": "ID události: {id}"
+    },
+    "participants": {
+      "timezone": "Časové pásmo",
+      "localTimeNow": "Místní čas nyní",
+      "meetingTimeForYou": "Čas schůzky pro vás:"
+    },
+    "poll": {
+      "failedToLoad": "Načtení ankety se nezdařilo",
+      "provideNameEmail": "Zadejte prosím jméno a e-mail",
+      "voteAtLeastOne": "Hlasujte prosím alespoň pro jeden termín",
+      "failedToSubmit": "Odeslání hlasu se nezdařilo",
+      "voteSubmitted": "Hlas byl úspěšně odeslán!",
+      "loading": "Načítání...",
+      "duration": "Délka: {minutes} minut",
+      "voteForSlots": "Hlasujte pro dostupné termíny",
+      "noSlots": "Žádné dostupné termíny",
+      "utcLabel": "UTC:",
+      "yourTimeLabel": "Váš čas ({timezone}):",
+      "score": "Skóre: {score}",
+      "yes": "✓ Ano",
+      "maybe": "? Možná",
+      "no": "✗ Ne",
+      "summary": "Souhrn: {yes} ano, {maybe} možná, {no} ne",
+      "submitYourVote": "Odeslat váš hlas",
+      "yourName": "Vaše jméno",
+      "yourEmail": "Váš e-mail",
+      "submitting": "Odesílání...",
+      "submitVote": "Odeslat hlas"
+    },
+    "book": {
+      "failedLoadBooking": "Načtení rezervace se nezdařilo",
+      "selectSlotProvideInfo": "Vyberte prosím termín a zadejte jméno/e-mail",
+      "failedReserve": "Rezervace se nezdařila",
+      "slotReserved": "Termín rezervován! Odkaz na Meet byl vytvořen.",
+      "failedReserveSlot": "Rezervace termínu se nezdařila",
+      "loading": "Načítání...",
+      "duration": "Délka: {minutes} minut",
+      "meetingReserved": "Schůzka rezervována",
+      "timeLabel": "Čas:",
+      "yourLocalTimeLabel": "Váš místní čas:",
+      "meetLinkLabel": "Odkaz na Meet:",
+      "availableSlots": "Dostupné termíny",
+      "noSlots": "Žádné dostupné termíny",
+      "utcLabel": "UTC:",
+      "yourTimeLabel": "Váš čas ({timezone}):",
+      "score": "Skóre: {score}",
+      "select": "Vybrat",
+      "reserveSlot": "Rezervovat termín",
+      "yourName": "Vaše jméno",
+      "yourEmail": "Váš e-mail",
+      "reserving": "Rezervování...",
+      "reserveSlotButton": "Rezervovat termín"
+    },
+    "toast": {
+      "close": "Zavřít"
+    },
+    "timeDisplay": {
+      "selectLocation": "Vyberte lokalitu pro zobrazení času",
+      "sun": "Slunce:",
+      "format12h": "12h",
+      "format24h": "24h"
+    },
+    "dstBadge": {
+      "active": "Letní čas aktivní",
+      "inactive": "Letní čas neaktivní"
+    },
+    "workingHours": {
+      "workingHours": "Pracovní doba",
+      "start": "Začátek",
+      "end": "Konec"
+    },
+    "cityTimeCard": {
+      "day": "Den",
+      "night": "Noc"
+    },
+    "timezoneSelector": {
+      "savedToast": "Časové pásmo „{name}“ uloženo!",
+      "clearedToast": "Uložené časové pásmo bylo vymazáno!",
+      "selectTimezone": "Vyberte časové pásmo",
+      "savedLabel": "Uloženo: {name}",
+      "hideTimezone": "Skrýt časové pásmo",
+      "selectTimezoneButton": "Vybrat časové pásmo",
+      "saveTitle": "Uložit časové pásmo do localStorage",
+      "save": "Uložit",
+      "clearTitle": "Vymazat uložené časové pásmo",
+      "clear": "Vymazat",
+      "searchPlaceholder": "Hledat časové pásmo (např. Kyjev, New York, Tokio)...",
+      "noResults": "Pro „{query}“ nebyla nalezena žádná časová pásma",
+      "selectRegion": "Vyberte region:",
+      "regionTimezones": "Časová pásma: {region}:"
+    },
+    "datePicker": {
+      "today": "Dnes",
+      "weekday": {
+        "Sun": "Ne",
+        "Mon": "Po",
+        "Tue": "Út",
+        "Wed": "St",
+        "Thu": "Čt",
+        "Fri": "Pá",
+        "Sat": "So"
+      }
+    },
+    "timePicker": {
+      "hour": "Hodina",
+      "min": "Min"
+    },
+    "copyButton": {
+      "copy": "Kopírovat"
+    },
+    "themeToggle": {
+      "dark": "Tmavý",
+      "light": "Světlý",
+      "switchTitle": "Přepnout na {theme} motiv"
+    },
+    "timeSlider": {
+      "time": "Čas"
+    }
+  }
+}

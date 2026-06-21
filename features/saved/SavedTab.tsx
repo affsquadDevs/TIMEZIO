@@ -1,9 +1,11 @@
+import { useTranslations } from 'next-intl';
 import ui from '@/components/ui/ui.module.css';
 import { useAppStore } from '@/store/useAppStore';
 import { useToast } from '@/components/ui/Toast';
 import { LocationCard } from '@/components/ui/LocationCard';
 
 export function SavedTab() {
+  const t = useTranslations('ui.savedTab');
   const { showToast } = useToast();
   const savedIds = useAppStore((s) => s.savedIds);
   const locationsById = useAppStore((s) => s.locationsById);
@@ -18,12 +20,12 @@ export function SavedTab() {
     <div className={ui.card}>
       <div className={ui.cardBody} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <div>
-          <div className={ui.title}>Saved</div>
-          <div className={ui.subtitle}>Stored in localStorage (ids only). Use share link to carry full payload.</div>
+          <div className={ui.title}>{t('title')}</div>
+          <div className={ui.subtitle}>{t('subtitle')}</div>
         </div>
 
         {saved.length === 0 ? (
-          <div className={ui.subtitle}>No saved locations yet. Save from Explore.</div>
+          <div className={ui.subtitle}>{t('emptyState')}</div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             {saved.map((loc) => (
@@ -39,7 +41,7 @@ export function SavedTab() {
                         requestFocus({ lat: loc.lat, lng: loc.lng, altitude: 1.6 });
                       }}
                     >
-                      Select
+                      {t('select')}
                     </button>
                     <button
                       className={ui.btn}
@@ -48,10 +50,10 @@ export function SavedTab() {
                         if (!res.ok && res.reason) showToast(res.reason, 'error');
                       }}
                     >
-                      Compare
+                      {t('compare')}
                     </button>
                     <button className={`${ui.btn} ${ui.btnDanger}`} onClick={() => removeSaved(loc.id)}>
-                      Remove
+                      {t('remove')}
                     </button>
                   </div>
                 }

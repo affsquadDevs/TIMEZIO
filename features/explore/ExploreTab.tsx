@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import ui from '@/components/ui/ui.module.css';
 import { useTicker } from '@/hooks/useTicker';
 import { useAppStore, useSelectedLocation } from '@/store/useAppStore';
@@ -16,6 +17,7 @@ const popularCities = [
 ];
 
 export function ExploreTab() {
+  const t = useTranslations('ui.exploreTab');
   const now = useTicker(1000);
   const selected = useSelectedLocation();
   const pickFromLatLng = useAppStore((s) => s.pickLocationFromLatLng);
@@ -59,8 +61,8 @@ export function ExploreTab() {
       <div className={ui.card}>
         <div className={ui.cardBody} style={{ padding: '16px' }}>
           <div style={{ marginBottom: '12px' }}>
-            <div className={ui.title}>Search City</div>
-            <div className={ui.subtitle} style={{ marginTop: '4px' }}>Find any city around the world</div>
+            <div className={ui.title}>{t('searchCity')}</div>
+            <div className={ui.subtitle} style={{ marginTop: '4px' }}>{t('searchCitySubtitle')}</div>
           </div>
           <CitySearch
             onPick={(c) => {
@@ -76,8 +78,8 @@ export function ExploreTab() {
       <div className={ui.card}>
         <div className={ui.cardBody} style={{ padding: '16px' }}>
           <div style={{ marginBottom: '12px' }}>
-            <div className={ui.title}>Popular Cities</div>
-            <div className={ui.subtitle}>Click on a city to view its time</div>
+            <div className={ui.title}>{t('popularCities')}</div>
+            <div className={ui.subtitle}>{t('popularCitiesSubtitle')}</div>
           </div>
           <div style={{ 
             display: 'grid', 

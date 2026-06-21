@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { DateTime } from 'luxon';
 import { useTicker } from '@/hooks/useTicker';
 import { useAppStore } from '@/store/useAppStore';
@@ -12,13 +13,14 @@ interface TimeDisplayProps {
 }
 
 export function TimeDisplay({ location }: TimeDisplayProps) {
+  const t = useTranslations('ui.timeDisplay');
   const now = useTicker(1000);
   const use24h = useAppStore((s) => s.use24h);
 
   if (!location) {
     return (
       <div className={styles.timeDisplay} style={{ padding: '16px 0', textAlign: 'center' }}>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '14px', margin: 0 }}>Select a location to view time</p>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '14px', margin: 0 }}>{t('selectLocation')}</p>
       </div>
     );
   }
@@ -84,7 +86,7 @@ export function TimeDisplay({ location }: TimeDisplayProps) {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
             <div style={{ fontSize: 'clamp(12px, 2.5vw, 14px)', fontWeight: 600, color: 'var(--text-secondary)' }}>
-              <span>Sun: </span>
+              <span>{t('sun')} </span>
               <span>{sunrise} - {sunset}</span>
               <span style={{ marginLeft: '4px' }}>(10h 06m)</span>
             </div>
@@ -97,14 +99,14 @@ export function TimeDisplay({ location }: TimeDisplayProps) {
             onClick={() => useAppStore.getState().toggle24h()}
             style={{ minWidth: '50px', padding: '8px 12px' }}
           >
-            12h
+            {t('format12h')}
           </button>
           <button
             className={`${styles.btn} ${use24h ? styles.btnPrimary : ''}`}
             onClick={() => useAppStore.getState().toggle24h()}
             style={{ minWidth: '50px', padding: '8px 12px' }}
           >
-            24h
+            {t('format24h')}
           </button>
         </div>
       </div>

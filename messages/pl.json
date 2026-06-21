@@ -1,0 +1,1592 @@
+{
+  "common": {
+    "appName": "Timezio",
+    "breadcrumbHome": "Strona główna",
+    "faqTitle": "Najczęściej zadawane pytania",
+    "backToHome": "Powrót do strony głównej",
+    "legalDisclaimer": "Ta strona to tłumaczenie wykonane przy pomocy maszyny, udostępnione dla wygody. Wersja angielska jest wiążąca."
+  },
+  "nav": {
+    "blog": "Blog",
+    "about": "O nas",
+    "toggleHourFormat": "Przełącz 12/24h",
+    "copyLink": "Kopiuj link"
+  },
+  "language": {
+    "label": "Język",
+    "select": "Wybierz język"
+  },
+  "meta": {
+    "home": {
+      "title": "Timezio – Konwerter stref czasowych i planer spotkań",
+      "description": "Natychmiastowy konwerter stref czasowych, zegar światowy, planer spotkań uwzględniający czas letni oraz porównanie stref czasowych na interaktywnym globie."
+    },
+    "explore": {
+      "title": "Eksploruj strefy czasowe na globie",
+      "description": "Eksploruj strefy czasowe na interaktywnym globie 3D. Sprawdź aktualny czas, przesunięcie UTC i status czasu letniego dla dowolnej lokalizacji."
+    },
+    "compare": {
+      "title": "Porównaj strefy czasowe",
+      "description": "Porównuj strefy czasowe obok siebie z przesunięciami uwzględniającymi czas letni. Wizualizuj lokalizacje na interaktywnym globie i unikaj błędów w planowaniu."
+    },
+    "planner": {
+      "title": "Planer spotkań w różnych strefach czasowych",
+      "description": "Planuj spotkania w różnych strefach czasowych z uwzględnieniem godzin pracy, okien nakładania się i obliczeń uwzględniających czas letni."
+    },
+    "saved": {
+      "title": "Zapisane lokalizacje i strefy czasowe",
+      "description": "Zapisuj często używane lokalizacje i szybko wracaj do ich aktualnego czasu, przesunięcia i statusu czasu letniego."
+    },
+    "timeConverter": {
+      "title": "Konwerter stref czasowych – Porównuj czasy, planuj spotkania i odkrywaj miasta",
+      "description": "Porównuj strefy czasowe między miastami, planuj spotkania w różnych regionach i odkrywaj czas lokalny na całym świecie. Uwzględnia czas letni, dokładny i bezpłatny."
+    },
+    "meetingPlanner": {
+      "title": "Planer spotkań"
+    },
+    "convertHub": {
+      "title": "Popularne konwertery stref czasowych",
+      "description": "Przeliczaj czas między strefami w mgnieniu oka: PST na EST, UTC na EST, GMT na EST, CET na EST, IST na EST i więcej. Każdy konwerter uwzględnia czas letni i pokazuje pełną tabelę godzina po godzinie."
+    },
+    "timeHub": {
+      "title": "Aktualny czas w największych miastach świata",
+      "description": "Sprawdź aktualny czas lokalny w miastach na całym świecie. Każda strona pokazuje czas lokalny na żywo, przesunięcie UTC, strefę czasową i status czasu letniego — z uwzględnieniem czasu letniego i aktualizacją w czasie rzeczywistym."
+    },
+    "meetingHub": {
+      "title": "Najlepsze terminy spotkań w różnych strefach czasowych",
+      "description": "Znajdź nakładające się godziny pracy dla popularnych par miast. Każda strona pokazuje tabelę wspólnych godzin i najlepszy termin, z pełnym uwzględnieniem czasu letniego."
+    },
+    "dstHub": {
+      "title": "Sprawdzanie czasu letniego",
+      "description": "Czy w danym regionie obowiązuje teraz czas letni? Sprawdź status czasu letniego, aktualne przesunięcie UTC oraz dokładne daty najbliższej zmiany czasu dla krajów na całym świecie."
+    },
+    "time": {
+      "title": "Aktualny czas w {city}",
+      "description": "Zobacz aktualny czas lokalny w {city}, wraz z przesunięciem UTC i statusem czasu letniego."
+    },
+    "convert": {
+      "title": "Konwerter czasu {from} na {to}",
+      "description": "Przeliczaj {from} na {to} z pełną tabelą godzina po godzinie — z uwzględnieniem czasu letniego, na podstawie oficjalnych danych IANA."
+    },
+    "meeting": {
+      "title": "Najlepszy termin spotkania: {a} ↔ {b}",
+      "description": "Znajdź nakładające się godziny pracy i najlepszy termin spotkania między {a} a {b} — z pełnym uwzględnieniem czasu letniego."
+    },
+    "dst": {
+      "title": "Czas letni — {region}",
+      "description": "Status czasu letniego, aktualne przesunięcie UTC oraz daty najbliższych zmian czasu dla {region}."
+    },
+    "privacy": {
+      "title": "Polityka prywatności",
+      "description": "Jak Timezio gromadzi, wykorzystuje i chroni informacje zgodnie z RODO i obowiązującymi przepisami o ochronie danych."
+    },
+    "terms": {
+      "title": "Warunki korzystania",
+      "description": "Warunki korzystania z narzędzi Timezio do obsługi stref czasowych, konwerterów i planera spotkań."
+    },
+    "about": {
+      "title": "O Timezio",
+      "description": "Timezio to bezpłatny konwerter stref czasowych uwzględniający czas letni, zegar światowy i planer spotkań stworzony przez AffSquad. Dowiedz się, kto za nim stoi, jak działa i jakie dane wykorzystuje."
+    },
+    "contact": {
+      "title": "Kontakt z pomocą techniczną Timezio",
+      "description": "Uzyskaj pomoc, zgłoś problemy lub poproś o nowe funkcje narzędzi Timezio do obsługi stref czasowych. Odpowiadamy na opinie i pytania dotyczące wsparcia."
+    },
+    "blogIndex": {
+      "title": "Poradniki o strefach czasowych i wskazówki dla pracy zdalnej",
+      "description": "Szczegółowe poradniki o strefach czasowych, czasie letnim, współpracy zdalnej i efektywnym korzystaniu z Timezio."
+    }
+  },
+  "footer": {
+    "productTitle": "PRODUKT",
+    "exploreTitle": "EKSPLORUJ",
+    "popularTitle": "POPULARNE",
+    "legalTitle": "INFORMACJE PRAWNE",
+    "home": "Strona główna",
+    "exploreGlobe": "Eksploruj glob",
+    "compareZones": "Porównaj strefy",
+    "meetingPlanner": "Planer spotkań",
+    "timeConverter": "Konwerter czasu",
+    "worldClock": "Zegar światowy",
+    "converters": "Konwertery",
+    "meetingTimes": "Terminy spotkań",
+    "daylightSaving": "Czas letni",
+    "blog": "Blog",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "privacy": "Polityka prywatności",
+    "terms": "Warunki korzystania",
+    "cookieSettings": "Ustawienia plików cookie",
+    "copyright": "© {year} Timezio by AffSquad. Wszelkie prawa zastrzeżone.",
+    "disclaimer": "Informacje na tej stronie mają charakter wyłącznie ogólny i poglądowy. Dokładność nie jest gwarantowana. Nie ponosimy odpowiedzialności w zakresie dozwolonym przez prawo UE. Pliki cookie lub podobne technologie mogą być wykorzystywane do celów analitycznych i reklamowych zgodnie z Twoimi wyborami dotyczącymi zgody.",
+    "privacyShort": "Prywatność",
+    "termsShort": "Warunki"
+  },
+  "consent": {
+    "message": "Używamy plików cookie do analityki i wyświetlania reklam (w tym Google AdSense). Możesz zaakceptować lub odrzucić pliki cookie inne niż niezbędne. Zobacz naszą <link>Politykę prywatności</link>.",
+    "reject": "Odrzuć",
+    "acceptAll": "Akceptuj wszystkie"
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexDescription": "Artykuły i poradniki o strefach czasowych, pracy zdalnej i efektywnym korzystaniu z Timezio.",
+    "readMore": "Czytaj więcej",
+    "backToBlog": "Powrót do bloga",
+    "byTeam": "Zespół Timezio",
+    "toolsTitle": "Narzędzia Timezio",
+    "relatedTitle": "Powiązane artykuły",
+    "tools": [
+      {
+        "title": "Eksploruj glob",
+        "desc": "Kliknij dowolne miejsce na interaktywnym globie, aby zobaczyć czas lokalny"
+      },
+      {
+        "title": "Porównaj strefy czasowe",
+        "desc": "Porównuj różnice czasu między wieloma miastami"
+      },
+      {
+        "title": "Planer spotkań",
+        "desc": "Znajdź najlepszy termin spotkania dla osób w różnych lokalizacjach"
+      },
+      {
+        "title": "Tracker czasu letniego",
+        "desc": "Śledź zmiany i przejścia czasu letniego"
+      },
+      {
+        "title": "Konwerter czasu",
+        "desc": "Przeliczaj czas UTC lub lokalny między strefami czasowymi"
+      }
+    ]
+  },
+  "home": {
+    "badges": [
+      "Na żywo i z uwzględnieniem DST",
+      "Bez rejestracji",
+      "Darmowe na zawsze"
+    ],
+    "title": "Planuj między strefami czasowymi bez bólu głowy.",
+    "lede": "Timezio pomaga porównywać strefy czasowe, przeliczać czas UTC i ustalać terminy spotkań między miastami. Każde obliczenie uwzględnia czas letni (DST) i opiera się na oficjalnych danych IANA.",
+    "ctaPlanner": "Zaplanuj spotkanie",
+    "ctaConverter": "Otwórz konwerter",
+    "highlights": [
+      {
+        "title": "Uwzględnia DST",
+        "body": "Działa na oficjalnych danych stref czasowych IANA, aktualizowanych automatycznie."
+      },
+      {
+        "title": "Ponad 10 tys. miast",
+        "body": "Każde przesunięcie uwzględnione, w tym różnice 30- i 45-minutowe."
+      },
+      {
+        "title": "Gotowe do udostępnienia",
+        "body": "Kopiuj przejrzyste linki i wysyłaj zespołowi dokładny plan godzin."
+      }
+    ],
+    "panelEyebrow": "Migawka na żywo",
+    "panelTitle": "Co dzieje się właśnie teraz",
+    "panelBadge": "DST zweryfikowane",
+    "panelFooter": "Przykłady na żywo. Nietypowe przesunięcia i reguły czasu letniego obsługiwane automatycznie.",
+    "toolkitEyebrow": "Zestaw narzędzi",
+    "toolkitTitle": "Wszystko, czego potrzebujesz do globalnego planowania czasu",
+    "toolkitBody": "Przełączaj się między plannerem, konwerterem i porównaniem miast bez utraty kontekstu.",
+    "tools": [
+      {
+        "label": "Planner spotkań",
+        "desc": "Automatycznie znajduj terminy z dogodnym nakładaniem się godzin i oszczędź wszystkim nocnych spotkań.",
+        "badge": "Ulubione przez zespoły"
+      },
+      {
+        "label": "Konwerter czasu",
+        "desc": "Przeliczaj czas UTC lub lokalny, podglądaj przyszłe daty i błyskawicznie udostępniaj wyniki.",
+        "badge": "Najczęściej używane"
+      },
+      {
+        "label": "Porównanie miast",
+        "desc": "Zestaw kilka miast obok siebie, aby od razu zobaczyć dokładne różnice.",
+        "badge": ""
+      },
+      {
+        "label": "Eksploruj kulę ziemską",
+        "desc": "Nawiguj po interaktywnej kuli ziemskiej i przejdź wprost do dowolnego miasta lub regionu.",
+        "badge": ""
+      }
+    ],
+    "toolOpen": "Otwórz →",
+    "whyEyebrow": "Dlaczego Timezio",
+    "whyTitle": "Dokładność domyślnie, przyjazność z założenia",
+    "whyBody": "Stworzone dla zdalnych zespołów, freelancerów i znajomych rozsianych po świecie.",
+    "values": [
+      {
+        "title": "Dokładne obliczenia stref czasowych",
+        "body": "Porównuj czas lokalny między miastami z automatycznym uwzględnieniem czasu letniego i regionalnych przesunięć UTC."
+      },
+      {
+        "title": "Konwersja czasu UTC i lokalnego",
+        "body": "Przeliczaj UTC na czas lokalny (i odwrotnie) dla dowolnego miasta — z obsługą dat przeszłych, bieżących i przyszłych."
+      },
+      {
+        "title": "Planner spotkań między strefami czasowymi",
+        "body": "Znajdź najlepszy wspólny termin spotkania dla uczestników z różnych miast, bez wczesnych poranków i późnych nocy."
+      },
+      {
+        "title": "Szybko, prosto i za darmo",
+        "body": "Bez kont, bez konfiguracji, bez komplikacji. Po prostu jasne odpowiedzi — natychmiast."
+      },
+      {
+        "title": "Niezawodne i z uwzględnieniem DST",
+        "body": "Timezio korzysta z oficjalnych danych stref czasowych IANA. Wszystkie wyniki automatycznie uwzględniają zmiany czasu letniego i reguły regionalne."
+      },
+      {
+        "title": "Stworzone do użytku globalnego",
+        "body": "Obsługuje regiony z niestandardowymi przesunięciami (w tym różnice 30- lub 45-minutowe) oraz zmiany daty przy przekraczaniu stref czasowych."
+      }
+    ]
+  },
+  "pages": {
+    "explore": {
+      "heading": "Eksploruj strefy czasowe",
+      "description": "Wybierz dowolny punkt na kuli ziemskiej, aby zobaczyć czas lokalny, przesunięcie UTC i status czasu letniego. Użyj funkcji Eksploruj, aby zrozumieć, jak zmienia się czas po przekroczeniu granic.",
+      "breadcrumb": "Eksploruj",
+      "ctas": [
+        "Aktualny czas w największych miastach",
+        "Popularne konwertery stref czasowych",
+        "Sprawdzanie czasu letniego"
+      ],
+      "articleH2": "Jak eksplorować kulę ziemską",
+      "articleParagraphs": [
+        "Interaktywna kula ziemska 3D zamienia strefy czasowe w coś, co można zobaczyć, zamiast obliczać. Kliknij dowolne miejsce, a Timezio odczyta jego dokładną szerokość i długość geograficzną, odnajdzie pasującą strefę czasową IANA i pokaże aktualny czas lokalny, przesunięcie UTC oraz to, czy obecnie obowiązuje czas letni. Ponieważ dane pochodzą z oficjalnej bazy stref czasowych IANA, obejmują także przypadki nietypowe — przesunięcia o pół godziny, jak w Indiach (UTC+5:30), 45-minutowe, jak w Nepalu, oraz regiony zmieniające zegary w różnych terminach.",
+        "Eksploruj to najszybszy sposób, by odpowiedzieć na pytanie „która godzina jest tam teraz?” bez wpisywania nazwy miasta. Obróć kulę ziemską do danego kontynentu, kliknij wybrzeże i od razu odczytaj czas. Gdy chcesz zestawić kilka miejsc naraz, przełącz się na Porównaj; gdy potrzebujesz znaleźć termin pasujący zespołowi, przejdź do Plannera. Wszystkie widoki pozostają zsynchronizowane, więc miasto, które tu klikniesz, jest gotowe do porównania lub zaplanowania jednym dotknięciem.",
+        "Strefy czasowe są tyleż polityczne, co geograficzne — granice, wyjątki i reguły sezonowe przesuwają zegar. Zobaczenie ich na kuli ziemskiej sprawia, że te granice stają się oczywiste, dlatego Eksploruj to dobry punkt wyjścia, zanim przeliczysz konkretną godzinę lub umówisz międzynarodową rozmowę."
+      ]
+    },
+    "compare": {
+      "heading": "Porównaj strefy czasowe",
+      "description": "Porównuj wiele stref czasowych obok siebie, z przesunięciami uwzględniającymi DST. Dodaj miasta, wybierz lokalizację bazową i zweryfikuj różnicę czasu przed zaplanowaniem.",
+      "breadcrumb": "Porównaj",
+      "ctas": [
+        "Popularne konwertery stref czasowych",
+        "Najlepsze terminy spotkań według par miast",
+        "Sprawdzanie czasu letniego"
+      ],
+      "articleH2": "Porównaj kilka miast naraz",
+      "articleParagraphs": [
+        "Dodaj do sześciu miast, a Timezio zestawi ich aktualne czasy lokalne w jednym widoku. Wybierz jedno jako „bazowe”, a każde pozostałe miasto pokaże swoją różnicę względem niego, dzięki czemu na pierwszy rzut oka odpowiesz na pytania w stylu „gdy w Berlinie jest 9:00, która godzina jest w Nowym Jorku i Singapurze?”. Przesunięcia są obliczane na podstawie oficjalnych danych IANA i aktualizowane w czasie rzeczywistym, łącznie z godzinnymi przesunięciami, gdy region wchodzi w czas letni lub z niego wychodzi.",
+        "Porównywanie jest najprzydatniejsze, gdy różnica nie jest oczywista. Wiele par krajów dzieli ułamkowa liczba godzin, a kilka zmienia zegary w różne weekendy, więc odstęp między dwoma miastami może wynosić dziewięć godzin w jednym miesiącu i dziesięć w następnym. Zestawienie miast obok siebie wychwytuje takie przypadki brzegowe, zanim zamienią się w nieodebraną rozmowę. Dla daty w przyszłości zmień datę, a porównanie przeliczy się ponownie z właściwymi regułami DST dla tego dnia.",
+        "Gdy potwierdzisz różnicę, skopiuj link do udostępnienia, aby wysłać zespołowi dokładne porównanie, lub przenieś ten sam zestaw miast do Plannera, aby znaleźć termin spotkania pasujący wszystkim."
+      ]
+    },
+    "planner": {
+      "heading": "Planner spotkań",
+      "description": "Planuj spotkania w wielu strefach czasowych. Dodawaj uczestników, ustawiaj godziny pracy i automatycznie znajduj okna nakładających się godzin — z pełnym uwzględnieniem DST.",
+      "breadcrumb": "Planner",
+      "ctas": [
+        "Najlepsze terminy spotkań według par miast",
+        "Porównaj strefy czasowe",
+        "Sprawdzanie czasu letniego"
+      ],
+      "articleH2": "Znajdź termin pasujący wszystkim",
+      "articleParagraphs": [
+        "Dodaj każdego uczestnika według miasta, ustaw jego godziny pracy, a planner nałoży na siebie wszystkie harmonogramy, aby pokazać okna, w których wszyscy są dostępni. Zamiast w głowie żonglować przesunięciami, otrzymujesz ranking terminów mieszczących się w dniu pracy każdej osoby, z obniżonym priorytetem dla wczesnych poranków i późnych nocy, aby nikt nie musiał odbierać rozmowy o 6 rano. Każde obliczenie uwzględnia czas letni, więc termin pasujący w tym tygodniu nadal pasuje po zmianie zegarów w danym regionie.",
+        "Planner został stworzony dla rozproszonych zespołów, rozmów z klientami na różnych kontynentach oraz kontaktu z przyjaciółmi i rodziną za granicą. Ustaw czas trwania spotkania, wybierz datę i dostosuj godziny każdego uczestnika, jeśli pracuje w nietypowym trybie. Możesz też poszerzyć wyszukiwanie, gdy nie ma czystego nakładania się godzin — częsta sytuacja przy parach oddalonych o dziesięć lub więcej godzin, gdzie ktoś musi przyjąć termin brzegowy. Aby otrzymać zaproszenia Google Calendar i linki Meet, połącz swoje konto w plannerze i potwierdź termin.",
+        "Znasz już oba miasta? Gotowe strony z najlepszymi terminami spotkań pokazują nakładanie się godzin dla popularnych par bez żadnej konfiguracji."
+      ]
+    },
+    "saved": {
+      "heading": "Zapisane",
+      "description": "Zapisuj często używane lokalizacje, aby błyskawicznie wracać do ich aktualnego czasu, przesunięcia i statusu czasu letniego.",
+      "breadcrumb": "Zapisane",
+      "ctas": [
+        "Eksploruj strefy czasowe",
+        "Porównaj strefy czasowe",
+        "Zaplanuj spotkanie między strefami czasowymi"
+      ]
+    },
+    "convertHub": {
+      "title": "Popularne konwertery stref czasowych",
+      "intro1": "Konwerter stref czasowych odpowiada na zwodniczo trudne pytanie: gdy w jednym miejscu jest dana godzina, która godzina jest gdzie indziej? Haczyk polega na tym, że odstęp między dwiema strefami nie jest stały. Czas letni przesuwa go o godzinę, oba regiony często zmieniają zegary w różne weekendy, a niektóre strefy dzieli ułamkowa liczba godzin. Każdy konwerter poniżej korzysta z oficjalnych danych IANA, więc wynik jest poprawny w dowolnej dacie — także w tygodniach wokół zmiany czasu, gdy ręczne obliczenia zwykle zawodzą.",
+      "intro2": "Każda strona konwertera zawiera pełną tabelę godzina po godzinie dla bieżącego dnia, aktualne przesunięcie między obiema strefami oraz informacje o tym, która strona stosuje czas letni. Chcesz sprawdzić miasto zamiast skrótu? Przeglądaj <world>zegar światowy</world> lub przejdź do <compare>Porównaj</compare>, aby zestawić więcej niż dwa miejsca naraz.",
+      "listHeading": "Konwertery"
+    },
+    "timeHub": {
+      "title": "Aktualny czas w największych miastach świata",
+      "intro1": "Wybierz miasto, aby zobaczyć jego aktualny czas lokalny, dokładne przesunięcie UTC, używaną strefę czasową IANA oraz to, czy obecnie obowiązuje czas letni. Każda strona aktualizuje się w czasie rzeczywistym i jest obliczana na podstawie oficjalnej bazy stref czasowych IANA, więc przypadki nietypowe — przesunięcia o pół godziny, regiony zmieniające zegary w różnych terminach oraz miejsca, które w ogóle nie stosują DST — są obsługiwane poprawnie.",
+      "intro2": "Te strony zegara światowego to najszybszy sposób, by sprawdzić „która godzina jest tam?” przed rozmową, podróżą lub zaplanowaniem czegoś. Aby przeliczyć konkretną godzinę między dwoma miejscami, użyj <convert>konwerterów</convert>, aby zestawić kilka miast — użyj <compare>Porównaj</compare>, a aby znaleźć termin pasujący grupie — użyj <planner>Plannera spotkań</planner>.",
+      "listHeading": "Miasta ({count})"
+    },
+    "meetingHub": {
+      "title": "Najlepsze terminy spotkań według par miast",
+      "intro1": "Planowanie spotkań między kontynentami zwykle oznacza, że ktoś odbiera rozmowę o niefortunnej porze. Te strony wykonują za Ciebie trudną część: dla każdej popularnej pary miast Timezio nakłada na siebie standardowy dzień pracy obu zespołów od 9 do 17 i wypisuje godziny, gdy wszyscy są przebudzeni i pracują, a do tego rekomendowany termin w środku tego okna. Ponieważ obliczenia korzystają z oficjalnych danych IANA, nakładanie się godzin pozostaje poprawne nawet wtedy, gdy jedno miasto zmienia zegary, a drugie nie.",
+      "intro2": "Wybierz parę poniżej, aby otrzymać natychmiastową odpowiedź, lub otwórz <planner>Planner spotkań</planner>, aby dodać własne miasta, dostosować godziny pracy każdego uczestnika i wygenerować zaproszenia do kalendarza. Aby najpierw dokładnie sprawdzić samą różnicę czasu, użyj <compare>Porównaj</compare>."
+    },
+    "dstHub": {
+      "title": "Czas letni według krajów",
+      "intro1": "Czas letni to jedno z największych źródeł błędów w planowaniu: zegary przesuwają się o godzinę, ale nie wszędzie i nie tego samego dnia. Te strony mówią Ci, dla każdego regionu, czy DST obecnie obowiązuje, jakie jest aktualne przesunięcie UTC oraz dokładne daty najbliższego przejścia na czas letni i powrotu do zimowego — wszystko obliczone na podstawie oficjalnej bazy stref czasowych IANA, a nie zaszytych na stałe reguł, które się dezaktualizują.",
+      "intro2": "Wiedza o tym, kiedy region zmienia zegary, pomaga chronić cykliczne spotkania, plany podróży i terminy przekraczające granice. Wybierz region poniżej, a następnie użyj <compare>Porównaj</compare> lub <planner>Plannera spotkań</planner>, aby zobaczyć, jak nadchodząca zmiana wpłynie na różnicę czasu względem Twojej lokalizacji."
+    }
+  },
+  "prog": {
+    "time": {
+      "breadcrumb": "Zegar światowy",
+      "h1": "Aktualny czas w {city}",
+      "localTime": "Czas lokalny",
+      "dateLine": "{date} · {abbr} ({offset})",
+      "factTimeZone": "Strefa czasowa",
+      "factUtcOffset": "Przesunięcie UTC",
+      "factAbbreviation": "Skrót",
+      "factDaylight": "Czas letni",
+      "daylightInEffect": "Obecnie obowiązuje",
+      "daylightObservedInactive": "Stosowany (obecnie nieaktywny)",
+      "daylightNotObserved": "Niestosowany",
+      "introMain": "Aktualny czas lokalny w {city} to <b>{time}</b>, {date}. {city} działa w strefie czasowej <b>{tz}</b>, która obecnie wynosi {offsetAbbr}.",
+      "dstSentence": "{observesDst, select, yes {{city} stosuje czas letni, dlatego przesunięcie UTC zmienia się o godzinę między czasem standardowym a letnim.} other {{city} nie stosuje czasu letniego, dlatego przesunięcie UTC ({offset}) pozostaje takie samo przez cały rok.}}",
+      "transitionLabel": "{type, select, begins {Clocks spring forward — DST begins} other {Clocks fall back — DST ends}}",
+      "nextChange": "<b>Następna zmiana czasu:</b> {date} — {label}. Przesunięcie UTC zmieni się z {fromOffset} na {toOffset}. Zaplanuj rozmowy i podróże wokół tej daty, aby nie pomylić się o godzinę.",
+      "crosslinks": "Skorzystaj z interaktywnego globusa powyżej, aby porównać {city} z innymi miastami, lub otwórz kartę <compare>Porównaj</compare>, aby zestawić kilka stref czasowych obok siebie. Planujesz rozmowę? <planner>Planer spotkań</planner> automatycznie znajdzie wspólne godziny pracy, a <dst>narzędzie do czasu letniego</dst> śledzi nadchodzące zmiany czasu.",
+      "relatedHeading": "Aktualny czas w innych miastach",
+      "wpName": "Aktualny czas w {city}",
+      "wpDesc": "Czas lokalny na żywo w {city} ({tz}). Aktualne przesunięcie UTC {offsetAbbr}, ze statusem czasu letniego i następną zmianą czasu.",
+      "faq1q": "Która jest teraz godzina w {city}?",
+      "faq1a": "Na dzień {date} czas lokalny w {city} to około {time} ({abbr}). Zegar na górze tej strony odmierza czas na żywo, a wyświetlane przesunięcie wynosi {offset}.",
+      "faq2q": "W jakiej strefie czasowej znajduje się {city}?",
+      "faq2a": "{city} korzysta ze strefy czasowej IANA {tz}{hasAbbr, select, yes {, obecnie oznaczanej skrótem {abbr}} other {}}. Aktualne przesunięcie względem uniwersalnego czasu koordynowanego wynosi {offset}.",
+      "faq3q": "Czy w {city} obowiązuje czas letni?",
+      "faq3a": "{observesDst, select, yes {Yes. {city} observes daylight saving time, so its UTC offset shifts by one hour between standard and summer time.{hasNext, select, yes { The next change is on {nextDate}, when the clocks {nextDir, select, forward {move forward} other {move back}} and the offset becomes {nextOffset}.} other {}}} other {{city} does not observe daylight saving time, so its UTC offset ({offset}) stays the same all year.}}",
+      "faq4q": "Jakie jest przesunięcie UTC dla {city}?",
+      "faq4a": "{city} is currently at {offset}. {observesDst, select, yes {This offset changes by one hour during the daylight saving period.} other {This offset is fixed throughout the year.}}"
+    },
+    "convert": {
+      "breadcrumb": "Konwertery",
+      "h1": "Konwerter czasu {from} na {to}",
+      "diffSummary": "{dir, select, same {{to} ma obecnie taki sam czas jak {from}.} ahead {{to} jest obecnie {h}h{m, plural, =0 {} other { #m}} przed {from}.} other {{to} jest obecnie {h}h{m, plural, =0 {} other { #m}} za {from}.}}",
+      "introBody": "{from} to {fromFull}; {to} to {toFull}. Poniższa tabela pokazuje przeliczenie dla każdej pory dnia, z automatycznym uwzględnieniem czasu letniego.",
+      "factDifference": "Różnica",
+      "diffNone": "Brak",
+      "tableHeading": "Tabela przeliczeń {from} → {to}",
+      "dayNext": "następny dzień",
+      "dayPrev": "poprzedni dzień",
+      "crosslinks": "Potrzebujesz konkretnej daty lub innej pary? Skorzystaj z interaktywnego globusa i karty <compare>Porównaj</compare>, aby podejrzeć dowolny moment, w tym przyszłe daty przekraczające granicę czasu letniego. Aby zaplanować rozmowę między tymi strefami, wypróbuj <planner>Planer spotkań</planner>.",
+      "relatedHeading": "Powiązane konwertery",
+      "wpDesc": "Przelicz {from} na {to}. {summary}",
+      "faq1q": "Jaka jest różnica czasu między {from} a {to}?",
+      "faq1a": "Right now {to} ({toFull}) is {dir, select, same {the same time as} ahead {ahead of} other {behind}} {from} ({fromFull}). The difference is {absH, plural, =0 {zero hours} one {# hour} other {# hours}} and can shift by an hour when either zone enters or leaves daylight saving time.",
+      "faq2q": "Jak przeliczyć {from} na {to}?",
+      "faq2a": "Dodaj czas {from} do różnicy przesunięć. Na przykład {exampleFrom} {from} to {exampleTo} {to}. Pełna tabela godzina po godzinie na tej stronie zawiera każde przeliczenie dla bieżącej daty.",
+      "faq3q": "Czy {from} lub {to} stosuje czas letni?",
+      "faq3a": "{from} is currently {fromDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({fromOffset}), and {to} is {toDst, select, yes {in a region that observes DST} other {on a fixed offset (no DST)}} ({toOffset}). The converter uses official IANA data and adjusts automatically.",
+      "faq4q": "Czy ten konwerter {from} na {to} jest dokładny?",
+      "faq4a": "Tak — przeliczenia korzystają z bazy stref czasowych IANA, tego samego źródła, którego używają systemy operacyjne, i uwzględniają aktualne zasady czasu letniego co do minuty."
+    },
+    "meeting": {
+      "breadcrumb": "Planer spotkań",
+      "h1": "Najlepsza pora na spotkanie: {a} ↔ {b}",
+      "overlapSentence": "{hasOverlap, select, yes {Standard 9-to-5 working hours in {a} and {b} overlap from {start} to {end} {a} time. A good middle slot is around {bestA} in {a} ({bestB} in {b}).} other {Standard 9-to-5 working hours in {a} and {b} do not overlap, so one side will need an early or late slot. Aim for the start of one city's day and the end of the other's.}}",
+      "introTail": "Wszystkie poniższe godziny dotyczą dzisiejszego dnia i dostosowują się automatycznie do czasu letniego.",
+      "sharedWorkHours": "Wspólne godziny pracy",
+      "hoursUnit": "{count} h",
+      "noneWorkHours": "Brak (9–17)",
+      "tableHeading": "Pokrywające się godziny pracy",
+      "noOverlapBody": "Brak pokrycia godzin 9–17 w dniu dzisiejszym. Otwórz Planer powyżej, aby poszerzyć godziny pracy lub wybrać skrajny termin odpowiadający obu zespołom.",
+      "crosslinks": "Karta Planera powyżej ma już załadowane {a} i {b}. Dostosuj godziny każdego uczestnika, ustaw czas trwania, a Timezio uszereguje najlepsze terminy. Aby dwukrotnie sprawdzić surowe przesunięcie, skorzystaj z karty <compare>Porównaj</compare>.",
+      "relatedHeading": "Więcej par spotkań",
+      "wpDesc": "Znajdź najlepszą porę na spotkanie między {a} a {b}. {overlap}",
+      "faq1q": "Kiedy najlepiej zaplanować spotkanie między {a} a {b}?",
+      "faq1a": "{hasOverlap, select, yes {The cleanest option is around {bestA} in {a}, which is {bestB} in {b} — inside both teams' working day. The overlap table on this page lists every shared hour for today.} other {There is no clean overlap during standard hours, so pick the least disruptive edge: early morning for one city or early evening for the other. The table on this page shows each hour side by side.}}",
+      "faq2q": "Jaka jest różnica czasu między {a} a {b}?",
+      "faq2a": "{a} ma obecnie {offsetA}, a {b} ma {offsetB}. Różnica może zmienić się o godzinę wokół przejść na czas letni, co to narzędzie uwzględnia automatycznie.",
+      "faq3q": "Jak zaplanować cykliczną rozmowę między {a} a {b}?",
+      "faq3a": "Skorzystaj z karty Planera powyżej — oba miasta są już załadowane. Ustaw godziny pracy każdego uczestnika, a Timezio wyróżni pokrywające się terminy i ostrzeże przed wczesnymi porannymi lub późnymi nocnymi godzinami."
+    },
+    "dst": {
+      "breadcrumb": "Czas letni",
+      "h1": "Czas letni — {region}",
+      "intro": "{observesDst, select, yes {{region} observes daylight saving time. Clocks are currently {isDst, select, yes {on summer time (DST in effect)} other {on standard time}}, at {offset}. The reference zone for {region} is {tz} ({city}).} other {{region} does not currently observe daylight saving time. The offset stays at {offset} all year. The reference zone is {tz} ({city}).}}",
+      "factObservesDst": "Stosuje DST",
+      "yes": "Tak",
+      "no": "Nie",
+      "factCurrentOffset": "Aktualne przesunięcie",
+      "factStatus": "Status",
+      "summerTime": "Czas letni",
+      "standardTime": "Czas standardowy",
+      "factReferenceZone": "Strefa referencyjna",
+      "changesHeading": "Najbliższe zmiany czasu",
+      "colChange": "Zmiana",
+      "colDate": "Data",
+      "colOffset": "Przesunięcie",
+      "springForward": "Przesunięcie do przodu (początek czasu letniego)",
+      "fallBack": "Cofnięcie (koniec czasu letniego)",
+      "crosslinks": "Zmiana czasu letniego przesuwa przesunięcie regionu {region} o godzinę, co może po cichu zaburzyć cykliczne spotkania. Sprawdź różnicę na żywo względem własnej strefy za pomocą karty <compare>Porównaj</compare> lub zaplanuj spotkanie wokół zmiany przy użyciu <planner>Planera spotkań</planner>.",
+      "relatedHeading": "Czas letni w innych regionach",
+      "faq1q": "Czy w {region} obowiązuje czas letni?",
+      "faq1a": "{observesDst, select, yes {Yes. {region} changes its clocks twice a year. It is currently {isDst, select, yes {on daylight saving (summer) time} other {on standard time}} at {offset}.} other {No. {region} keeps a fixed offset of {offset} throughout the year and does not change its clocks.}}",
+      "faq2q": "Kiedy zmienia się czas w {region}?",
+      "faq2a": "{observesDst, select, yes {{hasBegins, select, yes {Clocks next spring forward on {beginsDate} (offset {beginsFrom} → {beginsTo}). } other {}}{hasEnds, select, yes {Clocks next fall back on {endsDate} (offset {endsFrom} → {endsTo}).} other {}}} other {{region} does not change its clocks, so there is no spring-forward or fall-back date.}}",
+      "faq3q": "Jakie jest aktualne przesunięcie UTC dla {region}?",
+      "faq3a": "{region} is currently at {offset}{hasAbbr, select, yes { ({abbr})} other {}}. {observesDst, select, yes {This shifts by one hour when daylight saving begins or ends.} other {This offset is fixed.}}"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Polityka prywatności",
+      "updated": "Ostatnia aktualizacja: 09.01.2026",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Niniejsza Polityka prywatności wyjaśnia, w jaki sposób gromadzimy, wykorzystujemy i chronimy informacje, gdy odwiedzasz i korzystasz z tej witryny („Witryna”)."
+        },
+        {
+          "type": "p",
+          "text": "Dbamy o ochronę Twojej prywatności i przetwarzamy dane osobowe zgodnie z obowiązującymi przepisami o ochronie danych, w tym z Ogólnym rozporządzeniem o ochronie danych (UE) 2016/679 (GDPR)."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "1. Informacje, które gromadzimy",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "1.1 Informacje, których nie podajesz bezpośrednio"
+            },
+            {
+              "type": "p",
+              "text": "Ta Witryna nie wymaga rejestracji użytkownika i nie prosi użytkowników o podanie danych osobowych w celu korzystania z jej podstawowych funkcji."
+            },
+            {
+              "type": "subheading",
+              "text": "1.2 Informacje gromadzone automatycznie"
+            },
+            {
+              "type": "p",
+              "text": "Gdy odwiedzasz Witrynę, ograniczone informacje mogą być gromadzone automatycznie, w tym:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Adres IP (zanonimizowany/skrócony tam, gdzie obsługuje to dane narzędzie)",
+                "Typ i wersja przeglądarki",
+                "Typ urządzenia i system operacyjny",
+                "Odwiedzane strony i dane o interakcjach",
+                "Witryna odsyłająca",
+                "Przybliżona lokalizacja geograficzna (na poziomie miasta lub kraju)"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Informacje te są wykorzystywane wyłącznie w celach analitycznych, bezpieczeństwa oraz ulepszania usługi."
+            }
+          ]
+        },
+        {
+          "heading": "1.3 Dane usługi, które możesz przekazać",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Podstawowe narzędzia (konwersja czasu, planer) działają bez rejestracji. Jeśli zdecydujesz się zapisać/udostępnić dane spotkania, połączyć kalendarz lub zalogować się przez Google, możemy przechowywać przesłane przez Ciebie szczegóły spotkania/sesji (np. nazwy lub etykiety uczestników, przedziały czasowe, tytuły) oraz adres e-mail Twojego konta Google, aby umożliwić działanie tej funkcji. W każdej chwili możesz zażądać usunięcia tych przechowywanych danych (zobacz Kontakt)."
+            }
+          ]
+        },
+        {
+          "heading": "2. Pliki cookie i podobne technologie",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Witryna może używać plików cookie lub podobnych technologii, aby:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Mierzyć ruch i wzorce korzystania",
+                "Rozumieć, w jaki sposób użytkownicy korzystają z Witryny",
+                "Poprawiać wydajność i komfort korzystania",
+                "Wyświetlać reklamy tam, gdzie są one włączone"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Pliki cookie używane w tej Witrynie nie identyfikują Cię bezpośrednio jako osoby fizycznej."
+            },
+            {
+              "type": "p",
+              "text": "Tam, gdzie wymagają tego obowiązujące przepisy, pliki cookie, które nie są ściśle niezbędne, są używane wyłącznie po uzyskaniu zgody użytkownika za pośrednictwem banera cookie lub mechanizmu zgody."
+            },
+            {
+              "type": "p",
+              "text": "W każdej chwili możesz zarządzać swoją zgodą lub ją wycofać za pomocą ustawień przeglądarki lub ustawień plików cookie dostępnych w Witrynie."
+            }
+          ]
+        },
+        {
+          "heading": "3. Analityka i reklamy",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "3.1 Analityka"
+            },
+            {
+              "type": "p",
+              "text": "Możemy korzystać z narzędzi analitycznych (np. Google Analytics za pośrednictwem Google Tag Manager lub alternatyw nastawionych na ochronę prywatności), aby rozumieć, w jaki sposób odwiedzający korzystają z Witryny. Narzędzia te gromadzą dane o korzystaniu (wyświetlane strony, informacje o urządzeniu/przeglądarce, przybliżoną lokalizację) i mogą być skonfigurowane tak, aby anonimizować adres IP tam, gdzie jest to obsługiwane. Nieistotna analityka ładuje się dopiero po uzyskaniu zgody tam, gdzie jest to wymagane."
+            },
+            {
+              "type": "subheading",
+              "text": "3.2 Reklamy"
+            },
+            {
+              "type": "p",
+              "text": "Witryna może wyświetlać reklamy od partnerów zewnętrznych, takich jak Google AdSense (dostarczane za pośrednictwem Google Tag Manager). Partnerzy ci mogą używać plików cookie lub podobnych technologii, aby wyświetlać odpowiednie reklamy, i mogą przetwarzać dane (np. identyfikatory plików cookie, przybliżoną lokalizację, informacje o urządzeniu). Reklamowe pliki cookie są ładowane dopiero po uzyskaniu zgody tam, gdzie jest to wymagane."
+            },
+            {
+              "type": "p",
+              "text": "Partnerzy reklamowi przetwarzają informacje na podstawie własnych polityk prywatności i mogą przekazywać dane poza Twój region przy zastosowaniu odpowiednich zabezpieczeń (np. Standard Contractual Clauses). W każdej chwili możesz wycofać lub zmienić swoją zgodę na pliki cookie i reklamy, korzystając z linku **„Ustawienia plików cookie”** w stopce witryny lub za pomocą ustawień przeglądarki."
+            },
+            {
+              "type": "p",
+              "text": "Możesz również kontrolować spersonalizowane reklamy lub z nich zrezygnować bezpośrednio u dostawców oraz w ramach programów branżowych:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Ustawienia reklam Google — [adssettings.google.com](https://adssettings.google.com)",
+                "Jak Google wykorzystuje dane z witryn partnerskich — [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites)",
+                "Rezygnacja w USA (DAA) — [optout.aboutads.info](https://optout.aboutads.info) · [youradchoices.com](https://www.youradchoices.com)",
+                "Rezygnacja w UE (EDAA) — [youronlinechoices.eu](https://www.youronlinechoices.eu)"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. Jak wykorzystujemy informacje",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Zgromadzone informacje mogą być wykorzystywane do:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Obsługi i utrzymania Witryny",
+                "Ulepszania narzędzi, funkcji i użyteczności",
+                "Analizy trendów korzystania i wydajności",
+                "Zapewnienia bezpieczeństwa i zapobiegania nadużyciom",
+                "Wywiązywania się z obowiązków prawnych"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "**Nie sprzedajemy danych osobowych.**"
+            }
+          ]
+        },
+        {
+          "heading": "5. Podstawa prawna przetwarzania (GDPR)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Zgodnie z GDPR dane osobowe są przetwarzane na następujących podstawach prawnych:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Zgoda** — w przypadku nieistotnych plików cookie/analityki/reklam tam, gdzie jest to wymagane",
+                "**Prawnie uzasadnione interesy** — w celu obsługi, zabezpieczenia i ulepszania Witryny",
+                "**Obowiązek prawny** — gdy przetwarzanie jest wymagane przez prawo"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "6. Przechowywanie danych",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Przechowujemy zgromadzone dane wyłącznie tak długo, jak jest to niezbędne do realizacji celów opisanych w niniejszej Polityce prywatności, chyba że dłuższy okres przechowywania jest wymagany lub dozwolony przez prawo."
+            }
+          ]
+        },
+        {
+          "heading": "7. Udostępnianie danych i podmioty zewnętrzne",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Możemy udostępniać ograniczone dane zaufanym zewnętrznym dostawcom usług (takim jak dostawcy usług analitycznych lub reklamowych) wyłącznie w celach opisanych w niniejszej Polityce prywatności."
+            },
+            {
+              "type": "p",
+              "text": "Wszyscy tacy dostawcy są zobowiązani do przetwarzania danych zgodnie z obowiązującymi przepisami o ochronie danych."
+            },
+            {
+              "type": "p",
+              "text": "Niektórzy dostawcy (np. Google) mogą przetwarzać dane poza Europejskim Obszarem Gospodarczym (EOG). W takim przypadku opieramy się na odpowiednich zabezpieczeniach, takich jak Standard Contractual Clauses lub równoważne mechanizmy."
+            }
+          ]
+        },
+        {
+          "heading": "8. Twoje prawa wynikające z GDPR",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Jeśli znajdujesz się w Unii Europejskiej, masz prawo do:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Dostępu do swoich danych osobowych",
+                "Żądania sprostowania nieprawidłowych danych",
+                "Żądania usunięcia swoich danych",
+                "Ograniczenia przetwarzania lub wniesienia sprzeciwu wobec niego",
+                "Wycofania zgody w dowolnym momencie",
+                "Wniesienia skargi do organu nadzorczego"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Możesz skorzystać z tych praw, kontaktując się z nami przy użyciu danych podanych poniżej."
+            }
+          ]
+        },
+        {
+          "heading": "9. Prawa do prywatności w stanach USA (CCPA / CPRA i podobne)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Jeśli jesteś mieszkańcem Kalifornii lub innego stanu USA z kompleksowymi przepisami o ochronie prywatności, możesz mieć prawo do uzyskania informacji o tym, jakie dane osobowe są gromadzone, do żądania dostępu do nich lub ich usunięcia, do sprostowania nieprawidłowych informacji oraz do rezygnacji ze „sprzedaży” lub „udostępniania” danych osobowych oraz z reklamy ukierunkowanej."
+            },
+            {
+              "type": "p",
+              "text": "Nie sprzedajemy danych osobowych za pieniądze. Jednak korzystanie z reklamowych plików cookie może być uznane za „udostępnianie” lub „sprzedaż” w rozumieniu niektórych przepisów stanowych. Możesz zrezygnować ze spersonalizowanych reklam, korzystając z linku **„Ustawienia plików cookie”** w stopce oraz z branżowych narzędzi rezygnacji wymienionych w sekcji 3.2. Tam, gdzie jest to obsługiwane, honorujemy sygnał przeglądarki Global Privacy Control (GPC) jako ważne żądanie rezygnacji."
+            },
+            {
+              "type": "p",
+              "text": "Aby skorzystać z któregokolwiek z tych praw, skontaktuj się z nami przy użyciu danych podanych w sekcji 14. Nie będziemy Cię dyskryminować za korzystanie z przysługujących Ci praw do prywatności."
+            }
+          ]
+        },
+        {
+          "heading": "10. Prywatność dzieci",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Ta Witryna nie jest przeznaczona dla dzieci poniżej 16. roku życia. Nie gromadzimy świadomie danych osobowych dzieci."
+            }
+          ]
+        },
+        {
+          "heading": "11. Bezpieczeństwo",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Podejmujemy rozsądne środki techniczne i organizacyjne w celu ochrony informacji przed nieuprawnionym dostępem, utratą, niewłaściwym wykorzystaniem lub zmianą. Żadna metoda transmisji ani przechowywania nie jest jednak całkowicie bezpieczna."
+            }
+          ]
+        },
+        {
+          "heading": "12. Linki zewnętrzne",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Witryna może zawierać linki do witryn podmiotów zewnętrznych. Nie ponosimy odpowiedzialności za treść ani praktyki dotyczące prywatności tych witryn."
+            }
+          ]
+        },
+        {
+          "heading": "13. Zmiany w niniejszej Polityce prywatności",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Możemy od czasu do czasu aktualizować niniejszą Politykę prywatności. Wszelkie zmiany będą publikowane na tej stronie wraz ze zaktualizowaną datą „Ostatniej aktualizacji”."
+            },
+            {
+              "type": "p",
+              "text": "Zachęcamy użytkowników do okresowego sprawdzania tej strony. Jeśli zmiany w istotny sposób wpłyną na sposób przetwarzania Twoich danych, przekażemy wyraźne powiadomienie (np. na tej stronie lub poprzez interfejs Witryny)."
+            }
+          ]
+        },
+        {
+          "heading": "14. Dane kontaktowe",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Jeśli masz pytania dotyczące niniejszej Polityki prywatności lub sposobu przetwarzania danych w tej Witrynie, możesz skontaktować się z nami pod adresem:"
+            },
+            {
+              "type": "emailBox",
+              "label": "E-mail:",
+              "email": "hello@timezio.com"
+            }
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Regulamin",
+      "updated": "Ostatnia aktualizacja: 09.01.2026",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Niniejszy Regulamin („Regulamin”) reguluje Twój dostęp do tej witryny („Witryna”) oraz korzystanie z niej. Uzyskując dostęp do Witryny lub korzystając z niej, zgadzasz się przestrzegać niniejszego Regulaminu. Jeśli się z nim nie zgadzasz, zaprzestań korzystania z Witryny."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "1. Cel Witryny",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Witryna udostępnia narzędzia i informacje dotyczące stref czasowych, różnic czasu, konwersji UTC oraz planowania spotkań wyłącznie w ogólnych celach informacyjnych."
+            },
+            {
+              "type": "p",
+              "text": "Witryna nie świadczy usług doradczych o charakterze prawnym, finansowym, profesjonalnym ani usług o znaczeniu krytycznym czasowo."
+            }
+          ]
+        },
+        {
+          "heading": "2. Korzystanie z Witryny",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Zgadzasz się korzystać z Witryny wyłącznie w celach zgodnych z prawem i w sposób, który nie:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Narusza obowiązujących przepisów prawa lub regulacji",
+                "Narusza praw innych osób",
+                "Zakłóca działania Witryny ani go nie przerywa",
+                "Stanowi próby uzyskania nieuprawnionego dostępu do jakiejkolwiek części Witryny"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Zastrzegamy sobie prawo do ograniczenia lub zakończenia dostępu do Witryny w dowolnym momencie w przypadku wykrycia nadużycia."
+            }
+          ]
+        },
+        {
+          "heading": "3. Dokładność informacji",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Chociaż dokładamy rozsądnych starań, aby informacje i obliczenia udostępniane w Witrynie były dokładne i oparte na uznanych publicznych danych o strefach czasowych, nie gwarantujemy, że treść jest kompletna, aktualna ani wolna od błędów."
+            },
+            {
+              "type": "p",
+              "text": "Zasady dotyczące stref czasowych oraz praktyki związane z czasem letnim mogą ulec zmianie w wyniku decyzji rządowych lub regulacyjnych. Przyjmujesz do wiadomości, że poleganie na udostępnianych informacjach odbywa się na Twoje własne ryzyko."
+            }
+          ]
+        },
+        {
+          "heading": "4. Brak gwarancji",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Witryna oraz wszelkie treści i narzędzia są udostępniane w stanie „takim, jaki jest” oraz „w miarę dostępności”."
+            },
+            {
+              "type": "p",
+              "text": "W najszerszym zakresie dozwolonym przez obowiązujące prawo wyłączamy wszelkie gwarancje, zarówno wyraźne, jak i dorozumiane, w tym między innymi dorozumiane gwarancje dokładności, niezawodności, przydatności do określonego celu oraz nienaruszania praw."
+            }
+          ]
+        },
+        {
+          "heading": "5. Ograniczenie odpowiedzialności",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "W zakresie dozwolonym przez obowiązujące prawo Unii Europejskiej nie ponosimy odpowiedzialności za jakiekolwiek szkody bezpośrednie, pośrednie, przypadkowe, wynikowe lub szczególne wynikające z korzystania z Witryny lub niemożności korzystania z niej, bądź z polegania na jej treści, lub z nimi związane."
+            },
+            {
+              "type": "p",
+              "text": "Obejmuje to między innymi utratę danych, utratę możliwości biznesowych, pominięte spotkania lub błędy w planowaniu."
+            }
+          ]
+        },
+        {
+          "heading": "6. Własność intelektualna",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Wszystkie treści w Witrynie, w tym tekst, projekt, układ, logo i oprogramowanie, stanowią własność właściciela Witryny lub jego licencjodawców i są chronione obowiązującymi przepisami o własności intelektualnej."
+            },
+            {
+              "type": "p",
+              "text": "Możesz korzystać z Witryny do celów osobistych i niekomercyjnych. Bez uprzedniej pisemnej zgody nie możesz kopiować, powielać, rozpowszechniać, modyfikować ani wykorzystywać jakiejkolwiek części Witryny, z wyjątkiem przypadków dozwolonych przez prawo."
+            }
+          ]
+        },
+        {
+          "heading": "7. Usługi podmiotów zewnętrznych i reklamy",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Witryna może wyświetlać reklamy lub zawierać linki do witryn bądź usług podmiotów zewnętrznych."
+            },
+            {
+              "type": "p",
+              "text": "Nie kontrolujemy i nie ponosimy odpowiedzialności za treść, dostępność ani praktyki witryn podmiotów zewnętrznych. Twoja interakcja z usługami podmiotów zewnętrznych podlega ich odpowiednim regulaminom i politykom prywatności."
+            }
+          ]
+        },
+        {
+          "heading": "8. Prywatność i ochrona danych",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Korzystanie z Witryny podlega również naszej [Polityce prywatności](/privacy), która wyjaśnia, w jaki sposób dane osobowe są przetwarzane zgodnie z obowiązującymi przepisami o ochronie danych, w tym z GDPR."
+            }
+          ]
+        },
+        {
+          "heading": "9. Zmiany w Witrynie lub Regulaminie",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Możemy w dowolnym momencie aktualizować, modyfikować, zawieszać lub zaprzestawać działania dowolnej części Witryny bez uprzedniego powiadomienia."
+            },
+            {
+              "type": "p",
+              "text": "Możemy również od czasu do czasu aktualizować niniejszy Regulamin. Wszelkie zmiany wchodzą w życie z chwilą opublikowania ich na tej stronie, wraz z odpowiednio zaktualizowaną datą „Ostatniej aktualizacji”."
+            },
+            {
+              "type": "p",
+              "text": "Dalsze korzystanie z Witryny po wprowadzeniu zmian oznacza akceptację zaktualizowanego Regulaminu."
+            }
+          ]
+        },
+        {
+          "heading": "10. Prawo właściwe i jurysdykcja",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Niniejszy Regulamin podlega prawu Unii Europejskiej oraz, w stosownych przypadkach, prawu kraju, w którym ma siedzibę operator Witryny, i jest zgodnie z nim interpretowany."
+            },
+            {
+              "type": "p",
+              "text": "Żadne z postanowień niniejszego Regulaminu nie ogranicza Twoich ustawowych praw jako konsumenta wynikających z obowiązującego prawa UE."
+            }
+          ]
+        },
+        {
+          "heading": "11. Rozdzielność postanowień",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Jeśli którekolwiek z postanowień niniejszego Regulaminu zostanie uznane za niezgodne z prawem, nieważne lub niewykonalne, pozostałe postanowienia zachowują pełną moc i skuteczność."
+            }
+          ]
+        },
+        {
+          "heading": "12. Dane kontaktowe",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Jeśli masz jakiekolwiek pytania dotyczące niniejszego Regulaminu, możesz skontaktować się z nami pod adresem:"
+            },
+            {
+              "type": "emailBox",
+              "label": "E-mail:",
+              "email": "hello@timezio.com"
+            }
+          ]
+        }
+      ]
+    },
+    "about": {
+      "title": "O tej witrynie",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Ta witryna powstała, aby praca w różnych strefach czasowych była prosta, dokładna i wolna od stresu. Niezależnie od tego, czy planujesz spotkanie ze współpracownikami za granicą, sprawdzasz aktualny czas w innym mieście, przeliczasz UTC, czy podróżujesz między krajami, nasze narzędzia pomagają Ci natychmiast zrozumieć różnice czasu bez zamieszania."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Kto prowadzi Timezio",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Timezio jest tworzone i prowadzone przez **AffSquad**, niezależne studio tworzące bezpłatne, szanujące prywatność narzędzia internetowe. Jesteśmy małym zespołem, który sam korzysta z tych narzędzi do koordynacji pracy w różnych strefach czasowych, a Timezio utrzymujemy bezpłatne dzięki wyświetlaniu reklam. Pytania, poprawki lub uwagi zawsze mile widziane pod adresem [hello@timezio.com](mailto:hello@timezio.com) — zobacz stronę [Kontakt](/contact), aby poznać więcej sposobów kontaktu z nami."
+            }
+          ]
+        },
+        {
+          "heading": "Główne zasady",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "Dokładność"
+            },
+            {
+              "type": "p",
+              "text": "Wszystkie obliczenia opierają się na oficjalnych danych o strefach czasowych IANA i w pełni uwzględniają czas letni (DST)."
+            },
+            {
+              "type": "subheading",
+              "text": "Prostota"
+            },
+            {
+              "type": "p",
+              "text": "Przejrzyste, szybkie narzędzia, które działają natychmiast, bez zbędnych kroków."
+            },
+            {
+              "type": "subheading",
+              "text": "Niezawodność"
+            },
+            {
+              "type": "p",
+              "text": "Stworzone do codziennego użytku przez profesjonalistów, podróżników, zespoły zdalne i cyfrowych nomadów."
+            }
+          ]
+        },
+        {
+          "heading": "Automatyczne obliczenia",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Nasze kalkulatory automatycznie uwzględniają:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Zmiany czasu letniego",
+                "Różne przesunięcia względem UTC",
+                "Zmiany daty przy przekraczaniu stref czasowych",
+                "Regiony z niestandardowymi przesunięciami (takimi jak różnice 30- lub 45-minutowe)"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Ta witryna została zaprojektowana tak, aby była przydatna na całym świecie, i jest regularnie aktualizowana, aby odzwierciedlać oficjalne zasady dotyczące stref czasowych."
+            }
+          ]
+        },
+        {
+          "heading": "Dla kogo jest ta witryna",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Pracownicy zdalni i zespoły rozproszone",
+                "Profesjonaliści planujący spotkania międzynarodowe",
+                "Podróżnicy i osoby często latające samolotem",
+                "Uczniowie, studenci i nauczyciele",
+                "Każdy, kto musi dokładnie przeliczać lub porównywać strefy czasowe"
+              ]
+            },
+            {
+              "type": "p",
+              "text": "**Bez kont. Bez skomplikowania. Po prostu jasne odpowiedzi.**"
+            }
+          ]
+        },
+        {
+          "heading": "Jak korzystać z tej witryny",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "1. Eksploruj — interaktywny globus"
+            },
+            {
+              "type": "p",
+              "text": "Kliknij dowolne miejsce na globusie 3D, aby natychmiast zobaczyć czas lokalny dla danej lokalizacji."
+            },
+            {
+              "type": "p",
+              "text": "**Jak to działa:** Kliknij lokalizację na globusie lub wyszukaj miasto. Zobacz aktualny czas, przesunięcie względem UTC oraz status DST. Idealne do szybkiego sprawdzania i wizualnego poznawania stref czasowych."
+            },
+            {
+              "type": "subheading",
+              "text": "2. Porównuj — porównanie stref czasowych"
+            },
+            {
+              "type": "p",
+              "text": "Porównuj różnice czasu między wieloma miastami jednocześnie."
+            },
+            {
+              "type": "p",
+              "text": "**Jak to działa:** Dodaj do 6 miast do porównania. Wybierz miasto bazowe, aby zobaczyć różnice czasu względem niego. Natychmiast zobacz aktualne czasy lokalne, przesunięcia i porównania wizualne. To idealne rozwiązanie do odpowiadania na pytania w stylu „Gdy w Berlinie jest 9:00, która godzina jest w Nowym Jorku?”."
+            },
+            {
+              "type": "subheading",
+              "text": "3. Planer — planer spotkań"
+            },
+            {
+              "type": "p",
+              "text": "Znajdź najlepszy czas spotkania dla osób w różnych lokalizacjach."
+            },
+            {
+              "type": "p",
+              "text": "**Jak to działa:** Dodaj uczestników według miasta, wybierz datę spotkania i opcjonalnie dostosuj godziny pracy dla każdego uczestnika. Zobacz nakładające się przedziały czasowe i udostępnij szczegóły spotkania. To narzędzie automatycznie unika wczesnych poranków i późnych godzin nocnych, gdy jest to możliwe."
+            },
+            {
+              "type": "subheading",
+              "text": "4. DST — czas letni"
+            },
+            {
+              "type": "p",
+              "text": "Śledź zmiany i przejścia czasu letniego w ciągu całego roku."
+            },
+            {
+              "type": "p",
+              "text": "**Jak to działa:** Zobacz status DST dla dowolnej lokalizacji, sprawdź nadchodzące zmiany i zrozum, kiedy przestawiane są zegary. Sprawdź, jak DST wpływa na różnice czasu między regionami."
+            },
+            {
+              "type": "subheading",
+              "text": "5. Zapisane — ulubione lokalizacje"
+            },
+            {
+              "type": "p",
+              "text": "Zapisz często używane lokalizacje, aby mieć do nich szybki dostęp."
+            },
+            {
+              "type": "p",
+              "text": "**Jak to działa:** Zapisz lokalizacje, które często sprawdzasz. Uzyskuj do nich dostęp natychmiast, bez wyszukiwania. Twoje zapisane lokalizacje są przechowywane lokalnie w Twojej przeglądarce."
+            }
+          ]
+        },
+        {
+          "heading": "Najczęściej zadawane pytania",
+          "blocks": [
+            {
+              "type": "subheading",
+              "text": "Z jakich danych o strefach czasowych korzysta ta witryna?"
+            },
+            {
+              "type": "p",
+              "text": "Korzystamy z oficjalnych definicji stref czasowych IANA, które są globalnym standardem dokładnych obliczeń czasu."
+            },
+            {
+              "type": "subheading",
+              "text": "Czy witryna uwzględnia czas letni?"
+            },
+            {
+              "type": "p",
+              "text": "Tak. Wszystkie obliczenia automatycznie uwzględniają czas letni na podstawie wybranej daty i lokalizacji."
+            },
+            {
+              "type": "subheading",
+              "text": "Czy mogę sprawdzić przyszłe lub przeszłe daty?"
+            },
+            {
+              "type": "p",
+              "text": "Tak. Możesz wybrać dowolną datę i godzinę, aby zobaczyć, jak różnice czasu zmieniają się w ciągu roku."
+            },
+            {
+              "type": "subheading",
+              "text": "Dlaczego różnica czasu zmienia się w ciągu roku?"
+            },
+            {
+              "type": "p",
+              "text": "Różnice czasu zmieniają się, ponieważ niektóre regiony stosują czas letni, a inne nie, lub przestawiają zegary w różnych dniach."
+            },
+            {
+              "type": "subheading",
+              "text": "Czy obsługiwane są miasta o tej samej nazwie?"
+            },
+            {
+              "type": "p",
+              "text": "Tak. Miasta są identyfikowane zarówno na podstawie nazwy, jak i kraju, aby uniknąć nieporozumień (na przykład wiele miast o nazwie „Springfield”)."
+            },
+            {
+              "type": "subheading",
+              "text": "Czy korzystanie z tej witryny jest bezpłatne?"
+            },
+            {
+              "type": "p",
+              "text": "Tak. Wszystkie narzędzia w tej witrynie są całkowicie bezpłatne i nie wymagają rejestracji."
+            },
+            {
+              "type": "subheading",
+              "text": "Czy mogę udostępniać lub zapisywać wyniki w zakładkach?"
+            },
+            {
+              "type": "p",
+              "text": "Tak. Strony narzędzi generują przejrzyste, możliwe do udostępniania adresy URL, które możesz zapisać w zakładkach lub wysłać innym za pomocą przycisku „Kopiuj link”."
+            },
+            {
+              "type": "subheading",
+              "text": "Jak dokładne są wyniki?"
+            },
+            {
+              "type": "p",
+              "text": "Wyniki są dokładne co do minuty i oparte na oficjalnych zasadach dotyczących stref czasowych, jednak nie należy ich używać do decyzji prawnych ani o znaczeniu krytycznym bez weryfikacji."
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Skontaktuj się z nami",
+      "intro": [
+        {
+          "type": "p",
+          "text": "Cenimy Twoją opinię i chętnie ją usłyszymy."
+        },
+        {
+          "type": "p",
+          "text": "Jeśli masz pytania dotyczące działania naszych narzędzi, chcesz zgłosić problem lub podzielić się sugestiami dotyczącymi ulepszeń, śmiało skontaktuj się z nami."
+        },
+        {
+          "type": "p",
+          "text": "Timezio jest prowadzone przez **AffSquad**, niezależne studio tworzące bezpłatne narzędzia internetowe."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Jak się z nami skontaktować",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Możesz skontaktować się z nami przez e-mail:"
+            },
+            {
+              "type": "emailBox",
+              "label": "E-mail:",
+              "email": "hello@timezio.com"
+            },
+            {
+              "type": "p",
+              "text": "Staramy się odpowiadać na wiadomości w rozsądnym czasie. Pamiętaj, że czas odpowiedzi może się różnić w zależności od liczby zapytań."
+            }
+          ]
+        },
+        {
+          "heading": "W jakich sprawach możesz się z nami skontaktować",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Możesz skontaktować się z nami w sprawie:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Pytań dotyczących obliczeń stref czasowych lub działania narzędzi",
+                "Zgłaszania nieprawidłowych lub nieaktualnych informacji",
+                "Problemów technicznych lub błędów w witrynie",
+                "Ogólnych opinii i sugestii dotyczących ulepszeń"
+              ]
+            },
+            {
+              "type": "note",
+              "text": "**Pamiętaj:** Nie jesteśmy w stanie udzielać spersonalizowanych porad dotyczących planowania, doradztwa prawnego ani potwierdzeń o znaczeniu krytycznym czasowo."
+            }
+          ]
+        },
+        {
+          "heading": "Dane osobowe i prywatność",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Jeśli skontaktujesz się z nami przez e-mail, będziemy przetwarzać wszelkie podane przez Ciebie dane osobowe (takie jak adres e-mail i treść wiadomości) wyłącznie w celu udzielenia odpowiedzi na Twoje zapytanie."
+            },
+            {
+              "type": "p",
+              "text": "Twoje informacje będą przetwarzane zgodnie z obowiązującymi przepisami o ochronie danych, w tym z Ogólnym rozporządzeniem o ochronie danych (UE) 2016/679 (GDPR)."
+            },
+            {
+              "type": "p",
+              "text": "Aby uzyskać więcej szczegółów, zapoznaj się z naszą [Polityką prywatności](/privacy)."
+            }
+          ]
+        },
+        {
+          "heading": "Ważna informacja",
+          "blocks": [
+            {
+              "type": "note",
+              "text": "Informacje udostępniane za pośrednictwem tej witryny oraz w odpowiedziach e-mail mają charakter wyłącznie ogólnoinformacyjny i nie należy na nich polegać przy podejmowaniu decyzji prawnych, finansowych, lotniczych ani innych decyzji o znaczeniu krytycznym czasowo."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ui": {
+    "converter": {
+      "heading": "Konwerter stref czasowych",
+      "description": "Przeglądaj i konwertuj strefy czasowe na interaktywnym globusie, sprawdzaj czas lokalny i znajduj wspólne okna na spotkania. W pełni uwzględnia czas letni i korzysta z oficjalnych danych IANA.",
+      "compareCta": "Porównaj strefy czasowe",
+      "plannerCta": "Zaplanuj spotkanie"
+    },
+    "tabBar": {
+      "explore": "Odkrywaj",
+      "planner": "Planer",
+      "compare": "Porównaj",
+      "dst": "DST",
+      "saved": "Zapisane"
+    },
+    "exploreTab": {
+      "searchCity": "Szukaj miasta",
+      "searchCitySubtitle": "Znajdź dowolne miasto na świecie",
+      "popularCities": "Popularne miasta",
+      "popularCitiesSubtitle": "Kliknij miasto, aby zobaczyć jego czas"
+    },
+    "compareTab": {
+      "compare": "Porównaj",
+      "subtitle": "Dodaj 2–6 lokalizacji i porównaj przesunięcia/czas. (MVP: przesunięcia + różnica)",
+      "addCityPlaceholder": "Dodaj miasto do porównania…",
+      "addSelected": "Dodaj wybrane",
+      "clear": "Wyczyść",
+      "noItems": "Brak elementów do porównania. Dodaj miasto lub kliknij „Dodaj wybrane”.",
+      "baseLabel": "Bazowe:",
+      "base": "Bazowe",
+      "focus": "Skup",
+      "remove": "Usuń",
+      "offsetMatrix": "Macierz przesunięć (wzgl. bazowego)",
+      "location": "Lokalizacja",
+      "localTime": "Czas lokalny",
+      "utcOffset": "Przesunięcie UTC",
+      "deltaHours": "Δ godzin"
+    },
+    "dstTab": {
+      "noChangeFound": "Nie znaleziono zmiany (skan ≈370 dni)",
+      "title": "DST",
+      "bestEffort": "Najlepsze przybliżenie: Luxon nie udostępnia tabel przejść IANA, więc skanujemy do przodu, aż zmieni się przesunięcie.",
+      "selectLocation": "Wybierz lokalizację w trybie Odkrywaj.",
+      "timezone": "Strefa czasowa",
+      "currentLocalTime": "Bieżący czas lokalny",
+      "abbrev": "Skrót",
+      "nextOffsetChange": "Następna zmiana przesunięcia",
+      "transitionNote": "Uwaga: Znacznik czasu przejścia jest przybliżony (z dokładnością do minuty). Aby uzyskać dokładne zmiany, potrzebna jest tabela przejść tzdb.",
+      "infrequentChange": "Niektóre strefy czasowe rzadko zmieniają przesunięcie (lub nie zmieniają go wcale)."
+    },
+    "savedTab": {
+      "title": "Zapisane",
+      "subtitle": "Przechowywane w localStorage (tylko identyfikatory). Użyj linku do udostępniania, aby przenieść pełne dane.",
+      "emptyState": "Brak zapisanych lokalizacji. Zapisuj je w trybie Odkrywaj.",
+      "select": "Wybierz",
+      "compare": "Porównaj",
+      "remove": "Usuń"
+    },
+    "plannerTab": {
+      "errProvideTitle": "Podaj tytuł",
+      "msgSessionCreated": "Sesja spotkania utworzona",
+      "msgSessionCreatedWithTz": "Sesja spotkania utworzona z automatycznie dodaną Twoją strefą czasową",
+      "errCreateSession": "Nie udało się utworzyć sesji",
+      "errCreateSessionFirst": "Najpierw utwórz sesję",
+      "errNameRequired": "Imię jest wymagane",
+      "errSelectLocation": "Najpierw wybierz lokalizację na globusie lub wyszukaj miasto",
+      "msgParticipantAdded": "Uczestnik dodany",
+      "errAddParticipant": "Nie udało się dodać uczestnika",
+      "errAddParticipantBackend": "Nie udało się dodać uczestnika po stronie serwera",
+      "errAddTwoParticipants": "Najpierw dodaj co najmniej 2 uczestników",
+      "msgGeneratedSlots": "Wygenerowano {count} terminów po stronie serwera",
+      "errGenerateSlots": "Nie udało się wygenerować terminów",
+      "errCreateSessionSelectSlot": "Najpierw utwórz sesję i wybierz termin",
+      "msgMeetCreated": "Utworzono spotkanie Meet! Link: {link}",
+      "errCreateMeet": "Nie udało się utworzyć spotkania Meet",
+      "heading": "Planer spotkań",
+      "intro": "Dodaj uczestników z różnych stref czasowych, ustaw ich godziny pracy i znajdź najlepsze terminy spotkań. Wybierz automatyczne wyszukiwanie terminów lub ręczny wybór czasu. Wszystkie obliczenia uwzględniają czas letni.",
+      "connected": "Połączono",
+      "connectGoogleCalendar": "Połącz z Google Calendar",
+      "requiredForMeet": "(wymagane do linków Meet)",
+      "yourTimezone": "Twoja strefa czasowa",
+      "yourNamePlaceholder": "Twoje imię (opcjonalnie)",
+      "createMeetingSession": "Utwórz sesję spotkania",
+      "meetingTitlePlaceholder": "Tytuł spotkania",
+      "descriptionPlaceholder": "Opis (opcjonalnie)",
+      "createSession": "Utwórz sesję",
+      "sessionLabel": "Sesja: {title}",
+      "mode": "TRYB",
+      "autoFindSlots": "Automatyczne wyszukiwanie terminów",
+      "autoFindSlotsDesc": "System znajduje optymalne terminy spotkań, analizując pokrywanie się godzin pracy wszystkich uczestników",
+      "manualTimePick": "Ręczny wybór czasu",
+      "manualTimePickDesc": "Wybierasz konkretny czas, a system przelicza go na strefy czasowe wszystkich uczestników",
+      "howAutoFindWorks": "Jak działa automatyczne wyszukiwanie:",
+      "howManualPickWorks": "Jak działa ręczny wybór:",
+      "autoBullet1": "Analizuje godziny pracy wszystkich uczestników",
+      "autoBullet2": "Znajduje okna czasowe, w których wszyscy są dostępni",
+      "autoBullet3": "Generuje terminy co 15 minut w obrębie pokrywania się",
+      "autoBullet4": "Klasyfikuje terminy według jakości (pora dnia, pozycja w godzinach pracy)",
+      "autoBullet5": "Najpierw pokazuje najlepsze opcje (posortowane według oceny jakości)",
+      "manualBullet1": "Wybierz czas w strefie czasowej jednego z uczestników",
+      "manualBullet2": "System wewnętrznie przelicza go na UTC",
+      "manualBullet3": "Wyświetla ten sam moment we wszystkich pozostałych strefach czasowych",
+      "manualBullet4": "Idealne do ustalonych terminów spotkań lub konkretnych harmonogramów",
+      "manualBullet5": "Wszystkie obliczenia uwzględniają przejścia na czas letni",
+      "duration": "Czas trwania",
+      "twoHours": "2 godziny",
+      "minutes": "{mins} min",
+      "date": "Data",
+      "preferences": "Preferencje",
+      "includeWeekends": "Uwzględnij weekendy",
+      "includeWeekendsDesc": "Zezwalaj na terminy w sob./niedz. z domyślnymi godzinami pracy",
+      "avoidEarly": "Unikaj spotkań przed 8:00",
+      "avoidLate": "Unikaj spotkań po 20:00",
+      "localTime": "Czas lokalny",
+      "avoidLunch": "Unikaj pory lunchu",
+      "lunchTime": "12:00-13:00",
+      "addParticipant": "Dodaj uczestnika",
+      "quick": "Szybko",
+      "withEmail": "Z e-mailem",
+      "searchCityPlaceholder": "Szukaj miasta, aby szybko dodać…",
+      "namePlaceholder": "Imię *",
+      "emailPlaceholder": "E-mail (opcjonalnie, do zaproszeń kalendarzowych)",
+      "clickGlobeHint": "Najpierw kliknij na globusie lub wyszukaj miasto, aby wybrać lokalizację",
+      "addAllFromCompare": "Dodaj wszystkie z Porównania ({count})",
+      "clickGlobeFormHint": "Kliknij na globusie, aby wybrać lokalizację, a następnie wypełnij powyższy formularz",
+      "participantsCount": "Uczestnicy ({count})",
+      "remove": "Usuń",
+      "namePrompt": "Imię:",
+      "rename": "Zmień nazwę",
+      "selectTime": "Wybierz czas",
+      "baseTimezone": "Bazowa strefa czasowa",
+      "unknown": "Nieznana",
+      "meetingTime": "Czas spotkania",
+      "meetingTimeTzSuffix": "(strefa czasowa: {name})",
+      "meetingTimeUtcSuffix": "(UTC)",
+      "availableSlots": "Dostępne terminy",
+      "generateSlots": "Generuj terminy",
+      "emptySlotsWithSession": "Kliknij „Generuj terminy”, aby znaleźć dostępne terminy spotkań. Możesz też dostosować godziny pracy/datę i spróbować ponownie.",
+      "emptySlotsNoSession": "Najpierw utwórz sesję, następnie dodaj co najmniej 2 uczestników i ustaw ich godziny pracy, aby znaleźć dostępne terminy spotkań.",
+      "qualityGreat": "Świetny",
+      "qualityGood": "Dobry",
+      "qualityFair": "Przeciętny",
+      "qualityScoreTitle": "Ocena jakości: {score}/100",
+      "selected": "Wybrany",
+      "morning": "Rano",
+      "afternoon": "Popołudnie",
+      "evening": "Wieczór",
+      "night": "Noc",
+      "showingTopSlots": "Pokazano 15 najlepszych z {total} dostępnych terminów (posortowane według jakości)",
+      "selectedTime": "Wybrany czas",
+      "selectedSlot": "Wybrany termin",
+      "utcTime": "Czas UTC",
+      "daytime": "Dzień",
+      "nighttime": "Noc",
+      "confirmed": "Potwierdzono",
+      "confirmCreateMeet": "Potwierdź i utwórz Google Meet",
+      "manualNeedParticipant": "Dodaj co najmniej jednego uczestnika, aby przeliczyć czas na różne strefy czasowe",
+      "autoNeedTwoParticipants": "Dodaj co najmniej 2 uczestników, aby rozpocząć wyszukiwanie terminów spotkań",
+      "autoNeedOneMoreParticipant": "Dodaj jeszcze jednego uczestnika, aby znaleźć dostępne terminy spotkań",
+      "meetingConfirmed": "Spotkanie potwierdzone",
+      "googleMeetLink": "Link do Google Meet:",
+      "eventId": "Identyfikator wydarzenia: {id}"
+    },
+    "citySearch": {
+      "placeholder": "Szukaj miasta…",
+      "unableToSearchStatus": "Nie można wyszukać ({status})",
+      "unableToSearchCities": "Nie można wyszukać miast",
+      "typeAtLeast": "Wpisz co najmniej {count} znaki(ów)",
+      "searchingCities": "Wyszukiwanie miast…",
+      "unableToFetchCities": "Nie można pobrać miast",
+      "noMatchesFound": "Nie znaleziono dopasowań"
+    },
+    "meetingPlanner": {
+      "errProvideTitle": "Podaj tytuł",
+      "msgSessionCreated": "Sesja spotkania utworzona",
+      "msgSessionCreatedWithTz": "Sesja spotkania utworzona z automatycznie dodaną Twoją strefą czasową",
+      "errCreateSession": "Nie udało się utworzyć sesji",
+      "errCreateSessionFirst": "Najpierw utwórz sesję",
+      "errNameRequired": "Imię jest wymagane",
+      "errSelectLocation": "Najpierw wybierz lokalizację na globusie lub wyszukaj miasto",
+      "msgParticipantAdded": "Uczestnik dodany",
+      "errAddParticipant": "Nie udało się dodać uczestnika",
+      "errAddParticipantBackend": "Nie udało się dodać uczestnika po stronie serwera",
+      "errAddTwoParticipants": "Najpierw dodaj co najmniej 2 uczestników",
+      "msgGeneratedSlots": "Wygenerowano {count} terminów po stronie serwera",
+      "errGenerateSlots": "Nie udało się wygenerować terminów",
+      "errSelectSlotFirst": "Najpierw utwórz sesję i wybierz termin",
+      "msgMeetCreated": "Utworzono spotkanie Meet! Link: {link}",
+      "errCreateMeet": "Nie udało się utworzyć spotkania Meet",
+      "pageTitle": "Planer spotkań",
+      "pageSubtitle": "Dodaj uczestników z różnych stref czasowych, ustaw ich godziny pracy i znajdź najlepsze terminy spotkań. Wybierz automatyczne wyszukiwanie terminów lub ręczny wybór czasu. Wszystkie obliczenia uwzględniają czas letni.",
+      "connected": "Połączono",
+      "connectGoogleCalendar": "Połącz z Google Calendar",
+      "requiredForMeetLinks": "(wymagane do linków Meet)",
+      "yourTimezone": "Twoja strefa czasowa",
+      "yourNamePlaceholder": "Twoje imię (opcjonalnie)",
+      "createMeetingSession": "Utwórz sesję spotkania",
+      "meetingTitlePlaceholder": "Tytuł spotkania",
+      "descriptionPlaceholder": "Opis (opcjonalnie)",
+      "createSession": "Utwórz sesję",
+      "sessionLabel": "Sesja: {title}",
+      "mode": "TRYB",
+      "autoFindSlots": "Automatyczne wyszukiwanie terminów",
+      "autoFindSlotsDesc": "System znajduje optymalne terminy spotkań, analizując pokrywanie się godzin pracy wszystkich uczestników",
+      "manualTimePick": "Ręczny wybór czasu",
+      "manualTimePickDesc": "Wybierasz konkretny czas, a system przelicza go na strefy czasowe wszystkich uczestników",
+      "howAutoFindWorks": "Jak działa automatyczne wyszukiwanie:",
+      "howManualPickWorks": "Jak działa ręczny wybór:",
+      "autoStep1": "Analizuje godziny pracy wszystkich uczestników",
+      "autoStep2": "Znajduje okna czasowe, w których wszyscy są dostępni",
+      "autoStep3": "Generuje terminy co 15 minut w obrębie pokrywania się",
+      "autoStep4": "Klasyfikuje terminy według jakości (pora dnia, pozycja w godzinach pracy)",
+      "autoStep5": "Najpierw pokazuje najlepsze opcje (posortowane według oceny jakości)",
+      "manualStep1": "Wybierz czas w strefie czasowej jednego z uczestników",
+      "manualStep2": "System wewnętrznie przelicza go na UTC",
+      "manualStep3": "Wyświetla ten sam moment we wszystkich pozostałych strefach czasowych",
+      "manualStep4": "Idealne do ustalonych terminów spotkań lub konkretnych harmonogramów",
+      "manualStep5": "Wszystkie obliczenia uwzględniają przejścia na czas letni",
+      "duration": "Czas trwania",
+      "twoHours": "2 godziny",
+      "minutes": "{mins} min",
+      "date": "Data",
+      "preferences": "Preferencje",
+      "avoidBefore8am": "Unikaj spotkań przed 8:00",
+      "localTime": "Czas lokalny",
+      "avoidAfter8pm": "Unikaj spotkań po 20:00",
+      "avoidLunchTime": "Unikaj pory lunchu",
+      "addParticipant": "Dodaj uczestnika",
+      "quick": "Szybko",
+      "withEmail": "Z e-mailem",
+      "searchCityPlaceholder": "Szukaj miasta, aby szybko dodać…",
+      "namePlaceholder": "Imię *",
+      "emailPlaceholder": "E-mail (opcjonalnie, do zaproszeń kalendarzowych)",
+      "addParticipantBtn": "Dodaj uczestnika",
+      "clickGlobeHint": "Najpierw kliknij na globusie lub wyszukaj miasto, aby wybrać lokalizację",
+      "addAllFromCompare": "Dodaj wszystkie z Porównania ({count})",
+      "clickGlobeFillForm": "Kliknij na globusie, aby wybrać lokalizację, a następnie wypełnij powyższy formularz",
+      "participantsCount": "Uczestnicy ({count})",
+      "remove": "Usuń",
+      "namePrompt": "Imię:",
+      "rename": "Zmień nazwę",
+      "selectTime": "Wybierz czas",
+      "baseTimezone": "Bazowa strefa czasowa",
+      "unknown": "Nieznana",
+      "meetingTime": "Czas spotkania",
+      "meetingTimeTzSuffix": "(strefa czasowa: {name})",
+      "meetingTimeUtcSuffix": "(UTC)",
+      "availableSlots": "Dostępne terminy",
+      "generateSlotsBackend": "Generuj terminy po stronie serwera",
+      "slotsEmptyState": "Kliknij „Generuj terminy po stronie serwera”, aby znaleźć dostępne terminy spotkań. Możesz też dostosować godziny pracy/datę i spróbować ponownie.",
+      "qualityGreat": "Świetny",
+      "qualityGood": "Dobry",
+      "qualityFair": "Przeciętny",
+      "qualityScoreTitle": "Ocena jakości: {score}/100",
+      "selected": "Wybrany",
+      "morning": "Rano",
+      "afternoon": "Popołudnie",
+      "evening": "Wieczór",
+      "night": "Noc",
+      "showingTop15": "Pokazano 15 najlepszych z {total} dostępnych terminów (posortowane według jakości)",
+      "selectedTime": "Wybrany czas",
+      "selectedSlot": "Wybrany termin",
+      "utcTime": "Czas UTC",
+      "daytime": "Dzień",
+      "nighttime": "Noc",
+      "confirmCreateMeet": "Potwierdź i utwórz Google Meet",
+      "addOneParticipantHint": "Dodaj co najmniej jednego uczestnika, aby przeliczyć czas na różne strefy czasowe",
+      "addTwoParticipantsHint": "Dodaj co najmniej 2 uczestników, aby rozpocząć wyszukiwanie terminów spotkań",
+      "addOneMoreParticipantHint": "Dodaj jeszcze jednego uczestnika, aby znaleźć dostępne terminy spotkań",
+      "meetingConfirmed": "Spotkanie potwierdzone",
+      "googleMeetLink": "Link do Google Meet:",
+      "eventId": "Identyfikator wydarzenia: {id}"
+    },
+    "participants": {
+      "timezone": "Strefa czasowa",
+      "localTimeNow": "Czas lokalny teraz",
+      "meetingTimeForYou": "Czas spotkania dla Ciebie:"
+    },
+    "poll": {
+      "failedToLoad": "Nie udało się załadować ankiety",
+      "provideNameEmail": "Podaj imię i adres e-mail",
+      "voteAtLeastOne": "Zagłosuj na co najmniej jeden termin",
+      "failedToSubmit": "Nie udało się przesłać głosu",
+      "voteSubmitted": "Głos przesłany pomyślnie!",
+      "loading": "Ładowanie...",
+      "duration": "Czas trwania: {minutes} minut",
+      "voteForSlots": "Głosuj na dostępne terminy",
+      "noSlots": "Brak dostępnych terminów",
+      "utcLabel": "UTC:",
+      "yourTimeLabel": "Twój czas ({timezone}):",
+      "score": "Wynik: {score}",
+      "yes": "✓ Tak",
+      "maybe": "? Może",
+      "no": "✗ Nie",
+      "summary": "Podsumowanie: {yes} tak, {maybe} może, {no} nie",
+      "submitYourVote": "Prześlij swój głos",
+      "yourName": "Twoje imię",
+      "yourEmail": "Twój e-mail",
+      "submitting": "Przesyłanie...",
+      "submitVote": "Prześlij głos"
+    },
+    "book": {
+      "failedLoadBooking": "Nie udało się załadować rezerwacji",
+      "selectSlotProvideInfo": "Wybierz termin oraz podaj imię i adres e-mail",
+      "failedReserve": "Nie udało się zarezerwować",
+      "slotReserved": "Termin zarezerwowany! Utworzono link do Meet.",
+      "failedReserveSlot": "Nie udało się zarezerwować terminu",
+      "loading": "Ładowanie...",
+      "duration": "Czas trwania: {minutes} minut",
+      "meetingReserved": "Spotkanie zarezerwowane",
+      "timeLabel": "Czas:",
+      "yourLocalTimeLabel": "Twój czas lokalny:",
+      "meetLinkLabel": "Link do Meet:",
+      "availableSlots": "Dostępne terminy",
+      "noSlots": "Brak dostępnych terminów",
+      "utcLabel": "UTC:",
+      "yourTimeLabel": "Twój czas ({timezone}):",
+      "score": "Wynik: {score}",
+      "select": "Wybierz",
+      "reserveSlot": "Zarezerwuj termin",
+      "yourName": "Twoje imię",
+      "yourEmail": "Twój e-mail",
+      "reserving": "Rezerwowanie...",
+      "reserveSlotButton": "Zarezerwuj termin"
+    },
+    "toast": {
+      "close": "Zamknij"
+    },
+    "timeDisplay": {
+      "selectLocation": "Wybierz lokalizację, aby zobaczyć czas",
+      "sun": "Słońce:",
+      "format12h": "12h",
+      "format24h": "24h"
+    },
+    "dstBadge": {
+      "active": "DST aktywny",
+      "inactive": "DST nieaktywny"
+    },
+    "workingHours": {
+      "workingHours": "Godziny pracy",
+      "start": "Początek",
+      "end": "Koniec"
+    },
+    "cityTimeCard": {
+      "day": "Dzień",
+      "night": "Noc"
+    },
+    "timezoneSelector": {
+      "savedToast": "Strefa czasowa „{name}” zapisana!",
+      "clearedToast": "Zapisana strefa czasowa wyczyszczona!",
+      "selectTimezone": "Wybierz strefę czasową",
+      "savedLabel": "Zapisano: {name}",
+      "hideTimezone": "Ukryj strefę czasową",
+      "selectTimezoneButton": "Wybierz strefę czasową",
+      "saveTitle": "Zapisz strefę czasową w localStorage",
+      "save": "Zapisz",
+      "clearTitle": "Wyczyść zapisaną strefę czasową",
+      "clear": "Wyczyść",
+      "searchPlaceholder": "Szukaj strefy czasowej (np. Kijów, Nowy Jork, Tokio)...",
+      "noResults": "Nie znaleziono stref czasowych dla „{query}”",
+      "selectRegion": "Wybierz region:",
+      "regionTimezones": "Strefy czasowe regionu {region}:"
+    },
+    "datePicker": {
+      "today": "Dziś",
+      "weekday": {
+        "Sun": "Nd",
+        "Mon": "Pn",
+        "Tue": "Wt",
+        "Wed": "Śr",
+        "Thu": "Czw",
+        "Fri": "Pt",
+        "Sat": "Sob"
+      }
+    },
+    "timePicker": {
+      "hour": "Godz.",
+      "min": "Min"
+    },
+    "copyButton": {
+      "copy": "Kopiuj"
+    },
+    "themeToggle": {
+      "dark": "Ciemny",
+      "light": "Jasny",
+      "switchTitle": "Przełącz na motyw {theme}"
+    },
+    "timeSlider": {
+      "time": "Czas"
+    }
+  }
+}

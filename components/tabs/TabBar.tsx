@@ -1,28 +1,30 @@
 import type { AppTab } from '@/types/domain';
 import { useAppStore } from '@/store/useAppStore';
+import { useTranslations } from 'next-intl';
 import styles from './tabs.module.css';
 
-const TABS: { id: AppTab; label: string }[] = [
-  { id: 'explore', label: 'Explore' },
-  { id: 'planner', label: 'Planner' },
-  { id: 'compare', label: 'Compare' },
-  { id: 'dst', label: 'DST' },
-  { id: 'saved', label: 'Saved' },
+const TABS: { id: AppTab; labelKey: string }[] = [
+  { id: 'explore', labelKey: 'explore' },
+  { id: 'planner', labelKey: 'planner' },
+  { id: 'compare', labelKey: 'compare' },
+  { id: 'dst', labelKey: 'dst' },
+  { id: 'saved', labelKey: 'saved' },
 ];
 
 export function TabBar(props: { compact?: boolean }) {
+  const t = useTranslations('ui.tabBar');
   const tab = useAppStore((s) => s.tab);
   const setTab = useAppStore((s) => s.setTab);
 
   return (
     <div className={styles.tabBar} data-compact={props.compact ? '1' : '0'}>
-      {TABS.map((t) => (
+      {TABS.map((tabItem) => (
         <button
-          key={t.id}
-          className={`${styles.tabBtn} ${tab === t.id ? styles.tabBtnActive : ''}`}
-          onClick={() => setTab(t.id)}
+          key={tabItem.id}
+          className={`${styles.tabBtn} ${tab === tabItem.id ? styles.tabBtnActive : ''}`}
+          onClick={() => setTab(tabItem.id)}
         >
-          {t.label}
+          {t(tabItem.labelKey)}
         </button>
       ))}
     </div>

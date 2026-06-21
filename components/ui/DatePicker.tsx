@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { DateTime } from 'luxon';
 import ui from '@/components/ui/ui.module.css';
 
@@ -12,6 +13,7 @@ interface DatePickerProps {
 }
 
 export function DatePicker({ value, onChange, minDate, maxDate }: DatePickerProps) {
+  const t = useTranslations('ui.datePicker');
   const [isOpen, setIsOpen] = useState(false);
   const [viewMonth, setViewMonth] = useState(() => {
     const dt = DateTime.fromISO(value || DateTime.now().toISODate() || '');
@@ -204,7 +206,7 @@ export function DatePicker({ value, onChange, minDate, maxDate }: DatePickerProp
                   letterSpacing: '0.5px',
                 }}
               >
-                {day}
+                {t(`weekday.${day}`)}
               </div>
             ))}
           </div>
@@ -278,7 +280,7 @@ export function DatePicker({ value, onChange, minDate, maxDate }: DatePickerProp
                 padding: '8px 12px',
               }}
             >
-              Today
+              {t('today')}
             </button>
           </div>
         </div>
