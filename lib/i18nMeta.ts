@@ -63,10 +63,12 @@ export function pageMetadata(opts: {
   };
 }
 
-// hreflang language map (absolute URLs) for a sitemap entry's alternates.
+// Full reciprocal hreflang language map (absolute URLs) for a sitemap entry's
+// alternates, including x-default → the English (default-locale) URL.
 export function sitemapLanguages(path: string, siteUrl: string): Record<string, string> {
   const languages: Record<string, string> = {};
   for (const l of locales) languages[LOCALE_META[l].hreflang] = `${siteUrl}${localizedPath(l, path)}`;
+  languages['x-default'] = `${siteUrl}${localizedPath(defaultLocale, path)}`;
   return languages;
 }
 
