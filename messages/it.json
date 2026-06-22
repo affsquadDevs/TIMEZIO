@@ -19,11 +19,11 @@
   "meta": {
     "home": {
       "title": "Timezio – Convertitore di fusi orari e pianificatore di riunioni",
-      "description": "Convertitore di fusi orari istantaneo, orologio mondiale, pianificatore di riunioni con gestione dell'ora legale e confronto dei fusi orari su un globo interattivo."
+      "description": "Convertitore di fusi orari gratuito e DST-aware, orologio mondiale e pianificatore di riunioni. Confronta città, converti UTC e trova gli orari migliori su un globo 3D."
     },
     "explore": {
       "title": "Esplora i fusi orari su un globo",
-      "description": "Esplora i fusi orari su un globo 3D interattivo. Controlla l'ora attuale, lo scostamento UTC e lo stato dell'ora legale per qualsiasi località."
+      "description": "Esplora i fusi orari su un globo 3D interattivo. Clicca ovunque per vedere l'ora locale attuale, l'offset UTC e lo stato dell'ora legale di qualsiasi città o regione."
     },
     "compare": {
       "title": "Confronta i fusi orari",
@@ -31,11 +31,11 @@
     },
     "planner": {
       "title": "Pianificatore di riunioni tra fusi orari",
-      "description": "Pianifica riunioni tra fusi orari con orari di lavoro, finestre di sovrapposizione e calcoli che tengono conto dell'ora legale."
+      "description": "Pianifica riunioni tra più fusi orari. Aggiungi partecipanti, imposta i loro orari di lavoro e trova subito le finestre comuni adatte a tutti — pienamente DST-aware."
     },
     "saved": {
       "title": "Località e fusi orari salvati",
-      "description": "Salva le località usate di frequente e torna rapidamente alla loro ora attuale, allo scostamento e allo stato dell'ora legale."
+      "description": "Salva le città e i fusi orari che controlli più spesso e torna subito alla loro ora locale, all'offset UTC e allo stato dell'ora legale — senza bisogno di un account."
     },
     "timeConverter": {
       "title": "Convertitore di fusi orari – Confronta orari, pianifica riunioni ed esplora città",
@@ -62,27 +62,27 @@
     },
     "time": {
       "title": "Ora attuale a {city}",
-      "description": "Scopri l'ora locale attuale a {city}, con lo scostamento UTC e lo stato dell'ora legale."
+      "description": "Controlla subito l'ora locale attuale a {city}, con l'offset UTC, il fuso orario, l'abbreviazione e lo stato dell'ora legale — aggiornata dal vivo e DST-aware."
     },
     "convert": {
       "title": "Convertitore di orari da {from} a {to}",
-      "description": "Converti da {from} a {to} con una tabella completa ora per ora, tenendo conto dell'ora legale e utilizzando i dati ufficiali IANA."
+      "description": "Converti {from} in {to} all'istante con una tabella ora per ora e l'offset live tra i due fusi — DST-aware, con dati ufficiali dei fusi orari IANA."
     },
     "meeting": {
       "title": "Miglior orario per riunioni: {a} ↔ {b}",
-      "description": "Trova le ore lavorative sovrapposte e il miglior orario per riunioni tra {a} e {b}, tenendo pienamente conto dell'ora legale."
+      "description": "Trova l'orario migliore per una riunione tra {a} e {b}: vedi gli orari di lavoro comuni e uno slot consigliato, con ogni calcolo pienamente DST-aware."
     },
     "dst": {
       "title": "Ora legale di {region}",
-      "description": "Stato dell'ora legale, scostamento UTC attuale e date del prossimo cambio dell'ora per {region}."
+      "description": "{region} è attualmente in ora legale? Vedi il suo offset UTC attuale e le date esatte dei prossimi cambi d'ora, calcolate dai dati ufficiali IANA."
     },
     "privacy": {
       "title": "Informativa sulla privacy",
-      "description": "Come Timezio raccoglie, utilizza e protegge le informazioni in conformità con il GDPR e le leggi applicabili sulla protezione dei dati."
+      "description": "Scopri come Timezio raccoglie, usa e protegge le tue informazioni — inclusi cookie, analisi e pubblicità — nel rispetto del GDPR e di altre leggi sulla privacy."
     },
     "terms": {
       "title": "Termini di servizio",
-      "description": "Termini e condizioni per l'utilizzo degli strumenti per i fusi orari, dei convertitori e del pianificatore di riunioni di Timezio."
+      "description": "I termini e le condizioni d'uso del convertitore di fusi orari, dell'orologio mondiale, del pianificatore di riunioni e degli strumenti correlati di Timezio. Leggili prima di usare il sito."
     },
     "about": {
       "title": "Informazioni su Timezio",
@@ -94,7 +94,7 @@
     },
     "blogIndex": {
       "title": "Guide sui fusi orari e consigli per il lavoro da remoto",
-      "description": "Guide approfondite sui fusi orari, sull'ora legale, sulla collaborazione da remoto e su come usare Timezio in modo efficace."
+      "description": "Guide approfondite su fusi orari, UTC, ora legale e pianificazione tra regioni — più consigli pratici per sfruttare al meglio gli strumenti di Timezio."
     }
   },
   "footer": {

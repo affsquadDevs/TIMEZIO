@@ -19,11 +19,11 @@
   "meta": {
     "home": {
       "title": "Timezio – Convertisseur de fuseaux horaires et planificateur de réunions",
-      "description": "Convertisseur de fuseaux horaires instantané, horloge mondiale, planificateur de réunions tenant compte de l'heure d'été et comparaison de fuseaux horaires sur un globe interactif."
+      "description": "Convertisseur de fuseaux horaires gratuit et compatible DST, horloge mondiale et planificateur de réunions. Comparez des villes, convertissez l'UTC et trouvez les meilleurs horaires sur un globe 3D interactif."
     },
     "explore": {
       "title": "Explorez les fuseaux horaires sur un globe",
-      "description": "Explorez les fuseaux horaires sur un globe 3D interactif. Vérifiez l'heure actuelle, le décalage UTC et le statut de l'heure d'été pour n'importe quel lieu."
+      "description": "Explorez les fuseaux horaires sur un globe 3D interactif. Cliquez n'importe où pour voir l'heure locale actuelle, le décalage UTC et l'état de l'heure d'été de toute ville ou région."
     },
     "compare": {
       "title": "Comparer les fuseaux horaires",
@@ -31,11 +31,11 @@
     },
     "planner": {
       "title": "Planificateur de réunions entre fuseaux horaires",
-      "description": "Planifiez des réunions entre fuseaux horaires avec heures de travail, plages de chevauchement et calculs tenant compte de l'heure d'été."
+      "description": "Planifiez des réunions entre plusieurs fuseaux horaires. Ajoutez des participants, définissez leurs horaires de travail et trouvez instantanément des plages communes qui conviennent à tous — entièrement compatible DST."
     },
     "saved": {
       "title": "Lieux et fuseaux horaires enregistrés",
-      "description": "Enregistrez les lieux fréquemment utilisés et revenez rapidement à leur heure actuelle, leur décalage et leur statut d'heure d'été."
+      "description": "Enregistrez les villes et fuseaux horaires que vous consultez le plus, puis retrouvez aussitôt leur heure locale, leur décalage UTC et l'état de l'heure d'été — sans compte."
     },
     "timeConverter": {
       "title": "Convertisseur de fuseaux horaires – Comparez les heures, planifiez des réunions et explorez les villes",
@@ -62,27 +62,27 @@
     },
     "time": {
       "title": "Heure actuelle à {city}",
-      "description": "Consultez l'heure locale actuelle à {city}, avec le décalage UTC et le statut de l'heure d'été."
+      "description": "Consultez l'heure locale actuelle à {city} dès maintenant, ainsi que son décalage UTC, son fuseau horaire, son abréviation et l'état de l'heure d'été — en direct et compatible DST."
     },
     "convert": {
       "title": "Convertisseur d'heure {from} vers {to}",
-      "description": "Convertissez {from} vers {to} avec un tableau heure par heure complet — tient compte de l'heure d'été, en utilisant les données officielles IANA."
+      "description": "Convertissez {from} en {to} instantanément avec un tableau heure par heure complet et le décalage en direct entre les deux zones — compatible DST, via les données officielles IANA."
     },
     "meeting": {
       "title": "Meilleur horaire de réunion : {a} ↔ {b}",
-      "description": "Trouvez les heures de travail qui se chevauchent et le meilleur horaire de réunion entre {a} et {b} — en tenant pleinement compte de l'heure d'été."
+      "description": "Trouvez le meilleur horaire de réunion entre {a} et {b} : voyez les heures de travail communes et un créneau recommandé, chaque calcul tenant pleinement compte de l'heure d'été."
     },
     "dst": {
       "title": "Heure d'été à {region}",
-      "description": "Statut de l'heure d'été, décalage UTC actuel et dates des prochains changements d'heure pour {region}."
+      "description": "{region} est-elle à l'heure d'été en ce moment ? Voyez son décalage UTC actuel et les dates exactes des prochains changements d'heure, calculés à partir des données officielles IANA."
     },
     "privacy": {
       "title": "Politique de confidentialité",
-      "description": "Comment Timezio collecte, utilise et protège les informations conformément au RGPD et aux lois applicables sur la protection des données."
+      "description": "Découvrez comment Timezio collecte, utilise et protège vos informations — cookies, analyses et publicité compris — conformément au RGPD et aux autres lois sur la vie privée."
     },
     "terms": {
       "title": "Conditions d'utilisation",
-      "description": "Conditions générales d'utilisation des outils de fuseaux horaires, convertisseurs et planificateur de réunions de Timezio."
+      "description": "Les conditions générales d'utilisation du convertisseur de fuseaux horaires, de l'horloge mondiale, du planificateur de réunions et des outils Timezio. Veuillez les lire avant d'utiliser le site."
     },
     "about": {
       "title": "À propos de Timezio",
@@ -94,7 +94,7 @@
     },
     "blogIndex": {
       "title": "Guides sur les fuseaux horaires et conseils pour le télétravail",
-      "description": "Guides approfondis sur les fuseaux horaires, l'heure d'été, la collaboration à distance et l'utilisation efficace de Timezio."
+      "description": "Guides détaillés sur les fuseaux horaires, l'UTC, l'heure d'été et la planification entre régions — ainsi que des conseils pratiques pour tirer le meilleur des outils Timezio."
     }
   },
   "footer": {

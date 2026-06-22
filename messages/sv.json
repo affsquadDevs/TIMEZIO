@@ -19,11 +19,11 @@
   "meta": {
     "home": {
       "title": "Timezio – Tidszonsomvandlare och mötesplanerare",
-      "description": "Omedelbar tidszonsomvandlare, världsklocka, sommartidsanpassad mötesplanerare och tidszonsjämförelse på en interaktiv jordglob."
+      "description": "Gratis tidszonsomvandlare, världsklocka och mötesplanerare med DST-stöd. Jämför städer, omvandla UTC och hitta de bästa mötestiderna på en interaktiv 3D-glob."
     },
     "explore": {
       "title": "Utforska tidszoner på en jordglob",
-      "description": "Utforska tidszoner på en interaktiv 3D-jordglob. Kontrollera aktuell tid, UTC-offset och DST-status för valfri plats."
+      "description": "Utforska tidszoner på en interaktiv 3D-glob. Klicka var som helst för att se aktuell lokal tid, UTC-offset och sommartidsstatus för valfri stad eller region."
     },
     "compare": {
       "title": "Jämför tidszoner",
@@ -31,11 +31,11 @@
     },
     "planner": {
       "title": "Mötesplanerare över tidszoner",
-      "description": "Planera möten över tidszoner med arbetstider, överlappande tidsfönster och sommartidsanpassade beräkningar."
+      "description": "Planera möten över flera tidszoner. Lägg till deltagare, ange deras arbetstid och hitta direkt överlappande tider som passar alla — helt med DST-stöd."
     },
     "saved": {
       "title": "Sparade platser och tidszoner",
-      "description": "Spara ofta använda platser och återvänd snabbt till deras aktuella tid, offset och DST-status."
+      "description": "Spara de städer och tidszoner du kollar mest och hoppa direkt tillbaka till deras aktuella lokala tid, UTC-offset och sommartidsstatus — inget konto behövs."
     },
     "timeConverter": {
       "title": "Tidszonsomvandlare – Jämför tider, planera möten och utforska städer",
@@ -62,27 +62,27 @@
     },
     "time": {
       "title": "Aktuell tid i {city}",
-      "description": "Se den aktuella lokala tiden i {city}, med UTC-offset och sommartidsstatus."
+      "description": "Se den aktuella lokala tiden i {city} just nu, tillsammans med UTC-offset, tidszon, förkortning och sommartidsstatus — uppdateras live och med DST-stöd."
     },
     "convert": {
       "title": "Tidsomvandlare {from} till {to}",
-      "description": "Omvandla {from} till {to} med en fullständig tabell timme för timme – sommartidsanpassad och baserad på officiella IANA-data."
+      "description": "Omvandla {from} till {to} direkt med en komplett timme-för-timme-tabell och live-offset mellan zonerna — med DST-stöd och officiella IANA-tidszonsdata."
     },
     "meeting": {
       "title": "Bästa mötestiden: {a} ↔ {b}",
-      "description": "Hitta överlappande arbetstider och den bästa mötestiden mellan {a} och {b} – helt sommartidsanpassad."
+      "description": "Hitta den bästa mötestiden mellan {a} och {b}: se överlappande arbetstider och en rekommenderad tid, där varje beräkning tar full hänsyn till sommartid."
     },
     "dst": {
       "title": "Sommartid i {region}",
-      "description": "DST-status, aktuell UTC-offset och datumen för nästa tidsomställning för {region}."
+      "description": "Är {region} på sommartid just nu? Se aktuell UTC-offset och de exakta datumen för nästa tidsomställning, beräknade från officiella IANA-data."
     },
     "privacy": {
       "title": "Integritetspolicy",
-      "description": "Hur Timezio samlar in, använder och skyddar information i enlighet med GDPR och tillämpliga dataskyddslagar."
+      "description": "Läs hur Timezio samlar in, använder och skyddar din information — inklusive cookies, analys och annonsering — i enlighet med GDPR och andra integritetslagar."
     },
     "terms": {
       "title": "Användarvillkor",
-      "description": "Villkor för att använda Timezios tidszonsverktyg, omvandlare och mötesplanerare."
+      "description": "Villkoren för att använda Timezios tidszonsomvandlare, världsklocka, mötesplanerare och relaterade verktyg. Läs igenom dem innan du använder webbplatsen."
     },
     "about": {
       "title": "Om Timezio",
@@ -94,7 +94,7 @@
     },
     "blogIndex": {
       "title": "Tidszonsguider och tips för distansarbete",
-      "description": "Fördjupande guider om tidszoner, sommartid, samarbete på distans och hur du använder Timezio effektivt."
+      "description": "Djupgående guider om tidszoner, UTC, sommartid och schemaläggning över regioner — plus praktiska tips för att få ut mesta möjliga av Timezios verktyg."
     }
   },
   "footer": {

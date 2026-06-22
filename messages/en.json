@@ -17,26 +17,85 @@
     "select": "Select language"
   },
   "meta": {
-    "home": { "title": "Timezio – Time Zone Converter & Meeting Planner", "description": "Instant time zone converter, world clock, DST-aware meeting planner, and timezone comparison on an interactive globe." },
-    "explore": { "title": "Explore Time Zones on a Globe", "description": "Explore time zones on an interactive 3D globe. Check current time, UTC offset, and DST status for any location." },
-    "compare": { "title": "Compare Time Zones", "description": "Compare time zones side-by-side with DST-aware offsets. Visualize locations on an interactive globe and avoid scheduling mistakes." },
-    "planner": { "title": "Meeting Planner Across Time Zones", "description": "Plan meetings across time zones with working hours, overlap windows, and DST-aware calculations." },
-    "saved": { "title": "Saved Locations & Time Zones", "description": "Save frequently used locations and quickly return to their current time, offset, and DST status." },
-    "timeConverter": { "title": "Time Zone Converter – Compare Times, Plan Meetings & Explore Cities", "description": "Compare time zones between cities, plan meetings across regions, and explore local times worldwide. DST-aware, accurate, and free." },
-    "meetingPlanner": { "title": "Meeting Planner" },
-    "convertHub": { "title": "Popular Time Zone Converters", "description": "Convert time between zones instantly: PST to EST, UTC to EST, GMT to EST, CET to EST, IST to EST and more. Each converter is DST-aware and shows a full hour-by-hour table." },
-    "timeHub": { "title": "Current Time in Major Cities Worldwide", "description": "Check the current local time in cities around the world. Each page shows live local time, UTC offset, time zone, and daylight saving status — DST-aware and updated in real time." },
-    "meetingHub": { "title": "Best Meeting Times Across Time Zones", "description": "Find overlapping working hours for popular city pairs. Each page shows a shared-hours table and the best slot, fully daylight-saving aware." },
-    "dstHub": { "title": "Daylight Saving Time Checker", "description": "Is a region observing daylight saving time right now? Check DST status, the current UTC offset, and the exact next clock-change dates for countries worldwide." },
-    "time": { "title": "Current Time in {city}", "description": "See the current local time in {city}, with UTC offset and daylight saving status." },
-    "convert": { "title": "{from} to {to} Time Converter", "description": "Convert {from} to {to} with a full hour-by-hour table — DST-aware, using official IANA data." },
-    "meeting": { "title": "Best Meeting Time: {a} ↔ {b}", "description": "Find overlapping working hours and the best meeting time between {a} and {b} — fully DST-aware." },
-    "dst": { "title": "{region} Daylight Saving Time", "description": "DST status, the current UTC offset, and the next clock-change dates for {region}." },
-    "privacy": { "title": "Privacy Policy", "description": "How Timezio collects, uses, and protects information in compliance with GDPR and applicable data protection laws." },
-    "terms": { "title": "Terms of Service", "description": "Terms and conditions for using Timezio’s timezone tools, converters, and meeting planner." },
-    "about": { "title": "About Timezio", "description": "Timezio is a free, DST-aware time zone converter, world clock, and meeting planner built by AffSquad. Learn who runs it, how it works, and the data behind it." },
-    "contact": { "title": "Contact Timezio Support", "description": "Get help, report issues, or request features for Timezio’s time zone tools. We respond to feedback and support questions." },
-    "blogIndex": { "title": "Time Zone Guides & Remote Work Tips", "description": "In-depth guides on time zones, daylight saving time, remote collaboration, and using Timezio effectively." }
+    "home": {
+      "title": "Timezio – Time Zone Converter & Meeting Planner",
+      "description": "Free, DST-aware time zone converter, world clock, and meeting planner. Compare cities, convert UTC, and find the best meeting times on an interactive 3D globe."
+    },
+    "explore": {
+      "title": "Explore Time Zones on a Globe",
+      "description": "Explore time zones on an interactive 3D globe. Click anywhere to see the current local time, UTC offset, and daylight saving status for any city or region."
+    },
+    "compare": {
+      "title": "Compare Time Zones",
+      "description": "Compare time zones side-by-side with DST-aware offsets. Visualize locations on an interactive globe and avoid scheduling mistakes."
+    },
+    "planner": {
+      "title": "Meeting Planner Across Time Zones",
+      "description": "Plan meetings across multiple time zones. Add participants, set their working hours, and instantly find overlap windows that work for everyone — fully DST-aware."
+    },
+    "saved": {
+      "title": "Saved Locations & Time Zones",
+      "description": "Save the cities and time zones you check most, then jump straight back to their current local time, UTC offset, and daylight saving status — no account needed."
+    },
+    "timeConverter": {
+      "title": "Time Zone Converter – Compare Times, Plan Meetings & Explore Cities",
+      "description": "Compare time zones between cities, plan meetings across regions, and explore local times worldwide. DST-aware, accurate, and free."
+    },
+    "meetingPlanner": {
+      "title": "Meeting Planner"
+    },
+    "convertHub": {
+      "title": "Popular Time Zone Converters",
+      "description": "Convert time between zones instantly: PST to EST, UTC to EST, GMT to EST, CET to EST, IST to EST and more. Each converter is DST-aware and shows a full hour-by-hour table."
+    },
+    "timeHub": {
+      "title": "Current Time in Major Cities Worldwide",
+      "description": "Check the current local time in cities around the world. Each page shows live local time, UTC offset, time zone, and daylight saving status — DST-aware and updated in real time."
+    },
+    "meetingHub": {
+      "title": "Best Meeting Times Across Time Zones",
+      "description": "Find overlapping working hours for popular city pairs. Each page shows a shared-hours table and the best slot, fully daylight-saving aware."
+    },
+    "dstHub": {
+      "title": "Daylight Saving Time Checker",
+      "description": "Is a region observing daylight saving time right now? Check DST status, the current UTC offset, and the exact next clock-change dates for countries worldwide."
+    },
+    "time": {
+      "title": "Current Time in {city}",
+      "description": "Check the current local time in {city} right now, along with its UTC offset, time zone, abbreviation, and daylight saving status — updated live and DST-aware."
+    },
+    "convert": {
+      "title": "{from} to {to} Time Converter",
+      "description": "Convert {from} to {to} instantly with a full hour-by-hour table and the live offset between the two zones — DST-aware, using official IANA time zone data."
+    },
+    "meeting": {
+      "title": "Best Meeting Time: {a} ↔ {b}",
+      "description": "Find the best meeting time between {a} and {b}: see overlapping working hours and a recommended slot, with every calculation fully daylight-saving aware."
+    },
+    "dst": {
+      "title": "{region} Daylight Saving Time",
+      "description": "Is {region} on daylight saving time right now? See its current UTC offset and the exact dates of the next clock changes, computed from official IANA data."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Read how Timezio collects, uses, and protects your information — including cookies, analytics, and advertising — in line with the GDPR and other privacy laws."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "description": "The terms and conditions for using Timezio’s time zone converter, world clock, meeting planner, and related tools. Please review them before using the site."
+    },
+    "about": {
+      "title": "About Timezio",
+      "description": "Timezio is a free, DST-aware time zone converter, world clock, and meeting planner built by AffSquad. Learn who runs it, how it works, and the data behind it."
+    },
+    "contact": {
+      "title": "Contact Timezio Support",
+      "description": "Get help, report issues, or request features for Timezio’s time zone tools. We respond to feedback and support questions."
+    },
+    "blogIndex": {
+      "title": "Time Zone Guides & Remote Work Tips",
+      "description": "In-depth guides on time zones, UTC, daylight saving time, and scheduling across regions — plus practical tips for getting the most out of Timezio’s tools."
+    }
   },
   "footer": {
     "productTitle": "PRODUCT",
@@ -77,11 +136,26 @@
     "toolsTitle": "Timezio Tools",
     "relatedTitle": "Related Articles",
     "tools": [
-      { "title": "Explore Globe", "desc": "Click anywhere on the interactive globe to see local time" },
-      { "title": "Compare Time Zones", "desc": "Compare time differences between multiple cities" },
-      { "title": "Meeting Planner", "desc": "Find the best meeting time for people in different locations" },
-      { "title": "DST Tracker", "desc": "Track daylight saving time changes and transitions" },
-      { "title": "Time Converter", "desc": "Convert UTC or local times between time zones" }
+      {
+        "title": "Explore Globe",
+        "desc": "Click anywhere on the interactive globe to see local time"
+      },
+      {
+        "title": "Compare Time Zones",
+        "desc": "Compare time differences between multiple cities"
+      },
+      {
+        "title": "Meeting Planner",
+        "desc": "Find the best meeting time for people in different locations"
+      },
+      {
+        "title": "DST Tracker",
+        "desc": "Track daylight saving time changes and transitions"
+      },
+      {
+        "title": "Time Converter",
+        "desc": "Convert UTC or local times between time zones"
+      }
     ]
   },
   "home": {

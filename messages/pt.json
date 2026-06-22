@@ -19,11 +19,11 @@
   "meta": {
     "home": {
       "title": "Timezio – Conversor de fusos horários e planeador de reuniões",
-      "description": "Conversor de fusos horários instantâneo, relógio mundial, planeador de reuniões com gestão do horário de verão e comparação de fusos num globo interativo."
+      "description": "Conversor de fusos horários consciente do DST, relógio mundial e planeador de reuniões grátis. Compare cidades, converta UTC e encontre os melhores horários num globo 3D interativo."
     },
     "explore": {
       "title": "Explore fusos horários num globo",
-      "description": "Explore fusos horários num globo 3D interativo. Verifique a hora atual, o desvio UTC e o estado do horário de verão de qualquer localização."
+      "description": "Explore fusos horários num globo 3D interativo. Clique em qualquer ponto para ver a hora local atual, o desvio UTC e o estado do horário de verão de qualquer cidade ou região."
     },
     "compare": {
       "title": "Comparar fusos horários",
@@ -31,11 +31,11 @@
     },
     "planner": {
       "title": "Planeador de reuniões entre fusos horários",
-      "description": "Planeie reuniões entre fusos horários com horário de trabalho, janelas de sobreposição e cálculos que têm em conta o horário de verão."
+      "description": "Planeie reuniões em vários fusos horários. Adicione participantes, defina os seus horários de trabalho e encontre de imediato janelas de sobreposição para todos — com suporte total a DST."
     },
     "saved": {
       "title": "Localizações e fusos horários guardados",
-      "description": "Guarde as localizações que usa com frequência e regresse rapidamente à hora atual, ao desvio e ao estado do horário de verão de cada uma."
+      "description": "Guarde as cidades e fusos horários que mais consulta e volte de imediato à sua hora local atual, desvio UTC e estado do horário de verão — sem necessidade de conta."
     },
     "timeConverter": {
       "title": "Conversor de fusos horários – Compare horas, planeie reuniões e explore cidades",
@@ -62,27 +62,27 @@
     },
     "time": {
       "title": "Hora atual em {city}",
-      "description": "Veja a hora local atual em {city}, com o desvio UTC e o estado do horário de verão."
+      "description": "Veja a hora local atual em {city} agora mesmo, juntamente com o seu desvio UTC, fuso horário, abreviatura e estado do horário de verão — atualizada ao vivo e consciente do DST."
     },
     "convert": {
       "title": "Conversor de horas {from} para {to}",
-      "description": "Converta {from} para {to} com uma tabela hora a hora completa — com gestão do horário de verão e utilizando dados oficiais da IANA."
+      "description": "Converta {from} para {to} num instante, com uma tabela hora a hora e o desvio ao vivo entre os dois fusos — consciente do DST, usando dados oficiais de fusos IANA."
     },
     "meeting": {
       "title": "Melhor hora de reunião: {a} ↔ {b}",
-      "description": "Encontre as horas de trabalho sobrepostas e a melhor hora de reunião entre {a} e {b} — tendo plenamente em conta o horário de verão."
+      "description": "Encontre o melhor horário de reunião entre {a} e {b}: veja as horas de trabalho sobrepostas e um intervalo recomendado, com todos os cálculos conscientes do horário de verão."
     },
     "dst": {
       "title": "Horário de verão de {region}",
-      "description": "Estado do horário de verão, desvio UTC atual e datas da próxima mudança de hora para {region}."
+      "description": "{region} está no horário de verão neste momento? Veja o seu desvio UTC atual e as datas exatas das próximas mudanças de relógio, calculadas a partir de dados oficiais IANA."
     },
     "privacy": {
       "title": "Política de Privacidade",
-      "description": "Como o Timezio recolhe, utiliza e protege informações em conformidade com o RGPD e a legislação de proteção de dados aplicável."
+      "description": "Saiba como a Timezio recolhe, utiliza e protege as suas informações — incluindo cookies, análises e publicidade — em conformidade com o RGPD e outras leis de privacidade."
     },
     "terms": {
       "title": "Termos de Serviço",
-      "description": "Termos e condições de utilização das ferramentas de fusos horários, conversores e planeador de reuniões do Timezio."
+      "description": "Os termos e condições de utilização do conversor de fusos horários, relógio mundial, planeador de reuniões e ferramentas afins da Timezio. Reveja-os antes de usar o site."
     },
     "about": {
       "title": "Acerca do Timezio",
@@ -94,7 +94,7 @@
     },
     "blogIndex": {
       "title": "Guias de fusos horários e dicas de trabalho remoto",
-      "description": "Guias detalhados sobre fusos horários, horário de verão, colaboração remota e como usar o Timezio de forma eficaz."
+      "description": "Guias detalhados sobre fusos horários, UTC, horário de verão e agendamento entre regiões — além de dicas práticas para tirar o máximo das ferramentas da Timezio."
     }
   },
   "footer": {

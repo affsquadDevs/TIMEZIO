@@ -19,11 +19,11 @@
   "meta": {
     "home": {
       "title": "Timezio – Konwerter stref czasowych i planer spotkań",
-      "description": "Natychmiastowy konwerter stref czasowych, zegar światowy, planer spotkań uwzględniający czas letni oraz porównanie stref czasowych na interaktywnym globie."
+      "description": "Darmowy konwerter stref czasowych uwzględniający DST, zegar światowy i planer spotkań. Porównuj miasta, przeliczaj UTC i znajduj najlepsze terminy na interaktywnym globusie 3D."
     },
     "explore": {
       "title": "Eksploruj strefy czasowe na globie",
-      "description": "Eksploruj strefy czasowe na interaktywnym globie 3D. Sprawdź aktualny czas, przesunięcie UTC i status czasu letniego dla dowolnej lokalizacji."
+      "description": "Odkrywaj strefy czasowe na interaktywnym globusie 3D. Kliknij dowolne miejsce, aby zobaczyć aktualny czas lokalny, przesunięcie UTC i status DST dla miasta lub regionu."
     },
     "compare": {
       "title": "Porównaj strefy czasowe",
@@ -31,11 +31,11 @@
     },
     "planner": {
       "title": "Planer spotkań w różnych strefach czasowych",
-      "description": "Planuj spotkania w różnych strefach czasowych z uwzględnieniem godzin pracy, okien nakładania się i obliczeń uwzględniających czas letni."
+      "description": "Planuj spotkania w wielu strefach czasowych. Dodaj uczestników, ustaw ich godziny pracy i błyskawicznie znajdź wspólne okna dogodne dla wszystkich — z pełną obsługą DST."
     },
     "saved": {
       "title": "Zapisane lokalizacje i strefy czasowe",
-      "description": "Zapisuj często używane lokalizacje i szybko wracaj do ich aktualnego czasu, przesunięcia i statusu czasu letniego."
+      "description": "Zapisz najczęściej sprawdzane miasta i strefy czasowe, by od razu wracać do ich aktualnego czasu lokalnego, przesunięcia UTC i statusu DST — bez zakładania konta."
     },
     "timeConverter": {
       "title": "Konwerter stref czasowych – Porównuj czasy, planuj spotkania i odkrywaj miasta",
@@ -62,27 +62,27 @@
     },
     "time": {
       "title": "Aktualny czas w {city}",
-      "description": "Zobacz aktualny czas lokalny w {city}, wraz z przesunięciem UTC i statusem czasu letniego."
+      "description": "Sprawdź aktualny czas lokalny w {city} teraz, wraz z przesunięciem UTC, strefą czasową, skrótem i statusem DST — aktualizowane na żywo i z obsługą zmiany czasu."
     },
     "convert": {
       "title": "Konwerter czasu {from} na {to}",
-      "description": "Przeliczaj {from} na {to} z pełną tabelą godzina po godzinie — z uwzględnieniem czasu letniego, na podstawie oficjalnych danych IANA."
+      "description": "Przelicz {from} na {to} błyskawicznie dzięki pełnej tabeli godzina po godzinie i przesunięciu na żywo między strefami — z obsługą DST i oficjalnymi danymi IANA."
     },
     "meeting": {
       "title": "Najlepszy termin spotkania: {a} ↔ {b}",
-      "description": "Znajdź nakładające się godziny pracy i najlepszy termin spotkania między {a} a {b} — z pełnym uwzględnieniem czasu letniego."
+      "description": "Znajdź najlepszy termin spotkania między {a} a {b}: zobacz wspólne godziny pracy i polecany slot, z każdą kalkulacją w pełni uwzględniającą zmianę czasu DST."
     },
     "dst": {
       "title": "Czas letni — {region}",
-      "description": "Status czasu letniego, aktualne przesunięcie UTC oraz daty najbliższych zmian czasu dla {region}."
+      "description": "Czy w {region} obowiązuje teraz czas letni? Zobacz aktualne przesunięcie UTC i dokładne daty najbliższych zmian czasu, obliczone z oficjalnych danych IANA."
     },
     "privacy": {
       "title": "Polityka prywatności",
-      "description": "Jak Timezio gromadzi, wykorzystuje i chroni informacje zgodnie z RODO i obowiązującymi przepisami o ochronie danych."
+      "description": "Przeczytaj, jak Timezio zbiera, wykorzystuje i chroni Twoje dane — w tym pliki cookie, analitykę i reklamy — zgodnie z RODO (GDPR) i innymi przepisami o prywatności."
     },
     "terms": {
       "title": "Warunki korzystania",
-      "description": "Warunki korzystania z narzędzi Timezio do obsługi stref czasowych, konwerterów i planera spotkań."
+      "description": "Regulamin korzystania z konwertera stref czasowych, zegara światowego, planera spotkań i powiązanych narzędzi Timezio. Zapoznaj się z nim przed użyciem strony."
     },
     "about": {
       "title": "O Timezio",
@@ -94,7 +94,7 @@
     },
     "blogIndex": {
       "title": "Poradniki o strefach czasowych i wskazówki dla pracy zdalnej",
-      "description": "Szczegółowe poradniki o strefach czasowych, czasie letnim, współpracy zdalnej i efektywnym korzystaniu z Timezio."
+      "description": "Szczegółowe poradniki o strefach czasowych, UTC, czasie letnim DST i planowaniu między regionami — plus praktyczne wskazówki, jak najlepiej wykorzystać narzędzia Timezio."
     }
   },
   "footer": {

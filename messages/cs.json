@@ -19,11 +19,11 @@
   "meta": {
     "home": {
       "title": "Timezio – Převodník časových pásem a plánovač schůzek",
-      "description": "Okamžitý převodník časových pásem, světový čas, plánovač schůzek zohledňující letní čas a porovnání časových pásem na interaktivním glóbu."
+      "description": "Bezplatný převodník časových pásem s podporou DST, světové hodiny a plánovač schůzek. Porovnávejte města, převádějte UTC a hledejte ideální čas na 3D glóbu."
     },
     "explore": {
       "title": "Prozkoumejte časová pásma na glóbu",
-      "description": "Prozkoumejte časová pásma na interaktivním 3D glóbu. Zjistěte aktuální čas, posun UTC a stav letního času pro libovolné místo."
+      "description": "Prozkoumejte časová pásma na interaktivním 3D glóbu. Klikněte kamkoli a zobrazte aktuální místní čas, posun UTC a stav letního času pro libovolné město či region."
     },
     "compare": {
       "title": "Porovnat časová pásma",
@@ -31,11 +31,11 @@
     },
     "planner": {
       "title": "Plánovač schůzek napříč časovými pásmy",
-      "description": "Plánujte schůzky napříč časovými pásmy s pracovní dobou, okny překryvu a výpočty zohledňujícími letní čas."
+      "description": "Plánujte schůzky napříč časovými pásmy. Přidejte účastníky, nastavte jejich pracovní dobu a okamžitě najděte společná okna vhodná pro všechny — plně s podporou DST."
     },
     "saved": {
       "title": "Uložená místa a časová pásma",
-      "description": "Uložte si často používaná místa a rychle se vraťte k jejich aktuálnímu času, posunu a stavu letního času."
+      "description": "Uložte si města a časová pásma, která sledujete nejčastěji, a vraťte se rovnou k jejich místnímu času, posunu UTC a stavu letního času — bez nutnosti účtu."
     },
     "timeConverter": {
       "title": "Převodník časových pásem – Porovnávejte časy, plánujte schůzky a objevujte města",
@@ -62,27 +62,27 @@
     },
     "time": {
       "title": "Aktuální čas ve městě {city}",
-      "description": "Zobrazte aktuální místní čas ve městě {city} s posunem UTC a stavem letního času."
+      "description": "Zjistěte aktuální místní čas ve městě {city} právě teď, včetně posunu UTC, časového pásma, zkratky a stavu letního času — živě aktualizováno a s podporou DST."
     },
     "convert": {
       "title": "Převodník času {from} na {to}",
-      "description": "Převádějte {from} na {to} s úplnou tabulkou hodinu po hodině – zohledňuje letní čas, používá oficiální data IANA."
+      "description": "Převeďte {from} na {to} okamžitě s úplnou hodinovou tabulkou a živým posunem mezi oběma pásmy — s podporou DST a oficiálními daty časových pásem IANA."
     },
     "meeting": {
       "title": "Nejlepší čas na schůzku: {a} ↔ {b}",
-      "description": "Najděte překrývající se pracovní dobu a nejlepší čas na schůzku mezi {a} a {b} – plně zohledňující letní čas."
+      "description": "Najděte nejlepší čas schůzky mezi {a} a {b}: zobrazte překrývající se pracovní dobu a doporučený slot, přičemž každý výpočet plně zohledňuje letní čas."
     },
     "dst": {
       "title": "Letní čas v regionu {region}",
-      "description": "Stav letního času, aktuální posun UTC a data následujících změn času pro {region}."
+      "description": "Platí v regionu {region} právě teď letní čas? Zobrazte aktuální posun UTC a přesná data příštích změn času, vypočtená z oficiálních dat IANA."
     },
     "privacy": {
       "title": "Zásady ochrany osobních údajů",
-      "description": "Jak Timezio shromažďuje, používá a chrání informace v souladu s GDPR a platnými zákony o ochraně osobních údajů."
+      "description": "Přečtěte si, jak Timezio shromažďuje, používá a chrání vaše údaje — včetně cookies, analytiky a reklamy — v souladu s GDPR a dalšími zákony o ochraně soukromí."
     },
     "terms": {
       "title": "Podmínky používání",
-      "description": "Smluvní podmínky pro používání nástrojů Timezio pro časová pásma, převodníků a plánovače schůzek."
+      "description": "Smluvní podmínky používání převodníku časových pásem, světových hodin, plánovače schůzek a souvisejících nástrojů Timezio. Před použitím webu si je prosím přečtěte."
     },
     "about": {
       "title": "O Timezio",
@@ -94,7 +94,7 @@
     },
     "blogIndex": {
       "title": "Průvodci časovými pásmy a tipy pro práci na dálku",
-      "description": "Podrobní průvodci o časových pásmech, letním čase, spolupráci na dálku a efektivním používání Timezio."
+      "description": "Podrobné průvodce časovými pásmy, UTC, letním časem a plánováním napříč regiony — plus praktické tipy, jak nástroje Timezio využít co nejlépe."
     }
   },
   "footer": {

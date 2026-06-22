@@ -19,11 +19,11 @@
   "meta": {
     "home": {
       "title": "Timezio – Zeitzonen-Umrechner & Besprechungsplaner",
-      "description": "Sofortiger Zeitzonen-Umrechner, Weltuhr, sommerzeitbewusster Besprechungsplaner und Zeitzonenvergleich auf einem interaktiven Globus."
+      "description": "Kostenloser Zeitzonen-Rechner mit DST-Unterstützung, Weltuhr und Meeting-Planer. Vergleiche Städte, rechne UTC um und finde ideale Meeting-Zeiten auf einem 3D-Globus."
     },
     "explore": {
       "title": "Zeitzonen auf einem Globus erkunden",
-      "description": "Erkunden Sie Zeitzonen auf einem interaktiven 3D-Globus. Prüfen Sie aktuelle Uhrzeit, UTC-Abweichung und Sommerzeitstatus für jeden Ort."
+      "description": "Entdecke Zeitzonen auf einem interaktiven 3D-Globus. Klicke beliebig, um aktuelle Ortszeit, UTC-Abweichung und Sommerzeit-Status jeder Stadt oder Region zu sehen."
     },
     "compare": {
       "title": "Zeitzonen vergleichen",
@@ -31,11 +31,11 @@
     },
     "planner": {
       "title": "Besprechungsplaner über Zeitzonen hinweg",
-      "description": "Planen Sie Besprechungen über Zeitzonen hinweg mit Arbeitszeiten, Überschneidungsfenstern und sommerzeitbewussten Berechnungen."
+      "description": "Plane Meetings über mehrere Zeitzonen. Füge Teilnehmer hinzu, lege Arbeitszeiten fest und finde sofort passende Überschneidungen für alle — voll DST-fähig."
     },
     "saved": {
       "title": "Gespeicherte Orte & Zeitzonen",
-      "description": "Speichern Sie häufig genutzte Orte und kehren Sie schnell zu ihrer aktuellen Uhrzeit, Abweichung und ihrem Sommerzeitstatus zurück."
+      "description": "Speichere die Städte und Zeitzonen, die du am häufigsten prüfst, und sieh sofort Ortszeit, UTC-Abweichung und Sommerzeit-Status — ganz ohne Konto."
     },
     "timeConverter": {
       "title": "Zeitzonen-Umrechner – Zeiten vergleichen, Besprechungen planen & Städte erkunden",
@@ -62,27 +62,27 @@
     },
     "time": {
       "title": "Aktuelle Uhrzeit in {city}",
-      "description": "Sehen Sie die aktuelle Ortszeit in {city} mit UTC-Abweichung und Sommerzeitstatus."
+      "description": "Sieh jetzt die aktuelle Ortszeit in {city} — mit UTC-Abweichung, Zeitzone, Abkürzung und Sommerzeit-Status, live aktualisiert und DST-fähig."
     },
     "convert": {
       "title": "{from} zu {to} Zeitumrechner",
-      "description": "Rechnen Sie {from} zu {to} um – mit einer vollständigen Stunde-für-Stunde-Tabelle, sommerzeitbewusst und auf Basis offizieller IANA-Daten."
+      "description": "Rechne {from} sofort in {to} um — mit voller Stundentabelle und Live-Abweichung zwischen beiden Zonen, DST-fähig und mit offiziellen IANA-Zeitzonendaten."
     },
     "meeting": {
       "title": "Beste Besprechungszeit: {a} ↔ {b}",
-      "description": "Finden Sie überlappende Arbeitszeiten und die beste Besprechungszeit zwischen {a} und {b} – vollständig sommerzeitbewusst."
+      "description": "Finde die beste Meeting-Zeit zwischen {a} und {b}: sieh überlappende Arbeitszeiten und einen empfohlenen Termin, voll auf Sommerzeit abgestimmt."
     },
     "dst": {
       "title": "{region} Sommerzeit",
-      "description": "Sommerzeitstatus, aktuelle UTC-Abweichung und die nächsten Zeitumstellungstermine für {region}."
+      "description": "Gilt in {region} gerade die Sommerzeit? Sieh die aktuelle UTC-Abweichung und die genauen Termine der nächsten Zeitumstellungen aus offiziellen IANA-Daten."
     },
     "privacy": {
       "title": "Datenschutzerklärung",
-      "description": "Wie Timezio Informationen erhebt, nutzt und schützt – in Übereinstimmung mit der DSGVO und geltenden Datenschutzgesetzen."
+      "description": "Erfahre, wie Timezio deine Daten erfasst, nutzt und schützt — inklusive Cookies, Analyse und Werbung — im Einklang mit der DSGVO und weiteren Datenschutzgesetzen."
     },
     "terms": {
       "title": "Nutzungsbedingungen",
-      "description": "Bedingungen für die Nutzung der Zeitzonen-Tools, Umrechner und des Besprechungsplaners von Timezio."
+      "description": "Die Allgemeinen Geschäftsbedingungen für die Nutzung von Timezios Zeitzonen-Rechner, Weltuhr, Meeting-Planer und Tools. Bitte vor der Nutzung durchlesen."
     },
     "about": {
       "title": "Über Timezio",
@@ -94,7 +94,7 @@
     },
     "blogIndex": {
       "title": "Zeitzonen-Ratgeber & Tipps für Remote-Arbeit",
-      "description": "Ausführliche Anleitungen zu Zeitzonen, Sommerzeit, Remote-Zusammenarbeit und der effektiven Nutzung von Timezio."
+      "description": "Ausführliche Guides zu Zeitzonen, UTC, Sommerzeit und Terminplanung über Regionen hinweg — plus praktische Tipps, um Timezios Tools optimal zu nutzen."
     }
   },
   "footer": {

@@ -549,7 +549,7 @@ export default function MeetingPlannerPage() {
             <div className={ui.card} style={{ maxHeight: 'calc(100vh - 140px)', overflowY: 'auto' }}>
               <div className={ui.cardBody} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <div>
-                  <div className={ui.title}>{t('pageTitle')}</div>
+                  <h1 className={ui.title} style={{ margin: 0 }}>{t('pageTitle')}</h1>
                   <div className={ui.subtitle}>
                     {t('pageSubtitle')}
                   </div>
