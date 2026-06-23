@@ -1,4 +1,5 @@
 import { extraBlogPosts } from './blogPostsExtra';
+import { newBlogPosts } from './blogPostsNew';
 
 export interface BlogPost {
   slug: string;
@@ -901,6 +902,7 @@ Some countries use it, some never have, and others have moved away from it entir
 export const blogPosts: BlogPost[] = [
   ...allBlogPosts.filter((p) => p.slug !== 'about-timezio'),
   ...extraBlogPosts,
+  ...newBlogPosts,
 ];
 
 export const blogPostsMap: Record<string, BlogPost> = blogPosts.reduce((acc, post) => {
