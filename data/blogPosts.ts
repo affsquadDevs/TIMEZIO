@@ -899,11 +899,45 @@ Some countries use it, some never have, and others have moved away from it entir
 
 // `about-timezio` duplicated the /about page, so it is excluded from the blog and
 // 301-redirected to /about (see next.config.ts). Extra posts are merged in.
-export const blogPosts: BlogPost[] = [
+// Longer, SEO-friendly meta descriptions (~150 chars) for the earlier posts whose
+// original excerpts were under ~120 chars (Bing flagged them as too short). Used
+// as both the card summary and the page meta description.
+const EXCERPT_OVERRIDES: Record<string, string> = {
+  'what-is-a-time-zone':
+    "What a time zone really is, why they exist, how they're defined by politics as much as geography, and why the difference between two places shifts through the year.",
+  'what-is-utc':
+    "What Coordinated Universal Time is, how atomic clocks and leap seconds keep it precise, and why it's the neutral reference behind every time zone and conversion.",
+  'why-time-differences-change':
+    "The gap between two cities isn't fixed. Learn how daylight saving time, differing clock-change dates, and political decisions shift time differences through the year.",
+  'countries-that-use-daylight-saving-time':
+    "Which countries still change their clocks, which have abolished DST, and which never observed it — a clear, current overview of daylight saving time around the world.",
+  'schedule-meetings-across-time-zones':
+    "A practical guide to booking calls that work for everyone — anchor to one clear reference, send calendar invites, find genuine overlap, and dodge the classic traps.",
+  'remote-team-time-zone-best-practices':
+    "How distributed teams handle time zones well: set overlap hours, write times unambiguously, rotate the meeting burden, and keep work moving across the day.",
+  'utc-offsets-vs-time-zone-abbreviations':
+    "Why UTC offsets like +05:30 are precise but abbreviations like EST or CST are ambiguous — and how to reference times so no one ends up an hour, or a day, off.",
+  'what-is-gmt-vs-utc':
+    "GMT and UTC look interchangeable but aren't quite. Learn the real difference, why UTC is the modern global standard, and when each term is the correct one to use.",
+  'history-of-daylight-saving-time':
+    "Where daylight saving time came from, the myths about who invented it, how it spread worldwide, and why many regions now debate whether to keep changing their clocks.",
+  'time-zones-travel-jet-lag-connections':
+    "How time zones shape travel: reading local departure and arrival times, easing jet lag, and avoiding missed connections when your itinerary crosses several zones.",
+  'plan-global-launch-webinar-across-time-zones':
+    "Planning a global launch or webinar? How to choose a time that reaches the most people, announce it without ambiguity, and serve attendees across every region.",
+  'half-hour-and-45-minute-time-zone-offsets':
+    "Not every time zone is a whole hour from UTC. Why India sits at UTC+5:30, Nepal at UTC+5:45, and how these half-hour and 45-minute offsets came to exist.",
+};
+
+const rawBlogPosts: BlogPost[] = [
   ...allBlogPosts.filter((p) => p.slug !== 'about-timezio'),
   ...extraBlogPosts,
   ...newBlogPosts,
 ];
+
+export const blogPosts: BlogPost[] = rawBlogPosts.map((p) =>
+  EXCERPT_OVERRIDES[p.slug] ? { ...p, excerpt: EXCERPT_OVERRIDES[p.slug] } : p
+);
 
 export const blogPostsMap: Record<string, BlogPost> = blogPosts.reduce((acc, post) => {
   acc[post.slug] = post;
